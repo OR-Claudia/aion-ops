@@ -6,11 +6,13 @@ import {
   ClusterableUAVMarker,
   DetectionMarker,
 } from "../ui";
-import MarkerClusterGroup from "react-leaflet-cluster";
+import MarkerClusterGroup from "react-leaflet-markercluster";
 import L from "leaflet";
 import { allDetectionItems } from "./DetectionsSidebar";
 import { useMapControls } from "./MapContext";
 import "leaflet/dist/leaflet.css";
+import "leaflet.markercluster/dist/MarkerCluster.css";
+import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 
 interface MapContainerProps {
   showIndicators?: boolean;
