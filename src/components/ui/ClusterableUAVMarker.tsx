@@ -153,6 +153,7 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 				detailBtn.removeEventListener("click", handler);
 			};
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [customIcon]);
 
 	return (

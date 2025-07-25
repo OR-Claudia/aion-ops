@@ -156,7 +156,7 @@ export const generateUAVDetailData = (basicData: {
 	const battery = getBattery(basicData.battery);
 
 	return {
-		id: basicData.name.replace(/\s+/g, "_").toLowerCase(),
+		id: basicData.id,
 		name: basicData.name,
 		coordinates: coords,
 		status,

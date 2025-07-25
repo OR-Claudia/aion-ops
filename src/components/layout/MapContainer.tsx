@@ -46,7 +46,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	);
 
 	// const [selectedUAVs, setSelectedUAVs] = useState<string | number[]>([]);
-	const [selectedUAVs, setSelectedUAVs] = useState<(string | number)[]>([1]);
+	const [selectedUAVs, setSelectedUAVs] = useState<(string | number)[]>([]);
 
 	// Warsaw coordinates (center remains the same)
 	const warsawCenter: [number, number] = [52.2297, 21.0122];
@@ -58,7 +58,6 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		data: UAVDetailData;
 	}[] = [
 		// Central Warsaw cluster
-
 		{
 			position: [52.235, 21.015] as [number, number],
 			type: "online" as const,
@@ -76,7 +75,6 @@ const MapContainer: React.FC<MapContainerProps> = ({
 				flightPath: "Path 1",
 			}),
 		},
-
 		{
 			position: [52.236, 21.014] as [number, number],
 			type: "warning" as const,
@@ -211,7 +209,6 @@ const MapContainer: React.FC<MapContainerProps> = ({
 				flightPath: "Path 5",
 			}),
 		},
-
 		// Eastern cluster
 		{
 			position: [52.24, 21.03] as [number, number],
@@ -848,22 +845,11 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	};
 
 	const handleUAVDetailClick = (id: string | number) => {
-		// const uavDetailData = generateUAVDetailData({
-		// 	id: markerData.name.replace(/\s+/g, "_").toLowerCase(),
-		// 	signalPercentage: 100, // Default value, adjust as needed
-		// 	name: markerData.name,
-		// 	coordinates: markerData.coordinates,
-		// 	status: markerData.status,
-		// 	battery: markerData.battery,
-		// 	signal: markerData.signal,
-		// });
-		// setSelectedUAVs((prev) => [...prev, markerData.id]);
 		setSelectedUAVs((prev) => [...prev, id as string | number]);
 	};
 
 	const handleCloseUAVModal = (id: number) => {
 		setSelectedUAVs((prev) => prev.filter((uav) => uav !== id));
-		// setSelectedUAVs([]);
 	};
 
 	console.log("Selected UAVs:", selectedUAVs);
