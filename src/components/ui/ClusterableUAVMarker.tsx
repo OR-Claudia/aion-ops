@@ -25,6 +25,7 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 	onDetailClick,
 }) => {
 	const [isExpanded, setIsExpanded] = useState(false);
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const markerRef = React.useRef<any>(null);
 
 	useEffect(() => {

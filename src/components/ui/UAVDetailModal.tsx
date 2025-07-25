@@ -7,6 +7,7 @@ import wifi2Icon from "../../assets/wifi-2.svg";
 import batteryFullIcon from "../../assets/battery-full.svg";
 import batteryHalfIcon from "../../assets/battery-half.svg";
 import batteryEmptyIcon from "../../assets/battery-empty.svg";
+import Button from "./Button";
 
 export interface UAVDetailData {
 	id: string | number;
@@ -123,11 +124,11 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 	};
 
 	const getSignalBarWidth = () => {
-		return `${data.signalPercentage}%`;
+		return `${data.signalPercentage - 5}%`;
 	};
 
 	const getBatteryBarWidth = () => {
-		return `${data.batteryPercentage}%`;
+		return `${data.batteryPercentage - 5}%`;
 	};
 
 	const getBatteryBarColor = () => {
@@ -136,18 +137,31 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 		return "#C10000";
 	};
 
+	const handleFollow = () => {
+		console.log("Follow UAV", data.id);
+	};
+
+	const handleDetections = () => {
+		console.log("View detections for:", data.id);
+	};
+
+	const handleGenerateAnalysis = () => {
+		console.log("Generate AI Analysis:", data.id);
+	};
+
+	const handleRequestControl = () => {
+		console.log("Request control:", data.id);
+	};
+
 	return (
-		<div className="fixed inset-0 z-[100] pointer-events-auto">
+		<div className="fixed z-50 pointer-events-auto">
 			{/* Modal backdrop */}
-			<div
-				className="absolute inset-0 bg-black/95 backdrop-blur-sm"
-				onClick={onClose}
-			/>
+			<div className="absolute  backdrop-blur-sm" onClick={onClose} />
 
 			{/* Modal content */}
 			<div
 				ref={modalRef}
-				className="absolute w-[660px] h-[719px] rounded-[0px_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/60 backdrop-blur-[2px]"
+				className="absolute rounded-[0px_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/90 backdrop-blur-[16px]"
 				style={{
 					left: `${position.x}px`,
 					top: `${position.y}px`,
@@ -155,20 +169,23 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 			>
 				{/* Header with controls - draggable area */}
 				<div
-					className={`flex items-center justify-between px-[27px] pt-[22px] mb-[17px] select-none ${
+					className={`flex items-start justify-between px-[24px] pt-[12px] mb-[17px] select-none ${
 						isDragging ? "cursor-grabbing" : "cursor-grab"
 					}`}
 					onMouseDown={handleMouseDown}
 				>
 					<div>
-						<h2 className="text-white font-ubuntu text-2xl font-bold leading-normal mb-1">
+						<h2
+							className="text-white font-ubuntu font-bold mb-0!
+						"
+						>
 							{data.name}
 						</h2>
-						<p className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal m-0">
+						<p className="text-[#E3F3F2] font-ubuntu text-sm font-normal ">
 							Live coordinates: {data.coordinates}
 						</p>
 					</div>
-					<div className="flex items-center gap-[41px]">
+					<div className="flex gap-[28px] mt-[24px]">
 						<button
 							onClick={handleMinimize}
 							className="bg-transparent border-none hover:opacity-75 transition-opacity"
@@ -189,7 +206,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 				</div>
 
 				{/* Video Player Section */}
-				<div className="px-[27px] mb-[87px]">
+				<div className="px-[24px] mb-[24px]">
 					<div className="w-[610px] h-[328px] relative rounded-[0px_3px_3px_3px] bg-gray-800 overflow-hidden">
 						{/* Video placeholder */}
 						<img
@@ -287,7 +304,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 					<div className="flex items-center justify-center gap-[9px] w-[207px] mx-auto">
 						{/* Signal Stats */}
 						<div className="flex flex-col items-center gap-3 w-[97px]">
-							<div className="flex items-center gap-[2px] w-[69px] h-4">
+							<div className="flex items-center gap-[6px] mb-[6px] h-4">
 								<img
 									src={getSignalIcon()}
 									alt="signal"
@@ -308,9 +325,9 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 
 						{/* Battery Stats */}
 						<div className="flex flex-col items-center gap-3 w-[101px]">
-							<div className="flex items-center gap-[2px] w-[70px] h-[17px]">
+							<div className="flex items-center gap-[6px] mb-[6px] h-[17px]">
 								<img src={getBatteryIcon()} alt="battery" className="w-5 h-4" />
-								<span className="text-[#E3F3F2] font-ubuntu text-sm font-normal">
+								<span className="text-[#E3F3F2] justify-center font-ubuntu text-sm font-normal">
 									{data.batteryPercentage}%
 								</span>
 							</div>
@@ -329,7 +346,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 				</div>
 
 				{/* Information Section */}
-				<div className="px-[27px] mb-[19px] flex flex-col gap-3">
+				<div className="px-[27px] mb-[19px] flex flex-col gap-[11px]">
 					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
 						<span className="font-bold">Description:</span> {data.description}
 					</div>
@@ -361,41 +378,18 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 
 				{/* Action buttons */}
 				<div className="px-[36px] pb-[34px] flex items-center gap-3 w-[596px]">
-					<button
-						onClick={() => console.log("Follow UAV")}
-						className="flex w-[101px] h-[34px] p-4 justify-center items-center gap-2.5 rounded-[11px] border border-[#00C6B8] bg-[#1F2630] hover:bg-[#00C6B8]/10 transition-colors"
-					>
-						<span className="text-[#E3F3F2] font-ubuntu text-base font-normal">
-							Follow
-						</span>
-					</button>
-
-					<button
-						onClick={() => console.log("View detections")}
-						className="flex h-[34px] p-4 justify-center items-center gap-2.5 rounded-[11px] border border-[#00C6B8] bg-[#1F2630] hover:bg-[#00C6B8]/10 transition-colors"
-					>
-						<span className="text-[#E3F3F2] font-ubuntu text-base font-normal">
-							Detections
-						</span>
-					</button>
-
-					<button
-						onClick={() => console.log("Generate analysis")}
-						className="flex w-[168px] h-[34px] p-4 justify-center items-center gap-2.5 rounded-[11px] border border-[#00C6B8] bg-[#1F2630] hover:bg-[#00C6B8]/10 transition-colors"
-					>
-						<span className="text-[#E3F3F2] font-ubuntu text-base font-normal">
-							Generate analysis
-						</span>
-					</button>
-
-					<button
-						onClick={() => console.log("Request control")}
-						className="flex w-[163px] h-[34px] p-4 justify-center items-center gap-2.5 rounded-[11px] bg-[#00C6B8] hover:bg-[#00E6D8] transition-colors"
-					>
-						<span className="text-[#1F2630] font-ubuntu text-base font-normal">
-							Request control
-						</span>
-					</button>
+					<Button variant="secondary" onClick={handleFollow}>
+						Follow
+					</Button>
+					<Button variant="secondary" onClick={handleDetections}>
+						Detections
+					</Button>
+					<Button variant="secondary" onClick={handleGenerateAnalysis}>
+						Generate analysis
+					</Button>
+					<Button variant="primary" onClick={handleRequestControl}>
+						Request control
+					</Button>
 				</div>
 			</div>
 		</div>
