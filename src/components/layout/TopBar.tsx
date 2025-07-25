@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import BarsIcon from "../../assets/bars.svg";
 import ChevronLeftIcon from "../../assets/chevron-left-icon.svg";
+import DefaultUserIcon from "../../assets/default-user.svg";
 
 const TopBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,10 +71,7 @@ const TopBar: React.FC = () => {
               Level III Clearance
             </div>
           </div>
-          <div className="w-[37px] h-[37px] rounded-full bg-[#212832] border border-[#D3FBD8] relative flex items-center justify-center">
-            <div className="w-[9.34px] h-[9.34px] rounded-full bg-[#00C6B8] absolute top-[6px]"></div>
-            <div className="w-[21px] h-[14.82px] rounded-br-[10px] rounded-bl-[10px] bg-[#00C6B8] absolute bottom-1"></div>
-          </div>
+          <img src={DefaultUserIcon} alt="User" className="w-[37px] h-[37px]" />
         </div>
       </div>
     </div>

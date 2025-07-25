@@ -1,7 +1,7 @@
 import React from "react";
 import { Marker } from "react-leaflet";
 import L from "leaflet";
-import type { DetectionData } from "../layout/DetectionsSidebar";
+import type { DetectionData } from "../layout/DetectionData";
 
 interface DetectionMarkerProps {
   position: [number, number];
@@ -55,9 +55,10 @@ const DetectionMarker: React.FC<DetectionMarkerProps> = ({
     });
   };
 
-  const handleClick = () => {
+  const handleClick = (e: L.LeafletMouseEvent) => {
+    e.originalEvent.stopPropagation();
+    e.originalEvent.preventDefault();
     // Future: Navigate to detection detail page
-    console.log("Detection clicked:", detection.clusterId);
   };
 
   return (

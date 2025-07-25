@@ -6,6 +6,8 @@ interface DetectionItemProps {
   detectionInterval: string;
   objectsType: string;
   responsibleUAV: string;
+  onClick?: () => void;
+  isSelected?: boolean;
 }
 
 const DetectionItem: React.FC<DetectionItemProps> = ({
@@ -14,10 +16,19 @@ const DetectionItem: React.FC<DetectionItemProps> = ({
   detectionInterval,
   objectsType,
   responsibleUAV,
+  onClick,
+  isSelected = false,
 }) => {
   return (
-    <div className="w-[283px] h-[83px] mb-[11px] relative">
-      <div className="w-[283px] h-[83px] bg-[#242B2C] rounded-[0px_10px_10px_10px] absolute left-0 top-0"></div>
+    <div
+      className="w-[283px] h-[83px] mb-[11px] relative cursor-pointer hover:opacity-80 transition-opacity"
+      onClick={onClick}
+    >
+      <div
+        className={`w-[283px] h-[83px] bg-[#242B2C] rounded-[0px_10px_10px_10px] absolute left-0 top-0 ${
+          isSelected ? "border-2 border-[rgba(211,251,216,0.5)]" : ""
+        }`}
+      ></div>
       <div className="w-[259px] h-[65px] absolute left-[12px] top-[9px]">
         {/* Header with cluster ID and coordinates */}
         <div className="w-[259px] h-[18px] flex justify-between items-start mb-3">
