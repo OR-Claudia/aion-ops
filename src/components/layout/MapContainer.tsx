@@ -21,7 +21,7 @@ import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 
 interface MapContainerProps {
 	showIndicators?: boolean;
-	onUAVDetailClick: (markerData: {
+	onUAVDetailClick?: (markerData: {
 		name: string;
 		coordinates: string;
 		status: string;
@@ -851,8 +851,6 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	const handleCloseUAVModal = (id: number) => {
 		setSelectedUAVs((prev) => prev.filter((uav) => uav !== id));
 	};
-
-	console.log("Selected UAVs:", selectedUAVs);
 
 	return (
 		<>

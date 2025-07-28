@@ -15,6 +15,8 @@ export { default as MapStatusIndicator } from "./MapStatusIndicator";
 export { default as MessageBar } from "./MessageBar";
 export { default as SectionHeader } from "./SectionHeader";
 export { default as StatusIndicator } from "./StatusIndicator";
+export { default as StatusBar } from "./StatusBar";
 export { default as UAVCard } from "./UAVCard";
 export { default as UAVDetailModal } from "./UAVDetailModal";
 export type { UAVDetailData } from "./UAVDetailModal";
+export { default as UAVDetailPanel } from "./UAVDetailPanel";
