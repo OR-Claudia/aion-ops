@@ -82,7 +82,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 			<div className="absolute right-[25px] top-[102px] flex flex-col items-center gap-[16px] w-[97px]">
 				{/* Signal Status */}
 				<div className="flex flex-col items-center gap-3">
-					<div className="flex items-center gap-[3px] w-[63px] h-[15px]">
+					<div className="flex items-center justify-center gap-[4px] w-[63px] h-[15px] mb-[3px]">
 						<img
 							src={wifiIcon}
 							alt="wifi signal"
@@ -97,7 +97,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 
 				{/* Battery Status */}
 				<div className="flex flex-col items-center gap-3">
-					<div className="flex items-center gap-[4px] w-[63.75px] h-[15px]">
+					<div className="flex items-center justify-center gap-[4px] w-[63.75px] h-[15px] mb-[3px]">
 						<img
 							src={batteryFullIcon}
 							alt="battery level"

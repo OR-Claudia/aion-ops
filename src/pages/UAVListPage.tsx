@@ -589,7 +589,7 @@ const UAVListPage: React.FC = () => {
 							{/* <div className="absolute right-[14px] top-5 w-1 h-[143px] rounded-[3px] opacity-30 bg-white" /> */}
 
 							{/* Content inside container */}
-							<div className="w-full h-full overflow-hidden pt-[20px] justify-center flex px-[10%]">
+							<div className="w-full h-full overflow-hidden pt-[20px] justify-center flex px-[8%]">
 								{/* UAV Grid */}
 								<div
 									className={cn(
