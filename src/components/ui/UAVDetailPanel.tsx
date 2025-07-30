@@ -160,7 +160,14 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 
 			{/* Action Buttons */}
 			<div className="absolute left-[35px] bottom-[32px] flex items-center gap-[6px] w-[396px] h-[34px]">
-				<Button variant="secondary" onClick={handleFollowClick}>
+				<Button
+					variant="secondary"
+					onClick={handleFollowClick}
+					disabled={
+						statusInfo === statusConfig["offline"] ||
+						statusInfo === statusConfig["destroyed"]
+					}
+				>
 					Follow
 				</Button>
 				<Button variant="secondary" onClick={handleControlClick}>

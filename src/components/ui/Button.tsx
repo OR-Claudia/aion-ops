@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "../../lib/utils";
 
 export type ButtonVariant = "primary" | "secondary" | "danger";
 
@@ -6,6 +7,7 @@ interface ButtonProps {
 	variant: ButtonVariant;
 	onClick: () => void;
 	children: React.ReactNode;
+	disabled?: boolean;
 	className?: string;
 	width?: string;
 }
@@ -15,16 +17,26 @@ const Button: React.FC<ButtonProps> = ({
 	onClick,
 	children,
 	className = "",
+	disabled,
 	width,
 }) => {
 	const getVariantClasses = () => {
 		switch (variant) {
 			case "primary":
-				return "bg-[#00C6B8] hover:bg-[#00E6D8] text-[#1F2630] border-none";
+				return cn(
+					"bg-[#00C6B8] hover:bg-[#00E6D8] text-[#1F2630] border-none",
+					{ ["text-gray-500"]: disabled }
+				);
 			case "secondary":
-				return "border border-[#00C6B8] bg-[#1F2630] hover:bg-[#00C6B8]/10 text-[#E3F3F2]";
+				return cn(
+					"border border-[#00C6B8] bg-[#1F2630] hover:bg-[#00C6B8]/10 text-[#E3F3F2]",
+					{ ["text-gray-500"]: disabled }
+				);
 			case "danger":
-				return "border-[1.5px] border-[#C10000] bg-[#1F2630] hover:bg-[#C10000]/10 text-[#E3F3F2]";
+				return cn(
+					"border-[1.5px] border-[#C10000] bg-[#1F2630] hover:bg-[#C10000]/10 text-[#E3F3F2]",
+					{ ["text-gray-500"]: disabled }
+				);
 			default:
 				return "";
 		}
@@ -39,6 +51,7 @@ const Button: React.FC<ButtonProps> = ({
 		<button
 			onClick={onClick}
 			className={`${baseClasses} ${variantClasses} ${widthClass} ${className}`}
+			disabled={disabled}
 		>
 			<span className="!font-ubuntu text-base font-bold">{children}</span>
 		</button>
