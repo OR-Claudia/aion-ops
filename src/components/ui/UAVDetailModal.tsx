@@ -301,7 +301,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 
 				{/* Stats Section */}
 				<div className="px-[27px] mb-[20px]">
-					<div className="flex items-center justify-center gap-[9px] w-[207px] mx-auto">
+					<div className="flex items-center justify-center gap-[12px] w-[207px] mx-auto">
 						{/* Signal Stats */}
 						<div className="flex flex-col items-center gap-3 w-[97px]">
 							<div className="flex items-center gap-[6px] mb-[6px] h-4">
@@ -325,7 +325,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 
 						{/* Battery Stats */}
 						<div className="flex flex-col items-center gap-3 w-[101px]">
-							<div className="flex items-center gap-[6px] mb-[6px] h-[17px]">
+							<div className="flex items-center gap-[6px] mb-[12px] h-[17px]">
 								<img src={getBatteryIcon()} alt="battery" className="w-5 h-4" />
 								<span className="text-[#E3F3F2] justify-center font-ubuntu text-sm font-normal">
 									{data.batteryPercentage}%

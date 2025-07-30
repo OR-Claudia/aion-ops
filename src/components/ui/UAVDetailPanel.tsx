@@ -41,11 +41,11 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 	};
 
 	const getSignalBarWidth = () => {
-		return `${uav.signalPercentage}%`;
+		return uav.signalPercentage;
 	};
 
 	const getBatteryBarWidth = () => {
-		return `${uav.batteryPercentage}%`;
+		return uav.batteryPercentage;
 	};
 
 	return (
@@ -79,7 +79,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 			/>
 
 			{/* Status Indicators */}
-			<div className="absolute right-[25px] top-[102px] flex flex-col items-center gap-4 w-[97px]">
+			<div className="absolute right-[25px] top-[102px] flex flex-col items-center gap-[16px] w-[97px]">
 				{/* Signal Status */}
 				<div className="flex flex-col items-center gap-3">
 					<div className="flex items-center gap-[3px] w-[63px] h-[15px]">
@@ -92,7 +92,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 							{getSignalBarWidth()}%
 						</span>
 					</div>
-					<StatusBar percentage={uav.signalPercentage} color="#00C6B8" />
+					<StatusBar percentage={getBatteryBarWidth()} color="#00C6B8" />
 				</div>
 
 				{/* Battery Status */}
@@ -107,7 +107,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 							{getBatteryBarWidth()}%
 						</span>
 					</div>
-					<StatusBar percentage={uav.batteryPercentage} color="#71BC2C" />
+					<StatusBar percentage={getSignalBarWidth()} color="#71BC2C" />
 				</div>
 
 				{/* Status indicator */}

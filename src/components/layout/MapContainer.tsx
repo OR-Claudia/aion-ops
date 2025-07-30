@@ -45,7 +45,6 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		"&copy; CartoDB, &copy; OpenStreetMap contributors"
 	);
 
-	// const [selectedUAVs, setSelectedUAVs] = useState<string | number[]>([]);
 	const [selectedUAVs, setSelectedUAVs] = useState<(string | number)[]>([]);
 
 	// Warsaw coordinates (center remains the same)
@@ -875,7 +874,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			<div className="fixed top-0 left-0 w-screen h-screen bg-[#222631] z-[1]">
 				<LeafletMap
 					center={warsawCenter}
-					zoom={9}
+					zoom={12}
 					style={{ height: "100%", width: "100%" }}
 					zoomControl={false}
 					ref={mapRef}
