@@ -74,7 +74,7 @@ const StorageItem: React.FC<StorageItemProps> = ({
 							{record.title.split(" - ")[1]}
 						</span>
 					</div>
-					<span className="text-[#E3F3F2] font-ubuntu text-[12px] opacity-80 flex-shrink-0 ml-4">
+					<span className="text-[#E3F3F2] font-ubuntu text-[12px] opacity-80 flex-shrink-0 mr-[12px]">
 						{record.date}
 					</span>
 				</div>
