@@ -318,7 +318,7 @@ const StoragePage: React.FC = () => {
 								"relative z-20 rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[5px] h-[70dvh] pt-[16px]",
 								{
 									["w-[43%]"]: selectedRecord,
-									["w-[80%]"]: !selectedRecord,
+									["w-[93%]"]: !selectedRecord,
 								}
 							)}
 						>

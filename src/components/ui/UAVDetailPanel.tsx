@@ -148,7 +148,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 				</div>
 
 				<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-					<span className="font-bold">Total flight time:</span>{" "}
+					<span className="font-bold">Total flight time:</span>
 					{uav.totalFlightTime}
 				</div>
 

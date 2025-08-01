@@ -133,7 +133,7 @@ const ClusterDetailsModal: React.FC<ClusterDetailsModalProps> = ({
 							{cluster.clusterId}
 						</h2>
 						<p className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal m-0">
-							Coordinates:{" "}
+							Coordinates:
 							{cluster.coordinates.replace("Lat: ", "").replace(" Lon: ", ", ")}
 						</p>
 					</div>
@@ -160,7 +160,7 @@ const ClusterDetailsModal: React.FC<ClusterDetailsModalProps> = ({
 				{/* Content section */}
 				<div className="px-[27px] flex flex-col gap-3 mb-[24px] flex-1">
 					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Description (AI Generated):</span>{" "}
+						<span className="font-bold">Description (AI Generated):</span>
 						{cluster.description}
 					</div>
 
@@ -169,29 +169,29 @@ const ClusterDetailsModal: React.FC<ClusterDetailsModalProps> = ({
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Mission summary:</span>{" "}
+						<span className="font-bold">Mission summary:</span>
 						{cluster.missionSummary}
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Objects type:</span>{" "}
+						<span className="font-bold">Objects type:</span>
 						{cluster.objectsTypeDetailed}
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Detection interval:</span>{" "}
+						<span className="font-bold">Detection interval:</span>
 						{cluster.detectionInterval}
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Recording:</span>{" "}
+						<span className="font-bold">Recording:</span>
 						<span className="text-[#00C6B8] underline cursor-pointer hover:text-[#00E6D8] transition-colors">
 							{cluster.recording}
 						</span>
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">UAV:</span>{" "}
+						<span className="font-bold">UAV:</span>
 						<span className="text-[#00C6B8] underline cursor-pointer hover:text-[#00E6D8] transition-colors">
 							{cluster.responsibleUAV}
 						</span>

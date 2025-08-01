@@ -352,7 +352,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Mission:</span>{" "}
+						<span className="font-bold">Mission:</span>
 						{data.missionLink ? (
 							<span className="text-[#00C6B8] underline cursor-pointer hover:text-[#00E6D8] transition-colors">
 								{data.mission}
@@ -363,7 +363,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Flight path:</span>{" "}
+						<span className="font-bold">Flight path:</span>
 						{data.flightPathLink ? (
 							<span className="text-[#00C6B8] underline cursor-pointer hover:text-[#00E6D8] transition-colors">
 								{data.flightPath}

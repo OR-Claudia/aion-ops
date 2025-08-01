@@ -38,33 +38,38 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 		// Implement detections detail viewing
 	};
 
+	const handleUAVClick = () => {
+		console.log("View  detail for record:", record.id);
+		// Implement uav detail viewing
+	};
+
 	return (
-		<div className="w-[464px] h-[70dvh] relative">
-			{/* Container background */}
-			<div className="w-full h-full rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[2px]" />
+		<div className="w-[35%] h-[70dvh] relative rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[2px] flex flex-col">
+			{/* Header section */}
+			<div className="flex-shrink-0 relative px-[25px] py-[16px]">
+				{/* Close button */}
+				<button
+					onClick={onClose}
+					className="absolute right-[21px] top-[16px] w-[21px] h-[23px] text-[#E3F3F2] hover:text-white transition-colors flex items-center justify-center border-none bg-transparent"
+				>
+					<img src={timesIcon} alt="close" className="w-[14px] h-[14px]" />
+				</button>
 
-			{/* Close button */}
-			<button
-				onClick={onClose}
-				className="absolute right-[21px] top-[16px] w-[21px] h-[23px] text-[#E3F3F2] hover:text-white transition-colors flex items-center justify-center border-none bg-transparent"
-			>
-				<img src={timesIcon} alt="close" className="w-[14px] h-[14px]" />
-			</button>
-
-			{/* Mission Title */}
-			<div className="absolute left-[25px] top-[20px] text-[#E3F3F2] font-ubuntu text-[20px] font-bold leading-normal w-[378px]">
-				{record.title}
-			</div>
-
-			{/* Content container */}
-			<div className="overflow-y-auto h-[65dvh]">
-				{/* Recording coordinates */}
-				<div className="absolute left-[25px] top-[49px] text-[#E3F3F2] font-ubuntu text-[12px] font-normal opacity-80 w-[313px]">
-					Recording coordinates: {record.coordinates}
+				{/* Mission Title */}
+				<div className="text-[#E3F3F2] font-ubuntu text-[20px] font-bold leading-normal w-[378px]">
+					{record.title}
 				</div>
 
+				{/* Recording coordinates */}
+				<div className="text-[#E3F3F2] font-ubuntu text-[12px] font-normal opacity-80 w-[313px] mt-[9px]">
+					Recording coordinates: {record.coordinates}
+				</div>
+			</div>
+
+			{/* Scrollable content container */}
+			<div className="flex-1 overflow-y-auto px-[25px] pb-[80px]">
 				{/* Video Player */}
-				<div className="absolute left-[25px] top-[87px] w-[414px] h-[223px]">
+				<div className="w-[414px] h-[223px] relative mb-[16px]">
 					{/* Video thumbnail/image */}
 					<img
 						src={record.videoUrl}
@@ -138,33 +143,27 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 				</div>
 
 				{/* External links */}
-				<div className="absolute left-[63px] top-[326px] flex justify-between items-center w-[339px] h-[16px]">
-					<button
-						onClick={handleFlightPathClick}
-						className="flex items-center gap-[6px] text-[#00C6B8] font-ubuntu text-[14px] underline hover:text-[#00D6C8] transition-colors"
-					>
+				<div className="flex justify-between items-center w-[339px] h-[16px] ml-[38px] mb-[16px]">
+					<Button variant="underline" onClick={handleFlightPathClick}>
 						Flight path
 						<img
 							src={externalLinkIcon}
 							alt="external link"
 							className="w-[14px] h-[14px]"
 						/>
-					</button>
-					<button
-						onClick={handleDetectionsDetailClick}
-						className="flex items-center gap-[6px] text-[#00C6B8] font-ubuntu text-[14px] underline hover:text-[#00D6C8] transition-colors"
-					>
+					</Button>
+					<Button variant="underline" onClick={handleDetectionsDetailClick}>
 						Detections detail
 						<img
 							src={externalLinkIcon}
 							alt="external link"
 							className="w-[14px] h-[14px]"
 						/>
-					</button>
+					</Button>
 				</div>
 
 				{/* Detail Information */}
-				<div className="absolute left-[28px] top-[358px] w-[414px] flex flex-col gap-[6px]">
+				<div className="w-[414px] flex flex-col gap-[6px] ml-[3px]">
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
 						<span className="font-bold">Description:</span> {record.description}
 					</div>
@@ -173,13 +172,19 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 						<span className="font-bold">Mission:</span> {record.mission}
 					</div>
 
-					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-						<span className="font-bold">UAV:</span>{" "}
-						<span className="text-[#00C6B8] underline">{record.uav}</span>
+					<div className="text-[#E3F3F2] flex items-center font-ubuntu text-[14px] font-normal leading-normal">
+						<span className="font-bold">UAV:</span>
+						<Button
+							variant="underline"
+							onClick={handleUAVClick}
+							className="h-fit"
+						>
+							{record.uav}
+						</Button>
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-						<span className="font-bold">Flight datetime:</span>{" "}
+						<span className="font-bold">Flight datetime:</span>
 						{record.flightDatetime}
 					</div>
 
@@ -197,9 +202,8 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[401px]">
-						<span className="font-bold">Mission description:</span>{" "}
-						{record.missionDescription.split("Commodo Consequat")[0]}
-						<span className="text-[#00C6B8] underline">Commodo Consequat.</span>
+						<span className="font-bold">Mission description:</span>
+						{record.missionDescription}
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[401px]">
@@ -208,8 +212,8 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 				</div>
 			</div>
 
-			{/* Action Buttons */}
-			<div className="absolute left-[99px] bottom-[32px] flex items-center gap-[12px] w-[346px] h-[34px]">
+			{/* Fixed Action Buttons at bottom */}
+			<div className="flex-shrink-0 absolute left-[99px] bottom-[32px] flex items-center gap-[12px] w-[346px] h-[34px]">
 				<Button variant="secondary" onClick={handleEdit}>
 					Edit
 				</Button>
