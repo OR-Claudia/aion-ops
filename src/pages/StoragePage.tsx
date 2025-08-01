@@ -277,24 +277,12 @@ const StoragePage: React.FC = () => {
 		setSelectedRecord(null);
 	};
 
-	const baseClasses = "w-full pt-[64px] mx-[10%]";
-	const expandedClasses = "w-full pt-[64px]";
-
 	return (
 		<Layout>
-			<div className="flex justify-center">
-				<div
-					className={cn(
-						"relative",
-						selectedRecord ? expandedClasses : baseClasses
-					)}
-				>
+			<div className="w-full flex justify-center pt-[64px]">
+				<div className="w-[75%] max-w-[1400px] flex flex-col">
 					{/* Header and Filter Row */}
-					<div
-						className={cn("mb-[16px] z-30", {
-							["px-[10%]"]: selectedRecord,
-						})}
-					>
+					<div className="flex-shrink-0 px-6 mb-4">
 						<div className="flex items-center gap-8">
 							<SectionHeader
 								title="Storage"
@@ -311,19 +299,19 @@ const StoragePage: React.FC = () => {
 					</div>
 
 					{/* Main Content Area */}
-					<div className="flex justify-center items-start gap-[8px] ">
+					<div className="flex items-start gap-2 px-6 pb-6">
 						{/* Storage List Container */}
 						<div
 							className={cn(
-								"relative z-20 rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[5px] h-[70dvh] pt-[16px]",
+								"relative z-20 rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[5px] h-[calc(100vh-300px)] pt-[16px] mt-[16px] transition-all duration-300",
 								{
-									["w-[43%]"]: selectedRecord,
-									["w-[93%]"]: !selectedRecord,
+									"w-[calc(100%-512px)]": selectedRecord, // Leave exactly 500px + 12px gap for detail panel
+									"w-full": !selectedRecord, // Full width when no detail panel
 								}
 							)}
 						>
 							{/* Content inside container */}
-							<div className="w-full h-full overflow-hidden justify-center flex px-[20px]">
+							<div className="w-full h-full overflow-hidden flex px-[20px]">
 								<StorageList
 									records={filteredRecords}
 									selectedRecord={selectedRecord}
@@ -335,10 +323,12 @@ const StoragePage: React.FC = () => {
 
 						{/* Detail Panel */}
 						{selectedRecord && (
-							<StorageDetailPanel
-								record={selectedRecord}
-								onClose={handleCloseDetail}
-							/>
+							<div className="flex-shrink-0 ml-[12px] mt-[16px]">
+								<StorageDetailPanel
+									record={selectedRecord}
+									onClose={handleCloseDetail}
+								/>
+							</div>
 						)}
 					</div>
 				</div>

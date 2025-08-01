@@ -38,13 +38,8 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 		// Implement detections detail viewing
 	};
 
-	const handleUAVClick = () => {
-		console.log("View  detail for record:", record.id);
-		// Implement uav detail viewing
-	};
-
 	return (
-		<div className="w-[35%] h-[70dvh] relative rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[2px] flex flex-col">
+		<div className="w-[500px] h-[calc(100vh-300px)] relative rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[2px] flex flex-col transition-all duration-300">
 			{/* Header section */}
 			<div className="flex-shrink-0 relative px-[25px] py-[16px]">
 				{/* Close button */}
@@ -172,19 +167,13 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 						<span className="font-bold">Mission:</span> {record.mission}
 					</div>
 
-					<div className="text-[#E3F3F2] flex items-center font-ubuntu text-[14px] font-normal leading-normal">
-						<span className="font-bold">UAV:</span>
-						<Button
-							variant="underline"
-							onClick={handleUAVClick}
-							className="h-fit"
-						>
-							{record.uav}
-						</Button>
+					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
+						<span className="font-bold">UAV:</span>{" "}
+						<span className="text-[#00C6B8] underline">{record.uav}</span>
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-						<span className="font-bold">Flight datetime:</span>
+						<span className="font-bold">Flight datetime:</span>{" "}
 						{record.flightDatetime}
 					</div>
 
@@ -202,8 +191,9 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[401px]">
-						<span className="font-bold">Mission description:</span>
-						{record.missionDescription}
+						<span className="font-bold">Mission description:</span>{" "}
+						{record.missionDescription.split("Commodo Consequat")[0]}
+						<span className="text-[#00C6B8] underline">Commodo Consequat.</span>
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[401px]">
