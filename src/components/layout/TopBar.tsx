@@ -13,6 +13,7 @@ const TopBar: React.FC = () => {
 		{ name: "Dashboard", path: "/" },
 		{ name: "Detections", path: "/detections" },
 		{ name: "Active UAVs", path: "/uavs" },
+		{ name: "Storage", path: "/storage" },
 	];
 
 	const handleMenuToggle = () => {

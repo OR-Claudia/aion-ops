@@ -20,3 +20,7 @@ export { default as UAVCard } from "./UAVCard";
 export { default as UAVDetailModal } from "./UAVDetailModal";
 export type { UAVDetailData } from "./UAVDetailModal";
 export { default as UAVDetailPanel } from "./UAVDetailPanel";
+export { default as StorageList } from "./StorageList";
+export { default as StorageItem } from "./StorageItem";
+export type { StorageData } from "./StorageItem";
+export { default as StorageDetailPanel } from "./StorageDetailPanel";

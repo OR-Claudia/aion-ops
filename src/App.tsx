@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HomePage, UAVListPage, UAVDetailsPage, DetectionsPage } from "./pages";
+import { HomePage, UAVListPage, UAVDetailsPage, DetectionsPage, StoragePage } from "./pages";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <Route path="/uavs" element={<UAVListPage />} />
         <Route path="/uav/:id" element={<UAVDetailsPage />} />
         <Route path="/detections" element={<DetectionsPage />} />
+        <Route path="/storage" element={<StoragePage />} />
         {/*
           Additional routes can be added here:
           <Route path="/settings" element={<SettingsPage />} />
