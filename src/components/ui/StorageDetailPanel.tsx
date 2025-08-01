@@ -191,9 +191,8 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[401px]">
-						<span className="font-bold">Mission description:</span>{" "}
-						{record.missionDescription.split("Commodo Consequat")[0]}
-						<span className="text-[#00C6B8] underline">Commodo Consequat.</span>
+						<span className="font-bold">Mission description:</span>
+						{record.missionDescription}
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[401px]">
