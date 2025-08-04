@@ -79,9 +79,9 @@ const DetectionsSidebar: React.FC = () => {
 				</div>
 
 				{/* Detection list container */}
-				<div className="relative w-[350px] h-[72vh] rounded-[10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/60 backdrop-blur-[2px] mt-[7px]">
+				<div className="relative w-[350px] h-[calc(72vh-32px)] rounded-[10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/60 backdrop-blur-[5px] mt-[7px]">
 					{/* Scrollable content */}
-					<div className="absolute left-[17px] top-[20px] w-[316px] h-[calc(72vh-32px)] flex flex-col items-start  pr-2">
+					<div className="absolute left-[17px] top-[20px] w-[316px] h-[calc(72vh-64px)] overflow-y-auto flex flex-col items-start  pr-2">
 						<div className="flex flex-col items-start w-[283px]">
 							{filteredDetections.map((item, index) => (
 								<DetectionItem

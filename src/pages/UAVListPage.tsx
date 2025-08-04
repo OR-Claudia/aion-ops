@@ -16,6 +16,7 @@ import { cn } from "../lib/utils";
 const UAVListPage: React.FC = () => {
 	const [filteredUAVs, setFilteredUAVs] = useState<UAVData[]>([]);
 	const [selectedUAV, setSelectedUAV] = useState<UAVData | null>(null);
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [hasFilters, setHasFilters] = useState(false);
 
 	// Filter configurations for the UAV list
@@ -577,7 +578,7 @@ const UAVListPage: React.FC = () => {
 						{/* UAV List Container */}
 						<div
 							className={cn(
-								"relative z-20 rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[5px] h-[638px]",
+								"relative z-20 rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[5px] h-[74vh]",
 
 								{
 									["w-[40%]"]: selectedUAV,
@@ -585,19 +586,16 @@ const UAVListPage: React.FC = () => {
 								}
 							)}
 						>
-							{/* Scrollbar */}
-							{/* <div className="absolute right-[14px] top-5 w-1 h-[143px] rounded-[3px] opacity-30 bg-white" /> */}
-
 							{/* Content inside container */}
-							<div className="w-full h-full overflow-hidden pt-[20px] justify-center flex px-[8%]">
+							<div
+								className={cn(
+									"w-full overflow-hidden items-center h-full pt-[20px] justify-center flex px-[10%]"
+								)}
+							>
 								{/* UAV Grid */}
 								<div
 									className={cn(
-										"flex flex-wrap gap-x-[32px] gap-y-[12px] h-full overflow-y-auto pt-[24px]",
-										{
-											["justify-start"]: !hasFilters,
-											["justify-center"]: hasFilters,
-										}
+										"flex flex-wrap  gap-x-[32px] gap-y-[12px] h-full overflow-y-auto pt-[24px] justify-start mb-[12px]"
 									)}
 								>
 									{filteredUAVs.map((uav) => (

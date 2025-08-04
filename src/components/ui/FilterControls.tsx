@@ -78,7 +78,7 @@ const FilterControls: React.FC<FilterControlsProps> = ({
 					{filterConfigs.map((config) => (
 						<div key={config.key} className="relative">
 							<div
-								className="flex w-[157px] min-h-[40px] h-[40px] p-[6px] justify-between items-center rounded-[6px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/70 backdrop-blur-[2px] cursor-pointer hover:bg-black/80 transition-all duration-200"
+								className="flex w-[157px] min-h-[40px] h-[40px] p-[6px] justify-between items-center rounded-[6px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/70 backdrop-blur-[2px] cursor-pointer hover:bg-black/80 transition-all duration-200 overflow-hidden text-ellipsis whitespace-nowrap"
 								onClick={() => toggleDropdown(config.key)}
 							>
 								<span className="text-app-text/70 font-ubuntu text-sm font-light">

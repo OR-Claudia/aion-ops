@@ -49,7 +49,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 	};
 
 	return (
-		<div className="w-[464px] h-[638px] relative">
+		<div className="w-[464px] h-[74vh] relative">
 			{/* Container background */}
 			<div className="w-full h-full rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[2px]" />
 
