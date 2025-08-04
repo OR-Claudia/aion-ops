@@ -9,10 +9,9 @@ import { useMapControls } from "../layout/MapContext";
 
 const ExpandableToolsPanel: React.FC = () => {
 	const [isExpanded, setIsExpanded] = useState(false);
-	const [showFlightPaths, setShowFlightPaths] = useState(false);
 	const location = useLocation();
 	const isDetectionsPage = location.pathname === "/detections";
-	const { zoomIn, zoomOut, resetView } = useMapControls();
+	const { zoomIn, zoomOut, resetView, showFlightPaths, setShowFlightPaths } = useMapControls();
 
 	const mapTools = [
 		{ icon: ZoomInIcon, name: "Zoom In", action: zoomIn },
@@ -69,19 +68,23 @@ const ExpandableToolsPanel: React.FC = () => {
 						{/* Flight Paths Toggle Row - Hidden on DetectionsPage */}
 						{!isDetectionsPage && (
 							<div className="flex items-center justify-between w-full h-8 px-[16px] mb-[6px]">
-								<span className="text-white font-ubuntu text-sm font-normal">
-									Show flight paths
+								<span className="text-[#E3F3F2] font-ubuntu text-sm font-medium">
+									Toggle flight paths
 								</span>
-								<button
-									className={`text-xs font-ubuntu transition-all duration-200 border-none rounded-[5px] ${
-										showFlightPaths
-											? "bg-[#00C6B8] text-[#1F2630]"
-											: "bg-gray-600 text-white"
-									}`}
-									onClick={() => setShowFlightPaths(!showFlightPaths)}
-								>
-									{showFlightPaths ? "ON" : "OFF"}
-								</button>
+								<div className="flex items-center">
+									<div
+										className={`w-[41px] h-[21px] rounded-[10px] cursor-pointer transition-all duration-200 ${
+											showFlightPaths ? "bg-[#00C6B8]" : "bg-gray-600"
+										}`}
+										onClick={() => setShowFlightPaths(!showFlightPaths)}
+									>
+										<div
+											className={`w-[17px] h-[17px] bg-[#1F2630] rounded-full transition-all duration-200 mt-[2px] ${
+												showFlightPaths ? "ml-[22px]" : "ml-[2px]"
+											}`}
+										/>
+									</div>
+								</div>
 							</div>
 						)}
 					</div>

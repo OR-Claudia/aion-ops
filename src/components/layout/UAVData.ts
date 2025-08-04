@@ -1,5 +1,91 @@
 import type { UAVDetailData } from "../ui/UAVDetailModal";
 
+// Helper function to generate realistic flight path coordinates within 100 sq km
+export const generateFlightPathCoordinates = (
+	basePosition: [number, number],
+	uavId: string,
+	type: "online" | "warning" | "offline"
+): [number, number][] => {
+	const [baseLat, baseLng] = basePosition;
+	const coordinates: [number, number][] = [];
+
+	// Generate different path patterns based on UAV ID and type
+	const pathLength = type === "offline" ? 4 : Math.floor(Math.random() * 6) + 6; // 6-11 points for active UAVs, 4 for offline
+	const radius = 0.01; // Approximately 1.1 km radius for realistic movement
+
+	// Start from a point slightly away from current position (showing movement history)
+	const startOffsetLat = (Math.random() - 0.5) * radius * 1.5;
+	const startOffsetLng = (Math.random() - 0.5) * radius * 1.5;
+	coordinates.push([baseLat + startOffsetLat, baseLng + startOffsetLng]);
+
+	// Generate intermediate points leading to current position
+	for (let i = 1; i < pathLength - 1; i++) {
+		const t = i / (pathLength - 1); // Progress from 0 to 1
+
+		// Create different movement patterns based on UAV ID
+		let lat: number, lng: number;
+
+		if (uavId.includes("1") || uavId.includes("UAV")) {
+			// Spiral pattern
+			const angle = t * Math.PI * 3;
+			const currentRadius = radius * (1 - t) * 0.7;
+			lat = baseLat + startOffsetLat * (1 - t) + Math.cos(angle) * currentRadius;
+			lng = baseLng + startOffsetLng * (1 - t) + Math.sin(angle) * currentRadius;
+		} else if (uavId.includes("2") || uavId.includes("Hawk")) {
+			// Figure-8 pattern
+			const angle = t * Math.PI * 2;
+			lat = baseLat + startOffsetLat * (1 - t) + Math.sin(angle) * radius * 0.4;
+			lng = baseLng + startOffsetLng * (1 - t) + Math.sin(angle * 2) * radius * 0.3;
+		} else if (uavId.includes("3") || uavId.includes("Falcon")) {
+			// Linear patrol pattern - horizontal movement with small vertical oscillation
+			lat = baseLat + startOffsetLat * (1 - t) + Math.sin(t * Math.PI * 4) * radius * 0.2;
+			lng = baseLng + startOffsetLng * (1 - t) + (t - 0.5) * radius * 0.6;
+		} else if (uavId.includes("Kolibri") || uavId.includes("4452")) {
+			// Zigzag pattern - more horizontal than vertical
+			lat = baseLat + startOffsetLat * (1 - t) + Math.sin(t * Math.PI * 6) * radius * 0.2;
+			lng = baseLng + startOffsetLng * (1 - t) + Math.cos(t * Math.PI * 3) * radius * 0.5;
+		} else if (uavId.includes("Shark") || uavId.includes("3456")) {
+			// Circular pattern
+			const angle = t * Math.PI * 2.5;
+			lat = baseLat + startOffsetLat * (1 - t) + Math.cos(angle) * radius * 0.5;
+			lng = baseLng + startOffsetLng * (1 - t) + Math.sin(angle) * radius * 0.5;
+		} else {
+			// Smooth random walk pattern
+			const prevLat = coordinates[i - 1][0];
+			const prevLng = coordinates[i - 1][1];
+			const stepLat = (Math.random() - 0.5) * radius * 0.25;
+			const stepLng = (Math.random() - 0.5) * radius * 0.25;
+			// Gradually move towards base position more strongly as we progress
+			const progressWeight = t * 0.3; // Increase pull toward base as we progress
+			const towardsBaseLat = (baseLat - prevLat) * progressWeight;
+			const towardsBaseLng = (baseLng - prevLng) * progressWeight;
+			lat = prevLat + stepLat + towardsBaseLat;
+			lng = prevLng + stepLng + towardsBaseLng;
+		}
+
+		coordinates.push([lat, lng]);
+	}
+
+	// Always end at current UAV position
+	coordinates.push(basePosition);
+
+	return coordinates;
+};
+
+// Helper function to get color based on UAV type
+export const getFlightPathColor = (type: "online" | "warning" | "offline"): string => {
+	switch (type) {
+		case "online":
+			return "#71BC2C"; // Green
+		case "warning":
+			return "#E09D18"; // Orange/Warning
+		case "offline":
+			return "#C10000"; // Red
+		default:
+			return "#71BC2C";
+	}
+};
+
 // Helper function to generate UAV detail data from basic marker data
 export const generateUAVDetailData = (basicData: {
 	id: string | number;

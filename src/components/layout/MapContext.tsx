@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useRef } from "react";
+import React, { createContext, useContext, useRef, useState } from "react";
 import type { Map as LeafletMap } from "leaflet";
 
 interface MapContextType {
@@ -6,6 +6,8 @@ interface MapContextType {
   zoomIn: () => void;
   zoomOut: () => void;
   resetView: () => void;
+  showFlightPaths: boolean;
+  setShowFlightPaths: (show: boolean) => void;
 }
 
 const MapContext = createContext<MapContextType | undefined>(undefined);
@@ -26,6 +28,7 @@ export const MapContextProvider: React.FC<MapContextProviderProps> = ({
   children,
 }) => {
   const mapRef = useRef<LeafletMap | null>(null);
+  const [showFlightPaths, setShowFlightPaths] = useState(false);
 
   // Default map settings
   const warsawCenter: [number, number] = [52.2297, 21.0122];
@@ -54,6 +57,8 @@ export const MapContextProvider: React.FC<MapContextProviderProps> = ({
     zoomIn,
     zoomOut,
     resetView,
+    showFlightPaths,
+    setShowFlightPaths,
   };
 
   return <MapContext.Provider value={value}>{children}</MapContext.Provider>;

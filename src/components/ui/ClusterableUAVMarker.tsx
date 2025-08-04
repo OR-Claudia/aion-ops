@@ -106,9 +106,9 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 				}</div>
 				</div>
 			</div>
-			<button 
-				class="modal-btn !bg-[#1F2630] ${getTypeClasses()}" 
-				style="width: 35px; height: 35px; border-radius: 25px; padding: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; background: none; pointer-events: all;" 
+			<button
+				class="modal-btn !bg-[#1F2630] ${getTypeClasses()}"
+				style="width: 35px; height: 35px; border-radius: 25px; padding: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; background: none; pointer-events: all;"
 				data-detail-btn="true"
 			>
 				<img src="${externalLinkIcon}" alt="open details" style="width: 12px; height: 12px; opacity: 0.8;" />
@@ -162,6 +162,8 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 			ref={markerRef}
 			position={position}
 			icon={customIcon}
+			// @ts-ignore - Add UAV ID to options for cluster tracking
+			uavId={data.id}
 			eventHandlers={{
 				click: handleClick,
 			}}

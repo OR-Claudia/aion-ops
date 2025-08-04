@@ -16,8 +16,7 @@ import { cn } from "../lib/utils";
 const UAVListPage: React.FC = () => {
 	const [filteredUAVs, setFilteredUAVs] = useState<UAVData[]>([]);
 	const [selectedUAV, setSelectedUAV] = useState<UAVData | null>(null);
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const [hasFilters, setHasFilters] = useState(false);
+	const [, setHasFilters] = useState(false);
 
 	// Filter configurations for the UAV list
 	const filterConfigs: FilterConfig[] = [
