@@ -74,8 +74,10 @@ const ExpandableToolsPanel: React.FC = () => {
 								</span>
 								<div className="flex items-center">
 									<div
-										className={`w-[41px] h-[21px] rounded-[10px] cursor-pointer transition-all duration-200 ${
-											showFlightPaths ? "bg-[#00C6B8]" : "bg-green-500"
+										className={`w-[41px]  rounded-[10px] cursor-pointer transition-all duration-200 ${
+											showFlightPaths
+												? "h-[21px] bg-[#00C6B8]"
+												: "h-[23px] border-1 border-[rgba(211,251,216,0.5)]"
 										}`}
 										onClick={() => setShowFlightPaths(!showFlightPaths)}
 									>
