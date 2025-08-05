@@ -156,7 +156,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 	return (
 		<div className="fixed z-50 pointer-events-auto">
 			{/* Modal backdrop */}
-			<div className="absolute  backdrop-blur-sm" onClick={onClose} />
+			<div className="absolute backdrop-blur-sm" onClick={onClose} />
 
 			{/* Modal content */}
 			<div
@@ -220,7 +220,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 
 						{/* Video controls */}
 						<div className="absolute bottom-[22px] left-1/2 transform -translate-x-1/2 flex items-center gap-6">
-							<button className="text-[#E3F3F2] hover:text-white transition-colors w-[18px] h-[18px] flex justify-center items-center">
+							<button className="text-[#E3F3F2] hover:text-white transition-colors w-[24px] h-[24px] flex justify-center items-center">
 								<svg
 									width="16"
 									height="16"
@@ -231,7 +231,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 									<path d="M13 6v12l8.5-6z" />
 								</svg>
 							</button>
-							<button className="text-[#E3F3F2] hover:text-white transition-colors w-[18px] h-[18px] flex justify-center items-center">
+							<button className="text-[#E3F3F2] hover:text-white transition-colors w-[24px] h-[24px] flex justify-center items-center">
 								<svg
 									width="16"
 									height="16"
@@ -241,7 +241,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 									<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
 								</svg>
 							</button>
-							<button className="text-[#E3F3F2] hover:text-white transition-colors w-[18px] h-[18px] flex justify-center items-center">
+							<button className="text-[#E3F3F2] hover:text-white transition-colors w-[24px] h-[24px] flex justify-center items-center">
 								<svg
 									width="16"
 									height="16"

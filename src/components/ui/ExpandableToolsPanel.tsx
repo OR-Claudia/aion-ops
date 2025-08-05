@@ -11,7 +11,8 @@ const ExpandableToolsPanel: React.FC = () => {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const location = useLocation();
 	const isDetectionsPage = location.pathname === "/detections";
-	const { zoomIn, zoomOut, resetView, showFlightPaths, setShowFlightPaths } = useMapControls();
+	const { zoomIn, zoomOut, resetView, showFlightPaths, setShowFlightPaths } =
+		useMapControls();
 
 	const mapTools = [
 		{ icon: ZoomInIcon, name: "Zoom In", action: zoomIn },
@@ -74,13 +75,15 @@ const ExpandableToolsPanel: React.FC = () => {
 								<div className="flex items-center">
 									<div
 										className={`w-[41px] h-[21px] rounded-[10px] cursor-pointer transition-all duration-200 ${
-											showFlightPaths ? "bg-[#00C6B8]" : "bg-gray-600"
+											showFlightPaths ? "bg-[#00C6B8]" : "bg-green-500"
 										}`}
 										onClick={() => setShowFlightPaths(!showFlightPaths)}
 									>
 										<div
 											className={`w-[17px] h-[17px] bg-[#1F2630] rounded-full transition-all duration-200 mt-[2px] ${
-												showFlightPaths ? "ml-[22px]" : "ml-[2px]"
+												showFlightPaths
+													? "ml-[22px]"
+													: "ml-[2px] border-2 border-[#00C6B8]"
 											}`}
 										/>
 									</div>

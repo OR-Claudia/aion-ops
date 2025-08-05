@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import timesIcon from "../../assets/times.svg";
-import windowMinimizeIcon from "../../assets/window-minimize.svg";
 import Button from "./Button";
 
 export interface ClusterDetails {
@@ -84,10 +83,6 @@ const ClusterDetailsModal: React.FC<ClusterDetailsModalProps> = ({
 		});
 	};
 
-	const handleMinimize = () => {
-		onClose();
-	};
-
 	const handleDelete = () => {
 		// Placeholder for delete functionality
 		console.log("Delete cluster:", cluster.clusterId);
@@ -134,20 +129,13 @@ const ClusterDetailsModal: React.FC<ClusterDetailsModalProps> = ({
 						</h2>
 						<p className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal m-0">
 							Coordinates:
-							{cluster.coordinates.replace("Lat: ", "").replace(" Lon: ", ", ")}
+							{" " +
+								cluster.coordinates
+									.replace("Lat: ", "")
+									.replace(" Lon: ", ", ")}
 						</p>
 					</div>
 					<div className="flex items-center gap-[24px] mt-[24px]">
-						<button
-							onClick={handleMinimize}
-							className="bg-transparent border-none hover:opacity-75 transition-opacity"
-						>
-							<img
-								src={windowMinimizeIcon}
-								alt="minimize"
-								className="w-[18px] h-[18px]"
-							/>
-						</button>
 						<button
 							onClick={onClose}
 							className="bg-transparent border-none hover:opacity-75 transition-opacity"
@@ -160,40 +148,48 @@ const ClusterDetailsModal: React.FC<ClusterDetailsModalProps> = ({
 				{/* Content section */}
 				<div className="px-[27px] flex flex-col gap-3 mb-[24px] flex-1">
 					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Description (AI Generated):</span>
-						{cluster.description}
-					</div>
-
-					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Mission:</span> {cluster.mission}
-					</div>
-
-					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Mission summary:</span>
-						{cluster.missionSummary}
-					</div>
-
-					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Objects type:</span>
-						{cluster.objectsTypeDetailed}
-					</div>
-
-					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Detection interval:</span>
-						{cluster.detectionInterval}
-					</div>
-
-					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Recording:</span>
-						<span className="text-[#00C6B8] underline cursor-pointer hover:text-[#00E6D8] transition-colors">
-							{cluster.recording}
+						<span className="font-bold">
+							Description (AI Generated): {cluster.description}
 						</span>
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">UAV:</span>
-						<span className="text-[#00C6B8] underline cursor-pointer hover:text-[#00E6D8] transition-colors">
-							{cluster.responsibleUAV}
+						<span className="font-bold">Mission: {cluster.mission}</span>
+					</div>
+
+					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
+						<span className="font-bold">
+							Mission summary: {cluster.missionSummary}
+						</span>
+					</div>
+
+					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
+						<span className="font-bold">
+							Objects type: {cluster.objectsTypeDetailed}
+						</span>
+					</div>
+
+					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
+						<span className="font-bold">
+							Detection interval: {cluster.detectionInterval}
+						</span>
+					</div>
+
+					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
+						<span className="font-bold">
+							Recording:{" "}
+							<span className="text-[#00C6B8] underline cursor-pointer hover:text-[#00E6D8] transition-colors">
+								{cluster.recording}
+							</span>
+						</span>
+					</div>
+
+					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
+						<span className="font-bold">
+							UAV:{" "}
+							<span className="text-[#00C6B8] underline cursor-pointer hover:text-[#00E6D8] transition-colors">
+								{cluster.responsibleUAV}
+							</span>
 						</span>
 					</div>
 				</div>
