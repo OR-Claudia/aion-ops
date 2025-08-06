@@ -13,8 +13,7 @@ import {
 import { generateUAVDetailData, generateFlightPathCoordinates, getFlightPathColor } from "./UAVData";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import L from "leaflet";
-import { allDetectionItems } from "./DetectionData";
-import type { DetectionData } from "./DetectionData";
+import { useDetectionStore } from "../../stores";
 import { useMapControls } from "./MapContext";
 import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
@@ -38,6 +37,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 
 	const isDetectionsPage = location.pathname === "/detections";
 	const { mapRef, showFlightPaths } = useMapControls();
+	const { filteredDetections, selectedDetection, setSelectedDetection } = useDetectionStore();
 
 	const [tileUrl, setTileUrl] = useState(
 		"https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
@@ -875,11 +875,13 @@ const MapContainer: React.FC<MapContainerProps> = ({
 					{/* Detection Markers - only on detections page */}
 					{isDetectionsPage && (
 						<>
-							{allDetectionItems.map((detection: DetectionData) => (
+							{filteredDetections.map((detection) => (
 								<DetectionMarker
 									key={detection.clusterId}
 									position={[detection.lat, detection.lon]}
 									detection={detection}
+									isSelected={selectedDetection?.clusterId === detection.clusterId}
+									onClick={setSelectedDetection}
 								/>
 							))}
 						</>
