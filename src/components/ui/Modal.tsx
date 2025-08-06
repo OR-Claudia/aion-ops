@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import type { ReactNode } from "react";
 import timesIcon from "../../assets/times.svg";
+import windowMinimizeIcon from "../../assets/window-minimize.svg";
 
 export interface ModalProps {
 	isOpen: boolean;
@@ -14,6 +15,8 @@ export interface ModalProps {
 	className?: string;
 	headerContent?: ReactNode;
 	showCloseButton?: boolean;
+	minimizable?: boolean;
+	onMinimize?: () => void;
 }
 
 const Modal: React.FC<ModalProps> = ({
@@ -23,6 +26,8 @@ const Modal: React.FC<ModalProps> = ({
 	subtitle,
 	children,
 	width = "auto",
+	minimizable = false,
+	onMinimize,
 	minHeight = "auto",
 	isDraggable = true,
 	className = "",
@@ -140,15 +145,32 @@ const Modal: React.FC<ModalProps> = ({
 						)}
 						{headerContent && <div className="mt-2">{headerContent}</div>}
 					</div>
-
-					{showCloseButton && (
-						<button
-							onClick={onClose}
-							className="ml-4 w-[21px] h-[23px] text-[#E3F3F2] hover:text-white transition-colors flex items-center justify-center border-none bg-transparent cursor-pointer"
-						>
-							<img src={timesIcon} alt="close" className="w-[14px] h-[14px]" />
-						</button>
-					)}
+					<div className="flex gap-[12px] mt-[12px]">
+						{minimizable && (
+							<button
+								onClick={onMinimize}
+								className="bg-transparent border-none hover:opacity-75 transition-opacity"
+							>
+								<img
+									src={windowMinimizeIcon}
+									alt="minimize"
+									className="w-[18px] h-[18px]"
+								/>
+							</button>
+						)}
+						{showCloseButton && (
+							<button
+								onClick={onClose}
+								className="ml-4 w-[21px] h-[23px] text-[#E3F3F2] hover:text-white transition-colors flex items-center justify-center border-none bg-transparent cursor-pointer"
+							>
+								<img
+									src={timesIcon}
+									alt="close"
+									className="w-[14px] h-[14px]"
+								/>
+							</button>
+						)}
+					</div>
 				</div>
 
 				{/* Modal body */}

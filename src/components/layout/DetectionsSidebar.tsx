@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import { SectionHeader, FilterControls, ClusterDetailsModal } from "../ui";
 import DetectionItem from "../ui/DetectionItem";
 import type { FilterState } from "../ui/FilterControls";
+import { useDetectionContext } from "./DetectionContext";
 import type { DetectionData } from "./DetectionData";
-import { allDetectionItems } from "./DetectionData";
 
 const DetectionsSidebar: React.FC = () => {
-	const [filteredDetections, setFilteredDetections] =
-		useState<DetectionData[]>(allDetectionItems);
-
-	const [selectedCluster, setSelectedCluster] = useState<DetectionData | null>(
-		null
-	);
-	const [isModalOpen, setIsModalOpen] = useState(false);
+	const {
+		allDetections,
+		filteredDetections,
+		selectedDetection,
+		isModalOpen,
+		setFilteredDetections,
+		selectDetection,
+		clearSelection,
+	} = useDetectionContext();
 
 	const handleFilterChange = (filters: FilterState) => {
-		let filtered = allDetectionItems;
+		let filtered = allDetections;
 
 		if (filters.type) {
 			filtered = filtered.filter(
@@ -35,13 +37,11 @@ const DetectionsSidebar: React.FC = () => {
 	};
 
 	const handleClusterClick = (cluster: DetectionData) => {
-		setSelectedCluster(cluster);
-		setIsModalOpen(true);
+		selectDetection(cluster);
 	};
 
 	const handleCloseModal = () => {
-		setIsModalOpen(false);
-		setSelectedCluster(null);
+		clearSelection();
 	};
 
 	return (
@@ -92,7 +92,7 @@ const DetectionsSidebar: React.FC = () => {
 									objectsType={item.objectsType}
 									responsibleUAV={item.responsibleUAV}
 									onClick={() => handleClusterClick(item)}
-									isSelected={selectedCluster?.clusterId === item.clusterId}
+									isSelected={selectedDetection?.clusterId === item.clusterId}
 								/>
 							))}
 						</div>
@@ -108,7 +108,7 @@ const DetectionsSidebar: React.FC = () => {
 
 			{/* Cluster Details Modal */}
 			<ClusterDetailsModal
-				cluster={selectedCluster}
+				cluster={selectedDetection}
 				isOpen={isModalOpen}
 				onClose={handleCloseModal}
 			/>

@@ -6,11 +6,15 @@ import type { DetectionData } from "../layout/DetectionData";
 interface DetectionMarkerProps {
   position: [number, number];
   detection: DetectionData;
+  isSelected?: boolean;
+  onClick?: (detection: DetectionData) => void;
 }
 
 const DetectionMarker: React.FC<DetectionMarkerProps> = ({
   position,
   detection,
+  isSelected = false,
+  onClick,
 }) => {
   // Calculate marker size based on area (scale for map display)
   const calculateMarkerSize = (area: number) => {
@@ -36,6 +40,8 @@ const DetectionMarker: React.FC<DetectionMarkerProps> = ({
     const size = calculateMarkerSize(detection.area);
     const opacity = calculateOpacity(detection.area, detection.objectsType);
     const color = getTypeColor();
+    const border = isSelected ? "3px solid #E3F3F2" : "1px solid rgba(0, 0, 0, 0.2)";
+    const selectedOpacity = isSelected ? 1 : opacity;
 
     return L.divIcon({
       html: `
@@ -44,9 +50,11 @@ const DetectionMarker: React.FC<DetectionMarkerProps> = ({
           height: ${size}px;
           border-radius: 50%;
           background-color: ${color};
-          opacity: ${opacity};
+          opacity: ${selectedOpacity};
           cursor: pointer;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+          border: ${border};
+          transition: all 0.2s ease;
         "></div>
       `,
       className: "custom-detection-marker",
@@ -58,7 +66,9 @@ const DetectionMarker: React.FC<DetectionMarkerProps> = ({
   const handleClick = (e: L.LeafletMouseEvent) => {
     e.originalEvent.stopPropagation();
     e.originalEvent.preventDefault();
-    // Future: Navigate to detection detail page
+    if (onClick) {
+      onClick(detection);
+    }
   };
 
   return (
