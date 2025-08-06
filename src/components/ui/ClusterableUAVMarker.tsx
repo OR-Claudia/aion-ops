@@ -28,13 +28,6 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const markerRef = React.useRef<any>(null);
 
-	useEffect(() => {
-		console.log("ClusterableUAVMarker mounted");
-		return () => {
-			console.log("ClusterableUAVMarker unmounted");
-		};
-	}, []);
-
 	const handleClick = (e: L.LeafletMouseEvent) => {
 		e.originalEvent.stopPropagation();
 		setIsExpanded((prev) => !prev);
@@ -162,7 +155,7 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 			ref={markerRef}
 			position={position}
 			icon={customIcon}
-			// @ts-ignore - Add UAV ID to options for cluster tracking
+			// @ts-expect-error - Add UAV ID to options for cluster tracking
 			uavId={data.id}
 			eventHandlers={{
 				click: handleClick,

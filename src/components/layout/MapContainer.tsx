@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect } from "react";
 import { MapContainer as LeafletMap, TileLayer } from "react-leaflet";
 import { useLocation } from "react-router-dom";
@@ -41,9 +42,8 @@ const MapContainer: React.FC<MapContainerProps> = ({
 
 	const isDetectionsPage = location.pathname === "/detections";
 	const { mapRef, showFlightPaths } = useMapControls();
-
-	// Only use detection context on detections page
-	const detectionContext = isDetectionsPage ? useDetectionContext() : null;
+	const { filteredDetections, selectedDetection, selectDetection } =
+		useDetectionContext();
 
 	const [tileUrl, setTileUrl] = useState(
 		"https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
@@ -737,18 +737,17 @@ const MapContainer: React.FC<MapContainerProps> = ({
 					)}
 
 					{/* Detection Markers - only on detections page */}
-					{isDetectionsPage && detectionContext && (
+					{isDetectionsPage && (
 						<>
-							{detectionContext.filteredDetections.map((detection) => (
+							{filteredDetections.map((detection) => (
 								<DetectionMarker
 									key={detection.clusterId}
 									position={[detection.lat, detection.lon]}
 									detection={detection}
 									isSelected={
-										detectionContext.selectedDetection?.clusterId ===
-										detection.clusterId
+										selectedDetection?.clusterId === detection.clusterId
 									}
-									onClick={detectionContext.selectDetection}
+									onClick={selectDetection}
 								/>
 							))}
 						</>
