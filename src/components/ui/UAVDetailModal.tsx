@@ -247,28 +247,36 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 			</div>
 
 			{/* Information Section */}
-			<div className="px-[12px] mb-[19px] flex flex-col gap-[11px]">
+			<div className="px-[12px] mb-[32px] flex flex-col gap-[11px]">
 				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">Description:</span> {data.description}
+					<span className="font-[600]">Description: </span> {data.description}
 				</div>
 
-				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">Mission:</span>
+				<div className="text-[#E3F3F2] flex flex-row items-center  font-ubuntu text-sm font-normal leading-normal">
+					<span className="font-[600]">Mission: </span>
 					{data.missionLink ? (
-						<span className="text-[#00C6B8] underline cursor-pointer hover:text-[#00E6D8] transition-colors">
+						<Button
+							variant="underline"
+							onClick={() =>
+								console.log("Open mission details:", data.missionLink)
+							}
+						>
 							{data.mission}
-						</span>
+						</Button>
 					) : (
 						<span className="text-[#00C6B8] underline">{data.mission}</span>
 					)}
 				</div>
 
-				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">Flight path:</span>
+				<div className="text-[#E3F3F2] flex flex-row items-center font-ubuntu text-sm font-normal leading-normal">
+					<span className="font-[600]">Flight path:</span>
 					{data.flightPathLink ? (
-						<span className="text-[#00C6B8] underline cursor-pointer hover:text-[#00E6D8] transition-colors">
+						<Button
+							variant="underline"
+							onClick={() => console.log("Open flight path:", data.flightPath)}
+						>
 							{data.flightPath}
-						</span>
+						</Button>
 					) : (
 						<span className="text-[#00C6B8] underline">{data.flightPath}</span>
 					)}

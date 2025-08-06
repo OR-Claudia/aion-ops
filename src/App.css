@@ -2,41 +2,41 @@
 
 /* Leaflet control customization that can't be done with Tailwind */
 .leaflet-container {
-  background: #222631;
+	background: #222631;
 }
 
 .leaflet-control-zoom {
-  display: none;
+	display: none;
 }
 
 .leaflet-control-attribution {
-  background: rgba(34, 38, 49, 0.8);
-  color: #c9ced8;
-  font-family: Ubuntu, sans-serif;
-  font-size: 10px;
-  border-radius: 4px;
+	background: rgba(34, 38, 49, 0.8);
+	color: #c9ced8;
+	font-family: Ubuntu, sans-serif;
+	font-size: 10px;
+	border-radius: 4px;
 }
 
 .leaflet-control-attribution a {
-  color: #00c6b8;
+	color: #00c6b8;
 }
 
 /* Custom cluster icon styling */
 .custom-cluster-icon {
-  background: transparent !important;
-  border: none !important;
+	background: transparent !important;
+	border: none !important;
 }
 
 .custom-cluster-icon div {
-  margin: 0 !important;
+	margin: 0 !important;
 }
 
 /* Custom UAV marker styling */
 .custom-uav-marker {
-  background: transparent !important;
-  border: none !important;
+	background: transparent !important;
+	border: none !important;
 }
 
 .custom-uav-marker div {
-  margin: 0 !important;
+	margin: 0 !important;
 }

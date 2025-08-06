@@ -68,51 +68,52 @@ const ClusterDetailsModal: React.FC<ClusterDetailsModalProps> = ({
 			className="backdrop-blur-[16px]"
 		>
 			{/* Content section - preserving exact wrapper structure */}
-			<div className="px-[3px] flex flex-col gap-3 mb-[24px] flex-1">
+			<div className="px-[3px]  flex flex-col gap-3 mb-[24px] flex-1">
 				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">
-						Description (AI Generated): {cluster.description}
-					</span>
+					<span className="font-[600]">Description (AI Generated): </span>
+					{cluster.description}
 				</div>
 
 				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">Mission: {cluster.mission}</span>
+					<span className="font-[600]">Mission: </span>
+					{cluster.mission}
 				</div>
 
 				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">
-						Mission summary: {cluster.missionSummary}
-					</span>
+					<span className="font-[600]">Mission summary: </span>
+					{cluster.missionSummary}
 				</div>
 
 				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">
-						Objects type: {cluster.objectsTypeDetailed}
-					</span>
+					<span className="font-[600]">Objects type: </span>
+					{cluster.objectsTypeDetailed}
 				</div>
 
 				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">
-						Detection interval: {cluster.detectionInterval}
-					</span>
+					<span className="font-[600]">Detection interval: </span>
+					{cluster.detectionInterval}
 				</div>
 
-				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">
-						Recording:{" "}
-						<span className="text-[#00C6B8] underline cursor-pointer hover:text-[#00E6D8] transition-colors">
-							{cluster.recording}
-						</span>
-					</span>
+				<div className="text-[#E3F3F2] flex flex-row items-center font-ubuntu text-sm font-normal leading-normal">
+					<span className="font-[600]">Recording: </span>
+					<Button
+						variant="underline"
+						onClick={() => console.log("Open recording:", cluster.recording)}
+					>
+						{cluster.recording}
+					</Button>
 				</div>
 
-				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">
-						UAV:{" "}
-						<span className="text-[#00C6B8] underline cursor-pointer hover:text-[#00E6D8] transition-colors">
-							{cluster.responsibleUAV}
-						</span>
-					</span>
+				<div className="text-[#E3F3F2] flex flex-row items-center font-ubuntu text-sm font-normal leading-normal">
+					<span className="font-[600]">UAV: </span>
+					<Button
+						variant="underline"
+						onClick={() =>
+							console.log("Open Responsible UAV:", cluster.responsibleUAV)
+						}
+					>
+						{cluster.responsibleUAV}
+					</Button>
 				</div>
 			</div>
 
