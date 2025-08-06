@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
-import timesIcon from "../../assets/times.svg";
+import React from "react";
+import Modal from "./Modal";
 import windowMinimizeIcon from "../../assets/window-minimize.svg";
 import wifiIcon from "../../assets/wifi.svg";
 import wifi1Icon from "../../assets/wifi-1.svg";
@@ -38,58 +38,7 @@ export interface UAVDetailModalProps {
 }
 
 const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
-	const [position, setPosition] = useState({ x: 0, y: 0 });
-	const [isDragging, setIsDragging] = useState(false);
-	const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-	const modalRef = useRef<HTMLDivElement>(null);
-
-	// Center the modal when it first opens
-	useEffect(() => {
-		if (modalRef.current) {
-			const modal = modalRef.current;
-			const rect = modal.getBoundingClientRect();
-			setPosition({
-				x: (window.innerWidth - rect.width) / 2,
-				y: (window.innerHeight - rect.height) / 2,
-			});
-		}
-	}, []);
-
-	// Handle mouse events for dragging
-	useEffect(() => {
-		const handleMouseMove = (e: MouseEvent) => {
-			if (!isDragging) return;
-
-			setPosition({
-				x: e.clientX - dragStart.x,
-				y: e.clientY - dragStart.y,
-			});
-		};
-
-		const handleMouseUp = () => {
-			setIsDragging(false);
-		};
-
-		if (isDragging) {
-			document.addEventListener("mousemove", handleMouseMove);
-			document.addEventListener("mouseup", handleMouseUp);
-		}
-
-		return () => {
-			document.removeEventListener("mousemove", handleMouseMove);
-			document.removeEventListener("mouseup", handleMouseUp);
-		};
-	}, [isDragging, dragStart]);
-
-	if (!open || !data) return null;
-
-	const handleMouseDown = (e: React.MouseEvent) => {
-		setIsDragging(true);
-		setDragStart({
-			x: e.clientX - position.x,
-			y: e.clientY - position.y,
-		});
-	};
+	if (!data) return null;
 
 	const handleMinimize = () => {
 		onClose();
@@ -153,60 +102,33 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 		console.log("Request control:", data.id);
 	};
 
-	return (
-		<div className="fixed z-50 pointer-events-auto">
-			{/* Modal backdrop */}
-			<div className="absolute backdrop-blur-sm" onClick={onClose} />
-
-			{/* Modal content */}
-			<div
-				ref={modalRef}
-				className="absolute rounded-[0px_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/90 backdrop-blur-[16px]"
-				style={{
-					left: `${position.x}px`,
-					top: `${position.y}px`,
-				}}
+	// Custom header content with minimize button
+	const headerContent = (
+		<div className="flex gap-[28px] mt-[24px]">
+			<button
+				onClick={handleMinimize}
+				className="bg-transparent border-none hover:opacity-75 transition-opacity"
 			>
-				{/* Header with controls - draggable area */}
-				<div
-					className={`flex items-start justify-between px-[24px] pt-[12px] mb-[17px] select-none ${
-						isDragging ? "cursor-grabbing" : "cursor-grab"
-					}`}
-					onMouseDown={handleMouseDown}
-				>
-					<div>
-						<h2
-							className="text-white font-ubuntu font-bold mb-0!
-						"
-						>
-							{data.name}
-						</h2>
-						<p className="text-[#E3F3F2] font-ubuntu text-sm font-normal ">
-							Live coordinates: {data.coordinates}
-						</p>
-					</div>
-					<div className="flex gap-[28px] mt-[24px]">
-						<button
-							onClick={handleMinimize}
-							className="bg-transparent border-none hover:opacity-75 transition-opacity"
-						>
-							<img
-								src={windowMinimizeIcon}
-								alt="minimize"
-								className="w-[18px] h-[18px]"
-							/>
-						</button>
-						<button
-							onClick={onClose}
-							className="bg-transparent border-none hover:opacity-75 transition-opacity"
-						>
-							<img src={timesIcon} alt="close" className="w-[18px] h-[18px]" />
-						</button>
-					</div>
-				</div>
+				<img
+					src={windowMinimizeIcon}
+					alt="minimize"
+					className="w-[18px] h-[18px]"
+				/>
+			</button>
+		</div>
+	);
 
-				{/* Video Player Section */}
-				<div className="px-[24px] mb-[24px]">
+	return (
+		<Modal
+			isOpen={true}
+			onClose={onClose}
+			title={data.name}
+			subtitle={`Live coordinates: ${data.coordinates}`}
+			headerContent={headerContent}
+			className="bg-black/90 backdrop-blur-[16px]"
+		>
+			{/* Video Player Section - preserving exact wrapper structure */}
+			<div className="mb-[24px]">
 					<div className="w-[610px] h-[328px] relative rounded-[0px_3px_3px_3px] bg-gray-800 overflow-hidden">
 						{/* Video placeholder */}
 						<img
@@ -391,8 +313,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 						Request control
 					</Button>
 				</div>
-			</div>
-		</div>
+		</Modal>
 	);
 };
 

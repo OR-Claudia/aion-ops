@@ -14,6 +14,8 @@ export { default as MapMarker } from "./MapMarker";
 export { default as MapProviderSwitcher } from "./MapProviderSwitcher";
 export { default as MapStatusIndicator } from "./MapStatusIndicator";
 export { default as MessageBar } from "./MessageBar";
+export { default as Modal } from "./Modal";
+export type { ModalProps } from "./Modal";
 export { default as SectionHeader } from "./SectionHeader";
 export { default as StatusIndicator } from "./StatusIndicator";
 export { default as StatusBar } from "./StatusBar";

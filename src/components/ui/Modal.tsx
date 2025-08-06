@@ -130,11 +130,11 @@ const Modal: React.FC<ModalProps> = ({
 					onMouseDown={handleMouseDown}
 				>
 					<div className="flex-1 min-w-0">
-						<h2 className="text-white font-ubuntu text-2xl font-bold leading-normal mb-0">
+						<h2 className="text-white font-ubuntu text-2xl font-bold leading-none mb-0">
 							{title}
 						</h2>
 						{subtitle && (
-							<p className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal m-0">
+							<p className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-none mt-1 mb-0">
 								{subtitle}
 							</p>
 						)}
