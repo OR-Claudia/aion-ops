@@ -1,5 +1,6 @@
 import React from "react";
 import { FeedItem, SectionHeader } from "../ui";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar: React.FC = () => {
 	const feedItems = [
@@ -88,10 +89,15 @@ const Sidebar: React.FC = () => {
 			flightDuration: "3h44m12s",
 		},
 	];
+	const navigate = useNavigate();
 
 	return (
 		<div className="absolute top-[64px] left-[34px] z-10">
-			<SectionHeader title="Recent feeds" showArrow={false} />
+			<SectionHeader
+				title="Recent feeds"
+				showArrow={true}
+				onClick={() => navigate("/storage")}
+			/>
 			<div
 				className={`relative w-[350px] h-[72vh] rounded-[10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/60 backdrop-blur-[2px] mt-[7px]`}
 			>
