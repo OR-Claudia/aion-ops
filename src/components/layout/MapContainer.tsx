@@ -662,7 +662,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 						})
 					)}
 			</div>
-			<div className="fixed top-0 left-0 w-screen h-screen bg-[#222631] z-[1]">
+			<div className="fixed top-0 left-0 w-screen h-screen bg-[#222631] z-1">
 				<LeafletMap
 					center={warsawCenter}
 					zoom={12}

@@ -25,9 +25,9 @@ const ExpandableToolsPanel: React.FC = () => {
 			className={`transition-all duration-300 ${
 				isExpanded
 					? isDetectionsPage
-						? "w-[250px] min-h-[56px]"
-						: "w-[250px] h-[90px]"
-					: "w-[56px] h-[56px]"
+						? "w-[250px] h-16"
+						: "w-[250px] h-25"
+					: "w-16 h-16"
 			}`}
 		>
 			{/* Content */}
@@ -39,37 +39,33 @@ const ExpandableToolsPanel: React.FC = () => {
 						}`}
 					>
 						{/* Controls Row */}
-						<div className="flex items-center justify-around w-full flex-1">
+						<div className="flex items-center justify-around w-full gap-1 flex-1">
 							{/* Map Tools - inline horizontally */}
 							{mapTools.map((tool, index) => (
 								<div
 									key={index}
-									className="flex justify-center items-center w-[60px] h-[60px] cursor-pointer transition-all duration-200 hover:scale-110"
+									className="flex justify-center items-center cursor-pointer transition-all duration-200 hover:scale-110 w-30"
 									title={tool.name}
 									onClick={tool.action}
 								>
-									<img src={tool.icon} alt={tool.name} className="w-6 h-6" />
+									<img src={tool.icon} alt={tool.name} className="" />
 								</div>
 							))}
 
 							{/* Minimize Button */}
 							<div
-								className="flex justify-center items-center w-8 h-8 cursor-pointer transition-all duration-200 hover:scale-110"
+								className="flex justify-center items-center cursor-pointer transition-all duration-200 hover:scale-110 w-30"
 								onClick={() => setIsExpanded(false)}
 								title="Minimize Tools"
 							>
-								<img
-									src={ChevronRightIcon}
-									alt="Minimize"
-									className="w-4 h-4"
-								/>
+								<img src={ChevronRightIcon} alt="Minimize" />
 							</div>
 						</div>
 
 						{/* Flight Paths Toggle Row - Hidden on DetectionsPage */}
 						{!isDetectionsPage && (
-							<div className="flex items-center justify-between w-full h-8 px-[16px] mb-[6px]">
-								<span className="text-[#E3F3F2] font-ubuntu text-sm font-medium">
+							<div className="flex items-center justify-between w-full h-[30px] px-4 mt-2">
+								<span className="text-[#E3F3F2] font-ubuntu text-sm font-se">
 									Toggle flight paths
 								</span>
 								<div className="flex items-center">
@@ -99,7 +95,7 @@ const ExpandableToolsPanel: React.FC = () => {
 						onClick={() => setIsExpanded(true)}
 						title="Expand Tools"
 					>
-						<img src={ToolsIcon} alt="Tools" className="w-6 h-6" />
+						<img src={ToolsIcon} alt="Tools" className="w-8 h-8" />
 					</div>
 				)}
 			</div>

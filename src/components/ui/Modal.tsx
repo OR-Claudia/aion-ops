@@ -109,17 +109,11 @@ const Modal: React.FC<ModalProps> = ({
 	if (!isOpen) return null;
 
 	return (
-		<div className="fixed inset-0 z-50 pointer-events-auto">
-			{/* Modal backdrop */}
-			<div
-				className="fixed inset-0 backdrop-blur-sm bg-black/20"
-				onClick={onClose}
-			/>
-
+		<div className="fixed inset-0 z-50 ">
 			{/* Modal content */}
 			<div
 				ref={modalRef}
-				className={`absolute rounded-[0px_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/90 backdrop-blur-[16px] ${className}`}
+				className={`absolute rounded-[0px_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/40 backdrop-blur-[8px] max-w-2xl ${className}`}
 				style={{
 					left: `${position.x}px`,
 					top: `${position.y}px`,
@@ -134,12 +128,12 @@ const Modal: React.FC<ModalProps> = ({
 					}`}
 					onMouseDown={handleMouseDown}
 				>
-					<div className="flex-1 min-w-0">
-						<h2 className="text-white font-ubuntu text-2xl font-bold leading-none mb-0">
+					<div className="flex-1">
+						<h2 className="text-white font-ubuntu text-2xl font-bold leading-none mt-4">
 							{title}
 						</h2>
 						{subtitle && (
-							<p className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-none mt-1 mb-0">
+							<p className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-none mt-1 mb-4">
 								{subtitle}
 							</p>
 						)}

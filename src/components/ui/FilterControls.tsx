@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FilterIcon from "../../assets/filter-icon.svg";
 import ChevronDownIcon from "../../assets/chevron-down-light.svg";
+import { capitalize } from "../../lib/utils";
 
 export interface FilterConfig {
 	key: string;
@@ -78,7 +79,7 @@ const FilterControls: React.FC<FilterControlsProps> = ({
 					{filterConfigs.map((config) => (
 						<div key={config.key} className="relative">
 							<div
-								className="flex w-[157px] min-h-[40px] h-[40px] p-[6px] justify-between items-center rounded-[6px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/70 backdrop-blur-[2px] cursor-pointer hover:bg-black/80 transition-all duration-200 overflow-hidden text-ellipsis whitespace-nowrap"
+								className="flex w-[157px] min-h-[40px] h-6 p-2 justify-between items-center rounded-[6px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/70 backdrop-blur-[2px] cursor-pointer hover:bg-black/80 transition-all duration-200 overflow-hidden text-ellipsis whitespace-nowrap"
 								onClick={() => toggleDropdown(config.key)}
 							>
 								<span className="text-app-text/70 font-ubuntu text-sm font-light">
@@ -87,10 +88,10 @@ const FilterControls: React.FC<FilterControlsProps> = ({
 								<img src={ChevronDownIcon} alt="Dropdown" className="w-4 h-4" />
 							</div>
 							{activeDropdown === config.key && (
-								<div className="absolute top-[42px] left-0 w-[157px] max-h-[200px] overflow-y-auto rounded-[6px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-[#1a1a1a] z-50">
+								<div className="absolute top-[42px] left-0 w-[157px] max-h-[250px] overflow-y-auto rounded-[6px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-[#1a1a1a] z-50">
 									{/* All option for resetting individual filter */}
 									<div
-										className="px-[6px] py-4 text-app-text/70 font-ubuntu text-sm font-light cursor-pointer hover:bg-app-primary/20 transition-all duration-200 border-b border-app-text/20"
+										className="px-[6px] py-2 text-app-text/70 font-ubuntu text-sm font-light cursor-pointer hover:bg-app-primary/20 transition-all duration-200 border-b border-app-text/20"
 										onClick={() => handleFilterUpdate(config.key, "")}
 									>
 										<em>All</em>
@@ -98,10 +99,10 @@ const FilterControls: React.FC<FilterControlsProps> = ({
 									{config.options.map((option, index) => (
 										<div
 											key={index}
-											className="px-[6px] py-4 text-app-text/70 font-ubuntu text-sm font-light cursor-pointer hover:bg-app-primary/20 transition-all duration-200"
+											className="px-[6px] py-2 text-app-text/70 font-ubuntu text-sm font-light cursor-pointer hover:bg-app-primary/20 transition-all duration-200"
 											onClick={() => handleFilterUpdate(config.key, option)}
 										>
-											{option}
+											{capitalize(option)}
 										</div>
 									))}
 								</div>

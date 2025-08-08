@@ -46,7 +46,7 @@ const DetectionsSidebar: React.FC = () => {
 
 	return (
 		<>
-			<div className="absolute top-[64px] left-[34px] w-[350px] h-[758px] z-10">
+			<div className="absolute top-16 left-12 w-[350px] h-[72vh] z-10">
 				{/* Header and Filter Row */}
 				<div className="mb-[16px]">
 					<div className="flex items-center gap-2">
@@ -97,21 +97,16 @@ const DetectionsSidebar: React.FC = () => {
 							))}
 						</div>
 					</div>
-
-					{/* Scrollbar indicator */}
-					<div className="w-1 h-[143px] rounded-[3px] opacity-30 bg-white absolute right-3 top-[15px]"></div>
-
+					{/* Cluster Details Modal */}
+					<ClusterDetailsModal
+						cluster={selectedDetection}
+						isOpen={isModalOpen}
+						onClose={handleCloseModal}
+					/>
 					{/* Bottom gradient overlay */}
-					<div className="w-[264px] h-[86px] rounded-[10px] bg-gradient-to-b from-transparent to-black mix-blend-darken absolute left-[2px] bottom-0"></div>
+					<div className="w-[345px] h-[99px] rounded-[10px] bg-gradient-to-b from-transparent to-black mix-blend-darken absolute left-[2px] bottom-0"></div>
 				</div>
 			</div>
-
-			{/* Cluster Details Modal */}
-			<ClusterDetailsModal
-				cluster={selectedDetection}
-				isOpen={isModalOpen}
-				onClose={handleCloseModal}
-			/>
 		</>
 	);
 };
