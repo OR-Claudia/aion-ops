@@ -65,7 +65,7 @@ const ClusterDetailsModal: React.FC<ClusterDetailsModalProps> = ({
 			subtitle={coordinatesSubtitle}
 			width="551px"
 			minHeight="462px"
-			className="!backdrop-blur-[16px]"
+			className=""
 		>
 			{/* Content section */}
 			<div className="px-1 flex flex-col gap-3 mb-6 flex-1">

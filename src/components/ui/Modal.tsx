@@ -123,7 +123,7 @@ const Modal: React.FC<ModalProps> = ({
 			>
 				{/* Header with controls - draggable area */}
 				<div
-					className={`flex items-start justify-between px-[24px] pt-[12px] mb-[17px] select-none ${
+					className={`flex items-start justify-between px-[24px] pt-[12px] mb-[17px] ${
 						isDraggable ? (isDragging ? "cursor-grabbing" : "cursor-grab") : ""
 					}`}
 					onMouseDown={handleMouseDown}

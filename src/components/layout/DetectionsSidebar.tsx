@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionHeader, FilterControls, ClusterDetailsModal } from "../ui";
+import { SectionHeader, FilterControls } from "../ui";
 import DetectionItem from "../ui/DetectionItem";
 import type { FilterState } from "../ui/FilterControls";
 import { useDetectionContext } from "./DetectionContext";
@@ -10,11 +10,13 @@ const DetectionsSidebar: React.FC = () => {
 		allDetections,
 		filteredDetections,
 		selectedDetection,
-		isModalOpen,
 		setFilteredDetections,
 		selectDetection,
-		clearSelection,
 	} = useDetectionContext();
+
+	const handleClusterClick = (cluster: DetectionData) => {
+		selectDetection(cluster);
+	};
 
 	const handleFilterChange = (filters: FilterState) => {
 		let filtered = allDetections;
@@ -34,14 +36,6 @@ const DetectionsSidebar: React.FC = () => {
 		}
 
 		setFilteredDetections(filtered);
-	};
-
-	const handleClusterClick = (cluster: DetectionData) => {
-		selectDetection(cluster);
-	};
-
-	const handleCloseModal = () => {
-		clearSelection();
 	};
 
 	return (
@@ -97,12 +91,7 @@ const DetectionsSidebar: React.FC = () => {
 							))}
 						</div>
 					</div>
-					{/* Cluster Details Modal */}
-					<ClusterDetailsModal
-						cluster={selectedDetection}
-						isOpen={isModalOpen}
-						onClose={handleCloseModal}
-					/>
+
 					{/* Bottom gradient overlay */}
 					<div className="w-[345px] h-[99px] rounded-[10px] bg-gradient-to-b from-transparent to-black mix-blend-darken absolute left-[2px] bottom-0"></div>
 				</div>
