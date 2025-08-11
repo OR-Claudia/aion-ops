@@ -132,20 +132,21 @@ const UAVListPage: React.FC = () => {
 								"relative z-20 rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[5px] h-[69dvh]",
 								{
 									["w-[40%]"]: selectedUAV,
-									["w-[80%]"]: !selectedUAV,
+									["w-[90%]"]: !selectedUAV,
 								}
 							)}
 						>
 							{/* Content inside container */}
 							<div
 								className={cn(
-									"w-full overflow-hidden items-center h-full max-h-[68dvh] pt-3 justify-center flex px-[8%]"
+									"overflow-hidden items-center h-full max-h-[68dvh] pt-3 justify-center flex"
 								)}
 							>
 								{/* UAV Grid */}
 								<div
 									className={cn(
-										"flex flex-wrap gap-x-4 gap-y-3 h-full overflow-y-auto pt-3 justify-center mb-3"
+										"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-y-6 sm:gap-x-5 gap-y-3 h-full items-center overflow-y-auto overflow-x-hidden pt-5 px-6 justify-center",
+										selectedUAV ? "!grid-cols-2" : ""
 									)}
 								>
 									{isLoading && (

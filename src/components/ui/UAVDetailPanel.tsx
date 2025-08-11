@@ -49,25 +49,24 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 	};
 
 	return (
-		<div className="w-[464px] h-[74vh] relative">
+		<div className="w-[35%] h-[69dvh] relative">
 			{/* Container background */}
 			<div className="w-full h-full rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[2px]" />
 
 			{/* Close button */}
 			<button
 				onClick={onClose}
-				className="absolute right-[21px] top-[16px] w-[21px] h-[23px] text-[#E3F3F2] hover:text-white transition-colors flex items-center justify-center border-none bg-transparent"
+				className="absolute right-[21px] top-[16px] w-8 h-8 text-[#E3F3F2] hover:text-white transition-colors flex items-center justify-center border-none bg-transparent"
 			>
 				<img src={timesIcon} alt="close" className="w-[14px] h-[14px]" />
 			</button>
-
 			{/* UAV Name */}
-			<div className="absolute left-[25px] top-[20px] text-[#E3F3F2] font-ubuntu text-[20px] font-bold leading-normal">
+			<div className="absolute left-8 top-[20px] text-[#E3F3F2] font-ubuntu text-[20px] font-bold ">
 				{uav.name}
 			</div>
 
 			{/* Current Location */}
-			<div className="absolute left-[25px] top-[49px] text-[#E3F3F2] font-ubuntu text-[12px] font-normal opacity-80">
+			<div className="absolute left-8 top-[49px] text-[#E3F3F2] font-ubuntu text-[12px] font-normal opacity-80">
 				Current location: {uav.location}
 			</div>
 
@@ -75,11 +74,11 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 			<img
 				src={uav.image}
 				alt={uav.name}
-				className="absolute left-[25px] top-[84px] w-[292px] h-[161px] object-cover rounded-[0_4px_0_0]"
+				className="absolute left-8 top-22 w-100 h-50 object-cover rounded-[0_4px_0_0]"
 			/>
 
 			{/* Status Indicators */}
-			<div className="absolute right-[25px] top-[102px] flex flex-col items-center gap-[16px] w-[97px]">
+			<div className="absolute right-12 top-28 flex flex-col items-center gap-[16px] w-[97px]">
 				{/* Signal Status */}
 				<div className="flex flex-col items-center gap-3">
 					<div className="flex items-center justify-center gap-[4px] w-[63px] h-[15px] mb-[3px]">
@@ -126,7 +125,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 			</div>
 
 			{/* Detail Information */}
-			<div className="absolute left-[28px] top-[277px] w-[409px] flex flex-col gap-[6px]">
+			<div className="absolute left-8 top-[45%] w-fit flex flex-col gap-[6px]">
 				<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[396px]">
 					<span className="font-bold">Description:</span> {uav?.description}
 				</div>
