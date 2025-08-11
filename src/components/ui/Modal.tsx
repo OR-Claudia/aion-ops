@@ -107,13 +107,15 @@ const Modal: React.FC<ModalProps> = ({
 	}, [isOpen, onClose]);
 
 	if (!isOpen) return null;
+	// <div className="fixed inset-0 z-50 ">
+	//  </div>
 
 	return (
-		<div className="fixed inset-0 z-50 ">
+		<>
 			{/* Modal content */}
 			<div
 				ref={modalRef}
-				className={`absolute rounded-[0px_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/40 backdrop-blur-[8px] max-w-2xl ${className}`}
+				className={`absolute rounded-[0px_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/40 backdrop-blur-[8px] max-w-2xl ${className} z-50`}
 				style={{
 					left: `${position.x}px`,
 					top: `${position.y}px`,
@@ -170,7 +172,7 @@ const Modal: React.FC<ModalProps> = ({
 				{/* Modal body */}
 				<div className="px-[24px] pb-[24px]">{children}</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

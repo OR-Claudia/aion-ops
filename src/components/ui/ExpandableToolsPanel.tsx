@@ -31,7 +31,7 @@ const ExpandableToolsPanel: React.FC = () => {
 			}`}
 		>
 			{/* Content */}
-			<div className="relative w-full h-full z-10 p-3 box-border">
+			<div className="relative w-full h-full z-100 p-3 box-border">
 				{isExpanded ? (
 					<div
 						className={`flex flex-col w-full h-full ${

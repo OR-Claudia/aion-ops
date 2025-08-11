@@ -25,14 +25,14 @@ const Layout: React.FC<LayoutProps> = ({ children, showTools = false }) => {
 
 				{/* MessageBar - always present at bottom */}
 
-				<div className="fixed bottom-[32px] w-[80%] z-[15] left-1/2 transform -translate-x-1/2 ">
+				<div className="fixed bottom-[32px] w-[80%] z-20 left-1/2 transform -translate-x-1/2 ">
 					<MessageBar />
 				</div>
 
 				{/* ExpandableToolsPanel - only on pages that request it */}
 				{showTools && (
 					<div
-						className="fixed top-[143px] z-[15] border-[rgba(211,251,216,0.5)] rounded-[10px_0px_0px_10px] border-t-[1.5px] border-l-[1.5px] border-b-[1.5px] border-border-glass bg-black/80 backdrop-blur-[2px]"
+						className="fixed top-[143px] z-10 border-[rgba(211,251,216,0.5)] rounded-[10px_0px_0px_10px] border-t-[1.5px] border-l-[1.5px] border-b-[1.5px] border-border-glass bg-black/80 backdrop-blur-[2px]"
 						style={{ right: 0 }}
 					>
 						<ExpandableToolsPanel />
@@ -40,7 +40,7 @@ const Layout: React.FC<LayoutProps> = ({ children, showTools = false }) => {
 				)}
 
 				{/* Page Content - rendered over the map */}
-				<div className="relative z-[5] w-full h-screen">
+				<div className="relative z-50">
 					<div className="pointer-events-auto">{children}</div>
 				</div>
 			</div>
