@@ -6,7 +6,6 @@ import { ClusterDetailsModal } from "../components";
 const DetectionsPage: React.FC = () => {
 	const { selectedDetection, isModalOpen, clearSelection } =
 		useDetectionContext();
-
 	const handleCloseModal = () => {
 		clearSelection();
 	};
