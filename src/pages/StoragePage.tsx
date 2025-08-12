@@ -279,8 +279,8 @@ const StoragePage: React.FC = () => {
 
 	return (
 		<Layout>
-			<div className="w-full flex justify-center pt-[64px]">
-				<div className="w-[75%] max-w-[1400px] flex flex-col">
+			<div className="w-full flex justify-center pt-15">
+				<div className="w-[80%]  flex flex-col">
 					{/* Header and Filter Row */}
 					<div className="flex-shrink-0 px-6 mb-4">
 						<div className="flex items-center gap-8">
@@ -303,9 +303,9 @@ const StoragePage: React.FC = () => {
 						{/* Storage List Container */}
 						<div
 							className={cn(
-								"relative z-20 rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[5px] h-[calc(100vh-300px)] pt-[16px] mt-[16px] transition-all duration-300",
+								"relative z-20 rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[5px] h-[calc(100vh-320px)] pt-[16px] mt-[16px] transition-all duration-300",
 								{
-									"w-[calc(100%-512px)]": selectedRecord, // Leave exactly 500px + 12px gap for detail panel
+									"w-[60%]": selectedRecord, // Leave exactly 500px + 12px gap for detail panel
 									"w-full": !selectedRecord, // Full width when no detail panel
 								}
 							)}

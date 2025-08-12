@@ -109,11 +109,10 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 			subtitle={`Live coordinates: ${data.coordinates}`}
 			minimizable={true}
 			onMinimize={handleMinimize}
-			className="bg-black/90 backdrop-blur-[16px]"
 		>
 			{/* Video Player Section - preserving exact wrapper structure */}
-			<div className="mb-[24px]">
-				<div className="w-[610px] h-[328px] relative rounded-[0px_3px_3px_3px] bg-gray-800 overflow-hidden">
+			<div className="mb-4">
+				<div className="w-full h-fit relative rounded-[0px_3px_3px_3px] bg-gray-800 overflow-hidden">
 					{/* Video placeholder */}
 					<img
 						src="https://cdn.builder.io/api/v1/image/assets/TEMP/97219cb76d0ca48becae0e439c360ec396f3b4f2?width=1220"
@@ -249,11 +248,11 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 			{/* Information Section */}
 			<div className="px-[12px] mb-[32px] flex flex-col gap-[11px]">
 				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-[600]">Description: </span> {data.description}
+					<span className="font-bold">Description: </span> {data.description}
 				</div>
 
 				<div className="text-[#E3F3F2] flex flex-row items-center  font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-[600]">Mission: </span>
+					<span className="font-bold">Mission: </span>
 					{data.missionLink ? (
 						<Button
 							variant="underline"
@@ -269,7 +268,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 				</div>
 
 				<div className="text-[#E3F3F2] flex flex-row items-center font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-[600]">Flight path:</span>
+					<span className="font-bold">Flight path:</span>
 					{data.flightPathLink ? (
 						<Button
 							variant="underline"
@@ -284,7 +283,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 			</div>
 
 			{/* Action buttons */}
-			<div className="px-[12px] flex items-center gap-3 w-[596px]">
+			<div className="px-3 flex items-center gap-2 w-[596px]">
 				<Button variant="secondary" onClick={handleFollow}>
 					Follow
 				</Button>

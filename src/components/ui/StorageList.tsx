@@ -18,7 +18,7 @@ const StorageList: React.FC<StorageListProps> = ({
 		<div className="flex flex-col gap-[11px] h-full overflow-y-auto w-full">
 			{records.map((record) => (
 				<StorageItem
-					key={record.id}
+					key={`${record.id}-record`}
 					record={record}
 					selected={selectedRecord?.id === record.id}
 					onClick={onRecordClick}

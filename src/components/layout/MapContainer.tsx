@@ -652,7 +652,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 							if (uav.data.id === el) {
 								return (
 									<UAVDetailModal
-										key={uav.data.id}
+										key={`${uav.data.id}-modal`}
 										data={uav.data}
 										onClose={() => handleCloseUAVModal(uav.data.id as number)}
 									/>
@@ -662,7 +662,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 						})
 					)}
 			</div>
-			<div className="fixed top-0 left-0 w-screen h-screen bg-[#222631] z-[1]">
+			<div className="fixed top-0 left-0 w-screen h-screen bg-[#222631] z-10">
 				<LeafletMap
 					center={warsawCenter}
 					zoom={12}

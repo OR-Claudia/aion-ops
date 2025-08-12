@@ -65,10 +65,9 @@ const ClusterDetailsModal: React.FC<ClusterDetailsModalProps> = ({
 			subtitle={coordinatesSubtitle}
 			width="551px"
 			minHeight="462px"
-			className="backdrop-blur-[16px]"
 		>
-			{/* Content section - preserving exact wrapper structure */}
-			<div className="px-[3px]  flex flex-col gap-3 mb-[24px] flex-1">
+			{/* Content section */}
+			<div className="px-1 flex flex-col gap-3 mb-6 flex-1">
 				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
 					<span className="font-[600]">Description (AI Generated): </span>
 					{cluster.description}

@@ -56,7 +56,7 @@ const StorageItem: React.FC<StorageItemProps> = ({
 					src={record.image}
 					alt={record.title}
 					className={cn(
-						"h-[89px] object-cover rounded-bl-[8px] relative -left-[4px] top-[3px] z-10s",
+						"h-[89px] sobject-cover rounded-bl-[8px] relative -left-[4px] z-10",
 						isDetailView ? "w-[117px]" : "w-[144px]"
 					)}
 				/>

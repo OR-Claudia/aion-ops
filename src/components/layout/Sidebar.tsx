@@ -92,17 +92,17 @@ const Sidebar: React.FC = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="absolute top-[64px] left-[34px] z-10">
+		<div className="absolute top-16 left-12 z-10">
 			<SectionHeader
 				title="Recent feeds"
 				showArrow={true}
 				onClick={() => navigate("/storage")}
 			/>
 			<div
-				className={`relative w-[350px] h-[72vh] rounded-[10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/60 backdrop-blur-[2px] mt-[7px]`}
+				className={`relative w-[350px] h-[72vh] rounded-[10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/20 backdrop-blur-[8px] mt-[7px]`}
 			>
 				<div
-					className={`flex flex-col items-start gap-2 absolute left-[17px] top-[15px] w-[316px] h-[calc(72vh-32px)] overflow-y-auto pr-2`}
+					className={`flex flex-col items-start gap-2 absolute left-4 top-3 w-[324px] h-[calc(72vh-32px)] overflow-y-auto pr-2`}
 				>
 					{feedItems.map((item, index) => (
 						<FeedItem
@@ -115,7 +115,7 @@ const Sidebar: React.FC = () => {
 						/>
 					))}
 				</div>
-				<div className="w-1 h-[143px] rounded-[3px] opacity-30 bg-white absolute right-3 top-[62px]"></div>
+
 				<div className="w-[345px] h-[99px] rounded-[10px] bg-gradient-to-b from-transparent to-black mix-blend-darken absolute left-[2px] bottom-0"></div>
 			</div>
 		</div>
