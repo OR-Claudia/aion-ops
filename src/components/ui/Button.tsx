@@ -1,7 +1,12 @@
 import React from "react";
 import { cn } from "../../lib/utils";
 
-export type ButtonVariant = "primary" | "secondary" | "danger" | "underline";
+export type ButtonVariant =
+	| "primary"
+	| "secondary"
+	| "danger"
+	| "underline"
+	| "video";
 
 interface ButtonProps {
 	variant: ButtonVariant;
@@ -42,6 +47,8 @@ const Button: React.FC<ButtonProps> = ({
 					"text-[#00C6B8] px-1 !h-5 border-none bg-transparent font-ubuntu text-[14px] underline hover:text-[#00D6C8] transition-colors",
 					{ ["text-gray-500"]: disabled }
 				);
+			case "video":
+				return cn("px-1 !h-5 border-none bg-transparent ");
 			default:
 				return "";
 		}

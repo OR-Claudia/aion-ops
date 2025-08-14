@@ -3,6 +3,7 @@ import type { StorageData } from "./StorageItem";
 import timesIcon from "../../assets/times.svg";
 import externalLinkIcon from "../../assets/external-link.svg";
 import Button from "./Button";
+import VideoPlayer from "./VideoPlayer/index.tsx";
 
 interface StorageDetailPanelProps {
 	record: StorageData;
@@ -64,21 +65,13 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 			{/* Scrollable content container */}
 			<div className="flex-1 overflow-y-auto px-[25px] pb-[80px]">
 				{/* Video Player */}
-				{/* <ReactPlayer
-					width={"100%"}
-					height={"70%"}
-					controls={true}
-					style={{}}
-					// src={footageVideo}
-					// src="https://objectstorage.eu-amsterdam-1.oraclecloud.com/p/GUnBsBTDP7h_ZsSJpdShWFikYFySFAzGzkBqBr-QPb6WSlaxN8LDPv7wBdxrqz6B/n/ax7clclouzxl/b/bucket-20250812-1045/o/GX010921.MP4"
-					src="https://drive.google.com/uc?id=1onsyYlOexL6JCanqPz0TLfSGyIVxfW_i"
-				/> */}
-				<iframe
-					src="https://drive.google.com/file/d/1TekMzC7n3p3lr3vWX5ESDfUizupa3oV1/preview"
-					width="640"
-					height="480"
-					allow="autoplay"
-				></iframe>
+				<VideoPlayer
+					src={
+						"https://objectstorage.eu-amsterdam-1.oraclecloud.com/p/rBbeJCt3p7y2zqZ7tvuDXiEeGkjD1InTVeMfCws8v2fCRtXw-fh72spHSK0ILSfS/n/ax7clclouzxl/b/bucket-20250812-1045/o/GX010921.MP4"
+						// "https://videos.pexels.com/video-files/6548176/6548176-hd_1920_1080_24fps.mp4"
+						// "https://drive.google.com/file/d/1onsyYlOexL6JCanqPz0TLfSGyIVxfW_i/preview"
+					}
+				/>
 
 				{/* External links */}
 				<div className="flex justify-around items-center w-full my-6">
