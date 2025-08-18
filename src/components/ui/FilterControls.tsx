@@ -59,7 +59,7 @@ const FilterControls: React.FC<FilterControlsProps> = ({
 	};
 
 	return (
-		<div className="inline-flex items-center gap-[12px]">
+		<div className="inline-flex items-center gap-[12px] ">
 			{/* Filter toggle button */}
 			<button
 				onClick={toggleFilters}
@@ -88,7 +88,7 @@ const FilterControls: React.FC<FilterControlsProps> = ({
 								<img src={ChevronDownIcon} alt="Dropdown" className="w-4 h-4" />
 							</div>
 							{activeDropdown === config.key && (
-								<div className="absolute top-[42px] left-0 w-[157px] max-h-[250px] overflow-y-auto rounded-[6px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-[#1a1a1a] z-50">
+								<div className="absolute top-[42px] left-0 w-[157px] max-h-[250px] overflow-y-auto rounded-[6px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-[#1a1a1a] z-40">
 									{/* All option for resetting individual filter */}
 									<div
 										className="px-[6px] py-2 text-app-text/70 font-ubuntu text-sm font-light cursor-pointer hover:bg-app-primary/20 transition-all duration-200 border-b border-app-text/20"

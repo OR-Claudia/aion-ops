@@ -282,14 +282,14 @@ const StoragePage: React.FC = () => {
 			<div className="w-full flex justify-center pt-15">
 				<div className="w-[80%]  flex flex-col">
 					{/* Header and Filter Row */}
-					<div className="flex-shrink-0 px-6 mb-4">
+					<div className="flex-shrink-0 px-6 mb-1">
 						<div className="flex items-center gap-8">
 							<SectionHeader
 								title="Storage"
 								showArrow={false}
 								width="w-[267px]"
 							/>
-							<div className="w-[54px] h-10">
+							<div className="w-[54px] h-10 -ml-3">
 								<FilterControls
 									filters={filterConfigs}
 									onFilterChange={handleFilterChange}

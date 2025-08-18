@@ -26,7 +26,7 @@ const TopBar: React.FC = () => {
 	};
 
 	return (
-		<div className="relative top-[47px] w-[80%] h-16 z-[15] mx-auto">
+		<div className="relative top-[47px] w-[80%] h-16 z-60 mx-auto">
 			<div className="w-full h-full rounded-[10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/70 backdrop-blur-[2px] flex items-center justify-between px-[21px] py-[8px] box-border">
 				{/* Left section: Hamburger Menu and Navigation */}
 				<div className="flex items-center flex-1">

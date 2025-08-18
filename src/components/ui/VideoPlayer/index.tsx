@@ -1,19 +1,26 @@
-import React, { useCallback, useRef, useState } from "react";
+import React from "react";
 import { cn } from "../../../lib/utils";
 import ReactPlayer from "react-player";
-import Button from "../Button";
-import SeekForward from "../../../assets/seek-forward.svg";
-import SeekBackward from "../../../assets/seek-backward.svg";
-import Play from "../../../assets/play.svg";
-import Pause from "../../../assets/pause.svg";
-import ExpandWide from "../../../assets/expand-wide.svg";
+
+import {
+	MediaControlBar,
+	MediaController,
+	MediaFullscreenButton,
+	MediaMuteButton,
+	MediaPlayButton,
+	MediaSeekBackwardButton,
+	MediaSeekForwardButton,
+	MediaTimeDisplay,
+	MediaTimeRange,
+	MediaVolumeRange,
+} from "media-chrome/react";
 
 interface VideoPlayerProps {
 	src: string;
 	width?: number | string;
 	height?: number | string;
 	className?: string;
-	livestream?: boolean;
+	// livestream?: boolean;
 	allowfullscreen?: boolean;
 }
 
@@ -21,48 +28,10 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	src,
 	width = "100%",
 	height = "60%",
-	livestream = false,
+	// livestream = false,
 	allowfullscreen = false,
 	className,
 }) => {
-	{
-		/* Using ReactPlayer as a type works in app but throws error in VSCode, do not change */
-	}
-	const playerRef = useRef<ReactPlayer>(null);
-	const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
-	const [playing, setPlaying] = useState<boolean>(false);
-
-	const handlePlayPause = useCallback(() => {
-		setPlaying((prev) => !prev);
-	}, []);
-
-	const seekForward = () => {
-		if (playerRef.current) {
-			playerRef.current.seekTo(
-				playerRef.current.getCurrentTime() + 5,
-				"seconds"
-			);
-		}
-	};
-
-	const seekBackward = () => {
-		if (playerRef.current) {
-			playerRef.current.seekTo(
-				playerRef.current.getCurrentTime() - 5,
-				"seconds"
-			);
-		}
-	};
-
-	const toggleFullscreen = () => {
-		if (!isFullscreen) {
-			playerRef.current.requestFullscreen();
-		} else {
-			document.exitFullscreen();
-		}
-		setIsFullscreen((prev) => !prev);
-	};
-
 	if (src.includes("google")) {
 		return (
 			<iframe
@@ -78,55 +47,57 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	}
 
 	return (
-		<div>
+		<MediaController
+			style={{
+				width: "100%",
+				aspectRatio: "auto",
+			}}
+		>
 			<ReactPlayer
 				src={src}
-				className={cn(className, "border-none mt-2")}
+				slot="media"
+				className={cn(className, "border-none w-full h-full")}
 				width={width}
 				height={height}
-				ref={playerRef}
-				playing={playing}
+				// ref={playerRef}
+				autoPlay={false}
+				// playing={playing}
+				// onProgress={handleProgress}
 				controls={false}
-				pip={false}
+				// pip={false}
 				style={{}}
 			/>
-			{/* Controls for video playback */}
-			<div className="flex justify-between items-center mt-5">
-				<div className="w-[100%] flex  justify-center items-center space-between">
-					<Button variant="video" onClick={seekBackward}>
-						<img
-							src={SeekBackward}
-							alt={"Seek backward"}
-							className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform duration-200"
-						/>
-					</Button>
-					<Button variant="video" onClick={handlePlayPause}>
-						<img
-							src={playing ? Pause : Play}
-							alt={playing ? "Pause video" : "Play video"}
-							className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform duration-200"
-						/>
-					</Button>
-					<Button variant="video" onClick={seekForward}>
-						<img
-							src={SeekForward}
-							alt={"Seek forward"}
-							className="w-5 h-5  cursor-pointer hover:scale-110 transition-transform duration-200"
-						/>
-					</Button>
+			<MediaControlBar className="w-full flex flex-col backdrop-blur-[5px] bg-black/40">
+				<div className="flex w-full h-full items-center place-content-between px-3 ">
+					<MediaTimeRange className="w-10/12 bg-transparent" />
+					<MediaTimeDisplay showDuration className="w-2/12 bg-transparent" />
 				</div>
-				{/* Fullscreen toggle button */}
-				{allowfullscreen && (
-					<Button variant="video" onClick={toggleFullscreen}>
-						<img
-							src={ExpandWide}
-							alt={"Seek forward"}
-							className="w-5 h-5  cursor-pointer hover:scale-110 transition-transform duration-200"
-						/>
-					</Button>
-				)}
-			</div>
-		</div>
+
+				<div
+					className={cn(
+						"flex w-full h-full items-center place-content-between px-5 mb-2",
+						{ ["pr-[30%]"]: !allowfullscreen }
+					)}
+				>
+					<div
+						className={cn(" flex", {
+							["w-3/12"]: !allowfullscreen,
+							["w-2/12"]: allowfullscreen,
+						})}
+					>
+						<MediaMuteButton className="bg-transparent" />
+						<MediaVolumeRange className="bg-transparent" />
+					</div>
+
+					<MediaSeekBackwardButton seekOffset={5} className="bg-transparent" />
+					<MediaPlayButton className="bg-transparent" />
+					<MediaSeekForwardButton seekOffset={5} className="bg-transparent" />
+					{allowfullscreen && (
+						<MediaFullscreenButton className="bg-transparent w-2/12" />
+					)}
+				</div>
+			</MediaControlBar>
+		</MediaController>
 	);
 };
 
