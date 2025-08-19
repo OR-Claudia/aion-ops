@@ -3,7 +3,7 @@ import type { StorageData } from "./StorageItem";
 import timesIcon from "../../assets/times.svg";
 import externalLinkIcon from "../../assets/external-link.svg";
 import Button from "./Button";
-import VideoPlayer from "./VideoPlayer/index.tsx";
+import VideoPlayer from "./VideoPlayer.tsx";
 
 interface StorageDetailPanelProps {
 	record: StorageData;
@@ -68,9 +68,9 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 					{/* Video Player */}
 					<VideoPlayer
 						src={
-							"https://objectstorage.eu-amsterdam-1.oraclecloud.com/p/rBbeJCt3p7y2zqZ7tvuDXiEeGkjD1InTVeMfCws8v2fCRtXw-fh72spHSK0ILSfS/n/ax7clclouzxl/b/bucket-20250812-1045/o/GX010921.MP4"
+							// "https://objectstorage.eu-amsterdam-1.oraclecloud.com/p/rBbeJCt3p7y2zqZ7tvuDXiEeGkjD1InTVeMfCws8v2fCRtXw-fh72spHSK0ILSfS/n/ax7clclouzxl/b/bucket-20250812-1045/o/GX010921.MP4"
 							// "https://videos.pexels.com/video-files/6548176/6548176-hd_1920_1080_24fps.mp4"
-							// "https://drive.google.com/file/d/1onsyYlOexL6JCanqPz0TLfSGyIVxfW_i/preview"
+							"https://drive.google.com/file/d/1onsyYlOexL6JCanqPz0TLfSGyIVxfW_i/preview"
 						}
 					/>
 				</div>

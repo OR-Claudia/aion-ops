@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 import ReactPlayer from "react-player";
 
 import {
@@ -64,13 +64,14 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 				preload={"auto"}
 			/>
 			<MediaControlBar
-				// --media-primary-color class works to target media buttons' color, not to be changed
+				// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
 				style={{ "--media-primary-color": "#D3FBD8" }}
 				className="w-full flex flex-col backdrop-blur-[5px] bg-black/50"
 			>
 				<div className="flex w-full h-full items-center place-content-between px-3">
 					<MediaTimeRange
 						className={`${livestream ? "w-full" : "w-10/12"} bg-transparent`}
+						// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
 						style={{ "--media-primary-color": "#FFF" }}
 					/>
 					{livestream ? null : (
