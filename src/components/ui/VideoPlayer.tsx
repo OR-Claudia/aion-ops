@@ -1,6 +1,6 @@
-import React from "react";
+import { useRef, useEffect, type FC } from "react";
 import { cn } from "../../lib/utils";
-import ReactPlayer from "react-player";
+import Hls from "hls.js";
 
 import {
 	MediaControlBar,
@@ -24,7 +24,7 @@ interface VideoPlayerProps {
 	allowfullscreen?: boolean;
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({
+const VideoPlayer: FC<VideoPlayerProps> = ({
 	src,
 	width = "100%",
 	height = "60%",
@@ -32,7 +32,74 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	allowfullscreen = true,
 	className,
 }) => {
-	if (src.includes("google")) {
+	const isGoogleEmbed = src.includes("google");
+	const videoRef = useRef<HTMLVideoElement | null>(null);
+	const hlsRef = useRef<Hls | null>(null);
+
+	useEffect(() => {
+		const videoElement = videoRef.current;
+		if (!videoElement) return;
+		if (isGoogleEmbed) return; // skip HLS init for iframe source
+
+		// Cleanup existing instance when src changes
+		if (hlsRef.current) {
+			hlsRef.current.destroy();
+			hlsRef.current = null;
+		}
+
+		const isHlsSource =
+			src.toLowerCase().includes(".m3u8") ||
+			src.toLowerCase().includes("application/vnd.apple.mpegurl");
+
+		if (isHlsSource) {
+			if (Hls.isSupported()) {
+				const hlsInstance = new Hls({
+					maxBufferLength: 30,
+					backBufferLength: 30,
+					lowLatencyMode: true,
+				});
+				hlsRef.current = hlsInstance;
+				hlsInstance.attachMedia(videoElement);
+				hlsInstance.on(Hls.Events.MEDIA_ATTACHED, () => {
+					hlsInstance.loadSource(src);
+				});
+				// Optional: surface errors to console
+				hlsInstance.on(Hls.Events.ERROR, (_, data) => {
+					if (data.fatal) {
+						switch (data.type) {
+							case Hls.ErrorTypes.NETWORK_ERROR:
+								hlsInstance.startLoad();
+								break;
+							case Hls.ErrorTypes.MEDIA_ERROR:
+								hlsInstance.recoverMediaError();
+								break;
+							default:
+								hlsInstance.destroy();
+						}
+					}
+				});
+			} else if (videoElement.canPlayType("application/vnd.apple.mpegurl")) {
+				// Safari natively supports HLS
+				videoElement.src = src;
+				videoElement.load();
+			} else {
+				// Fallback: let the browser try
+				videoElement.src = src;
+			}
+		} else {
+			// Non-HLS sources (e.g., MP4)
+			videoElement.src = src;
+		}
+
+		return () => {
+			if (hlsRef.current) {
+				hlsRef.current.destroy();
+				hlsRef.current = null;
+			}
+		};
+	}, [src, isGoogleEmbed]);
+
+	if (isGoogleEmbed) {
 		return (
 			<iframe
 				src={src}
@@ -53,15 +120,13 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 				aspectRatio: "auto",
 			}}
 		>
-			<ReactPlayer
-				src={src}
+			<video
+				ref={videoRef}
 				slot="media"
 				className={cn(className, "border-none w-full h-full")}
-				width={width}
-				height={height}
-				autoPlay={false}
-				controls={false}
-				preload={"auto"}
+				style={{ width, height }}
+				preload="auto"
+				playsInline
 			/>
 			<MediaControlBar
 				// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
