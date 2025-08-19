@@ -62,7 +62,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 				autoPlay={false}
 				controls={false}
 				preload={"auto"}
-				style={{}}
 			/>
 			<MediaControlBar
 				// --media-primary-color class works to target media buttons' color, not to be changed
@@ -71,10 +70,12 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 			>
 				<div className="flex w-full h-full items-center place-content-between px-3">
 					<MediaTimeRange
-						className="w-10/12 bg-transparent"
+						className={`${livestream ? "w-full" : "w-10/12"} bg-transparent`}
 						style={{ "--media-primary-color": "#FFF" }}
 					/>
-					<MediaTimeDisplay showDuration className="w-2/12 bg-transparent" />
+					{livestream ? null : (
+						<MediaTimeDisplay showDuration className="w-2/12 bg-transparent" />
+					)}
 				</div>
 
 				<div
