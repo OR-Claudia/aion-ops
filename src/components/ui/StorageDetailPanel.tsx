@@ -40,9 +40,9 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 	};
 
 	return (
-		<div className="w-[700px] h-[calc(100vh-320px)] relative rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[2px] flex flex-col transition-all duration-300">
+		<div className="w-[650px] h-[calc(100vh-320px)] relative rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[2px] flex flex-col transition-all duration-300">
 			{/* Header section */}
-			<div className="flex-shrink-0 relative px-[25px] py-[16px]">
+			<div className="flex-shrink-1 relative px-[25px] py-[16px]">
 				{/* Close button */}
 				<button
 					onClick={onClose}
@@ -63,15 +63,17 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 			</div>
 
 			{/* Scrollable content container */}
-			<div className="flex-1 overflow-y-auto px-[25px] pb-[80px]">
-				{/* Video Player */}
-				<VideoPlayer
-					src={
-						"https://objectstorage.eu-amsterdam-1.oraclecloud.com/p/rBbeJCt3p7y2zqZ7tvuDXiEeGkjD1InTVeMfCws8v2fCRtXw-fh72spHSK0ILSfS/n/ax7clclouzxl/b/bucket-20250812-1045/o/GX010921.MP4"
-						// "https://videos.pexels.com/video-files/6548176/6548176-hd_1920_1080_24fps.mp4"
-						// "https://drive.google.com/file/d/1onsyYlOexL6JCanqPz0TLfSGyIVxfW_i/preview"
-					}
-				/>
+			<div className="flex-1 overflow-x-auto px-[25px] pb-[80px]">
+				<div>
+					{/* Video Player */}
+					<VideoPlayer
+						src={
+							"https://objectstorage.eu-amsterdam-1.oraclecloud.com/p/rBbeJCt3p7y2zqZ7tvuDXiEeGkjD1InTVeMfCws8v2fCRtXw-fh72spHSK0ILSfS/n/ax7clclouzxl/b/bucket-20250812-1045/o/GX010921.MP4"
+							// "https://videos.pexels.com/video-files/6548176/6548176-hd_1920_1080_24fps.mp4"
+							// "https://drive.google.com/file/d/1onsyYlOexL6JCanqPz0TLfSGyIVxfW_i/preview"
+						}
+					/>
+				</div>
 
 				{/* External links */}
 				<div className="flex justify-around items-center w-full my-6">
@@ -138,7 +140,7 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 			</div>
 
 			{/* Fixed Action Buttons at bottom */}
-			<div className="flex-shrink-0 absolute left-8 bottom-[32px] flex items-center gap-3 w-full">
+			<div className="flex-shrink-0 absolute left-8 bottom-[32px] flex items-center gap-3 ">
 				<Button variant="secondary" onClick={handleEdit}>
 					Edit
 				</Button>

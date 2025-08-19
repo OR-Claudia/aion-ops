@@ -7,6 +7,7 @@ import batteryFullIcon from "../../assets/battery-full.svg";
 import batteryHalfIcon from "../../assets/battery-half.svg";
 import batteryEmptyIcon from "../../assets/battery-empty.svg";
 import Button from "./Button";
+import VideoPlayer from "./VideoPlayer";
 
 export interface UAVDetailData {
 	id: string | number;
@@ -112,59 +113,18 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 		>
 			{/* Video Player Section - preserving exact wrapper structure */}
 			<div className="mb-4">
-				<div className="w-full h-fit relative rounded-[0px_3px_3px_3px] bg-gray-800 overflow-hidden">
-					{/* Video placeholder */}
-					<img
-						src="https://cdn.builder.io/api/v1/image/assets/TEMP/97219cb76d0ca48becae0e439c360ec396f3b4f2?width=1220"
-						alt="Video feed"
-						className="w-full h-full object-cover"
-					/>
-
-					{/* Video overlay gradient */}
-					<div className="absolute inset-x-0 bottom-0 h-[199px] bg-gradient-to-t from-black/70 to-transparent" />
-
-					{/* Video controls */}
-					<div className="absolute bottom-[22px] left-1/2 transform -translate-x-1/2 flex items-center gap-6">
-						<button className="text-[#E3F3F2] hover:text-white transition-colors w-[24px] h-[24px] flex justify-center items-center">
-							<svg
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-							>
-								<path d="M4 18l8.5-6L4 6v12z" />
-								<path d="M13 6v12l8.5-6z" />
-							</svg>
-						</button>
-						<button className="text-[#E3F3F2] hover:text-white transition-colors w-[24px] h-[24px] flex justify-center items-center">
-							<svg
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-							>
-								<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-							</svg>
-						</button>
-						<button className="text-[#E3F3F2] hover:text-white transition-colors w-[24px] h-[24px] flex justify-center items-center">
-							<svg
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-							>
-								<path d="M4 18l8.5-6L4 6v12z" />
-								<path d="M13 6v12l8.5-6z" />
-							</svg>
-						</button>
+				<div className="w-full h-fit relative rounded-[0px_3px_3px_3px] overflow-hidden">
+					{/* Video Player */}
+					<div className="w-full">
+						<VideoPlayer
+							livestream={true}
+							src={
+								"https://objectstorage.eu-amsterdam-1.oraclecloud.com/p/rBbeJCt3p7y2zqZ7tvuDXiEeGkjD1InTVeMfCws8v2fCRtXw-fh72spHSK0ILSfS/n/ax7clclouzxl/b/bucket-20250812-1045/o/GX010921.MP4"
+								// "https://videos.pexels.com/video-files/6548176/6548176-hd_1920_1080_24fps.mp4"
+								// "https://drive.google.com/file/d/1onsyYlOexL6JCanqPz0TLfSGyIVxfW_i/preview"
+							}
+						/>
 					</div>
-
-					{/* Expand button */}
-					<button className="absolute bottom-[22px] right-[23px] text-[#E3F3F2] hover:text-white transition-colors w-[18px] h-[18px] flex justify-center items-center">
-						<svg width="20" height="18" viewBox="0 0 24 24" fill="currentColor">
-							<path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
-						</svg>
-					</button>
 
 					{/* Detection boxes (if any) */}
 					{data.detections &&

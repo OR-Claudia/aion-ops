@@ -20,7 +20,7 @@ interface VideoPlayerProps {
 	width?: number | string;
 	height?: number | string;
 	className?: string;
-	// livestream?: boolean;
+	livestream?: boolean;
 	allowfullscreen?: boolean;
 }
 
@@ -28,8 +28,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 	src,
 	width = "100%",
 	height = "60%",
-	// livestream = false,
-	allowfullscreen = false,
+	livestream = false,
+	allowfullscreen = true,
 	className,
 }) => {
 	if (src.includes("google")) {
@@ -59,17 +59,21 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 				className={cn(className, "border-none w-full h-full")}
 				width={width}
 				height={height}
-				// ref={playerRef}
 				autoPlay={false}
-				// playing={playing}
-				// onProgress={handleProgress}
 				controls={false}
-				// pip={false}
+				preload={"auto"}
 				style={{}}
 			/>
-			<MediaControlBar className="w-full flex flex-col backdrop-blur-[5px] bg-black/40">
-				<div className="flex w-full h-full items-center place-content-between px-3 ">
-					<MediaTimeRange className="w-10/12 bg-transparent" />
+			<MediaControlBar
+				// --media-primary-color class works to target media buttons' color, not to be changed
+				style={{ "--media-primary-color": "#D3FBD8" }}
+				className="w-full flex flex-col backdrop-blur-[5px] bg-black/50"
+			>
+				<div className="flex w-full h-full items-center place-content-between px-3">
+					<MediaTimeRange
+						className="w-10/12 bg-transparent"
+						style={{ "--media-primary-color": "#FFF" }}
+					/>
 					<MediaTimeDisplay showDuration className="w-2/12 bg-transparent" />
 				</div>
 
@@ -88,10 +92,18 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 						<MediaMuteButton className="bg-transparent" />
 						<MediaVolumeRange className="bg-transparent" />
 					</div>
+					{!livestream ? (
+						<MediaSeekBackwardButton
+							seekOffset={5}
+							className="bg-transparent"
+						/>
+					) : null}
 
-					<MediaSeekBackwardButton seekOffset={5} className="bg-transparent" />
 					<MediaPlayButton className="bg-transparent" />
-					<MediaSeekForwardButton seekOffset={5} className="bg-transparent" />
+					{!livestream ? (
+						<MediaSeekForwardButton seekOffset={5} className="bg-transparent" />
+					) : null}
+
 					{allowfullscreen && (
 						<MediaFullscreenButton className="bg-transparent w-2/12" />
 					)}
