@@ -6,8 +6,8 @@ import wifi2Icon from "../../assets/wifi-2.svg";
 import batteryFullIcon from "../../assets/battery-full.svg";
 import batteryHalfIcon from "../../assets/battery-half.svg";
 import batteryEmptyIcon from "../../assets/battery-empty.svg";
-import Button from "./Button";
-import VideoPlayer from "./VideoPlayer";
+import Button from "../Button";
+import VideoPlayer from "../VideoPlayer";
 
 export interface UAVDetailData {
 	id: string | number;

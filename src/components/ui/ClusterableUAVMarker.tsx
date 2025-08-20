@@ -9,7 +9,7 @@ import wifi2Icon from "../../assets/wifi-2.svg";
 import wifi1Icon from "../../assets/wifi-1.svg";
 
 import externalLinkIcon from "../../assets/external-link.svg";
-import type { UAVDetailData } from "./UAVDetailModal";
+import type { UAVDetailData } from "./Modals/UAVDetailModal";
 
 interface ClusterableUAVMarkerProps {
 	position: [number, number];

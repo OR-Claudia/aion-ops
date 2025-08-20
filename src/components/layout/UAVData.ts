@@ -1,4 +1,4 @@
-import type { UAVDetailData } from "../ui/UAVDetailModal";
+import type { UAVDetailData } from "../ui/Modals/UAVDetailModal";
 
 // Helper function to generate realistic flight path coordinates within 100 sq km
 export const generateFlightPathCoordinates = (
@@ -29,21 +29,33 @@ export const generateFlightPathCoordinates = (
 			// Spiral pattern
 			const angle = t * Math.PI * 3;
 			const currentRadius = radius * (1 - t) * 0.7;
-			lat = baseLat + startOffsetLat * (1 - t) + Math.cos(angle) * currentRadius;
-			lng = baseLng + startOffsetLng * (1 - t) + Math.sin(angle) * currentRadius;
+			lat =
+				baseLat + startOffsetLat * (1 - t) + Math.cos(angle) * currentRadius;
+			lng =
+				baseLng + startOffsetLng * (1 - t) + Math.sin(angle) * currentRadius;
 		} else if (uavId.includes("2") || uavId.includes("Hawk")) {
 			// Figure-8 pattern
 			const angle = t * Math.PI * 2;
 			lat = baseLat + startOffsetLat * (1 - t) + Math.sin(angle) * radius * 0.4;
-			lng = baseLng + startOffsetLng * (1 - t) + Math.sin(angle * 2) * radius * 0.3;
+			lng =
+				baseLng + startOffsetLng * (1 - t) + Math.sin(angle * 2) * radius * 0.3;
 		} else if (uavId.includes("3") || uavId.includes("Falcon")) {
 			// Linear patrol pattern - horizontal movement with small vertical oscillation
-			lat = baseLat + startOffsetLat * (1 - t) + Math.sin(t * Math.PI * 4) * radius * 0.2;
+			lat =
+				baseLat +
+				startOffsetLat * (1 - t) +
+				Math.sin(t * Math.PI * 4) * radius * 0.2;
 			lng = baseLng + startOffsetLng * (1 - t) + (t - 0.5) * radius * 0.6;
 		} else if (uavId.includes("Kolibri") || uavId.includes("4452")) {
 			// Zigzag pattern - more horizontal than vertical
-			lat = baseLat + startOffsetLat * (1 - t) + Math.sin(t * Math.PI * 6) * radius * 0.2;
-			lng = baseLng + startOffsetLng * (1 - t) + Math.cos(t * Math.PI * 3) * radius * 0.5;
+			lat =
+				baseLat +
+				startOffsetLat * (1 - t) +
+				Math.sin(t * Math.PI * 6) * radius * 0.2;
+			lng =
+				baseLng +
+				startOffsetLng * (1 - t) +
+				Math.cos(t * Math.PI * 3) * radius * 0.5;
 		} else if (uavId.includes("Shark") || uavId.includes("3456")) {
 			// Circular pattern
 			const angle = t * Math.PI * 2.5;
@@ -73,7 +85,9 @@ export const generateFlightPathCoordinates = (
 };
 
 // Helper function to get color based on UAV type
-export const getFlightPathColor = (type: "online" | "warning" | "offline"): string => {
+export const getFlightPathColor = (
+	type: "online" | "warning" | "offline"
+): string => {
 	switch (type) {
 		case "online":
 			return "#71BC2C"; // Green

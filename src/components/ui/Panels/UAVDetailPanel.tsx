@@ -1,10 +1,10 @@
 import React from "react";
-import type { UAVData } from "./UAVCard";
-import StatusBar from "./StatusBar";
+import type { UAVData } from "../UAVCard";
+import StatusBar from "../StatusBar";
 import wifiIcon from "../../assets/wifi.svg";
 import batteryFullIcon from "../../assets/battery-full.svg";
 import timesIcon from "../../assets/times.svg";
-import Button from "./Button";
+import Button from "../Button";
 
 interface UAVDetailPanelProps {
 	uav: UAVData;
