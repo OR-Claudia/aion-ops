@@ -1,6 +1,30 @@
 import React from "react";
 import { cn } from "../../lib/utils";
+import type { Detection } from "./Modals/DetectionsModal";
 // import ChevronRightIcon from "../../assets/chevron-right-icon.svg";
+
+export interface Detected {
+	video_info: {
+		filename: string;
+		fps: number;
+		width: number;
+		height: number;
+		total_frames: number;
+		duration: number;
+	};
+	model_info: {
+		model: string;
+		confidence_threshold: number;
+		classes?: string | null;
+	};
+	detections: Detection[];
+	processing_stats: {
+		total_frames_processed: number;
+		processing_time: number;
+		average_fps: number;
+		total_detections: number;
+	};
+}
 
 export interface StorageData {
 	id: string;
@@ -21,7 +45,7 @@ export interface StorageData {
 	keyEvents: string;
 	missionDescription: string;
 	flightPath: string;
-	detections?: any[];
+	detected?: Detected;
 }
 
 interface StorageItemProps {

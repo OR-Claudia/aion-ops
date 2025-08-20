@@ -13,6 +13,7 @@ import type {
 } from "../components/ui/FilterControls";
 import { cn } from "../lib/utils";
 import DetectionsModal from "../components/ui/Modals/DetectionsModal";
+import { detections as detectionsData } from "../assets/mock-data/data.js";
 
 const StoragePage: React.FC = () => {
 	const [filteredRecords, setFilteredRecords] = useState<StorageData[]>([]);
@@ -66,7 +67,7 @@ const StoragePage: React.FC = () => {
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 			flightPath:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-			detections: [],
+			detected: detectionsData,
 		},
 		{
 			id: "2",

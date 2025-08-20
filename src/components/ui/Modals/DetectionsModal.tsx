@@ -8,7 +8,21 @@ interface Coordinates {
 
 export interface Detection {
 	id: number;
-	coordinates: Coordinates[];
+	timestamp: number;
+	class_id: number;
+	class_name: string;
+	confidence: number;
+	coordinates: Coordinates;
+	bbox: {
+		x1: number;
+		y1: number;
+		x2: number;
+		y2: number;
+		width: number;
+		height: number;
+		center_x: number;
+		center_y: number;
+	};
 }
 
 interface DetectionsModalProps {

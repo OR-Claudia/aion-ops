@@ -14,9 +14,10 @@ export const detections = {
 	},
 	detections: [
 		{
-			timestamp: 44.0,
+			id: 1,
+			timestamp: 44,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.696302056312561,
 			bbox: {
 				x1: 20,
@@ -28,11 +29,16 @@ export const detections = {
 				center_x: 127,
 				center_y: 610,
 			},
+			coordinates: {
+				lat: 52.229774,
+				lon: 21.0123,
+			},
 		},
 		{
-			timestamp: 44.0,
+			id: 2,
+			timestamp: 44,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.2623322308063507,
 			bbox: {
 				x1: 0,
@@ -44,11 +50,16 @@ export const detections = {
 				center_x: 46,
 				center_y: 636,
 			},
+			coordinates: {
+				lat: 52.229928,
+				lon: 21.012309,
+			},
 		},
 		{
-			timestamp: 45.0,
+			id: 3,
+			timestamp: 45,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7951990365982056,
 			bbox: {
 				x1: 1392,
@@ -60,9 +71,14 @@ export const detections = {
 				center_x: 1469,
 				center_y: 735,
 			},
+			coordinates: {
+				lat: 52.229774,
+				lon: 21.012289,
+			},
 		},
 		{
-			timestamp: 46.0,
+			id: 4,
+			timestamp: 46,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6896935105323792,
@@ -76,9 +92,14 @@ export const detections = {
 				center_x: 1987,
 				center_y: 859,
 			},
+			coordinates: {
+				lat: 52.229852,
+				lon: 21.012416,
+			},
 		},
 		{
-			timestamp: 49.0,
+			id: 5,
+			timestamp: 49,
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.3015359342098236,
@@ -92,9 +113,14 @@ export const detections = {
 				center_x: 2213,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.229766,
+				lon: 21.012304,
+			},
 		},
 		{
-			timestamp: 50.0,
+			id: 6,
+			timestamp: 50,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6898459792137146,
@@ -108,9 +134,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.229896,
+				lon: 21.012329,
+			},
 		},
 		{
-			timestamp: 51.0,
+			id: 7,
+			timestamp: 51,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6525139212608337,
@@ -124,9 +155,14 @@ export const detections = {
 				center_x: 2215,
 				center_y: 869,
 			},
+			coordinates: {
+				lat: 52.23001,
+				lon: 21.012274,
+			},
 		},
 		{
-			timestamp: 52.0,
+			id: 8,
+			timestamp: 52,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6577746272087097,
@@ -140,9 +176,14 @@ export const detections = {
 				center_x: 2232,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.230161,
+				lon: 21.012345,
+			},
 		},
 		{
-			timestamp: 52.0,
+			id: 9,
+			timestamp: 52,
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.27482739090919495,
@@ -156,9 +197,14 @@ export const detections = {
 				center_x: 2233,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.230014,
+				lon: 21.012261,
+			},
 		},
 		{
-			timestamp: 53.0,
+			id: 10,
+			timestamp: 53,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6439213156700134,
@@ -172,11 +218,16 @@ export const detections = {
 				center_x: 2238,
 				center_y: 868,
 			},
+			coordinates: {
+				lat: 52.229888,
+				lon: 21.012241,
+			},
 		},
 		{
-			timestamp: 54.0,
+			id: 11,
+			timestamp: 54,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.3785259425640106,
 			bbox: {
 				x1: 2120,
@@ -188,11 +239,16 @@ export const detections = {
 				center_x: 2159,
 				center_y: 886,
 			},
+			coordinates: {
+				lat: 52.230027,
+				lon: 21.012203,
+			},
 		},
 		{
-			timestamp: 55.0,
+			id: 12,
+			timestamp: 55,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7582617402076721,
 			bbox: {
 				x1: 2066,
@@ -204,9 +260,14 @@ export const detections = {
 				center_x: 2112,
 				center_y: 871,
 			},
+			coordinates: {
+				lat: 52.230118,
+				lon: 21.012226,
+			},
 		},
 		{
-			timestamp: 55.0,
+			id: 13,
+			timestamp: 55,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7032774686813354,
@@ -220,11 +281,16 @@ export const detections = {
 				center_x: 2357,
 				center_y: 884,
 			},
+			coordinates: {
+				lat: 52.230174,
+				lon: 21.012362,
+			},
 		},
 		{
-			timestamp: 55.0,
+			id: 14,
+			timestamp: 55,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.4515876770019531,
 			bbox: {
 				x1: 2150,
@@ -236,11 +302,16 @@ export const detections = {
 				center_x: 2186,
 				center_y: 846,
 			},
+			coordinates: {
+				lat: 52.230199,
+				lon: 21.01247,
+			},
 		},
 		{
-			timestamp: 56.0,
+			id: 15,
+			timestamp: 56,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.818037748336792,
 			bbox: {
 				x1: 2074,
@@ -252,9 +323,14 @@ export const detections = {
 				center_x: 2138,
 				center_y: 871,
 			},
+			coordinates: {
+				lat: 52.230112,
+				lon: 21.012395,
+			},
 		},
 		{
-			timestamp: 56.0,
+			id: 16,
+			timestamp: 56,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7027197480201721,
@@ -268,11 +344,16 @@ export const detections = {
 				center_x: 2373,
 				center_y: 896,
 			},
+			coordinates: {
+				lat: 52.230014,
+				lon: 21.012315,
+			},
 		},
 		{
-			timestamp: 57.0,
+			id: 17,
+			timestamp: 57,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.707821249961853,
 			bbox: {
 				x1: 1986,
@@ -284,11 +365,16 @@ export const detections = {
 				center_x: 2024,
 				center_y: 895,
 			},
+			coordinates: {
+				lat: 52.229903,
+				lon: 21.012423,
+			},
 		},
 		{
-			timestamp: 57.0,
+			id: 18,
+			timestamp: 57,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7031502723693848,
 			bbox: {
 				x1: 2107,
@@ -300,9 +386,14 @@ export const detections = {
 				center_x: 2150,
 				center_y: 886,
 			},
+			coordinates: {
+				lat: 52.229997,
+				lon: 21.012551,
+			},
 		},
 		{
-			timestamp: 57.0,
+			id: 19,
+			timestamp: 57,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6876131892204285,
@@ -316,11 +407,16 @@ export const detections = {
 				center_x: 2386,
 				center_y: 893,
 			},
+			coordinates: {
+				lat: 52.229954,
+				lon: 21.012391,
+			},
 		},
 		{
-			timestamp: 58.0,
+			id: 20,
+			timestamp: 58,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6547241806983948,
 			bbox: {
 				x1: 2130,
@@ -332,9 +428,14 @@ export const detections = {
 				center_x: 2165,
 				center_y: 872,
 			},
+			coordinates: {
+				lat: 52.22995,
+				lon: 21.012506,
+			},
 		},
 		{
-			timestamp: 58.0,
+			id: 21,
+			timestamp: 58,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6021332740783691,
@@ -348,11 +449,16 @@ export const detections = {
 				center_x: 2407,
 				center_y: 892,
 			},
+			coordinates: {
+				lat: 52.229929,
+				lon: 21.012658,
+			},
 		},
 		{
-			timestamp: 58.0,
+			id: 22,
+			timestamp: 58,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5987460017204285,
 			bbox: {
 				x1: 2023,
@@ -364,11 +470,16 @@ export const detections = {
 				center_x: 2051,
 				center_y: 893,
 			},
+			coordinates: {
+				lat: 52.229927,
+				lon: 21.012559,
+			},
 		},
 		{
-			timestamp: 59.0,
+			id: 23,
+			timestamp: 59,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7805541753768921,
 			bbox: {
 				x1: 2135,
@@ -380,9 +491,14 @@ export const detections = {
 				center_x: 2172,
 				center_y: 876,
 			},
+			coordinates: {
+				lat: 52.229942,
+				lon: 21.012418,
+			},
 		},
 		{
-			timestamp: 59.0,
+			id: 24,
+			timestamp: 59,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.641276478767395,
@@ -396,11 +512,16 @@ export const detections = {
 				center_x: 2409,
 				center_y: 891,
 			},
+			coordinates: {
+				lat: 52.23002,
+				lon: 21.012276,
+			},
 		},
 		{
-			timestamp: 59.0,
+			id: 25,
+			timestamp: 59,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6138920783996582,
 			bbox: {
 				x1: 2080,
@@ -412,11 +533,16 @@ export const detections = {
 				center_x: 2113,
 				center_y: 879,
 			},
+			coordinates: {
+				lat: 52.229974,
+				lon: 21.012108,
+			},
 		},
 		{
-			timestamp: 60.0,
+			id: 26,
+			timestamp: 60,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7551457285881042,
 			bbox: {
 				x1: 2176,
@@ -428,9 +554,14 @@ export const detections = {
 				center_x: 2230,
 				center_y: 875,
 			},
+			coordinates: {
+				lat: 52.229883,
+				lon: 21.012139,
+			},
 		},
 		{
-			timestamp: 60.0,
+			id: 27,
+			timestamp: 60,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6963105797767639,
@@ -444,11 +575,16 @@ export const detections = {
 				center_x: 2431,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.23,
+				lon: 21.012262,
+			},
 		},
 		{
-			timestamp: 61.0,
+			id: 28,
+			timestamp: 61,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6601203680038452,
 			bbox: {
 				x1: 2348,
@@ -460,11 +596,16 @@ export const detections = {
 				center_x: 2396,
 				center_y: 875,
 			},
+			coordinates: {
+				lat: 52.229866,
+				lon: 21.012235,
+			},
 		},
 		{
-			timestamp: 61.0,
+			id: 29,
+			timestamp: 61,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6139174103736877,
 			bbox: {
 				x1: 2282,
@@ -476,11 +617,16 @@ export const detections = {
 				center_x: 2312,
 				center_y: 886,
 			},
+			coordinates: {
+				lat: 52.230019,
+				lon: 21.012296,
+			},
 		},
 		{
-			timestamp: 62.0,
+			id: 30,
+			timestamp: 62,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5057596564292908,
 			bbox: {
 				x1: 2407,
@@ -492,11 +638,16 @@ export const detections = {
 				center_x: 2458,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.230135,
+				lon: 21.012394,
+			},
 		},
 		{
-			timestamp: 62.0,
+			id: 31,
+			timestamp: 62,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.3680937588214874,
 			bbox: {
 				x1: 2392,
@@ -508,11 +659,16 @@ export const detections = {
 				center_x: 2433,
 				center_y: 872,
 			},
+			coordinates: {
+				lat: 52.230022,
+				lon: 21.012338,
+			},
 		},
 		{
-			timestamp: 62.0,
+			id: 32,
+			timestamp: 62,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.3066747486591339,
 			bbox: {
 				x1: 2331,
@@ -524,9 +680,14 @@ export const detections = {
 				center_x: 2361,
 				center_y: 884,
 			},
+			coordinates: {
+				lat: 52.229997,
+				lon: 21.012478,
+			},
 		},
 		{
-			timestamp: 62.0,
+			id: 33,
+			timestamp: 62,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.2868957817554474,
@@ -540,11 +701,16 @@ export const detections = {
 				center_x: 2464,
 				center_y: 868,
 			},
+			coordinates: {
+				lat: 52.22989,
+				lon: 21.012513,
+			},
 		},
 		{
-			timestamp: 63.0,
+			id: 34,
+			timestamp: 63,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6956918835639954,
 			bbox: {
 				x1: 2367,
@@ -556,11 +722,16 @@ export const detections = {
 				center_x: 2407,
 				center_y: 871,
 			},
+			coordinates: {
+				lat: 52.229763,
+				lon: 21.012427,
+			},
 		},
 		{
-			timestamp: 63.0,
+			id: 35,
+			timestamp: 63,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5970124006271362,
 			bbox: {
 				x1: 2486,
@@ -572,11 +743,16 @@ export const detections = {
 				center_x: 2517,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.22962,
+				lon: 21.012494,
+			},
 		},
 		{
-			timestamp: 63.0,
+			id: 36,
+			timestamp: 63,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.31653574109077454,
 			bbox: {
 				x1: 2310,
@@ -588,11 +764,16 @@ export const detections = {
 				center_x: 2355,
 				center_y: 874,
 			},
+			coordinates: {
+				lat: 52.229515,
+				lon: 21.012364,
+			},
 		},
 		{
-			timestamp: 64.0,
+			id: 37,
+			timestamp: 64,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7497419714927673,
 			bbox: {
 				x1: 2210,
@@ -604,11 +785,16 @@ export const detections = {
 				center_x: 2266,
 				center_y: 879,
 			},
+			coordinates: {
+				lat: 52.229408,
+				lon: 21.012323,
+			},
 		},
 		{
-			timestamp: 64.0,
+			id: 38,
+			timestamp: 64,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.695484459400177,
 			bbox: {
 				x1: 2585,
@@ -620,9 +806,14 @@ export const detections = {
 				center_x: 2621,
 				center_y: 860,
 			},
+			coordinates: {
+				lat: 52.229334,
+				lon: 21.012198,
+			},
 		},
 		{
-			timestamp: 64.0,
+			id: 39,
+			timestamp: 64,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.5909258127212524,
@@ -636,11 +827,16 @@ export const detections = {
 				center_x: 2419,
 				center_y: 886,
 			},
+			coordinates: {
+				lat: 52.229216,
+				lon: 21.012063,
+			},
 		},
 		{
-			timestamp: 65.0,
+			id: 40,
+			timestamp: 65,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7109257578849792,
 			bbox: {
 				x1: 2094,
@@ -652,9 +848,14 @@ export const detections = {
 				center_x: 2133,
 				center_y: 869,
 			},
+			coordinates: {
+				lat: 52.229132,
+				lon: 21.011993,
+			},
 		},
 		{
-			timestamp: 65.0,
+			id: 41,
+			timestamp: 65,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.588308572769165,
@@ -668,11 +869,16 @@ export const detections = {
 				center_x: 2464,
 				center_y: 880,
 			},
+			coordinates: {
+				lat: 52.229117,
+				lon: 21.01189,
+			},
 		},
 		{
-			timestamp: 65.0,
+			id: 42,
+			timestamp: 65,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.57182776927948,
 			bbox: {
 				x1: 2652,
@@ -684,11 +890,16 @@ export const detections = {
 				center_x: 2687,
 				center_y: 845,
 			},
+			coordinates: {
+				lat: 52.229198,
+				lon: 21.011979,
+			},
 		},
 		{
-			timestamp: 66.0,
+			id: 43,
+			timestamp: 66,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.792991042137146,
 			bbox: {
 				x1: 2062,
@@ -700,11 +911,16 @@ export const detections = {
 				center_x: 2112,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.229128,
+				lon: 21.012139,
+			},
 		},
 		{
-			timestamp: 66.0,
+			id: 44,
+			timestamp: 66,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7161716818809509,
 			bbox: {
 				x1: 2686,
@@ -716,9 +932,14 @@ export const detections = {
 				center_x: 2725,
 				center_y: 849,
 			},
+			coordinates: {
+				lat: 52.229016,
+				lon: 21.012134,
+			},
 		},
 		{
-			timestamp: 66.0,
+			id: 45,
+			timestamp: 66,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.49121278524398804,
@@ -732,11 +953,16 @@ export const detections = {
 				center_x: 2400,
 				center_y: 893,
 			},
+			coordinates: {
+				lat: 52.22908,
+				lon: 21.011969,
+			},
 		},
 		{
-			timestamp: 67.0,
+			id: 46,
+			timestamp: 67,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8013198971748352,
 			bbox: {
 				x1: 2022,
@@ -748,11 +974,16 @@ export const detections = {
 				center_x: 2068,
 				center_y: 870,
 			},
+			coordinates: {
+				lat: 52.229125,
+				lon: 21.012085,
+			},
 		},
 		{
-			timestamp: 67.0,
+			id: 47,
+			timestamp: 67,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.3450945019721985,
 			bbox: {
 				x1: 2289,
@@ -764,11 +995,16 @@ export const detections = {
 				center_x: 2324,
 				center_y: 889,
 			},
+			coordinates: {
+				lat: 52.229099,
+				lon: 21.011968,
+			},
 		},
 		{
-			timestamp: 68.0,
+			id: 48,
+			timestamp: 68,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8264763951301575,
 			bbox: {
 				x1: 1980,
@@ -780,9 +1016,14 @@ export const detections = {
 				center_x: 2026,
 				center_y: 876,
 			},
+			coordinates: {
+				lat: 52.229022,
+				lon: 21.011877,
+			},
 		},
 		{
-			timestamp: 68.0,
+			id: 49,
+			timestamp: 68,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.361876517534256,
@@ -796,11 +1037,16 @@ export const detections = {
 				center_x: 2210,
 				center_y: 867,
 			},
+			coordinates: {
+				lat: 52.228866,
+				lon: 21.011927,
+			},
 		},
 		{
-			timestamp: 69.0,
+			id: 50,
+			timestamp: 69,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6046364903450012,
 			bbox: {
 				x1: 1955,
@@ -812,9 +1058,14 @@ export const detections = {
 				center_x: 1990,
 				center_y: 884,
 			},
+			coordinates: {
+				lat: 52.228831,
+				lon: 21.011765,
+			},
 		},
 		{
-			timestamp: 69.0,
+			id: 51,
+			timestamp: 69,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.39434924721717834,
@@ -828,11 +1079,16 @@ export const detections = {
 				center_x: 2215,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.228941,
+				lon: 21.011809,
+			},
 		},
 		{
-			timestamp: 70.0,
+			id: 52,
+			timestamp: 70,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6241971254348755,
 			bbox: {
 				x1: 1970,
@@ -844,11 +1100,16 @@ export const detections = {
 				center_x: 2004,
 				center_y: 882,
 			},
+			coordinates: {
+				lat: 52.228984,
+				lon: 21.011908,
+			},
 		},
 		{
-			timestamp: 71.0,
+			id: 53,
+			timestamp: 71,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.4797973930835724,
 			bbox: {
 				x1: 1955,
@@ -860,9 +1121,14 @@ export const detections = {
 				center_x: 1993,
 				center_y: 883,
 			},
+			coordinates: {
+				lat: 52.228989,
+				lon: 21.012042,
+			},
 		},
 		{
-			timestamp: 71.0,
+			id: 54,
+			timestamp: 71,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.3876633942127228,
@@ -876,11 +1142,16 @@ export const detections = {
 				center_x: 2216,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.228935,
+				lon: 21.011964,
+			},
 		},
 		{
-			timestamp: 72.0,
+			id: 55,
+			timestamp: 72,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7942310571670532,
 			bbox: {
 				x1: 1963,
@@ -892,9 +1163,14 @@ export const detections = {
 				center_x: 2009,
 				center_y: 880,
 			},
+			coordinates: {
+				lat: 52.228842,
+				lon: 21.011889,
+			},
 		},
 		{
-			timestamp: 72.0,
+			id: 56,
+			timestamp: 72,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.3808706998825073,
@@ -908,11 +1184,16 @@ export const detections = {
 				center_x: 2215,
 				center_y: 868,
 			},
+			coordinates: {
+				lat: 52.228698,
+				lon: 21.011911,
+			},
 		},
 		{
-			timestamp: 73.0,
+			id: 57,
+			timestamp: 73,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7843798398971558,
 			bbox: {
 				x1: 1997,
@@ -924,9 +1205,14 @@ export const detections = {
 				center_x: 2041,
 				center_y: 878,
 			},
+			coordinates: {
+				lat: 52.228544,
+				lon: 21.011894,
+			},
 		},
 		{
-			timestamp: 73.0,
+			id: 58,
+			timestamp: 73,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.25412455201148987,
@@ -940,11 +1226,16 @@ export const detections = {
 				center_x: 2214,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.228518,
+				lon: 21.01199,
+			},
 		},
 		{
-			timestamp: 74.0,
+			id: 59,
+			timestamp: 74,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8383268117904663,
 			bbox: {
 				x1: 1990,
@@ -953,14 +1244,19 @@ export const detections = {
 				y2: 1005,
 				width: 96,
 				height: 255,
-				center_x: 2038,
-				center_y: 877,
+				center_x: 2032,
+				center_y: 870,
+			},
+			coordinates: {
+				lat: 52.228454,
+				lon: 21.011912,
 			},
 		},
 		{
-			timestamp: 75.0,
+			id: 60,
+			timestamp: 75,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7067561745643616,
 			bbox: {
 				x1: 1866,
@@ -972,11 +1268,16 @@ export const detections = {
 				center_x: 1932,
 				center_y: 883,
 			},
+			coordinates: {
+				lat: 52.228435,
+				lon: 21.011744,
+			},
 		},
 		{
-			timestamp: 76.0,
+			id: 61,
+			timestamp: 76,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7159832119941711,
 			bbox: {
 				x1: 1736,
@@ -988,9 +1289,14 @@ export const detections = {
 				center_x: 1784,
 				center_y: 890,
 			},
+			coordinates: {
+				lat: 52.228513,
+				lon: 21.011656,
+			},
 		},
 		{
-			timestamp: 76.0,
+			id: 62,
+			timestamp: 76,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.3465864360332489,
@@ -1004,11 +1310,16 @@ export const detections = {
 				center_x: 2784,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.22843,
+				lon: 21.01159,
+			},
 		},
 		{
-			timestamp: 77.0,
+			id: 63,
+			timestamp: 77,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.772948682308197,
 			bbox: {
 				x1: 1598,
@@ -1020,9 +1331,14 @@ export const detections = {
 				center_x: 1663,
 				center_y: 898,
 			},
+			coordinates: {
+				lat: 52.228321,
+				lon: 21.011484,
+			},
 		},
 		{
-			timestamp: 77.0,
+			id: 64,
+			timestamp: 77,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.29212334752082825,
@@ -1036,11 +1352,16 @@ export const detections = {
 				center_x: 2216,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.228405,
+				lon: 21.01155,
+			},
 		},
 		{
-			timestamp: 78.0,
+			id: 65,
+			timestamp: 78,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8633536100387573,
 			bbox: {
 				x1: 1524,
@@ -1052,11 +1373,16 @@ export const detections = {
 				center_x: 1586,
 				center_y: 898,
 			},
+			coordinates: {
+				lat: 52.228294,
+				lon: 21.011463,
+			},
 		},
 		{
-			timestamp: 78.0,
+			id: 66,
+			timestamp: 78,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7242934107780457,
 			bbox: {
 				x1: 2575,
@@ -1068,9 +1394,14 @@ export const detections = {
 				center_x: 2625,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.228427,
+				lon: 21.011498,
+			},
 		},
 		{
-			timestamp: 78.0,
+			id: 67,
+			timestamp: 78,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.37631967663764954,
@@ -1084,11 +1415,16 @@ export const detections = {
 				center_x: 2213,
 				center_y: 867,
 			},
+			coordinates: {
+				lat: 52.228483,
+				lon: 21.011612,
+			},
 		},
 		{
-			timestamp: 79.0,
+			id: 68,
+			timestamp: 79,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8373146057128906,
 			bbox: {
 				x1: 1487,
@@ -1100,9 +1436,14 @@ export const detections = {
 				center_x: 1546,
 				center_y: 889,
 			},
+			coordinates: {
+				lat: 52.228625,
+				lon: 21.011627,
+			},
 		},
 		{
-			timestamp: 79.0,
+			id: 69,
+			timestamp: 79,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.5569799542427063,
@@ -1116,9 +1457,14 @@ export const detections = {
 				center_x: 2672,
 				center_y: 846,
 			},
+			coordinates: {
+				lat: 52.228671,
+				lon: 21.011485,
+			},
 		},
 		{
-			timestamp: 79.0,
+			id: 70,
+			timestamp: 79,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.4590853750705719,
@@ -1132,11 +1478,16 @@ export const detections = {
 				center_x: 2517,
 				center_y: 881,
 			},
+			coordinates: {
+				lat: 52.228789,
+				lon: 21.011455,
+			},
 		},
 		{
-			timestamp: 80.0,
+			id: 71,
+			timestamp: 80,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.835935115814209,
 			bbox: {
 				x1: 1492,
@@ -1148,11 +1499,16 @@ export const detections = {
 				center_x: 1559,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.228701,
+				lon: 21.011535,
+			},
 		},
 		{
-			timestamp: 80.0,
+			id: 72,
+			timestamp: 80,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.782178521156311,
 			bbox: {
 				x1: 2372,
@@ -1164,11 +1520,16 @@ export const detections = {
 				center_x: 2409,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.228637,
+				lon: 21.011641,
+			},
 		},
 		{
-			timestamp: 81.0,
+			id: 73,
+			timestamp: 81,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.810840904712677,
 			bbox: {
 				x1: 2248,
@@ -1180,11 +1541,16 @@ export const detections = {
 				center_x: 2299,
 				center_y: 893,
 			},
+			coordinates: {
+				lat: 52.22863,
+				lon: 21.011497,
+			},
 		},
 		{
-			timestamp: 81.0,
+			id: 74,
+			timestamp: 81,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.727253794670105,
 			bbox: {
 				x1: 1476,
@@ -1196,9 +1562,14 @@ export const detections = {
 				center_x: 1522,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.2285,
+				lon: 21.01162,
+			},
 		},
 		{
-			timestamp: 81.0,
+			id: 75,
+			timestamp: 81,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.4783339202404022,
@@ -1212,11 +1583,16 @@ export const detections = {
 				center_x: 2648,
 				center_y: 857,
 			},
+			coordinates: {
+				lat: 52.228493,
+				lon: 21.011476,
+			},
 		},
 		{
-			timestamp: 82.0,
+			id: 76,
+			timestamp: 82,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8347763419151306,
 			bbox: {
 				x1: 1451,
@@ -1228,11 +1604,16 @@ export const detections = {
 				center_x: 1516,
 				center_y: 887,
 			},
+			coordinates: {
+				lat: 52.228645,
+				lon: 21.01152,
+			},
 		},
 		{
-			timestamp: 82.0,
+			id: 77,
+			timestamp: 82,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8303114771842957,
 			bbox: {
 				x1: 2130,
@@ -1244,9 +1625,14 @@ export const detections = {
 				center_x: 2178,
 				center_y: 889,
 			},
+			coordinates: {
+				lat: 52.228555,
+				lon: 21.011613,
+			},
 		},
 		{
-			timestamp: 82.0,
+			id: 78,
+			timestamp: 82,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6385027170181274,
@@ -1260,11 +1646,16 @@ export const detections = {
 				center_x: 2609,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.228561,
+				lon: 21.011768,
+			},
 		},
 		{
-			timestamp: 83.0,
+			id: 79,
+			timestamp: 83,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8830780386924744,
 			bbox: {
 				x1: 1513,
@@ -1276,11 +1667,16 @@ export const detections = {
 				center_x: 1574,
 				center_y: 889,
 			},
+			coordinates: {
+				lat: 52.228413,
+				lon: 21.011869,
+			},
 		},
 		{
-			timestamp: 83.0,
+			id: 80,
+			timestamp: 83,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.808169960975647,
 			bbox: {
 				x1: 2029,
@@ -1292,9 +1688,14 @@ export const detections = {
 				center_x: 2072,
 				center_y: 887,
 			},
+			coordinates: {
+				lat: 52.228288,
+				lon: 21.01182,
+			},
 		},
 		{
-			timestamp: 83.0,
+			id: 81,
+			timestamp: 83,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.5072595477104187,
@@ -1308,11 +1709,16 @@ export const detections = {
 				center_x: 2518,
 				center_y: 882,
 			},
+			coordinates: {
+				lat: 52.228305,
+				lon: 21.011675,
+			},
 		},
 		{
-			timestamp: 84.0,
+			id: 82,
+			timestamp: 84,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7489825487136841,
 			bbox: {
 				x1: 1919,
@@ -1324,11 +1730,16 @@ export const detections = {
 				center_x: 1963,
 				center_y: 887,
 			},
+			coordinates: {
+				lat: 52.228233,
+				lon: 21.011615,
+			},
 		},
 		{
-			timestamp: 84.0,
+			id: 83,
+			timestamp: 84,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5373955965042114,
 			bbox: {
 				x1: 1555,
@@ -1340,9 +1751,14 @@ export const detections = {
 				center_x: 1603,
 				center_y: 897,
 			},
+			coordinates: {
+				lat: 52.228376,
+				lon: 21.011681,
+			},
 		},
 		{
-			timestamp: 84.0,
+			id: 84,
+			timestamp: 84,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.4147476553916931,
@@ -1356,11 +1772,16 @@ export const detections = {
 				center_x: 2427,
 				center_y: 886,
 			},
+			coordinates: {
+				lat: 52.228238,
+				lon: 21.01167,
+			},
 		},
 		{
-			timestamp: 84.0,
+			id: 85,
+			timestamp: 84,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.37679195404052734,
 			bbox: {
 				x1: 2390,
@@ -1372,11 +1793,16 @@ export const detections = {
 				center_x: 2427,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.228298,
+				lon: 21.011781,
+			},
 		},
 		{
-			timestamp: 85.0,
+			id: 86,
+			timestamp: 85,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.768241286277771,
 			bbox: {
 				x1: 1785,
@@ -1388,11 +1814,16 @@ export const detections = {
 				center_x: 1839,
 				center_y: 891,
 			},
+			coordinates: {
+				lat: 52.228369,
+				lon: 21.011715,
+			},
 		},
 		{
-			timestamp: 85.0,
+			id: 87,
+			timestamp: 85,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7495810389518738,
 			bbox: {
 				x1: 1614,
@@ -1404,9 +1835,14 @@ export const detections = {
 				center_x: 1651,
 				center_y: 892,
 			},
+			coordinates: {
+				lat: 52.228349,
+				lon: 21.011805,
+			},
 		},
 		{
-			timestamp: 85.0,
+			id: 88,
+			timestamp: 85,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.43564289808273315,
@@ -1420,11 +1856,16 @@ export const detections = {
 				center_x: 2332,
 				center_y: 890,
 			},
+			coordinates: {
+				lat: 52.228256,
+				lon: 21.01169,
+			},
 		},
 		{
-			timestamp: 85.0,
+			id: 89,
+			timestamp: 85,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.3500984311103821,
 			bbox: {
 				x1: 2295,
@@ -1436,11 +1877,16 @@ export const detections = {
 				center_x: 2331,
 				center_y: 890,
 			},
+			coordinates: {
+				lat: 52.228318,
+				lon: 21.011827,
+			},
 		},
 		{
-			timestamp: 86.0,
+			id: 90,
+			timestamp: 86,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7747741341590881,
 			bbox: {
 				x1: 1741,
@@ -1452,11 +1898,16 @@ export const detections = {
 				center_x: 1800,
 				center_y: 879,
 			},
+			coordinates: {
+				lat: 52.228236,
+				lon: 21.011977,
+			},
 		},
 		{
-			timestamp: 86.0,
+			id: 91,
+			timestamp: 86,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.744708240032196,
 			bbox: {
 				x1: 1630,
@@ -1468,11 +1919,16 @@ export const detections = {
 				center_x: 1688,
 				center_y: 897,
 			},
+			coordinates: {
+				lat: 52.228127,
+				lon: 21.01191,
+			},
 		},
 		{
-			timestamp: 86.0,
+			id: 92,
+			timestamp: 86,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5713326930999756,
 			bbox: {
 				x1: 2208,
@@ -1484,11 +1940,16 @@ export const detections = {
 				center_x: 2257,
 				center_y: 878,
 			},
+			coordinates: {
+				lat: 52.228064,
+				lon: 21.011837,
+			},
 		},
 		{
-			timestamp: 87.0,
+			id: 93,
+			timestamp: 87,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.842979371547699,
 			bbox: {
 				x1: 1875,
@@ -1500,11 +1961,16 @@ export const detections = {
 				center_x: 1956,
 				center_y: 876,
 			},
+			coordinates: {
+				lat: 52.228108,
+				lon: 21.011694,
+			},
 		},
 		{
-			timestamp: 87.0,
+			id: 94,
+			timestamp: 87,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.781598687171936,
 			bbox: {
 				x1: 1475,
@@ -1516,11 +1982,16 @@ export const detections = {
 				center_x: 1531,
 				center_y: 900,
 			},
+			coordinates: {
+				lat: 52.228174,
+				lon: 21.011545,
+			},
 		},
 		{
-			timestamp: 87.0,
+			id: 95,
+			timestamp: 87,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6145209670066833,
 			bbox: {
 				x1: 2148,
@@ -1532,11 +2003,16 @@ export const detections = {
 				center_x: 2195,
 				center_y: 879,
 			},
+			coordinates: {
+				lat: 52.228055,
+				lon: 21.011416,
+			},
 		},
 		{
-			timestamp: 88.0,
+			id: 96,
+			timestamp: 88,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8538889288902283,
 			bbox: {
 				x1: 2094,
@@ -1548,11 +2024,16 @@ export const detections = {
 				center_x: 2143,
 				center_y: 875,
 			},
+			coordinates: {
+				lat: 52.227972,
+				lon: 21.011283,
+			},
 		},
 		{
-			timestamp: 88.0,
+			id: 97,
+			timestamp: 88,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.705433189868927,
 			bbox: {
 				x1: 1290,
@@ -1564,11 +2045,16 @@ export const detections = {
 				center_x: 1374,
 				center_y: 910,
 			},
+			coordinates: {
+				lat: 52.227942,
+				lon: 21.011459,
+			},
 		},
 		{
-			timestamp: 89.0,
+			id: 98,
+			timestamp: 89,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8431573510169983,
 			bbox: {
 				x1: 2250,
@@ -1580,11 +2066,16 @@ export const detections = {
 				center_x: 2312,
 				center_y: 887,
 			},
+			coordinates: {
+				lat: 52.22787,
+				lon: 21.011382,
+			},
 		},
 		{
-			timestamp: 89.0,
+			id: 99,
+			timestamp: 89,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.788755476474762,
 			bbox: {
 				x1: 1092,
@@ -1596,11 +2087,16 @@ export const detections = {
 				center_x: 1173,
 				center_y: 917,
 			},
+			coordinates: {
+				lat: 52.228026,
+				lon: 21.01135,
+			},
 		},
 		{
-			timestamp: 89.0,
+			id: 100,
+			timestamp: 89,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7164586782455444,
 			bbox: {
 				x1: 2004,
@@ -1612,11 +2108,16 @@ export const detections = {
 				center_x: 2060,
 				center_y: 878,
 			},
+			coordinates: {
+				lat: 52.228066,
+				lon: 21.011519,
+			},
 		},
 		{
-			timestamp: 90.0,
+			id: 101,
+			timestamp: 90,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8517957329750061,
 			bbox: {
 				x1: 2408,
@@ -1628,11 +2129,16 @@ export const detections = {
 				center_x: 2462,
 				center_y: 870,
 			},
+			coordinates: {
+				lat: 52.227981,
+				lon: 21.011562,
+			},
 		},
 		{
-			timestamp: 90.0,
+			id: 102,
+			timestamp: 90,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7297921776771545,
 			bbox: {
 				x1: 893,
@@ -1644,11 +2150,16 @@ export const detections = {
 				center_x: 964,
 				center_y: 924,
 			},
+			coordinates: {
+				lat: 52.227969,
+				lon: 21.011659,
+			},
 		},
 		{
-			timestamp: 90.0,
+			id: 103,
+			timestamp: 90,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5955187678337097,
 			bbox: {
 				x1: 1949,
@@ -1660,11 +2171,16 @@ export const detections = {
 				center_x: 2004,
 				center_y: 876,
 			},
+			coordinates: {
+				lat: 52.228146,
+				lon: 21.011655,
+			},
 		},
 		{
-			timestamp: 91.0,
+			id: 104,
+			timestamp: 91,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7620298266410828,
 			bbox: {
 				x1: 653,
@@ -1676,9 +2192,14 @@ export const detections = {
 				center_x: 757,
 				center_y: 941,
 			},
+			coordinates: {
+				lat: 52.228149,
+				lon: 21.01176,
+			},
 		},
 		{
-			timestamp: 91.0,
+			id: 105,
+			timestamp: 91,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6923003792762756,
@@ -1692,9 +2213,14 @@ export const detections = {
 				center_x: 2537,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.22816,
+				lon: 21.01188,
+			},
 		},
 		{
-			timestamp: 91.0,
+			id: 106,
+			timestamp: 91,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6573270559310913,
@@ -1708,11 +2234,16 @@ export const detections = {
 				center_x: 1937,
 				center_y: 874,
 			},
+			coordinates: {
+				lat: 52.228107,
+				lon: 21.011722,
+			},
 		},
 		{
-			timestamp: 91.0,
+			id: 107,
+			timestamp: 91,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.4748181104660034,
 			bbox: {
 				x1: 2480,
@@ -1724,9 +2255,14 @@ export const detections = {
 				center_x: 2536,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228244,
+				lon: 21.011618,
+			},
 		},
 		{
-			timestamp: 92.0,
+			id: 108,
+			timestamp: 92,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6965561509132385,
@@ -1740,11 +2276,16 @@ export const detections = {
 				center_x: 1882,
 				center_y: 871,
 			},
+			coordinates: {
+				lat: 52.228203,
+				lon: 21.011491,
+			},
 		},
 		{
-			timestamp: 92.0,
+			id: 109,
+			timestamp: 92,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.470863938331604,
 			bbox: {
 				x1: 420,
@@ -1756,11 +2297,16 @@ export const detections = {
 				center_x: 497,
 				center_y: 938,
 			},
+			coordinates: {
+				lat: 52.228238,
+				lon: 21.011612,
+			},
 		},
 		{
-			timestamp: 92.0,
+			id: 110,
+			timestamp: 92,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.3602859377861023,
 			bbox: {
 				x1: 2504,
@@ -1772,11 +2318,16 @@ export const detections = {
 				center_x: 2554,
 				center_y: 855,
 			},
+			coordinates: {
+				lat: 52.228334,
+				lon: 21.011542,
+			},
 		},
 		{
-			timestamp: 93.0,
+			id: 111,
+			timestamp: 93,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8798882961273193,
 			bbox: {
 				x1: 187,
@@ -1788,9 +2339,14 @@ export const detections = {
 				center_x: 284,
 				center_y: 949,
 			},
+			coordinates: {
+				lat: 52.228367,
+				lon: 21.011676,
+			},
 		},
 		{
-			timestamp: 93.0,
+			id: 112,
+			timestamp: 93,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7816593050956726,
@@ -1804,11 +2360,16 @@ export const detections = {
 				center_x: 1837,
 				center_y: 872,
 			},
+			coordinates: {
+				lat: 52.22837,
+				lon: 21.011777,
+			},
 		},
 		{
-			timestamp: 93.0,
+			id: 113,
+			timestamp: 93,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6530886888504028,
 			bbox: {
 				x1: 2547,
@@ -1820,9 +2381,14 @@ export const detections = {
 				center_x: 2590,
 				center_y: 850,
 			},
+			coordinates: {
+				lat: 52.228501,
+				lon: 21.011737,
+			},
 		},
 		{
-			timestamp: 93.0,
+			id: 114,
+			timestamp: 93,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.3197948932647705,
@@ -1836,11 +2402,16 @@ export const detections = {
 				center_x: 2213,
 				center_y: 867,
 			},
+			coordinates: {
+				lat: 52.228668,
+				lon: 21.011789,
+			},
 		},
 		{
-			timestamp: 94.0,
+			id: 115,
+			timestamp: 94,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8251672387123108,
 			bbox: {
 				x1: 226,
@@ -1852,9 +2423,14 @@ export const detections = {
 				center_x: 305,
 				center_y: 942,
 			},
+			coordinates: {
+				lat: 52.228718,
+				lon: 21.011905,
+			},
 		},
 		{
-			timestamp: 94.0,
+			id: 116,
+			timestamp: 94,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.748366117477417,
@@ -1868,11 +2444,16 @@ export const detections = {
 				center_x: 1845,
 				center_y: 867,
 			},
+			coordinates: {
+				lat: 52.228841,
+				lon: 21.01198,
+			},
 		},
 		{
-			timestamp: 94.0,
+			id: 117,
+			timestamp: 94,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6268797516822815,
 			bbox: {
 				x1: 2585,
@@ -1884,9 +2465,14 @@ export const detections = {
 				center_x: 2616,
 				center_y: 851,
 			},
+			coordinates: {
+				lat: 52.228728,
+				lon: 21.011895,
+			},
 		},
 		{
-			timestamp: 94.0,
+			id: 118,
+			timestamp: 94,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.3330512046813965,
@@ -1900,11 +2486,16 @@ export const detections = {
 				center_x: 2215,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228829,
+				lon: 21.011978,
+			},
 		},
 		{
-			timestamp: 95.0,
+			id: 119,
+			timestamp: 95,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8825910687446594,
 			bbox: {
 				x1: 303,
@@ -1916,11 +2507,16 @@ export const detections = {
 				center_x: 392,
 				center_y: 948,
 			},
+			coordinates: {
+				lat: 52.228829,
+				lon: 21.012105,
+			},
 		},
 		{
-			timestamp: 95.0,
+			id: 120,
+			timestamp: 95,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.685509443283081,
 			bbox: {
 				x1: 2576,
@@ -1932,9 +2528,14 @@ export const detections = {
 				center_x: 2626,
 				center_y: 854,
 			},
+			coordinates: {
+				lat: 52.228696,
+				lon: 21.012029,
+			},
 		},
 		{
-			timestamp: 95.0,
+			id: 121,
+			timestamp: 95,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6129944920539856,
@@ -1948,9 +2549,14 @@ export const detections = {
 				center_x: 1945,
 				center_y: 878,
 			},
+			coordinates: {
+				lat: 52.22861,
+				lon: 21.012108,
+			},
 		},
 		{
-			timestamp: 95.0,
+			id: 122,
+			timestamp: 95,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.265580415725708,
@@ -1964,11 +2570,16 @@ export const detections = {
 				center_x: 2211,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.228497,
+				lon: 21.012198,
+			},
 		},
 		{
-			timestamp: 96.0,
+			id: 123,
+			timestamp: 96,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.86866295337677,
 			bbox: {
 				x1: 450,
@@ -1980,11 +2591,16 @@ export const detections = {
 				center_x: 524,
 				center_y: 935,
 			},
+			coordinates: {
+				lat: 52.228501,
+				lon: 21.012089,
+			},
 		},
 		{
-			timestamp: 96.0,
+			id: 124,
+			timestamp: 96,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6495345234870911,
 			bbox: {
 				x1: 2098,
@@ -1996,11 +2612,16 @@ export const detections = {
 				center_x: 2170,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228587,
+				lon: 21.011948,
+			},
 		},
 		{
-			timestamp: 96.0,
+			id: 125,
+			timestamp: 96,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5229471921920776,
 			bbox: {
 				x1: 2629,
@@ -2012,11 +2633,16 @@ export const detections = {
 				center_x: 2676,
 				center_y: 851,
 			},
+			coordinates: {
+				lat: 52.228478,
+				lon: 21.011907,
+			},
 		},
 		{
-			timestamp: 97.0,
+			id: 126,
+			timestamp: 97,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8117377161979675,
 			bbox: {
 				x1: 658,
@@ -2028,9 +2654,14 @@ export const detections = {
 				center_x: 733,
 				center_y: 948,
 			},
+			coordinates: {
+				lat: 52.228461,
+				lon: 21.011785,
+			},
 		},
 		{
-			timestamp: 97.0,
+			id: 127,
+			timestamp: 97,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7979953289031982,
@@ -2044,11 +2675,16 @@ export const detections = {
 				center_x: 2431,
 				center_y: 859,
 			},
+			coordinates: {
+				lat: 52.228504,
+				lon: 21.011686,
+			},
 		},
 		{
-			timestamp: 97.0,
+			id: 128,
+			timestamp: 97,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7221092581748962,
 			bbox: {
 				x1: 2657,
@@ -2060,9 +2696,14 @@ export const detections = {
 				center_x: 2696,
 				center_y: 852,
 			},
+			coordinates: {
+				lat: 52.228355,
+				lon: 21.011651,
+			},
 		},
 		{
-			timestamp: 98.0,
+			id: 129,
+			timestamp: 98,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.5076895952224731,
@@ -2076,11 +2717,16 @@ export const detections = {
 				center_x: 2683,
 				center_y: 856,
 			},
+			coordinates: {
+				lat: 52.228296,
+				lon: 21.01172,
+			},
 		},
 		{
-			timestamp: 98.0,
+			id: 130,
+			timestamp: 98,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5037097334861755,
 			bbox: {
 				x1: 846,
@@ -2092,9 +2738,14 @@ export const detections = {
 				center_x: 899,
 				center_y: 948,
 			},
+			coordinates: {
+				lat: 52.228457,
+				lon: 21.011645,
+			},
 		},
 		{
-			timestamp: 98.0,
+			id: 131,
+			timestamp: 98,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.2704472839832306,
@@ -2108,11 +2759,16 @@ export const detections = {
 				center_x: 2213,
 				center_y: 867,
 			},
+			coordinates: {
+				lat: 52.228512,
+				lon: 21.011554,
+			},
 		},
 		{
-			timestamp: 99.0,
+			id: 132,
+			timestamp: 99,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8101298809051514,
 			bbox: {
 				x1: 997,
@@ -2124,9 +2780,14 @@ export const detections = {
 				center_x: 1048,
 				center_y: 923,
 			},
+			coordinates: {
+				lat: 52.228405,
+				lon: 21.011556,
+			},
 		},
 		{
-			timestamp: 99.0,
+			id: 133,
+			timestamp: 99,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6743410229682922,
@@ -2140,9 +2801,14 @@ export const detections = {
 				center_x: 3015,
 				center_y: 795,
 			},
+			coordinates: {
+				lat: 52.228253,
+				lon: 21.011555,
+			},
 		},
 		{
-			timestamp: 99.0,
+			id: 134,
+			timestamp: 99,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.37140098214149475,
@@ -2156,9 +2822,14 @@ export const detections = {
 				center_x: 2211,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.228373,
+				lon: 21.011476,
+			},
 		},
 		{
-			timestamp: 100.0,
+			id: 135,
+			timestamp: 100,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6886882781982422,
@@ -2172,11 +2843,16 @@ export const detections = {
 				center_x: 2216,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.228436,
+				lon: 21.01139,
+			},
 		},
 		{
-			timestamp: 100.0,
+			id: 136,
+			timestamp: 100,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.3733542263507843,
 			bbox: {
 				x1: 1149,
@@ -2188,11 +2864,16 @@ export const detections = {
 				center_x: 1189,
 				center_y: 911,
 			},
+			coordinates: {
+				lat: 52.228515,
+				lon: 21.011289,
+			},
 		},
 		{
-			timestamp: 101.0,
+			id: 137,
+			timestamp: 101,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8173388242721558,
 			bbox: {
 				x1: 1280,
@@ -2204,9 +2885,14 @@ export const detections = {
 				center_x: 1329,
 				center_y: 879,
 			},
+			coordinates: {
+				lat: 52.228451,
+				lon: 21.011137,
+			},
 		},
 		{
-			timestamp: 101.0,
+			id: 138,
+			timestamp: 101,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5977951884269714,
@@ -2220,11 +2906,16 @@ export const detections = {
 				center_x: 2215,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.228406,
+				lon: 21.010997,
+			},
 		},
 		{
-			timestamp: 102.0,
+			id: 139,
+			timestamp: 102,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7184891104698181,
 			bbox: {
 				x1: 1354,
@@ -2236,9 +2927,14 @@ export const detections = {
 				center_x: 1400,
 				center_y: 897,
 			},
+			coordinates: {
+				lat: 52.228515,
+				lon: 21.011032,
+			},
 		},
 		{
-			timestamp: 102.0,
+			id: 140,
+			timestamp: 102,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6062806248664856,
@@ -2252,11 +2948,16 @@ export const detections = {
 				center_x: 2215,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228446,
+				lon: 21.010884,
+			},
 		},
 		{
-			timestamp: 103.0,
+			id: 141,
+			timestamp: 103,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7825503349304199,
 			bbox: {
 				x1: 1324,
@@ -2268,9 +2969,14 @@ export const detections = {
 				center_x: 1371,
 				center_y: 892,
 			},
+			coordinates: {
+				lat: 52.228556,
+				lon: 21.010817,
+			},
 		},
 		{
-			timestamp: 103.0,
+			id: 142,
+			timestamp: 103,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6569699645042419,
@@ -2284,9 +2990,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.228637,
+				lon: 21.010973,
+			},
 		},
 		{
-			timestamp: 104.0,
+			id: 143,
+			timestamp: 104,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5893625617027283,
@@ -2300,9 +3011,14 @@ export const detections = {
 				center_x: 2213,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.228652,
+				lon: 21.010799,
+			},
 		},
 		{
-			timestamp: 105.0,
+			id: 144,
+			timestamp: 105,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7116473317146301,
@@ -2316,9 +3032,14 @@ export const detections = {
 				center_x: 2217,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.228682,
+				lon: 21.010945,
+			},
 		},
 		{
-			timestamp: 106.0,
+			id: 145,
+			timestamp: 106,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7214840054512024,
@@ -2332,9 +3053,14 @@ export const detections = {
 				center_x: 2218,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.228592,
+				lon: 21.010905,
+			},
 		},
 		{
-			timestamp: 107.0,
+			id: 146,
+			timestamp: 107,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7489186525344849,
@@ -2348,9 +3074,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228535,
+				lon: 21.010984,
+			},
 		},
 		{
-			timestamp: 108.0,
+			id: 147,
+			timestamp: 108,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6680107116699219,
@@ -2364,9 +3095,14 @@ export const detections = {
 				center_x: 2217,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.228474,
+				lon: 21.011125,
+			},
 		},
 		{
-			timestamp: 109.0,
+			id: 148,
+			timestamp: 109,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.687025785446167,
@@ -2380,9 +3116,14 @@ export const detections = {
 				center_x: 2217,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228548,
+				lon: 21.011009,
+			},
 		},
 		{
-			timestamp: 110.0,
+			id: 149,
+			timestamp: 110,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6597351431846619,
@@ -2396,9 +3137,14 @@ export const detections = {
 				center_x: 2215,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.228607,
+				lon: 21.011176,
+			},
 		},
 		{
-			timestamp: 111.0,
+			id: 150,
+			timestamp: 111,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7627339959144592,
@@ -2412,9 +3158,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.228497,
+				lon: 21.011101,
+			},
 		},
 		{
-			timestamp: 112.0,
+			id: 151,
+			timestamp: 112,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7258976101875305,
@@ -2428,9 +3179,14 @@ export const detections = {
 				center_x: 2217,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.228559,
+				lon: 21.011034,
+			},
 		},
 		{
-			timestamp: 113.0,
+			id: 152,
+			timestamp: 113,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7314885258674622,
@@ -2444,9 +3200,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.228503,
+				lon: 21.010943,
+			},
 		},
 		{
-			timestamp: 114.0,
+			id: 153,
+			timestamp: 114,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6175150871276855,
@@ -2460,9 +3221,14 @@ export const detections = {
 				center_x: 2214,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.228375,
+				lon: 21.0109,
+			},
 		},
 		{
-			timestamp: 115.0,
+			id: 154,
+			timestamp: 115,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7238410711288452,
@@ -2476,9 +3242,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.228489,
+				lon: 21.01096,
+			},
 		},
 		{
-			timestamp: 116.0,
+			id: 155,
+			timestamp: 116,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7880253791809082,
@@ -2492,9 +3263,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.228481,
+				lon: 21.010858,
+			},
 		},
 		{
-			timestamp: 117.0,
+			id: 156,
+			timestamp: 117,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7548116445541382,
@@ -2508,9 +3284,14 @@ export const detections = {
 				center_x: 2217,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.228585,
+				lon: 21.0109,
+			},
 		},
 		{
-			timestamp: 118.0,
+			id: 157,
+			timestamp: 118,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6976340413093567,
@@ -2524,9 +3305,14 @@ export const detections = {
 				center_x: 2217,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228654,
+				lon: 21.01106,
+			},
 		},
 		{
-			timestamp: 119.0,
+			id: 158,
+			timestamp: 119,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6956304907798767,
@@ -2540,9 +3326,14 @@ export const detections = {
 				center_x: 2215,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.22853,
+				lon: 21.011104,
+			},
 		},
 		{
-			timestamp: 120.0,
+			id: 159,
+			timestamp: 120,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6662894487380981,
@@ -2556,9 +3347,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.228428,
+				lon: 21.011135,
+			},
 		},
 		{
-			timestamp: 121.0,
+			id: 160,
+			timestamp: 121,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7452823519706726,
@@ -2572,9 +3368,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.228526,
+				lon: 21.010989,
+			},
 		},
 		{
-			timestamp: 122.0,
+			id: 161,
+			timestamp: 122,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6825253367424011,
@@ -2588,9 +3389,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.228379,
+				lon: 21.010967,
+			},
 		},
 		{
-			timestamp: 123.0,
+			id: 162,
+			timestamp: 123,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7386887669563293,
@@ -2604,9 +3410,14 @@ export const detections = {
 				center_x: 2215,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.228511,
+				lon: 21.010925,
+			},
 		},
 		{
-			timestamp: 124.0,
+			id: 163,
+			timestamp: 124,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6605895161628723,
@@ -2620,9 +3431,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228456,
+				lon: 21.010805,
+			},
 		},
 		{
-			timestamp: 125.0,
+			id: 164,
+			timestamp: 125,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7240497469902039,
@@ -2636,9 +3452,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228473,
+				lon: 21.010629,
+			},
 		},
 		{
-			timestamp: 126.0,
+			id: 165,
+			timestamp: 126,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6995114684104919,
@@ -2652,9 +3473,14 @@ export const detections = {
 				center_x: 2217,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228625,
+				lon: 21.010592,
+			},
 		},
 		{
-			timestamp: 127.0,
+			id: 166,
+			timestamp: 127,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6955674886703491,
@@ -2668,9 +3494,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.22873,
+				lon: 21.010461,
+			},
 		},
 		{
-			timestamp: 128.0,
+			id: 167,
+			timestamp: 128,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6588855385780334,
@@ -2684,9 +3515,14 @@ export const detections = {
 				center_x: 2215,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.228632,
+				lon: 21.010455,
+			},
 		},
 		{
-			timestamp: 129.0,
+			id: 168,
+			timestamp: 129,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6620579361915588,
@@ -2700,9 +3536,14 @@ export const detections = {
 				center_x: 2217,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.228627,
+				lon: 21.010311,
+			},
 		},
 		{
-			timestamp: 130.0,
+			id: 169,
+			timestamp: 130,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7047924995422363,
@@ -2716,9 +3557,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.228657,
+				lon: 21.010399,
+			},
 		},
 		{
-			timestamp: 131.0,
+			id: 170,
+			timestamp: 131,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7283633351325989,
@@ -2732,9 +3578,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.228627,
+				lon: 21.010491,
+			},
 		},
 		{
-			timestamp: 132.0,
+			id: 171,
+			timestamp: 132,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6904164552688599,
@@ -2748,9 +3599,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.228536,
+				lon: 21.010541,
+			},
 		},
 		{
-			timestamp: 133.0,
+			id: 172,
+			timestamp: 133,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7131197452545166,
@@ -2764,9 +3620,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228609,
+				lon: 21.010474,
+			},
 		},
 		{
-			timestamp: 134.0,
+			id: 173,
+			timestamp: 134,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7240557074546814,
@@ -2780,9 +3641,14 @@ export const detections = {
 				center_x: 2216,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.228598,
+				lon: 21.010584,
+			},
 		},
 		{
-			timestamp: 135.0,
+			id: 174,
+			timestamp: 135,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.721206784248352,
@@ -2796,11 +3662,16 @@ export const detections = {
 				center_x: 2217,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228702,
+				lon: 21.010656,
+			},
 		},
 		{
-			timestamp: 135.0,
+			id: 175,
+			timestamp: 135,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.522243082523346,
 			bbox: {
 				x1: 3632,
@@ -2812,9 +3683,14 @@ export const detections = {
 				center_x: 3682,
 				center_y: 858,
 			},
+			coordinates: {
+				lat: 52.228588,
+				lon: 21.010544,
+			},
 		},
 		{
-			timestamp: 136.0,
+			id: 176,
+			timestamp: 136,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6928965449333191,
@@ -2828,11 +3704,16 @@ export const detections = {
 				center_x: 2217,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.228612,
+				lon: 21.01071,
+			},
 		},
 		{
-			timestamp: 136.0,
+			id: 177,
+			timestamp: 136,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.629865288734436,
 			bbox: {
 				x1: 647,
@@ -2844,11 +3725,16 @@ export const detections = {
 				center_x: 706,
 				center_y: 966,
 			},
+			coordinates: {
+				lat: 52.228662,
+				lon: 21.010872,
+			},
 		},
 		{
-			timestamp: 137.0,
+			id: 178,
+			timestamp: 137,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7171082496643066,
 			bbox: {
 				x1: 695,
@@ -2860,9 +3746,14 @@ export const detections = {
 				center_x: 754,
 				center_y: 953,
 			},
+			coordinates: {
+				lat: 52.228564,
+				lon: 21.010739,
+			},
 		},
 		{
-			timestamp: 137.0,
+			id: 179,
+			timestamp: 137,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5882521271705627,
@@ -2876,9 +3767,14 @@ export const detections = {
 				center_x: 2213,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.228713,
+				lon: 21.010713,
+			},
 		},
 		{
-			timestamp: 137.0,
+			id: 180,
+			timestamp: 137,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.3611263334751129,
@@ -2892,9 +3788,14 @@ export const detections = {
 				center_x: 3597,
 				center_y: 788,
 			},
+			coordinates: {
+				lat: 52.228678,
+				lon: 21.010861,
+			},
 		},
 		{
-			timestamp: 138.0,
+			id: 181,
+			timestamp: 138,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7087610960006714,
@@ -2908,9 +3809,14 @@ export const detections = {
 				center_x: 3166,
 				center_y: 798,
 			},
+			coordinates: {
+				lat: 52.2286,
+				lon: 21.01079,
+			},
 		},
 		{
-			timestamp: 138.0,
+			id: 182,
+			timestamp: 138,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.503746509552002,
@@ -2924,9 +3830,14 @@ export const detections = {
 				center_x: 2214,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.228717,
+				lon: 21.010741,
+			},
 		},
 		{
-			timestamp: 138.0,
+			id: 183,
+			timestamp: 138,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.4568028151988983,
@@ -2940,11 +3851,16 @@ export const detections = {
 				center_x: 862,
 				center_y: 941,
 			},
+			coordinates: {
+				lat: 52.228553,
+				lon: 21.010804,
+			},
 		},
 		{
-			timestamp: 139.0,
+			id: 184,
+			timestamp: 139,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.47308963537216187,
 			bbox: {
 				x1: 2618,
@@ -2956,11 +3872,16 @@ export const detections = {
 				center_x: 2770,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.228582,
+				lon: 21.010919,
+			},
 		},
 		{
-			timestamp: 139.0,
+			id: 185,
+			timestamp: 139,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.42821750044822693,
 			bbox: {
 				x1: 943,
@@ -2972,11 +3893,16 @@ export const detections = {
 				center_x: 988,
 				center_y: 860,
 			},
+			coordinates: {
+				lat: 52.228462,
+				lon: 21.010825,
+			},
 		},
 		{
-			timestamp: 139.0,
+			id: 186,
+			timestamp: 139,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.42643216252326965,
 			bbox: {
 				x1: 2845,
@@ -2988,11 +3914,16 @@ export const detections = {
 				center_x: 2901,
 				center_y: 859,
 			},
+			coordinates: {
+				lat: 52.228478,
+				lon: 21.010688,
+			},
 		},
 		{
-			timestamp: 140.0,
+			id: 187,
+			timestamp: 140,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7854680418968201,
 			bbox: {
 				x1: 2670,
@@ -3004,11 +3935,16 @@ export const detections = {
 				center_x: 2748,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.228414,
+				lon: 21.01057,
+			},
 		},
 		{
-			timestamp: 140.0,
+			id: 188,
+			timestamp: 140,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7812725901603699,
 			bbox: {
 				x1: 1103,
@@ -3020,11 +3956,16 @@ export const detections = {
 				center_x: 1155,
 				center_y: 920,
 			},
+			coordinates: {
+				lat: 52.228315,
+				lon: 21.010439,
+			},
 		},
 		{
-			timestamp: 140.0,
+			id: 189,
+			timestamp: 140,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6958975791931152,
 			bbox: {
 				x1: 2430,
@@ -3036,11 +3977,16 @@ export const detections = {
 				center_x: 2512,
 				center_y: 854,
 			},
+			coordinates: {
+				lat: 52.228166,
+				lon: 21.010416,
+			},
 		},
 		{
-			timestamp: 141.0,
+			id: 190,
+			timestamp: 141,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8341578245162964,
 			bbox: {
 				x1: 2519,
@@ -3052,11 +3998,16 @@ export const detections = {
 				center_x: 2569,
 				center_y: 844,
 			},
+			coordinates: {
+				lat: 52.22801,
+				lon: 21.010358,
+			},
 		},
 		{
-			timestamp: 141.0,
+			id: 191,
+			timestamp: 141,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7904657125473022,
 			bbox: {
 				x1: 1277,
@@ -3068,9 +4019,14 @@ export const detections = {
 				center_x: 1335,
 				center_y: 909,
 			},
+			coordinates: {
+				lat: 52.227996,
+				lon: 21.010524,
+			},
 		},
 		{
-			timestamp: 141.0,
+			id: 192,
+			timestamp: 141,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.4265685975551605,
@@ -3084,11 +4040,16 @@ export const detections = {
 				center_x: 2371,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.227843,
+				lon: 21.010617,
+			},
 		},
 		{
-			timestamp: 141.0,
+			id: 193,
+			timestamp: 141,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.37952548265457153,
 			bbox: {
 				x1: 2296,
@@ -3100,11 +4061,16 @@ export const detections = {
 				center_x: 2373,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.227906,
+				lon: 21.010765,
+			},
 		},
 		{
-			timestamp: 142.0,
+			id: 194,
+			timestamp: 142,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8433616757392883,
 			bbox: {
 				x1: 1424,
@@ -3116,11 +4082,16 @@ export const detections = {
 				center_x: 1492,
 				center_y: 907,
 			},
+			coordinates: {
+				lat: 52.227761,
+				lon: 21.0107,
+			},
 		},
 		{
-			timestamp: 142.0,
+			id: 195,
+			timestamp: 142,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7806753516197205,
 			bbox: {
 				x1: 2237,
@@ -3132,11 +4103,16 @@ export const detections = {
 				center_x: 2318,
 				center_y: 853,
 			},
+			coordinates: {
+				lat: 52.227854,
+				lon: 21.010709,
+			},
 		},
 		{
-			timestamp: 142.0,
+			id: 196,
+			timestamp: 142,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7527568340301514,
 			bbox: {
 				x1: 2360,
@@ -3148,11 +4124,16 @@ export const detections = {
 				center_x: 2421,
 				center_y: 880,
 			},
+			coordinates: {
+				lat: 52.227945,
+				lon: 21.010619,
+			},
 		},
 		{
-			timestamp: 143.0,
+			id: 197,
+			timestamp: 143,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8472375273704529,
 			bbox: {
 				x1: 1615,
@@ -3164,11 +4145,16 @@ export const detections = {
 				center_x: 1671,
 				center_y: 899,
 			},
+			coordinates: {
+				lat: 52.228044,
+				lon: 21.01067,
+			},
 		},
 		{
-			timestamp: 143.0,
+			id: 198,
+			timestamp: 143,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6944479942321777,
 			bbox: {
 				x1: 2214,
@@ -3180,11 +4166,16 @@ export const detections = {
 				center_x: 2253,
 				center_y: 891,
 			},
+			coordinates: {
+				lat: 52.228124,
+				lon: 21.010785,
+			},
 		},
 		{
-			timestamp: 143.0,
+			id: 199,
+			timestamp: 143,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6696082949638367,
 			bbox: {
 				x1: 2260,
@@ -3196,11 +4187,16 @@ export const detections = {
 				center_x: 2324,
 				center_y: 857,
 			},
+			coordinates: {
+				lat: 52.228226,
+				lon: 21.010677,
+			},
 		},
 		{
-			timestamp: 144.0,
+			id: 200,
+			timestamp: 144,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8069474101066589,
 			bbox: {
 				x1: 2146,
@@ -3212,11 +4208,16 @@ export const detections = {
 				center_x: 2196,
 				center_y: 877,
 			},
+			coordinates: {
+				lat: 52.228133,
+				lon: 21.010568,
+			},
 		},
 		{
-			timestamp: 144.0,
+			id: 201,
+			timestamp: 144,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8057687878608704,
 			bbox: {
 				x1: 1748,
@@ -3228,9 +4229,14 @@ export const detections = {
 				center_x: 1799,
 				center_y: 888,
 			},
+			coordinates: {
+				lat: 52.228099,
+				lon: 21.010723,
+			},
 		},
 		{
-			timestamp: 144.0,
+			id: 202,
+			timestamp: 144,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6683773994445801,
@@ -3244,11 +4250,16 @@ export const detections = {
 				center_x: 2348,
 				center_y: 876,
 			},
+			coordinates: {
+				lat: 52.228038,
+				lon: 21.010631,
+			},
 		},
 		{
-			timestamp: 144.0,
+			id: 203,
+			timestamp: 144,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5156420469284058,
 			bbox: {
 				x1: 2289,
@@ -3260,11 +4271,16 @@ export const detections = {
 				center_x: 2347,
 				center_y: 876,
 			},
+			coordinates: {
+				lat: 52.227953,
+				lon: 21.010599,
+			},
 		},
 		{
-			timestamp: 145.0,
+			id: 204,
+			timestamp: 145,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7496395707130432,
 			bbox: {
 				x1: 2123,
@@ -3276,9 +4292,14 @@ export const detections = {
 				center_x: 2170,
 				center_y: 882,
 			},
+			coordinates: {
+				lat: 52.227922,
+				lon: 21.010491,
+			},
 		},
 		{
-			timestamp: 145.0,
+			id: 205,
+			timestamp: 145,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6817222237586975,
@@ -3292,11 +4313,16 @@ export const detections = {
 				center_x: 2349,
 				center_y: 878,
 			},
+			coordinates: {
+				lat: 52.228071,
+				lon: 21.010539,
+			},
 		},
 		{
-			timestamp: 145.0,
+			id: 206,
+			timestamp: 145,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6716878414154053,
 			bbox: {
 				x1: 1851,
@@ -3308,11 +4334,16 @@ export const detections = {
 				center_x: 1897,
 				center_y: 886,
 			},
+			coordinates: {
+				lat: 52.228048,
+				lon: 21.010701,
+			},
 		},
 		{
-			timestamp: 146.0,
+			id: 207,
+			timestamp: 146,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7355104684829712,
 			bbox: {
 				x1: 1911,
@@ -3324,11 +4355,16 @@ export const detections = {
 				center_x: 1955,
 				center_y: 890,
 			},
+			coordinates: {
+				lat: 52.227945,
+				lon: 21.010648,
+			},
 		},
 		{
-			timestamp: 146.0,
+			id: 208,
+			timestamp: 146,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7341281175613403,
 			bbox: {
 				x1: 2129,
@@ -3340,9 +4376,14 @@ export const detections = {
 				center_x: 2170,
 				center_y: 873,
 			},
+			coordinates: {
+				lat: 52.227855,
+				lon: 21.010493,
+			},
 		},
 		{
-			timestamp: 146.0,
+			id: 209,
+			timestamp: 146,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.5634183287620544,
@@ -3356,11 +4397,16 @@ export const detections = {
 				center_x: 2327,
 				center_y: 880,
 			},
+			coordinates: {
+				lat: 52.227914,
+				lon: 21.01042,
+			},
 		},
 		{
-			timestamp: 147.0,
+			id: 210,
+			timestamp: 147,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7703276872634888,
 			bbox: {
 				x1: 1954,
@@ -3372,11 +4418,16 @@ export const detections = {
 				center_x: 1995,
 				center_y: 893,
 			},
+			coordinates: {
+				lat: 52.227949,
+				lon: 21.010311,
+			},
 		},
 		{
-			timestamp: 147.0,
+			id: 211,
+			timestamp: 147,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6965272426605225,
 			bbox: {
 				x1: 2148,
@@ -3388,11 +4439,16 @@ export const detections = {
 				center_x: 2188,
 				center_y: 878,
 			},
+			coordinates: {
+				lat: 52.228069,
+				lon: 21.010258,
+			},
 		},
 		{
-			timestamp: 147.0,
+			id: 212,
+			timestamp: 147,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6278817057609558,
 			bbox: {
 				x1: 2251,
@@ -3404,11 +4460,16 @@ export const detections = {
 				center_x: 2299,
 				center_y: 871,
 			},
+			coordinates: {
+				lat: 52.228196,
+				lon: 21.0102,
+			},
 		},
 		{
-			timestamp: 148.0,
+			id: 213,
+			timestamp: 148,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7565124034881592,
 			bbox: {
 				x1: 2008,
@@ -3420,11 +4481,16 @@ export const detections = {
 				center_x: 2046,
 				center_y: 886,
 			},
+			coordinates: {
+				lat: 52.228059,
+				lon: 21.010159,
+			},
 		},
 		{
-			timestamp: 148.0,
+			id: 214,
+			timestamp: 148,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7380021214485168,
 			bbox: {
 				x1: 2235,
@@ -3436,11 +4502,16 @@ export const detections = {
 				center_x: 2280,
 				center_y: 882,
 			},
+			coordinates: {
+				lat: 52.2279,
+				lon: 21.010234,
+			},
 		},
 		{
-			timestamp: 148.0,
+			id: 215,
+			timestamp: 148,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7256091833114624,
 			bbox: {
 				x1: 2148,
@@ -3452,11 +4523,16 @@ export const detections = {
 				center_x: 2189,
 				center_y: 879,
 			},
+			coordinates: {
+				lat: 52.227829,
+				lon: 21.010382,
+			},
 		},
 		{
-			timestamp: 149.0,
+			id: 216,
+			timestamp: 149,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.760532557964325,
 			bbox: {
 				x1: 2090,
@@ -3468,9 +4544,14 @@ export const detections = {
 				center_x: 2141,
 				center_y: 874,
 			},
+			coordinates: {
+				lat: 52.227718,
+				lon: 21.010368,
+			},
 		},
 		{
-			timestamp: 149.0,
+			id: 217,
+			timestamp: 149,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7470447421073914,
@@ -3484,11 +4565,16 @@ export const detections = {
 				center_x: 2297,
 				center_y: 874,
 			},
+			coordinates: {
+				lat: 52.227621,
+				lon: 21.010388,
+			},
 		},
 		{
-			timestamp: 150.0,
+			id: 218,
+			timestamp: 150,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7924676537513733,
 			bbox: {
 				x1: 2092,
@@ -3500,9 +4586,14 @@ export const detections = {
 				center_x: 2147,
 				center_y: 874,
 			},
+			coordinates: {
+				lat: 52.227672,
+				lon: 21.010281,
+			},
 		},
 		{
-			timestamp: 150.0,
+			id: 219,
+			timestamp: 150,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.5967257618904114,
@@ -3516,11 +4607,16 @@ export const detections = {
 				center_x: 2327,
 				center_y: 883,
 			},
+			coordinates: {
+				lat: 52.227595,
+				lon: 21.010154,
+			},
 		},
 		{
-			timestamp: 151.0,
+			id: 220,
+			timestamp: 151,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7419414520263672,
 			bbox: {
 				x1: 2104,
@@ -3532,9 +4628,14 @@ export const detections = {
 				center_x: 2166,
 				center_y: 874,
 			},
+			coordinates: {
+				lat: 52.227475,
+				lon: 21.010229,
+			},
 		},
 		{
-			timestamp: 151.0,
+			id: 221,
+			timestamp: 151,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.4370858669281006,
@@ -3548,9 +4649,14 @@ export const detections = {
 				center_x: 2334,
 				center_y: 887,
 			},
+			coordinates: {
+				lat: 52.227506,
+				lon: 21.01039,
+			},
 		},
 		{
-			timestamp: 152.0,
+			id: 222,
+			timestamp: 152,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7110820412635803,
@@ -3564,9 +4670,14 @@ export const detections = {
 				center_x: 2196,
 				center_y: 890,
 			},
+			coordinates: {
+				lat: 52.227653,
+				lon: 21.010351,
+			},
 		},
 		{
-			timestamp: 152.0,
+			id: 223,
+			timestamp: 152,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.46485742926597595,
@@ -3580,9 +4691,14 @@ export const detections = {
 				center_x: 2336,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.227494,
+				lon: 21.010283,
+			},
 		},
 		{
-			timestamp: 153.0,
+			id: 224,
+			timestamp: 153,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5758222341537476,
@@ -3596,9 +4712,14 @@ export const detections = {
 				center_x: 2225,
 				center_y: 871,
 			},
+			coordinates: {
+				lat: 52.227593,
+				lon: 21.010182,
+			},
 		},
 		{
-			timestamp: 154.0,
+			id: 225,
+			timestamp: 154,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6600491404533386,
@@ -3612,9 +4733,14 @@ export const detections = {
 				center_x: 2333,
 				center_y: 882,
 			},
+			coordinates: {
+				lat: 52.227693,
+				lon: 21.01009,
+			},
 		},
 		{
-			timestamp: 155.0,
+			id: 226,
+			timestamp: 155,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5409466028213501,
@@ -3628,9 +4754,14 @@ export const detections = {
 				center_x: 2234,
 				center_y: 870,
 			},
+			coordinates: {
+				lat: 52.227608,
+				lon: 21.00997,
+			},
 		},
 		{
-			timestamp: 156.0,
+			id: 227,
+			timestamp: 156,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7088325619697571,
@@ -3644,9 +4775,14 @@ export const detections = {
 				center_x: 2228,
 				center_y: 878,
 			},
+			coordinates: {
+				lat: 52.227742,
+				lon: 21.009962,
+			},
 		},
 		{
-			timestamp: 157.0,
+			id: 228,
+			timestamp: 157,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6296367049217224,
@@ -3660,9 +4796,14 @@ export const detections = {
 				center_x: 2218,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.227779,
+				lon: 21.010072,
+			},
 		},
 		{
-			timestamp: 158.0,
+			id: 229,
+			timestamp: 158,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6817079782485962,
@@ -3676,9 +4817,14 @@ export const detections = {
 				center_x: 2217,
 				center_y: 874,
 			},
+			coordinates: {
+				lat: 52.227839,
+				lon: 21.010161,
+			},
 		},
 		{
-			timestamp: 159.0,
+			id: 230,
+			timestamp: 159,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6949768662452698,
@@ -3692,9 +4838,14 @@ export const detections = {
 				center_x: 2217,
 				center_y: 875,
 			},
+			coordinates: {
+				lat: 52.227707,
+				lon: 21.010147,
+			},
 		},
 		{
-			timestamp: 160.0,
+			id: 231,
+			timestamp: 160,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.742824375629425,
@@ -3708,9 +4859,14 @@ export const detections = {
 				center_x: 2215,
 				center_y: 869,
 			},
+			coordinates: {
+				lat: 52.227754,
+				lon: 21.01,
+			},
 		},
 		{
-			timestamp: 161.0,
+			id: 232,
+			timestamp: 161,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6812191605567932,
@@ -3724,9 +4880,14 @@ export const detections = {
 				center_x: 2214,
 				center_y: 870,
 			},
+			coordinates: {
+				lat: 52.227845,
+				lon: 21.010037,
+			},
 		},
 		{
-			timestamp: 162.0,
+			id: 233,
+			timestamp: 162,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6934575438499451,
@@ -3740,9 +4901,14 @@ export const detections = {
 				center_x: 2215,
 				center_y: 872,
 			},
+			coordinates: {
+				lat: 52.227942,
+				lon: 21.009992,
+			},
 		},
 		{
-			timestamp: 163.0,
+			id: 234,
+			timestamp: 163,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6870850920677185,
@@ -3756,9 +4922,14 @@ export const detections = {
 				center_x: 2215,
 				center_y: 873,
 			},
+			coordinates: {
+				lat: 52.227774,
+				lon: 21.009982,
+			},
 		},
 		{
-			timestamp: 164.0,
+			id: 235,
+			timestamp: 164,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6680437326431274,
@@ -3772,9 +4943,14 @@ export const detections = {
 				center_x: 2230,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.227651,
+				lon: 21.01003,
+			},
 		},
 		{
-			timestamp: 165.0,
+			id: 236,
+			timestamp: 165,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.25864377617836,
@@ -3788,9 +4964,14 @@ export const detections = {
 				center_x: 2264,
 				center_y: 868,
 			},
+			coordinates: {
+				lat: 52.227724,
+				lon: 21.00993,
+			},
 		},
 		{
-			timestamp: 167.0,
+			id: 237,
+			timestamp: 167,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7004910111427307,
@@ -3804,9 +4985,14 @@ export const detections = {
 				center_x: 2322,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.227875,
+				lon: 21.009888,
+			},
 		},
 		{
-			timestamp: 168.0,
+			id: 238,
+			timestamp: 168,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5513073801994324,
@@ -3820,9 +5006,14 @@ export const detections = {
 				center_x: 2356,
 				center_y: 868,
 			},
+			coordinates: {
+				lat: 52.227963,
+				lon: 21.010026,
+			},
 		},
 		{
-			timestamp: 169.0,
+			id: 239,
+			timestamp: 169,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.663472056388855,
@@ -3836,9 +5027,14 @@ export const detections = {
 				center_x: 2397,
 				center_y: 860,
 			},
+			coordinates: {
+				lat: 52.227833,
+				lon: 21.010118,
+			},
 		},
 		{
-			timestamp: 172.0,
+			id: 240,
+			timestamp: 172,
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.258474200963974,
@@ -3852,9 +5048,14 @@ export const detections = {
 				center_x: 2492,
 				center_y: 854,
 			},
+			coordinates: {
+				lat: 52.227919,
+				lon: 21.01004,
+			},
 		},
 		{
-			timestamp: 175.0,
+			id: 241,
+			timestamp: 175,
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.27069544792175293,
@@ -3868,9 +5069,14 @@ export const detections = {
 				center_x: 2564,
 				center_y: 857,
 			},
+			coordinates: {
+				lat: 52.2279,
+				lon: 21.010184,
+			},
 		},
 		{
-			timestamp: 199.0,
+			id: 242,
+			timestamp: 199,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.3210105299949646,
@@ -3884,9 +5090,14 @@ export const detections = {
 				center_x: 2293,
 				center_y: 611,
 			},
+			coordinates: {
+				lat: 52.227771,
+				lon: 21.010275,
+			},
 		},
 		{
-			timestamp: 247.0,
+			id: 243,
+			timestamp: 247,
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.2754334807395935,
@@ -3900,9 +5111,14 @@ export const detections = {
 				center_x: 2621,
 				center_y: 854,
 			},
+			coordinates: {
+				lat: 52.227654,
+				lon: 21.010202,
+			},
 		},
 		{
-			timestamp: 251.0,
+			id: 244,
+			timestamp: 251,
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.25827500224113464,
@@ -3916,9 +5132,14 @@ export const detections = {
 				center_x: 2618,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.227544,
+				lon: 21.010277,
+			},
 		},
 		{
-			timestamp: 252.0,
+			id: 245,
+			timestamp: 252,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.29690662026405334,
@@ -3932,9 +5153,14 @@ export const detections = {
 				center_x: 3360,
 				center_y: 750,
 			},
+			coordinates: {
+				lat: 52.227399,
+				lon: 21.010218,
+			},
 		},
 		{
-			timestamp: 261.0,
+			id: 246,
+			timestamp: 261,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7183153033256531,
@@ -3948,9 +5174,14 @@ export const detections = {
 				center_x: 2389,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.227242,
+				lon: 21.010226,
+			},
 		},
 		{
-			timestamp: 263.0,
+			id: 247,
+			timestamp: 263,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7845070958137512,
@@ -3964,9 +5195,14 @@ export const detections = {
 				center_x: 2311,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.227085,
+				lon: 21.010145,
+			},
 		},
 		{
-			timestamp: 264.0,
+			id: 248,
+			timestamp: 264,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7382538914680481,
@@ -3980,9 +5216,14 @@ export const detections = {
 				center_x: 2279,
 				center_y: 867,
 			},
+			coordinates: {
+				lat: 52.226995,
+				lon: 21.010255,
+			},
 		},
 		{
-			timestamp: 265.0,
+			id: 249,
+			timestamp: 265,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8166952133178711,
@@ -3996,9 +5237,14 @@ export const detections = {
 				center_x: 2226,
 				center_y: 867,
 			},
+			coordinates: {
+				lat: 52.227021,
+				lon: 21.01012,
+			},
 		},
 		{
-			timestamp: 266.0,
+			id: 250,
+			timestamp: 266,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7269260287284851,
@@ -4012,9 +5258,14 @@ export const detections = {
 				center_x: 2148,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.22695,
+				lon: 21.010246,
+			},
 		},
 		{
-			timestamp: 267.0,
+			id: 251,
+			timestamp: 267,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7635200619697571,
@@ -4028,9 +5279,14 @@ export const detections = {
 				center_x: 2128,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.226922,
+				lon: 21.010333,
+			},
 		},
 		{
-			timestamp: 268.0,
+			id: 252,
+			timestamp: 268,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8027600646018982,
@@ -4044,9 +5300,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.226963,
+				lon: 21.010158,
+			},
 		},
 		{
-			timestamp: 269.0,
+			id: 253,
+			timestamp: 269,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8259201049804688,
@@ -4060,9 +5321,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227006,
+				lon: 21.010323,
+			},
 		},
 		{
-			timestamp: 270.0,
+			id: 254,
+			timestamp: 270,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.800366997718811,
@@ -4076,9 +5342,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226921,
+				lon: 21.01028,
+			},
 		},
 		{
-			timestamp: 271.0,
+			id: 255,
+			timestamp: 271,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8414490222930908,
@@ -4092,9 +5363,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226919,
+				lon: 21.010446,
+			},
 		},
 		{
-			timestamp: 272.0,
+			id: 256,
+			timestamp: 272,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8404419422149658,
@@ -4108,9 +5384,14 @@ export const detections = {
 				center_x: 2131,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.227053,
+				lon: 21.010372,
+			},
 		},
 		{
-			timestamp: 273.0,
+			id: 257,
+			timestamp: 273,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8558887839317322,
@@ -4124,9 +5405,14 @@ export const detections = {
 				center_x: 2131,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.226944,
+				lon: 21.010381,
+			},
 		},
 		{
-			timestamp: 274.0,
+			id: 258,
+			timestamp: 274,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7972853779792786,
@@ -4140,9 +5426,14 @@ export const detections = {
 				center_x: 2128,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226829,
+				lon: 21.010391,
+			},
 		},
 		{
-			timestamp: 275.0,
+			id: 259,
+			timestamp: 275,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8292834162712097,
@@ -4156,9 +5447,14 @@ export const detections = {
 				center_x: 2127,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226842,
+				lon: 21.010251,
+			},
 		},
 		{
-			timestamp: 276.0,
+			id: 260,
+			timestamp: 276,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7970861792564392,
@@ -4172,9 +5468,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.226763,
+				lon: 21.010346,
+			},
 		},
 		{
-			timestamp: 277.0,
+			id: 261,
+			timestamp: 277,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8318896293640137,
@@ -4188,9 +5489,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.22684,
+				lon: 21.010396,
+			},
 		},
 		{
-			timestamp: 278.0,
+			id: 262,
+			timestamp: 278,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.741458535194397,
@@ -4204,11 +5510,16 @@ export const detections = {
 				center_x: 2135,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.226993,
+				lon: 21.010365,
+			},
 		},
 		{
-			timestamp: 279.0,
+			id: 263,
+			timestamp: 279,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7767418622970581,
 			bbox: {
 				x1: 2294,
@@ -4220,11 +5531,16 @@ export const detections = {
 				center_x: 2330,
 				center_y: 898,
 			},
+			coordinates: {
+				lat: 52.226862,
+				lon: 21.010432,
+			},
 		},
 		{
-			timestamp: 280.0,
+			id: 264,
+			timestamp: 280,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7687870860099792,
 			bbox: {
 				x1: 2327,
@@ -4236,11 +5552,16 @@ export const detections = {
 				center_x: 2368,
 				center_y: 891,
 			},
+			coordinates: {
+				lat: 52.226875,
+				lon: 21.01027,
+			},
 		},
 		{
-			timestamp: 280.0,
+			id: 265,
+			timestamp: 280,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.650137186050415,
 			bbox: {
 				x1: 1896,
@@ -4252,9 +5573,14 @@ export const detections = {
 				center_x: 1940,
 				center_y: 888,
 			},
+			coordinates: {
+				lat: 52.226821,
+				lon: 21.010405,
+			},
 		},
 		{
-			timestamp: 280.0,
+			id: 266,
+			timestamp: 280,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.28677940368652344,
@@ -4268,11 +5594,16 @@ export const detections = {
 				center_x: 2129,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.226754,
+				lon: 21.010468,
+			},
 		},
 		{
-			timestamp: 281.0,
+			id: 267,
+			timestamp: 281,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7772238850593567,
 			bbox: {
 				x1: 2329,
@@ -4284,11 +5615,16 @@ export const detections = {
 				center_x: 2369,
 				center_y: 886,
 			},
+			coordinates: {
+				lat: 52.226917,
+				lon: 21.01043,
+			},
 		},
 		{
-			timestamp: 281.0,
+			id: 268,
+			timestamp: 281,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7459707856178284,
 			bbox: {
 				x1: 1894,
@@ -4300,11 +5636,16 @@ export const detections = {
 				center_x: 1930,
 				center_y: 884,
 			},
+			coordinates: {
+				lat: 52.226802,
+				lon: 21.010464,
+			},
 		},
 		{
-			timestamp: 281.0,
+			id: 269,
+			timestamp: 281,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.3995805084705353,
 			bbox: {
 				x1: 1844,
@@ -4316,11 +5657,16 @@ export const detections = {
 				center_x: 1878,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.226912,
+				lon: 21.010494,
+			},
 		},
 		{
-			timestamp: 282.0,
+			id: 270,
+			timestamp: 282,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.798082172870636,
 			bbox: {
 				x1: 2307,
@@ -4332,11 +5678,16 @@ export const detections = {
 				center_x: 2350,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.226821,
+				lon: 21.010564,
+			},
 		},
 		{
-			timestamp: 282.0,
+			id: 271,
+			timestamp: 282,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.714351236820221,
 			bbox: {
 				x1: 1854,
@@ -4348,9 +5699,14 @@ export const detections = {
 				center_x: 1900,
 				center_y: 890,
 			},
+			coordinates: {
+				lat: 52.226683,
+				lon: 21.010582,
+			},
 		},
 		{
-			timestamp: 282.0,
+			id: 272,
+			timestamp: 282,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.5606142282485962,
@@ -4364,11 +5720,16 @@ export const detections = {
 				center_x: 1822,
 				center_y: 890,
 			},
+			coordinates: {
+				lat: 52.22658,
+				lon: 21.010481,
+			},
 		},
 		{
-			timestamp: 282.0,
+			id: 273,
+			timestamp: 282,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.32646599411964417,
 			bbox: {
 				x1: 1769,
@@ -4380,11 +5741,16 @@ export const detections = {
 				center_x: 1821,
 				center_y: 890,
 			},
+			coordinates: {
+				lat: 52.226471,
+				lon: 21.010539,
+			},
 		},
 		{
-			timestamp: 283.0,
+			id: 274,
+			timestamp: 283,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8207986354827881,
 			bbox: {
 				x1: 1869,
@@ -4396,11 +5762,16 @@ export const detections = {
 				center_x: 1923,
 				center_y: 882,
 			},
+			coordinates: {
+				lat: 52.226416,
+				lon: 21.010407,
+			},
 		},
 		{
-			timestamp: 283.0,
+			id: 275,
+			timestamp: 283,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8206254243850708,
 			bbox: {
 				x1: 2277,
@@ -4412,9 +5783,14 @@ export const detections = {
 				center_x: 2327,
 				center_y: 894,
 			},
+			coordinates: {
+				lat: 52.226413,
+				lon: 21.010266,
+			},
 		},
 		{
-			timestamp: 283.0,
+			id: 276,
+			timestamp: 283,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6856706142425537,
@@ -4428,11 +5804,16 @@ export const detections = {
 				center_x: 1755,
 				center_y: 897,
 			},
+			coordinates: {
+				lat: 52.226278,
+				lon: 21.010376,
+			},
 		},
 		{
-			timestamp: 284.0,
+			id: 277,
+			timestamp: 284,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8459992408752441,
 			bbox: {
 				x1: 1905,
@@ -4444,11 +5825,16 @@ export const detections = {
 				center_x: 1966,
 				center_y: 878,
 			},
+			coordinates: {
+				lat: 52.226358,
+				lon: 21.010266,
+			},
 		},
 		{
-			timestamp: 284.0,
+			id: 278,
+			timestamp: 284,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7879031896591187,
 			bbox: {
 				x1: 2219,
@@ -4460,9 +5846,14 @@ export const detections = {
 				center_x: 2269,
 				center_y: 890,
 			},
+			coordinates: {
+				lat: 52.22634,
+				lon: 21.010355,
+			},
 		},
 		{
-			timestamp: 284.0,
+			id: 279,
+			timestamp: 284,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6814332604408264,
@@ -4476,11 +5867,16 @@ export const detections = {
 				center_x: 1674,
 				center_y: 891,
 			},
+			coordinates: {
+				lat: 52.226235,
+				lon: 21.010323,
+			},
 		},
 		{
-			timestamp: 285.0,
+			id: 280,
+			timestamp: 285,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8691161274909973,
 			bbox: {
 				x1: 1942,
@@ -4492,11 +5888,16 @@ export const detections = {
 				center_x: 2005,
 				center_y: 870,
 			},
+			coordinates: {
+				lat: 52.226341,
+				lon: 21.010405,
+			},
 		},
 		{
-			timestamp: 285.0,
+			id: 281,
+			timestamp: 285,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8408927321434021,
 			bbox: {
 				x1: 2152,
@@ -4508,9 +5909,14 @@ export const detections = {
 				center_x: 2205,
 				center_y: 891,
 			},
+			coordinates: {
+				lat: 52.226474,
+				lon: 21.0104,
+			},
 		},
 		{
-			timestamp: 285.0,
+			id: 282,
+			timestamp: 285,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.5996781587600708,
@@ -4524,11 +5930,16 @@ export const detections = {
 				center_x: 1590,
 				center_y: 894,
 			},
+			coordinates: {
+				lat: 52.226369,
+				lon: 21.010258,
+			},
 		},
 		{
-			timestamp: 286.0,
+			id: 283,
+			timestamp: 286,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8348300457000732,
 			bbox: {
 				x1: 1938,
@@ -4540,11 +5951,16 @@ export const detections = {
 				center_x: 2006,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.226428,
+				lon: 21.010151,
+			},
 		},
 		{
-			timestamp: 286.0,
+			id: 284,
+			timestamp: 286,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7836177945137024,
 			bbox: {
 				x1: 2076,
@@ -4556,9 +5972,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 891,
 			},
+			coordinates: {
+				lat: 52.226542,
+				lon: 21.010141,
+			},
 		},
 		{
-			timestamp: 286.0,
+			id: 285,
+			timestamp: 286,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6823492646217346,
@@ -4572,11 +5993,16 @@ export const detections = {
 				center_x: 1504,
 				center_y: 897,
 			},
+			coordinates: {
+				lat: 52.22669,
+				lon: 21.010091,
+			},
 		},
 		{
-			timestamp: 287.0,
+			id: 286,
+			timestamp: 287,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8917766809463501,
 			bbox: {
 				x1: 1919,
@@ -4588,9 +6014,14 @@ export const detections = {
 				center_x: 1993,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.22656,
+				lon: 21.010104,
+			},
 		},
 		{
-			timestamp: 287.0,
+			id: 287,
+			timestamp: 287,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.728999137878418,
@@ -4604,11 +6035,16 @@ export const detections = {
 				center_x: 1387,
 				center_y: 889,
 			},
+			coordinates: {
+				lat: 52.226659,
+				lon: 21.010139,
+			},
 		},
 		{
-			timestamp: 287.0,
+			id: 288,
+			timestamp: 287,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.560621976852417,
 			bbox: {
 				x1: 1313,
@@ -4620,11 +6056,16 @@ export const detections = {
 				center_x: 1384,
 				center_y: 893,
 			},
+			coordinates: {
+				lat: 52.226734,
+				lon: 21.010064,
+			},
 		},
 		{
-			timestamp: 288.0,
+			id: 289,
+			timestamp: 288,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8155369162559509,
 			bbox: {
 				x1: 1895,
@@ -4636,9 +6077,14 @@ export const detections = {
 				center_x: 1966,
 				center_y: 870,
 			},
+			coordinates: {
+				lat: 52.22669,
+				lon: 21.009896,
+			},
 		},
 		{
-			timestamp: 288.0,
+			id: 290,
+			timestamp: 288,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7894461750984192,
@@ -4652,11 +6098,16 @@ export const detections = {
 				center_x: 1284,
 				center_y: 903,
 			},
+			coordinates: {
+				lat: 52.226735,
+				lon: 21.009745,
+			},
 		},
 		{
-			timestamp: 288.0,
+			id: 291,
+			timestamp: 288,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7724648118019104,
 			bbox: {
 				x1: 1830,
@@ -4668,11 +6119,16 @@ export const detections = {
 				center_x: 1878,
 				center_y: 874,
 			},
+			coordinates: {
+				lat: 52.226804,
+				lon: 21.009836,
+			},
 		},
 		{
-			timestamp: 289.0,
+			id: 292,
+			timestamp: 289,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8042051792144775,
 			bbox: {
 				x1: 1806,
@@ -4684,11 +6140,16 @@ export const detections = {
 				center_x: 1882,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.226733,
+				lon: 21.009756,
+			},
 		},
 		{
-			timestamp: 289.0,
+			id: 293,
+			timestamp: 289,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7707655429840088,
 			bbox: {
 				x1: 1677,
@@ -4700,9 +6161,14 @@ export const detections = {
 				center_x: 1747,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.226752,
+				lon: 21.009656,
+			},
 		},
 		{
-			timestamp: 289.0,
+			id: 294,
+			timestamp: 289,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6374331116676331,
@@ -4716,9 +6182,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.226834,
+				lon: 21.00972,
+			},
 		},
 		{
-			timestamp: 289.0,
+			id: 295,
+			timestamp: 289,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6337020993232727,
@@ -4732,11 +6203,16 @@ export const detections = {
 				center_x: 1083,
 				center_y: 903,
 			},
+			coordinates: {
+				lat: 52.226819,
+				lon: 21.009541,
+			},
 		},
 		{
-			timestamp: 290.0,
+			id: 296,
+			timestamp: 290,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.795449435710907,
 			bbox: {
 				x1: 1526,
@@ -4748,11 +6224,16 @@ export const detections = {
 				center_x: 1602,
 				center_y: 889,
 			},
+			coordinates: {
+				lat: 52.226958,
+				lon: 21.009577,
+			},
 		},
 		{
-			timestamp: 290.0,
+			id: 297,
+			timestamp: 290,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7178155779838562,
 			bbox: {
 				x1: 1683,
@@ -4764,9 +6245,14 @@ export const detections = {
 				center_x: 1775,
 				center_y: 867,
 			},
+			coordinates: {
+				lat: 52.227077,
+				lon: 21.009667,
+			},
 		},
 		{
-			timestamp: 290.0,
+			id: 298,
+			timestamp: 290,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7040882110595703,
@@ -4780,9 +6266,14 @@ export const detections = {
 				center_x: 840,
 				center_y: 904,
 			},
+			coordinates: {
+				lat: 52.227093,
+				lon: 21.009567,
+			},
 		},
 		{
-			timestamp: 290.0,
+			id: 299,
+			timestamp: 290,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.3714968264102936,
@@ -4796,11 +6287,16 @@ export const detections = {
 				center_x: 2126,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227025,
+				lon: 21.009702,
+			},
 		},
 		{
-			timestamp: 291.0,
+			id: 300,
+			timestamp: 291,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8787209987640381,
 			bbox: {
 				x1: 1379,
@@ -4812,11 +6308,16 @@ export const detections = {
 				center_x: 1463,
 				center_y: 887,
 			},
+			coordinates: {
+				lat: 52.226898,
+				lon: 21.009819,
+			},
 		},
 		{
-			timestamp: 291.0,
+			id: 301,
+			timestamp: 291,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6489301323890686,
 			bbox: {
 				x1: 1632,
@@ -4828,9 +6329,14 @@ export const detections = {
 				center_x: 1737,
 				center_y: 875,
 			},
+			coordinates: {
+				lat: 52.227026,
+				lon: 21.009737,
+			},
 		},
 		{
-			timestamp: 291.0,
+			id: 302,
+			timestamp: 291,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6358904242515564,
@@ -4844,11 +6350,16 @@ export const detections = {
 				center_x: 569,
 				center_y: 950,
 			},
+			coordinates: {
+				lat: 52.227086,
+				lon: 21.009596,
+			},
 		},
 		{
-			timestamp: 291.0,
+			id: 303,
+			timestamp: 291,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6182282567024231,
 			bbox: {
 				x1: 442,
@@ -4860,9 +6371,14 @@ export const detections = {
 				center_x: 568,
 				center_y: 953,
 			},
+			coordinates: {
+				lat: 52.227239,
+				lon: 21.009533,
+			},
 		},
 		{
-			timestamp: 291.0,
+			id: 304,
+			timestamp: 291,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5495434999465942,
@@ -4876,11 +6392,16 @@ export const detections = {
 				center_x: 2127,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227191,
+				lon: 21.009433,
+			},
 		},
 		{
-			timestamp: 292.0,
+			id: 305,
+			timestamp: 292,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8542835116386414,
 			bbox: {
 				x1: 1240,
@@ -4892,11 +6413,16 @@ export const detections = {
 				center_x: 1327,
 				center_y: 898,
 			},
+			coordinates: {
+				lat: 52.227358,
+				lon: 21.009493,
+			},
 		},
 		{
-			timestamp: 292.0,
+			id: 306,
+			timestamp: 292,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8423973321914673,
 			bbox: {
 				x1: 1766,
@@ -4908,9 +6434,14 @@ export const detections = {
 				center_x: 1871,
 				center_y: 880,
 			},
+			coordinates: {
+				lat: 52.227294,
+				lon: 21.009416,
+			},
 		},
 		{
-			timestamp: 292.0,
+			id: 307,
+			timestamp: 292,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5506786704063416,
@@ -4924,9 +6455,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227205,
+				lon: 21.009303,
+			},
 		},
 		{
-			timestamp: 292.0,
+			id: 308,
+			timestamp: 292,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.5478861331939697,
@@ -4940,11 +6476,16 @@ export const detections = {
 				center_x: 122,
 				center_y: 940,
 			},
+			coordinates: {
+				lat: 52.227235,
+				lon: 21.00946,
+			},
 		},
 		{
-			timestamp: 292.0,
+			id: 309,
+			timestamp: 292,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.4310266673564911,
 			bbox: {
 				x1: 2,
@@ -4956,11 +6497,16 @@ export const detections = {
 				center_x: 123,
 				center_y: 935,
 			},
+			coordinates: {
+				lat: 52.227211,
+				lon: 21.009347,
+			},
 		},
 		{
-			timestamp: 293.0,
+			id: 310,
+			timestamp: 293,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.869536280632019,
 			bbox: {
 				x1: 1914,
@@ -4972,11 +6518,16 @@ export const detections = {
 				center_x: 2039,
 				center_y: 841,
 			},
+			coordinates: {
+				lat: 52.227327,
+				lon: 21.009216,
+			},
 		},
 		{
-			timestamp: 293.0,
+			id: 311,
+			timestamp: 293,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8556956648826599,
 			bbox: {
 				x1: 1049,
@@ -4988,11 +6539,16 @@ export const detections = {
 				center_x: 1162,
 				center_y: 909,
 			},
+			coordinates: {
+				lat: 52.227397,
+				lon: 21.009064,
+			},
 		},
 		{
-			timestamp: 294.0,
+			id: 312,
+			timestamp: 294,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.877024233341217,
 			bbox: {
 				x1: 2052,
@@ -5004,11 +6560,16 @@ export const detections = {
 				center_x: 2199,
 				center_y: 847,
 			},
+			coordinates: {
+				lat: 52.227465,
+				lon: 21.00914,
+			},
 		},
 		{
-			timestamp: 294.0,
+			id: 313,
+			timestamp: 294,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8703197240829468,
 			bbox: {
 				x1: 835,
@@ -5020,11 +6581,16 @@ export const detections = {
 				center_x: 955,
 				center_y: 914,
 			},
+			coordinates: {
+				lat: 52.227584,
+				lon: 21.009189,
+			},
 		},
 		{
-			timestamp: 295.0,
+			id: 314,
+			timestamp: 295,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.9024194478988647,
 			bbox: {
 				x1: 487,
@@ -5036,11 +6602,16 @@ export const detections = {
 				center_x: 622,
 				center_y: 914,
 			},
+			coordinates: {
+				lat: 52.227733,
+				lon: 21.009154,
+			},
 		},
 		{
-			timestamp: 295.0,
+			id: 315,
+			timestamp: 295,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.9012184739112854,
 			bbox: {
 				x1: 2030,
@@ -5052,11 +6623,16 @@ export const detections = {
 				center_x: 2201,
 				center_y: 827,
 			},
+			coordinates: {
+				lat: 52.227825,
+				lon: 21.009004,
+			},
 		},
 		{
-			timestamp: 296.0,
+			id: 316,
+			timestamp: 296,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.899569034576416,
 			bbox: {
 				x1: 2,
@@ -5068,11 +6644,16 @@ export const detections = {
 				center_x: 172,
 				center_y: 909,
 			},
+			coordinates: {
+				lat: 52.227957,
+				lon: 21.008999,
+			},
 		},
 		{
-			timestamp: 296.0,
+			id: 317,
+			timestamp: 296,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8603255748748779,
 			bbox: {
 				x1: 1765,
@@ -5084,11 +6665,16 @@ export const detections = {
 				center_x: 1991,
 				center_y: 852,
 			},
+			coordinates: {
+				lat: 52.228079,
+				lon: 21.008999,
+			},
 		},
 		{
-			timestamp: 297.0,
+			id: 318,
+			timestamp: 297,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8845406174659729,
 			bbox: {
 				x1: 1579,
@@ -5100,11 +6686,16 @@ export const detections = {
 				center_x: 1814,
 				center_y: 810,
 			},
+			coordinates: {
+				lat: 52.228007,
+				lon: 21.00891,
+			},
 		},
 		{
-			timestamp: 298.0,
+			id: 319,
+			timestamp: 298,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8368330001831055,
 			bbox: {
 				x1: 1431,
@@ -5116,9 +6707,14 @@ export const detections = {
 				center_x: 1746,
 				center_y: 803,
 			},
+			coordinates: {
+				lat: 52.227947,
+				lon: 21.009042,
+			},
 		},
 		{
-			timestamp: 298.0,
+			id: 320,
+			timestamp: 298,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5432807803153992,
@@ -5132,11 +6728,16 @@ export const detections = {
 				center_x: 2136,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.227787,
+				lon: 21.009091,
+			},
 		},
 		{
-			timestamp: 299.0,
+			id: 321,
+			timestamp: 299,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.9267829656600952,
 			bbox: {
 				x1: 546,
@@ -5148,9 +6749,14 @@ export const detections = {
 				center_x: 1025,
 				center_y: 962,
 			},
+			coordinates: {
+				lat: 52.227794,
+				lon: 21.009202,
+			},
 		},
 		{
-			timestamp: 299.0,
+			id: 322,
+			timestamp: 299,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7656869888305664,
@@ -5164,9 +6770,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227836,
+				lon: 21.009322,
+			},
 		},
 		{
-			timestamp: 299.0,
+			id: 323,
+			timestamp: 299,
 			class_id: 4,
 			class_name: "weapon",
 			confidence: 0.25899943709373474,
@@ -5180,9 +6791,14 @@ export const detections = {
 				center_x: 619,
 				center_y: 438,
 			},
+			coordinates: {
+				lat: 52.227757,
+				lon: 21.009241,
+			},
 		},
 		{
-			timestamp: 300.0,
+			id: 324,
+			timestamp: 300,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7789310812950134,
@@ -5196,9 +6812,14 @@ export const detections = {
 				center_x: 2131,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227595,
+				lon: 21.00928,
+			},
 		},
 		{
-			timestamp: 301.0,
+			id: 325,
+			timestamp: 301,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7741894721984863,
@@ -5212,9 +6833,14 @@ export const detections = {
 				center_x: 2131,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227642,
+				lon: 21.009154,
+			},
 		},
 		{
-			timestamp: 302.0,
+			id: 326,
+			timestamp: 302,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7966129779815674,
@@ -5228,9 +6854,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227768,
+				lon: 21.009282,
+			},
 		},
 		{
-			timestamp: 303.0,
+			id: 327,
+			timestamp: 303,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8172478079795837,
@@ -5244,9 +6875,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227725,
+				lon: 21.009373,
+			},
 		},
 		{
-			timestamp: 304.0,
+			id: 328,
+			timestamp: 304,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.773447573184967,
@@ -5260,9 +6896,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227739,
+				lon: 21.009469,
+			},
 		},
 		{
-			timestamp: 305.0,
+			id: 329,
+			timestamp: 305,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8227084279060364,
@@ -5276,9 +6917,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227753,
+				lon: 21.009579,
+			},
 		},
 		{
-			timestamp: 306.0,
+			id: 330,
+			timestamp: 306,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8170651197433472,
@@ -5292,9 +6938,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.22773,
+				lon: 21.009462,
+			},
 		},
 		{
-			timestamp: 307.0,
+			id: 331,
+			timestamp: 307,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8025994896888733,
@@ -5308,9 +6959,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227587,
+				lon: 21.009467,
+			},
 		},
 		{
-			timestamp: 308.0,
+			id: 332,
+			timestamp: 308,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8025143146514893,
@@ -5324,9 +6980,14 @@ export const detections = {
 				center_x: 2131,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227711,
+				lon: 21.009584,
+			},
 		},
 		{
-			timestamp: 309.0,
+			id: 333,
+			timestamp: 309,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8022263050079346,
@@ -5340,11 +7001,16 @@ export const detections = {
 				center_x: 2130,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227624,
+				lon: 21.009665,
+			},
 		},
 		{
-			timestamp: 310.0,
+			id: 334,
+			timestamp: 310,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8047975897789001,
 			bbox: {
 				x1: 0,
@@ -5356,9 +7022,14 @@ export const detections = {
 				center_x: 284,
 				center_y: 1024,
 			},
+			coordinates: {
+				lat: 52.227729,
+				lon: 21.009768,
+			},
 		},
 		{
-			timestamp: 310.0,
+			id: 335,
+			timestamp: 310,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.802875280380249,
@@ -5372,11 +7043,16 @@ export const detections = {
 				center_x: 2129,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.227781,
+				lon: 21.009599,
+			},
 		},
 		{
-			timestamp: 311.0,
+			id: 336,
+			timestamp: 311,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.9089987874031067,
 			bbox: {
 				x1: 889,
@@ -5388,9 +7064,14 @@ export const detections = {
 				center_x: 1365,
 				center_y: 876,
 			},
+			coordinates: {
+				lat: 52.227682,
+				lon: 21.009617,
+			},
 		},
 		{
-			timestamp: 311.0,
+			id: 337,
+			timestamp: 311,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8331678509712219,
@@ -5404,11 +7085,16 @@ export const detections = {
 				center_x: 2129,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.22772,
+				lon: 21.009786,
+			},
 		},
 		{
-			timestamp: 312.0,
+			id: 338,
+			timestamp: 312,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7656719088554382,
 			bbox: {
 				x1: 0,
@@ -5420,9 +7106,14 @@ export const detections = {
 				center_x: 147,
 				center_y: 974,
 			},
+			coordinates: {
+				lat: 52.227741,
+				lon: 21.009907,
+			},
 		},
 		{
-			timestamp: 312.0,
+			id: 339,
+			timestamp: 312,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7103866338729858,
@@ -5436,11 +7127,16 @@ export const detections = {
 				center_x: 2062,
 				center_y: 806,
 			},
+			coordinates: {
+				lat: 52.227618,
+				lon: 21.009888,
+			},
 		},
 		{
-			timestamp: 312.0,
+			id: 340,
+			timestamp: 312,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.34868186712265015,
 			bbox: {
 				x1: 1773,
@@ -5452,11 +7148,16 @@ export const detections = {
 				center_x: 2058,
 				center_y: 813,
 			},
+			coordinates: {
+				lat: 52.227707,
+				lon: 21.009799,
+			},
 		},
 		{
-			timestamp: 313.0,
+			id: 341,
+			timestamp: 313,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.898585855960846,
 			bbox: {
 				x1: 406,
@@ -5468,11 +7169,16 @@ export const detections = {
 				center_x: 612,
 				center_y: 924,
 			},
+			coordinates: {
+				lat: 52.227833,
+				lon: 21.009866,
+			},
 		},
 		{
-			timestamp: 313.0,
+			id: 342,
+			timestamp: 313,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8809404373168945,
 			bbox: {
 				x1: 2017,
@@ -5484,11 +7190,16 @@ export const detections = {
 				center_x: 2225,
 				center_y: 832,
 			},
+			coordinates: {
+				lat: 52.227673,
+				lon: 21.009827,
+			},
 		},
 		{
-			timestamp: 314.0,
+			id: 343,
+			timestamp: 314,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8956014513969421,
 			bbox: {
 				x1: 2118,
@@ -5500,11 +7211,16 @@ export const detections = {
 				center_x: 2298,
 				center_y: 834,
 			},
+			coordinates: {
+				lat: 52.227713,
+				lon: 21.009943,
+			},
 		},
 		{
-			timestamp: 314.0,
+			id: 344,
+			timestamp: 314,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8696945905685425,
 			bbox: {
 				x1: 780,
@@ -5516,9 +7232,14 @@ export const detections = {
 				center_x: 920,
 				center_y: 904,
 			},
+			coordinates: {
+				lat: 52.227726,
+				lon: 21.010113,
+			},
 		},
 		{
-			timestamp: 314.0,
+			id: 345,
+			timestamp: 314,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7527165412902832,
@@ -5532,9 +7253,14 @@ export const detections = {
 				center_x: 2125,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227792,
+				lon: 21.010027,
+			},
 		},
 		{
-			timestamp: 314.0,
+			id: 346,
+			timestamp: 314,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.5693368911743164,
@@ -5548,11 +7274,16 @@ export const detections = {
 				center_x: 380,
 				center_y: 917,
 			},
+			coordinates: {
+				lat: 52.227742,
+				lon: 21.009915,
+			},
 		},
 		{
-			timestamp: 315.0,
+			id: 347,
+			timestamp: 315,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8961331844329834,
 			bbox: {
 				x1: 2094,
@@ -5564,11 +7295,16 @@ export const detections = {
 				center_x: 2283,
 				center_y: 867,
 			},
+			coordinates: {
+				lat: 52.227681,
+				lon: 21.010059,
+			},
 		},
 		{
-			timestamp: 315.0,
+			id: 348,
+			timestamp: 315,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8933436870574951,
 			bbox: {
 				x1: 1003,
@@ -5580,9 +7316,14 @@ export const detections = {
 				center_x: 1150,
 				center_y: 923,
 			},
+			coordinates: {
+				lat: 52.227578,
+				lon: 21.00992,
+			},
 		},
 		{
-			timestamp: 315.0,
+			id: 349,
+			timestamp: 315,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.4650345742702484,
@@ -5596,11 +7337,16 @@ export const detections = {
 				center_x: 746,
 				center_y: 917,
 			},
+			coordinates: {
+				lat: 52.227635,
+				lon: 21.009777,
+			},
 		},
 		{
-			timestamp: 315.0,
+			id: 350,
+			timestamp: 315,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.45287925004959106,
 			bbox: {
 				x1: 617,
@@ -5612,11 +7358,16 @@ export const detections = {
 				center_x: 743,
 				center_y: 918,
 			},
+			coordinates: {
+				lat: 52.227543,
+				lon: 21.009902,
+			},
 		},
 		{
-			timestamp: 316.0,
+			id: 351,
+			timestamp: 316,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8652260303497314,
 			bbox: {
 				x1: 1268,
@@ -5628,11 +7379,16 @@ export const detections = {
 				center_x: 1388,
 				center_y: 901,
 			},
+			coordinates: {
+				lat: 52.227633,
+				lon: 21.009836,
+			},
 		},
 		{
-			timestamp: 316.0,
+			id: 352,
+			timestamp: 316,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8593336343765259,
 			bbox: {
 				x1: 2092,
@@ -5644,9 +7400,14 @@ export const detections = {
 				center_x: 2241,
 				center_y: 842,
 			},
+			coordinates: {
+				lat: 52.227679,
+				lon: 21.009914,
+			},
 		},
 		{
-			timestamp: 316.0,
+			id: 353,
+			timestamp: 316,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7036146521568298,
@@ -5660,11 +7421,16 @@ export const detections = {
 				center_x: 998,
 				center_y: 910,
 			},
+			coordinates: {
+				lat: 52.22776,
+				lon: 21.010013,
+			},
 		},
 		{
-			timestamp: 317.0,
+			id: 354,
+			timestamp: 317,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8913110494613647,
 			bbox: {
 				x1: 1475,
@@ -5676,11 +7442,16 @@ export const detections = {
 				center_x: 1563,
 				center_y: 893,
 			},
+			coordinates: {
+				lat: 52.227659,
+				lon: 21.010154,
+			},
 		},
 		{
-			timestamp: 317.0,
+			id: 355,
+			timestamp: 317,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8575016260147095,
 			bbox: {
 				x1: 2172,
@@ -5692,9 +7463,14 @@ export const detections = {
 				center_x: 2304,
 				center_y: 846,
 			},
+			coordinates: {
+				lat: 52.227575,
+				lon: 21.010118,
+			},
 		},
 		{
-			timestamp: 317.0,
+			id: 356,
+			timestamp: 317,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.5289751887321472,
@@ -5708,11 +7484,16 @@ export const detections = {
 				center_x: 1164,
 				center_y: 897,
 			},
+			coordinates: {
+				lat: 52.227429,
+				lon: 21.01013,
+			},
 		},
 		{
-			timestamp: 317.0,
+			id: 357,
+			timestamp: 317,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.26310181617736816,
 			bbox: {
 				x1: 1087,
@@ -5724,11 +7505,16 @@ export const detections = {
 				center_x: 1164,
 				center_y: 896,
 			},
+			coordinates: {
+				lat: 52.227372,
+				lon: 21.010044,
+			},
 		},
 		{
-			timestamp: 318.0,
+			id: 358,
+			timestamp: 318,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8672317862510681,
 			bbox: {
 				x1: 2230,
@@ -5740,11 +7526,16 @@ export const detections = {
 				center_x: 2350,
 				center_y: 850,
 			},
+			coordinates: {
+				lat: 52.227313,
+				lon: 21.010148,
+			},
 		},
 		{
-			timestamp: 318.0,
+			id: 359,
+			timestamp: 318,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8484955430030823,
 			bbox: {
 				x1: 1613,
@@ -5756,9 +7547,14 @@ export const detections = {
 				center_x: 1686,
 				center_y: 889,
 			},
+			coordinates: {
+				lat: 52.227482,
+				lon: 21.010186,
+			},
 		},
 		{
-			timestamp: 318.0,
+			id: 360,
+			timestamp: 318,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6745272278785706,
@@ -5772,11 +7568,16 @@ export const detections = {
 				center_x: 1287,
 				center_y: 894,
 			},
+			coordinates: {
+				lat: 52.227523,
+				lon: 21.010277,
+			},
 		},
 		{
-			timestamp: 319.0,
+			id: 361,
+			timestamp: 319,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.9052551984786987,
 			bbox: {
 				x1: 2261,
@@ -5788,11 +7589,16 @@ export const detections = {
 				center_x: 2368,
 				center_y: 848,
 			},
+			coordinates: {
+				lat: 52.227591,
+				lon: 21.010342,
+			},
 		},
 		{
-			timestamp: 319.0,
+			id: 362,
+			timestamp: 319,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8244322538375854,
 			bbox: {
 				x1: 1692,
@@ -5804,9 +7610,14 @@ export const detections = {
 				center_x: 1762,
 				center_y: 886,
 			},
+			coordinates: {
+				lat: 52.227636,
+				lon: 21.010253,
+			},
 		},
 		{
-			timestamp: 319.0,
+			id: 363,
+			timestamp: 319,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.8118995428085327,
@@ -5820,11 +7631,16 @@ export const detections = {
 				center_x: 1418,
 				center_y: 896,
 			},
+			coordinates: {
+				lat: 52.227571,
+				lon: 21.010117,
+			},
 		},
 		{
-			timestamp: 320.0,
+			id: 364,
+			timestamp: 320,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.895901620388031,
 			bbox: {
 				x1: 1800,
@@ -5836,11 +7652,16 @@ export const detections = {
 				center_x: 1864,
 				center_y: 881,
 			},
+			coordinates: {
+				lat: 52.22761,
+				lon: 21.010201,
+			},
 		},
 		{
-			timestamp: 320.0,
+			id: 365,
+			timestamp: 320,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8784406185150146,
 			bbox: {
 				x1: 2321,
@@ -5852,9 +7673,14 @@ export const detections = {
 				center_x: 2420,
 				center_y: 849,
 			},
+			coordinates: {
+				lat: 52.227656,
+				lon: 21.010076,
+			},
 		},
 		{
-			timestamp: 320.0,
+			id: 366,
+			timestamp: 320,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.8223421573638916,
@@ -5868,9 +7694,14 @@ export const detections = {
 				center_x: 1521,
 				center_y: 896,
 			},
+			coordinates: {
+				lat: 52.22765,
+				lon: 21.009901,
+			},
 		},
 		{
-			timestamp: 320.0,
+			id: 367,
+			timestamp: 320,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6806269884109497,
@@ -5884,11 +7715,16 @@ export const detections = {
 				center_x: 2129,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.227595,
+				lon: 21.009988,
+			},
 		},
 		{
-			timestamp: 321.0,
+			id: 368,
+			timestamp: 321,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8841930031776428,
 			bbox: {
 				x1: 1900,
@@ -5900,11 +7736,16 @@ export const detections = {
 				center_x: 1959,
 				center_y: 880,
 			},
+			coordinates: {
+				lat: 52.227575,
+				lon: 21.00982,
+			},
 		},
 		{
-			timestamp: 321.0,
+			id: 369,
+			timestamp: 321,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7665727734565735,
 			bbox: {
 				x1: 2406,
@@ -5916,9 +7757,14 @@ export const detections = {
 				center_x: 2490,
 				center_y: 855,
 			},
+			coordinates: {
+				lat: 52.227485,
+				lon: 21.009849,
+			},
 		},
 		{
-			timestamp: 321.0,
+			id: 370,
+			timestamp: 321,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.719701886177063,
@@ -5932,9 +7778,14 @@ export const detections = {
 				center_x: 1584,
 				center_y: 898,
 			},
+			coordinates: {
+				lat: 52.227565,
+				lon: 21.009924,
+			},
 		},
 		{
-			timestamp: 321.0,
+			id: 371,
+			timestamp: 321,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6356532573699951,
@@ -5948,11 +7799,16 @@ export const detections = {
 				center_x: 2150,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.227563,
+				lon: 21.010028,
+			},
 		},
 		{
-			timestamp: 322.0,
+			id: 372,
+			timestamp: 322,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8343918919563293,
 			bbox: {
 				x1: 2480,
@@ -5964,11 +7820,16 @@ export const detections = {
 				center_x: 2544,
 				center_y: 860,
 			},
+			coordinates: {
+				lat: 52.227628,
+				lon: 21.009937,
+			},
 		},
 		{
-			timestamp: 322.0,
+			id: 373,
+			timestamp: 322,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7984567880630493,
 			bbox: {
 				x1: 2012,
@@ -5980,9 +7841,14 @@ export const detections = {
 				center_x: 2071,
 				center_y: 880,
 			},
+			coordinates: {
+				lat: 52.227727,
+				lon: 21.009972,
+			},
 		},
 		{
-			timestamp: 322.0,
+			id: 374,
+			timestamp: 322,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.49443909525871277,
@@ -5996,11 +7862,16 @@ export const detections = {
 				center_x: 1628,
 				center_y: 899,
 			},
+			coordinates: {
+				lat: 52.227818,
+				lon: 21.009927,
+			},
 		},
 		{
-			timestamp: 323.0,
+			id: 375,
+			timestamp: 323,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8231117129325867,
 			bbox: {
 				x1: 2124,
@@ -6012,11 +7883,16 @@ export const detections = {
 				center_x: 2183,
 				center_y: 891,
 			},
+			coordinates: {
+				lat: 52.227847,
+				lon: 21.009841,
+			},
 		},
 		{
-			timestamp: 323.0,
+			id: 376,
+			timestamp: 323,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8176272511482239,
 			bbox: {
 				x1: 2537,
@@ -6028,9 +7904,14 @@ export const detections = {
 				center_x: 2638,
 				center_y: 850,
 			},
+			coordinates: {
+				lat: 52.227874,
+				lon: 21.00995,
+			},
 		},
 		{
-			timestamp: 323.0,
+			id: 377,
+			timestamp: 323,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.5751658082008362,
@@ -6044,11 +7925,16 @@ export const detections = {
 				center_x: 1617,
 				center_y: 887,
 			},
+			coordinates: {
+				lat: 52.227906,
+				lon: 21.009835,
+			},
 		},
 		{
-			timestamp: 324.0,
+			id: 378,
+			timestamp: 324,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.896043598651886,
 			bbox: {
 				x1: 2709,
@@ -6060,11 +7946,16 @@ export const detections = {
 				center_x: 2791,
 				center_y: 869,
 			},
+			coordinates: {
+				lat: 52.227822,
+				lon: 21.009677,
+			},
 		},
 		{
-			timestamp: 324.0,
+			id: 379,
+			timestamp: 324,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8409919738769531,
 			bbox: {
 				x1: 2261,
@@ -6076,9 +7967,14 @@ export const detections = {
 				center_x: 2310,
 				center_y: 892,
 			},
+			coordinates: {
+				lat: 52.227802,
+				lon: 21.00955,
+			},
 		},
 		{
-			timestamp: 324.0,
+			id: 380,
+			timestamp: 324,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.41691723465919495,
@@ -6092,11 +7988,16 @@ export const detections = {
 				center_x: 1593,
 				center_y: 897,
 			},
+			coordinates: {
+				lat: 52.227716,
+				lon: 21.009465,
+			},
 		},
 		{
-			timestamp: 325.0,
+			id: 381,
+			timestamp: 325,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8617867231369019,
 			bbox: {
 				x1: 2390,
@@ -6108,11 +8009,16 @@ export const detections = {
 				center_x: 2441,
 				center_y: 878,
 			},
+			coordinates: {
+				lat: 52.227813,
+				lon: 21.009438,
+			},
 		},
 		{
-			timestamp: 325.0,
+			id: 382,
+			timestamp: 325,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7933607697486877,
 			bbox: {
 				x1: 2874,
@@ -6124,9 +8030,14 @@ export const detections = {
 				center_x: 2927,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.227768,
+				lon: 21.009318,
+			},
 		},
 		{
-			timestamp: 325.0,
+			id: 383,
+			timestamp: 325,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.668613851070404,
@@ -6140,11 +8051,16 @@ export const detections = {
 				center_x: 2130,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.227861,
+				lon: 21.009377,
+			},
 		},
 		{
-			timestamp: 326.0,
+			id: 384,
+			timestamp: 326,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7451317310333252,
 			bbox: {
 				x1: 2489,
@@ -6156,9 +8072,14 @@ export const detections = {
 				center_x: 2533,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.227744,
+				lon: 21.009389,
+			},
 		},
 		{
-			timestamp: 326.0,
+			id: 385,
+			timestamp: 326,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.3477311134338379,
@@ -6172,9 +8093,14 @@ export const detections = {
 				center_x: 2128,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227776,
+				lon: 21.009501,
+			},
 		},
 		{
-			timestamp: 326.0,
+			id: 386,
+			timestamp: 326,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.3123445212841034,
@@ -6188,11 +8114,16 @@ export const detections = {
 				center_x: 1518,
 				center_y: 894,
 			},
+			coordinates: {
+				lat: 52.227686,
+				lon: 21.009488,
+			},
 		},
 		{
-			timestamp: 327.0,
+			id: 387,
+			timestamp: 327,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.578560471534729,
 			bbox: {
 				x1: 2542,
@@ -6204,9 +8135,14 @@ export const detections = {
 				center_x: 2589,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227616,
+				lon: 21.009354,
+			},
 		},
 		{
-			timestamp: 327.0,
+			id: 388,
+			timestamp: 327,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.4716937839984894,
@@ -6220,11 +8156,16 @@ export const detections = {
 				center_x: 2129,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.22779,
+				lon: 21.009328,
+			},
 		},
 		{
-			timestamp: 328.0,
+			id: 389,
+			timestamp: 328,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6134045720100403,
 			bbox: {
 				x1: 2584,
@@ -6236,9 +8177,14 @@ export const detections = {
 				center_x: 2627,
 				center_y: 860,
 			},
+			coordinates: {
+				lat: 52.227736,
+				lon: 21.009245,
+			},
 		},
 		{
-			timestamp: 328.0,
+			id: 390,
+			timestamp: 328,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5112800598144531,
@@ -6252,11 +8198,16 @@ export const detections = {
 				center_x: 2129,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227591,
+				lon: 21.009215,
+			},
 		},
 		{
-			timestamp: 329.0,
+			id: 391,
+			timestamp: 329,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7502385973930359,
 			bbox: {
 				x1: 2627,
@@ -6268,9 +8219,14 @@ export const detections = {
 				center_x: 2670,
 				center_y: 854,
 			},
+			coordinates: {
+				lat: 52.22742,
+				lon: 21.009178,
+			},
 		},
 		{
-			timestamp: 329.0,
+			id: 392,
+			timestamp: 329,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5455322265625,
@@ -6284,11 +8240,16 @@ export const detections = {
 				center_x: 2128,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227543,
+				lon: 21.009253,
+			},
 		},
 		{
-			timestamp: 330.0,
+			id: 393,
+			timestamp: 330,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7068338990211487,
 			bbox: {
 				x1: 2692,
@@ -6300,9 +8261,14 @@ export const detections = {
 				center_x: 2734,
 				center_y: 854,
 			},
+			coordinates: {
+				lat: 52.227403,
+				lon: 21.009193,
+			},
 		},
 		{
-			timestamp: 330.0,
+			id: 394,
+			timestamp: 330,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.699657142162323,
@@ -6316,9 +8282,14 @@ export const detections = {
 				center_x: 2127,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.22753,
+				lon: 21.009154,
+			},
 		},
 		{
-			timestamp: 331.0,
+			id: 395,
+			timestamp: 331,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7796270847320557,
@@ -6332,9 +8303,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227638,
+				lon: 21.009087,
+			},
 		},
 		{
-			timestamp: 332.0,
+			id: 396,
+			timestamp: 332,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8328696489334106,
@@ -6348,9 +8324,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.227546,
+				lon: 21.008934,
+			},
 		},
 		{
-			timestamp: 333.0,
+			id: 397,
+			timestamp: 333,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8419131636619568,
@@ -6364,9 +8345,14 @@ export const detections = {
 				center_x: 2131,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.227474,
+				lon: 21.00899,
+			},
 		},
 		{
-			timestamp: 334.0,
+			id: 398,
+			timestamp: 334,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.828080415725708,
@@ -6380,9 +8366,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.227343,
+				lon: 21.009005,
+			},
 		},
 		{
-			timestamp: 335.0,
+			id: 399,
+			timestamp: 335,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8320143222808838,
@@ -6396,9 +8387,14 @@ export const detections = {
 				center_x: 2131,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.227327,
+				lon: 21.0091,
+			},
 		},
 		{
-			timestamp: 336.0,
+			id: 400,
+			timestamp: 336,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8174755573272705,
@@ -6412,9 +8408,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227455,
+				lon: 21.009214,
+			},
 		},
 		{
-			timestamp: 337.0,
+			id: 401,
+			timestamp: 337,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8157751560211182,
@@ -6428,9 +8429,14 @@ export const detections = {
 				center_x: 2131,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.227596,
+				lon: 21.009138,
+			},
 		},
 		{
-			timestamp: 338.0,
+			id: 402,
+			timestamp: 338,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8333104252815247,
@@ -6444,9 +8450,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.227724,
+				lon: 21.009101,
+			},
 		},
 		{
-			timestamp: 339.0,
+			id: 403,
+			timestamp: 339,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8220192790031433,
@@ -6460,9 +8471,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.22779,
+				lon: 21.009165,
+			},
 		},
 		{
-			timestamp: 340.0,
+			id: 404,
+			timestamp: 340,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8151113986968994,
@@ -6476,9 +8492,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227951,
+				lon: 21.009207,
+			},
 		},
 		{
-			timestamp: 341.0,
+			id: 405,
+			timestamp: 341,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7957919239997864,
@@ -6492,9 +8513,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227866,
+				lon: 21.009164,
+			},
 		},
 		{
-			timestamp: 342.0,
+			id: 406,
+			timestamp: 342,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8108431100845337,
@@ -6508,9 +8534,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.22776,
+				lon: 21.009218,
+			},
 		},
 		{
-			timestamp: 343.0,
+			id: 407,
+			timestamp: 343,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8131649494171143,
@@ -6524,9 +8555,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.227598,
+				lon: 21.009296,
+			},
 		},
 		{
-			timestamp: 344.0,
+			id: 408,
+			timestamp: 344,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8351128697395325,
@@ -6540,9 +8576,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227646,
+				lon: 21.00921,
+			},
 		},
 		{
-			timestamp: 345.0,
+			id: 409,
+			timestamp: 345,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.799896240234375,
@@ -6556,9 +8597,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.22751,
+				lon: 21.00911,
+			},
 		},
 		{
-			timestamp: 346.0,
+			id: 410,
+			timestamp: 346,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7946234941482544,
@@ -6572,9 +8618,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.227399,
+				lon: 21.009158,
+			},
 		},
 		{
-			timestamp: 347.0,
+			id: 411,
+			timestamp: 347,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8158427476882935,
@@ -6588,9 +8639,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227316,
+				lon: 21.009112,
+			},
 		},
 		{
-			timestamp: 348.0,
+			id: 412,
+			timestamp: 348,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8154220581054688,
@@ -6604,9 +8660,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227417,
+				lon: 21.009061,
+			},
 		},
 		{
-			timestamp: 349.0,
+			id: 413,
+			timestamp: 349,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8315739035606384,
@@ -6620,11 +8681,16 @@ export const detections = {
 				center_x: 2130,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227362,
+				lon: 21.00891,
+			},
 		},
 		{
-			timestamp: 349.0,
+			id: 414,
+			timestamp: 349,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.3268815577030182,
 			bbox: {
 				x1: 3606,
@@ -6636,9 +8702,14 @@ export const detections = {
 				center_x: 3665,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.227471,
+				lon: 21.008982,
+			},
 		},
 		{
-			timestamp: 350.0,
+			id: 415,
+			timestamp: 350,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8297069072723389,
@@ -6652,9 +8723,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227493,
+				lon: 21.009104,
+			},
 		},
 		{
-			timestamp: 351.0,
+			id: 416,
+			timestamp: 351,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7822456359863281,
@@ -6668,9 +8744,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227369,
+				lon: 21.009163,
+			},
 		},
 		{
-			timestamp: 352.0,
+			id: 417,
+			timestamp: 352,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7923260927200317,
@@ -6684,11 +8765,16 @@ export const detections = {
 				center_x: 2129,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227504,
+				lon: 21.009218,
+			},
 		},
 		{
-			timestamp: 353.0,
+			id: 418,
+			timestamp: 353,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.782661497592926,
 			bbox: {
 				x1: 2832,
@@ -6700,9 +8786,14 @@ export const detections = {
 				center_x: 2886,
 				center_y: 846,
 			},
+			coordinates: {
+				lat: 52.227475,
+				lon: 21.009327,
+			},
 		},
 		{
-			timestamp: 353.0,
+			id: 419,
+			timestamp: 353,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6120002865791321,
@@ -6716,11 +8807,16 @@ export const detections = {
 				center_x: 2128,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227393,
+				lon: 21.009193,
+			},
 		},
 		{
-			timestamp: 354.0,
+			id: 420,
+			timestamp: 354,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8595149517059326,
 			bbox: {
 				x1: 2677,
@@ -6732,9 +8828,14 @@ export const detections = {
 				center_x: 2743,
 				center_y: 856,
 			},
+			coordinates: {
+				lat: 52.227242,
+				lon: 21.009238,
+			},
 		},
 		{
-			timestamp: 354.0,
+			id: 421,
+			timestamp: 354,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7116898894309998,
@@ -6748,11 +8849,16 @@ export const detections = {
 				center_x: 2127,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227067,
+				lon: 21.009227,
+			},
 		},
 		{
-			timestamp: 355.0,
+			id: 422,
+			timestamp: 355,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8605391383171082,
 			bbox: {
 				x1: 2558,
@@ -6764,9 +8870,14 @@ export const detections = {
 				center_x: 2621,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227016,
+				lon: 21.009056,
+			},
 		},
 		{
-			timestamp: 355.0,
+			id: 423,
+			timestamp: 355,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6872225999832153,
@@ -6780,11 +8891,16 @@ export const detections = {
 				center_x: 2127,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.226926,
+				lon: 21.009189,
+			},
 		},
 		{
-			timestamp: 356.0,
+			id: 424,
+			timestamp: 356,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8993591666221619,
 			bbox: {
 				x1: 2428,
@@ -6796,9 +8912,14 @@ export const detections = {
 				center_x: 2495,
 				center_y: 855,
 			},
+			coordinates: {
+				lat: 52.226953,
+				lon: 21.009078,
+			},
 		},
 		{
-			timestamp: 356.0,
+			id: 425,
+			timestamp: 356,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7412727475166321,
@@ -6812,11 +8933,16 @@ export const detections = {
 				center_x: 2126,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.226875,
+				lon: 21.009177,
+			},
 		},
 		{
-			timestamp: 357.0,
+			id: 426,
+			timestamp: 357,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8709301948547363,
 			bbox: {
 				x1: 2384,
@@ -6828,9 +8954,14 @@ export const detections = {
 				center_x: 2462,
 				center_y: 859,
 			},
+			coordinates: {
+				lat: 52.226894,
+				lon: 21.009345,
+			},
 		},
 		{
-			timestamp: 357.0,
+			id: 427,
+			timestamp: 357,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6447187066078186,
@@ -6844,11 +8975,16 @@ export const detections = {
 				center_x: 2126,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.226807,
+				lon: 21.009268,
+			},
 		},
 		{
-			timestamp: 358.0,
+			id: 428,
+			timestamp: 358,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8579360842704773,
 			bbox: {
 				x1: 2358,
@@ -6860,9 +8996,14 @@ export const detections = {
 				center_x: 2441,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.226722,
+				lon: 21.009201,
+			},
 		},
 		{
-			timestamp: 358.0,
+			id: 429,
+			timestamp: 358,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7180449962615967,
@@ -6876,11 +9017,16 @@ export const detections = {
 				center_x: 2128,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.226833,
+				lon: 21.009318,
+			},
 		},
 		{
-			timestamp: 358.0,
+			id: 430,
+			timestamp: 358,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6383017301559448,
 			bbox: {
 				x1: 2773,
@@ -6892,11 +9038,16 @@ export const detections = {
 				center_x: 2805,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.226928,
+				lon: 21.009326,
+			},
 		},
 		{
-			timestamp: 359.0,
+			id: 431,
+			timestamp: 359,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8333920240402222,
 			bbox: {
 				x1: 2313,
@@ -6908,11 +9059,16 @@ export const detections = {
 				center_x: 2411,
 				center_y: 846,
 			},
+			coordinates: {
+				lat: 52.227072,
+				lon: 21.009431,
+			},
 		},
 		{
-			timestamp: 359.0,
+			id: 432,
+			timestamp: 359,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6871217489242554,
 			bbox: {
 				x1: 2703,
@@ -6924,11 +9080,16 @@ export const detections = {
 				center_x: 2740,
 				center_y: 852,
 			},
+			coordinates: {
+				lat: 52.227109,
+				lon: 21.00953,
+			},
 		},
 		{
-			timestamp: 360.0,
+			id: 433,
+			timestamp: 360,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8689056634902954,
 			bbox: {
 				x1: 2270,
@@ -6940,11 +9101,16 @@ export const detections = {
 				center_x: 2375,
 				center_y: 844,
 			},
+			coordinates: {
+				lat: 52.227187,
+				lon: 21.009377,
+			},
 		},
 		{
-			timestamp: 360.0,
+			id: 434,
+			timestamp: 360,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7117591500282288,
 			bbox: {
 				x1: 2660,
@@ -6956,9 +9122,14 @@ export const detections = {
 				center_x: 2701,
 				center_y: 854,
 			},
+			coordinates: {
+				lat: 52.227296,
+				lon: 21.009281,
+			},
 		},
 		{
-			timestamp: 360.0,
+			id: 435,
+			timestamp: 360,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.3284221589565277,
@@ -6972,11 +9143,16 @@ export const detections = {
 				center_x: 2118,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227385,
+				lon: 21.00933,
+			},
 		},
 		{
-			timestamp: 361.0,
+			id: 436,
+			timestamp: 361,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8458856344223022,
 			bbox: {
 				x1: 2176,
@@ -6988,11 +9164,16 @@ export const detections = {
 				center_x: 2274,
 				center_y: 848,
 			},
+			coordinates: {
+				lat: 52.227367,
+				lon: 21.009422,
+			},
 		},
 		{
-			timestamp: 361.0,
+			id: 437,
+			timestamp: 361,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.713426947593689,
 			bbox: {
 				x1: 2597,
@@ -7004,11 +9185,16 @@ export const detections = {
 				center_x: 2634,
 				center_y: 854,
 			},
+			coordinates: {
+				lat: 52.227441,
+				lon: 21.009339,
+			},
 		},
 		{
-			timestamp: 361.0,
+			id: 438,
+			timestamp: 361,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6591030955314636,
 			bbox: {
 				x1: 1866,
@@ -7020,11 +9206,16 @@ export const detections = {
 				center_x: 1914,
 				center_y: 892,
 			},
+			coordinates: {
+				lat: 52.227543,
+				lon: 21.00943,
+			},
 		},
 		{
-			timestamp: 362.0,
+			id: 439,
+			timestamp: 362,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8641061186790466,
 			bbox: {
 				x1: 2041,
@@ -7036,11 +9227,16 @@ export const detections = {
 				center_x: 2163,
 				center_y: 851,
 			},
+			coordinates: {
+				lat: 52.227478,
+				lon: 21.009562,
+			},
 		},
 		{
-			timestamp: 362.0,
+			id: 440,
+			timestamp: 362,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6679413318634033,
 			bbox: {
 				x1: 2508,
@@ -7052,11 +9248,16 @@ export const detections = {
 				center_x: 2554,
 				center_y: 871,
 			},
+			coordinates: {
+				lat: 52.227547,
+				lon: 21.009724,
+			},
 		},
 		{
-			timestamp: 363.0,
+			id: 441,
+			timestamp: 363,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8169233202934265,
 			bbox: {
 				x1: 1923,
@@ -7068,11 +9269,16 @@ export const detections = {
 				center_x: 2028,
 				center_y: 843,
 			},
+			coordinates: {
+				lat: 52.227484,
+				lon: 21.009844,
+			},
 		},
 		{
-			timestamp: 363.0,
+			id: 442,
+			timestamp: 363,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7028824687004089,
 			bbox: {
 				x1: 2409,
@@ -7084,11 +9290,16 @@ export const detections = {
 				center_x: 2453,
 				center_y: 873,
 			},
+			coordinates: {
+				lat: 52.227456,
+				lon: 21.009699,
+			},
 		},
 		{
-			timestamp: 364.0,
+			id: 443,
+			timestamp: 364,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7896192073822021,
 			bbox: {
 				x1: 2314,
@@ -7100,11 +9311,16 @@ export const detections = {
 				center_x: 2360,
 				center_y: 881,
 			},
+			coordinates: {
+				lat: 52.227323,
+				lon: 21.0097,
+			},
 		},
 		{
-			timestamp: 364.0,
+			id: 444,
+			timestamp: 364,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7367714047431946,
 			bbox: {
 				x1: 1708,
@@ -7116,9 +9332,14 @@ export const detections = {
 				center_x: 1828,
 				center_y: 884,
 			},
+			coordinates: {
+				lat: 52.227209,
+				lon: 21.009671,
+			},
 		},
 		{
-			timestamp: 364.0,
+			id: 445,
+			timestamp: 364,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6042114496231079,
@@ -7132,11 +9353,16 @@ export const detections = {
 				center_x: 2126,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227097,
+				lon: 21.009794,
+			},
 		},
 		{
-			timestamp: 365.0,
+			id: 446,
+			timestamp: 365,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8243860006332397,
 			bbox: {
 				x1: 2225,
@@ -7148,11 +9374,16 @@ export const detections = {
 				center_x: 2275,
 				center_y: 890,
 			},
+			coordinates: {
+				lat: 52.227205,
+				lon: 21.009685,
+			},
 		},
 		{
-			timestamp: 365.0,
+			id: 447,
+			timestamp: 365,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5654229521751404,
 			bbox: {
 				x1: 1473,
@@ -7164,11 +9395,16 @@ export const detections = {
 				center_x: 1645,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.2273,
+				lon: 21.00961,
+			},
 		},
 		{
-			timestamp: 366.0,
+			id: 448,
+			timestamp: 366,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8602601289749146,
 			bbox: {
 				x1: 1218,
@@ -7180,11 +9416,16 @@ export const detections = {
 				center_x: 1370,
 				center_y: 872,
 			},
+			coordinates: {
+				lat: 52.22718,
+				lon: 21.009656,
+			},
 		},
 		{
-			timestamp: 366.0,
+			id: 449,
+			timestamp: 366,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8317211270332336,
 			bbox: {
 				x1: 2140,
@@ -7196,9 +9437,14 @@ export const detections = {
 				center_x: 2193,
 				center_y: 895,
 			},
+			coordinates: {
+				lat: 52.227217,
+				lon: 21.00949,
+			},
 		},
 		{
-			timestamp: 366.0,
+			id: 450,
+			timestamp: 366,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.4699321687221527,
@@ -7212,11 +9458,16 @@ export const detections = {
 				center_x: 1574,
 				center_y: 889,
 			},
+			coordinates: {
+				lat: 52.227179,
+				lon: 21.009363,
+			},
 		},
 		{
-			timestamp: 367.0,
+			id: 451,
+			timestamp: 367,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.9109693169593811,
 			bbox: {
 				x1: 609,
@@ -7228,11 +9479,16 @@ export const detections = {
 				center_x: 893,
 				center_y: 894,
 			},
+			coordinates: {
+				lat: 52.227084,
+				lon: 21.009369,
+			},
 		},
 		{
-			timestamp: 367.0,
+			id: 452,
+			timestamp: 367,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8531524538993835,
 			bbox: {
 				x1: 2040,
@@ -7244,11 +9500,16 @@ export const detections = {
 				center_x: 2104,
 				center_y: 888,
 			},
+			coordinates: {
+				lat: 52.227149,
+				lon: 21.009297,
+			},
 		},
 		{
-			timestamp: 368.0,
+			id: 453,
+			timestamp: 368,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.9193655848503113,
 			bbox: {
 				x1: 322,
@@ -7260,11 +9521,16 @@ export const detections = {
 				center_x: 526,
 				center_y: 878,
 			},
+			coordinates: {
+				lat: 52.22726,
+				lon: 21.009293,
+			},
 		},
 		{
-			timestamp: 368.0,
+			id: 454,
+			timestamp: 368,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.868777871131897,
 			bbox: {
 				x1: 1933,
@@ -7276,11 +9542,16 @@ export const detections = {
 				center_x: 1991,
 				center_y: 883,
 			},
+			coordinates: {
+				lat: 52.227359,
+				lon: 21.009185,
+			},
 		},
 		{
-			timestamp: 368.0,
+			id: 455,
+			timestamp: 368,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5087628960609436,
 			bbox: {
 				x1: 1231,
@@ -7292,9 +9563,14 @@ export const detections = {
 				center_x: 1302,
 				center_y: 897,
 			},
+			coordinates: {
+				lat: 52.227444,
+				lon: 21.009299,
+			},
 		},
 		{
-			timestamp: 368.0,
+			id: 456,
+			timestamp: 368,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.4475753605365753,
@@ -7308,9 +9584,14 @@ export const detections = {
 				center_x: 1304,
 				center_y: 895,
 			},
+			coordinates: {
+				lat: 52.227365,
+				lon: 21.009244,
+			},
 		},
 		{
-			timestamp: 368.0,
+			id: 457,
+			timestamp: 368,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.4011284410953522,
@@ -7324,11 +9605,16 @@ export const detections = {
 				center_x: 2157,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.227253,
+				lon: 21.009137,
+			},
 		},
 		{
-			timestamp: 369.0,
+			id: 458,
+			timestamp: 369,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.914435625076294,
 			bbox: {
 				x1: 366,
@@ -7340,11 +9626,16 @@ export const detections = {
 				center_x: 564,
 				center_y: 872,
 			},
+			coordinates: {
+				lat: 52.227163,
+				lon: 21.009045,
+			},
 		},
 		{
-			timestamp: 369.0,
+			id: 459,
+			timestamp: 369,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8578952550888062,
 			bbox: {
 				x1: 1826,
@@ -7356,9 +9647,14 @@ export const detections = {
 				center_x: 1886,
 				center_y: 877,
 			},
+			coordinates: {
+				lat: 52.22722,
+				lon: 21.008883,
+			},
 		},
 		{
-			timestamp: 369.0,
+			id: 460,
+			timestamp: 369,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6503575444221497,
@@ -7372,9 +9668,14 @@ export const detections = {
 				center_x: 2132,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227333,
+				lon: 21.008884,
+			},
 		},
 		{
-			timestamp: 369.0,
+			id: 461,
+			timestamp: 369,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6170856952667236,
@@ -7388,11 +9689,16 @@ export const detections = {
 				center_x: 1118,
 				center_y: 912,
 			},
+			coordinates: {
+				lat: 52.227339,
+				lon: 21.009047,
+			},
 		},
 		{
-			timestamp: 370.0,
+			id: 462,
+			timestamp: 370,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.9018884897232056,
 			bbox: {
 				x1: 729,
@@ -7404,11 +9710,16 @@ export const detections = {
 				center_x: 877,
 				center_y: 888,
 			},
+			coordinates: {
+				lat: 52.227284,
+				lon: 21.008972,
+			},
 		},
 		{
-			timestamp: 370.0,
+			id: 463,
+			timestamp: 370,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8738677501678467,
 			bbox: {
 				x1: 1700,
@@ -7420,9 +9731,14 @@ export const detections = {
 				center_x: 1775,
 				center_y: 882,
 			},
+			coordinates: {
+				lat: 52.227398,
+				lon: 21.00904,
+			},
 		},
 		{
-			timestamp: 370.0,
+			id: 464,
+			timestamp: 370,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6985339522361755,
@@ -7436,11 +9752,16 @@ export const detections = {
 				center_x: 2129,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.227264,
+				lon: 21.009153,
+			},
 		},
 		{
-			timestamp: 371.0,
+			id: 465,
+			timestamp: 371,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8887421488761902,
 			bbox: {
 				x1: 1582,
@@ -7452,11 +9773,16 @@ export const detections = {
 				center_x: 1672,
 				center_y: 884,
 			},
+			coordinates: {
+				lat: 52.227203,
+				lon: 21.009043,
+			},
 		},
 		{
-			timestamp: 371.0,
+			id: 466,
+			timestamp: 371,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8549498319625854,
 			bbox: {
 				x1: 989,
@@ -7468,9 +9794,14 @@ export const detections = {
 				center_x: 1127,
 				center_y: 889,
 			},
+			coordinates: {
+				lat: 52.227054,
+				lon: 21.008946,
+			},
 		},
 		{
-			timestamp: 371.0,
+			id: 467,
+			timestamp: 371,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5673457384109497,
@@ -7484,11 +9815,16 @@ export const detections = {
 				center_x: 2128,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.226907,
+				lon: 21.00892,
+			},
 		},
 		{
-			timestamp: 371.0,
+			id: 468,
+			timestamp: 371,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.478273868560791,
 			bbox: {
 				x1: 519,
@@ -7500,11 +9836,16 @@ export const detections = {
 				center_x: 624,
 				center_y: 931,
 			},
+			coordinates: {
+				lat: 52.226817,
+				lon: 21.008941,
+			},
 		},
 		{
-			timestamp: 372.0,
+			id: 469,
+			timestamp: 372,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8852289319038391,
 			bbox: {
 				x1: 1530,
@@ -7516,11 +9857,16 @@ export const detections = {
 				center_x: 1624,
 				center_y: 890,
 			},
+			coordinates: {
+				lat: 52.226771,
+				lon: 21.009074,
+			},
 		},
 		{
-			timestamp: 372.0,
+			id: 470,
+			timestamp: 372,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8179076313972473,
 			bbox: {
 				x1: 1126,
@@ -7532,9 +9878,14 @@ export const detections = {
 				center_x: 1249,
 				center_y: 880,
 			},
+			coordinates: {
+				lat: 52.2267,
+				lon: 21.009209,
+			},
 		},
 		{
-			timestamp: 372.0,
+			id: 471,
+			timestamp: 372,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.37715402245521545,
@@ -7548,9 +9899,14 @@ export const detections = {
 				center_x: 2128,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226822,
+				lon: 21.009253,
+			},
 		},
 		{
-			timestamp: 372.0,
+			id: 472,
+			timestamp: 372,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.36083221435546875,
@@ -7564,9 +9920,14 @@ export const detections = {
 				center_x: 418,
 				center_y: 919,
 			},
+			coordinates: {
+				lat: 52.226864,
+				lon: 21.009151,
+			},
 		},
 		{
-			timestamp: 372.0,
+			id: 473,
+			timestamp: 372,
 			class_id: 4,
 			class_name: "weapon",
 			confidence: 0.35032761096954346,
@@ -7580,11 +9941,16 @@ export const detections = {
 				center_x: 413,
 				center_y: 805,
 			},
+			coordinates: {
+				lat: 52.226757,
+				lon: 21.009027,
+			},
 		},
 		{
-			timestamp: 373.0,
+			id: 474,
+			timestamp: 373,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8453089594841003,
 			bbox: {
 				x1: 1181,
@@ -7596,11 +9962,16 @@ export const detections = {
 				center_x: 1287,
 				center_y: 886,
 			},
+			coordinates: {
+				lat: 52.226742,
+				lon: 21.009199,
+			},
 		},
 		{
-			timestamp: 373.0,
+			id: 475,
+			timestamp: 373,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8391150236129761,
 			bbox: {
 				x1: 1479,
@@ -7612,9 +9983,14 @@ export const detections = {
 				center_x: 1578,
 				center_y: 910,
 			},
+			coordinates: {
+				lat: 52.226585,
+				lon: 21.009273,
+			},
 		},
 		{
-			timestamp: 373.0,
+			id: 476,
+			timestamp: 373,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.647828221321106,
@@ -7628,9 +10004,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.226679,
+				lon: 21.009322,
+			},
 		},
 		{
-			timestamp: 373.0,
+			id: 477,
+			timestamp: 373,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6477330327033997,
@@ -7644,11 +10025,16 @@ export const detections = {
 				center_x: 293,
 				center_y: 905,
 			},
+			coordinates: {
+				lat: 52.226511,
+				lon: 21.009299,
+			},
 		},
 		{
-			timestamp: 374.0,
+			id: 478,
+			timestamp: 374,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.9086586833000183,
 			bbox: {
 				x1: 1213,
@@ -7660,11 +10046,16 @@ export const detections = {
 				center_x: 1296,
 				center_y: 880,
 			},
+			coordinates: {
+				lat: 52.226589,
+				lon: 21.009447,
+			},
 		},
 		{
-			timestamp: 374.0,
+			id: 479,
+			timestamp: 374,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8293607234954834,
 			bbox: {
 				x1: 1360,
@@ -7676,9 +10067,14 @@ export const detections = {
 				center_x: 1458,
 				center_y: 908,
 			},
+			coordinates: {
+				lat: 52.226516,
+				lon: 21.009521,
+			},
 		},
 		{
-			timestamp: 374.0,
+			id: 480,
+			timestamp: 374,
 			class_id: 4,
 			class_name: "weapon",
 			confidence: 0.6799117922782898,
@@ -7692,9 +10088,14 @@ export const detections = {
 				center_x: 465,
 				center_y: 697,
 			},
+			coordinates: {
+				lat: 52.226469,
+				lon: 21.009362,
+			},
 		},
 		{
-			timestamp: 374.0,
+			id: 481,
+			timestamp: 374,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5480822920799255,
@@ -7708,9 +10109,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.226489,
+				lon: 21.009257,
+			},
 		},
 		{
-			timestamp: 374.0,
+			id: 482,
+			timestamp: 374,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.27254951000213623,
@@ -7724,11 +10130,16 @@ export const detections = {
 				center_x: 402,
 				center_y: 892,
 			},
+			coordinates: {
+				lat: 52.226626,
+				lon: 21.009291,
+			},
 		},
 		{
-			timestamp: 375.0,
+			id: 483,
+			timestamp: 375,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8418554663658142,
 			bbox: {
 				x1: 1068,
@@ -7740,9 +10151,14 @@ export const detections = {
 				center_x: 1160,
 				center_y: 919,
 			},
+			coordinates: {
+				lat: 52.226549,
+				lon: 21.009339,
+			},
 		},
 		{
-			timestamp: 375.0,
+			id: 484,
+			timestamp: 375,
 			class_id: 4,
 			class_name: "weapon",
 			confidence: 0.8056861162185669,
@@ -7756,11 +10172,16 @@ export const detections = {
 				center_x: 715,
 				center_y: 723,
 			},
+			coordinates: {
+				lat: 52.226401,
+				lon: 21.009272,
+			},
 		},
 		{
-			timestamp: 375.0,
+			id: 485,
+			timestamp: 375,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7663453817367554,
 			bbox: {
 				x1: 1198,
@@ -7772,9 +10193,14 @@ export const detections = {
 				center_x: 1266,
 				center_y: 873,
 			},
+			coordinates: {
+				lat: 52.226416,
+				lon: 21.009168,
+			},
 		},
 		{
-			timestamp: 375.0,
+			id: 486,
+			timestamp: 375,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.652677595615387,
@@ -7788,9 +10214,14 @@ export const detections = {
 				center_x: 2128,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226556,
+				lon: 21.009225,
+			},
 		},
 		{
-			timestamp: 375.0,
+			id: 487,
+			timestamp: 375,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.4527255594730377,
@@ -7804,11 +10235,16 @@ export const detections = {
 				center_x: 595,
 				center_y: 892,
 			},
+			coordinates: {
+				lat: 52.226571,
+				lon: 21.009047,
+			},
 		},
 		{
-			timestamp: 376.0,
+			id: 488,
+			timestamp: 376,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8028038144111633,
 			bbox: {
 				x1: 561,
@@ -7820,9 +10256,14 @@ export const detections = {
 				center_x: 749,
 				center_y: 928,
 			},
+			coordinates: {
+				lat: 52.226629,
+				lon: 21.009131,
+			},
 		},
 		{
-			timestamp: 376.0,
+			id: 489,
+			timestamp: 376,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7435092926025391,
@@ -7836,9 +10277,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.226739,
+				lon: 21.009113,
+			},
 		},
 		{
-			timestamp: 376.0,
+			id: 490,
+			timestamp: 376,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.6935686469078064,
@@ -7852,11 +10298,16 @@ export const detections = {
 				center_x: 1119,
 				center_y: 784,
 			},
+			coordinates: {
+				lat: 52.226799,
+				lon: 21.009184,
+			},
 		},
 		{
-			timestamp: 376.0,
+			id: 491,
+			timestamp: 376,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5357092618942261,
 			bbox: {
 				x1: 1249,
@@ -7868,11 +10319,16 @@ export const detections = {
 				center_x: 1333,
 				center_y: 888,
 			},
+			coordinates: {
+				lat: 52.226872,
+				lon: 21.009238,
+			},
 		},
 		{
-			timestamp: 377.0,
+			id: 492,
+			timestamp: 377,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8933159112930298,
 			bbox: {
 				x1: 0,
@@ -7884,9 +10340,14 @@ export const detections = {
 				center_x: 175,
 				center_y: 915,
 			},
+			coordinates: {
+				lat: 52.226761,
+				lon: 21.009263,
+			},
 		},
 		{
-			timestamp: 377.0,
+			id: 493,
+			timestamp: 377,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.8461077213287354,
@@ -7900,9 +10361,14 @@ export const detections = {
 				center_x: 1832,
 				center_y: 819,
 			},
+			coordinates: {
+				lat: 52.226833,
+				lon: 21.00932,
+			},
 		},
 		{
-			timestamp: 377.0,
+			id: 494,
+			timestamp: 377,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7438384294509888,
@@ -7916,11 +10382,16 @@ export const detections = {
 				center_x: 2134,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.226692,
+				lon: 21.009377,
+			},
 		},
 		{
-			timestamp: 377.0,
+			id: 495,
+			timestamp: 377,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7273979187011719,
 			bbox: {
 				x1: 1389,
@@ -7932,9 +10403,14 @@ export const detections = {
 				center_x: 1456,
 				center_y: 871,
 			},
+			coordinates: {
+				lat: 52.226762,
+				lon: 21.009217,
+			},
 		},
 		{
-			timestamp: 378.0,
+			id: 496,
+			timestamp: 378,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.846343994140625,
@@ -7948,11 +10424,16 @@ export const detections = {
 				center_x: 2439,
 				center_y: 829,
 			},
+			coordinates: {
+				lat: 52.226827,
+				lon: 21.009134,
+			},
 		},
 		{
-			timestamp: 378.0,
+			id: 497,
+			timestamp: 378,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6847718954086304,
 			bbox: {
 				x1: 1548,
@@ -7964,9 +10445,14 @@ export const detections = {
 				center_x: 1610,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.226737,
+				lon: 21.009127,
+			},
 		},
 		{
-			timestamp: 378.0,
+			id: 498,
+			timestamp: 378,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.41490691900253296,
@@ -7980,9 +10466,14 @@ export const detections = {
 				center_x: 2131,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.226729,
+				lon: 21.009227,
+			},
 		},
 		{
-			timestamp: 379.0,
+			id: 499,
+			timestamp: 379,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.9011775851249695,
@@ -7996,11 +10487,16 @@ export const detections = {
 				center_x: 2511,
 				center_y: 826,
 			},
+			coordinates: {
+				lat: 52.22667,
+				lon: 21.009304,
+			},
 		},
 		{
-			timestamp: 379.0,
+			id: 500,
+			timestamp: 379,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.2908230721950531,
 			bbox: {
 				x1: 1678,
@@ -8012,9 +10508,14 @@ export const detections = {
 				center_x: 1747,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.226676,
+				lon: 21.009442,
+			},
 		},
 		{
-			timestamp: 380.0,
+			id: 501,
+			timestamp: 380,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.8730735778808594,
@@ -8028,9 +10529,14 @@ export const detections = {
 				center_x: 2449,
 				center_y: 809,
 			},
+			coordinates: {
+				lat: 52.226538,
+				lon: 21.009441,
+			},
 		},
 		{
-			timestamp: 381.0,
+			id: 502,
+			timestamp: 381,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.8034751415252686,
@@ -8044,11 +10550,16 @@ export const detections = {
 				center_x: 2373,
 				center_y: 859,
 			},
+			coordinates: {
+				lat: 52.226715,
+				lon: 21.009464,
+			},
 		},
 		{
-			timestamp: 381.0,
+			id: 503,
+			timestamp: 381,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7853237390518188,
 			bbox: {
 				x1: 1676,
@@ -8060,9 +10571,14 @@ export const detections = {
 				center_x: 1751,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.22664,
+				lon: 21.009358,
+			},
 		},
 		{
-			timestamp: 382.0,
+			id: 504,
+			timestamp: 382,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.8263233304023743,
@@ -8076,11 +10592,16 @@ export const detections = {
 				center_x: 2343,
 				center_y: 830,
 			},
+			coordinates: {
+				lat: 52.226776,
+				lon: 21.009327,
+			},
 		},
 		{
-			timestamp: 382.0,
+			id: 505,
+			timestamp: 382,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.630429208278656,
 			bbox: {
 				x1: 1625,
@@ -8092,9 +10613,14 @@ export const detections = {
 				center_x: 1708,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226787,
+				lon: 21.009193,
+			},
 		},
 		{
-			timestamp: 383.0,
+			id: 506,
+			timestamp: 383,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.763858437538147,
@@ -8108,11 +10634,16 @@ export const detections = {
 				center_x: 2335,
 				center_y: 842,
 			},
+			coordinates: {
+				lat: 52.226885,
+				lon: 21.009177,
+			},
 		},
 		{
-			timestamp: 383.0,
+			id: 507,
+			timestamp: 383,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6448364853858948,
 			bbox: {
 				x1: 1581,
@@ -8124,9 +10655,14 @@ export const detections = {
 				center_x: 1665,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226748,
+				lon: 21.009091,
+			},
 		},
 		{
-			timestamp: 384.0,
+			id: 508,
+			timestamp: 384,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7547390460968018,
@@ -8140,11 +10676,16 @@ export const detections = {
 				center_x: 2332,
 				center_y: 848,
 			},
+			coordinates: {
+				lat: 52.226629,
+				lon: 21.009165,
+			},
 		},
 		{
-			timestamp: 384.0,
+			id: 509,
+			timestamp: 384,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.4544019103050232,
 			bbox: {
 				x1: 1625,
@@ -8156,9 +10697,14 @@ export const detections = {
 				center_x: 1701,
 				center_y: 868,
 			},
+			coordinates: {
+				lat: 52.22656,
+				lon: 21.009274,
+			},
 		},
 		{
-			timestamp: 384.0,
+			id: 510,
+			timestamp: 384,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.2990190386772156,
@@ -8172,9 +10718,14 @@ export const detections = {
 				center_x: 1701,
 				center_y: 868,
 			},
+			coordinates: {
+				lat: 52.226453,
+				lon: 21.009353,
+			},
 		},
 		{
-			timestamp: 385.0,
+			id: 511,
+			timestamp: 385,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7304669618606567,
@@ -8188,11 +10739,16 @@ export const detections = {
 				center_x: 2272,
 				center_y: 843,
 			},
+			coordinates: {
+				lat: 52.226397,
+				lon: 21.009214,
+			},
 		},
 		{
-			timestamp: 385.0,
+			id: 512,
+			timestamp: 385,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.47195544838905334,
 			bbox: {
 				x1: 1712,
@@ -8204,11 +10760,16 @@ export const detections = {
 				center_x: 1787,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.226311,
+				lon: 21.009183,
+			},
 		},
 		{
-			timestamp: 386.0,
+			id: 513,
+			timestamp: 386,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8906938433647156,
 			bbox: {
 				x1: 1784,
@@ -8220,9 +10781,14 @@ export const detections = {
 				center_x: 1860,
 				center_y: 873,
 			},
+			coordinates: {
+				lat: 52.226223,
+				lon: 21.009097,
+			},
 		},
 		{
-			timestamp: 386.0,
+			id: 514,
+			timestamp: 386,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7530357241630554,
@@ -8236,11 +10802,16 @@ export const detections = {
 				center_x: 2223,
 				center_y: 854,
 			},
+			coordinates: {
+				lat: 52.226167,
+				lon: 21.009253,
+			},
 		},
 		{
-			timestamp: 386.0,
+			id: 515,
+			timestamp: 386,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.604575514793396,
 			bbox: {
 				x1: 0,
@@ -8252,11 +10823,16 @@ export const detections = {
 				center_x: 148,
 				center_y: 1242,
 			},
+			coordinates: {
+				lat: 52.22614,
+				lon: 21.009121,
+			},
 		},
 		{
-			timestamp: 387.0,
+			id: 516,
+			timestamp: 387,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8989897966384888,
 			bbox: {
 				x1: 289,
@@ -8268,11 +10844,16 @@ export const detections = {
 				center_x: 546,
 				center_y: 936,
 			},
+			coordinates: {
+				lat: 52.226044,
+				lon: 21.00913,
+			},
 		},
 		{
-			timestamp: 387.0,
+			id: 517,
+			timestamp: 387,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.860722541809082,
 			bbox: {
 				x1: 1869,
@@ -8284,9 +10865,14 @@ export const detections = {
 				center_x: 1940,
 				center_y: 866,
 			},
+			coordinates: {
+				lat: 52.226124,
+				lon: 21.009281,
+			},
 		},
 		{
-			timestamp: 387.0,
+			id: 518,
+			timestamp: 387,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.7286419868469238,
@@ -8300,11 +10886,16 @@ export const detections = {
 				center_x: 2226,
 				center_y: 840,
 			},
+			coordinates: {
+				lat: 52.226213,
+				lon: 21.009213,
+			},
 		},
 		{
-			timestamp: 388.0,
+			id: 519,
+			timestamp: 388,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8927422761917114,
 			bbox: {
 				x1: 863,
@@ -8316,11 +10907,16 @@ export const detections = {
 				center_x: 1035,
 				center_y: 936,
 			},
+			coordinates: {
+				lat: 52.22628,
+				lon: 21.009309,
+			},
 		},
 		{
-			timestamp: 388.0,
+			id: 520,
+			timestamp: 388,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.823458731174469,
 			bbox: {
 				x1: 1966,
@@ -8332,11 +10928,16 @@ export const detections = {
 				center_x: 2034,
 				center_y: 868,
 			},
+			coordinates: {
+				lat: 52.226153,
+				lon: 21.009275,
+			},
 		},
 		{
-			timestamp: 388.0,
+			id: 521,
+			timestamp: 388,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7284228205680847,
 			bbox: {
 				x1: 2142,
@@ -8348,9 +10949,14 @@ export const detections = {
 				center_x: 2219,
 				center_y: 857,
 			},
+			coordinates: {
+				lat: 52.226185,
+				lon: 21.009156,
+			},
 		},
 		{
-			timestamp: 388.0,
+			id: 522,
+			timestamp: 388,
 			class_id: 3,
 			class_name: "soldier",
 			confidence: 0.39644140005111694,
@@ -8364,11 +10970,16 @@ export const detections = {
 				center_x: 2219,
 				center_y: 855,
 			},
+			coordinates: {
+				lat: 52.226279,
+				lon: 21.009004,
+			},
 		},
 		{
-			timestamp: 389.0,
+			id: 523,
+			timestamp: 389,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8950006365776062,
 			bbox: {
 				x1: 1199,
@@ -8380,11 +10991,16 @@ export const detections = {
 				center_x: 1345,
 				center_y: 930,
 			},
+			coordinates: {
+				lat: 52.226374,
+				lon: 21.009022,
+			},
 		},
 		{
-			timestamp: 389.0,
+			id: 524,
+			timestamp: 389,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6065364480018616,
 			bbox: {
 				x1: 2063,
@@ -8396,11 +11012,16 @@ export const detections = {
 				center_x: 2131,
 				center_y: 851,
 			},
+			coordinates: {
+				lat: 52.226236,
+				lon: 21.009024,
+			},
 		},
 		{
-			timestamp: 390.0,
+			id: 525,
+			timestamp: 390,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8720232248306274,
 			bbox: {
 				x1: 1441,
@@ -8412,11 +11033,16 @@ export const detections = {
 				center_x: 1566,
 				center_y: 919,
 			},
+			coordinates: {
+				lat: 52.226375,
+				lon: 21.009062,
+			},
 		},
 		{
-			timestamp: 390.0,
+			id: 526,
+			timestamp: 390,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8439391851425171,
 			bbox: {
 				x1: 2146,
@@ -8428,11 +11054,16 @@ export const detections = {
 				center_x: 2206,
 				center_y: 876,
 			},
+			coordinates: {
+				lat: 52.226253,
+				lon: 21.009019,
+			},
 		},
 		{
-			timestamp: 390.0,
+			id: 527,
+			timestamp: 390,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7564942836761475,
 			bbox: {
 				x1: 1940,
@@ -8444,11 +11075,16 @@ export const detections = {
 				center_x: 1998,
 				center_y: 876,
 			},
+			coordinates: {
+				lat: 52.226312,
+				lon: 21.008925,
+			},
 		},
 		{
-			timestamp: 391.0,
+			id: 528,
+			timestamp: 391,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.826206386089325,
 			bbox: {
 				x1: 2224,
@@ -8460,11 +11096,16 @@ export const detections = {
 				center_x: 2279,
 				center_y: 883,
 			},
+			coordinates: {
+				lat: 52.226397,
+				lon: 21.00888,
+			},
 		},
 		{
-			timestamp: 391.0,
+			id: 529,
+			timestamp: 391,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5608113408088684,
 			bbox: {
 				x1: 1854,
@@ -8476,11 +11117,16 @@ export const detections = {
 				center_x: 1907,
 				center_y: 874,
 			},
+			coordinates: {
+				lat: 52.226313,
+				lon: 21.008758,
+			},
 		},
 		{
-			timestamp: 391.0,
+			id: 530,
+			timestamp: 391,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.5582594871520996,
 			bbox: {
 				x1: 1605,
@@ -8492,11 +11138,16 @@ export const detections = {
 				center_x: 1719,
 				center_y: 911,
 			},
+			coordinates: {
+				lat: 52.226207,
+				lon: 21.00862,
+			},
 		},
 		{
-			timestamp: 392.0,
+			id: 531,
+			timestamp: 392,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.875621497631073,
 			bbox: {
 				x1: 1724,
@@ -8508,11 +11159,16 @@ export const detections = {
 				center_x: 1811,
 				center_y: 888,
 			},
+			coordinates: {
+				lat: 52.226306,
+				lon: 21.008637,
+			},
 		},
 		{
-			timestamp: 392.0,
+			id: 532,
+			timestamp: 392,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8306523561477661,
 			bbox: {
 				x1: 2275,
@@ -8524,9 +11180,14 @@ export const detections = {
 				center_x: 2328,
 				center_y: 880,
 			},
+			coordinates: {
+				lat: 52.22622,
+				lon: 21.008547,
+			},
 		},
 		{
-			timestamp: 392.0,
+			id: 533,
+			timestamp: 392,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.3379381000995636,
@@ -8540,11 +11201,16 @@ export const detections = {
 				center_x: 2124,
 				center_y: 867,
 			},
+			coordinates: {
+				lat: 52.22628,
+				lon: 21.008415,
+			},
 		},
 		{
-			timestamp: 393.0,
+			id: 534,
+			timestamp: 393,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8627893328666687,
 			bbox: {
 				x1: 1839,
@@ -8556,11 +11222,16 @@ export const detections = {
 				center_x: 1913,
 				center_y: 886,
 			},
+			coordinates: {
+				lat: 52.226451,
+				lon: 21.008439,
+			},
 		},
 		{
-			timestamp: 393.0,
+			id: 535,
+			timestamp: 393,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8201554417610168,
 			bbox: {
 				x1: 2305,
@@ -8572,11 +11243,16 @@ export const detections = {
 				center_x: 2354,
 				center_y: 874,
 			},
+			coordinates: {
+				lat: 52.226448,
+				lon: 21.008614,
+			},
 		},
 		{
-			timestamp: 394.0,
+			id: 536,
+			timestamp: 394,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8959501385688782,
 			bbox: {
 				x1: 1950,
@@ -8588,11 +11264,16 @@ export const detections = {
 				center_x: 2015,
 				center_y: 891,
 			},
+			coordinates: {
+				lat: 52.226315,
+				lon: 21.008641,
+			},
 		},
 		{
-			timestamp: 394.0,
+			id: 537,
+			timestamp: 394,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7952812314033508,
 			bbox: {
 				x1: 2309,
@@ -8604,11 +11285,16 @@ export const detections = {
 				center_x: 2353,
 				center_y: 881,
 			},
+			coordinates: {
+				lat: 52.226324,
+				lon: 21.008536,
+			},
 		},
 		{
-			timestamp: 395.0,
+			id: 538,
+			timestamp: 395,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.8745647072792053,
 			bbox: {
 				x1: 2032,
@@ -8620,11 +11306,16 @@ export const detections = {
 				center_x: 2094,
 				center_y: 887,
 			},
+			coordinates: {
+				lat: 52.226225,
+				lon: 21.008391,
+			},
 		},
 		{
-			timestamp: 395.0,
+			id: 539,
+			timestamp: 395,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7515566945075989,
 			bbox: {
 				x1: 2289,
@@ -8636,11 +11327,16 @@ export const detections = {
 				center_x: 2330,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.226247,
+				lon: 21.008504,
+			},
 		},
 		{
-			timestamp: 395.0,
+			id: 540,
+			timestamp: 395,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6304160952568054,
 			bbox: {
 				x1: 1864,
@@ -8652,11 +11348,16 @@ export const detections = {
 				center_x: 1906,
 				center_y: 889,
 			},
+			coordinates: {
+				lat: 52.226104,
+				lon: 21.008586,
+			},
 		},
 		{
-			timestamp: 396.0,
+			id: 541,
+			timestamp: 396,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.850924551486969,
 			bbox: {
 				x1: 2096,
@@ -8668,11 +11369,16 @@ export const detections = {
 				center_x: 2151,
 				center_y: 892,
 			},
+			coordinates: {
+				lat: 52.226207,
+				lon: 21.008536,
+			},
 		},
 		{
-			timestamp: 396.0,
+			id: 542,
+			timestamp: 396,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6665934324264526,
 			bbox: {
 				x1: 2262,
@@ -8684,11 +11390,16 @@ export const detections = {
 				center_x: 2293,
 				center_y: 883,
 			},
+			coordinates: {
+				lat: 52.226202,
+				lon: 21.008659,
+			},
 		},
 		{
-			timestamp: 396.0,
+			id: 543,
+			timestamp: 396,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.4110335111618042,
 			bbox: {
 				x1: 1889,
@@ -8700,11 +11411,16 @@ export const detections = {
 				center_x: 1926,
 				center_y: 886,
 			},
+			coordinates: {
+				lat: 52.226177,
+				lon: 21.008773,
+			},
 		},
 		{
-			timestamp: 397.0,
+			id: 544,
+			timestamp: 397,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7940959930419922,
 			bbox: {
 				x1: 2152,
@@ -8716,11 +11432,16 @@ export const detections = {
 				center_x: 2207,
 				center_y: 889,
 			},
+			coordinates: {
+				lat: 52.226049,
+				lon: 21.008842,
+			},
 		},
 		{
-			timestamp: 397.0,
+			id: 545,
+			timestamp: 397,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7310610413551331,
 			bbox: {
 				x1: 2265,
@@ -8732,11 +11453,16 @@ export const detections = {
 				center_x: 2304,
 				center_y: 880,
 			},
+			coordinates: {
+				lat: 52.22591,
+				lon: 21.008911,
+			},
 		},
 		{
-			timestamp: 398.0,
+			id: 546,
+			timestamp: 398,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7583325505256653,
 			bbox: {
 				x1: 2289,
@@ -8748,11 +11474,16 @@ export const detections = {
 				center_x: 2321,
 				center_y: 883,
 			},
+			coordinates: {
+				lat: 52.225808,
+				lon: 21.008968,
+			},
 		},
 		{
-			timestamp: 398.0,
+			id: 547,
+			timestamp: 398,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7261620759963989,
 			bbox: {
 				x1: 2219,
@@ -8764,11 +11495,16 @@ export const detections = {
 				center_x: 2263,
 				center_y: 883,
 			},
+			coordinates: {
+				lat: 52.225962,
+				lon: 21.009005,
+			},
 		},
 		{
-			timestamp: 399.0,
+			id: 548,
+			timestamp: 399,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7708579897880554,
 			bbox: {
 				x1: 2271,
@@ -8780,9 +11516,14 @@ export const detections = {
 				center_x: 2314,
 				center_y: 882,
 			},
+			coordinates: {
+				lat: 52.225935,
+				lon: 21.009182,
+			},
 		},
 		{
-			timestamp: 399.0,
+			id: 549,
+			timestamp: 399,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6279416084289551,
@@ -8796,11 +11537,16 @@ export const detections = {
 				center_x: 2121,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.225915,
+				lon: 21.009347,
+			},
 		},
 		{
-			timestamp: 400.0,
+			id: 550,
+			timestamp: 400,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7974744439125061,
 			bbox: {
 				x1: 2295,
@@ -8812,9 +11558,14 @@ export const detections = {
 				center_x: 2335,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.225982,
+				lon: 21.009435,
+			},
 		},
 		{
-			timestamp: 400.0,
+			id: 551,
+			timestamp: 400,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7229416966438293,
@@ -8828,11 +11579,16 @@ export const detections = {
 				center_x: 2130,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.225987,
+				lon: 21.009316,
+			},
 		},
 		{
-			timestamp: 401.0,
+			id: 552,
+			timestamp: 401,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.7417622804641724,
 			bbox: {
 				x1: 2272,
@@ -8844,9 +11600,14 @@ export const detections = {
 				center_x: 2314,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.226106,
+				lon: 21.009214,
+			},
 		},
 		{
-			timestamp: 401.0,
+			id: 553,
+			timestamp: 401,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.45240384340286255,
@@ -8860,11 +11621,16 @@ export const detections = {
 				center_x: 2127,
 				center_y: 864,
 			},
+			coordinates: {
+				lat: 52.225956,
+				lon: 21.009248,
+			},
 		},
 		{
-			timestamp: 402.0,
+			id: 554,
+			timestamp: 402,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.700127363204956,
 			bbox: {
 				x1: 2269,
@@ -8876,9 +11642,14 @@ export const detections = {
 				center_x: 2306,
 				center_y: 885,
 			},
+			coordinates: {
+				lat: 52.225961,
+				lon: 21.009344,
+			},
 		},
 		{
-			timestamp: 402.0,
+			id: 555,
+			timestamp: 402,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5197511315345764,
@@ -8892,9 +11663,14 @@ export const detections = {
 				center_x: 2130,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.225842,
+				lon: 21.009361,
+			},
 		},
 		{
-			timestamp: 403.0,
+			id: 556,
+			timestamp: 403,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8019700050354004,
@@ -8908,11 +11684,16 @@ export const detections = {
 				center_x: 2137,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.225974,
+				lon: 21.009295,
+			},
 		},
 		{
-			timestamp: 403.0,
+			id: 557,
+			timestamp: 403,
 			class_id: 2,
-			class_name: "civilian",
+			class_name: "civillian",
 			confidence: 0.6263027787208557,
 			bbox: {
 				x1: 2266,
@@ -8924,9 +11705,14 @@ export const detections = {
 				center_x: 2296,
 				center_y: 879,
 			},
+			coordinates: {
+				lat: 52.226059,
+				lon: 21.009142,
+			},
 		},
 		{
-			timestamp: 404.0,
+			id: 558,
+			timestamp: 404,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8396884202957153,
@@ -8940,9 +11726,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 861,
 			},
+			coordinates: {
+				lat: 52.226134,
+				lon: 21.009003,
+			},
 		},
 		{
-			timestamp: 405.0,
+			id: 559,
+			timestamp: 405,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7981829047203064,
@@ -8956,9 +11747,14 @@ export const detections = {
 				center_x: 2126,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226277,
+				lon: 21.008991,
+			},
 		},
 		{
-			timestamp: 406.0,
+			id: 560,
+			timestamp: 406,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8316505551338196,
@@ -8972,9 +11768,14 @@ export const detections = {
 				center_x: 2128,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226448,
+				lon: 21.008987,
+			},
 		},
 		{
-			timestamp: 407.0,
+			id: 561,
+			timestamp: 407,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8280121088027954,
@@ -8988,9 +11789,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226541,
+				lon: 21.009059,
+			},
 		},
 		{
-			timestamp: 408.0,
+			id: 562,
+			timestamp: 408,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.786760151386261,
@@ -9004,9 +11810,14 @@ export const detections = {
 				center_x: 2127,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226637,
+				lon: 21.009098,
+			},
 		},
 		{
-			timestamp: 409.0,
+			id: 563,
+			timestamp: 409,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8040978312492371,
@@ -9020,9 +11831,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226767,
+				lon: 21.009126,
+			},
 		},
 		{
-			timestamp: 410.0,
+			id: 564,
+			timestamp: 410,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8129208087921143,
@@ -9036,9 +11852,14 @@ export const detections = {
 				center_x: 2127,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226941,
+				lon: 21.009119,
+			},
 		},
 		{
-			timestamp: 411.0,
+			id: 565,
+			timestamp: 411,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8082135915756226,
@@ -9052,9 +11873,14 @@ export const detections = {
 				center_x: 2129,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.226949,
+				lon: 21.009004,
+			},
 		},
 		{
-			timestamp: 412.0,
+			id: 566,
+			timestamp: 412,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8293781280517578,
@@ -9068,9 +11894,14 @@ export const detections = {
 				center_x: 2127,
 				center_y: 865,
 			},
+			coordinates: {
+				lat: 52.227012,
+				lon: 21.008852,
+			},
 		},
 		{
-			timestamp: 413.0,
+			id: 567,
+			timestamp: 413,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.842896580696106,
@@ -9084,9 +11915,14 @@ export const detections = {
 				center_x: 2094,
 				center_y: 863,
 			},
+			coordinates: {
+				lat: 52.227062,
+				lon: 21.009011,
+			},
 		},
 		{
-			timestamp: 414.0,
+			id: 568,
+			timestamp: 414,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8461009860038757,
@@ -9100,12 +11936,17 @@ export const detections = {
 				center_x: 2007,
 				center_y: 862,
 			},
+			coordinates: {
+				lat: 52.227176,
+				lon: 21.008986,
+			},
 		},
 		{
-			timestamp: 415.0,
+			id: 569,
+			timestamp: 415,
 			class_id: 1,
 			class_name: "vehicle",
-			confidence: 0.9164199829101562,
+			confidence: 0.916419982910156,
 			bbox: {
 				x1: 1575,
 				y1: 666,
@@ -9116,9 +11957,14 @@ export const detections = {
 				center_x: 1847,
 				center_y: 857,
 			},
+			coordinates: {
+				lat: 52.227249,
+				lon: 21.008881,
+			},
 		},
 		{
-			timestamp: 416.0,
+			id: 570,
+			timestamp: 416,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.9331141114234924,
@@ -9132,9 +11978,14 @@ export const detections = {
 				center_x: 1536,
 				center_y: 857,
 			},
+			coordinates: {
+				lat: 52.227366,
+				lon: 21.008758,
+			},
 		},
 		{
-			timestamp: 417.0,
+			id: 571,
+			timestamp: 417,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6629497408866882,
@@ -9147,6 +11998,10 @@ export const detections = {
 				height: 842,
 				center_x: 787,
 				center_y: 891,
+			},
+			coordinates: {
+				lat: 52.227445,
+				lon: 21.008612,
 			},
 		},
 	],
