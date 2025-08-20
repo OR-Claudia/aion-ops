@@ -21,6 +21,7 @@ export interface StorageData {
 	keyEvents: string;
 	missionDescription: string;
 	flightPath: string;
+	detections?: any[];
 }
 
 interface StorageItemProps {

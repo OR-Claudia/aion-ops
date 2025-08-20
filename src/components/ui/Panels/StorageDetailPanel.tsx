@@ -8,9 +8,13 @@ import VideoPlayer from "../VideoPlayer.tsx";
 interface StorageDetailPanelProps {
 	record: StorageData;
 	onClose: () => void;
+	detectionsOpen?: boolean;
+	setDetectionsOpen: (param: boolean) => void;
 }
 
 const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
+	detectionsOpen,
+	setDetectionsOpen,
 	record,
 	onClose,
 }) => {
@@ -35,8 +39,8 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 	};
 
 	const handleDetectionsDetailClick = () => {
-		console.log("View detections detail for record:", record.id);
-		// Implement detections detail viewing
+		console.log(detectionsOpen);
+		setDetectionsOpen(true);
 	};
 
 	return (

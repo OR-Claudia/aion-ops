@@ -12,12 +12,14 @@ import type {
 	FilterState,
 } from "../components/ui/FilterControls";
 import { cn } from "../lib/utils";
+import DetectionsModal from "../components/ui/Modals/DetectionsModal";
 
 const StoragePage: React.FC = () => {
 	const [filteredRecords, setFilteredRecords] = useState<StorageData[]>([]);
 	const [selectedRecord, setSelectedRecord] = useState<StorageData | null>(
 		null
 	);
+	const [detectionsOpen, setDetectionsOpen] = useState<boolean>(false);
 
 	// Filter configurations for the storage list
 	const filterConfigs: FilterConfig[] = [
@@ -64,6 +66,7 @@ const StoragePage: React.FC = () => {
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 			flightPath:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			detections: [],
 		},
 		{
 			id: "2",
@@ -325,11 +328,20 @@ const StoragePage: React.FC = () => {
 						{selectedRecord && (
 							<div className="flex-shrink-0 ml-[12px] mt-[16px]">
 								<StorageDetailPanel
+									detectionsOpen={detectionsOpen}
+									setDetectionsOpen={setDetectionsOpen}
 									record={selectedRecord}
 									onClose={handleCloseDetail}
 								/>
 							</div>
 						)}
+						{/* Detections Modal */}
+						{detectionsOpen ? (
+							<DetectionsModal
+								isOpen={detectionsOpen}
+								onClose={() => setDetectionsOpen(false)}
+							/>
+						) : null}
 					</div>
 				</div>
 			</div>
