@@ -91,7 +91,7 @@ const UAVListPage: React.FC = () => {
 		setSelectedUAV(null);
 	};
 
-	const baseClasses = "w-full  pt-[64px] mx-[10%]";
+	const baseClasses = "w-full pt-[64px] mx-[10%]";
 	const expandedClasses = "w-full pt-[64px]";
 
 	return (
@@ -105,7 +105,7 @@ const UAVListPage: React.FC = () => {
 				>
 					{/* Header and Filter Row */}
 					<div
-						className={cn("mb-[16px] z-30", {
+						className={cn("mb-4 z-30", {
 							["px-[10%]"]: selectedUAV,
 						})}
 					>
@@ -146,7 +146,7 @@ const UAVListPage: React.FC = () => {
 								<div
 									className={cn(
 										"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-y-6 sm:gap-x-5 gap-y-3 h-full items-center overflow-y-auto overflow-x-hidden pt-5 px-6 justify-center",
-										selectedUAV ? "!grid-cols-2" : ""
+										selectedUAV ? "lg:!grid-cols-2 !grid-cols-1" : ""
 									)}
 								>
 									{isLoading && (

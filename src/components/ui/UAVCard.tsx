@@ -63,12 +63,12 @@ const UAVCard: React.FC<UAVCardProps> = ({
 
 	return (
 		<div
-			className="w-[243px] h-[175px] relative cursor-pointer hover:scale-105 transition-transform duration-200"
+			className="w-[300px] h-[225px] relative cursor-pointer hover:scale-105 transition-transform duration-200"
 			onClick={() => onClick?.(uav)}
 		>
 			{/* Background border highlight */}
 			<div
-				className={cn("w-[243px] h-[175px] absolute left-0 top-0", {
+				className={cn("w-[300px] h-[225px] absolute left-0 top-0", {
 					["bg-[rgba(211,251,216,0.6)]"]: selected,
 				})}
 				style={{ borderRadius: "0px 4px 4px 4px" }}
@@ -76,13 +76,13 @@ const UAVCard: React.FC<UAVCardProps> = ({
 
 			{/* Main background */}
 			<div
-				className={`w-[239px] h-[162px] opacity-10 bg-app-text absolute left-[2px] top-[2px]`}
+				className={`w-[297px] h-[220px] opacity-10 bg-app-text absolute left-[2px] top-[2px]`}
 				style={{ borderRadius: "0px 4px 4px 4px" }}
 			/>
 
 			{/* UAV Image */}
 			<img
-				className="w-[239px] h-[132px] absolute left-[2px] top-[2px] object-cover"
+				className="w-[297px] h-[180px] absolute left-[2px] top-[2px] object-cover"
 				style={{ borderRadius: "0px 4px 0px 0px" }}
 				src={uav.image}
 				alt={uav.name}
@@ -90,7 +90,7 @@ const UAVCard: React.FC<UAVCardProps> = ({
 
 			{/* Image overlay gradient */}
 			<div
-				className="w-[239px] h-[131px] absolute left-[2px] top-[3px]"
+				className="w-[297px] h-[180px] absolute left-[2px] top-[3px]"
 				style={{
 					background:
 						"linear-gradient(179deg, rgba(102, 102, 102, 0.00) -20.07%, #1E1E1E 99.39%)",
@@ -100,36 +100,36 @@ const UAVCard: React.FC<UAVCardProps> = ({
 			/>
 
 			{/* UAV Details overlay on image */}
-			<div className="absolute left-[16px] top-[83px] w-[211px] h-[43px] flex flex-col gap-1]">
+			<div className="absolute left-[16px] top-[100px] w-[265px] h-[50px] flex flex-col gap-1]">
 				<div className="flex justify-between items-center">
-					<span className="text-app-text font-ubuntu text-[8px] font-medium">
+					<span className="text-app-text font-ubuntu text-xs font-medium">
 						Last contact
 					</span>
-					<span className="text-app-text font-ubuntu text-[8px] font-normal">
+					<span className="text-app-text font-ubuntu text-xs font-normal">
 						{uav.lastContact}
 					</span>
 				</div>
 				<div className="flex justify-between items-center">
-					<span className="text-app-text font-ubuntu text-[8px] font-medium">
+					<span className="text-app-text font-ubuntu text-xs font-medium">
 						Ready for flight
 					</span>
-					<span className="text-app-text font-ubuntu text-[8px] font-normal">
+					<span className="text-app-text font-ubuntu text-xs font-normal">
 						{uav.readyForFlight}
 					</span>
 				</div>
 				<div className="flex justify-between items-center">
-					<span className="text-app-text font-ubuntu text-[8px] font-medium">
+					<span className="text-app-text font-ubuntu text-xs font-medium">
 						Last known location
 					</span>
-					<span className="text-app-text font-ubuntu text-[8px] font-normal">
+					<span className="text-app-text font-ubuntu text-xs font-normal">
 						{uav.lastKnownLocation}
 					</span>
 				</div>
 				<div className="flex justify-between items-center">
-					<span className="text-app-text font-ubuntu text-[8px] font-medium">
+					<span className="text-app-text font-ubuntu text-xs font-medium">
 						Location
 					</span>
-					<span className="text-app-text font-ubuntu text-[8px] font-normal">
+					<span className="text-app-text font-ubuntu text-xs font-normal">
 						{uav.location}
 					</span>
 				</div>
@@ -137,7 +137,7 @@ const UAVCard: React.FC<UAVCardProps> = ({
 
 			{/* Bottom section */}
 			<div
-				className="w-[239px] h-[40px] absolute left-[2px] top-[133px]"
+				className="w-[297px] h-[55px] absolute left-[2px] top-[170px]"
 				style={{
 					borderRadius: "0px 0px 4px 4px",
 					backgroundColor: "#242B2C",
@@ -145,19 +145,19 @@ const UAVCard: React.FC<UAVCardProps> = ({
 			/>
 
 			{/* UAV Info and Status */}
-			<div className="absolute left-[16px] top-[137px] w-[211px] h-[32px] flex justify-between items-center">
+			<div className="absolute left-[16px] top-[180px] w-[265px] h-[40px] flex justify-between items-center">
 				<div className="flex flex-col justify-center items-start gap-0.5">
-					<span className="text-app-text overflow-hidden text-ellipsis whitespace-nowrap font-share-tech text-[12px] font-normal max-w-[140px]">
+					<span className="text-app-text overflow-hidden text-ellipsis whitespace-nowrap font-share-tech text-sm font-normal max-w-[180px]">
 						{uav.name}
 					</span>
-					<span className="text-app-text font-share-tech text-[10px] font-normal opacity-70">
+					<span className="text-app-text font-share-tech text-sm font-normal opacity-70">
 						{uav.type}
 					</span>
 				</div>
 
 				{/* Status indicator */}
 				<div className="flex items-center gap-[6px]">
-					<span className="text-app-text font-ubuntu text-[10px] font-light opacity-50">
+					<span className="text-app-text font-ubuntu text-sm font-light opacity-50">
 						{statusInfo.label}
 					</span>
 					{statusInfo.hasCircle !== false && (

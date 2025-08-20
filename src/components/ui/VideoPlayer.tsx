@@ -135,7 +135,9 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 			>
 				<div className="flex w-full h-full items-center place-content-between px-3">
 					<MediaTimeRange
-						className={`${livestream ? "w-full" : "w-10/12"} bg-transparent`}
+						className={`${
+							livestream ? "w-full" : "w-10/12"
+						} bg-transparent overflow-hidden`}
 						// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
 						style={{ "--media-primary-color": "#FFF" }}
 					/>

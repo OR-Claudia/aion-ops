@@ -11,14 +11,14 @@ const StatusBar: React.FC<StatusBarProps> = ({
 	percentage,
 	color,
 	width = 77,
-	height = 15,
+	height = 16,
 }) => {
 	const fillWidth = Math.max(0, Math.min(100, percentage));
 	const actualFillWidth = (fillWidth / 100) * (width - 4); // Account for border
 
 	return (
 		<div
-			className="relative border border-[#E3F3F2] bg-transparent"
+			className="relative border border-[#E3F3F2] bg-transparent items-center"
 			style={{
 				width: `${width}px`,
 				height: `${height}px`,
@@ -26,10 +26,10 @@ const StatusBar: React.FC<StatusBarProps> = ({
 			}}
 		>
 			<div
-				className="absolute top-[2px] left-[2px] rounded-[22px]"
+				className="absolute top-[1px] left-[2px] rounded-[22px]"
 				style={{
 					width: `${actualFillWidth}px`,
-					height: `${height - 5}px`,
+					height: `${height - 4}px`,
 					backgroundColor: color,
 				}}
 			/>

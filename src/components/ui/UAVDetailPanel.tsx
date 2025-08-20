@@ -49,7 +49,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 	};
 
 	return (
-		<div className="w-[35%] h-[69dvh] relative">
+		<div className="w-[30%] h-[69dvh] relative">
 			{/* Container background */}
 			<div className="w-full h-full rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[2px]" />
 
@@ -71,14 +71,15 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 			</div>
 
 			{/* UAV Image */}
+
 			<img
 				src={uav.image}
 				alt={uav.name}
-				className="absolute left-8 top-22 w-100 h-50 object-cover rounded-[0_4px_0_0]"
+				className="absolute object-cover left-8 top-22 h-55  w-[60%] rounded-md border-[rgba(211,251,216,0.5)] border-3 mb-5  "
 			/>
 
 			{/* Status Indicators */}
-			<div className="absolute right-12 top-28 flex flex-col items-center gap-[16px] w-[97px]">
+			<div className="absolute right-16 top-28 flex flex-col items-center gap-[16px] w-[97px]">
 				{/* Signal Status */}
 				<div className="flex flex-col items-center gap-3">
 					<div className="flex items-center justify-center gap-[4px] w-[63px] h-[15px] mb-[3px]">
@@ -112,7 +113,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 				{/* Status indicator */}
 				<div className="flex items-center gap-[3px] w-[97px] h-[16px] justify-center">
 					<div
-						className="w-[12px] h-[12px] rounded-full"
+						className="w-4 h-2 rounded-full"
 						style={{ backgroundColor: statusInfo.color }}
 					/>
 					<span className="text-[#E3F3F2] font-ubuntu text-[12px] font-bold">
@@ -125,7 +126,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 			</div>
 
 			{/* Detail Information */}
-			<div className="absolute left-8 top-[45%] w-fit flex flex-col gap-[6px]">
+			<div className="absolute left-8 mt-4 top-[45%] w-fit flex flex-col gap-[6px]">
 				<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[396px]">
 					<span className="font-bold">Description:</span> {uav?.description}
 				</div>
