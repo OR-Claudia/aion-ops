@@ -1,11 +1,11 @@
 import React from "react";
 import Modal from "./Modal";
-import wifiIcon from "../../assets/wifi.svg";
-import wifi1Icon from "../../assets/wifi-1.svg";
-import wifi2Icon from "../../assets/wifi-2.svg";
-import batteryFullIcon from "../../assets/battery-full.svg";
-import batteryHalfIcon from "../../assets/battery-half.svg";
-import batteryEmptyIcon from "../../assets/battery-empty.svg";
+import wifiIcon from "../../../assets/wifi.svg";
+import wifi1Icon from "../../../assets/wifi-1.svg";
+import wifi2Icon from "../../../assets/wifi-2.svg";
+import batteryFullIcon from "../../../assets/battery-full.svg";
+import batteryHalfIcon from "../../../assets/battery-half.svg";
+import batteryEmptyIcon from "../../../assets/battery-empty.svg";
 import Button from "../Button";
 import VideoPlayer from "../VideoPlayer";
 

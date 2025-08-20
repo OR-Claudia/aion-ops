@@ -1,7 +1,7 @@
 import React from "react";
 import type { StorageData } from "../StorageItem";
-import timesIcon from "../../assets/times.svg";
-import externalLinkIcon from "../../assets/external-link.svg";
+import timesIcon from "../../../assets/times.svg";
+import externalLinkIcon from "../../../assets/external-link.svg";
 import Button from "../Button";
 import VideoPlayer from "../VideoPlayer.tsx";
 

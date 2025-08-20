@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import type { ReactNode } from "react";
-import timesIcon from "../../assets/times.svg";
-import windowMinimizeIcon from "../../assets/window-minimize.svg";
+import timesIcon from "../../../assets/times.svg";
+import windowMinimizeIcon from "../../../assets/window-minimize.svg";
 
 export interface ModalProps {
 	isOpen: boolean;

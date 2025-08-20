@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import ZoomInIcon from "../../assets/zoom-in.svg";
-import ZoomOutIcon from "../../assets/zoom-out.svg";
-import ResetIcon from "../../assets/reset-icon.svg";
-import ChevronRightIcon from "../../assets/chevron-right-icon.svg";
-import ToolsIcon from "../../assets/tools-icon.svg";
+import ZoomInIcon from "../../../assets/zoom-in.svg";
+import ZoomOutIcon from "../../../assets/zoom-out.svg";
+import ResetIcon from "../../../assets/reset-icon.svg";
+import ChevronRightIcon from "../../../assets/chevron-right-icon.svg";
+import ToolsIcon from "../../../assets/tools-icon.svg";
 import { useMapControls } from "../../layout/MapContext";
 
 const ExpandableToolsPanel: React.FC = () => {
