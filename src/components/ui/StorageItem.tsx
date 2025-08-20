@@ -74,7 +74,7 @@ const StorageItem: React.FC<StorageItemProps> = ({
 							{record.title.split(" - ")[1]}
 						</span>
 					</div>
-					<span className="text-[#E3F3F2] font-ubuntu text-[12px] opacity-80 flex-shrink-0 mr-[12px]">
+					<span className="text-[#E3F3F2] font-ubuntu text-sm opacity-80 flex-shrink-0 mr-[12px]">
 						{record.date}
 					</span>
 				</div>
@@ -88,50 +88,50 @@ const StorageItem: React.FC<StorageItemProps> = ({
 				>
 					{/* UAV */}
 					<div className="flex flex-col items-start gap-[6px] min-w-0 flex-1">
-						<span className="text-[#E3F3F2] font-ubuntu text-[10px] font-light whitespace-nowrap">
+						<span className="text-[#E3F3F2] font-ubuntu text-xs font-light whitespace-nowrap">
 							{isDetailView ? "UAV" : "Responsible UAV"}
 						</span>
-						<span className="text-[#E3F3F2] font-ubuntu text-[12px] opacity-90 truncate w-full">
+						<span className="text-[#E3F3F2] font-ubuntu text-sm opacity-90 truncate w-full">
 							{record.uav}
 						</span>
 					</div>
 
 					{/* Mission Type */}
 					<div className="flex flex-col items-start gap-[6px] min-w-0 flex-1">
-						<span className="text-[#E3F3F2] font-ubuntu text-[10px] font-light whitespace-nowrap">
+						<span className="text-[#E3F3F2] font-ubuntu text-xs font-light whitespace-nowrap">
 							Mission type
 						</span>
-						<span className="text-[#E3F3F2] font-ubuntu text-[12px] opacity-90 truncate w-full">
+						<span className="text-[#E3F3F2] font-ubuntu text-sm opacity-90 truncate w-full">
 							{record.missionType}
 						</span>
 					</div>
 
 					{/* Flight Duration */}
 					<div className="flex flex-col items-start gap-[6px] min-w-0 flex-1">
-						<span className="text-[#E3F3F2] font-ubuntu text-[10px] font-light whitespace-nowrap">
+						<span className="text-[#E3F3F2] font-ubuntu text-xs font-light whitespace-nowrap">
 							Flight duration
 						</span>
-						<span className="text-[#E3F3F2] font-ubuntu text-[12px] opacity-90 truncate w-full">
+						<span className="text-[#E3F3F2] font-ubuntu text-sm opacity-90 truncate w-full">
 							{record.flightDuration}
 						</span>
 					</div>
 
 					{/* Operator */}
 					<div className="flex flex-col items-start gap-[6px] min-w-0 flex-1">
-						<span className="text-[#E3F3F2] font-ubuntu text-[10px] font-light whitespace-nowrap">
+						<span className="text-[#E3F3F2] font-ubuntu text-xs font-light whitespace-nowrap">
 							Operator
 						</span>
-						<span className="text-[#E3F3F2] font-ubuntu text-[12px] opacity-90 truncate w-full">
+						<span className="text-[#E3F3F2] font-ubuntu text-sm opacity-90 truncate w-full">
 							{record.operator}
 						</span>
 					</div>
 
 					{/* Status */}
 					<div className="flex flex-col items-start gap-[6px] min-w-0 flex-1">
-						<span className="text-[#E3F3F2] font-ubuntu text-[10px] font-light whitespace-nowrap">
+						<span className="text-[#E3F3F2] font-ubuntu text-xs font-light whitespace-nowrap">
 							Status
 						</span>
-						<span className="text-[#E3F3F2] font-ubuntu text-[12px] opacity-90 truncate w-full">
+						<span className="text-[#E3F3F2] font-ubuntu text-sm opacity-90 truncate w-full">
 							{record.status}
 						</span>
 					</div>
