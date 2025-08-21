@@ -20,10 +20,7 @@ const DetectionListItem: React.FC<DetectionListItemProps> = ({ detection }) => {
 	const image = getDetectionImage(detection.class_name);
 
 	return (
-		<div
-			className="bg-[#242B2C] w-[550px] rounded-[0px_10px_10px_10px] my-2 flex items-center"
-			key={detection.id}
-		>
+		<div className="bg-[#242B2C] w-[550px] rounded-[0px_10px_10px_10px] my-2 flex items-center">
 			<img
 				src={`src/assets/${image}`}
 				alt={detection.class_name}

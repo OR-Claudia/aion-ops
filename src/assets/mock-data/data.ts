@@ -1185,8 +1185,8 @@ export const detections = {
 				center_y: 868,
 			},
 			coordinates: {
-				lat: 52.228698,
-				lon: 21.011911,
+				lat: 52.228984,
+				lon: 21.011908,
 			},
 		},
 		{

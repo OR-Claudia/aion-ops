@@ -33,7 +33,7 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 	onClose,
 	record,
 }) => {
-	const detections = record.detected?.detections.slice(0, 50);
+	const detections = record.detected?.detections;
 	const [numberOfDetections] = useState<number | undefined>(
 		detections ? detections?.length : 0
 	);
@@ -49,11 +49,11 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 		>
 			<div className="max-h-[550px] overflow-y-auto py-3 mb-3">
 				{detections?.map((d) => (
-					<DetectionListItem detection={d} />
+					<DetectionListItem detection={d} key={`${d.id}-${d.timestamp}`} />
 				))}
 			</div>
 			<div className="flex place-content-between mt-5">
-				<span className="text-xl font-bold">{`Current detections: `}</span>
+				<span className="text-xl font-bold">{`Current detections:`}</span>
 				<span className="text-2xl font-normal">{numberOfDetections}</span>
 			</div>
 		</Modal>
