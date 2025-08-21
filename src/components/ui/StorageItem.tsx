@@ -26,6 +26,11 @@ export interface Detected {
 	};
 }
 
+export interface Coordinate {
+	lat: number;
+	lon: number;
+}
+
 export interface StorageData {
 	id: string;
 	title: string;
@@ -44,7 +49,7 @@ export interface StorageData {
 	operatorId: string;
 	keyEvents: string;
 	missionDescription: string;
-	flightPath: string;
+	flightPath: Coordinate[];
 	detected?: Detected;
 }
 

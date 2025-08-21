@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
-import type { StorageData } from "../StorageItem";
+import type { Coordinate, StorageData } from "../StorageItem";
 import DetectionListItem from "../DetectionListItem";
-
-interface Coordinates {
-	lat: number;
-	lon: number;
-}
 
 export interface Detection {
 	id: number;
@@ -14,7 +9,7 @@ export interface Detection {
 	class_id: number;
 	class_name: string;
 	confidence: number;
-	coordinates: Coordinates;
+	coordinates: Coordinate;
 	bbox: {
 		x1: number;
 		y1: number;
@@ -57,7 +52,7 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 					<DetectionListItem detection={d} />
 				))}
 			</div>
-			<div className="flex place-content-between">
+			<div className="flex place-content-between mt-5">
 				<span className="text-xl font-bold">{`Current detections: `}</span>
 				<span className="text-2xl font-normal">{numberOfDetections}</span>
 			</div>

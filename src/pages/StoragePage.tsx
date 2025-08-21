@@ -65,8 +65,44 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			flightPath: [
+				{
+					lat: 52.229774,
+					lon: 21.0123,
+				},
+				{
+					lat: 52.23001,
+					lon: 21.012274,
+				},
+				{
+					lat: 52.230014,
+					lon: 21.012315,
+				},
+				{
+					lat: 52.229216,
+					lon: 21.012063,
+				},
+				{
+					lat: 52.229016,
+					lon: 21.012134,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228829,
+					lon: 21.011978,
+				},
+				{
+					lat: 52.22861,
+					lon: 21.012108,
+				},
+			],
 			detected: detectionsData,
 		},
 		{
@@ -91,8 +127,44 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			flightPath: [
+				{
+					lat: 52.229774,
+					lon: 21.0123,
+				},
+				{
+					lat: 52.23001,
+					lon: 21.012274,
+				},
+				{
+					lat: 52.230014,
+					lon: 21.012315,
+				},
+				{
+					lat: 52.229216,
+					lon: 21.012063,
+				},
+				{
+					lat: 52.229016,
+					lon: 21.012134,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228829,
+					lon: 21.011978,
+				},
+				{
+					lat: 52.22861,
+					lon: 21.012108,
+				},
+			],
 			detected: detectionsData,
 		},
 		{
@@ -117,8 +189,44 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			flightPath: [
+				{
+					lat: 52.229774,
+					lon: 21.0123,
+				},
+				{
+					lat: 52.23001,
+					lon: 21.012274,
+				},
+				{
+					lat: 52.230014,
+					lon: 21.012315,
+				},
+				{
+					lat: 52.229216,
+					lon: 21.012063,
+				},
+				{
+					lat: 52.229016,
+					lon: 21.012134,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228829,
+					lon: 21.011978,
+				},
+				{
+					lat: 52.22861,
+					lon: 21.012108,
+				},
+			],
 			detected: detectionsData,
 		},
 		{
@@ -143,8 +251,44 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			flightPath: [
+				{
+					lat: 52.229774,
+					lon: 21.0123,
+				},
+				{
+					lat: 52.23001,
+					lon: 21.012274,
+				},
+				{
+					lat: 52.230014,
+					lon: 21.012315,
+				},
+				{
+					lat: 52.229216,
+					lon: 21.012063,
+				},
+				{
+					lat: 52.229016,
+					lon: 21.012134,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228829,
+					lon: 21.011978,
+				},
+				{
+					lat: 52.22861,
+					lon: 21.012108,
+				},
+			],
 			detected: detectionsData,
 		},
 		{
@@ -169,8 +313,44 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			flightPath: [
+				{
+					lat: 52.229774,
+					lon: 21.0123,
+				},
+				{
+					lat: 52.23001,
+					lon: 21.012274,
+				},
+				{
+					lat: 52.230014,
+					lon: 21.012315,
+				},
+				{
+					lat: 52.229216,
+					lon: 21.012063,
+				},
+				{
+					lat: 52.229016,
+					lon: 21.012134,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228829,
+					lon: 21.011978,
+				},
+				{
+					lat: 52.22861,
+					lon: 21.012108,
+				},
+			],
 			detected: detectionsData,
 		},
 		{
@@ -195,8 +375,44 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			flightPath: [
+				{
+					lat: 52.229774,
+					lon: 21.0123,
+				},
+				{
+					lat: 52.23001,
+					lon: 21.012274,
+				},
+				{
+					lat: 52.230014,
+					lon: 21.012315,
+				},
+				{
+					lat: 52.229216,
+					lon: 21.012063,
+				},
+				{
+					lat: 52.229016,
+					lon: 21.012134,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228829,
+					lon: 21.011978,
+				},
+				{
+					lat: 52.22861,
+					lon: 21.012108,
+				},
+			],
 			detected: detectionsData,
 		},
 		{
@@ -221,8 +437,44 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			flightPath: [
+				{
+					lat: 52.229774,
+					lon: 21.0123,
+				},
+				{
+					lat: 52.23001,
+					lon: 21.012274,
+				},
+				{
+					lat: 52.230014,
+					lon: 21.012315,
+				},
+				{
+					lat: 52.229216,
+					lon: 21.012063,
+				},
+				{
+					lat: 52.229016,
+					lon: 21.012134,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228829,
+					lon: 21.011978,
+				},
+				{
+					lat: 52.22861,
+					lon: 21.012108,
+				},
+			],
 			detected: detectionsData,
 		},
 		{
@@ -247,8 +499,44 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			flightPath: [
+				{
+					lat: 52.229774,
+					lon: 21.0123,
+				},
+				{
+					lat: 52.23001,
+					lon: 21.012274,
+				},
+				{
+					lat: 52.230014,
+					lon: 21.012315,
+				},
+				{
+					lat: 52.229216,
+					lon: 21.012063,
+				},
+				{
+					lat: 52.229016,
+					lon: 21.012134,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228984,
+					lon: 21.011908,
+				},
+				{
+					lat: 52.228829,
+					lon: 21.011978,
+				},
+				{
+					lat: 52.22861,
+					lon: 21.012108,
+				},
+			],
 			detected: detectionsData,
 		},
 	];

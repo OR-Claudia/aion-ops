@@ -138,9 +138,9 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 						{record.missionDescription}
 					</div>
 
-					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[401px]">
+					{/* <div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[401px]">
 						<span className="font-bold">Flight path:</span> {record.flightPath}
-					</div>
+					</div> */}
 				</div>
 			</div>
 
