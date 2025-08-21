@@ -11,6 +11,7 @@ export interface ModalProps {
 	children: ReactNode;
 	width?: string;
 	minHeight?: string;
+	maxHeight?: string;
 	isDraggable?: boolean;
 	className?: string;
 	headerContent?: ReactNode;
@@ -29,6 +30,7 @@ const Modal: React.FC<ModalProps> = ({
 	minimizable = false,
 	onMinimize,
 	minHeight = "auto",
+	maxHeight = "auto",
 	isDraggable = true,
 	className = "",
 	headerContent,
@@ -107,8 +109,6 @@ const Modal: React.FC<ModalProps> = ({
 	}, [isOpen, onClose]);
 
 	if (!isOpen) return null;
-	// <div className="fixed inset-0 z-50 ">
-	//  </div>
 
 	return (
 		<>
@@ -121,6 +121,7 @@ const Modal: React.FC<ModalProps> = ({
 					top: `${position.y}px`,
 					width,
 					minHeight,
+					maxHeight,
 				}}
 			>
 				{/* Header with controls - draggable area */}

@@ -13,7 +13,7 @@ import type {
 } from "../components/ui/FilterControls";
 import { cn } from "../lib/utils";
 import DetectionsModal from "../components/ui/Modals/DetectionsModal";
-import { detections as detectionsData } from "../assets/mock-data/data.js";
+import { detections as detectionsData } from "../assets/mock-data/data.ts";
 
 const StoragePage: React.FC = () => {
 	const [filteredRecords, setFilteredRecords] = useState<StorageData[]>([]);
@@ -93,6 +93,7 @@ const StoragePage: React.FC = () => {
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 			flightPath:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			detected: detectionsData,
 		},
 		{
 			id: "3",
@@ -118,6 +119,7 @@ const StoragePage: React.FC = () => {
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 			flightPath:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			detected: detectionsData,
 		},
 		{
 			id: "4",
@@ -143,6 +145,7 @@ const StoragePage: React.FC = () => {
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 			flightPath:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			detected: detectionsData,
 		},
 		{
 			id: "5",
@@ -168,6 +171,7 @@ const StoragePage: React.FC = () => {
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 			flightPath:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			detected: detectionsData,
 		},
 		{
 			id: "6",
@@ -193,6 +197,7 @@ const StoragePage: React.FC = () => {
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 			flightPath:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			detected: detectionsData,
 		},
 		{
 			id: "7",
@@ -218,6 +223,7 @@ const StoragePage: React.FC = () => {
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 			flightPath:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			detected: detectionsData,
 		},
 		{
 			id: "8",
@@ -243,6 +249,7 @@ const StoragePage: React.FC = () => {
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 			flightPath:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			detected: detectionsData,
 		},
 	];
 
@@ -337,10 +344,11 @@ const StoragePage: React.FC = () => {
 							</div>
 						)}
 						{/* Detections Modal */}
-						{detectionsOpen ? (
+						{detectionsOpen && selectedRecord ? (
 							<DetectionsModal
 								isOpen={detectionsOpen}
 								onClose={() => setDetectionsOpen(false)}
+								record={selectedRecord}
 							/>
 						) : null}
 					</div>

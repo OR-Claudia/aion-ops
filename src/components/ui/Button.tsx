@@ -44,7 +44,7 @@ const Button: React.FC<ButtonProps> = ({
 				);
 			case "underline":
 				return cn(
-					"text-[#00C6B8] px-1 !h-5 border-none bg-transparent font-ubuntu text-[14px] underline hover:text-[#00D6C8] transition-colors",
+					"text-[#00C6B8] px-1 !h-5 border-none bg-transparent font-ubuntu text-[14px] underline hover:text-[#00D6C8] transition-colors cursor-pointer",
 					{ ["text-gray-500"]: disabled }
 				);
 			case "video":
