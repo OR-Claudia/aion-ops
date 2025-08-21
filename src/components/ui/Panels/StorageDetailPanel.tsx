@@ -8,13 +8,13 @@ import VideoPlayer from "../VideoPlayer.tsx";
 interface StorageDetailPanelProps {
 	record: StorageData;
 	onClose: () => void;
-	detectionsOpen?: boolean;
 	setDetectionsOpen: (param: boolean) => void;
+	setFlightPathOpen: (param: boolean) => void;
 }
 
 const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
-	detectionsOpen,
 	setDetectionsOpen,
+	setFlightPathOpen,
 	record,
 	onClose,
 }) => {
@@ -34,12 +34,10 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 	};
 
 	const handleFlightPathClick = () => {
-		console.log("View flight path for record:", record.id);
-		// Implement flight path viewing
+		setFlightPathOpen(true);
 	};
 
 	const handleDetectionsDetailClick = () => {
-		console.log(detectionsOpen);
 		setDetectionsOpen(true);
 	};
 
@@ -67,6 +65,8 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 			</div>
 
 			{/* Scrollable content container */}
+			{/* TODO: */}
+			{/* INSERT TABS HERE */}
 			<div className="flex-1 overflow-x-auto px-[25px] pb-[80px]">
 				<div>
 					{/* Video Player */}

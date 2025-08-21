@@ -14,6 +14,7 @@ import type {
 import { cn } from "../lib/utils";
 import DetectionsModal from "../components/ui/Modals/DetectionsModal";
 import { detections as detectionsData } from "../assets/mock-data/data.ts";
+import FlightPathModal from "../components/ui/Modals/FlightPathModal.tsx";
 
 const StoragePage: React.FC = () => {
 	const [filteredRecords, setFilteredRecords] = useState<StorageData[]>([]);
@@ -21,6 +22,7 @@ const StoragePage: React.FC = () => {
 		null
 	);
 	const [detectionsOpen, setDetectionsOpen] = useState<boolean>(false);
+	const [flightPathOpen, setFlightpathOpen] = useState<boolean>(false);
 
 	// Filter configurations for the storage list
 	const filterConfigs: FilterConfig[] = [
@@ -624,8 +626,8 @@ const StoragePage: React.FC = () => {
 						{selectedRecord && (
 							<div className="flex-shrink-0 ml-[12px] mt-[16px]">
 								<StorageDetailPanel
-									detectionsOpen={detectionsOpen}
 									setDetectionsOpen={setDetectionsOpen}
+									setFlightPathOpen={setFlightpathOpen}
 									record={selectedRecord}
 									onClose={handleCloseDetail}
 								/>
@@ -636,6 +638,14 @@ const StoragePage: React.FC = () => {
 							<DetectionsModal
 								isOpen={detectionsOpen}
 								onClose={() => setDetectionsOpen(false)}
+								record={selectedRecord}
+							/>
+						) : null}
+						{/* Flightpath Modal */}
+						{flightPathOpen && selectedRecord ? (
+							<FlightPathModal
+								isOpen={flightPathOpen}
+								onClose={() => setFlightpathOpen(false)}
 								record={selectedRecord}
 							/>
 						) : null}
