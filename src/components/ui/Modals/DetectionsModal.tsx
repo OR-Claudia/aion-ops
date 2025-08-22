@@ -42,7 +42,7 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 	return (
 		<Modal
 			maxHeight={"700px"}
-			title={"Detections"}
+			title={`Detections - ${record.title}`}
 			isOpen={isOpen}
 			onClose={onClose}
 			width={"640px"}

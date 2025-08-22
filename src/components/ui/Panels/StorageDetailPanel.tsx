@@ -111,36 +111,32 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-						<span className="font-bold">UAV:</span>{" "}
+						<span className="font-bold">UAV: </span>
 						<span className="text-[#00C6B8] underline">{record.uav}</span>
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-						<span className="font-bold">Flight datetime:</span>{" "}
+						<span className="font-bold">Flight datetime: </span>
 						{record.flightDatetime}
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-						<span className="font-bold">Operator:</span> {record.operator} (
+						<span className="font-bold">Operator: </span> {record.operator} (
 						{record.operatorId})
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-						<span className="font-bold">Status:</span> {record.status}
+						<span className="font-bold">Status: </span> {record.status}
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-						<span className="font-bold">Key events:</span> {record.keyEvents}
+						<span className="font-bold">Key events: </span> {record.keyEvents}
 					</div>
 
-					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[401px]">
-						<span className="font-bold">Mission description:</span>
+					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
+						<span className="font-bold">Mission description: </span>
 						{record.missionDescription}
 					</div>
-
-					{/* <div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[401px]">
-						<span className="font-bold">Mission Path:</span> {record.MissionPath}
-					</div> */}
 				</div>
 			</div>
 

@@ -195,7 +195,7 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 	return (
 		<Modal
 			maxHeight={"700px"}
-			title={"Mission Path"}
+			title={`Mission Path - ${record.title}`}
 			isOpen={isOpen}
 			onClose={onClose}
 			width={"640px"}
