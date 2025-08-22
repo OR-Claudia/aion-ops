@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Modal from "./Modal";
 import type { Coordinate, StorageData } from "../StorageItem";
 import DetectionListItem from "../DetectionListItem";
+import Tag from "../Tag";
+import { capitalize } from "../../../lib/utils";
 
 export interface Detection {
 	id: number;
@@ -26,12 +28,14 @@ interface DetectionsModalProps {
 	isOpen: boolean;
 	onClose: () => void;
 	record: StorageData;
+	activeTab: string;
 }
 
 const DetectionsModal: React.FC<DetectionsModalProps> = ({
 	isOpen,
 	onClose,
 	record,
+	activeTab,
 }) => {
 	const detections = record.detected?.detections;
 	const [numberOfDetections] = useState<number | undefined>(
@@ -47,6 +51,10 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 			onClose={onClose}
 			width={"640px"}
 		>
+			<div className="flex items-center ">
+				<span className="mr-2 font-medium">Active source:</span>
+				<Tag variant="primary" text={capitalize(activeTab)} />
+			</div>
 			<div className="max-h-[550px] overflow-y-auto py-3 mb-3">
 				{detections?.map((d) => (
 					<DetectionListItem detection={d} key={`${d.id}-${d.timestamp}`} />

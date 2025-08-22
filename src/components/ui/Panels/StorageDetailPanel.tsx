@@ -4,12 +4,15 @@ import timesIcon from "../../../assets/times.svg";
 import externalLinkIcon from "../../../assets/external-link.svg";
 import Button from "../Button";
 import VideoPlayer from "../VideoPlayer.tsx";
+import Tabs, { type TabItem } from "../Tabs";
 
 interface StorageDetailPanelProps {
 	record: StorageData;
 	onClose: () => void;
 	setDetectionsOpen: (param: boolean) => void;
 	setMissionPathOpen: (param: boolean) => void;
+	activeTab: string;
+	setActiveTab: (tabId: string) => void;
 }
 
 const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
@@ -17,7 +20,30 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 	setMissionPathOpen,
 	record,
 	onClose,
+	activeTab,
+	setActiveTab,
 }) => {
+	const tabs: TabItem[] = [
+		{
+			id: "rgb",
+			label: "RGB",
+			value: "http://193.123.68.104:8888/hls_stream/index.m3u8",
+		},
+		{
+			id: "thermo",
+			label: "Thermo",
+			value: "http://193.123.68.104:8888/hls_stream/index.m3u8",
+		},
+	];
+
+	const getCurrentVideoSource = () => {
+		const currentTab = tabs.find((tab) => tab.id === activeTab);
+		return currentTab?.value || tabs[0].value;
+	};
+
+	const handleTabChange = (tabId: string) => {
+		setActiveTab(tabId);
+	};
 	const handleEdit = () => {
 		console.log("Edit record:", record.id);
 		// Implement edit functionality
@@ -64,20 +90,21 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 				</div>
 			</div>
 
+			{/* Tabs */}
+			<div className="px-[25px] mt-[7px]">
+				<Tabs
+					tabs={tabs}
+					activeTab={activeTab}
+					onTabChange={handleTabChange}
+					className="w-[205px]"
+				/>
+			</div>
+
 			{/* Scrollable content container */}
-			{/* TODO: */}
-			{/* INSERT TABS HERE */}
 			<div className="flex-1 overflow-x-auto px-[25px] pb-[80px]">
-				<div>
-					{/* Video Player */}
-					<VideoPlayer
-						src={
-							// "https://objectstorage.eu-amsterdam-1.oraclecloud.com/p/rBbeJCt3p7y2zqZ7tvuDXiEeGkjD1InTVeMfCws8v2fCRtXw-fh72spHSK0ILSfS/n/ax7clclouzxl/b/bucket-20250812-1045/o/GX010921.MP4"
-							// "https://videos.pexels.com/video-files/6548176/6548176-hd_1920_1080_24fps.mp4"
-							// "https://drive.google.com/file/d/1onsyYlOexL6JCanqPz0TLfSGyIVxfW_i/preview"
-							"http://193.123.68.104:8888/hls_stream/index.m3u8"
-						}
-					/>
+				<div className="mt-[14px]">
+					{/* Video Player with dynamic source based on active tab */}
+					<VideoPlayer src={getCurrentVideoSource()} />
 				</div>
 
 				{/* External links */}

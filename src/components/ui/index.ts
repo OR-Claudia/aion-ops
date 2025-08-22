@@ -27,3 +27,5 @@ export { default as StorageList } from "./StorageList";
 export { default as StorageItem } from "./StorageItem";
 export type { StorageData } from "./StorageItem";
 export { default as StorageDetailPanel } from "./Panels/StorageDetailPanel";
+export { default as Tabs } from "./Tabs";
+export type { TabItem } from "./Tabs";

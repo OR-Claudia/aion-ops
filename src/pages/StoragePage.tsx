@@ -23,6 +23,7 @@ const StoragePage: React.FC = () => {
 	);
 	const [detectionsOpen, setDetectionsOpen] = useState<boolean>(false);
 	const [MissionPathOpen, setMissionPathOpen] = useState<boolean>(false);
+	const [activeTab, setActiveTab] = useState("rgb");
 
 	// Filter configurations for the storage list
 	const filterConfigs: FilterConfig[] = [
@@ -629,6 +630,8 @@ const StoragePage: React.FC = () => {
 									setDetectionsOpen={setDetectionsOpen}
 									setMissionPathOpen={setMissionPathOpen}
 									record={selectedRecord}
+									activeTab={activeTab}
+									setActiveTab={setActiveTab}
 									onClose={handleCloseDetail}
 								/>
 							</div>
@@ -638,6 +641,7 @@ const StoragePage: React.FC = () => {
 							<DetectionsModal
 								isOpen={detectionsOpen}
 								onClose={() => setDetectionsOpen(false)}
+								activeTab={activeTab}
 								record={selectedRecord}
 							/>
 						) : null}

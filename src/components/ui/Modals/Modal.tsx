@@ -132,7 +132,7 @@ const Modal: React.FC<ModalProps> = ({
 					onMouseDown={handleMouseDown}
 				>
 					<div className="flex-1">
-						<h2 className="text-white font-ubuntu text-2xl font-bold leading-none mt-4">
+						<h2 className="text-white font-ubuntu text-xl font-bold leading-none mt-4">
 							{title}
 						</h2>
 						{subtitle && (
