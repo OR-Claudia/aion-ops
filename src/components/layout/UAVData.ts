@@ -1,7 +1,7 @@
 import type { UAVDetailData } from "../ui/Modals/UAVDetailModal";
 
-// Helper function to generate realistic flight path coordinates within 100 sq km
-export const generateFlightPathCoordinates = (
+// Helper function to generate realistic Mission Path coordinates within 100 sq km
+export const generateMissionPathCoordinates = (
 	basePosition: [number, number],
 	uavId: string,
 	type: "online" | "warning" | "offline"
@@ -85,7 +85,7 @@ export const generateFlightPathCoordinates = (
 };
 
 // Helper function to get color based on UAV type
-export const getFlightPathColor = (
+export const getMissionPathColor = (
 	type: "online" | "warning" | "offline"
 ): string => {
 	switch (type) {
@@ -112,7 +112,7 @@ export const generateUAVDetailData = (basicData: {
 	description?: string;
 	mission?: string;
 	signal: string;
-	flightPath?: string;
+	MissionPath?: string;
 }): UAVDetailData => {
 	// Extract coordinates for the live coordinates display - format to match design
 	const coords = basicData.coordinates.includes(",")
@@ -210,7 +210,7 @@ export const generateUAVDetailData = (basicData: {
 		return "Reconnaissance";
 	};
 
-	const getFlightPath = (name: string): string => {
+	const getMissionPath = (name: string): string => {
 		if (name.includes("UAV 22456")) return "Map";
 		if (name.includes("Kolibri")) return "Route Alpha";
 		if (name.includes("Shark")) return "Grid 7-Alpha";
@@ -267,8 +267,8 @@ export const generateUAVDetailData = (basicData: {
 		description: getDescription(basicData.name),
 		mission: getMission(basicData.name),
 		missionLink: "/missions",
-		flightPath: getFlightPath(basicData.name),
-		flightPathLink: "/flight-paths",
+		MissionPath: getMissionPath(basicData.name),
+		MissionPathLink: "/flight-paths",
 		detections: getDetections(basicData.name),
 	};
 };

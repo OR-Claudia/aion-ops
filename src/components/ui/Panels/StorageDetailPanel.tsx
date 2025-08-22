@@ -9,12 +9,12 @@ interface StorageDetailPanelProps {
 	record: StorageData;
 	onClose: () => void;
 	setDetectionsOpen: (param: boolean) => void;
-	setFlightPathOpen: (param: boolean) => void;
+	setMissionPathOpen: (param: boolean) => void;
 }
 
 const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 	setDetectionsOpen,
-	setFlightPathOpen,
+	setMissionPathOpen,
 	record,
 	onClose,
 }) => {
@@ -33,8 +33,8 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 		// Implement analysis generation
 	};
 
-	const handleFlightPathClick = () => {
-		setFlightPathOpen(true);
+	const handleMissionPathClick = () => {
+		setMissionPathOpen(true);
 	};
 
 	const handleDetectionsDetailClick = () => {
@@ -82,8 +82,8 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 
 				{/* External links */}
 				<div className="flex justify-around items-center w-full my-6">
-					<Button variant="underline" onClick={handleFlightPathClick}>
-						Flight path
+					<Button variant="underline" onClick={handleMissionPathClick}>
+						Mission Path
 						<img
 							src={externalLinkIcon}
 							alt="external link"
@@ -139,7 +139,7 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 					</div>
 
 					{/* <div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[401px]">
-						<span className="font-bold">Flight path:</span> {record.flightPath}
+						<span className="font-bold">Mission Path:</span> {record.MissionPath}
 					</div> */}
 				</div>
 			</div>

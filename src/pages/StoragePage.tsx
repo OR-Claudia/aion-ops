@@ -14,7 +14,7 @@ import type {
 import { cn } from "../lib/utils";
 import DetectionsModal from "../components/ui/Modals/DetectionsModal";
 import { detections as detectionsData } from "../assets/mock-data/data.ts";
-import FlightPathModal from "../components/ui/Modals/FlightPathModal.tsx";
+import MissionPathModal from "../components/ui/Modals/MissionPathModal.tsx";
 
 const StoragePage: React.FC = () => {
 	const [filteredRecords, setFilteredRecords] = useState<StorageData[]>([]);
@@ -22,7 +22,7 @@ const StoragePage: React.FC = () => {
 		null
 	);
 	const [detectionsOpen, setDetectionsOpen] = useState<boolean>(false);
-	const [flightPathOpen, setFlightpathOpen] = useState<boolean>(false);
+	const [MissionPathOpen, setMissionPathOpen] = useState<boolean>(false);
 
 	// Filter configurations for the storage list
 	const filterConfigs: FilterConfig[] = [
@@ -67,7 +67,7 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath: [
+			MissionPath: [
 				{
 					lat: 52.229774,
 					lon: 21.0123,
@@ -129,7 +129,7 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath: [
+			MissionPath: [
 				{
 					lat: 52.229774,
 					lon: 21.0123,
@@ -191,7 +191,7 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath: [
+			MissionPath: [
 				{
 					lat: 52.229774,
 					lon: 21.0123,
@@ -253,7 +253,7 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath: [
+			MissionPath: [
 				{
 					lat: 52.229774,
 					lon: 21.0123,
@@ -315,7 +315,7 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath: [
+			MissionPath: [
 				{
 					lat: 52.229774,
 					lon: 21.0123,
@@ -377,7 +377,7 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath: [
+			MissionPath: [
 				{
 					lat: 52.229774,
 					lon: 21.0123,
@@ -439,7 +439,7 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath: [
+			MissionPath: [
 				{
 					lat: 52.229774,
 					lon: 21.0123,
@@ -501,7 +501,7 @@ const StoragePage: React.FC = () => {
 			keyEvents: "N/A",
 			missionDescription:
 				"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
-			flightPath: [
+			MissionPath: [
 				{
 					lat: 52.229774,
 					lon: 21.0123,
@@ -627,7 +627,7 @@ const StoragePage: React.FC = () => {
 							<div className="flex-shrink-0 ml-[12px] mt-[16px]">
 								<StorageDetailPanel
 									setDetectionsOpen={setDetectionsOpen}
-									setFlightPathOpen={setFlightpathOpen}
+									setMissionPathOpen={setMissionPathOpen}
 									record={selectedRecord}
 									onClose={handleCloseDetail}
 								/>
@@ -641,11 +641,11 @@ const StoragePage: React.FC = () => {
 								record={selectedRecord}
 							/>
 						) : null}
-						{/* Flightpath Modal */}
-						{flightPathOpen && selectedRecord ? (
-							<FlightPathModal
-								isOpen={flightPathOpen}
-								onClose={() => setFlightpathOpen(false)}
+						{/* MissionPath Modal */}
+						{MissionPathOpen && selectedRecord ? (
+							<MissionPathModal
+								isOpen={MissionPathOpen}
+								onClose={() => setMissionPathOpen(false)}
 								record={selectedRecord}
 							/>
 						) : null}

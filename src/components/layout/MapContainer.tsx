@@ -8,13 +8,13 @@ import {
 	ClusterableUAVMarker,
 	DetectionMarker,
 	UAVDetailModal,
-	FlightPath,
+	MissionPath,
 } from "../ui";
 
 import {
 	generateUAVDetailData,
-	generateFlightPathCoordinates,
-	getFlightPathColor,
+	generateMissionPathCoordinates,
+	getMissionPathColor,
 } from "./UAVData";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import L from "leaflet";
@@ -41,7 +41,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	const location = useLocation();
 
 	const isDetectionsPage = location.pathname === "/detections";
-	const { mapRef, showFlightPaths } = useMapControls();
+	const { mapRef, showMissionPaths } = useMapControls();
 	const { filteredDetections, selectedDetection, selectDetection } =
 		useDetectionContext();
 
@@ -60,7 +60,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	// Warsaw coordinates (center remains the same)
 	const warsawCenter: [number, number] = [52.2297, 21.0122];
 
-	// Helper function to create UAV location with flight path
+	// Helper function to create UAV location with Mission Path
 	const createUAVLocation = (
 		position: [number, number],
 		type: "online" | "warning" | "offline",
@@ -69,12 +69,12 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		position,
 		type,
 		data: generateUAVDetailData(uavData),
-		flightPath: generateFlightPathCoordinates(
+		MissionPath: generateMissionPathCoordinates(
 			position,
 			uavData.id.toString(),
 			type
 		),
-		flightPathColor: getFlightPathColor(type),
+		MissionPathColor: getMissionPathColor(type),
 	});
 
 	// Comprehensive UAV locations covering a wider area for better simulation
@@ -91,7 +91,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 1",
-			flightPath: "Path 1",
+			MissionPath: "Path 1",
 		}),
 		createUAVLocation([52.236, 21.014], "warning", {
 			id: "2",
@@ -104,7 +104,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Low Battery UAV",
 			mission: "Mission 2",
-			flightPath: "Path 2",
+			MissionPath: "Path 2",
 		}),
 		createUAVLocation([52.237, 21.016], "online", {
 			id: "3",
@@ -117,7 +117,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 3",
-			flightPath: "Path 3",
+			MissionPath: "Path 3",
 		}),
 		createUAVLocation([52.234, 21.013], "offline", {
 			id: "4",
@@ -128,7 +128,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 0,
 			description: "Offline UAV",
 			mission: "Mission 4",
-			flightPath: "Path 4",
+			MissionPath: "Path 4",
 		}),
 		createUAVLocation([52.238, 21.017], "online", {
 			id: "5",
@@ -141,7 +141,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 5",
-			flightPath: "Path 5",
+			MissionPath: "Path 5",
 		}),
 
 		// Eastern cluster
@@ -156,7 +156,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 20,
 			description: "Warning UAV",
 			mission: "Mission 10",
-			flightPath: "Path 10",
+			MissionPath: "Path 10",
 		}),
 		createUAVLocation([52.241, 21.031], "offline", {
 			id: "11",
@@ -167,7 +167,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 0,
 			description: "Offline UAV",
 			mission: "Mission 11",
-			flightPath: "Path 11",
+			MissionPath: "Path 11",
 		}),
 		createUAVLocation([52.242, 21.032], "online", {
 			id: "12",
@@ -180,7 +180,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 12",
-			flightPath: "Path 12",
+			MissionPath: "Path 12",
 		}),
 		createUAVLocation([52.243, 21.028], "online", {
 			id: "13",
@@ -193,7 +193,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 13",
-			flightPath: "Path 13",
+			MissionPath: "Path 13",
 		}),
 
 		// Western cluster
@@ -208,7 +208,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 14",
-			flightPath: "Path 14",
+			MissionPath: "Path 14",
 		}),
 		createUAVLocation([52.211, 21.021], "warning", {
 			id: "15",
@@ -221,7 +221,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 50,
 			description: "Fuel Low UAV",
 			mission: "Mission 15",
-			flightPath: "Path 15",
+			MissionPath: "Path 15",
 		}),
 		createUAVLocation([52.212, 21.019], "online", {
 			id: "16",
@@ -234,7 +234,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 16",
-			flightPath: "Path 16",
+			MissionPath: "Path 16",
 		}),
 		createUAVLocation([52.209, 21.018], "offline", {
 			id: "17",
@@ -245,7 +245,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 0,
 			description: "Offline UAV",
 			mission: "Mission 17",
-			flightPath: "Path 17",
+			MissionPath: "Path 17",
 		}),
 
 		// Northern clusters
@@ -258,7 +258,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 0,
 			description: "Offline UAV",
 			mission: "Mission 18",
-			flightPath: "Path 18",
+			MissionPath: "Path 18",
 		}),
 		createUAVLocation([52.251, 21.006], "online", {
 			id: "19",
@@ -271,7 +271,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 19",
-			flightPath: "Path 19",
+			MissionPath: "Path 19",
 		}),
 		createUAVLocation([52.252, 21.008], "warning", {
 			id: "20",
@@ -284,7 +284,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Low Battery UAV",
 			mission: "Mission 20",
-			flightPath: "Path 20",
+			MissionPath: "Path 20",
 		}),
 
 		// Additional spread out UAVs for realistic simulation
@@ -299,7 +299,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 21",
-			flightPath: "Path 21",
+			MissionPath: "Path 21",
 		}),
 		createUAVLocation([52.275, 21.015], "warning", {
 			id: "22",
@@ -312,7 +312,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 50,
 			description: "Signal Issues UAV",
 			mission: "Mission 22",
-			flightPath: "Path 22",
+			MissionPath: "Path 22",
 		}),
 		createUAVLocation([52.28, 21.02], "offline", {
 			id: "23",
@@ -323,7 +323,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 0,
 			description: "Offline UAV",
 			mission: "Mission 23",
-			flightPath: "Path 23",
+			MissionPath: "Path 23",
 		}),
 		createUAVLocation([52.18, 21.0], "online", {
 			id: "24",
@@ -336,7 +336,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 24",
-			flightPath: "Path 24",
+			MissionPath: "Path 24",
 		}),
 		createUAVLocation([52.175, 21.005], "warning", {
 			id: "25",
@@ -349,7 +349,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 20,
 			description: "Low Battery UAV",
 			mission: "Mission 25",
-			flightPath: "Path 25",
+			MissionPath: "Path 25",
 		}),
 		createUAVLocation([52.17, 21.01], "online", {
 			id: "26",
@@ -362,7 +362,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 26",
-			flightPath: "Path 26",
+			MissionPath: "Path 26",
 		}),
 		createUAVLocation([52.23, 21.08], "warning", {
 			id: "27",
@@ -375,7 +375,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 20,
 			description: "Signal Issues UAV",
 			mission: "Mission 27",
-			flightPath: "Path 27",
+			MissionPath: "Path 27",
 		}),
 		createUAVLocation([52.235, 21.085], "online", {
 			id: "28",
@@ -388,7 +388,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 28",
-			flightPath: "Path 28",
+			MissionPath: "Path 28",
 		}),
 		createUAVLocation([52.24, 21.09], "offline", {
 			id: "29",
@@ -399,7 +399,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 0,
 			description: "Offline UAV",
 			mission: "Mission 29",
-			flightPath: "Path 29",
+			MissionPath: "Path 29",
 		}),
 		createUAVLocation([52.22, 20.95], "online", {
 			id: "30",
@@ -412,7 +412,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 30",
-			flightPath: "Path 30",
+			MissionPath: "Path 30",
 		}),
 		createUAVLocation([52.225, 20.945], "warning", {
 			id: "31",
@@ -425,7 +425,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 50,
 			description: "Low Signal UAV",
 			mission: "Mission 31",
-			flightPath: "Path 31",
+			MissionPath: "Path 31",
 		}),
 		createUAVLocation([52.23, 20.94], "online", {
 			id: "32",
@@ -438,7 +438,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 32",
-			flightPath: "Path 32",
+			MissionPath: "Path 32",
 		}),
 		createUAVLocation([52.26, 21.04], "warning", {
 			id: "33",
@@ -451,7 +451,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Battery Warning UAV",
 			mission: "Mission 33",
-			flightPath: "Path 33",
+			MissionPath: "Path 33",
 		}),
 		createUAVLocation([52.19, 21.06], "online", {
 			id: "34",
@@ -464,7 +464,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 34",
-			flightPath: "Path 34",
+			MissionPath: "Path 34",
 		}),
 		createUAVLocation([52.255, 20.98], "offline", {
 			id: "35",
@@ -475,7 +475,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 0,
 			description: "Standby UAV",
 			mission: "Mission 35",
-			flightPath: "Path 35",
+			MissionPath: "Path 35",
 		}),
 		createUAVLocation([52.205, 21.05], "online", {
 			id: "36",
@@ -488,7 +488,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 36",
-			flightPath: "Path 36",
+			MissionPath: "Path 36",
 		}),
 		createUAVLocation([52.245, 21.0], "warning", {
 			id: "37",
@@ -501,7 +501,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 20,
 			description: "Low Battery UAV",
 			mission: "Mission 37",
-			flightPath: "Path 37",
+			MissionPath: "Path 37",
 		}),
 		// Remote monitoring stations
 		createUAVLocation([52.3, 21.1], "online", {
@@ -515,7 +515,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 38",
-			flightPath: "Path 38",
+			MissionPath: "Path 38",
 		}),
 		createUAVLocation([52.15, 20.9], "warning", {
 			id: "39",
@@ -528,7 +528,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 50,
 			description: "Signal Issues UAV",
 			mission: "Mission 39",
-			flightPath: "Path 39",
+			MissionPath: "Path 39",
 		}),
 		createUAVLocation([52.2, 21.15], "offline", {
 			id: "40",
@@ -539,7 +539,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 0,
 			description: "Offline UAV",
 			mission: "Mission 40",
-			flightPath: "Path 40",
+			MissionPath: "Path 40",
 		}),
 		createUAVLocation([52.25, 20.85], "online", {
 			id: "41",
@@ -552,7 +552,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			signalPercentage: 100,
 			description: "Active UAV",
 			mission: "Mission 41",
-			flightPath: "Path 41",
+			MissionPath: "Path 41",
 		}),
 	];
 
@@ -672,16 +672,16 @@ const MapContainer: React.FC<MapContainerProps> = ({
 				>
 					<TileLayer url={tileUrl} attribution={attribution} />
 
-					{/* Flight Paths - only on homepage when showFlightPaths is true, hide for clustered UAVs */}
-					{showIndicators && showFlightPaths && (
+					{/* Mission Paths - only on homepage when showMissionPaths is true, hide for clustered UAVs */}
+					{showIndicators && showMissionPaths && (
 						<>
 							{uavLocations
 								.filter((uav) => !clusteredUAVIds.has(uav.data.id.toString()))
 								.map((uav) => (
-									<FlightPath
+									<MissionPath
 										key={`flight-path-${uav.data.id}`}
-										coordinates={uav.flightPath}
-										color={uav.flightPathColor}
+										coordinates={uav.MissionPath}
+										color={uav.MissionPathColor}
 										uavId={uav.data.id.toString()}
 									/>
 								))}

@@ -11,7 +11,7 @@ const ExpandableToolsPanel: React.FC = () => {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const location = useLocation();
 	const isDetectionsPage = location.pathname === "/detections";
-	const { zoomIn, zoomOut, resetView, showFlightPaths, setShowFlightPaths } =
+	const { zoomIn, zoomOut, resetView, showMissionPaths, setShowMissionPaths } =
 		useMapControls();
 
 	const mapTools = [
@@ -62,24 +62,24 @@ const ExpandableToolsPanel: React.FC = () => {
 							</div>
 						</div>
 
-						{/* Flight Paths Toggle Row - Hidden on DetectionsPage */}
+						{/* Mission Paths Toggle Row - Hidden on DetectionsPage */}
 						{!isDetectionsPage && (
 							<div className="flex items-center justify-between w-full h-[30px] px-4 mt-2">
 								<span className="text-[#E3F3F2] font-ubuntu text-sm font-se">
-									Toggle flight paths
+									Toggle Mission Paths
 								</span>
 								<div className="flex items-center">
 									<div
 										className={`w-[41px]  rounded-[10px] cursor-pointer transition-all duration-200 ${
-											showFlightPaths
+											showMissionPaths
 												? "h-[21px] bg-[#00C6B8]"
 												: "h-[23px] border-1 border-[rgba(211,251,216,0.5)]"
 										}`}
-										onClick={() => setShowFlightPaths(!showFlightPaths)}
+										onClick={() => setShowMissionPaths(!showMissionPaths)}
 									>
 										<div
 											className={`w-[17px] h-[17px] bg-[#1F2630] rounded-full transition-all duration-200 mt-[2px] ${
-												showFlightPaths
+												showMissionPaths
 													? "ml-[22px]"
 													: "ml-[2px] border-2 border-[#00C6B8]"
 											}`}

@@ -21,8 +21,8 @@ export interface UAVDetailData {
 	description: string;
 	mission: string;
 	missionLink?: string;
-	flightPath: string;
-	flightPathLink?: string;
+	MissionPath: string;
+	MissionPathLink?: string;
 	videoFeed?: string;
 	detections?: Array<{
 		id: string;
@@ -229,16 +229,18 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 				</div>
 
 				<div className="text-[#E3F3F2] flex flex-row items-center font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">Flight path:</span>
-					{data.flightPathLink ? (
+					<span className="font-bold">Mission Path:</span>
+					{data.MissionPathLink ? (
 						<Button
 							variant="underline"
-							onClick={() => console.log("Open flight path:", data.flightPath)}
+							onClick={() =>
+								console.log("Open Mission Path:", data.MissionPath)
+							}
 						>
-							{data.flightPath}
+							{data.MissionPath}
 						</Button>
 					) : (
-						<span className="text-[#00C6B8] underline">{data.flightPath}</span>
+						<span className="text-[#00C6B8] underline">{data.MissionPath}</span>
 					)}
 				</div>
 			</div>

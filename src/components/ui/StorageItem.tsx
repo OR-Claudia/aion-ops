@@ -49,7 +49,7 @@ export interface StorageData {
 	operatorId: string;
 	keyEvents: string;
 	missionDescription: string;
-	flightPath: Coordinate[];
+	MissionPath: Coordinate[];
 	detected?: Detected;
 }
 
