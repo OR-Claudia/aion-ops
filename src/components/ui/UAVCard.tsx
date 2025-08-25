@@ -111,7 +111,7 @@ const UAVCard: React.FC<UAVCardProps> = ({
 				</div>
 				<div className="flex justify-between items-center">
 					<span className="text-app-text font-ubuntu text-xs font-medium">
-						Ready for flight
+						Ready
 					</span>
 					<span className="text-app-text font-ubuntu text-xs font-normal">
 						{uav.readyForFlight}
@@ -145,10 +145,10 @@ const UAVCard: React.FC<UAVCardProps> = ({
 			/>
 
 			{/* UAV Info and Status */}
-			<div className="absolute left-[16px] top-[180px] w-[265px] h-[40px] flex justify-between items-center">
+			<div className="absolute left-[16px] top-[177px] w-[265px] h-[40px] flex justify-between items-center">
 				<div className="flex flex-col justify-center items-start gap-0.5">
 					<span className="text-app-text overflow-hidden text-ellipsis whitespace-nowrap font-share-tech text-sm font-normal max-w-[180px]">
-						{uav.name}
+						{`[${uav.id}] ${uav.name}`}
 					</span>
 					<span className="text-app-text font-share-tech text-sm font-normal opacity-70">
 						{uav.type}

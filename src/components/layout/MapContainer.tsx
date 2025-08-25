@@ -82,7 +82,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		// Central Warsaw cluster
 		createUAVLocation([52.235, 21.015], "online", {
 			id: "1",
-			name: "UAV 22456",
+			name: "KUNA",
 			coordinates: "52.2350, 21.0150",
 			status: "active",
 			battery: "full",
@@ -147,7 +147,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		// Eastern cluster
 		createUAVLocation([52.24, 21.03], "warning", {
 			id: "10",
-			name: "Shark (ID:3456)",
+			name: "Shark",
 			coordinates: "52.2400, 21.0300",
 			status: "warning",
 			battery: "low",
@@ -199,7 +199,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		// Western cluster
 		createUAVLocation([52.21, 21.02], "online", {
 			id: "14",
-			name: "Bobr UJ26 (ID:9931)",
+			name: "Bobr UJ26",
 			coordinates: "52.2100, 21.0200",
 			status: "active",
 			battery: "good",
@@ -316,7 +316,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		}),
 		createUAVLocation([52.28, 21.02], "offline", {
 			id: "23",
-			name: "Northern Base",
+			name: "Northern Edge",
 			coordinates: "52.2800, 21.0200",
 			status: "offline",
 			signal: "none",
