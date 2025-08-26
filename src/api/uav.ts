@@ -12,7 +12,7 @@ const uavData: UAVData[] = [
 		lastContact: "15/03/2025 06:27 pm",
 		readyForFlight: "Yes",
 		lastKnownLocation: "N/A",
-		location: "Hangar H6",
+		location: "Building H6",
 		signalPercentage: 92,
 		batteryPercentage: 76,
 		description:
@@ -33,7 +33,7 @@ const uavData: UAVData[] = [
 		lastContact: "N/A",
 		readyForFlight: "Yes",
 		lastKnownLocation: "N/A",
-		location: "Hangar H6",
+		location: "Building H6",
 		signalPercentage: 100,
 		batteryPercentage: 98,
 		description: "Combat UAV with advanced targeting systems.",
@@ -54,7 +54,7 @@ const uavData: UAVData[] = [
 		lastContact: "Yesterday 08:44 am",
 		readyForFlight: "Yes",
 		lastKnownLocation: "N/A",
-		location: "Hangar H6",
+		location: "Building H6",
 		signalPercentage: 85,
 		batteryPercentage: 60,
 		description: "Lightweight UAV for short-range tactical operations.",
@@ -67,7 +67,7 @@ const uavData: UAVData[] = [
 	},
 	{
 		id: "9931",
-		name: "UkrJet Bobr UJ26",
+		name: "UkrJet",
 		type: "combat",
 		status: "destroyed",
 		image:
@@ -95,7 +95,7 @@ const uavData: UAVData[] = [
 			"https://api.builder.io/api/v1/image/assets/TEMP/4c287b89be0c407640c8f81eebc78453161de70a?width=554",
 		lastContact: "Yesterday 08:44 am",
 		readyForFlight: "Yes",
-		lastKnownLocation: "Hangar H6",
+		lastKnownLocation: "Building H6",
 		location: "N/A",
 		signalPercentage: 67,
 		batteryPercentage: 45,
@@ -116,7 +116,7 @@ const uavData: UAVData[] = [
 			"https://api.builder.io/api/v1/image/assets/TEMP/668c75c5c826b3fd84337434710142918b6a9c7e?width=554",
 		lastContact: "29/03/2025 08:44 am",
 		readyForFlight: "Yes",
-		lastKnownLocation: "Hangar H6",
+		lastKnownLocation: "Building H6",
 		location: "lon 14.936 lat 178.9866",
 		signalPercentage: 88,
 		batteryPercentage: 80,
@@ -137,7 +137,7 @@ const uavData: UAVData[] = [
 		lastContact: "08/03/2025 08:44 am",
 		readyForFlight: "Yes",
 		lastKnownLocation: "N/A",
-		location: "Hangar W5",
+		location: "Building W5",
 		signalPercentage: 0,
 		batteryPercentage: 0,
 		description: "Offline combat UAV awaiting maintenance.",
@@ -150,7 +150,7 @@ const uavData: UAVData[] = [
 	},
 	{
 		id: "20037",
-		name: "Mavic air",
+		name: "Mavic",
 		type: "tactical",
 		status: "engaged",
 		image:
@@ -178,8 +178,8 @@ const uavData: UAVData[] = [
 			"https://api.builder.io/api/v1/image/assets/TEMP/666fff2ac2853f8097ba262a6c17a165b9b4da09?width=554",
 		lastContact: "Yesterday 08:44 am",
 		readyForFlight: "Yes",
-		lastKnownLocation: "Hangar H6",
-		location: "Hangar H6",
+		lastKnownLocation: "Building H6",
+		location: "Building H6",
 		signalPercentage: 99,
 		batteryPercentage: 100,
 		description: "High-altitude, long-endurance reconnaissance UAV.",
@@ -220,7 +220,7 @@ const uavData: UAVData[] = [
 		lastContact: "Today 06:22 am",
 		readyForFlight: "Yes",
 		lastKnownLocation: "N/A",
-		location: "Hangar B2",
+		location: "Building B2",
 		signalPercentage: 80,
 		batteryPercentage: 70,
 		description: "Tactical UAV on standby for deployment.",
@@ -254,7 +254,7 @@ const uavData: UAVData[] = [
 	},
 	{
 		id: "77654",
-		name: "UkrJet Bobr UJ26",
+		name: "UkrJet Nimbus-T",
 		type: "recon",
 		status: "engaged",
 		image:
@@ -296,7 +296,7 @@ const uavData: UAVData[] = [
 	},
 	{
 		id: "66543",
-		name: "UkrSpecSystems Shark",
+		name: "UkrSpecSystems",
 		type: "tactical",
 		status: "damage",
 		image:
@@ -324,10 +324,10 @@ const uavData: UAVData[] = [
 		lastContact: "Today 04:33 am",
 		readyForFlight: "Yes",
 		lastKnownLocation: "N/A",
-		location: "Hangar C4",
+		location: "Building C4",
 		signalPercentage: 75,
 		batteryPercentage: 60,
-		description: "Recon UAV on standby in hangar.",
+		description: "Recon UAV on standby in Building.",
 		controlUnit: "Petro Shevchenko (EMP112)",
 		mission: "Standby",
 		keyEvents: "Ready for deployment",
@@ -337,7 +337,7 @@ const uavData: UAVData[] = [
 	},
 	{
 		id: "33456",
-		name: "Mavic air",
+		name: "Mavic",
 		type: "combat",
 		status: "destroyed",
 		image:
@@ -400,7 +400,7 @@ const uavData: UAVData[] = [
 	},
 	{
 		id: "78902",
-		name: "UAV",
+		name: "KUNA Grizzly-8",
 		type: "recon",
 		status: "active",
 		image:
@@ -421,7 +421,7 @@ const uavData: UAVData[] = [
 	},
 	{
 		id: "12345",
-		name: "Parrot AR 2.0 ",
+		name: "Parrot AR 2.0 Hawkshade",
 		type: "tactical",
 		status: "damage",
 		image:

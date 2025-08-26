@@ -1,8 +1,8 @@
 import type { UAVDetailData } from "../ui/Modals/UAVDetailModal";
 
-export const generateMissionCoordinates = (): [number, number][] => {
-	const basePosition: [number, number] = [50.590833, 35.307222];
-
+export const generateMissionCoordinates = (
+	basePosition: [number, number]
+): [number, number][] => {
 	const uavId = "UAV-1";
 	const type: "online" | "warning" | "offline" = "online";
 
@@ -13,10 +13,10 @@ export const generateMissionCoordinates = (): [number, number][] => {
 		type: "online" | "warning" | "offline"
 	): type is "offline" => type === "offline";
 	const pathLength = isOffline(type) ? 4 : Math.floor(Math.random() * 6) + 6;
-	const radius = 0.01;
+	const radius = Math.random() * (0.27 - 0.225) + 0.225;
 
-	const startOffsetLat = (Math.random() - 0.5) * radius * 1.5;
-	const startOffsetLng = (Math.random() - 0.5) * radius * 1.5;
+	const startOffsetLat = (Math.random() - 0.5) * radius;
+	const startOffsetLng = (Math.random() - 0.5) * radius;
 	coordinates.push([baseLat + startOffsetLat, baseLng + startOffsetLng]);
 
 	for (let i = 1; i < pathLength - 1; i++) {
@@ -186,7 +186,7 @@ export const generateUAVDetailData = (basicData: {
 	};
 
 	const getMission = (name: string): string => {
-		if (name.includes("UAV 22456")) return "Recon";
+		if (name.includes("KUNA")) return "Recon";
 		if (name.includes("Kolibri")) return "Patrol";
 		if (name.includes("Shark")) return "Surveillance";
 		if (name.includes("Bobr")) return "Area Monitor";
@@ -194,7 +194,7 @@ export const generateUAVDetailData = (basicData: {
 	};
 
 	const getMissionPath = (name: string): string => {
-		if (name.includes("UAV 22456")) return "Map";
+		if (name.includes("KUNA")) return "Map";
 		if (name.includes("Kolibri")) return "Route Alpha";
 		if (name.includes("Shark")) return "Grid 7-Alpha";
 		if (name.includes("Bobr")) return "Sector North";
@@ -202,7 +202,7 @@ export const generateUAVDetailData = (basicData: {
 	};
 
 	const getDetections = (name: string) => {
-		if (name.includes("UAV 22456")) {
+		if (name.includes("KUNA")) {
 			return [
 				{
 					id: "396",

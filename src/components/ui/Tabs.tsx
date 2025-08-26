@@ -33,7 +33,7 @@ const Tabs: React.FC<TabsProps> = ({
 							key={tab.id}
 							onClick={() => onTabChange(tab.id, tab.value)}
 							className={cn(
-								"h-[33px] w-22 px-4 font-ubuntu text-[14px] font-normal leading-normal transition-colors relative",
+								"h-[33px] w-26 px-4 font-ubuntu text-[14px] font-normal leading-normal transition-colors relative",
 								{
 									"bg-[#00C6B8] text-black rounded-t-[8px]": isActive,
 									"bg-transparent text-white/60 hover:text-white/80": !isActive,

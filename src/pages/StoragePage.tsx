@@ -40,7 +40,7 @@ const StoragePage: React.FC = () => {
 		{
 			key: "missionType",
 			label: "Mission type",
-			options: ["Recon", "Combat", "Tactical"],
+			options: ["Reconnaissance", "Combat", "Tactical"],
 		},
 	];
 
@@ -54,6 +54,7 @@ const StoragePage: React.FC = () => {
 
 	const handleFilterChange = (filters: FilterState) => {
 		let filtered = filteredRecords;
+		console.log("Applying filters:", filters);
 
 		if (filters.uav) {
 			filtered = filtered.filter((record) =>

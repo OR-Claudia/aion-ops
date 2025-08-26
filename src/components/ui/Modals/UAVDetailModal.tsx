@@ -40,7 +40,11 @@ export interface UAVDetailModalProps {
 	onMissionPathClick?: () => void;
 }
 
-const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data, onMissionPathClick }) => {
+const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
+	onClose,
+	data,
+	onMissionPathClick,
+}) => {
 	if (!data) return null;
 
 	const handleMinimize = () => {
@@ -137,40 +141,8 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data, onMissio
 							}
 						/>
 					</div>
-
-					{/* Detection boxes (if any) */}
-					{data.detections &&
-						data.detections.map((detection) => (
-							<div key={detection.id}>
-								{/* Detection box */}
-								<div
-									className="absolute border-2 border-[#C10000]"
-									style={{
-										left: `${detection.bounds.x}px`,
-										top: `${detection.bounds.y}px`,
-										width: `${detection.bounds.width}px`,
-										height: `${detection.bounds.height}px`,
-									}}
-								/>
-								{/* Detection label */}
-								<div
-									className="absolute flex justify-center items-center gap-2.5 px-2 py-1 rounded-[0px_4px_0px_0px] border border-[#C10000] bg-[#C10000]"
-									style={{
-										left: `${detection.bounds.x}px`,
-										top: `${detection.bounds.y - 24}px`,
-									}}
-								>
-									<div className="text-[#E3F3F2] text-right font-ubuntu text-[8px] font-normal leading-normal">
-										ID: {detection.id}
-										<br />
-										{detection.type} - {detection.confidence}%
-									</div>
-								</div>
-							</div>
-						))}
 				</div>
 			</div>
-
 			{/* Stats Section */}
 			<div className="px-[27px] mb-[20px]">
 				<div className="flex items-center justify-center gap-[12px] w-[207px] mx-auto">
@@ -241,10 +213,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data, onMissio
 
 				<div className="text-[#E3F3F2] flex flex-row items-center font-ubuntu text-sm font-normal leading-normal">
 					<span className="font-bold">Mission Path:</span>
-					<Button
-						variant="underline"
-						onClick={handleMissionPathClick}
-					>
+					<Button variant="underline" onClick={handleMissionPathClick}>
 						{data.MissionPath}
 					</Button>
 				</div>

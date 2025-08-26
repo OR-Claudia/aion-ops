@@ -78,6 +78,10 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 		}
 	};
 
+	const coordinates = `N:${position[0].toFixed(4)}, E:${position[1].toFixed(
+		4
+	)}`;
+
 	// Create custom icon for the marker
 	const createCustomIcon = () => {
 		const baseClasses = `flex p-2 justify-center items-center gap-[10px] cursor-pointer transition-all duration-300 ${getTypeClasses()}`;
@@ -94,9 +98,7 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 				<div class="text-[#E3F3F2] font-ubuntu text-xs font-normal leading-normal" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100px;">${
 					data.name
 				}</div>
-				<div class="text-[#E3F3F2] font-ubuntu text-[10px] font-normal leading-normal" style="white-space: nowrap;">${
-					data.coordinates
-				}</div>
+				<div class="text-[#E3F3F2] font-ubuntu text-[10px] font-normal leading-normal" style="white-space: nowrap;">${coordinates}</div>
 				</div>
 			</div>
 			<button

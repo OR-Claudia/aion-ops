@@ -80,7 +80,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		type: "online" | "warning" | "danger",
 		uavData: Parameters<typeof generateUAVDetailData>[0]
 	) => {
-		const missionPathCoordinates = generateMissionCoordinates();
+		const missionPathCoordinates = generateMissionCoordinates(position);
 
 		return {
 			position,
