@@ -24,6 +24,7 @@ export interface UAVDetailData {
 	MissionPath: string;
 	MissionPathLink?: string;
 	videoFeed?: string;
+	droneType: string;
 	detections?: Array<{
 		id: string;
 		type: string;
@@ -101,6 +102,8 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 	const handleRequestControl = () => {
 		console.log("Request control:", data.id);
 	};
+
+	console.log("UAVDetailModal rendered for UAV:", data);
 
 	return (
 		<Modal

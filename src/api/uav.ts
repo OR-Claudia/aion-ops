@@ -38,7 +38,7 @@ const uavData: UAVData[] = [
 		batteryPercentage: 98,
 		description: "Combat UAV with advanced targeting systems.",
 		controlUnit: "Sarah Connor (EMP102)",
-		mission: "Combat Air Patrol",
+		mission: "Combat Patrol",
 		keyEvents: "Mission completed 14/03/2025",
 		totalFlightTime: "412h",
 		timeSinceLastContact: "N/A",
@@ -133,7 +133,6 @@ const uavData: UAVData[] = [
 		name: "KUNA",
 		type: "combat",
 		status: "offline",
-
 		image: "src/assets/img/Kuna_2.jpg",
 		lastContact: "08/03/2025 08:44 am",
 		readyForFlight: "Yes",

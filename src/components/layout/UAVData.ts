@@ -251,6 +251,17 @@ export const generateUAVDetailData = (basicData: {
 		return undefined;
 	};
 
+	// Generate drone type based on UAV name
+	const getDroneType = (name: string): string => {
+		if (name.includes("KUNA")) return "Kuna";
+		if (name.includes("Kolibri")) return "Kolibri";
+		if (name.includes("Shark")) return "Athlon Furia";
+		if (name.includes("Bobr")) return "Bobr UJ26";
+		if (name.includes("Hawk")) return "Hawk";
+		if (name.includes("Falcon")) return "Falcon";
+		return "Unknown";
+	};
+
 	const status = getStatus(basicData.status);
 	const signal = getSignal(basicData.signal);
 	const battery = getBattery(basicData.battery);
@@ -269,6 +280,7 @@ export const generateUAVDetailData = (basicData: {
 		missionLink: "/missions",
 		MissionPath: getMissionPath(basicData.name),
 		MissionPathLink: "/flight-paths",
+		droneType: getDroneType(basicData.name),
 		detections: getDetections(basicData.name),
 	};
 };

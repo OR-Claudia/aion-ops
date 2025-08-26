@@ -68,7 +68,7 @@ const UAVCard: React.FC<UAVCardProps> = ({
 		>
 			{/* Background border highlight */}
 			<div
-				className={cn("w-[300px] h-[225px] absolute left-0 top-0", {
+				className={cn("w-[301px] h-[227px] absolute left-0 top-0", {
 					["bg-[rgba(211,251,216,0.6)]"]: selected,
 				})}
 				style={{ borderRadius: "0px 4px 4px 4px" }}
@@ -145,7 +145,7 @@ const UAVCard: React.FC<UAVCardProps> = ({
 			/>
 
 			{/* UAV Info and Status */}
-			<div className="absolute left-[16px] top-[177px] w-[265px] h-[40px] flex justify-between items-center">
+			<div className="absolute left-[16px] top-[176px] w-[265px] h-[40px] flex justify-between items-center">
 				<div className="flex flex-col justify-center items-start gap-0.5">
 					<span className="text-app-text overflow-hidden text-ellipsis whitespace-nowrap font-share-tech text-sm font-normal max-w-[180px]">
 						{`[${uav.id}] ${uav.name}`}

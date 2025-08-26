@@ -71,7 +71,6 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 			</div>
 
 			{/* UAV Image */}
-
 			<img
 				src={uav.image}
 				alt={uav.name}
@@ -79,16 +78,16 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 			/>
 
 			{/* Status Indicators */}
-			<div className="absolute right-16 top-28 flex flex-col items-center gap-[16px] w-[97px]">
+			<div className="absolute right-16 top-28 flex flex-col items-center justify-evenly gap-5 w-[60px]">
 				{/* Signal Status */}
 				<div className="flex flex-col items-center gap-3">
-					<div className="flex items-center justify-center gap-[4px] w-[63px] h-[15px] mb-[3px]">
+					<div className="flex items-center justify-center gap-2 w-[63px] h-[15px] mb-[3px]">
 						<img
 							src={wifiIcon}
 							alt="wifi signal"
 							className="w-[18px] h-[14px]"
 						/>
-						<span className="text-[#E3F3F2] font-ubuntu text-[12px] font-normal">
+						<span className="text-[#E3F3F2] font-ubuntu text-sm font-normal">
 							{getSignalBarWidth()}%
 						</span>
 					</div>
@@ -97,13 +96,13 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 
 				{/* Battery Status */}
 				<div className="flex flex-col items-center gap-3">
-					<div className="flex items-center justify-center gap-[4px] w-[63.75px] h-[15px] mb-[3px]">
+					<div className="flex items-center justify-center gap-2 w-full h-[15px] mb-[3px]">
 						<img
 							src={batteryFullIcon}
 							alt="battery level"
 							className="w-[18px] h-[14px]"
 						/>
-						<span className="text-[#E3F3F2] font-ubuntu text-[12px] font-normal">
+						<span className="text-[#E3F3F2] font-ubuntu text-sm font-normal">
 							{getBatteryBarWidth()}%
 						</span>
 					</div>
@@ -111,49 +110,49 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 				</div>
 
 				{/* Status indicator */}
-				<div className="flex items-center gap-[3px] w-[97px] h-[16px] justify-center">
+				<div className="flex items-center gap-[3px] justify-center">
 					<div
-						className="w-4 h-2 rounded-full"
+						className="w-4 h-4 rounded-full"
 						style={{ backgroundColor: statusInfo.color }}
 					/>
-					<span className="text-[#E3F3F2] font-ubuntu text-[12px] font-bold">
+					<span className="text-[#E3F3F2] font-ubuntu text-sm font-bold">
 						Status:
 					</span>
-					<span className="text-[#E3F3F2] font-ubuntu text-[12px] font-normal">
+					<span className="text-[#E3F3F2] font-ubuntu text-sm font-normal">
 						{statusInfo.label}
 					</span>
 				</div>
 			</div>
 
 			{/* Detail Information */}
-			<div className="absolute left-8 mt-4 top-[45%] w-fit flex flex-col gap-[6px]">
-				<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal w-[396px]">
-					<span className="font-bold">Description:</span> {uav?.description}
+			<div className="absolute left-8 mt-4 top-[42%] w-fit flex flex-col gap-2">
+				<div className="text-[#E3F3F2] font-ubuntu text-md font-normal leading-normal w-[396px]">
+					<span className="font-bold">Description: </span> {uav?.description}
 				</div>
 
-				<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-					<span className="font-bold">Drone type:</span> {uav.droneType}
+				<div className="text-[#E3F3F2] font-ubuntu text-md font-normal leading-normal">
+					<span className="font-bold">Drone type: </span> {uav.droneType}
 				</div>
 
-				<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-					<span className="font-bold">Mission:</span> {uav.mission}
+				<div className="text-[#E3F3F2] font-ubuntu text-md font-normal leading-normal">
+					<span className="font-bold">Mission: </span> {uav.mission}
 				</div>
 
-				<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-					<span className="font-bold">Control unit:</span> {uav.controlUnit}
+				<div className="text-[#E3F3F2] font-ubuntu text-md font-normal leading-normal">
+					<span className="font-bold">Control unit: </span> {uav.controlUnit}
 				</div>
 
-				<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-					<span className="font-bold">Key events:</span> {uav.keyEvents}
+				<div className="text-[#E3F3F2] font-ubuntu text-md font-normal leading-normal">
+					<span className="font-bold">Key events: </span> {uav.keyEvents}
 				</div>
 
-				<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-					<span className="font-bold">Total flight time:</span>
+				<div className="text-[#E3F3F2] font-ubuntu text-md font-normal leading-normal">
+					<span className="font-bold">Total flight time: </span>
 					{uav.totalFlightTime}
 				</div>
 
-				<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-					<span className="font-bold">Time since last contact:</span>
+				<div className="text-[#E3F3F2] font-ubuntu text-md font-normal leading-normal">
+					<span className="font-bold">Time since last contact: </span>
 					{uav.timeSinceLastContact}
 				</div>
 			</div>
