@@ -9,6 +9,7 @@ import {
 import { LatLngBounds } from "leaflet";
 import Modal from "./Modal";
 import type { StorageData } from "../StorageItem";
+import { reverseGeocode } from "../../../lib/utils";
 
 interface MissionPathModalProps {
 	isOpen: boolean;
@@ -22,29 +23,6 @@ interface DetectionCluster {
 	count: number;
 	type: "low" | "medium" | "high";
 }
-
-// Simple reverse geocoding function
-const reverseGeocode = async (lat: number, lon: number): Promise<string> => {
-	try {
-		const response = await fetch(
-			`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&accept-language=en`
-		);
-		const data = await response.json();
-
-		if (data && data.address) {
-			const city =
-				data.address.city || data.address.town || data.address.village || "";
-			const country = data.address.country || "";
-			return city && country
-				? `${city}, ${country}`
-				: country || "Unknown Location";
-		}
-		return "Unknown Location";
-	} catch (error) {
-		console.error("Reverse geocoding failed:", error);
-		return "Unknown Location";
-	}
-};
 
 const MissionPathModal: React.FC<MissionPathModalProps> = ({
 	isOpen,
