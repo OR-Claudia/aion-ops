@@ -5,10 +5,12 @@ interface FeedItemProps {
 	timestamp?: string;
 	region: string;
 	status: string;
+	id: number;
 	flightDuration: string;
 }
 
 const FeedItem: React.FC<FeedItemProps> = ({
+	id,
 	name,
 	timestamp,
 	region,
@@ -20,7 +22,7 @@ const FeedItem: React.FC<FeedItemProps> = ({
 			<div className="relative w-[277px] h-[82px] mt-[6px]">
 				<div className="flex justify-between items-start w-full">
 					<div className="text-[#E3F3F2] font-ubuntu text-base font-normal leading-normal overflow-hidden text-ellipsis whitespace-nowrap max-w-[145px]">
-						{name}
+						{`[${id}] ${name}`}
 					</div>
 					{timestamp && (
 						<div className="text-[#E3F3F2] text-right font-ubuntu text-[10px] font-normal leading-normal opacity-60 w-[116px]">

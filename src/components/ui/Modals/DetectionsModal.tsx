@@ -55,7 +55,7 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 				<span className="mr-2 font-medium my-3">Active source:</span>
 				<Tag variant="primary" text={capitalize(activeTab)} />
 			</div>
-			<div className="max-h-[550px] overflow-y-auto py-3 my-2">
+			<div className="max-h-[550px] overflow-y-auto pb-3 mb-2">
 				{detections?.map((d) => (
 					<DetectionListItem detection={d} key={`${d.id}-${d.timestamp}`} />
 				))}

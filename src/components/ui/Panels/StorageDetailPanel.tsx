@@ -27,12 +27,12 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 		{
 			id: "rgb",
 			label: "RGB",
-			value: "http://193.123.68.104:8888/hls_stream/index.m3u8",
+			value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
 		},
 		{
 			id: "thermo",
 			label: "Thermo",
-			value: "http://193.123.68.104:8888/hls_stream/index.m3u8",
+			value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
 		},
 	];
 
@@ -104,7 +104,10 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 			<div className="flex-1 overflow-x-auto px-[25px] pb-[80px]">
 				<div className="mt-[14px]">
 					{/* Video Player with dynamic source based on active tab */}
-					<VideoPlayer src={getCurrentVideoSource()} />
+					<VideoPlayer
+						src={getCurrentVideoSource()}
+						height={activeTab === "rgb" ? "auto" : "300px"}
+					/>
 				</div>
 
 				{/* External links */}
