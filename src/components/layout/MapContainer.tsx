@@ -58,7 +58,8 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		new Set()
 	);
 	const [isMissionPathModalOpen, setIsMissionPathModalOpen] = useState(false);
-	const [selectedUAVForMissionPath, setSelectedUAVForMissionPath] = useState<any>(null);
+	const [selectedUAVForMissionPath, setSelectedUAVForMissionPath] =
+		useState<any>(null);
 
 	// Warsaw coordinates (center remains the same)
 	const warsawCenter: [number, number] = [52.2297, 21.0122];
@@ -91,7 +92,10 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			type,
 			data: {
 				...generateUAVDetailData(uavData),
-				missionPathCoordinates: missionPathCoordinates.map(([lat, lon]) => ({ lat, lon }))
+				missionPathCoordinates: missionPathCoordinates.map(([lat, lon]) => ({
+					lat,
+					lon,
+				})),
 			},
 			MissionPath: missionPathCoordinates,
 			MissionPathColor: getMissionPathColor(type),
@@ -633,6 +637,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 				mapRef.current.off("moveend", updateClusterState);
 			}
 		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [showIndicators, clusterGroupRef]);
 
 	const handleProviderChange = (providerName: string, url: string) => {

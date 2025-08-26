@@ -45,22 +45,22 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 	// split to 50
 	return (
 		<Modal
-			maxHeight={"700px"}
+			maxHeight={"740px"}
 			title={`Detections - ${record.title}`}
 			isOpen={isOpen}
 			onClose={onClose}
 			width={"640px"}
 		>
 			<div className="flex items-center ">
-				<span className="mr-2 font-medium">Active source:</span>
+				<span className="mr-2 font-medium my-3">Active source:</span>
 				<Tag variant="primary" text={capitalize(activeTab)} />
 			</div>
-			<div className="max-h-[550px] overflow-y-auto py-3 mb-3">
+			<div className="max-h-[550px] overflow-y-auto py-3 my-2">
 				{detections?.map((d) => (
 					<DetectionListItem detection={d} key={`${d.id}-${d.timestamp}`} />
 				))}
 			</div>
-			<div className="flex place-content-between mt-5">
+			<div className="flex place-content-between mt-3">
 				<span className="text-xl font-bold">{`Current detections:`}</span>
 				<span className="text-2xl font-normal">{numberOfDetections}</span>
 			</div>
