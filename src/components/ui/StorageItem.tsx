@@ -139,7 +139,7 @@ const StorageItem: React.FC<StorageItemProps> = ({
 					{/* Flight Duration */}
 					<div className="flex flex-col items-start gap-[6px] min-w-0 flex-1">
 						<span className="text-[#E3F3F2] font-ubuntu text-xs font-light whitespace-nowrap">
-							Flight duration
+							Mission duration
 						</span>
 						<span className="text-[#E3F3F2] font-ubuntu text-sm opacity-90 truncate w-full">
 							{record.flightDuration}

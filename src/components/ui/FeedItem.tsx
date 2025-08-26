@@ -49,7 +49,7 @@ const FeedItem: React.FC<FeedItemProps> = ({
 					</div>
 					<div className="flex justify-between items-baseline">
 						<span className="text-[#E3F3F2] font-ubuntu text-[10px] font-normal leading-normal">
-							Flight duration
+							Mission duration
 						</span>
 						<span className="text-[#E3F3F2] font-ubuntu text-[10px] font-normal leading-normal">
 							{flightDuration}

@@ -12,6 +12,7 @@ export interface Detection {
 	class_name: string;
 	confidence: number;
 	coordinates: Coordinate;
+	// track_id: number;
 	bbox: {
 		x1: number;
 		y1: number;
@@ -22,6 +23,9 @@ export interface Detection {
 		center_x: number;
 		center_y: number;
 	};
+	// tracking_info: {
+	// 	frame_number: number;
+	// };
 }
 
 interface DetectionsModalProps {
