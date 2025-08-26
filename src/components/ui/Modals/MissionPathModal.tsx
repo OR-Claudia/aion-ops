@@ -9,12 +9,14 @@ import {
 import { LatLngBounds } from "leaflet";
 import Modal from "./Modal";
 import type { StorageData } from "../StorageItem";
+import type { UAVDetailData } from "./UAVDetailModal";
 import { reverseGeocode } from "../../../lib/utils";
 
 interface MissionPathModalProps {
 	isOpen: boolean;
 	onClose: () => void;
-	record: StorageData;
+	record?: StorageData;
+	uavData?: UAVDetailData;
 }
 
 interface DetectionCluster {
@@ -28,16 +30,38 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 	isOpen,
 	onClose,
 	record,
+	uavData,
 }) => {
 	const [region, setRegion] = useState<string>("Loading...");
-	const numberOfDetections = record.detected?.detections?.length || 0;
+
+	// Determine which data source to use
+	const isUAVData = !!uavData;
+
+	// Get mission path coordinates and detections based on data type
+	const missionPathCoordinates = isUAVData
+		? uavData?.missionPathCoordinates || []
+		: record?.MissionPath || [];
+
+	const numberOfDetections = isUAVData
+		? uavData?.detections?.length || 0
+		: record?.detected?.detections?.length || 0;
+
+	const title = isUAVData
+		? `${uavData?.name} - Mission Path`
+		: record?.title || "Mission Path";
 
 	// Generate detection clusters based on Mission Path and detections
 	const generateDetectionClusters = (): DetectionCluster[] => {
-		if (!record.MissionPath || record.MissionPath.length === 0) return [];
+		if (!missionPathCoordinates || missionPathCoordinates.length === 0)
+			return [];
+
+		// For live UAV data with 0 detections, don't generate any clusters
+		if (isUAVData && numberOfDetections === 0) {
+			return [];
+		}
 
 		const clusters: DetectionCluster[] = [];
-		const pathLength = record.MissionPath.length;
+		const pathLength = missionPathCoordinates.length;
 
 		// Ensure we have at least some clusters along the path
 		const numClusters = Math.min(Math.max(3, Math.floor(pathLength / 3)), 8);
@@ -45,8 +69,14 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 
 		// Add clusters at strategic points along the Mission Path
 		for (let i = 0; i < pathLength; i += step) {
-			const point = record.MissionPath[i];
-			const detectionCount = Math.floor(Math.random() * 20) + 5; // 5-25 detections
+			const point = missionPathCoordinates[i];
+
+			// For UAV data, use actual detections; for storage data, simulate if needed
+			const detectionCount = isUAVData
+				? numberOfDetections
+				: numberOfDetections > 0
+				? numberOfDetections
+				: Math.floor(Math.random() * 20) + 5;
 
 			let type: "low" | "medium" | "high" = "low";
 			if (detectionCount > 15) type = "high";
@@ -67,12 +97,12 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 
 	// Calculate map bounds to fit all points
 	const calculateMapBounds = () => {
-		if (!record.MissionPath || record.MissionPath.length === 0) {
+		if (!missionPathCoordinates || missionPathCoordinates.length === 0) {
 			return new LatLngBounds([50.0, 19.0], [50.1, 19.1]);
 		}
 
-		const lats = record.MissionPath.map((p) => p.lat);
-		const lons = record.MissionPath.map((p) => p.lon);
+		const lats = missionPathCoordinates.map((p) => p.lat);
+		const lons = missionPathCoordinates.map((p) => p.lon);
 
 		const minLat = Math.min(...lats);
 		const maxLat = Math.max(...lats);
@@ -93,26 +123,26 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 
 	// Reverse geocode the first point in the Mission Path
 	useEffect(() => {
-		if (record.MissionPath && record.MissionPath.length > 0) {
-			const firstPoint = record.MissionPath[0];
+		if (missionPathCoordinates && missionPathCoordinates.length > 0) {
+			const firstPoint = missionPathCoordinates[0];
 			reverseGeocode(firstPoint.lat, firstPoint.lon)
 				.then(setRegion)
 				.catch(() => setRegion("Unknown Location"));
 		} else {
 			setRegion("No flight data");
 		}
-	}, [record.MissionPath]);
+	}, [missionPathCoordinates]);
 
 	// Generate covered area polygon points (simplified convex hull approximation)
 	const generateCoveredArea = () => {
-		if (!record.MissionPath || record.MissionPath.length < 3) return [];
+		if (!missionPathCoordinates || missionPathCoordinates.length < 3) return [];
 
 		const centerLat =
-			record.MissionPath.reduce((sum, p) => sum + p.lat, 0) /
-			record.MissionPath.length;
+			missionPathCoordinates.reduce((sum, p) => sum + p.lat, 0) /
+			missionPathCoordinates.length;
 		const centerLon =
-			record.MissionPath.reduce((sum, p) => sum + p.lon, 0) /
-			record.MissionPath.length;
+			missionPathCoordinates.reduce((sum, p) => sum + p.lon, 0) /
+			missionPathCoordinates.length;
 
 		// Generate an elliptical area around the center
 		const radiusLat = 0.02; // ~2km
@@ -146,9 +176,9 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 	};
 
 	const getClusterRadius = (count: number) => {
-		if (count > 15) return 18;
-		if (count > 10) return 14;
-		return 10;
+		if (count > 15) return 14;
+		if (count > 10) return 10;
+		return 8;
 	};
 
 	// Custom component for cluster markers with labels
@@ -162,7 +192,7 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 				pathOptions={{
 					color: getClusterColor(cluster.type),
 					fillColor: getClusterColor(cluster.type),
-					fillOpacity: 1,
+					fillOpacity: 0.7,
 					weight: 0,
 					stroke: false,
 				}}
@@ -173,7 +203,7 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 	return (
 		<Modal
 			maxHeight={"700px"}
-			title={`Mission Path - ${record.title}`}
+			title={title}
 			isOpen={isOpen}
 			onClose={onClose}
 			width={"640px"}
@@ -181,7 +211,7 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 			<div className="max-h-[550px] overflow-y-auto py-3 mb-3">
 				{/* Map Container */}
 				<div className="w-full h-[330px] rounded-[3px] mb-5 relative">
-					{record.MissionPath && record.MissionPath.length > 0 ? (
+					{missionPathCoordinates && missionPathCoordinates.length > 0 ? (
 						<>
 							<MapContainer
 								bounds={mapBounds}
@@ -189,7 +219,7 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 									height: "100%",
 									width: "100%",
 									borderRadius: "3px",
-									filter: "brightness(0.7) contrast(1.2)",
+									filter: "brightness(1.5) contrast(1) saturate(1.2)",
 								}}
 								zoomControl={false}
 								dragging={false}
@@ -201,8 +231,8 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 								className="rounded-[3px]"
 							>
 								<TileLayer
-									url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-									attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+									url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+									attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>'
 								/>
 
 								{/* Covered Area */}
@@ -211,11 +241,11 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 										// eslint-disable-next-line @typescript-eslint/no-explicit-any
 										positions={coveredAreaPoints as any}
 										pathOptions={{
-											color: "#87FFF3",
-											fillColor: "#87FFF3",
-											fillOpacity: 0.15,
-											weight: 1,
-											opacity: 0.3,
+											color: "#00C6B8",
+											fillColor: "#00C6B8",
+											fillOpacity: 0.2,
+											weight: 2,
+											opacity: 0.6,
 											dashArray: "5, 5",
 										}}
 									/>
@@ -223,12 +253,13 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 
 								{/* Mission Path */}
 								<Polyline
-									positions={record.MissionPath.map((p) => [p.lat, p.lon])}
+									positions={missionPathCoordinates.map((p) => [p.lat, p.lon])}
 									pathOptions={{
-										color: "#00C6B8",
+										color: "#E3F3F2",
 										weight: 3,
-										opacity: 0.8,
-										dashArray: "10, 5",
+										opacity: 1,
+										stroke: true,
+										dashArray: "15, 8",
 									}}
 								/>
 
@@ -257,7 +288,7 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 											transform: "translate(-50%, -50%)",
 										}}
 									>
-										<span className="text-[#242B2C] font-ubuntu text-xs font-normal">
+										<span className="text-white font-ubuntu text-xs font-bold drop-shadow-md">
 											{cluster.count}
 										</span>
 									</div>

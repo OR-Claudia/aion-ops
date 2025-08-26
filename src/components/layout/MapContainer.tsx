@@ -10,6 +10,7 @@ import {
 	UAVDetailModal,
 	MissionPath,
 } from "../ui";
+import MissionPathModal from "../ui/Modals/MissionPathModal";
 
 import {
 	generateUAVDetailData,
@@ -56,26 +57,46 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	const [clusteredUAVIds, setClusteredUAVIds] = useState<Set<string>>(
 		new Set()
 	);
+	const [isMissionPathModalOpen, setIsMissionPathModalOpen] = useState(false);
+	const [selectedUAVForMissionPath, setSelectedUAVForMissionPath] = useState<any>(null);
 
 	// Warsaw coordinates (center remains the same)
 	const warsawCenter: [number, number] = [52.2297, 21.0122];
+
+	// Mission path modal handlers
+	const handleMissionPathClick = (uavData: any) => {
+		setSelectedUAVForMissionPath(uavData);
+		setIsMissionPathModalOpen(true);
+	};
+
+	const handleCloseMissionPath = () => {
+		setIsMissionPathModalOpen(false);
+		setSelectedUAVForMissionPath(null);
+	};
 
 	// Helper function to create UAV location with Mission Path
 	const createUAVLocation = (
 		position: [number, number],
 		type: "online" | "warning" | "offline",
 		uavData: Parameters<typeof generateUAVDetailData>[0]
-	) => ({
-		position,
-		type,
-		data: generateUAVDetailData(uavData),
-		MissionPath: generateMissionPathCoordinates(
+	) => {
+		const missionPathCoordinates = generateMissionPathCoordinates(
 			position,
 			uavData.id.toString(),
 			type
-		),
-		MissionPathColor: getMissionPathColor(type),
-	});
+		);
+
+		return {
+			position,
+			type,
+			data: {
+				...generateUAVDetailData(uavData),
+				missionPathCoordinates: missionPathCoordinates.map(([lat, lon]) => ({ lat, lon }))
+			},
+			MissionPath: missionPathCoordinates,
+			MissionPathColor: getMissionPathColor(type),
+		};
+	};
 
 	// Comprehensive UAV locations covering a wider area for better simulation
 	const uavLocations = [
@@ -655,6 +676,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 										key={`${uav.data.id}-modal`}
 										data={uav.data}
 										onClose={() => handleCloseUAVModal(uav.data.id as number)}
+										onMissionPathClick={() => handleMissionPathClick(uav)}
 									/>
 								);
 							}
@@ -759,6 +781,15 @@ const MapContainer: React.FC<MapContainerProps> = ({
 					<MapProviderSwitcher onProviderChange={handleProviderChange} />
 				)}
 			</div>
+
+			{/* Mission Path Modal - rendered at top level for full screen dragging */}
+			{isMissionPathModalOpen && selectedUAVForMissionPath && (
+				<MissionPathModal
+					isOpen={isMissionPathModalOpen}
+					onClose={handleCloseMissionPath}
+					uavData={selectedUAVForMissionPath.data}
+				/>
+			)}
 		</>
 	);
 };

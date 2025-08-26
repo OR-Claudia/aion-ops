@@ -31,18 +31,26 @@ export interface UAVDetailData {
 		confidence: number;
 		bounds: { x: number; y: number; width: number; height: number };
 	}>;
+	missionPathCoordinates?: Array<{ lat: number; lon: number }>;
 }
 
 export interface UAVDetailModalProps {
 	onClose: () => void;
 	data: UAVDetailData;
+	onMissionPathClick?: () => void;
 }
 
-const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
+const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data, onMissionPathClick }) => {
 	if (!data) return null;
 
 	const handleMinimize = () => {
 		onClose();
+	};
+
+	const handleMissionPathClick = () => {
+		if (onMissionPathClick) {
+			onMissionPathClick();
+		}
 	};
 
 	const getSignalIcon = () => {
@@ -233,18 +241,12 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({ onClose, data }) => {
 
 				<div className="text-[#E3F3F2] flex flex-row items-center font-ubuntu text-sm font-normal leading-normal">
 					<span className="font-bold">Mission Path:</span>
-					{data.MissionPathLink ? (
-						<Button
-							variant="underline"
-							onClick={() =>
-								console.log("Open Mission Path:", data.MissionPath)
-							}
-						>
-							{data.MissionPath}
-						</Button>
-					) : (
-						<span className="text-[#00C6B8] underline">{data.MissionPath}</span>
-					)}
+					<Button
+						variant="underline"
+						onClick={handleMissionPathClick}
+					>
+						{data.MissionPath}
+					</Button>
 				</div>
 			</div>
 
