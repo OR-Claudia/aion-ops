@@ -17,13 +17,23 @@ import MissionPathModal from "../components/ui/Modals/MissionPathModal";
 import { getStorageList } from "../api/storage";
 
 const StoragePage: React.FC = () => {
-	const [filteredRecords, setFilteredRecords] = useState<StorageData[]>([]);
+	const [originalRecords, setOriginalRecords] = useState<StorageData[]>([]);
+	const [filtered, setFiltered] = useState<StorageData[]>([]);
 	const [selectedRecord, setSelectedRecord] = useState<StorageData | null>(
 		null
 	);
+	// Add the missing state variables
 	const [detectionsOpen, setDetectionsOpen] = useState<boolean>(false);
 	const [MissionPathOpen, setMissionPathOpen] = useState<boolean>(false);
 	const [activeTab, setActiveTab] = useState("rgb");
+
+	useEffect(() => {
+		const fetchStorageData = async () => {
+			const data = await getStorageList();
+			setOriginalRecords(data);
+		};
+		fetchStorageData();
+	}, []);
 
 	// Filter configurations for the storage list
 	const filterConfigs: FilterConfig[] = [
@@ -44,17 +54,8 @@ const StoragePage: React.FC = () => {
 		},
 	];
 
-	useEffect(() => {
-		const fetchStorageData = async () => {
-			const data = await getStorageList();
-			setFilteredRecords(data);
-		};
-		fetchStorageData();
-	}, []);
-
 	const handleFilterChange = (filters: FilterState) => {
-		let filtered = filteredRecords;
-		console.log("Applying filters:", filters);
+		let filtered = originalRecords;
 
 		if (filters.uav) {
 			filtered = filtered.filter((record) =>
@@ -71,7 +72,7 @@ const StoragePage: React.FC = () => {
 				(record) => record.missionType === filters.missionType
 			);
 		}
-		setFilteredRecords(filtered);
+		setFiltered(filtered);
 	};
 
 	const handleRecordClick = (record: StorageData) => {
@@ -118,7 +119,7 @@ const StoragePage: React.FC = () => {
 							{/* Content inside container */}
 							<div className="w-full h-full overflow-hidden flex px-[20px]">
 								<StorageList
-									records={filteredRecords}
+									records={filtered.length > 0 ? filtered : originalRecords}
 									selectedRecord={selectedRecord}
 									onRecordClick={handleRecordClick}
 									isDetailView={!!selectedRecord}

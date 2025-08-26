@@ -202,7 +202,7 @@ const storageData: StorageData[] = [
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
-		coordinates: "-14.936, 178.9866",
+		coordinates: "50.639567, 35.407889",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
 		mission: "Reconnaissance",
@@ -260,7 +260,7 @@ const storageData: StorageData[] = [
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
-		coordinates: "-14.936, 178.9866",
+		coordinates: "50.410123, 35.091456",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
 		mission: "Reconnaissance",
@@ -330,7 +330,7 @@ const storageData: StorageData[] = [
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
-		coordinates: "-14.936, 178.9866",
+		coordinates: "50.703456, 35.256789",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
 		mission: "Reconnaissance",
@@ -380,7 +380,7 @@ const storageData: StorageData[] = [
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
-		coordinates: "-14.936, 178.9866",
+		coordinates: "50.414567, 35.762789",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
 		mission: "Reconnaissance",
@@ -458,7 +458,7 @@ const storageData: StorageData[] = [
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
-		coordinates: "-14.936, 178.9866",
+		coordinates: "50.231456, 35.752891",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
 		mission: "Reconnaissance",
