@@ -16,7 +16,7 @@ const storageData: StorageData[] = [
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
-		coordinates: "-14.936, 178.9866",
+		coordinates: "50.59227, 35.307322",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
 		mission: "Recon",
@@ -27,40 +27,40 @@ const storageData: StorageData[] = [
 			"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 		MissionPath: [
 			{
-				lat: 52.229774,
-				lon: 21.0123,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.23001,
-				lon: 21.012274,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.230014,
-				lon: 21.012315,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.229216,
-				lon: 21.012063,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.229016,
-				lon: 21.012134,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.228829,
-				lon: 21.011978,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.22861,
-				lon: 21.012108,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 		],
 		detected: detectionsData,
@@ -78,7 +78,7 @@ const storageData: StorageData[] = [
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
-		coordinates: "-14.936, 178.9866",
+		coordinates: "50.59277, 35.307322",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
 		mission: "Recon",
@@ -89,40 +89,40 @@ const storageData: StorageData[] = [
 			"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 		MissionPath: [
 			{
-				lat: 52.229774,
-				lon: 21.0123,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.23001,
-				lon: 21.012274,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.230014,
-				lon: 21.012315,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.229216,
-				lon: 21.012063,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.229016,
-				lon: 21.012134,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.228829,
-				lon: 21.011978,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.22861,
-				lon: 21.012108,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 		],
 		detected: detectionsData,
@@ -140,7 +140,7 @@ const storageData: StorageData[] = [
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
-		coordinates: "-14.936, 178.9866",
+		coordinates: "50.59277, 35.307322",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
 		mission: "Recon",
@@ -151,40 +151,40 @@ const storageData: StorageData[] = [
 			"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 		MissionPath: [
 			{
-				lat: 52.229774,
-				lon: 21.0123,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.23001,
-				lon: 21.012274,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.230014,
-				lon: 21.012315,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.229216,
-				lon: 21.012063,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.229016,
-				lon: 21.012134,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.228829,
-				lon: 21.011978,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.22861,
-				lon: 21.012108,
+				lat: 50.59277,
+				lon: 35.307222,
 			},
 		],
 		detected: detectionsData,
@@ -213,40 +213,36 @@ const storageData: StorageData[] = [
 			"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 		MissionPath: [
 			{
-				lat: 52.229774,
-				lon: 21.0123,
+				lat: 50.590833,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.23001,
-				lon: 21.012274,
+				lat: 50.595124,
+				lon: 35.315678,
 			},
 			{
-				lat: 52.230014,
-				lon: 21.012315,
+				lat: 50.601456,
+				lon: 35.328945,
 			},
 			{
-				lat: 52.229216,
-				lon: 21.012063,
+				lat: 50.608234,
+				lon: 35.343267,
 			},
 			{
-				lat: 52.229016,
-				lon: 21.012134,
+				lat: 50.615789,
+				lon: 35.358912,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.623456,
+				lon: 35.375634,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.631923,
+				lon: 35.392156,
 			},
 			{
-				lat: 52.228829,
-				lon: 21.011978,
-			},
-			{
-				lat: 52.22861,
-				lon: 21.012108,
+				lat: 50.639567,
+				lon: 35.407889,
 			},
 		],
 		detected: detectionsData,
@@ -275,40 +271,48 @@ const storageData: StorageData[] = [
 			"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 		MissionPath: [
 			{
-				lat: 52.229774,
-				lon: 21.0123,
+				lat: 50.590833,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.23001,
-				lon: 21.012274,
+				lat: 50.582456,
+				lon: 35.298765,
 			},
 			{
-				lat: 52.230014,
-				lon: 21.012315,
+				lat: 50.571234,
+				lon: 35.285432,
 			},
 			{
-				lat: 52.229216,
-				lon: 21.012063,
+				lat: 50.557891,
+				lon: 35.268901,
 			},
 			{
-				lat: 52.229016,
-				lon: 21.012134,
+				lat: 50.542345,
+				lon: 35.249567,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.524789,
+				lon: 35.227234,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.505123,
+				lon: 35.202678,
 			},
 			{
-				lat: 52.228829,
-				lon: 21.011978,
+				lat: 50.483567,
+				lon: 35.176234,
 			},
 			{
-				lat: 52.22861,
-				lon: 21.012108,
+				lat: 50.460234,
+				lon: 35.148567,
+			},
+			{
+				lat: 50.435678,
+				lon: 35.120123,
+			},
+			{
+				lat: 50.410123,
+				lon: 35.091456,
 			},
 		],
 		detected: detectionsData,
@@ -337,40 +341,28 @@ const storageData: StorageData[] = [
 			"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 		MissionPath: [
 			{
-				lat: 52.229774,
-				lon: 21.0123,
+				lat: 50.590833,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.23001,
-				lon: 21.012274,
+				lat: 50.612345,
+				lon: 35.301567,
 			},
 			{
-				lat: 52.230014,
-				lon: 21.012315,
+				lat: 50.634567,
+				lon: 35.294123,
 			},
 			{
-				lat: 52.229216,
-				lon: 21.012063,
+				lat: 50.657234,
+				lon: 35.284678,
 			},
 			{
-				lat: 52.229016,
-				lon: 21.012134,
+				lat: 50.680123,
+				lon: 35.272345,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
-			},
-			{
-				lat: 52.228984,
-				lon: 21.011908,
-			},
-			{
-				lat: 52.228829,
-				lon: 21.011978,
-			},
-			{
-				lat: 52.22861,
-				lon: 21.012108,
+				lat: 50.703456,
+				lon: 35.256789,
 			},
 		],
 		detected: detectionsData,
@@ -399,40 +391,56 @@ const storageData: StorageData[] = [
 			"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 		MissionPath: [
 			{
-				lat: 52.229774,
-				lon: 21.0123,
+				lat: 50.590833,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.23001,
-				lon: 21.012274,
+				lat: 50.583456,
+				lon: 35.325678,
 			},
 			{
-				lat: 52.230014,
-				lon: 21.012315,
+				lat: 50.574234,
+				lon: 35.347891,
 			},
 			{
-				lat: 52.229216,
-				lon: 21.012063,
+				lat: 50.563567,
+				lon: 35.374123,
 			},
 			{
-				lat: 52.229016,
-				lon: 21.012134,
+				lat: 50.551234,
+				lon: 35.404567,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.537891,
+				lon: 35.438234,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.523456,
+				lon: 35.475123,
 			},
 			{
-				lat: 52.228829,
-				lon: 21.011978,
+				lat: 50.507789,
+				lon: 35.515678,
 			},
 			{
-				lat: 52.22861,
-				lon: 21.012108,
+				lat: 50.491234,
+				lon: 35.559234,
+			},
+			{
+				lat: 50.473567,
+				lon: 35.605789,
+			},
+			{
+				lat: 50.454891,
+				lon: 35.655123,
+			},
+			{
+				lat: 50.435234,
+				lon: 35.707456,
+			},
+			{
+				lat: 50.414567,
+				lon: 35.762789,
 			},
 		],
 		detected: detectionsData,
@@ -461,40 +469,64 @@ const storageData: StorageData[] = [
 			"Lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Commodo Consequat.",
 		MissionPath: [
 			{
-				lat: 52.229774,
-				lon: 21.0123,
+				lat: 50.590833,
+				lon: 35.307222,
 			},
 			{
-				lat: 52.23001,
-				lon: 21.012274,
+				lat: 50.578234,
+				lon: 35.319567,
 			},
 			{
-				lat: 52.230014,
-				lon: 21.012315,
+				lat: 50.563456,
+				lon: 35.334891,
 			},
 			{
-				lat: 52.229216,
-				lon: 21.012063,
+				lat: 50.546789,
+				lon: 35.353234,
 			},
 			{
-				lat: 52.229016,
-				lon: 21.012134,
+				lat: 50.528123,
+				lon: 35.374567,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.507456,
+				lon: 35.398891,
 			},
 			{
-				lat: 52.228984,
-				lon: 21.011908,
+				lat: 50.484789,
+				lon: 35.426234,
 			},
 			{
-				lat: 52.228829,
-				lon: 21.011978,
+				lat: 50.460123,
+				lon: 35.456567,
 			},
 			{
-				lat: 52.22861,
-				lon: 21.012108,
+				lat: 50.433456,
+				lon: 35.489891,
+			},
+			{
+				lat: 50.404789,
+				lon: 35.526234,
+			},
+			{
+				lat: 50.374123,
+				lon: 35.565567,
+			},
+			{
+				lat: 50.341456,
+				lon: 35.607891,
+			},
+			{
+				lat: 50.306789,
+				lon: 35.653234,
+			},
+			{
+				lat: 50.270123,
+				lon: 35.701567,
+			},
+			{
+				lat: 50.231456,
+				lon: 35.752891,
 			},
 		],
 		detected: detectionsData,

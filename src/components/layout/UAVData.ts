@@ -1,53 +1,48 @@
 import type { UAVDetailData } from "../ui/Modals/UAVDetailModal";
 
-// Helper function to generate realistic Mission Path coordinates within 100 sq km
-export const generateMissionPathCoordinates = (
-	basePosition: [number, number],
-	uavId: string,
-	type: "online" | "warning" | "offline"
-): [number, number][] => {
+export const generateMissionCoordinates = (): [number, number][] => {
+	const basePosition: [number, number] = [50.590833, 35.307222];
+
+	const uavId = "UAV-1";
+	const type: "online" | "warning" | "offline" = "online";
+
 	const [baseLat, baseLng] = basePosition;
 	const coordinates: [number, number][] = [];
 
-	// Generate different path patterns based on UAV ID and type
-	const pathLength = type === "offline" ? 4 : Math.floor(Math.random() * 6) + 6; // 6-11 points for active UAVs, 4 for offline
-	const radius = 0.01; // Approximately 1.1 km radius for realistic movement
+	const isOffline = (
+		type: "online" | "warning" | "offline"
+	): type is "offline" => type === "offline";
+	const pathLength = isOffline(type) ? 4 : Math.floor(Math.random() * 6) + 6;
+	const radius = 0.01;
 
-	// Start from a point slightly away from current position (showing movement history)
 	const startOffsetLat = (Math.random() - 0.5) * radius * 1.5;
 	const startOffsetLng = (Math.random() - 0.5) * radius * 1.5;
 	coordinates.push([baseLat + startOffsetLat, baseLng + startOffsetLng]);
 
-	// Generate intermediate points leading to current position
 	for (let i = 1; i < pathLength - 1; i++) {
-		const t = i / (pathLength - 1); // Progress from 0 to 1
+		const t = i / (pathLength - 1);
 
-		// Create different movement patterns based on UAV ID
 		let lat: number, lng: number;
 
-		if (uavId.includes("1") || uavId.includes("UAV")) {
-			// Spiral pattern
+		if (uavId.includes("KUNA")) {
 			const angle = t * Math.PI * 3;
 			const currentRadius = radius * (1 - t) * 0.7;
 			lat =
 				baseLat + startOffsetLat * (1 - t) + Math.cos(angle) * currentRadius;
 			lng =
 				baseLng + startOffsetLng * (1 - t) + Math.sin(angle) * currentRadius;
-		} else if (uavId.includes("2") || uavId.includes("Hawk")) {
-			// Figure-8 pattern
+		} else if (uavId.includes("Hawk")) {
 			const angle = t * Math.PI * 2;
 			lat = baseLat + startOffsetLat * (1 - t) + Math.sin(angle) * radius * 0.4;
 			lng =
 				baseLng + startOffsetLng * (1 - t) + Math.sin(angle * 2) * radius * 0.3;
-		} else if (uavId.includes("3") || uavId.includes("Falcon")) {
-			// Linear patrol pattern - horizontal movement with small vertical oscillation
+		} else if (uavId.includes("Falcon")) {
 			lat =
 				baseLat +
 				startOffsetLat * (1 - t) +
 				Math.sin(t * Math.PI * 4) * radius * 0.2;
 			lng = baseLng + startOffsetLng * (1 - t) + (t - 0.5) * radius * 0.6;
-		} else if (uavId.includes("Kolibri") || uavId.includes("4452")) {
-			// Zigzag pattern - more horizontal than vertical
+		} else if (uavId.includes("Kolibri")) {
 			lat =
 				baseLat +
 				startOffsetLat * (1 - t) +
@@ -56,19 +51,16 @@ export const generateMissionPathCoordinates = (
 				baseLng +
 				startOffsetLng * (1 - t) +
 				Math.cos(t * Math.PI * 3) * radius * 0.5;
-		} else if (uavId.includes("Shark") || uavId.includes("3456")) {
-			// Circular pattern
+		} else if (uavId.includes("Shark")) {
 			const angle = t * Math.PI * 2.5;
 			lat = baseLat + startOffsetLat * (1 - t) + Math.cos(angle) * radius * 0.5;
 			lng = baseLng + startOffsetLng * (1 - t) + Math.sin(angle) * radius * 0.5;
 		} else {
-			// Smooth random walk pattern
 			const prevLat = coordinates[i - 1][0];
 			const prevLng = coordinates[i - 1][1];
 			const stepLat = (Math.random() - 0.5) * radius * 0.25;
 			const stepLng = (Math.random() - 0.5) * radius * 0.25;
-			// Gradually move towards base position more strongly as we progress
-			const progressWeight = t * 0.3; // Increase pull toward base as we progress
+			const progressWeight = t * 0.3;
 			const towardsBaseLat = (baseLat - prevLat) * progressWeight;
 			const towardsBaseLng = (baseLng - prevLng) * progressWeight;
 			lat = prevLat + stepLat + towardsBaseLat;
@@ -78,29 +70,26 @@ export const generateMissionPathCoordinates = (
 		coordinates.push([lat, lng]);
 	}
 
-	// Always end at current UAV position
 	coordinates.push(basePosition);
 
 	return coordinates;
 };
 
-// Helper function to get color based on UAV type
 export const getMissionPathColor = (
-	type: "online" | "warning" | "offline"
+	type: "online" | "warning" | "danger"
 ): string => {
 	switch (type) {
 		case "online":
-			return "#71BC2C"; // Green
+			return "#71BC2C";
 		case "warning":
-			return "#E09D18"; // Orange/Warning
-		case "offline":
-			return "#C10000"; // Red
+			return "#E09D18";
+		case "danger":
+			return "#C10000";
 		default:
 			return "#71BC2C";
 	}
 };
 
-// Helper function to generate UAV detail data from basic marker data
 export const generateUAVDetailData = (basicData: {
 	id: string | number;
 	batteryPercentage?: number;
@@ -114,12 +103,10 @@ export const generateUAVDetailData = (basicData: {
 	signal: string;
 	MissionPath?: string;
 }): UAVDetailData => {
-	// Extract coordinates for the live coordinates display - format to match design
 	const coords = basicData.coordinates.includes(",")
 		? basicData.coordinates.trim()
 		: basicData.coordinates.replace(/[,\s]+/g, ", ");
 
-	// Convert status to proper type
 	const getStatus = (status: string): UAVDetailData["status"] => {
 		const lowercaseStatus = status.toLowerCase();
 		if (lowercaseStatus.includes("active")) return "active";
@@ -134,7 +121,6 @@ export const generateUAVDetailData = (basicData: {
 		return "offline";
 	};
 
-	// Convert signal to proper type
 	const getSignal = (signal: string): UAVDetailData["signal"] => {
 		const lowercaseSignal = signal.toLowerCase();
 		if (lowercaseSignal === "strong") return "strong";
@@ -143,7 +129,6 @@ export const generateUAVDetailData = (basicData: {
 		return "none";
 	};
 
-	// Convert battery to proper type
 	const getBattery = (battery?: string): UAVDetailData["battery"] => {
 		if (!battery) return "good";
 		const lowercaseBattery = battery.toLowerCase();
@@ -154,7 +139,6 @@ export const generateUAVDetailData = (basicData: {
 		return "good";
 	};
 
-	// Generate percentages based on status
 	const getSignalPercentage = (signal: UAVDetailData["signal"]): number => {
 		switch (signal) {
 			case "strong":
@@ -185,7 +169,6 @@ export const generateUAVDetailData = (basicData: {
 		}
 	};
 
-	// Generate descriptions based on UAV name/type
 	const getDescription = (name: string): string => {
 		if (name.includes("KUNA")) {
 			return "Kuna is a versatile, tracked terrain drone—a hybrid UGV featuring autonomous navigation, modular adaptability, robust mobility, optional armament, and aerial support via the Raven UAV—conceived to meet modern military needs.";
@@ -218,7 +201,6 @@ export const generateUAVDetailData = (basicData: {
 		return "Standard Pattern";
 	};
 
-	// Generate some mock detections for demonstration
 	const getDetections = (name: string) => {
 		if (name.includes("UAV 22456")) {
 			return [
@@ -251,7 +233,6 @@ export const generateUAVDetailData = (basicData: {
 		return undefined;
 	};
 
-	// Generate drone type based on UAV name
 	const getDroneType = (name: string): string => {
 		if (name.includes("KUNA")) return "Kuna";
 		if (name.includes("Kolibri")) return "Kolibri";

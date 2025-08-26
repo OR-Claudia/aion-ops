@@ -13,7 +13,7 @@ import type { UAVDetailData } from "./Modals/UAVDetailModal";
 
 interface ClusterableUAVMarkerProps {
 	position: [number, number];
-	type: "online" | "warning" | "offline";
+	type: "online" | "warning" | "danger";
 	data: UAVDetailData;
 	onDetailClick: (id: string | number) => void;
 }
@@ -71,7 +71,7 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 				return "border-2 border-[#71BC2C] bg-[#212832]";
 			case "warning":
 				return "border-2 border-[#E09D18] bg-[#212832]";
-			case "offline":
+			case "danger":
 				return "border-[3px] border-[#C10000] bg-[#1F2630]";
 			default:
 				return "border-2 border-[#71BC2C] bg-[#212832]";

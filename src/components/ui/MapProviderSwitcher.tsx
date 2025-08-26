@@ -33,6 +33,7 @@ const MapProviderSwitcher: React.FC<MapProviderSwitcherProps> = ({
 		},
 	];
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const handleProviderSelect = (provider: any) => {
 		setCurrentProvider(provider.name);
 		setIsOpen(false);

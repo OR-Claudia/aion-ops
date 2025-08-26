@@ -111,7 +111,7 @@ const Sidebar: React.FC = () => {
 				onClick={() => navigate("/storage")}
 			/>
 			<div
-				className={`relative w-[350px] h-[70vh] rounded-[10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/20 backdrop-blur-[8px] mt-[7px]`}
+				className={`relative w-[350px] h-[72vh] rounded-[10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/20 backdrop-blur-[8px] mt-[7px]`}
 			>
 				<div
 					className={`flex flex-col items-start gap-2 absolute left-4 top-3 w-[324px] h-[calc(72vh-32px)] overflow-y-auto pr-2`}
