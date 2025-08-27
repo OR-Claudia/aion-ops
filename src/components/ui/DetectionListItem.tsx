@@ -8,7 +8,7 @@ interface DetectionListItemProps {
 
 function getDetectionImage(class_name: string) {
 	const imageMap: { [key: string]: string } = {
-		civillian: "civilians.svg",
+		civilian: "civilians.svg",
 		vehicle: "civilian-vehicle.svg",
 		tank: "military-vehicle.svg",
 		soldier: "military-personnel.svg",
@@ -46,7 +46,7 @@ const DetectionListItem: React.FC<DetectionListItemProps> = ({ detection }) => {
 						<span>{detection.track_id}</span>
 					</div>
 					<div className="text-sm">
-						<span>{`Lat: ${detection.coordinates.lat} Lon: ${detection.coordinates.lon}`}</span>
+						<span>{`Lat: ${detection.coordinates?.lat} Lon: ${detection.coordinates?.lon}`}</span>
 					</div>
 					<div className="text-sm">
 						<span>{"Confidence: "}</span>

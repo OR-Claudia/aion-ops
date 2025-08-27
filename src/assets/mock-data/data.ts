@@ -33,6 +33,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.5874,
+				lon: 35.3169,
+			},
 		},
 		{
 			timestamp: 45.0,
@@ -53,6 +57,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589921,
+				lon: 35.302395,
 			},
 		},
 		{
@@ -75,6 +83,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.601256,
+				lon: 35.295558,
+			},
 		},
 		{
 			timestamp: 46.0,
@@ -95,6 +107,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59847,
+				lon: 35.311758,
 			},
 		},
 		{
@@ -117,6 +133,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592765,
+				lon: 35.307281,
+			},
 		},
 		{
 			timestamp: 47.0,
@@ -137,6 +157,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.586934,
+				lon: 35.315572,
 			},
 		},
 		{
@@ -159,6 +183,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.5912,
+				lon: 35.312349,
+			},
 		},
 		{
 			timestamp: 48.0,
@@ -179,6 +207,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594484,
+				lon: 35.306234,
 			},
 		},
 		{
@@ -201,6 +233,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592539,
+				lon: 35.305814,
+			},
 		},
 		{
 			timestamp: 49.0,
@@ -221,6 +257,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.588884,
+				lon: 35.294893,
 			},
 		},
 		{
@@ -243,6 +283,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.584087,
+				lon: 35.315297,
+			},
 		},
 		{
 			timestamp: 50.0,
@@ -263,6 +307,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.601206,
+				lon: 35.318176,
 			},
 		},
 		{
@@ -285,6 +333,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.595542,
+				lon: 35.324562,
+			},
 		},
 		{
 			timestamp: 51.0,
@@ -305,6 +357,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.601336,
+				lon: 35.313124,
 			},
 		},
 		{
@@ -327,6 +383,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.600255,
+				lon: 35.313712,
+			},
 		},
 		{
 			timestamp: 52.0,
@@ -347,6 +407,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594561,
+				lon: 35.301671,
 			},
 		},
 		{
@@ -369,6 +433,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.608264,
+				lon: 35.303159,
+			},
 		},
 		{
 			timestamp: 53.0,
@@ -389,6 +457,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.600544,
+				lon: 35.312416,
 			},
 		},
 		{
@@ -411,6 +483,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.584588,
+				lon: 35.314446,
+			},
 		},
 		{
 			timestamp: 54.0,
@@ -431,6 +507,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594093,
+				lon: 35.301605,
 			},
 		},
 		{
@@ -453,6 +533,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.576641,
+				lon: 35.31325,
+			},
 		},
 		{
 			timestamp: 55.0,
@@ -473,6 +557,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.586996,
+				lon: 35.290762,
 			},
 		},
 		{
@@ -495,6 +583,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589432,
+				lon: 35.307207,
+			},
 		},
 		{
 			timestamp: 56.0,
@@ -515,6 +607,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593877,
+				lon: 35.30881,
 			},
 		},
 		{
@@ -537,6 +633,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.597013,
+				lon: 35.317765,
+			},
 		},
 		{
 			timestamp: 57.0,
@@ -557,6 +657,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593538,
+				lon: 35.307846,
 			},
 		},
 		{
@@ -579,6 +683,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592726,
+				lon: 35.323188,
+			},
 		},
 		{
 			timestamp: 57.0,
@@ -599,6 +707,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590037,
+				lon: 35.309248,
 			},
 		},
 		{
@@ -621,6 +733,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594079,
+				lon: 35.305691,
+			},
 		},
 		{
 			timestamp: 58.0,
@@ -641,6 +757,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.588585,
+				lon: 35.31232,
 			},
 		},
 		{
@@ -663,6 +783,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592647,
+				lon: 35.307497,
+			},
 		},
 		{
 			timestamp: 58.0,
@@ -683,6 +807,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595395,
+				lon: 35.308004,
 			},
 		},
 		{
@@ -705,6 +833,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593722,
+				lon: 35.303297,
+			},
 		},
 		{
 			timestamp: 59.0,
@@ -725,6 +857,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.597352,
+				lon: 35.300396,
 			},
 		},
 		{
@@ -747,6 +883,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591072,
+				lon: 35.310071,
+			},
 		},
 		{
 			timestamp: 59.0,
@@ -767,6 +907,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593176,
+				lon: 35.306591,
 			},
 		},
 		{
@@ -789,6 +933,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.595762,
+				lon: 35.304679,
+			},
 		},
 		{
 			timestamp: 60.0,
@@ -809,6 +957,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.597155,
+				lon: 35.299843,
 			},
 		},
 		{
@@ -831,6 +983,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.598366,
+				lon: 35.311535,
+			},
 		},
 		{
 			timestamp: 61.0,
@@ -851,6 +1007,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.603502,
+				lon: 35.317334,
 			},
 		},
 		{
@@ -873,6 +1033,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.598753,
+				lon: 35.300026,
+			},
 		},
 		{
 			timestamp: 61.0,
@@ -893,6 +1057,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595062,
+				lon: 35.307513,
 			},
 		},
 		{
@@ -915,6 +1083,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.579306,
+				lon: 35.308817,
+			},
 		},
 		{
 			timestamp: 62.0,
@@ -935,6 +1107,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.587908,
+				lon: 35.294414,
 			},
 		},
 		{
@@ -957,6 +1133,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592773,
+				lon: 35.30722,
+			},
 		},
 		{
 			timestamp: 63.0,
@@ -977,6 +1157,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593259,
+				lon: 35.304785,
 			},
 		},
 		{
@@ -999,6 +1183,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594478,
+				lon: 35.304198,
+			},
 		},
 		{
 			timestamp: 64.0,
@@ -1019,6 +1207,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59303,
+				lon: 35.308921,
 			},
 		},
 		{
@@ -1041,6 +1233,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593599,
+				lon: 35.294261,
+			},
 		},
 		{
 			timestamp: 64.0,
@@ -1061,6 +1257,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59334,
+				lon: 35.305442,
 			},
 		},
 		{
@@ -1083,6 +1283,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.578551,
+				lon: 35.307259,
+			},
 		},
 		{
 			timestamp: 65.0,
@@ -1103,6 +1307,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591921,
+				lon: 35.320548,
 			},
 		},
 		{
@@ -1125,6 +1333,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.58411,
+				lon: 35.298763,
+			},
 		},
 		{
 			timestamp: 65.0,
@@ -1145,6 +1357,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59961,
+				lon: 35.315145,
 			},
 		},
 		{
@@ -1167,6 +1383,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.585143,
+				lon: 35.309873,
+			},
 		},
 		{
 			timestamp: 66.0,
@@ -1187,6 +1407,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.600376,
+				lon: 35.305376,
 			},
 		},
 		{
@@ -1209,6 +1433,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.599277,
+				lon: 35.300038,
+			},
 		},
 		{
 			timestamp: 66.0,
@@ -1229,6 +1457,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592173,
+				lon: 35.323648,
 			},
 		},
 		{
@@ -1251,6 +1483,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.581947,
+				lon: 35.313467,
+			},
 		},
 		{
 			timestamp: 67.0,
@@ -1271,6 +1507,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.586023,
+				lon: 35.314922,
 			},
 		},
 		{
@@ -1293,6 +1533,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593455,
+				lon: 35.305702,
+			},
 		},
 		{
 			timestamp: 68.0,
@@ -1313,6 +1557,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592993,
+				lon: 35.304995,
 			},
 		},
 		{
@@ -1335,6 +1583,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587971,
+				lon: 35.294416,
+			},
 		},
 		{
 			timestamp: 68.0,
@@ -1355,6 +1607,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.606032,
+				lon: 35.318737,
 			},
 		},
 		{
@@ -1377,6 +1633,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592701,
+				lon: 35.307277,
+			},
 		},
 		{
 			timestamp: 69.0,
@@ -1397,6 +1657,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.597,
+				lon: 35.309627,
 			},
 		},
 		{
@@ -1419,6 +1683,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.598216,
+				lon: 35.309967,
+			},
 		},
 		{
 			timestamp: 70.0,
@@ -1439,6 +1707,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.584819,
+				lon: 35.322948,
 			},
 		},
 		{
@@ -1461,6 +1733,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592932,
+				lon: 35.306316,
+			},
 		},
 		{
 			timestamp: 70.0,
@@ -1481,6 +1757,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.582862,
+				lon: 35.305101,
 			},
 		},
 		{
@@ -1503,6 +1783,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.581006,
+				lon: 35.309192,
+			},
 		},
 		{
 			timestamp: 71.0,
@@ -1523,6 +1807,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595046,
+				lon: 35.305686,
 			},
 		},
 		{
@@ -1545,6 +1833,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592136,
+				lon: 35.304612,
+			},
 		},
 		{
 			timestamp: 72.0,
@@ -1565,6 +1857,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.603231,
+				lon: 35.311061,
 			},
 		},
 		{
@@ -1587,6 +1883,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.603897,
+				lon: 35.315651,
+			},
 		},
 		{
 			timestamp: 72.0,
@@ -1607,6 +1907,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593029,
+				lon: 35.312557,
 			},
 		},
 		{
@@ -1629,6 +1933,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.598784,
+				lon: 35.313503,
+			},
 		},
 		{
 			timestamp: 73.0,
@@ -1649,6 +1957,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590784,
+				lon: 35.294539,
 			},
 		},
 		{
@@ -1671,6 +1983,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.600027,
+				lon: 35.307822,
+			},
 		},
 		{
 			timestamp: 74.0,
@@ -1691,6 +2007,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.584976,
+				lon: 35.322146,
 			},
 		},
 		{
@@ -1713,6 +2033,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594138,
+				lon: 35.320343,
+			},
 		},
 		{
 			timestamp: 75.0,
@@ -1733,6 +2057,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.600352,
+				lon: 35.302702,
 			},
 		},
 		{
@@ -1755,6 +2083,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.600455,
+				lon: 35.311657,
+			},
 		},
 		{
 			timestamp: 75.0,
@@ -1775,6 +2107,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.578657,
+				lon: 35.303656,
 			},
 		},
 		{
@@ -1797,6 +2133,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593346,
+				lon: 35.305169,
+			},
 		},
 		{
 			timestamp: 76.0,
@@ -1817,6 +2157,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59364,
+				lon: 35.319484,
 			},
 		},
 		{
@@ -1839,6 +2183,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.586061,
+				lon: 35.300763,
+			},
 		},
 		{
 			timestamp: 76.0,
@@ -1859,6 +2207,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.601648,
+				lon: 35.29456,
 			},
 		},
 		{
@@ -1881,6 +2233,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.602647,
+				lon: 35.316107,
+			},
 		},
 		{
 			timestamp: 77.0,
@@ -1901,6 +2257,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592408,
+				lon: 35.307834,
 			},
 		},
 		{
@@ -1923,6 +2283,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587334,
+				lon: 35.320466,
+			},
 		},
 		{
 			timestamp: 78.0,
@@ -1943,6 +2307,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.583374,
+				lon: 35.303146,
 			},
 		},
 		{
@@ -1965,6 +2333,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.598939,
+				lon: 35.313772,
+			},
 		},
 		{
 			timestamp: 78.0,
@@ -1985,6 +2357,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592585,
+				lon: 35.317466,
 			},
 		},
 		{
@@ -2007,6 +2383,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.601996,
+				lon: 35.303797,
+			},
 		},
 		{
 			timestamp: 79.0,
@@ -2027,6 +2407,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589313,
+				lon: 35.313263,
 			},
 		},
 		{
@@ -2049,6 +2433,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.579142,
+				lon: 35.303476,
+			},
 		},
 		{
 			timestamp: 79.0,
@@ -2069,6 +2457,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596356,
+				lon: 35.318557,
 			},
 		},
 		{
@@ -2091,6 +2483,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591964,
+				lon: 35.302019,
+			},
 		},
 		{
 			timestamp: 80.0,
@@ -2111,6 +2507,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594893,
+				lon: 35.306648,
 			},
 		},
 		{
@@ -2133,6 +2533,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.590929,
+				lon: 35.295462,
+			},
 		},
 		{
 			timestamp: 80.0,
@@ -2153,6 +2557,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590538,
+				lon: 35.311487,
 			},
 		},
 		{
@@ -2175,6 +2583,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592528,
+				lon: 35.309826,
+			},
 		},
 		{
 			timestamp: 81.0,
@@ -2195,6 +2607,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.582742,
+				lon: 35.307478,
 			},
 		},
 		{
@@ -2217,6 +2633,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593862,
+				lon: 35.293021,
+			},
 		},
 		{
 			timestamp: 81.0,
@@ -2237,6 +2657,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599351,
+				lon: 35.316437,
 			},
 		},
 		{
@@ -2259,6 +2683,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.605079,
+				lon: 35.29688,
+			},
 		},
 		{
 			timestamp: 82.0,
@@ -2279,6 +2707,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.587404,
+				lon: 35.304276,
 			},
 		},
 		{
@@ -2301,6 +2733,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591548,
+				lon: 35.30498,
+			},
 		},
 		{
 			timestamp: 82.0,
@@ -2321,6 +2757,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59477,
+				lon: 35.319232,
 			},
 		},
 		{
@@ -2343,6 +2783,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589762,
+				lon: 35.313562,
+			},
 		},
 		{
 			timestamp: 83.0,
@@ -2363,6 +2807,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.597089,
+				lon: 35.294973,
 			},
 		},
 		{
@@ -2385,6 +2833,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596649,
+				lon: 35.302754,
+			},
 		},
 		{
 			timestamp: 83.0,
@@ -2405,6 +2857,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590632,
+				lon: 35.309049,
 			},
 		},
 		{
@@ -2427,6 +2883,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592995,
+				lon: 35.305971,
+			},
 		},
 		{
 			timestamp: 84.0,
@@ -2447,6 +2907,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.581015,
+				lon: 35.297291,
 			},
 		},
 		{
@@ -2469,6 +2933,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587688,
+				lon: 35.310016,
+			},
 		},
 		{
 			timestamp: 84.0,
@@ -2489,6 +2957,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592989,
+				lon: 35.307995,
 			},
 		},
 		{
@@ -2511,6 +2983,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596134,
+				lon: 35.302362,
+			},
 		},
 		{
 			timestamp: 85.0,
@@ -2531,6 +3007,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.58387,
+				lon: 35.31695,
 			},
 		},
 		{
@@ -2553,6 +3033,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.58441,
+				lon: 35.302578,
+			},
 		},
 		{
 			timestamp: 85.0,
@@ -2573,6 +3057,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.603644,
+				lon: 35.311394,
 			},
 		},
 		{
@@ -2595,6 +3083,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.597801,
+				lon: 35.313363,
+			},
 		},
 		{
 			timestamp: 86.0,
@@ -2615,6 +3107,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.607978,
+				lon: 35.308954,
 			},
 		},
 		{
@@ -2637,6 +3133,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.575329,
+				lon: 35.308842,
+			},
 		},
 		{
 			timestamp: 87.0,
@@ -2657,6 +3157,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.58932,
+				lon: 35.30442,
 			},
 		},
 		{
@@ -2679,6 +3183,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.601066,
+				lon: 35.306774,
+			},
 		},
 		{
 			timestamp: 87.0,
@@ -2699,6 +3207,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.601304,
+				lon: 35.307046,
 			},
 		},
 		{
@@ -2721,6 +3233,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587346,
+				lon: 35.306169,
+			},
 		},
 		{
 			timestamp: 88.0,
@@ -2741,6 +3257,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.582024,
+				lon: 35.301425,
 			},
 		},
 		{
@@ -2763,6 +3283,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596905,
+				lon: 35.31089,
+			},
 		},
 		{
 			timestamp: 88.0,
@@ -2783,6 +3307,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595294,
+				lon: 35.308668,
 			},
 		},
 		{
@@ -2805,6 +3333,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587835,
+				lon: 35.291297,
+			},
 		},
 		{
 			timestamp: 89.0,
@@ -2825,6 +3357,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59354,
+				lon: 35.315611,
 			},
 		},
 		{
@@ -2847,6 +3383,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.599054,
+				lon: 35.322182,
+			},
 		},
 		{
 			timestamp: 89.0,
@@ -2867,6 +3407,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598228,
+				lon: 35.309898,
 			},
 		},
 		{
@@ -2889,6 +3433,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.576384,
+				lon: 35.30038,
+			},
 		},
 		{
 			timestamp: 90.0,
@@ -2909,6 +3457,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594254,
+				lon: 35.298934,
 			},
 		},
 		{
@@ -2931,6 +3483,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.580968,
+				lon: 35.309859,
+			},
 		},
 		{
 			timestamp: 90.0,
@@ -2951,6 +3507,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594906,
+				lon: 35.313243,
 			},
 		},
 		{
@@ -2973,6 +3533,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.597921,
+				lon: 35.322953,
+			},
 		},
 		{
 			timestamp: 91.0,
@@ -2993,6 +3557,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.603677,
+				lon: 35.308459,
 			},
 		},
 		{
@@ -3015,6 +3583,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.601845,
+				lon: 35.30826,
+			},
 		},
 		{
 			timestamp: 91.0,
@@ -3035,6 +3607,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594461,
+				lon: 35.304183,
 			},
 		},
 		{
@@ -3057,6 +3633,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591123,
+				lon: 35.324549,
+			},
 		},
 		{
 			timestamp: 91.0,
@@ -3077,6 +3657,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595227,
+				lon: 35.295611,
 			},
 		},
 		{
@@ -3099,6 +3683,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.6001,
+				lon: 35.316438,
+			},
 		},
 		{
 			timestamp: 92.0,
@@ -3119,6 +3707,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596013,
+				lon: 35.29259,
 			},
 		},
 		{
@@ -3141,6 +3733,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593047,
+				lon: 35.306307,
+			},
 		},
 		{
 			timestamp: 92.0,
@@ -3161,6 +3757,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.588354,
+				lon: 35.30855,
 			},
 		},
 		{
@@ -3183,6 +3783,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.597248,
+				lon: 35.297334,
+			},
 		},
 		{
 			timestamp: 93.0,
@@ -3203,6 +3807,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.603714,
+				lon: 35.298352,
 			},
 		},
 		{
@@ -3225,6 +3833,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592188,
+				lon: 35.302253,
+			},
 		},
 		{
 			timestamp: 93.0,
@@ -3245,6 +3857,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.606325,
+				lon: 35.301562,
 			},
 		},
 		{
@@ -3267,6 +3883,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.585224,
+				lon: 35.296874,
+			},
 		},
 		{
 			timestamp: 93.0,
@@ -3287,6 +3907,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594814,
+				lon: 35.314998,
 			},
 		},
 		{
@@ -3309,6 +3933,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.590739,
+				lon: 35.295448,
+			},
 		},
 		{
 			timestamp: 94.0,
@@ -3329,6 +3957,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.580259,
+				lon: 35.303558,
 			},
 		},
 		{
@@ -3351,6 +3983,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593268,
+				lon: 35.307419,
+			},
 		},
 		{
 			timestamp: 94.0,
@@ -3371,6 +4007,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.5973,
+				lon: 35.314576,
 			},
 		},
 		{
@@ -3393,6 +4033,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.597981,
+				lon: 35.300051,
+			},
 		},
 		{
 			timestamp: 95.0,
@@ -3413,6 +4057,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594019,
+				lon: 35.309776,
 			},
 		},
 		{
@@ -3435,6 +4083,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596965,
+				lon: 35.296226,
+			},
 		},
 		{
 			timestamp: 95.0,
@@ -3455,6 +4107,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593852,
+				lon: 35.307445,
 			},
 		},
 		{
@@ -3477,6 +4133,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592297,
+				lon: 35.318941,
+			},
 		},
 		{
 			timestamp: 96.0,
@@ -3497,6 +4157,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.5795,
+				lon: 35.307707,
 			},
 		},
 		{
@@ -3519,6 +4183,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.5963,
+				lon: 35.299799,
+			},
 		},
 		{
 			timestamp: 96.0,
@@ -3539,6 +4207,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59362,
+				lon: 35.309677,
 			},
 		},
 		{
@@ -3561,6 +4233,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592334,
+				lon: 35.306591,
+			},
 		},
 		{
 			timestamp: 97.0,
@@ -3581,6 +4257,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589969,
+				lon: 35.29739,
 			},
 		},
 		{
@@ -3603,6 +4283,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.599537,
+				lon: 35.295661,
+			},
 		},
 		{
 			timestamp: 97.0,
@@ -3623,6 +4307,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592811,
+				lon: 35.307697,
 			},
 		},
 		{
@@ -3645,6 +4333,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.602228,
+				lon: 35.295802,
+			},
 		},
 		{
 			timestamp: 98.0,
@@ -3665,6 +4357,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.583366,
+				lon: 35.306687,
 			},
 		},
 		{
@@ -3687,6 +4383,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591941,
+				lon: 35.305322,
+			},
 		},
 		{
 			timestamp: 98.0,
@@ -3707,6 +4407,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595967,
+				lon: 35.303104,
 			},
 		},
 		{
@@ -3729,6 +4433,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.586971,
+				lon: 35.310399,
+			},
 		},
 		{
 			timestamp: 99.0,
@@ -3749,6 +4457,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590707,
+				lon: 35.309485,
 			},
 		},
 		{
@@ -3771,6 +4483,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.583434,
+				lon: 35.321253,
+			},
 		},
 		{
 			timestamp: 99.0,
@@ -3791,6 +4507,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599792,
+				lon: 35.295381,
 			},
 		},
 		{
@@ -3813,6 +4533,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593058,
+				lon: 35.307212,
+			},
 		},
 		{
 			timestamp: 100.0,
@@ -3833,6 +4557,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591989,
+				lon: 35.30014,
 			},
 		},
 		{
@@ -3855,6 +4583,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59865,
+				lon: 35.301953,
+			},
 		},
 		{
 			timestamp: 101.0,
@@ -3875,6 +4607,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59522,
+				lon: 35.299028,
 			},
 		},
 		{
@@ -3897,6 +4633,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.588495,
+				lon: 35.298349,
+			},
 		},
 		{
 			timestamp: 102.0,
@@ -3917,6 +4657,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.5867,
+				lon: 35.308255,
 			},
 		},
 		{
@@ -3939,6 +4683,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596272,
+				lon: 35.306374,
+			},
 		},
 		{
 			timestamp: 103.0,
@@ -3959,6 +4707,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594371,
+				lon: 35.314343,
 			},
 		},
 		{
@@ -3981,6 +4733,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593113,
+				lon: 35.318085,
+			},
 		},
 		{
 			timestamp: 104.0,
@@ -4001,6 +4757,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594241,
+				lon: 35.302931,
 			},
 		},
 		{
@@ -4023,6 +4783,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592222,
+				lon: 35.303833,
+			},
 		},
 		{
 			timestamp: 105.0,
@@ -4043,6 +4807,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599677,
+				lon: 35.314187,
 			},
 		},
 		{
@@ -4065,6 +4833,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587082,
+				lon: 35.306469,
+			},
 		},
 		{
 			timestamp: 107.0,
@@ -4085,6 +4857,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.604767,
+				lon: 35.318996,
 			},
 		},
 		{
@@ -4107,6 +4883,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596968,
+				lon: 35.291734,
+			},
 		},
 		{
 			timestamp: 109.0,
@@ -4127,6 +4907,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594703,
+				lon: 35.293701,
 			},
 		},
 		{
@@ -4149,6 +4933,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.582414,
+				lon: 35.304705,
+			},
 		},
 		{
 			timestamp: 111.0,
@@ -4169,6 +4957,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596651,
+				lon: 35.305489,
 			},
 		},
 		{
@@ -4191,6 +4983,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.590861,
+				lon: 35.300139,
+			},
 		},
 		{
 			timestamp: 112.0,
@@ -4211,6 +5007,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593337,
+				lon: 35.308798,
 			},
 		},
 		{
@@ -4233,6 +5033,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592942,
+				lon: 35.303503,
+			},
 		},
 		{
 			timestamp: 114.0,
@@ -4253,6 +5057,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594506,
+				lon: 35.308092,
 			},
 		},
 		{
@@ -4275,6 +5083,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591695,
+				lon: 35.308638,
+			},
 		},
 		{
 			timestamp: 116.0,
@@ -4295,6 +5107,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594755,
+				lon: 35.301125,
 			},
 		},
 		{
@@ -4317,6 +5133,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593111,
+				lon: 35.307043,
+			},
 		},
 		{
 			timestamp: 118.0,
@@ -4337,6 +5157,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598334,
+				lon: 35.305444,
 			},
 		},
 		{
@@ -4359,6 +5183,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.590153,
+				lon: 35.293042,
+			},
 		},
 		{
 			timestamp: 120.0,
@@ -4379,6 +5207,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595621,
+				lon: 35.308525,
 			},
 		},
 		{
@@ -4401,6 +5233,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591422,
+				lon: 35.307689,
+			},
 		},
 		{
 			timestamp: 122.0,
@@ -4421,6 +5257,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.576774,
+				lon: 35.303213,
 			},
 		},
 		{
@@ -4443,6 +5283,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.599011,
+				lon: 35.308054,
+			},
 		},
 		{
 			timestamp: 124.0,
@@ -4463,6 +5307,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590033,
+				lon: 35.291816,
 			},
 		},
 		{
@@ -4485,6 +5333,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596121,
+				lon: 35.308519,
+			},
 		},
 		{
 			timestamp: 126.0,
@@ -4505,6 +5357,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.588772,
+				lon: 35.308602,
 			},
 		},
 		{
@@ -4527,6 +5383,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596321,
+				lon: 35.307801,
+			},
 		},
 		{
 			timestamp: 128.0,
@@ -4547,6 +5407,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.586278,
+				lon: 35.318286,
 			},
 		},
 		{
@@ -4569,6 +5433,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594076,
+				lon: 35.309578,
+			},
 		},
 		{
 			timestamp: 130.0,
@@ -4589,6 +5457,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590077,
+				lon: 35.308009,
 			},
 		},
 		{
@@ -4611,6 +5483,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.58267,
+				lon: 35.299798,
+			},
 		},
 		{
 			timestamp: 132.0,
@@ -4631,6 +5507,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590941,
+				lon: 35.301655,
 			},
 		},
 		{
@@ -4653,6 +5533,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592923,
+				lon: 35.307108,
+			},
 		},
 		{
 			timestamp: 134.0,
@@ -4673,6 +5557,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59387,
+				lon: 35.304725,
 			},
 		},
 		{
@@ -4695,6 +5583,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.600698,
+				lon: 35.321769,
+			},
 		},
 		{
 			timestamp: 136.0,
@@ -4715,6 +5607,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.582586,
+				lon: 35.30489,
 			},
 		},
 		{
@@ -4737,6 +5633,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593203,
+				lon: 35.321357,
+			},
 		},
 		{
 			timestamp: 137.0,
@@ -4757,6 +5657,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598154,
+				lon: 35.321881,
 			},
 		},
 		{
@@ -4779,6 +5683,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596683,
+				lon: 35.302711,
+			},
 		},
 		{
 			timestamp: 138.0,
@@ -4799,6 +5707,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599183,
+				lon: 35.302,
 			},
 		},
 		{
@@ -4821,6 +5733,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592679,
+				lon: 35.307061,
+			},
 		},
 		{
 			timestamp: 139.0,
@@ -4841,6 +5757,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591363,
+				lon: 35.306185,
 			},
 		},
 		{
@@ -4863,6 +5783,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.57914,
+				lon: 35.303144,
+			},
 		},
 		{
 			timestamp: 139.0,
@@ -4883,6 +5807,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594066,
+				lon: 35.308033,
 			},
 		},
 		{
@@ -4905,6 +5833,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.578609,
+				lon: 35.301714,
+			},
 		},
 		{
 			timestamp: 140.0,
@@ -4925,6 +5857,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.597197,
+				lon: 35.313129,
 			},
 		},
 		{
@@ -4947,6 +5883,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.60453,
+				lon: 35.303133,
+			},
 		},
 		{
 			timestamp: 140.0,
@@ -4967,6 +5907,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.583026,
+				lon: 35.306099,
 			},
 		},
 		{
@@ -4989,6 +5933,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.599316,
+				lon: 35.292418,
+			},
 		},
 		{
 			timestamp: 141.0,
@@ -5009,6 +5957,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.580491,
+				lon: 35.311949,
 			},
 		},
 		{
@@ -5031,6 +5983,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587868,
+				lon: 35.304718,
+			},
 		},
 		{
 			timestamp: 141.0,
@@ -5051,6 +6007,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.580888,
+				lon: 35.297163,
 			},
 		},
 		{
@@ -5073,6 +6033,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.604308,
+				lon: 35.295893,
+			},
 		},
 		{
 			timestamp: 142.0,
@@ -5093,6 +6057,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.604617,
+				lon: 35.301325,
 			},
 		},
 		{
@@ -5115,6 +6083,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.60346,
+				lon: 35.311404,
+			},
 		},
 		{
 			timestamp: 142.0,
@@ -5135,6 +6107,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.600889,
+				lon: 35.318227,
 			},
 		},
 		{
@@ -5157,6 +6133,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.604785,
+				lon: 35.301227,
+			},
 		},
 		{
 			timestamp: 143.0,
@@ -5177,6 +6157,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596778,
+				lon: 35.301418,
 			},
 		},
 		{
@@ -5199,6 +6183,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592583,
+				lon: 35.307108,
+			},
 		},
 		{
 			timestamp: 144.0,
@@ -5219,6 +6207,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.597161,
+				lon: 35.292036,
 			},
 		},
 		{
@@ -5241,6 +6233,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.608952,
+				lon: 35.30922,
+			},
 		},
 		{
 			timestamp: 144.0,
@@ -5261,6 +6257,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.600743,
+				lon: 35.306441,
 			},
 		},
 		{
@@ -5283,6 +6283,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.590472,
+				lon: 35.313282,
+			},
 		},
 		{
 			timestamp: 145.0,
@@ -5303,6 +6307,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595494,
+				lon: 35.314481,
 			},
 		},
 		{
@@ -5325,6 +6333,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594433,
+				lon: 35.304185,
+			},
 		},
 		{
 			timestamp: 145.0,
@@ -5345,6 +6357,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589206,
+				lon: 35.321129,
 			},
 		},
 		{
@@ -5367,6 +6383,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.606496,
+				lon: 35.313113,
+			},
 		},
 		{
 			timestamp: 146.0,
@@ -5387,6 +6407,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.607912,
+				lon: 35.311265,
 			},
 		},
 		{
@@ -5409,6 +6433,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.584582,
+				lon: 35.310562,
+			},
 		},
 		{
 			timestamp: 146.0,
@@ -5429,6 +6457,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.578622,
+				lon: 35.302859,
 			},
 		},
 		{
@@ -5451,6 +6483,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589078,
+				lon: 35.29315,
+			},
 		},
 		{
 			timestamp: 147.0,
@@ -5471,6 +6507,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.600272,
+				lon: 35.308365,
 			},
 		},
 		{
@@ -5493,6 +6533,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.578558,
+				lon: 35.304344,
+			},
 		},
 		{
 			timestamp: 147.0,
@@ -5513,6 +6557,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592888,
+				lon: 35.307093,
 			},
 		},
 		{
@@ -5535,6 +6583,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592975,
+				lon: 35.306995,
+			},
 		},
 		{
 			timestamp: 148.0,
@@ -5555,6 +6607,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594945,
+				lon: 35.318956,
 			},
 		},
 		{
@@ -5577,6 +6633,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592442,
+				lon: 35.309856,
+			},
 		},
 		{
 			timestamp: 148.0,
@@ -5597,6 +6657,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.584558,
+				lon: 35.314458,
 			},
 		},
 		{
@@ -5619,6 +6683,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.606452,
+				lon: 35.308467,
+			},
 		},
 		{
 			timestamp: 149.0,
@@ -5639,6 +6707,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596952,
+				lon: 35.314401,
 			},
 		},
 		{
@@ -5661,6 +6733,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.590353,
+				lon: 35.308843,
+			},
 		},
 		{
 			timestamp: 149.0,
@@ -5681,6 +6757,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.585304,
+				lon: 35.29558,
 			},
 		},
 		{
@@ -5703,6 +6783,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592251,
+				lon: 35.310879,
+			},
 		},
 		{
 			timestamp: 150.0,
@@ -5723,6 +6807,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.584383,
+				lon: 35.319882,
 			},
 		},
 		{
@@ -5745,6 +6833,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.576217,
+				lon: 35.30382,
+			},
 		},
 		{
 			timestamp: 151.0,
@@ -5765,6 +6857,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.579312,
+				lon: 35.318849,
 			},
 		},
 		{
@@ -5787,6 +6883,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59695,
+				lon: 35.305523,
+			},
 		},
 		{
 			timestamp: 151.0,
@@ -5807,6 +6907,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.578367,
+				lon: 35.301198,
 			},
 		},
 		{
@@ -5829,6 +6933,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.598653,
+				lon: 35.308177,
+			},
 		},
 		{
 			timestamp: 152.0,
@@ -5849,6 +6957,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.600603,
+				lon: 35.317697,
 			},
 		},
 		{
@@ -5871,6 +6983,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594095,
+				lon: 35.308145,
+			},
 		},
 		{
 			timestamp: 153.0,
@@ -5891,6 +7007,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589135,
+				lon: 35.30577,
 			},
 		},
 		{
@@ -5913,6 +7033,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.595175,
+				lon: 35.299641,
+			},
 		},
 		{
 			timestamp: 154.0,
@@ -5933,6 +7057,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.604026,
+				lon: 35.312982,
 			},
 		},
 		{
@@ -5955,6 +7083,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.595209,
+				lon: 35.30504,
+			},
 		},
 		{
 			timestamp: 156.0,
@@ -5975,6 +7107,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592345,
+				lon: 35.305996,
 			},
 		},
 		{
@@ -5997,6 +7133,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.602624,
+				lon: 35.301599,
+			},
 		},
 		{
 			timestamp: 158.0,
@@ -6017,6 +7157,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592703,
+				lon: 35.291211,
 			},
 		},
 		{
@@ -6039,6 +7183,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59775,
+				lon: 35.321391,
+			},
 		},
 		{
 			timestamp: 160.0,
@@ -6059,6 +7207,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589934,
+				lon: 35.297871,
 			},
 		},
 		{
@@ -6081,6 +7233,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592404,
+				lon: 35.30751,
+			},
 		},
 		{
 			timestamp: 162.0,
@@ -6101,6 +7257,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593632,
+				lon: 35.31221,
 			},
 		},
 		{
@@ -6123,6 +7283,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591764,
+				lon: 35.308438,
+			},
 		},
 		{
 			timestamp: 164.0,
@@ -6143,6 +7307,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591176,
+				lon: 35.307223,
 			},
 		},
 		{
@@ -6165,6 +7333,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.602656,
+				lon: 35.305796,
+			},
 		},
 		{
 			timestamp: 166.0,
@@ -6185,6 +7357,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595523,
+				lon: 35.319097,
 			},
 		},
 		{
@@ -6207,6 +7383,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59895,
+				lon: 35.317185,
+			},
 		},
 		{
 			timestamp: 168.0,
@@ -6227,6 +7407,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.575706,
+				lon: 35.310081,
 			},
 		},
 		{
@@ -6249,6 +7433,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59299,
+				lon: 35.301632,
+			},
 		},
 		{
 			timestamp: 170.0,
@@ -6269,6 +7457,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.579953,
+				lon: 35.296174,
 			},
 		},
 		{
@@ -6291,6 +7483,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.607341,
+				lon: 35.297227,
+			},
 		},
 		{
 			timestamp: 172.0,
@@ -6311,6 +7507,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595599,
+				lon: 35.290717,
 			},
 		},
 		{
@@ -6333,6 +7533,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592098,
+				lon: 35.306247,
+			},
 		},
 		{
 			timestamp: 174.0,
@@ -6353,6 +7557,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.577473,
+				lon: 35.313867,
 			},
 		},
 		{
@@ -6375,6 +7583,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594038,
+				lon: 35.309159,
+			},
 		},
 		{
 			timestamp: 176.0,
@@ -6395,6 +7607,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599114,
+				lon: 35.323545,
 			},
 		},
 		{
@@ -6417,6 +7633,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.608796,
+				lon: 35.301548,
+			},
 		},
 		{
 			timestamp: 178.0,
@@ -6437,6 +7657,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594714,
+				lon: 35.314752,
 			},
 		},
 		{
@@ -6459,6 +7683,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596186,
+				lon: 35.306949,
+			},
 		},
 		{
 			timestamp: 180.0,
@@ -6479,6 +7707,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.58918,
+				lon: 35.305656,
 			},
 		},
 		{
@@ -6501,6 +7733,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596935,
+				lon: 35.312149,
+			},
 		},
 		{
 			timestamp: 182.0,
@@ -6521,6 +7757,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.603676,
+				lon: 35.31905,
 			},
 		},
 		{
@@ -6543,6 +7783,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593887,
+				lon: 35.306289,
+			},
 		},
 		{
 			timestamp: 184.0,
@@ -6563,6 +7807,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.601561,
+				lon: 35.294128,
 			},
 		},
 		{
@@ -6585,6 +7833,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.604604,
+				lon: 35.301306,
+			},
 		},
 		{
 			timestamp: 186.0,
@@ -6605,6 +7857,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592519,
+				lon: 35.309035,
 			},
 		},
 		{
@@ -6627,6 +7883,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.588328,
+				lon: 35.306047,
+			},
 		},
 		{
 			timestamp: 188.0,
@@ -6647,6 +7907,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591405,
+				lon: 35.306449,
 			},
 		},
 		{
@@ -6669,6 +7933,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.597627,
+				lon: 35.303739,
+			},
 		},
 		{
 			timestamp: 190.0,
@@ -6689,6 +7957,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.580728,
+				lon: 35.31032,
 			},
 		},
 		{
@@ -6711,6 +7983,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.578995,
+				lon: 35.302896,
+			},
 		},
 		{
 			timestamp: 193.0,
@@ -6730,6 +8006,10 @@ export const detections = {
 				center_y: 856,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.594165,
+				lon: 35.305697,
+			},
 		},
 		{
 			timestamp: 209.0,
@@ -6749,6 +8029,10 @@ export const detections = {
 				center_y: 839,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.58263,
+				lon: 35.305594,
+			},
 		},
 		{
 			timestamp: 227.0,
@@ -6768,6 +8052,10 @@ export const detections = {
 				center_y: 841,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.590951,
+				lon: 35.30558,
+			},
 		},
 		{
 			timestamp: 230.0,
@@ -6787,6 +8075,10 @@ export const detections = {
 				center_y: 849,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.595756,
+				lon: 35.317863,
+			},
 		},
 		{
 			timestamp: 235.0,
@@ -6806,6 +8098,10 @@ export const detections = {
 				center_y: 855,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.596271,
+				lon: 35.290721,
+			},
 		},
 		{
 			timestamp: 236.0,
@@ -6825,6 +8121,10 @@ export const detections = {
 				center_y: 854,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.593948,
+				lon: 35.313334,
+			},
 		},
 		{
 			timestamp: 237.0,
@@ -6844,6 +8144,10 @@ export const detections = {
 				center_y: 854,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.590755,
+				lon: 35.304631,
+			},
 		},
 		{
 			timestamp: 238.0,
@@ -6863,6 +8167,10 @@ export const detections = {
 				center_y: 857,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.598173,
+				lon: 35.294465,
+			},
 		},
 		{
 			timestamp: 239.0,
@@ -6882,6 +8190,10 @@ export const detections = {
 				center_y: 855,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.60447,
+				lon: 35.299294,
+			},
 		},
 		{
 			timestamp: 240.0,
@@ -6901,6 +8213,10 @@ export const detections = {
 				center_y: 859,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.585583,
+				lon: 35.300616,
+			},
 		},
 		{
 			timestamp: 241.0,
@@ -6920,6 +8236,10 @@ export const detections = {
 				center_y: 856,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.598098,
+				lon: 35.313701,
+			},
 		},
 		{
 			timestamp: 242.0,
@@ -6939,6 +8259,10 @@ export const detections = {
 				center_y: 857,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.592179,
+				lon: 35.308868,
+			},
 		},
 		{
 			timestamp: 243.0,
@@ -6958,6 +8282,10 @@ export const detections = {
 				center_y: 856,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.599918,
+				lon: 35.296541,
+			},
 		},
 		{
 			timestamp: 244.0,
@@ -6977,6 +8305,10 @@ export const detections = {
 				center_y: 854,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.588765,
+				lon: 35.320206,
+			},
 		},
 		{
 			timestamp: 245.0,
@@ -6996,6 +8328,10 @@ export const detections = {
 				center_y: 853,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.594861,
+				lon: 35.323741,
+			},
 		},
 		{
 			timestamp: 246.0,
@@ -7015,6 +8351,10 @@ export const detections = {
 				center_y: 854,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.605382,
+				lon: 35.316154,
+			},
 		},
 		{
 			timestamp: 247.0,
@@ -7034,6 +8374,10 @@ export const detections = {
 				center_y: 858,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.591955,
+				lon: 35.3056,
+			},
 		},
 		{
 			timestamp: 248.0,
@@ -7053,6 +8397,10 @@ export const detections = {
 				center_y: 862,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.588591,
+				lon: 35.297823,
+			},
 		},
 		{
 			timestamp: 249.0,
@@ -7072,6 +8420,10 @@ export const detections = {
 				center_y: 859,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.596521,
+				lon: 35.307886,
+			},
 		},
 		{
 			timestamp: 250.0,
@@ -7091,6 +8443,10 @@ export const detections = {
 				center_y: 860,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.589424,
+				lon: 35.30192,
+			},
 		},
 		{
 			timestamp: 251.0,
@@ -7110,6 +8466,10 @@ export const detections = {
 				center_y: 857,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.591614,
+				lon: 35.31056,
+			},
 		},
 		{
 			timestamp: 252.0,
@@ -7129,6 +8489,10 @@ export const detections = {
 				center_y: 858,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.579701,
+				lon: 35.311701,
+			},
 		},
 		{
 			timestamp: 253.0,
@@ -7148,6 +8512,10 @@ export const detections = {
 				center_y: 854,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.590608,
+				lon: 35.314415,
+			},
 		},
 		{
 			timestamp: 254.0,
@@ -7167,6 +8535,10 @@ export const detections = {
 				center_y: 854,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.583247,
+				lon: 35.30932,
+			},
 		},
 		{
 			timestamp: 255.0,
@@ -7186,6 +8558,10 @@ export const detections = {
 				center_y: 857,
 			},
 			tracking_info: {},
+			coordinates: {
+				lat: 50.600226,
+				lon: 35.32116,
+			},
 		},
 		{
 			timestamp: 256.0,
@@ -7206,6 +8582,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599912,
+				lon: 35.30311,
 			},
 		},
 		{
@@ -7228,6 +8608,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.600883,
+				lon: 35.315832,
+			},
 		},
 		{
 			timestamp: 258.0,
@@ -7248,6 +8632,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.603391,
+				lon: 35.311782,
 			},
 		},
 		{
@@ -7270,6 +8658,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.609437,
+				lon: 35.303769,
+			},
 		},
 		{
 			timestamp: 260.0,
@@ -7290,6 +8682,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.600682,
+				lon: 35.32328,
 			},
 		},
 		{
@@ -7312,6 +8708,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.576213,
+				lon: 35.313136,
+			},
 		},
 		{
 			timestamp: 262.0,
@@ -7332,6 +8732,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594095,
+				lon: 35.30345,
 			},
 		},
 		{
@@ -7354,6 +8758,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.60751,
+				lon: 35.301797,
+			},
 		},
 		{
 			timestamp: 264.0,
@@ -7374,6 +8782,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.609303,
+				lon: 35.305244,
 			},
 		},
 		{
@@ -7396,6 +8808,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.601388,
+				lon: 35.310257,
+			},
 		},
 		{
 			timestamp: 266.0,
@@ -7416,6 +8832,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591446,
+				lon: 35.31233,
 			},
 		},
 		{
@@ -7438,6 +8858,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589035,
+				lon: 35.311888,
+			},
 		},
 		{
 			timestamp: 268.0,
@@ -7458,6 +8882,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595996,
+				lon: 35.29545,
 			},
 		},
 		{
@@ -7480,6 +8908,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.583322,
+				lon: 35.303279,
+			},
 		},
 		{
 			timestamp: 270.0,
@@ -7500,6 +8932,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.586606,
+				lon: 35.318158,
 			},
 		},
 		{
@@ -7522,6 +8958,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.603901,
+				lon: 35.303046,
+			},
 		},
 		{
 			timestamp: 272.0,
@@ -7542,6 +8982,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.602287,
+				lon: 35.300231,
 			},
 		},
 		{
@@ -7564,6 +9008,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.588297,
+				lon: 35.314859,
+			},
 		},
 		{
 			timestamp: 274.0,
@@ -7584,6 +9032,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.605013,
+				lon: 35.300577,
 			},
 		},
 		{
@@ -7606,6 +9058,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59484,
+				lon: 35.324478,
+			},
 		},
 		{
 			timestamp: 276.0,
@@ -7626,6 +9082,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59326,
+				lon: 35.304631,
 			},
 		},
 		{
@@ -7648,6 +9108,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587969,
+				lon: 35.301861,
+			},
 		},
 		{
 			timestamp: 278.0,
@@ -7668,6 +9132,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59712,
+				lon: 35.29639,
 			},
 		},
 		{
@@ -7690,6 +9158,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.595896,
+				lon: 35.304204,
+			},
 		},
 		{
 			timestamp: 280.0,
@@ -7710,6 +9182,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589722,
+				lon: 35.304802,
 			},
 		},
 		{
@@ -7732,6 +9208,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.582462,
+				lon: 35.305272,
+			},
 		},
 		{
 			timestamp: 281.0,
@@ -7752,6 +9232,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.602315,
+				lon: 35.297823,
 			},
 		},
 		{
@@ -7774,6 +9258,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.607339,
+				lon: 35.305792,
+			},
 		},
 		{
 			timestamp: 282.0,
@@ -7794,6 +9282,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598845,
+				lon: 35.314766,
 			},
 		},
 		{
@@ -7816,6 +9308,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.583678,
+				lon: 35.322139,
+			},
 		},
 		{
 			timestamp: 282.0,
@@ -7836,6 +9332,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.576226,
+				lon: 35.311617,
 			},
 		},
 		{
@@ -7858,6 +9358,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.578283,
+				lon: 35.30879,
+			},
 		},
 		{
 			timestamp: 283.0,
@@ -7878,6 +9382,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.601439,
+				lon: 35.30616,
 			},
 		},
 		{
@@ -7900,6 +9408,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.581545,
+				lon: 35.296965,
+			},
 		},
 		{
 			timestamp: 283.0,
@@ -7920,6 +9432,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593372,
+				lon: 35.307352,
 			},
 		},
 		{
@@ -7942,6 +9458,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.586313,
+				lon: 35.301272,
+			},
 		},
 		{
 			timestamp: 283.0,
@@ -7962,6 +9482,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591256,
+				lon: 35.31141,
 			},
 		},
 		{
@@ -7984,6 +9508,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592448,
+				lon: 35.307019,
+			},
 		},
 		{
 			timestamp: 284.0,
@@ -8004,6 +9532,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59229,
+				lon: 35.305098,
 			},
 		},
 		{
@@ -8026,6 +9558,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591956,
+				lon: 35.308335,
+			},
 		},
 		{
 			timestamp: 284.0,
@@ -8046,6 +9582,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.579981,
+				lon: 35.295673,
 			},
 		},
 		{
@@ -8068,6 +9608,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.602996,
+				lon: 35.306793,
+			},
 		},
 		{
 			timestamp: 284.0,
@@ -8088,6 +9632,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.584525,
+				lon: 35.30469,
 			},
 		},
 		{
@@ -8110,6 +9658,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592706,
+				lon: 35.307637,
+			},
 		},
 		{
 			timestamp: 285.0,
@@ -8130,6 +9682,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595157,
+				lon: 35.307341,
 			},
 		},
 		{
@@ -8152,6 +9708,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.602639,
+				lon: 35.311252,
+			},
 		},
 		{
 			timestamp: 285.0,
@@ -8172,6 +9732,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.578736,
+				lon: 35.308007,
 			},
 		},
 		{
@@ -8194,6 +9758,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.586178,
+				lon: 35.311345,
+			},
 		},
 		{
 			timestamp: 285.0,
@@ -8214,6 +9782,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593326,
+				lon: 35.312139,
 			},
 		},
 		{
@@ -8236,6 +9808,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592508,
+				lon: 35.307106,
+			},
 		},
 		{
 			timestamp: 286.0,
@@ -8256,6 +9832,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.58319,
+				lon: 35.302581,
 			},
 		},
 		{
@@ -8278,6 +9858,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591491,
+				lon: 35.30895,
+			},
 		},
 		{
 			timestamp: 286.0,
@@ -8298,6 +9882,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.585742,
+				lon: 35.292769,
 			},
 		},
 		{
@@ -8320,6 +9908,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.599228,
+				lon: 35.296584,
+			},
 		},
 		{
 			timestamp: 286.0,
@@ -8340,6 +9932,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589818,
+				lon: 35.308635,
 			},
 		},
 		{
@@ -8362,6 +9958,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592333,
+				lon: 35.298927,
+			},
 		},
 		{
 			timestamp: 287.0,
@@ -8382,6 +9982,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.581382,
+				lon: 35.296538,
 			},
 		},
 		{
@@ -8404,6 +10008,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.577727,
+				lon: 35.315678,
+			},
 		},
 		{
 			timestamp: 287.0,
@@ -8424,6 +10032,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595572,
+				lon: 35.324776,
 			},
 		},
 		{
@@ -8446,6 +10058,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.606695,
+				lon: 35.316493,
+			},
 		},
 		{
 			timestamp: 288.0,
@@ -8466,6 +10082,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596824,
+				lon: 35.321593,
 			},
 		},
 		{
@@ -8488,6 +10108,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.606674,
+				lon: 35.313492,
+			},
 		},
 		{
 			timestamp: 288.0,
@@ -8508,6 +10132,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.58057,
+				lon: 35.311459,
 			},
 		},
 		{
@@ -8530,6 +10158,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.585574,
+				lon: 35.311175,
+			},
 		},
 		{
 			timestamp: 288.0,
@@ -8550,6 +10182,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.585331,
+				lon: 35.306362,
 			},
 		},
 		{
@@ -8572,6 +10208,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.599036,
+				lon: 35.304262,
+			},
 		},
 		{
 			timestamp: 289.0,
@@ -8592,6 +10232,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.5913,
+				lon: 35.298375,
 			},
 		},
 		{
@@ -8614,6 +10258,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.606197,
+				lon: 35.298509,
+			},
 		},
 		{
 			timestamp: 289.0,
@@ -8634,6 +10282,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.582319,
+				lon: 35.304421,
 			},
 		},
 		{
@@ -8656,6 +10308,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.609809,
+				lon: 35.30268,
+			},
 		},
 		{
 			timestamp: 289.0,
@@ -8676,6 +10332,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.576591,
+				lon: 35.312941,
 			},
 		},
 		{
@@ -8698,6 +10358,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.595541,
+				lon: 35.304164,
+			},
 		},
 		{
 			timestamp: 290.0,
@@ -8718,6 +10382,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.579478,
+				lon: 35.299754,
 			},
 		},
 		{
@@ -8740,6 +10408,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589058,
+				lon: 35.301217,
+			},
 		},
 		{
 			timestamp: 290.0,
@@ -8760,6 +10432,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595768,
+				lon: 35.308471,
 			},
 		},
 		{
@@ -8782,6 +10458,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.590032,
+				lon: 35.300143,
+			},
 		},
 		{
 			timestamp: 291.0,
@@ -8802,6 +10482,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595195,
+				lon: 35.307622,
 			},
 		},
 		{
@@ -8824,6 +10508,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589775,
+				lon: 35.314124,
+			},
 		},
 		{
 			timestamp: 291.0,
@@ -8844,6 +10532,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.60171,
+				lon: 35.307762,
 			},
 		},
 		{
@@ -8866,6 +10558,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59804,
+				lon: 35.323279,
+			},
 		},
 		{
 			timestamp: 291.0,
@@ -8886,6 +10582,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.58967,
+				lon: 35.307468,
 			},
 		},
 		{
@@ -8908,6 +10608,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.585774,
+				lon: 35.305425,
+			},
 		},
 		{
 			timestamp: 292.0,
@@ -8928,6 +10632,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593361,
+				lon: 35.307137,
 			},
 		},
 		{
@@ -8950,6 +10658,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587512,
+				lon: 35.309729,
+			},
 		},
 		{
 			timestamp: 292.0,
@@ -8970,6 +10682,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.584674,
+				lon: 35.295663,
 			},
 		},
 		{
@@ -8992,6 +10708,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.585441,
+				lon: 35.294203,
+			},
 		},
 		{
 			timestamp: 293.0,
@@ -9012,6 +10732,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.588258,
+				lon: 35.308278,
 			},
 		},
 		{
@@ -9034,6 +10758,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593187,
+				lon: 35.308693,
+			},
 		},
 		{
 			timestamp: 293.0,
@@ -9054,6 +10782,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599513,
+				lon: 35.306825,
 			},
 		},
 		{
@@ -9076,6 +10808,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593701,
+				lon: 35.313213,
+			},
 		},
 		{
 			timestamp: 294.0,
@@ -9096,6 +10832,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598827,
+				lon: 35.315068,
 			},
 		},
 		{
@@ -9118,6 +10858,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.595554,
+				lon: 35.308284,
+			},
 		},
 		{
 			timestamp: 294.0,
@@ -9138,6 +10882,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595101,
+				lon: 35.304771,
 			},
 		},
 		{
@@ -9160,6 +10908,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.58502,
+				lon: 35.297755,
+			},
 		},
 		{
 			timestamp: 295.0,
@@ -9180,6 +10932,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.582554,
+				lon: 35.305345,
 			},
 		},
 		{
@@ -9202,6 +10958,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591272,
+				lon: 35.317086,
+			},
 		},
 		{
 			timestamp: 295.0,
@@ -9222,6 +10982,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.588228,
+				lon: 35.304528,
 			},
 		},
 		{
@@ -9244,6 +11008,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.586515,
+				lon: 35.315703,
+			},
 		},
 		{
 			timestamp: 296.0,
@@ -9264,6 +11032,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593826,
+				lon: 35.304002,
 			},
 		},
 		{
@@ -9286,6 +11058,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592836,
+				lon: 35.306019,
+			},
 		},
 		{
 			timestamp: 297.0,
@@ -9306,6 +11082,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594407,
+				lon: 35.30718,
 			},
 		},
 		{
@@ -9328,6 +11108,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593541,
+				lon: 35.296772,
+			},
 		},
 		{
 			timestamp: 297.0,
@@ -9348,6 +11132,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593275,
+				lon: 35.297038,
 			},
 		},
 		{
@@ -9370,6 +11158,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591291,
+				lon: 35.307865,
+			},
 		},
 		{
 			timestamp: 298.0,
@@ -9390,6 +11182,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599202,
+				lon: 35.295535,
 			},
 		},
 		{
@@ -9412,6 +11208,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592712,
+				lon: 35.308936,
+			},
 		},
 		{
 			timestamp: 299.0,
@@ -9432,6 +11232,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589535,
+				lon: 35.310793,
 			},
 		},
 		{
@@ -9454,6 +11258,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592833,
+				lon: 35.307208,
+			},
 		},
 		{
 			timestamp: 300.0,
@@ -9474,6 +11282,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590568,
+				lon: 35.310885,
 			},
 		},
 		{
@@ -9496,6 +11308,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591482,
+				lon: 35.305305,
+			},
 		},
 		{
 			timestamp: 302.0,
@@ -9516,6 +11332,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591811,
+				lon: 35.304869,
 			},
 		},
 		{
@@ -9538,6 +11358,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59879,
+				lon: 35.307799,
+			},
 		},
 		{
 			timestamp: 304.0,
@@ -9558,6 +11382,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.601143,
+				lon: 35.297313,
 			},
 		},
 		{
@@ -9580,6 +11408,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.583929,
+				lon: 35.302204,
+			},
 		},
 		{
 			timestamp: 306.0,
@@ -9600,6 +11432,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595098,
+				lon: 35.307847,
 			},
 		},
 		{
@@ -9622,6 +11458,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.607142,
+				lon: 35.313982,
+			},
 		},
 		{
 			timestamp: 308.0,
@@ -9642,6 +11482,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593367,
+				lon: 35.314702,
 			},
 		},
 		{
@@ -9664,6 +11508,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.607753,
+				lon: 35.306039,
+			},
 		},
 		{
 			timestamp: 310.0,
@@ -9684,6 +11532,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.602198,
+				lon: 35.306884,
 			},
 		},
 		{
@@ -9706,6 +11558,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.580158,
+				lon: 35.316016,
+			},
 		},
 		{
 			timestamp: 311.0,
@@ -9726,6 +11582,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593744,
+				lon: 35.309593,
 			},
 		},
 		{
@@ -9748,6 +11608,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.6055,
+				lon: 35.318755,
+			},
 		},
 		{
 			timestamp: 313.0,
@@ -9768,6 +11632,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.588586,
+				lon: 35.301877,
 			},
 		},
 		{
@@ -9790,6 +11658,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.588826,
+				lon: 35.314391,
+			},
 		},
 		{
 			timestamp: 314.0,
@@ -9810,6 +11682,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594649,
+				lon: 35.302941,
 			},
 		},
 		{
@@ -9832,6 +11708,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.609144,
+				lon: 35.313276,
+			},
 		},
 		{
 			timestamp: 314.0,
@@ -9852,6 +11732,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.578777,
+				lon: 35.312233,
 			},
 		},
 		{
@@ -9874,6 +11758,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.608893,
+				lon: 35.307452,
+			},
 		},
 		{
 			timestamp: 315.0,
@@ -9894,6 +11782,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.585101,
+				lon: 35.313779,
 			},
 		},
 		{
@@ -9916,6 +11808,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589218,
+				lon: 35.321911,
+			},
 		},
 		{
 			timestamp: 315.0,
@@ -9936,6 +11832,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595878,
+				lon: 35.312117,
 			},
 		},
 		{
@@ -9958,6 +11858,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592999,
+				lon: 35.30041,
+			},
 		},
 		{
 			timestamp: 316.0,
@@ -9978,6 +11882,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594744,
+				lon: 35.313442,
 			},
 		},
 		{
@@ -10000,6 +11908,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.585299,
+				lon: 35.306005,
+			},
 		},
 		{
 			timestamp: 316.0,
@@ -10020,6 +11932,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592792,
+				lon: 35.307222,
 			},
 		},
 		{
@@ -10042,6 +11958,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.585048,
+				lon: 35.302479,
+			},
 		},
 		{
 			timestamp: 317.0,
@@ -10062,6 +11982,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592279,
+				lon: 35.311757,
 			},
 		},
 		{
@@ -10084,6 +12008,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593771,
+				lon: 35.308047,
+			},
 		},
 		{
 			timestamp: 317.0,
@@ -10104,6 +12032,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.579455,
+				lon: 35.314421,
 			},
 		},
 		{
@@ -10126,6 +12058,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596896,
+				lon: 35.306747,
+			},
 		},
 		{
 			timestamp: 318.0,
@@ -10146,6 +12082,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593629,
+				lon: 35.308364,
 			},
 		},
 		{
@@ -10168,6 +12108,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594959,
+				lon: 35.290219,
+			},
 		},
 		{
 			timestamp: 318.0,
@@ -10188,6 +12132,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.58912,
+				lon: 35.3225,
 			},
 		},
 		{
@@ -10210,6 +12158,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593624,
+				lon: 35.290787,
+			},
 		},
 		{
 			timestamp: 319.0,
@@ -10230,6 +12182,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596367,
+				lon: 35.308844,
 			},
 		},
 		{
@@ -10252,6 +12208,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592449,
+				lon: 35.323929,
+			},
 		},
 		{
 			timestamp: 319.0,
@@ -10272,6 +12232,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596406,
+				lon: 35.300029,
 			},
 		},
 		{
@@ -10294,6 +12258,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.600095,
+				lon: 35.302629,
+			},
 		},
 		{
 			timestamp: 320.0,
@@ -10314,6 +12282,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.583294,
+				lon: 35.311159,
 			},
 		},
 		{
@@ -10336,6 +12308,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592974,
+				lon: 35.320796,
+			},
 		},
 		{
 			timestamp: 320.0,
@@ -10356,6 +12332,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.587743,
+				lon: 35.305298,
 			},
 		},
 		{
@@ -10378,6 +12358,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589608,
+				lon: 35.320528,
+			},
 		},
 		{
 			timestamp: 321.0,
@@ -10398,6 +12382,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592781,
+				lon: 35.306255,
 			},
 		},
 		{
@@ -10420,6 +12408,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.588437,
+				lon: 35.312847,
+			},
 		},
 		{
 			timestamp: 321.0,
@@ -10440,6 +12432,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59534,
+				lon: 35.293466,
 			},
 		},
 		{
@@ -10462,6 +12458,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.58216,
+				lon: 35.31387,
+			},
 		},
 		{
 			timestamp: 322.0,
@@ -10482,6 +12482,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591443,
+				lon: 35.30618,
 			},
 		},
 		{
@@ -10504,6 +12508,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.576421,
+				lon: 35.30663,
+			},
 		},
 		{
 			timestamp: 322.0,
@@ -10524,6 +12532,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591229,
+				lon: 35.303412,
 			},
 		},
 		{
@@ -10546,6 +12558,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593665,
+				lon: 35.307244,
+			},
 		},
 		{
 			timestamp: 323.0,
@@ -10566,6 +12582,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599624,
+				lon: 35.308018,
 			},
 		},
 		{
@@ -10588,6 +12608,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589617,
+				lon: 35.302811,
+			},
 		},
 		{
 			timestamp: 323.0,
@@ -10608,6 +12632,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59379,
+				lon: 35.308339,
 			},
 		},
 		{
@@ -10630,6 +12658,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589282,
+				lon: 35.319453,
+			},
 		},
 		{
 			timestamp: 324.0,
@@ -10650,6 +12682,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.609845,
+				lon: 35.301725,
 			},
 		},
 		{
@@ -10672,6 +12708,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592469,
+				lon: 35.304871,
+			},
 		},
 		{
 			timestamp: 324.0,
@@ -10692,6 +12732,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.588202,
+				lon: 35.305419,
 			},
 		},
 		{
@@ -10714,6 +12758,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592687,
+				lon: 35.308378,
+			},
 		},
 		{
 			timestamp: 325.0,
@@ -10734,6 +12782,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.588384,
+				lon: 35.291229,
 			},
 		},
 		{
@@ -10756,6 +12808,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.579211,
+				lon: 35.309861,
+			},
 		},
 		{
 			timestamp: 325.0,
@@ -10776,6 +12832,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.597372,
+				lon: 35.305738,
 			},
 		},
 		{
@@ -10798,6 +12858,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.584392,
+				lon: 35.301579,
+			},
 		},
 		{
 			timestamp: 326.0,
@@ -10818,6 +12882,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.578659,
+				lon: 35.312133,
 			},
 		},
 		{
@@ -10840,6 +12908,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589221,
+				lon: 35.313661,
+			},
 		},
 		{
 			timestamp: 327.0,
@@ -10860,6 +12932,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.605482,
+				lon: 35.300045,
 			},
 		},
 		{
@@ -10882,6 +12958,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591615,
+				lon: 35.316603,
+			},
 		},
 		{
 			timestamp: 328.0,
@@ -10902,6 +12982,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.582763,
+				lon: 35.30926,
 			},
 		},
 		{
@@ -10924,6 +13008,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.590214,
+				lon: 35.320708,
+			},
 		},
 		{
 			timestamp: 329.0,
@@ -10944,6 +13032,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.603362,
+				lon: 35.305522,
 			},
 		},
 		{
@@ -10966,6 +13058,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.590852,
+				lon: 35.32,
+			},
 		},
 		{
 			timestamp: 330.0,
@@ -10986,6 +13082,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.584689,
+				lon: 35.311685,
 			},
 		},
 		{
@@ -11008,6 +13108,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587026,
+				lon: 35.292704,
+			},
 		},
 		{
 			timestamp: 331.0,
@@ -11028,6 +13132,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.57773,
+				lon: 35.315911,
 			},
 		},
 		{
@@ -11050,6 +13158,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596941,
+				lon: 35.302006,
+			},
 		},
 		{
 			timestamp: 332.0,
@@ -11070,6 +13182,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.601155,
+				lon: 35.307328,
 			},
 		},
 		{
@@ -11092,6 +13208,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.605319,
+				lon: 35.300222,
+			},
 		},
 		{
 			timestamp: 334.0,
@@ -11112,6 +13232,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.579664,
+				lon: 35.298211,
 			},
 		},
 		{
@@ -11134,6 +13258,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589721,
+				lon: 35.324121,
+			},
 		},
 		{
 			timestamp: 336.0,
@@ -11154,6 +13282,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.581644,
+				lon: 35.300131,
 			},
 		},
 		{
@@ -11176,6 +13308,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589942,
+				lon: 35.318711,
+			},
 		},
 		{
 			timestamp: 338.0,
@@ -11196,6 +13332,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.586043,
+				lon: 35.311435,
 			},
 		},
 		{
@@ -11218,6 +13358,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.597029,
+				lon: 35.305402,
+			},
 		},
 		{
 			timestamp: 340.0,
@@ -11238,6 +13382,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592176,
+				lon: 35.304406,
 			},
 		},
 		{
@@ -11260,6 +13408,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593928,
+				lon: 35.295578,
+			},
 		},
 		{
 			timestamp: 342.0,
@@ -11280,6 +13432,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596275,
+				lon: 35.305964,
 			},
 		},
 		{
@@ -11302,6 +13458,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.604748,
+				lon: 35.30634,
+			},
 		},
 		{
 			timestamp: 344.0,
@@ -11322,6 +13482,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598475,
+				lon: 35.319206,
 			},
 		},
 		{
@@ -11344,6 +13508,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589131,
+				lon: 35.322737,
+			},
 		},
 		{
 			timestamp: 346.0,
@@ -11364,6 +13532,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.585982,
+				lon: 35.309749,
 			},
 		},
 		{
@@ -11386,6 +13558,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596511,
+				lon: 35.30845,
+			},
 		},
 		{
 			timestamp: 348.0,
@@ -11406,6 +13582,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589915,
+				lon: 35.311866,
 			},
 		},
 		{
@@ -11428,6 +13608,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.604928,
+				lon: 35.314794,
+			},
 		},
 		{
 			timestamp: 349.0,
@@ -11448,6 +13632,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.597393,
+				lon: 35.313478,
 			},
 		},
 		{
@@ -11470,6 +13658,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593143,
+				lon: 35.306163,
+			},
 		},
 		{
 			timestamp: 350.0,
@@ -11490,6 +13682,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.588739,
+				lon: 35.313034,
 			},
 		},
 		{
@@ -11512,6 +13708,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.586818,
+				lon: 35.30405,
+			},
 		},
 		{
 			timestamp: 352.0,
@@ -11532,6 +13732,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598853,
+				lon: 35.300091,
 			},
 		},
 		{
@@ -11554,6 +13758,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592004,
+				lon: 35.313464,
+			},
 		},
 		{
 			timestamp: 353.0,
@@ -11574,6 +13782,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594966,
+				lon: 35.312288,
 			},
 		},
 		{
@@ -11596,6 +13808,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.586491,
+				lon: 35.295413,
+			},
 		},
 		{
 			timestamp: 354.0,
@@ -11616,6 +13832,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.581292,
+				lon: 35.297332,
 			},
 		},
 		{
@@ -11638,6 +13858,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.595485,
+				lon: 35.31565,
+			},
 		},
 		{
 			timestamp: 355.0,
@@ -11658,6 +13882,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.588652,
+				lon: 35.311977,
 			},
 		},
 		{
@@ -11680,6 +13908,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587687,
+				lon: 35.322038,
+			},
 		},
 		{
 			timestamp: 356.0,
@@ -11700,6 +13932,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596416,
+				lon: 35.312575,
 			},
 		},
 		{
@@ -11722,6 +13958,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594256,
+				lon: 35.305971,
+			},
 		},
 		{
 			timestamp: 356.0,
@@ -11742,6 +13982,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592547,
+				lon: 35.318116,
 			},
 		},
 		{
@@ -11764,6 +14008,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.585679,
+				lon: 35.31043,
+			},
 		},
 		{
 			timestamp: 357.0,
@@ -11784,6 +14032,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59236,
+				lon: 35.307167,
 			},
 		},
 		{
@@ -11806,6 +14058,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596028,
+				lon: 35.312541,
+			},
 		},
 		{
 			timestamp: 358.0,
@@ -11826,6 +14082,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599795,
+				lon: 35.306623,
 			},
 		},
 		{
@@ -11848,6 +14108,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593851,
+				lon: 35.304932,
+			},
 		},
 		{
 			timestamp: 358.0,
@@ -11868,6 +14132,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.605103,
+				lon: 35.298289,
 			},
 		},
 		{
@@ -11890,6 +14158,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589406,
+				lon: 35.295194,
+			},
 		},
 		{
 			timestamp: 359.0,
@@ -11910,6 +14182,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595335,
+				lon: 35.297925,
 			},
 		},
 		{
@@ -11932,6 +14208,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.582981,
+				lon: 35.299017,
+			},
 		},
 		{
 			timestamp: 359.0,
@@ -11952,6 +14232,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.609202,
+				lon: 35.304414,
 			},
 		},
 		{
@@ -11974,6 +14258,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.58525,
+				lon: 35.304187,
+			},
 		},
 		{
 			timestamp: 360.0,
@@ -11994,6 +14282,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599144,
+				lon: 35.318095,
 			},
 		},
 		{
@@ -12016,6 +14308,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596035,
+				lon: 35.304638,
+			},
 		},
 		{
 			timestamp: 360.0,
@@ -12036,6 +14332,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.578784,
+				lon: 35.300838,
 			},
 		},
 		{
@@ -12058,6 +14358,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589895,
+				lon: 35.308863,
+			},
 		},
 		{
 			timestamp: 361.0,
@@ -12078,6 +14382,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59317,
+				lon: 35.30471,
 			},
 		},
 		{
@@ -12100,6 +14408,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589531,
+				lon: 35.30473,
+			},
 		},
 		{
 			timestamp: 361.0,
@@ -12120,6 +14432,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590181,
+				lon: 35.302097,
 			},
 		},
 		{
@@ -12142,6 +14458,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.582104,
+				lon: 35.314753,
+			},
 		},
 		{
 			timestamp: 361.0,
@@ -12162,6 +14482,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595844,
+				lon: 35.30328,
 			},
 		},
 		{
@@ -12184,6 +14508,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592977,
+				lon: 35.306076,
+			},
 		},
 		{
 			timestamp: 362.0,
@@ -12204,6 +14532,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59874,
+				lon: 35.311028,
 			},
 		},
 		{
@@ -12226,6 +14558,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594826,
+				lon: 35.314132,
+			},
 		},
 		{
 			timestamp: 362.0,
@@ -12246,6 +14582,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591654,
+				lon: 35.30371,
 			},
 		},
 		{
@@ -12268,6 +14608,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589971,
+				lon: 35.304103,
+			},
 		},
 		{
 			timestamp: 363.0,
@@ -12288,6 +14632,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.584972,
+				lon: 35.291495,
 			},
 		},
 		{
@@ -12310,6 +14658,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59548,
+				lon: 35.322193,
+			},
 		},
 		{
 			timestamp: 363.0,
@@ -12330,6 +14682,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596916,
+				lon: 35.295709,
 			},
 		},
 		{
@@ -12352,6 +14708,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.595448,
+				lon: 35.30937,
+			},
 		},
 		{
 			timestamp: 363.0,
@@ -12372,6 +14732,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592515,
+				lon: 35.304932,
 			},
 		},
 		{
@@ -12394,6 +14758,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.578116,
+				lon: 35.301969,
+			},
 		},
 		{
 			timestamp: 364.0,
@@ -12414,6 +14782,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.605052,
+				lon: 35.305612,
 			},
 		},
 		{
@@ -12436,6 +14808,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596379,
+				lon: 35.322242,
+			},
 		},
 		{
 			timestamp: 364.0,
@@ -12456,6 +14832,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.603036,
+				lon: 35.310042,
 			},
 		},
 		{
@@ -12478,6 +14858,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.603952,
+				lon: 35.311333,
+			},
 		},
 		{
 			timestamp: 365.0,
@@ -12498,6 +14882,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.605357,
+				lon: 35.310305,
 			},
 		},
 		{
@@ -12520,6 +14908,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592342,
+				lon: 35.307661,
+			},
 		},
 		{
 			timestamp: 365.0,
@@ -12540,6 +14932,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590836,
+				lon: 35.298281,
 			},
 		},
 		{
@@ -12562,6 +14958,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.590396,
+				lon: 35.316054,
+			},
 		},
 		{
 			timestamp: 366.0,
@@ -12582,6 +14982,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592429,
+				lon: 35.306556,
 			},
 		},
 		{
@@ -12604,6 +15008,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.58374,
+				lon: 35.304773,
+			},
 		},
 		{
 			timestamp: 366.0,
@@ -12624,6 +15032,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59282,
+				lon: 35.307185,
 			},
 		},
 		{
@@ -12646,6 +15058,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.595271,
+				lon: 35.311125,
+			},
 		},
 		{
 			timestamp: 367.0,
@@ -12666,6 +15082,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.597006,
+				lon: 35.305263,
 			},
 		},
 		{
@@ -12688,6 +15108,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.578075,
+				lon: 35.313316,
+			},
 		},
 		{
 			timestamp: 367.0,
@@ -12708,6 +15132,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594391,
+				lon: 35.305754,
 			},
 		},
 		{
@@ -12730,6 +15158,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.608387,
+				lon: 35.304148,
+			},
 		},
 		{
 			timestamp: 368.0,
@@ -12750,6 +15182,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.60148,
+				lon: 35.309045,
 			},
 		},
 		{
@@ -12772,6 +15208,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596314,
+				lon: 35.299347,
+			},
 		},
 		{
 			timestamp: 368.0,
@@ -12792,6 +15232,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599725,
+				lon: 35.319397,
 			},
 		},
 		{
@@ -12814,6 +15258,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.598717,
+				lon: 35.297746,
+			},
 		},
 		{
 			timestamp: 369.0,
@@ -12834,6 +15282,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.587842,
+				lon: 35.317237,
 			},
 		},
 		{
@@ -12856,6 +15308,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.603953,
+				lon: 35.318847,
+			},
 		},
 		{
 			timestamp: 369.0,
@@ -12876,6 +15332,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.581061,
+				lon: 35.306717,
 			},
 		},
 		{
@@ -12898,6 +15358,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587901,
+				lon: 35.297497,
+			},
 		},
 		{
 			timestamp: 370.0,
@@ -12918,6 +15382,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.582194,
+				lon: 35.318836,
 			},
 		},
 		{
@@ -12940,6 +15408,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.587651,
+				lon: 35.312421,
+			},
 		},
 		{
 			timestamp: 370.0,
@@ -12960,6 +15432,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592596,
+				lon: 35.307245,
 			},
 		},
 		{
@@ -12982,6 +15458,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.580683,
+				lon: 35.301377,
+			},
 		},
 		{
 			timestamp: 371.0,
@@ -13002,6 +15482,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.587486,
+				lon: 35.301447,
 			},
 		},
 		{
@@ -13024,6 +15508,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.580285,
+				lon: 35.307704,
+			},
 		},
 		{
 			timestamp: 371.0,
@@ -13044,6 +15532,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596988,
+				lon: 35.303712,
 			},
 		},
 		{
@@ -13066,6 +15558,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589042,
+				lon: 35.306954,
+			},
 		},
 		{
 			timestamp: 372.0,
@@ -13086,6 +15582,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589149,
+				lon: 35.30336,
 			},
 		},
 		{
@@ -13108,6 +15608,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593911,
+				lon: 35.292858,
+			},
 		},
 		{
 			timestamp: 372.0,
@@ -13128,6 +15632,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595883,
+				lon: 35.308653,
 			},
 		},
 		{
@@ -13150,6 +15658,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596174,
+				lon: 35.309539,
+			},
 		},
 		{
 			timestamp: 373.0,
@@ -13170,6 +15682,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.580106,
+				lon: 35.30898,
 			},
 		},
 		{
@@ -13192,6 +15708,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.588369,
+				lon: 35.305443,
+			},
 		},
 		{
 			timestamp: 373.0,
@@ -13212,6 +15732,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.606338,
+				lon: 35.307434,
 			},
 		},
 		{
@@ -13234,6 +15758,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.60052,
+				lon: 35.317141,
+			},
 		},
 		{
 			timestamp: 373.0,
@@ -13254,6 +15782,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589269,
+				lon: 35.315761,
 			},
 		},
 		{
@@ -13276,6 +15808,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.598751,
+				lon: 35.30761,
+			},
 		},
 		{
 			timestamp: 374.0,
@@ -13296,6 +15832,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.603293,
+				lon: 35.311954,
 			},
 		},
 		{
@@ -13318,6 +15858,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.597805,
+				lon: 35.313597,
+			},
 		},
 		{
 			timestamp: 374.0,
@@ -13338,6 +15882,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598277,
+				lon: 35.318944,
 			},
 		},
 		{
@@ -13360,6 +15908,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.582816,
+				lon: 35.308765,
+			},
 		},
 		{
 			timestamp: 375.0,
@@ -13380,6 +15932,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.604824,
+				lon: 35.310882,
 			},
 		},
 		{
@@ -13402,6 +15958,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596945,
+				lon: 35.308135,
+			},
 		},
 		{
 			timestamp: 375.0,
@@ -13422,6 +15982,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.576963,
+				lon: 35.310698,
 			},
 		},
 		{
@@ -13444,6 +16008,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593645,
+				lon: 35.300663,
+			},
 		},
 		{
 			timestamp: 376.0,
@@ -13464,6 +16032,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.5976,
+				lon: 35.310868,
 			},
 		},
 		{
@@ -13486,6 +16058,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.599901,
+				lon: 35.32344,
+			},
 		},
 		{
 			timestamp: 376.0,
@@ -13506,6 +16082,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589838,
+				lon: 35.31353,
 			},
 		},
 		{
@@ -13528,6 +16108,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592644,
+				lon: 35.304853,
+			},
 		},
 		{
 			timestamp: 377.0,
@@ -13548,6 +16132,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593124,
+				lon: 35.300505,
 			},
 		},
 		{
@@ -13570,6 +16158,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592721,
+				lon: 35.317662,
+			},
 		},
 		{
 			timestamp: 377.0,
@@ -13590,6 +16182,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.596119,
+				lon: 35.305142,
 			},
 		},
 		{
@@ -13612,6 +16208,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.586679,
+				lon: 35.300085,
+			},
 		},
 		{
 			timestamp: 378.0,
@@ -13632,6 +16232,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592596,
+				lon: 35.298539,
 			},
 		},
 		{
@@ -13654,6 +16258,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591756,
+				lon: 35.305999,
+			},
 		},
 		{
 			timestamp: 378.0,
@@ -13674,6 +16282,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599237,
+				lon: 35.308268,
 			},
 		},
 		{
@@ -13696,6 +16308,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592258,
+				lon: 35.308334,
+			},
 		},
 		{
 			timestamp: 379.0,
@@ -13716,6 +16332,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.587919,
+				lon: 35.309876,
 			},
 		},
 		{
@@ -13738,6 +16358,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593421,
+				lon: 35.308089,
+			},
 		},
 		{
 			timestamp: 380.0,
@@ -13758,6 +16382,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.603048,
+				lon: 35.296313,
 			},
 		},
 		{
@@ -13780,6 +16408,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.595374,
+				lon: 35.30377,
+			},
 		},
 		{
 			timestamp: 380.0,
@@ -13800,6 +16432,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593451,
+				lon: 35.307603,
 			},
 		},
 		{
@@ -13822,6 +16458,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.5942,
+				lon: 35.30435,
+			},
 		},
 		{
 			timestamp: 381.0,
@@ -13842,6 +16482,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.581829,
+				lon: 35.302696,
 			},
 		},
 		{
@@ -13864,6 +16508,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.586327,
+				lon: 35.304611,
+			},
 		},
 		{
 			timestamp: 381.0,
@@ -13884,6 +16532,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598321,
+				lon: 35.313517,
 			},
 		},
 		{
@@ -13906,6 +16558,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59407,
+				lon: 35.310077,
+			},
 		},
 		{
 			timestamp: 382.0,
@@ -13926,6 +16582,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592484,
+				lon: 35.300237,
 			},
 		},
 		{
@@ -13948,6 +16608,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59919,
+				lon: 35.312163,
+			},
 		},
 		{
 			timestamp: 382.0,
@@ -13968,6 +16632,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591191,
+				lon: 35.300521,
 			},
 		},
 		{
@@ -13990,6 +16658,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.602205,
+				lon: 35.315393,
+			},
 		},
 		{
 			timestamp: 383.0,
@@ -14010,6 +16682,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598908,
+				lon: 35.305366,
 			},
 		},
 		{
@@ -14032,6 +16708,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59111,
+				lon: 35.304244,
+			},
 		},
 		{
 			timestamp: 383.0,
@@ -14052,6 +16732,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.602619,
+				lon: 35.319138,
 			},
 		},
 		{
@@ -14074,6 +16758,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594777,
+				lon: 35.297794,
+			},
 		},
 		{
 			timestamp: 384.0,
@@ -14094,6 +16782,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594111,
+				lon: 35.307763,
 			},
 		},
 		{
@@ -14116,6 +16808,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.578039,
+				lon: 35.302057,
+			},
 		},
 		{
 			timestamp: 384.0,
@@ -14136,6 +16832,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598892,
+				lon: 35.293185,
 			},
 		},
 		{
@@ -14158,6 +16858,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.597156,
+				lon: 35.303955,
+			},
 		},
 		{
 			timestamp: 385.0,
@@ -14178,6 +16882,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589931,
+				lon: 35.319155,
 			},
 		},
 		{
@@ -14200,6 +16908,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.589641,
+				lon: 35.301156,
+			},
 		},
 		{
 			timestamp: 386.0,
@@ -14220,6 +16932,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.584871,
+				lon: 35.318054,
 			},
 		},
 		{
@@ -14242,6 +16958,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.57821,
+				lon: 35.313917,
+			},
 		},
 		{
 			timestamp: 386.0,
@@ -14262,6 +16982,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.595468,
+				lon: 35.317819,
 			},
 		},
 		{
@@ -14284,6 +17008,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.592042,
+				lon: 35.30135,
+			},
 		},
 		{
 			timestamp: 387.0,
@@ -14304,6 +17032,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593078,
+				lon: 35.308264,
 			},
 		},
 		{
@@ -14326,6 +17058,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594542,
+				lon: 35.305084,
+			},
 		},
 		{
 			timestamp: 387.0,
@@ -14346,6 +17082,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.589253,
+				lon: 35.31988,
 			},
 		},
 		{
@@ -14368,6 +17108,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.580862,
+				lon: 35.299102,
+			},
 		},
 		{
 			timestamp: 388.0,
@@ -14388,6 +17132,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.607039,
+				lon: 35.301873,
 			},
 		},
 		{
@@ -14410,6 +17158,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.5927,
+				lon: 35.308661,
+			},
 		},
 		{
 			timestamp: 389.0,
@@ -14430,6 +17182,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593611,
+				lon: 35.314482,
 			},
 		},
 		{
@@ -14452,6 +17208,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.585185,
+				lon: 35.311202,
+			},
 		},
 		{
 			timestamp: 390.0,
@@ -14472,6 +17232,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.581614,
+				lon: 35.317608,
 			},
 		},
 		{
@@ -14494,6 +17258,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.585616,
+				lon: 35.30769,
+			},
 		},
 		{
 			timestamp: 390.0,
@@ -14514,6 +17282,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.597722,
+				lon: 35.306901,
 			},
 		},
 		{
@@ -14536,6 +17308,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.583026,
+				lon: 35.302487,
+			},
 		},
 		{
 			timestamp: 391.0,
@@ -14556,6 +17332,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599075,
+				lon: 35.312472,
 			},
 		},
 		{
@@ -14578,6 +17358,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.585272,
+				lon: 35.304376,
+			},
 		},
 		{
 			timestamp: 391.0,
@@ -14598,6 +17382,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.581582,
+				lon: 35.302281,
 			},
 		},
 		{
@@ -14620,6 +17408,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.605987,
+				lon: 35.308862,
+			},
 		},
 		{
 			timestamp: 392.0,
@@ -14640,6 +17432,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591149,
+				lon: 35.297023,
 			},
 		},
 		{
@@ -14662,6 +17458,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.582423,
+				lon: 35.306664,
+			},
 		},
 		{
 			timestamp: 393.0,
@@ -14682,6 +17482,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.580114,
+				lon: 35.314158,
 			},
 		},
 		{
@@ -14704,6 +17508,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.600034,
+				lon: 35.302386,
+			},
 		},
 		{
 			timestamp: 393.0,
@@ -14724,6 +17532,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594013,
+				lon: 35.312239,
 			},
 		},
 		{
@@ -14746,6 +17558,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591161,
+				lon: 35.30501,
+			},
 		},
 		{
 			timestamp: 394.0,
@@ -14766,6 +17582,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.60492,
+				lon: 35.305626,
 			},
 		},
 		{
@@ -14788,6 +17608,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.576467,
+				lon: 35.304988,
+			},
 		},
 		{
 			timestamp: 394.0,
@@ -14808,6 +17632,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598071,
+				lon: 35.304756,
 			},
 		},
 		{
@@ -14830,6 +17658,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.588718,
+				lon: 35.291062,
+			},
 		},
 		{
 			timestamp: 395.0,
@@ -14850,6 +17682,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.588799,
+				lon: 35.299905,
 			},
 		},
 		{
@@ -14872,6 +17708,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.59025,
+				lon: 35.310512,
+			},
 		},
 		{
 			timestamp: 395.0,
@@ -14892,6 +17732,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593215,
+				lon: 35.306642,
 			},
 		},
 		{
@@ -14914,6 +17758,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591742,
+				lon: 35.317552,
+			},
 		},
 		{
 			timestamp: 396.0,
@@ -14934,6 +17782,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.587209,
+				lon: 35.30807,
 			},
 		},
 		{
@@ -14956,6 +17808,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.579411,
+				lon: 35.315674,
+			},
 		},
 		{
 			timestamp: 396.0,
@@ -14976,6 +17832,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.594887,
+				lon: 35.29868,
 			},
 		},
 		{
@@ -14998,6 +17858,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.579378,
+				lon: 35.296777,
+			},
 		},
 		{
 			timestamp: 397.0,
@@ -15018,6 +17882,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.606525,
+				lon: 35.309771,
 			},
 		},
 		{
@@ -15040,6 +17908,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.591224,
+				lon: 35.306294,
+			},
 		},
 		{
 			timestamp: 397.0,
@@ -15060,6 +17932,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599608,
+				lon: 35.310605,
 			},
 		},
 		{
@@ -15082,6 +17958,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594024,
+				lon: 35.314897,
+			},
 		},
 		{
 			timestamp: 398.0,
@@ -15102,6 +17982,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.583913,
+				lon: 35.304287,
 			},
 		},
 		{
@@ -15124,6 +18008,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.586593,
+				lon: 35.306049,
+			},
 		},
 		{
 			timestamp: 398.0,
@@ -15144,6 +18032,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.584814,
+				lon: 35.29387,
 			},
 		},
 		{
@@ -15166,6 +18058,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.607602,
+				lon: 35.31365,
+			},
 		},
 		{
 			timestamp: 399.0,
@@ -15186,6 +18082,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.591925,
+				lon: 35.293708,
 			},
 		},
 		{
@@ -15208,6 +18108,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.596346,
+				lon: 35.320076,
+			},
 		},
 		{
 			timestamp: 400.0,
@@ -15228,6 +18132,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592188,
+				lon: 35.312085,
 			},
 		},
 		{
@@ -15250,6 +18158,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.599957,
+				lon: 35.306689,
+			},
 		},
 		{
 			timestamp: 401.0,
@@ -15270,6 +18182,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.598007,
+				lon: 35.315898,
 			},
 		},
 		{
@@ -15292,6 +18208,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.594739,
+				lon: 35.312269,
+			},
 		},
 		{
 			timestamp: 402.0,
@@ -15312,6 +18232,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592478,
+				lon: 35.306347,
 			},
 		},
 		{
@@ -15334,6 +18258,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.58494,
+				lon: 35.314473,
+			},
 		},
 		{
 			timestamp: 403.0,
@@ -15354,6 +18282,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.597411,
+				lon: 35.32021,
 			},
 		},
 		{
@@ -15376,6 +18308,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.593153,
+				lon: 35.308672,
+			},
 		},
 		{
 			timestamp: 404.0,
@@ -15396,6 +18332,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590799,
+				lon: 35.311094,
 			},
 		},
 		{
@@ -15418,6 +18358,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.585236,
+				lon: 35.294212,
+			},
 		},
 		{
 			timestamp: 406.0,
@@ -15438,6 +18382,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.59527,
+				lon: 35.308231,
 			},
 		},
 		{
@@ -15460,6 +18408,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.58019,
+				lon: 35.310425,
+			},
 		},
 		{
 			timestamp: 408.0,
@@ -15480,6 +18432,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.593814,
+				lon: 35.302206,
 			},
 		},
 		{
@@ -15502,6 +18458,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.609624,
+				lon: 35.306697,
+			},
 		},
 		{
 			timestamp: 410.0,
@@ -15522,6 +18482,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.600233,
+				lon: 35.310004,
 			},
 		},
 		{
@@ -15544,6 +18508,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.599338,
+				lon: 35.316393,
+			},
 		},
 		{
 			timestamp: 412.0,
@@ -15564,6 +18532,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.610021,
+				lon: 35.30619,
 			},
 		},
 		{
@@ -15586,6 +18558,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.607003,
+				lon: 35.308363,
+			},
 		},
 		{
 			timestamp: 414.0,
@@ -15606,6 +18582,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.592881,
+				lon: 35.307562,
 			},
 		},
 		{
@@ -15628,6 +18608,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.600441,
+				lon: 35.303103,
+			},
 		},
 		{
 			timestamp: 416.0,
@@ -15648,6 +18632,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.590082,
+				lon: 35.308683,
 			},
 		},
 		{
@@ -15670,6 +18658,10 @@ export const detections = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			coordinates: {
+				lat: 50.588446,
+				lon: 35.30078,
+			},
 		},
 		{
 			timestamp: 418.0,
@@ -15690,6 +18682,10 @@ export const detections = {
 			},
 			tracking_info: {
 				frame_number: 0,
+			},
+			coordinates: {
+				lat: 50.599617,
+				lon: 35.302736,
 			},
 		},
 	],
