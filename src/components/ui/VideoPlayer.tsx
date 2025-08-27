@@ -16,21 +16,23 @@ import {
 } from "media-chrome/react";
 
 interface VideoPlayerProps {
-	src: string;
+	src?: string;
 	width?: number | string;
 	height?: number | string;
 	className?: string;
 	livestream?: boolean;
 	allowfullscreen?: boolean;
+	errorMessage?: string;
 }
 
 const VideoPlayer: FC<VideoPlayerProps> = ({
-	src,
+	src = "",
 	width = "100%",
 	height = "60%",
 	livestream = false,
 	allowfullscreen = true,
 	className,
+	errorMessage = "No video source available",
 }) => {
 	const isGoogleEmbed = src.includes("google");
 	const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -110,6 +112,19 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 				height={height}
 				referrerPolicy={"origin"}
 			></iframe>
+		);
+	}
+
+	if (!src) {
+		return (
+			<div
+				className={cn(
+					"w-full h-[300px] flex items-center justify-center bg-[#1C2122] text-white/50",
+					className
+				)}
+			>
+				{errorMessage}
+			</div>
 		);
 	}
 
