@@ -27,12 +27,14 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 		{
 			id: "rgb",
 			label: "RGB",
-			value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
+			// value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
+			value: "",
 		},
 		{
 			id: "thermo",
 			label: "Thermo",
-			value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
+			// value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
+			value: "",
 		},
 	];
 

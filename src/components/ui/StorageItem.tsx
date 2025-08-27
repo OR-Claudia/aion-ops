@@ -32,7 +32,7 @@ export interface Coordinate {
 }
 
 export interface StorageData {
-	id: string;
+	id: string | number;
 	title: string;
 	date: string;
 	image: string;

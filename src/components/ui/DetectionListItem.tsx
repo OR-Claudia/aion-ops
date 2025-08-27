@@ -20,16 +20,16 @@ const DetectionListItem: React.FC<DetectionListItemProps> = ({ detection }) => {
 	const image = getDetectionImage(detection.class_name);
 
 	return (
-		<div className="bg-[#242B2C] w-[550px] rounded-[0px_10px_10px_10px] my-2 flex items-center">
+		<div className="bg-[#242B2C] w-[450px] rounded-[0px_10px_10px_10px] my-1 flex items-center">
 			<img
 				src={`src/assets/${image}`}
 				alt={detection.class_name}
-				className="w-19 h-19 mr-2 p-2"
+				className="w-16 h-16 mr-2 p-2"
 			/>
 			<div className="flex flex-col w-full content-center">
 				{/* Header */}
 				<div className="flex w-full justify-between">
-					<div className="text-lg">
+					<div className="text-md">
 						<span className="font-medium">
 							{capitalize(detection.class_name)}
 						</span>
@@ -41,14 +41,14 @@ const DetectionListItem: React.FC<DetectionListItemProps> = ({ detection }) => {
 				</div>
 				{/* Details */}
 				<div className="flex place-content-between mr-3">
-					<div className="text-md">
+					<div className="text-sm">
 						<span>{"ID: "}</span>
-						<span>{detection.id}</span>
+						<span>{detection.track_id}</span>
 					</div>
-					<div className="text-md">
+					<div className="text-sm">
 						<span>{`Lat: ${detection.coordinates.lat} Lon: ${detection.coordinates.lon}`}</span>
 					</div>
-					<div className="text-md">
+					<div className="text-sm">
 						<span>{"Confidence: "}</span>
 						<span>{detection.confidence.toFixed(2)}</span>
 					</div>
