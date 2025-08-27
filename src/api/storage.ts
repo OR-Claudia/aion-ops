@@ -1,5 +1,4 @@
 import type { StorageData } from "../components/ui/StorageItem";
-import { detections as detectionsData } from "../assets/mock-data/data.ts";
 
 // Mocked storage data
 const storageData: StorageData[] = [
@@ -63,7 +62,6 @@ const storageData: StorageData[] = [
 				lon: 35.307222,
 			},
 		],
-		detected: detectionsData,
 	},
 	{
 		id: "2",
@@ -125,7 +123,6 @@ const storageData: StorageData[] = [
 				lon: 35.307222,
 			},
 		],
-		detected: detectionsData,
 	},
 	{
 		id: "3",
@@ -187,7 +184,6 @@ const storageData: StorageData[] = [
 				lon: 35.307222,
 			},
 		],
-		detected: detectionsData,
 	},
 	{
 		id: "4",
@@ -245,7 +241,6 @@ const storageData: StorageData[] = [
 				lon: 35.407889,
 			},
 		],
-		detected: detectionsData,
 	},
 	{
 		id: "5",
@@ -315,7 +310,6 @@ const storageData: StorageData[] = [
 				lon: 35.091456,
 			},
 		],
-		detected: detectionsData,
 	},
 	{
 		id: "6",
@@ -365,7 +359,6 @@ const storageData: StorageData[] = [
 				lon: 35.256789,
 			},
 		],
-		detected: detectionsData,
 	},
 	{
 		id: "7",
@@ -443,7 +436,6 @@ const storageData: StorageData[] = [
 				lon: 35.762789,
 			},
 		],
-		detected: detectionsData,
 	},
 	{
 		id: "8",
@@ -529,7 +521,6 @@ const storageData: StorageData[] = [
 				lon: 35.752891,
 			},
 		],
-		detected: detectionsData,
 	},
 ];
 
@@ -540,7 +531,7 @@ const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
  * Get list of storage facilities
  */
 export async function getStorageList(): Promise<StorageData[]> {
-	await delay(400);
+	await delay(600);
 	return storageData;
 }
 

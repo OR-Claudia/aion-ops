@@ -14,8 +14,8 @@ export const detections = {
 	},
 	detections: [
 		{
-			timestamp: 44.0,
-			frame_time: 44.0,
+			timestamp: 43.0,
+			frame_time: 43.0,
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.8169930577278137,

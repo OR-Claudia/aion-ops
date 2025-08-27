@@ -21,8 +21,8 @@ function generateRandomCoordinatesInRadius(center, radiusKm = 2) {
 	};
 }
 
-// Read the existing data file
-const dataPath = "./src/assets/mock-data/data2.js";
+// Read the existing data file - replace with your actual data file path
+const dataPath = "./src/assets/mock-data/thermo_data.js";
 let content = fs.readFileSync(dataPath, "utf8");
 
 // Find and replace each detection object to add coordinates
@@ -45,7 +45,7 @@ content = content.replace(
 );
 
 // Write the modified content to a new file
-const outputPath = "./data_with_coordinates.ts";
+const outputPath = "src/assets/mock-data/output.js";
 fs.writeFileSync(outputPath, content);
 
 console.log(
@@ -54,12 +54,4 @@ console.log(
 console.log(`📁 Output file: ${outputPath}`);
 console.log(
 	`🗺️  All coordinates within 2km of Sumi: ${SUMI_CENTER.lat}, ${SUMI_CENTER.lon}`
-);
-console.log(
-	"\n🔧 To use the new data, replace the import in your components from:"
-);
-console.log('   import { detections } from "../assets/mock-data/data.ts"');
-console.log("   to:");
-console.log(
-	'   import { detections } from "../assets/mock-data/data_with_coordinates.ts"'
 );

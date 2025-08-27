@@ -1,4 +1,4 @@
-export const thermoData = {
+thermoData = {
 	video_info: {
 		filename: "Boson_Capture_10.avi",
 		fps: 60,
@@ -20,7 +20,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7076041102409363,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 228,
 				y1: 109,
@@ -368,7 +368,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7323496341705322,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 359,
 				y1: 153,
@@ -391,7 +391,7 @@ export const thermoData = {
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.7292345762252808,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 452,
 				y1: 172,
@@ -414,7 +414,7 @@ export const thermoData = {
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.6210104823112488,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 405,
 				y1: 158,
@@ -437,7 +437,7 @@ export const thermoData = {
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.428500771522522,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 395,
 				y1: 166,
@@ -460,7 +460,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.3840472102165222,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 356,
 				y1: 152,
@@ -483,7 +483,7 @@ export const thermoData = {
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.36435291171073914,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 394,
 				y1: 163,
@@ -5181,7 +5181,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.2842031419277191,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 528,
 				y1: 190,
@@ -5204,7 +5204,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.48148903250694275,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 535,
 				y1: 191,
@@ -5227,7 +5227,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5435234904289246,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 538,
 				y1: 192,
@@ -5250,7 +5250,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5246225595474243,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 538,
 				y1: 192,
@@ -5273,7 +5273,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6134923100471497,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 535,
 				y1: 192,
@@ -5296,7 +5296,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5762597322463989,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 534,
 				y1: 192,
@@ -5319,7 +5319,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5250898599624634,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 534,
 				y1: 192,
@@ -5342,7 +5342,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6256945729255676,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 535,
 				y1: 192,
@@ -5365,7 +5365,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6016653180122375,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 535,
 				y1: 191,
@@ -5388,7 +5388,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.4674893915653229,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 537,
 				y1: 191,
@@ -5411,7 +5411,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.2518140375614166,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 536,
 				y1: 192,
@@ -5434,7 +5434,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.2535896897315979,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 539,
 				y1: 192,
@@ -5457,7 +5457,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.3651997447013855,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 538,
 				y1: 193,
@@ -5480,7 +5480,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.30618342757225037,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 534,
 				y1: 192,
@@ -5503,7 +5503,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.42868518829345703,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 534,
 				y1: 192,
@@ -5526,7 +5526,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.2705603837966919,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 534,
 				y1: 193,
@@ -5549,7 +5549,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.2568398118019104,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 532,
 				y1: 193,
@@ -5572,7 +5572,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.38436248898506165,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 531,
 				y1: 193,
@@ -5595,7 +5595,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.3772231340408325,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 531,
 				y1: 193,
@@ -5618,7 +5618,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.4081594944000244,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 530,
 				y1: 193,
@@ -5641,7 +5641,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.44074898958206177,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 530,
 				y1: 193,
@@ -5664,7 +5664,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.530539333820343,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 529,
 				y1: 193,
@@ -5687,7 +5687,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.4460511803627014,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 529,
 				y1: 192,
@@ -5710,7 +5710,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.5719841718673706,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 528,
 				y1: 192,
@@ -5733,7 +5733,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.667535126209259,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 527,
 				y1: 192,
@@ -5756,7 +5756,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.6775525808334351,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 527,
 				y1: 192,
@@ -5779,7 +5779,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7271469235420227,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 525,
 				y1: 191,
@@ -5802,7 +5802,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7739002108573914,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 523,
 				y1: 190,
@@ -5825,7 +5825,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7804971933364868,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 522,
 				y1: 190,
@@ -5848,7 +5848,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7736401557922363,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 519,
 				y1: 190,
@@ -5871,7 +5871,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.7333526015281677,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 514,
 				y1: 189,
@@ -7919,7 +7919,7 @@ export const thermoData = {
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.564527690410614,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 329,
 				y1: 0,
@@ -7942,7 +7942,7 @@ export const thermoData = {
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.39395618438720703,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 308,
 				y1: 0,
@@ -7965,7 +7965,7 @@ export const thermoData = {
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.5870835781097412,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 389,
 				y1: 12,
@@ -7988,7 +7988,7 @@ export const thermoData = {
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.43651729822158813,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 0,
 				y1: 124,
@@ -8011,7 +8011,7 @@ export const thermoData = {
 			class_id: 1,
 			class_name: "vehicle",
 			confidence: 0.41199439764022827,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 325,
 				y1: 121,
@@ -8034,7 +8034,7 @@ export const thermoData = {
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.28813686966896057,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 0,
 				y1: 83,
@@ -8057,7 +8057,7 @@ export const thermoData = {
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.26003000140190125,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 0,
 				y1: 155,
@@ -13280,7 +13280,7 @@ export const thermoData = {
 			class_id: 0,
 			class_name: "tank",
 			confidence: 0.37714284658432007,
-			track_id: 37,
+			track_id: null,
 			bbox: {
 				x1: 212,
 				y1: 199,
