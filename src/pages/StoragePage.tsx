@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import { Layout } from "../components/layout";
 import {
@@ -15,8 +16,6 @@ import { cn } from "../lib/utils";
 import DetectionsModal from "../components/ui/Modals/DetectionsModal";
 import MissionPathModal from "../components/ui/Modals/MissionPathModal";
 import { getStorageList } from "../api/storage";
-import { thermoData } from "../assets/mock-data/thermo_data";
-import { detections as rgbData } from "../assets/mock-data/data";
 
 const StoragePage: React.FC = () => {
 	const [originalRecords, setOriginalRecords] = useState<StorageData[]>([]);
@@ -29,25 +28,27 @@ const StoragePage: React.FC = () => {
 	const [MissionPathOpen, setMissionPathOpen] = useState<boolean>(false);
 	const [activeTab, setActiveTab] = useState("rgb");
 
-	console.log(
-		"Active Tab:",
-		activeTab,
-		selectedRecord?.detected?.detections[0]
-	);
 	useEffect(() => {
 		const fetchStorageData = async () => {
 			const data = await getStorageList();
-			if (activeTab === "rgb") {
-				data.forEach((record) => (record.detected = rgbData));
-			} else {
-				data.forEach((record) => (record.detected = thermoData));
-			}
 			setOriginalRecords(data);
 		};
 		fetchStorageData();
 	}, [activeTab]);
 
+	useEffect(() => {
+		if (selectedRecord && originalRecords.length > 0) {
+			const updatedRecord = originalRecords.find(
+				(record) => record.id === selectedRecord.id
+			);
+			if (updatedRecord) {
+				setSelectedRecord(updatedRecord);
+			}
+		}
+	}, [originalRecords, activeTab]);
+
 	// Filter configurations for the storage list
+
 	const filterConfigs: FilterConfig[] = [
 		{
 			key: "uav",

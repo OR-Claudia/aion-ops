@@ -32,6 +32,7 @@ export const thermoData = {
 				center_y: 178,
 			},
 			tracking_info: {},
+			id: 1,
 			coordinates: {
 				lat: 50.587243,
 				lon: 35.316415,
@@ -57,6 +58,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 2,
 			coordinates: {
 				lat: 50.590556,
 				lon: 35.307609,
@@ -82,6 +84,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 3,
 			coordinates: {
 				lat: 50.599222,
 				lon: 35.317449,
@@ -107,6 +110,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 4,
 			coordinates: {
 				lat: 50.594496,
 				lon: 35.305202,
@@ -132,6 +136,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 5,
 			coordinates: {
 				lat: 50.603085,
 				lon: 35.310635,
@@ -157,6 +162,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 6,
 			coordinates: {
 				lat: 50.599571,
 				lon: 35.322803,
@@ -182,6 +188,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 7,
 			coordinates: {
 				lat: 50.591434,
 				lon: 35.309278,
@@ -207,6 +214,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 8,
 			coordinates: {
 				lat: 50.604436,
 				lon: 35.307302,
@@ -232,6 +240,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 9,
 			coordinates: {
 				lat: 50.59507,
 				lon: 35.290516,
@@ -257,6 +266,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 10,
 			coordinates: {
 				lat: 50.596505,
 				lon: 35.315691,
@@ -282,6 +292,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 11,
 			coordinates: {
 				lat: 50.582531,
 				lon: 35.30314,
@@ -307,6 +318,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 12,
 			coordinates: {
 				lat: 50.585378,
 				lon: 35.30567,
@@ -332,6 +344,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 13,
 			coordinates: {
 				lat: 50.591718,
 				lon: 35.299061,
@@ -357,6 +370,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 14,
 			coordinates: {
 				lat: 50.605385,
 				lon: 35.314494,
@@ -380,6 +394,7 @@ export const thermoData = {
 				center_y: 191,
 			},
 			tracking_info: {},
+			id: 15,
 			coordinates: {
 				lat: 50.595069,
 				lon: 35.309217,
@@ -403,6 +418,7 @@ export const thermoData = {
 				center_y: 202,
 			},
 			tracking_info: {},
+			id: 16,
 			coordinates: {
 				lat: 50.59276,
 				lon: 35.307712,
@@ -426,6 +442,7 @@ export const thermoData = {
 				center_y: 194,
 			},
 			tracking_info: {},
+			id: 17,
 			coordinates: {
 				lat: 50.599597,
 				lon: 35.313889,
@@ -449,6 +466,7 @@ export const thermoData = {
 				center_y: 199,
 			},
 			tracking_info: {},
+			id: 18,
 			coordinates: {
 				lat: 50.593259,
 				lon: 35.306674,
@@ -472,6 +490,7 @@ export const thermoData = {
 				center_y: 194,
 			},
 			tracking_info: {},
+			id: 19,
 			coordinates: {
 				lat: 50.580515,
 				lon: 35.299417,
@@ -495,6 +514,7 @@ export const thermoData = {
 				center_y: 198,
 			},
 			tracking_info: {},
+			id: 20,
 			coordinates: {
 				lat: 50.582326,
 				lon: 35.292873,
@@ -520,6 +540,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 21,
 			coordinates: {
 				lat: 50.600575,
 				lon: 35.302999,
@@ -545,6 +566,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 22,
 			coordinates: {
 				lat: 50.583361,
 				lon: 35.31923,
@@ -570,6 +592,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 23,
 			coordinates: {
 				lat: 50.596641,
 				lon: 35.313456,
@@ -595,6 +618,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 24,
 			coordinates: {
 				lat: 50.593959,
 				lon: 35.306955,
@@ -620,6 +644,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 25,
 			coordinates: {
 				lat: 50.598379,
 				lon: 35.31028,
@@ -645,6 +670,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 26,
 			coordinates: {
 				lat: 50.583782,
 				lon: 35.318699,
@@ -670,6 +696,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 27,
 			coordinates: {
 				lat: 50.589476,
 				lon: 35.322738,
@@ -695,6 +722,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 28,
 			coordinates: {
 				lat: 50.587016,
 				lon: 35.304332,
@@ -720,6 +748,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 29,
 			coordinates: {
 				lat: 50.591518,
 				lon: 35.30686,
@@ -745,6 +774,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 30,
 			coordinates: {
 				lat: 50.595407,
 				lon: 35.309245,
@@ -770,6 +800,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 31,
 			coordinates: {
 				lat: 50.606342,
 				lon: 35.309785,
@@ -795,6 +826,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 32,
 			coordinates: {
 				lat: 50.591146,
 				lon: 35.291523,
@@ -820,6 +852,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 33,
 			coordinates: {
 				lat: 50.600516,
 				lon: 35.305381,
@@ -845,6 +878,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 34,
 			coordinates: {
 				lat: 50.599633,
 				lon: 35.32325,
@@ -870,6 +904,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 35,
 			coordinates: {
 				lat: 50.592803,
 				lon: 35.306903,
@@ -895,6 +930,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 36,
 			coordinates: {
 				lat: 50.582942,
 				lon: 35.315816,
@@ -920,6 +956,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 37,
 			coordinates: {
 				lat: 50.592301,
 				lon: 35.313793,
@@ -945,6 +982,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 38,
 			coordinates: {
 				lat: 50.589054,
 				lon: 35.307429,
@@ -970,6 +1008,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 39,
 			coordinates: {
 				lat: 50.5987,
 				lon: 35.30429,
@@ -995,6 +1034,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 40,
 			coordinates: {
 				lat: 50.607033,
 				lon: 35.296775,
@@ -1020,6 +1060,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 41,
 			coordinates: {
 				lat: 50.599563,
 				lon: 35.312441,
@@ -1045,6 +1086,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 42,
 			coordinates: {
 				lat: 50.592217,
 				lon: 35.307656,
@@ -1070,6 +1112,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 43,
 			coordinates: {
 				lat: 50.595189,
 				lon: 35.30237,
@@ -1095,6 +1138,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 44,
 			coordinates: {
 				lat: 50.58675,
 				lon: 35.295141,
@@ -1120,6 +1164,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 45,
 			coordinates: {
 				lat: 50.592824,
 				lon: 35.307207,
@@ -1145,6 +1190,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 46,
 			coordinates: {
 				lat: 50.585064,
 				lon: 35.299531,
@@ -1170,6 +1216,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 47,
 			coordinates: {
 				lat: 50.581298,
 				lon: 35.305133,
@@ -1195,6 +1242,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 48,
 			coordinates: {
 				lat: 50.587356,
 				lon: 35.299128,
@@ -1220,6 +1268,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 49,
 			coordinates: {
 				lat: 50.580285,
 				lon: 35.316912,
@@ -1245,6 +1294,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 50,
 			coordinates: {
 				lat: 50.577676,
 				lon: 35.300532,
@@ -1270,6 +1320,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 51,
 			coordinates: {
 				lat: 50.586159,
 				lon: 35.297433,
@@ -1295,6 +1346,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 52,
 			coordinates: {
 				lat: 50.601533,
 				lon: 35.308974,
@@ -1320,6 +1372,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 53,
 			coordinates: {
 				lat: 50.607333,
 				lon: 35.302211,
@@ -1345,6 +1398,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 54,
 			coordinates: {
 				lat: 50.602392,
 				lon: 35.307371,
@@ -1370,6 +1424,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 55,
 			coordinates: {
 				lat: 50.597599,
 				lon: 35.307457,
@@ -1395,6 +1450,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 56,
 			coordinates: {
 				lat: 50.588938,
 				lon: 35.315268,
@@ -1420,6 +1476,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 57,
 			coordinates: {
 				lat: 50.591312,
 				lon: 35.309712,
@@ -1445,6 +1502,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 58,
 			coordinates: {
 				lat: 50.599947,
 				lon: 35.313358,
@@ -1470,6 +1528,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 59,
 			coordinates: {
 				lat: 50.593494,
 				lon: 35.308878,
@@ -1495,6 +1554,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 60,
 			coordinates: {
 				lat: 50.593975,
 				lon: 35.306625,
@@ -1520,6 +1580,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 61,
 			coordinates: {
 				lat: 50.606452,
 				lon: 35.302638,
@@ -1545,6 +1606,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 62,
 			coordinates: {
 				lat: 50.58931,
 				lon: 35.314423,
@@ -1570,6 +1632,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 63,
 			coordinates: {
 				lat: 50.595021,
 				lon: 35.307751,
@@ -1595,6 +1658,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 64,
 			coordinates: {
 				lat: 50.587033,
 				lon: 35.298843,
@@ -1620,6 +1684,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 65,
 			coordinates: {
 				lat: 50.58619,
 				lon: 35.317539,
@@ -1645,6 +1710,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 66,
 			coordinates: {
 				lat: 50.591323,
 				lon: 35.306732,
@@ -1670,6 +1736,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 67,
 			coordinates: {
 				lat: 50.592219,
 				lon: 35.305616,
@@ -1695,6 +1762,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 68,
 			coordinates: {
 				lat: 50.589235,
 				lon: 35.301848,
@@ -1720,6 +1788,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 69,
 			coordinates: {
 				lat: 50.57901,
 				lon: 35.304721,
@@ -1745,6 +1814,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 70,
 			coordinates: {
 				lat: 50.598013,
 				lon: 35.307742,
@@ -1770,6 +1840,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 71,
 			coordinates: {
 				lat: 50.599428,
 				lon: 35.312801,
@@ -1795,6 +1866,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 72,
 			coordinates: {
 				lat: 50.591084,
 				lon: 35.300644,
@@ -1820,6 +1892,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 73,
 			coordinates: {
 				lat: 50.578464,
 				lon: 35.309252,
@@ -1845,6 +1918,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 74,
 			coordinates: {
 				lat: 50.578746,
 				lon: 35.308239,
@@ -1870,6 +1944,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 75,
 			coordinates: {
 				lat: 50.594431,
 				lon: 35.30308,
@@ -1895,6 +1970,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 76,
 			coordinates: {
 				lat: 50.587664,
 				lon: 35.305327,
@@ -1920,6 +1996,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 77,
 			coordinates: {
 				lat: 50.596183,
 				lon: 35.306089,
@@ -1945,6 +2022,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 78,
 			coordinates: {
 				lat: 50.59296,
 				lon: 35.30727,
@@ -1970,6 +2048,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 79,
 			coordinates: {
 				lat: 50.59836,
 				lon: 35.299321,
@@ -1995,6 +2074,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 80,
 			coordinates: {
 				lat: 50.594445,
 				lon: 35.308799,
@@ -2020,6 +2100,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 81,
 			coordinates: {
 				lat: 50.600559,
 				lon: 35.313571,
@@ -2045,6 +2126,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 82,
 			coordinates: {
 				lat: 50.580662,
 				lon: 35.319991,
@@ -2070,6 +2152,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 83,
 			coordinates: {
 				lat: 50.591809,
 				lon: 35.305355,
@@ -2095,6 +2178,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 84,
 			coordinates: {
 				lat: 50.585516,
 				lon: 35.315889,
@@ -2120,6 +2204,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 85,
 			coordinates: {
 				lat: 50.594111,
 				lon: 35.309783,
@@ -2145,6 +2230,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 86,
 			coordinates: {
 				lat: 50.599891,
 				lon: 35.2963,
@@ -2170,6 +2256,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 87,
 			coordinates: {
 				lat: 50.593534,
 				lon: 35.30691,
@@ -2195,6 +2282,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 88,
 			coordinates: {
 				lat: 50.601105,
 				lon: 35.308652,
@@ -2220,6 +2308,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 89,
 			coordinates: {
 				lat: 50.594063,
 				lon: 35.313161,
@@ -2245,6 +2334,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 90,
 			coordinates: {
 				lat: 50.584103,
 				lon: 35.307647,
@@ -2270,6 +2360,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 91,
 			coordinates: {
 				lat: 50.587705,
 				lon: 35.307641,
@@ -2295,6 +2386,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 92,
 			coordinates: {
 				lat: 50.592691,
 				lon: 35.301951,
@@ -2320,6 +2412,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 93,
 			coordinates: {
 				lat: 50.596265,
 				lon: 35.289867,
@@ -2345,6 +2438,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 94,
 			coordinates: {
 				lat: 50.594733,
 				lon: 35.319085,
@@ -2370,6 +2464,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 95,
 			coordinates: {
 				lat: 50.575191,
 				lon: 35.307277,
@@ -2395,6 +2490,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 96,
 			coordinates: {
 				lat: 50.594502,
 				lon: 35.307586,
@@ -2420,6 +2516,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 97,
 			coordinates: {
 				lat: 50.601829,
 				lon: 35.320002,
@@ -2445,6 +2542,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 98,
 			coordinates: {
 				lat: 50.598608,
 				lon: 35.313432,
@@ -2470,6 +2568,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 99,
 			coordinates: {
 				lat: 50.579433,
 				lon: 35.311367,
@@ -2495,6 +2594,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 100,
 			coordinates: {
 				lat: 50.589992,
 				lon: 35.305414,
@@ -2520,6 +2620,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 101,
 			coordinates: {
 				lat: 50.586044,
 				lon: 35.309483,
@@ -2545,6 +2646,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 102,
 			coordinates: {
 				lat: 50.587833,
 				lon: 35.32035,
@@ -2570,6 +2672,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 103,
 			coordinates: {
 				lat: 50.603761,
 				lon: 35.316861,
@@ -2595,6 +2698,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 104,
 			coordinates: {
 				lat: 50.591064,
 				lon: 35.303821,
@@ -2620,6 +2724,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 105,
 			coordinates: {
 				lat: 50.591664,
 				lon: 35.313993,
@@ -2645,6 +2750,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 106,
 			coordinates: {
 				lat: 50.592746,
 				lon: 35.299414,
@@ -2670,6 +2776,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 107,
 			coordinates: {
 				lat: 50.593955,
 				lon: 35.307336,
@@ -2695,6 +2802,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 108,
 			coordinates: {
 				lat: 50.58593,
 				lon: 35.300699,
@@ -2720,6 +2828,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 109,
 			coordinates: {
 				lat: 50.600055,
 				lon: 35.30094,
@@ -2745,6 +2854,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 110,
 			coordinates: {
 				lat: 50.598763,
 				lon: 35.299853,
@@ -2770,6 +2880,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 111,
 			coordinates: {
 				lat: 50.600717,
 				lon: 35.308637,
@@ -2795,6 +2906,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 112,
 			coordinates: {
 				lat: 50.592297,
 				lon: 35.314977,
@@ -2820,6 +2932,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 113,
 			coordinates: {
 				lat: 50.583202,
 				lon: 35.306938,
@@ -2845,6 +2958,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 114,
 			coordinates: {
 				lat: 50.583425,
 				lon: 35.297793,
@@ -2870,6 +2984,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 115,
 			coordinates: {
 				lat: 50.579737,
 				lon: 35.310149,
@@ -2895,6 +3010,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 116,
 			coordinates: {
 				lat: 50.590183,
 				lon: 35.305986,
@@ -2920,6 +3036,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 117,
 			coordinates: {
 				lat: 50.593372,
 				lon: 35.317437,
@@ -2945,6 +3062,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 118,
 			coordinates: {
 				lat: 50.595717,
 				lon: 35.320704,
@@ -2970,6 +3088,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 119,
 			coordinates: {
 				lat: 50.593268,
 				lon: 35.307067,
@@ -2995,6 +3114,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 120,
 			coordinates: {
 				lat: 50.583285,
 				lon: 35.305312,
@@ -3020,6 +3140,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 121,
 			coordinates: {
 				lat: 50.593074,
 				lon: 35.307675,
@@ -3045,6 +3166,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 122,
 			coordinates: {
 				lat: 50.598451,
 				lon: 35.29473,
@@ -3070,6 +3192,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 123,
 			coordinates: {
 				lat: 50.576936,
 				lon: 35.302934,
@@ -3095,6 +3218,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 124,
 			coordinates: {
 				lat: 50.582334,
 				lon: 35.312176,
@@ -3120,6 +3244,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 125,
 			coordinates: {
 				lat: 50.608732,
 				lon: 35.309932,
@@ -3145,6 +3270,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 126,
 			coordinates: {
 				lat: 50.592344,
 				lon: 35.305621,
@@ -3170,6 +3296,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 127,
 			coordinates: {
 				lat: 50.602045,
 				lon: 35.306913,
@@ -3195,6 +3322,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 128,
 			coordinates: {
 				lat: 50.592477,
 				lon: 35.307126,
@@ -3220,6 +3348,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 129,
 			coordinates: {
 				lat: 50.588969,
 				lon: 35.29698,
@@ -3245,6 +3374,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 130,
 			coordinates: {
 				lat: 50.599519,
 				lon: 35.309608,
@@ -3270,6 +3400,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 131,
 			coordinates: {
 				lat: 50.596661,
 				lon: 35.29891,
@@ -3295,6 +3426,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 132,
 			coordinates: {
 				lat: 50.600258,
 				lon: 35.309266,
@@ -3320,6 +3452,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 133,
 			coordinates: {
 				lat: 50.598014,
 				lon: 35.311972,
@@ -3345,6 +3478,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 134,
 			coordinates: {
 				lat: 50.591388,
 				lon: 35.310887,
@@ -3370,6 +3504,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 135,
 			coordinates: {
 				lat: 50.584042,
 				lon: 35.311996,
@@ -3395,6 +3530,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 136,
 			coordinates: {
 				lat: 50.583541,
 				lon: 35.316686,
@@ -3420,6 +3556,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 137,
 			coordinates: {
 				lat: 50.5913,
 				lon: 35.309083,
@@ -3445,6 +3582,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 138,
 			coordinates: {
 				lat: 50.601349,
 				lon: 35.316539,
@@ -3470,6 +3608,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 139,
 			coordinates: {
 				lat: 50.595182,
 				lon: 35.304743,
@@ -3495,6 +3634,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 140,
 			coordinates: {
 				lat: 50.589625,
 				lon: 35.317297,
@@ -3520,6 +3660,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 141,
 			coordinates: {
 				lat: 50.593312,
 				lon: 35.308342,
@@ -3545,6 +3686,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 142,
 			coordinates: {
 				lat: 50.583331,
 				lon: 35.312059,
@@ -3570,6 +3712,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 143,
 			coordinates: {
 				lat: 50.589587,
 				lon: 35.308211,
@@ -3595,6 +3738,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 144,
 			coordinates: {
 				lat: 50.592694,
 				lon: 35.307295,
@@ -3620,6 +3764,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 145,
 			coordinates: {
 				lat: 50.595999,
 				lon: 35.317932,
@@ -3645,6 +3790,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 146,
 			coordinates: {
 				lat: 50.598296,
 				lon: 35.312726,
@@ -3670,6 +3816,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 147,
 			coordinates: {
 				lat: 50.584777,
 				lon: 35.292988,
@@ -3695,6 +3842,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 148,
 			coordinates: {
 				lat: 50.605606,
 				lon: 35.319159,
@@ -3720,6 +3868,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 149,
 			coordinates: {
 				lat: 50.599244,
 				lon: 35.313986,
@@ -3745,6 +3894,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 150,
 			coordinates: {
 				lat: 50.59741,
 				lon: 35.302175,
@@ -3770,6 +3920,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 151,
 			coordinates: {
 				lat: 50.577605,
 				lon: 35.301641,
@@ -3795,6 +3946,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 152,
 			coordinates: {
 				lat: 50.605509,
 				lon: 35.313552,
@@ -3820,6 +3972,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 153,
 			coordinates: {
 				lat: 50.591434,
 				lon: 35.310883,
@@ -3845,6 +3998,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 154,
 			coordinates: {
 				lat: 50.580704,
 				lon: 35.312749,
@@ -3870,6 +4024,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 155,
 			coordinates: {
 				lat: 50.590307,
 				lon: 35.307118,
@@ -3895,6 +4050,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 156,
 			coordinates: {
 				lat: 50.608137,
 				lon: 35.309063,
@@ -3920,6 +4076,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 157,
 			coordinates: {
 				lat: 50.589673,
 				lon: 35.305153,
@@ -3945,6 +4102,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 158,
 			coordinates: {
 				lat: 50.585464,
 				lon: 35.318534,
@@ -3970,6 +4128,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 159,
 			coordinates: {
 				lat: 50.591061,
 				lon: 35.315829,
@@ -3995,6 +4154,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 160,
 			coordinates: {
 				lat: 50.58016,
 				lon: 35.305008,
@@ -4020,6 +4180,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 161,
 			coordinates: {
 				lat: 50.597629,
 				lon: 35.317139,
@@ -4045,6 +4206,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 162,
 			coordinates: {
 				lat: 50.593656,
 				lon: 35.305378,
@@ -4070,6 +4232,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 163,
 			coordinates: {
 				lat: 50.599865,
 				lon: 35.309873,
@@ -4095,6 +4258,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 164,
 			coordinates: {
 				lat: 50.593032,
 				lon: 35.299419,
@@ -4120,6 +4284,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 165,
 			coordinates: {
 				lat: 50.5823,
 				lon: 35.299059,
@@ -4145,6 +4310,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 166,
 			coordinates: {
 				lat: 50.596642,
 				lon: 35.310052,
@@ -4170,6 +4336,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 167,
 			coordinates: {
 				lat: 50.584896,
 				lon: 35.318187,
@@ -4195,6 +4362,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 168,
 			coordinates: {
 				lat: 50.587994,
 				lon: 35.3093,
@@ -4220,6 +4388,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 169,
 			coordinates: {
 				lat: 50.58931,
 				lon: 35.319092,
@@ -4245,6 +4414,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 170,
 			coordinates: {
 				lat: 50.594897,
 				lon: 35.306619,
@@ -4270,6 +4440,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 171,
 			coordinates: {
 				lat: 50.59396,
 				lon: 35.307717,
@@ -4295,6 +4466,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 172,
 			coordinates: {
 				lat: 50.593636,
 				lon: 35.308547,
@@ -4320,6 +4492,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 173,
 			coordinates: {
 				lat: 50.603774,
 				lon: 35.31531,
@@ -4345,6 +4518,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 174,
 			coordinates: {
 				lat: 50.60604,
 				lon: 35.317244,
@@ -4370,6 +4544,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 175,
 			coordinates: {
 				lat: 50.59629,
 				lon: 35.306376,
@@ -4395,6 +4570,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 176,
 			coordinates: {
 				lat: 50.601425,
 				lon: 35.311318,
@@ -4420,6 +4596,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 177,
 			coordinates: {
 				lat: 50.584721,
 				lon: 35.307065,
@@ -4445,6 +4622,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 178,
 			coordinates: {
 				lat: 50.592682,
 				lon: 35.30759,
@@ -4470,6 +4648,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 179,
 			coordinates: {
 				lat: 50.594277,
 				lon: 35.307259,
@@ -4495,6 +4674,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 180,
 			coordinates: {
 				lat: 50.591694,
 				lon: 35.292456,
@@ -4520,6 +4700,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 181,
 			coordinates: {
 				lat: 50.593315,
 				lon: 35.312677,
@@ -4545,6 +4726,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 182,
 			coordinates: {
 				lat: 50.609973,
 				lon: 35.306341,
@@ -4570,6 +4752,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 183,
 			coordinates: {
 				lat: 50.584265,
 				lon: 35.292808,
@@ -4595,6 +4778,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 184,
 			coordinates: {
 				lat: 50.591795,
 				lon: 35.312856,
@@ -4620,6 +4804,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 185,
 			coordinates: {
 				lat: 50.58932,
 				lon: 35.307377,
@@ -4645,6 +4830,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 186,
 			coordinates: {
 				lat: 50.595171,
 				lon: 35.316457,
@@ -4670,6 +4856,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 187,
 			coordinates: {
 				lat: 50.603403,
 				lon: 35.302166,
@@ -4695,6 +4882,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 188,
 			coordinates: {
 				lat: 50.593481,
 				lon: 35.300952,
@@ -4720,6 +4908,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 189,
 			coordinates: {
 				lat: 50.600432,
 				lon: 35.291308,
@@ -4745,6 +4934,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 190,
 			coordinates: {
 				lat: 50.595829,
 				lon: 35.31842,
@@ -4770,6 +4960,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 191,
 			coordinates: {
 				lat: 50.594592,
 				lon: 35.306425,
@@ -4795,6 +4986,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 192,
 			coordinates: {
 				lat: 50.590261,
 				lon: 35.300703,
@@ -4820,6 +5012,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 193,
 			coordinates: {
 				lat: 50.591385,
 				lon: 35.308848,
@@ -4845,6 +5038,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 194,
 			coordinates: {
 				lat: 50.594109,
 				lon: 35.307848,
@@ -4870,6 +5064,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 195,
 			coordinates: {
 				lat: 50.603753,
 				lon: 35.312595,
@@ -4895,6 +5090,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 196,
 			coordinates: {
 				lat: 50.59216,
 				lon: 35.313136,
@@ -4920,6 +5116,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 197,
 			coordinates: {
 				lat: 50.592216,
 				lon: 35.308672,
@@ -4945,6 +5142,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 198,
 			coordinates: {
 				lat: 50.588769,
 				lon: 35.316779,
@@ -4970,6 +5168,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 199,
 			coordinates: {
 				lat: 50.601771,
 				lon: 35.306074,
@@ -4995,6 +5194,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 200,
 			coordinates: {
 				lat: 50.58916,
 				lon: 35.306281,
@@ -5020,6 +5220,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 201,
 			coordinates: {
 				lat: 50.59258,
 				lon: 35.304434,
@@ -5045,6 +5246,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 202,
 			coordinates: {
 				lat: 50.585853,
 				lon: 35.306378,
@@ -5070,6 +5272,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 203,
 			coordinates: {
 				lat: 50.593688,
 				lon: 35.301629,
@@ -5095,6 +5298,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 204,
 			coordinates: {
 				lat: 50.60738,
 				lon: 35.312254,
@@ -5120,6 +5324,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 205,
 			coordinates: {
 				lat: 50.607429,
 				lon: 35.300952,
@@ -5145,6 +5350,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 206,
 			coordinates: {
 				lat: 50.596277,
 				lon: 35.321586,
@@ -5170,6 +5376,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 207,
 			coordinates: {
 				lat: 50.591796,
 				lon: 35.310281,
@@ -5193,6 +5400,7 @@ export const thermoData = {
 				center_y: 196,
 			},
 			tracking_info: {},
+			id: 208,
 			coordinates: {
 				lat: 50.589043,
 				lon: 35.318959,
@@ -5216,6 +5424,7 @@ export const thermoData = {
 				center_y: 196,
 			},
 			tracking_info: {},
+			id: 209,
 			coordinates: {
 				lat: 50.591206,
 				lon: 35.307294,
@@ -5239,6 +5448,7 @@ export const thermoData = {
 				center_y: 196,
 			},
 			tracking_info: {},
+			id: 210,
 			coordinates: {
 				lat: 50.59567,
 				lon: 35.30668,
@@ -5262,6 +5472,7 @@ export const thermoData = {
 				center_y: 196,
 			},
 			tracking_info: {},
+			id: 211,
 			coordinates: {
 				lat: 50.587775,
 				lon: 35.315627,
@@ -5285,6 +5496,7 @@ export const thermoData = {
 				center_y: 196,
 			},
 			tracking_info: {},
+			id: 212,
 			coordinates: {
 				lat: 50.592816,
 				lon: 35.305126,
@@ -5308,6 +5520,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 213,
 			coordinates: {
 				lat: 50.591879,
 				lon: 35.317259,
@@ -5331,6 +5544,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 214,
 			coordinates: {
 				lat: 50.59152,
 				lon: 35.307229,
@@ -5354,6 +5568,7 @@ export const thermoData = {
 				center_y: 196,
 			},
 			tracking_info: {},
+			id: 215,
 			coordinates: {
 				lat: 50.592374,
 				lon: 35.311587,
@@ -5377,6 +5592,7 @@ export const thermoData = {
 				center_y: 196,
 			},
 			tracking_info: {},
+			id: 216,
 			coordinates: {
 				lat: 50.593188,
 				lon: 35.309257,
@@ -5400,6 +5616,7 @@ export const thermoData = {
 				center_y: 196,
 			},
 			tracking_info: {},
+			id: 217,
 			coordinates: {
 				lat: 50.591454,
 				lon: 35.308723,
@@ -5423,6 +5640,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 218,
 			coordinates: {
 				lat: 50.608374,
 				lon: 35.312093,
@@ -5446,6 +5664,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 219,
 			coordinates: {
 				lat: 50.589683,
 				lon: 35.309988,
@@ -5469,6 +5688,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 220,
 			coordinates: {
 				lat: 50.597038,
 				lon: 35.3232,
@@ -5492,6 +5712,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 221,
 			coordinates: {
 				lat: 50.590397,
 				lon: 35.312762,
@@ -5515,6 +5736,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 222,
 			coordinates: {
 				lat: 50.599845,
 				lon: 35.313791,
@@ -5538,6 +5760,7 @@ export const thermoData = {
 				center_y: 198,
 			},
 			tracking_info: {},
+			id: 223,
 			coordinates: {
 				lat: 50.586877,
 				lon: 35.291272,
@@ -5561,6 +5784,7 @@ export const thermoData = {
 				center_y: 198,
 			},
 			tracking_info: {},
+			id: 224,
 			coordinates: {
 				lat: 50.583633,
 				lon: 35.318157,
@@ -5584,6 +5808,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 225,
 			coordinates: {
 				lat: 50.58514,
 				lon: 35.318756,
@@ -5607,6 +5832,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 226,
 			coordinates: {
 				lat: 50.580965,
 				lon: 35.31356,
@@ -5630,6 +5856,7 @@ export const thermoData = {
 				center_y: 198,
 			},
 			tracking_info: {},
+			id: 227,
 			coordinates: {
 				lat: 50.590315,
 				lon: 35.316323,
@@ -5653,6 +5880,7 @@ export const thermoData = {
 				center_y: 198,
 			},
 			tracking_info: {},
+			id: 228,
 			coordinates: {
 				lat: 50.589976,
 				lon: 35.315197,
@@ -5676,6 +5904,7 @@ export const thermoData = {
 				center_y: 198,
 			},
 			tracking_info: {},
+			id: 229,
 			coordinates: {
 				lat: 50.588696,
 				lon: 35.296455,
@@ -5699,6 +5928,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 230,
 			coordinates: {
 				lat: 50.584392,
 				lon: 35.30086,
@@ -5722,6 +5952,7 @@ export const thermoData = {
 				center_y: 198,
 			},
 			tracking_info: {},
+			id: 231,
 			coordinates: {
 				lat: 50.587482,
 				lon: 35.309544,
@@ -5745,6 +5976,7 @@ export const thermoData = {
 				center_y: 198,
 			},
 			tracking_info: {},
+			id: 232,
 			coordinates: {
 				lat: 50.59164,
 				lon: 35.305216,
@@ -5768,6 +6000,7 @@ export const thermoData = {
 				center_y: 198,
 			},
 			tracking_info: {},
+			id: 233,
 			coordinates: {
 				lat: 50.602452,
 				lon: 35.302422,
@@ -5791,6 +6024,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 234,
 			coordinates: {
 				lat: 50.593719,
 				lon: 35.303252,
@@ -5814,6 +6048,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 235,
 			coordinates: {
 				lat: 50.593951,
 				lon: 35.303786,
@@ -5837,6 +6072,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 236,
 			coordinates: {
 				lat: 50.588271,
 				lon: 35.312397,
@@ -5860,6 +6096,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 237,
 			coordinates: {
 				lat: 50.608569,
 				lon: 35.311289,
@@ -5883,6 +6120,7 @@ export const thermoData = {
 				center_y: 197,
 			},
 			tracking_info: {},
+			id: 238,
 			coordinates: {
 				lat: 50.582197,
 				lon: 35.307135,
@@ -5908,6 +6146,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 239,
 			coordinates: {
 				lat: 50.609764,
 				lon: 35.306259,
@@ -5933,6 +6172,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 240,
 			coordinates: {
 				lat: 50.593182,
 				lon: 35.293529,
@@ -5958,6 +6198,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 241,
 			coordinates: {
 				lat: 50.581405,
 				lon: 35.304543,
@@ -5983,6 +6224,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 242,
 			coordinates: {
 				lat: 50.585521,
 				lon: 35.311607,
@@ -6008,6 +6250,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 243,
 			coordinates: {
 				lat: 50.594591,
 				lon: 35.312438,
@@ -6033,6 +6276,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 244,
 			coordinates: {
 				lat: 50.5876,
 				lon: 35.305098,
@@ -6058,6 +6302,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 245,
 			coordinates: {
 				lat: 50.584157,
 				lon: 35.294983,
@@ -6083,6 +6328,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 246,
 			coordinates: {
 				lat: 50.599416,
 				lon: 35.291943,
@@ -6108,6 +6354,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 247,
 			coordinates: {
 				lat: 50.594711,
 				lon: 35.310616,
@@ -6133,6 +6380,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 248,
 			coordinates: {
 				lat: 50.589681,
 				lon: 35.299784,
@@ -6158,6 +6406,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 249,
 			coordinates: {
 				lat: 50.595579,
 				lon: 35.305505,
@@ -6183,6 +6432,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 250,
 			coordinates: {
 				lat: 50.594164,
 				lon: 35.309749,
@@ -6208,6 +6458,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 251,
 			coordinates: {
 				lat: 50.597201,
 				lon: 35.296666,
@@ -6233,6 +6484,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 252,
 			coordinates: {
 				lat: 50.586556,
 				lon: 35.313299,
@@ -6258,6 +6510,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 253,
 			coordinates: {
 				lat: 50.597786,
 				lon: 35.309341,
@@ -6283,6 +6536,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 254,
 			coordinates: {
 				lat: 50.600468,
 				lon: 35.312637,
@@ -6308,6 +6562,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 255,
 			coordinates: {
 				lat: 50.586507,
 				lon: 35.317086,
@@ -6333,6 +6588,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 256,
 			coordinates: {
 				lat: 50.604321,
 				lon: 35.307761,
@@ -6358,6 +6614,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 257,
 			coordinates: {
 				lat: 50.588827,
 				lon: 35.308381,
@@ -6383,6 +6640,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 258,
 			coordinates: {
 				lat: 50.603689,
 				lon: 35.302425,
@@ -6408,6 +6666,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 259,
 			coordinates: {
 				lat: 50.580041,
 				lon: 35.306637,
@@ -6433,6 +6692,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 260,
 			coordinates: {
 				lat: 50.592715,
 				lon: 35.309441,
@@ -6458,6 +6718,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 261,
 			coordinates: {
 				lat: 50.594858,
 				lon: 35.305015,
@@ -6483,6 +6744,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 262,
 			coordinates: {
 				lat: 50.58034,
 				lon: 35.308277,
@@ -6508,6 +6770,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 263,
 			coordinates: {
 				lat: 50.590898,
 				lon: 35.323131,
@@ -6533,6 +6796,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 264,
 			coordinates: {
 				lat: 50.592798,
 				lon: 35.307176,
@@ -6558,6 +6822,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 265,
 			coordinates: {
 				lat: 50.607531,
 				lon: 35.302823,
@@ -6583,6 +6848,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 266,
 			coordinates: {
 				lat: 50.592281,
 				lon: 35.304887,
@@ -6608,6 +6874,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 267,
 			coordinates: {
 				lat: 50.597345,
 				lon: 35.313618,
@@ -6633,6 +6900,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 268,
 			coordinates: {
 				lat: 50.592055,
 				lon: 35.321955,
@@ -6658,6 +6926,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 269,
 			coordinates: {
 				lat: 50.593649,
 				lon: 35.323392,
@@ -6683,6 +6952,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 270,
 			coordinates: {
 				lat: 50.601881,
 				lon: 35.295489,
@@ -6708,6 +6978,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 271,
 			coordinates: {
 				lat: 50.595507,
 				lon: 35.310609,
@@ -6733,6 +7004,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 272,
 			coordinates: {
 				lat: 50.592566,
 				lon: 35.30776,
@@ -6758,6 +7030,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 273,
 			coordinates: {
 				lat: 50.592799,
 				lon: 35.306916,
@@ -6783,6 +7056,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 274,
 			coordinates: {
 				lat: 50.604038,
 				lon: 35.295161,
@@ -6808,6 +7082,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 275,
 			coordinates: {
 				lat: 50.598381,
 				lon: 35.30609,
@@ -6833,6 +7108,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 276,
 			coordinates: {
 				lat: 50.591341,
 				lon: 35.314357,
@@ -6858,6 +7134,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 277,
 			coordinates: {
 				lat: 50.595729,
 				lon: 35.29629,
@@ -6883,6 +7160,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 278,
 			coordinates: {
 				lat: 50.589351,
 				lon: 35.315209,
@@ -6908,6 +7186,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 279,
 			coordinates: {
 				lat: 50.598333,
 				lon: 35.30893,
@@ -6933,6 +7212,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 280,
 			coordinates: {
 				lat: 50.593431,
 				lon: 35.304107,
@@ -6958,6 +7238,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 281,
 			coordinates: {
 				lat: 50.593819,
 				lon: 35.315205,
@@ -6983,6 +7264,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 282,
 			coordinates: {
 				lat: 50.594934,
 				lon: 35.308866,
@@ -7008,6 +7290,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 283,
 			coordinates: {
 				lat: 50.601884,
 				lon: 35.317314,
@@ -7033,6 +7316,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 284,
 			coordinates: {
 				lat: 50.593351,
 				lon: 35.306451,
@@ -7058,6 +7342,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 285,
 			coordinates: {
 				lat: 50.590915,
 				lon: 35.318002,
@@ -7083,6 +7368,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 286,
 			coordinates: {
 				lat: 50.595564,
 				lon: 35.322402,
@@ -7108,6 +7394,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 287,
 			coordinates: {
 				lat: 50.588025,
 				lon: 35.310475,
@@ -7133,6 +7420,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 288,
 			coordinates: {
 				lat: 50.60102,
 				lon: 35.303146,
@@ -7158,6 +7446,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 289,
 			coordinates: {
 				lat: 50.59813,
 				lon: 35.295576,
@@ -7183,6 +7472,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 290,
 			coordinates: {
 				lat: 50.584766,
 				lon: 35.311355,
@@ -7208,6 +7498,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 291,
 			coordinates: {
 				lat: 50.590765,
 				lon: 35.309852,
@@ -7233,6 +7524,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 292,
 			coordinates: {
 				lat: 50.591532,
 				lon: 35.309586,
@@ -7258,6 +7550,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 293,
 			coordinates: {
 				lat: 50.585679,
 				lon: 35.303724,
@@ -7283,6 +7576,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 294,
 			coordinates: {
 				lat: 50.583678,
 				lon: 35.312851,
@@ -7308,6 +7602,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 295,
 			coordinates: {
 				lat: 50.607115,
 				lon: 35.301973,
@@ -7333,6 +7628,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 296,
 			coordinates: {
 				lat: 50.589559,
 				lon: 35.305834,
@@ -7358,6 +7654,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 297,
 			coordinates: {
 				lat: 50.594293,
 				lon: 35.304363,
@@ -7383,6 +7680,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 298,
 			coordinates: {
 				lat: 50.595749,
 				lon: 35.315974,
@@ -7408,6 +7706,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 299,
 			coordinates: {
 				lat: 50.590887,
 				lon: 35.313811,
@@ -7433,6 +7732,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 300,
 			coordinates: {
 				lat: 50.584678,
 				lon: 35.302796,
@@ -7458,6 +7758,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 301,
 			coordinates: {
 				lat: 50.596204,
 				lon: 35.321082,
@@ -7483,6 +7784,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 302,
 			coordinates: {
 				lat: 50.590661,
 				lon: 35.305687,
@@ -7508,6 +7810,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 303,
 			coordinates: {
 				lat: 50.582066,
 				lon: 35.303447,
@@ -7533,6 +7836,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 304,
 			coordinates: {
 				lat: 50.59662,
 				lon: 35.308735,
@@ -7558,6 +7862,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 305,
 			coordinates: {
 				lat: 50.598836,
 				lon: 35.296508,
@@ -7583,6 +7888,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 306,
 			coordinates: {
 				lat: 50.59013,
 				lon: 35.317433,
@@ -7608,6 +7914,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 307,
 			coordinates: {
 				lat: 50.594705,
 				lon: 35.319715,
@@ -7633,6 +7940,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 308,
 			coordinates: {
 				lat: 50.60348,
 				lon: 35.297083,
@@ -7658,6 +7966,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 309,
 			coordinates: {
 				lat: 50.58491,
 				lon: 35.315307,
@@ -7683,6 +7992,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 310,
 			coordinates: {
 				lat: 50.583616,
 				lon: 35.297955,
@@ -7708,6 +8018,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 311,
 			coordinates: {
 				lat: 50.586802,
 				lon: 35.299053,
@@ -7733,6 +8044,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 312,
 			coordinates: {
 				lat: 50.601922,
 				lon: 35.291956,
@@ -7758,6 +8070,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 313,
 			coordinates: {
 				lat: 50.602931,
 				lon: 35.313381,
@@ -7783,6 +8096,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 314,
 			coordinates: {
 				lat: 50.602373,
 				lon: 35.320709,
@@ -7808,6 +8122,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 315,
 			coordinates: {
 				lat: 50.590304,
 				lon: 35.318834,
@@ -7833,6 +8148,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 316,
 			coordinates: {
 				lat: 50.606045,
 				lon: 35.306366,
@@ -7858,6 +8174,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 317,
 			coordinates: {
 				lat: 50.593082,
 				lon: 35.306839,
@@ -7883,6 +8200,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 318,
 			coordinates: {
 				lat: 50.575062,
 				lon: 35.309977,
@@ -7908,6 +8226,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 319,
 			coordinates: {
 				lat: 50.601388,
 				lon: 35.292857,
@@ -7931,6 +8250,7 @@ export const thermoData = {
 				center_y: 173,
 			},
 			tracking_info: {},
+			id: 320,
 			coordinates: {
 				lat: 50.590171,
 				lon: 35.315379,
@@ -7954,6 +8274,7 @@ export const thermoData = {
 				center_y: 169,
 			},
 			tracking_info: {},
+			id: 321,
 			coordinates: {
 				lat: 50.597089,
 				lon: 35.300927,
@@ -7977,6 +8298,7 @@ export const thermoData = {
 				center_y: 168,
 			},
 			tracking_info: {},
+			id: 322,
 			coordinates: {
 				lat: 50.592043,
 				lon: 35.311053,
@@ -8000,6 +8322,7 @@ export const thermoData = {
 				center_y: 199,
 			},
 			tracking_info: {},
+			id: 323,
 			coordinates: {
 				lat: 50.580134,
 				lon: 35.304268,
@@ -8023,6 +8346,7 @@ export const thermoData = {
 				center_y: 179,
 			},
 			tracking_info: {},
+			id: 324,
 			coordinates: {
 				lat: 50.600317,
 				lon: 35.312839,
@@ -8046,6 +8370,7 @@ export const thermoData = {
 				center_y: 143,
 			},
 			tracking_info: {},
+			id: 325,
 			coordinates: {
 				lat: 50.599158,
 				lon: 35.29313,
@@ -8069,6 +8394,7 @@ export const thermoData = {
 				center_y: 226,
 			},
 			tracking_info: {},
+			id: 326,
 			coordinates: {
 				lat: 50.594324,
 				lon: 35.308944,
@@ -8094,6 +8420,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 327,
 			coordinates: {
 				lat: 50.607714,
 				lon: 35.309641,
@@ -8119,6 +8446,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 328,
 			coordinates: {
 				lat: 50.598084,
 				lon: 35.292372,
@@ -8144,6 +8472,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 329,
 			coordinates: {
 				lat: 50.597941,
 				lon: 35.306251,
@@ -8169,6 +8498,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 330,
 			coordinates: {
 				lat: 50.58743,
 				lon: 35.300427,
@@ -8194,6 +8524,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 331,
 			coordinates: {
 				lat: 50.598105,
 				lon: 35.294029,
@@ -8219,6 +8550,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 332,
 			coordinates: {
 				lat: 50.579072,
 				lon: 35.309413,
@@ -8244,6 +8576,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 333,
 			coordinates: {
 				lat: 50.594538,
 				lon: 35.303405,
@@ -8269,6 +8602,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 334,
 			coordinates: {
 				lat: 50.585781,
 				lon: 35.313069,
@@ -8294,6 +8628,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 335,
 			coordinates: {
 				lat: 50.604047,
 				lon: 35.303109,
@@ -8319,6 +8654,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 336,
 			coordinates: {
 				lat: 50.59321,
 				lon: 35.302971,
@@ -8344,6 +8680,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 337,
 			coordinates: {
 				lat: 50.596601,
 				lon: 35.313072,
@@ -8369,6 +8706,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 338,
 			coordinates: {
 				lat: 50.585105,
 				lon: 35.306713,
@@ -8394,6 +8732,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 339,
 			coordinates: {
 				lat: 50.589776,
 				lon: 35.312231,
@@ -8419,6 +8758,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 340,
 			coordinates: {
 				lat: 50.602489,
 				lon: 35.296896,
@@ -8444,6 +8784,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 341,
 			coordinates: {
 				lat: 50.595622,
 				lon: 35.321275,
@@ -8469,6 +8810,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 342,
 			coordinates: {
 				lat: 50.59874,
 				lon: 35.293053,
@@ -8494,6 +8836,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 343,
 			coordinates: {
 				lat: 50.593834,
 				lon: 35.308701,
@@ -8519,6 +8862,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 344,
 			coordinates: {
 				lat: 50.600446,
 				lon: 35.311953,
@@ -8544,6 +8888,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 345,
 			coordinates: {
 				lat: 50.591198,
 				lon: 35.311391,
@@ -8569,6 +8914,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 346,
 			coordinates: {
 				lat: 50.59444,
 				lon: 35.30581,
@@ -8594,6 +8940,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 347,
 			coordinates: {
 				lat: 50.601666,
 				lon: 35.303363,
@@ -8619,6 +8966,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 348,
 			coordinates: {
 				lat: 50.585499,
 				lon: 35.298035,
@@ -8644,6 +8992,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 349,
 			coordinates: {
 				lat: 50.583853,
 				lon: 35.318633,
@@ -8669,6 +9018,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 350,
 			coordinates: {
 				lat: 50.580398,
 				lon: 35.298074,
@@ -8694,6 +9044,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 351,
 			coordinates: {
 				lat: 50.603749,
 				lon: 35.294135,
@@ -8719,6 +9070,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 352,
 			coordinates: {
 				lat: 50.594199,
 				lon: 35.308638,
@@ -8744,6 +9096,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 353,
 			coordinates: {
 				lat: 50.587791,
 				lon: 35.304688,
@@ -8769,6 +9122,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 354,
 			coordinates: {
 				lat: 50.592673,
 				lon: 35.301847,
@@ -8794,6 +9148,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 355,
 			coordinates: {
 				lat: 50.58618,
 				lon: 35.310443,
@@ -8819,6 +9174,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 356,
 			coordinates: {
 				lat: 50.587148,
 				lon: 35.309026,
@@ -8844,6 +9200,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 357,
 			coordinates: {
 				lat: 50.592002,
 				lon: 35.309541,
@@ -8869,6 +9226,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 358,
 			coordinates: {
 				lat: 50.590264,
 				lon: 35.308136,
@@ -8894,6 +9252,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 359,
 			coordinates: {
 				lat: 50.59059,
 				lon: 35.308386,
@@ -8919,6 +9278,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 360,
 			coordinates: {
 				lat: 50.592696,
 				lon: 35.307229,
@@ -8944,6 +9304,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 361,
 			coordinates: {
 				lat: 50.595894,
 				lon: 35.308034,
@@ -8969,6 +9330,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 362,
 			coordinates: {
 				lat: 50.594882,
 				lon: 35.297269,
@@ -8994,6 +9356,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 363,
 			coordinates: {
 				lat: 50.597568,
 				lon: 35.319016,
@@ -9019,6 +9382,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 364,
 			coordinates: {
 				lat: 50.57961,
 				lon: 35.303016,
@@ -9044,6 +9408,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 365,
 			coordinates: {
 				lat: 50.593587,
 				lon: 35.306528,
@@ -9069,6 +9434,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 366,
 			coordinates: {
 				lat: 50.600744,
 				lon: 35.317364,
@@ -9094,6 +9460,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 367,
 			coordinates: {
 				lat: 50.602148,
 				lon: 35.296409,
@@ -9119,6 +9486,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 368,
 			coordinates: {
 				lat: 50.584081,
 				lon: 35.298565,
@@ -9144,6 +9512,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 369,
 			coordinates: {
 				lat: 50.596193,
 				lon: 35.312459,
@@ -9169,6 +9538,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 370,
 			coordinates: {
 				lat: 50.603648,
 				lon: 35.310894,
@@ -9194,6 +9564,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 371,
 			coordinates: {
 				lat: 50.596328,
 				lon: 35.319045,
@@ -9219,6 +9590,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 372,
 			coordinates: {
 				lat: 50.606824,
 				lon: 35.315888,
@@ -9244,6 +9616,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 373,
 			coordinates: {
 				lat: 50.593315,
 				lon: 35.317353,
@@ -9269,6 +9642,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 374,
 			coordinates: {
 				lat: 50.600218,
 				lon: 35.300351,
@@ -9294,6 +9668,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 375,
 			coordinates: {
 				lat: 50.589331,
 				lon: 35.31796,
@@ -9319,6 +9694,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 376,
 			coordinates: {
 				lat: 50.593327,
 				lon: 35.306543,
@@ -9344,6 +9720,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 377,
 			coordinates: {
 				lat: 50.586077,
 				lon: 35.309596,
@@ -9369,6 +9746,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 378,
 			coordinates: {
 				lat: 50.596462,
 				lon: 35.32318,
@@ -9394,6 +9772,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 379,
 			coordinates: {
 				lat: 50.580351,
 				lon: 35.313742,
@@ -9419,6 +9798,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 380,
 			coordinates: {
 				lat: 50.58996,
 				lon: 35.302097,
@@ -9444,6 +9824,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 381,
 			coordinates: {
 				lat: 50.598364,
 				lon: 35.290444,
@@ -9469,6 +9850,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 382,
 			coordinates: {
 				lat: 50.57648,
 				lon: 35.3019,
@@ -9494,6 +9876,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 383,
 			coordinates: {
 				lat: 50.592915,
 				lon: 35.295537,
@@ -9519,6 +9902,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 384,
 			coordinates: {
 				lat: 50.60177,
 				lon: 35.309366,
@@ -9544,6 +9928,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 385,
 			coordinates: {
 				lat: 50.589367,
 				lon: 35.314323,
@@ -9569,6 +9954,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 386,
 			coordinates: {
 				lat: 50.589106,
 				lon: 35.304233,
@@ -9594,6 +9980,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 387,
 			coordinates: {
 				lat: 50.583837,
 				lon: 35.294867,
@@ -9619,6 +10006,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 388,
 			coordinates: {
 				lat: 50.581846,
 				lon: 35.313398,
@@ -9644,6 +10032,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 389,
 			coordinates: {
 				lat: 50.595002,
 				lon: 35.297112,
@@ -9669,6 +10058,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 390,
 			coordinates: {
 				lat: 50.588018,
 				lon: 35.313162,
@@ -9694,6 +10084,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 391,
 			coordinates: {
 				lat: 50.579054,
 				lon: 35.299198,
@@ -9719,6 +10110,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 392,
 			coordinates: {
 				lat: 50.607407,
 				lon: 35.298213,
@@ -9744,6 +10136,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 393,
 			coordinates: {
 				lat: 50.592564,
 				lon: 35.306312,
@@ -9769,6 +10162,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 394,
 			coordinates: {
 				lat: 50.596937,
 				lon: 35.302202,
@@ -9794,6 +10188,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 395,
 			coordinates: {
 				lat: 50.599555,
 				lon: 35.320277,
@@ -9819,6 +10214,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 396,
 			coordinates: {
 				lat: 50.589119,
 				lon: 35.307749,
@@ -9844,6 +10240,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 397,
 			coordinates: {
 				lat: 50.588538,
 				lon: 35.306973,
@@ -9869,6 +10266,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 398,
 			coordinates: {
 				lat: 50.595926,
 				lon: 35.2914,
@@ -9894,6 +10292,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 399,
 			coordinates: {
 				lat: 50.582531,
 				lon: 35.303141,
@@ -9919,6 +10318,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 400,
 			coordinates: {
 				lat: 50.593056,
 				lon: 35.309966,
@@ -9944,6 +10344,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 401,
 			coordinates: {
 				lat: 50.590951,
 				lon: 35.311484,
@@ -9969,6 +10370,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 402,
 			coordinates: {
 				lat: 50.607713,
 				lon: 35.302951,
@@ -9994,6 +10396,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 403,
 			coordinates: {
 				lat: 50.597252,
 				lon: 35.309259,
@@ -10019,6 +10422,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 404,
 			coordinates: {
 				lat: 50.589404,
 				lon: 35.300265,
@@ -10044,6 +10448,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 405,
 			coordinates: {
 				lat: 50.602933,
 				lon: 35.315966,
@@ -10069,6 +10474,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 406,
 			coordinates: {
 				lat: 50.602143,
 				lon: 35.294551,
@@ -10094,6 +10500,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 407,
 			coordinates: {
 				lat: 50.596266,
 				lon: 35.308499,
@@ -10119,6 +10526,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 408,
 			coordinates: {
 				lat: 50.592153,
 				lon: 35.30701,
@@ -10144,6 +10552,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 409,
 			coordinates: {
 				lat: 50.590918,
 				lon: 35.313314,
@@ -10169,6 +10578,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 410,
 			coordinates: {
 				lat: 50.588677,
 				lon: 35.316992,
@@ -10194,6 +10604,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 411,
 			coordinates: {
 				lat: 50.585004,
 				lon: 35.306902,
@@ -10219,6 +10630,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 412,
 			coordinates: {
 				lat: 50.606544,
 				lon: 35.314362,
@@ -10244,6 +10656,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 413,
 			coordinates: {
 				lat: 50.597735,
 				lon: 35.312594,
@@ -10269,6 +10682,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 414,
 			coordinates: {
 				lat: 50.595827,
 				lon: 35.306522,
@@ -10294,6 +10708,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 415,
 			coordinates: {
 				lat: 50.575479,
 				lon: 35.305393,
@@ -10319,6 +10734,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 416,
 			coordinates: {
 				lat: 50.596073,
 				lon: 35.296258,
@@ -10344,6 +10760,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 417,
 			coordinates: {
 				lat: 50.59642,
 				lon: 35.308867,
@@ -10369,6 +10786,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 418,
 			coordinates: {
 				lat: 50.593094,
 				lon: 35.308189,
@@ -10394,6 +10812,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 419,
 			coordinates: {
 				lat: 50.583478,
 				lon: 35.3106,
@@ -10419,6 +10838,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 420,
 			coordinates: {
 				lat: 50.580336,
 				lon: 35.308024,
@@ -10444,6 +10864,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 421,
 			coordinates: {
 				lat: 50.606809,
 				lon: 35.302821,
@@ -10469,6 +10890,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 422,
 			coordinates: {
 				lat: 50.581333,
 				lon: 35.318583,
@@ -10494,6 +10916,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 423,
 			coordinates: {
 				lat: 50.590317,
 				lon: 35.307742,
@@ -10519,6 +10942,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 424,
 			coordinates: {
 				lat: 50.601334,
 				lon: 35.307092,
@@ -10544,6 +10968,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 425,
 			coordinates: {
 				lat: 50.587316,
 				lon: 35.300065,
@@ -10569,6 +10994,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 426,
 			coordinates: {
 				lat: 50.585362,
 				lon: 35.310478,
@@ -10594,6 +11020,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 427,
 			coordinates: {
 				lat: 50.598553,
 				lon: 35.308342,
@@ -10619,6 +11046,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 428,
 			coordinates: {
 				lat: 50.608806,
 				lon: 35.307349,
@@ -10644,6 +11072,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 429,
 			coordinates: {
 				lat: 50.577885,
 				lon: 35.303858,
@@ -10669,6 +11098,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 430,
 			coordinates: {
 				lat: 50.576176,
 				lon: 35.307903,
@@ -10694,6 +11124,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 431,
 			coordinates: {
 				lat: 50.595872,
 				lon: 35.307753,
@@ -10719,6 +11150,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 432,
 			coordinates: {
 				lat: 50.583618,
 				lon: 35.293863,
@@ -10744,6 +11176,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 433,
 			coordinates: {
 				lat: 50.583789,
 				lon: 35.309002,
@@ -10769,6 +11202,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 434,
 			coordinates: {
 				lat: 50.591235,
 				lon: 35.321166,
@@ -10794,6 +11228,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 435,
 			coordinates: {
 				lat: 50.596373,
 				lon: 35.307635,
@@ -10819,6 +11254,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 436,
 			coordinates: {
 				lat: 50.602789,
 				lon: 35.305144,
@@ -10844,6 +11280,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 437,
 			coordinates: {
 				lat: 50.592374,
 				lon: 35.305925,
@@ -10869,6 +11306,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 438,
 			coordinates: {
 				lat: 50.587423,
 				lon: 35.316237,
@@ -10894,6 +11332,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 439,
 			coordinates: {
 				lat: 50.594024,
 				lon: 35.318161,
@@ -10919,6 +11358,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 440,
 			coordinates: {
 				lat: 50.593562,
 				lon: 35.307211,
@@ -10944,6 +11384,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 441,
 			coordinates: {
 				lat: 50.594965,
 				lon: 35.30896,
@@ -10969,6 +11410,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 442,
 			coordinates: {
 				lat: 50.576612,
 				lon: 35.30114,
@@ -10994,6 +11436,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 443,
 			coordinates: {
 				lat: 50.593396,
 				lon: 35.311128,
@@ -11019,6 +11462,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 444,
 			coordinates: {
 				lat: 50.586374,
 				lon: 35.309726,
@@ -11044,6 +11488,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 445,
 			coordinates: {
 				lat: 50.592933,
 				lon: 35.31154,
@@ -11069,6 +11514,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 446,
 			coordinates: {
 				lat: 50.592767,
 				lon: 35.307527,
@@ -11094,6 +11540,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 447,
 			coordinates: {
 				lat: 50.602229,
 				lon: 35.296928,
@@ -11119,6 +11566,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 448,
 			coordinates: {
 				lat: 50.592718,
 				lon: 35.307346,
@@ -11144,6 +11592,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 449,
 			coordinates: {
 				lat: 50.591345,
 				lon: 35.317509,
@@ -11169,6 +11618,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 450,
 			coordinates: {
 				lat: 50.58069,
 				lon: 35.297308,
@@ -11194,6 +11644,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 451,
 			coordinates: {
 				lat: 50.592791,
 				lon: 35.307212,
@@ -11219,6 +11670,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 452,
 			coordinates: {
 				lat: 50.608481,
 				lon: 35.310021,
@@ -11244,6 +11696,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 453,
 			coordinates: {
 				lat: 50.593081,
 				lon: 35.306763,
@@ -11269,6 +11722,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 454,
 			coordinates: {
 				lat: 50.603336,
 				lon: 35.311706,
@@ -11294,6 +11748,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 455,
 			coordinates: {
 				lat: 50.590004,
 				lon: 35.307382,
@@ -11319,6 +11774,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 456,
 			coordinates: {
 				lat: 50.592558,
 				lon: 35.304325,
@@ -11344,6 +11800,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 457,
 			coordinates: {
 				lat: 50.592961,
 				lon: 35.306052,
@@ -11369,6 +11826,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 458,
 			coordinates: {
 				lat: 50.582749,
 				lon: 35.30116,
@@ -11394,6 +11852,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 459,
 			coordinates: {
 				lat: 50.586749,
 				lon: 35.319866,
@@ -11419,6 +11878,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 460,
 			coordinates: {
 				lat: 50.596762,
 				lon: 35.30485,
@@ -11444,6 +11904,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 461,
 			coordinates: {
 				lat: 50.608909,
 				lon: 35.308692,
@@ -11469,6 +11930,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 462,
 			coordinates: {
 				lat: 50.598622,
 				lon: 35.309981,
@@ -11494,6 +11956,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 463,
 			coordinates: {
 				lat: 50.592601,
 				lon: 35.306859,
@@ -11519,6 +11982,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 464,
 			coordinates: {
 				lat: 50.592851,
 				lon: 35.307516,
@@ -11544,6 +12008,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 465,
 			coordinates: {
 				lat: 50.588719,
 				lon: 35.306059,
@@ -11569,6 +12034,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 466,
 			coordinates: {
 				lat: 50.593412,
 				lon: 35.310037,
@@ -11594,6 +12060,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 467,
 			coordinates: {
 				lat: 50.607574,
 				lon: 35.31336,
@@ -11619,6 +12086,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 468,
 			coordinates: {
 				lat: 50.585439,
 				lon: 35.308269,
@@ -11644,6 +12112,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 469,
 			coordinates: {
 				lat: 50.585887,
 				lon: 35.30909,
@@ -11669,6 +12138,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 470,
 			coordinates: {
 				lat: 50.602463,
 				lon: 35.294368,
@@ -11694,6 +12164,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 471,
 			coordinates: {
 				lat: 50.608557,
 				lon: 35.307121,
@@ -11719,6 +12190,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 472,
 			coordinates: {
 				lat: 50.594972,
 				lon: 35.297103,
@@ -11744,6 +12216,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 473,
 			coordinates: {
 				lat: 50.606276,
 				lon: 35.316143,
@@ -11769,6 +12242,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 474,
 			coordinates: {
 				lat: 50.585285,
 				lon: 35.306774,
@@ -11794,6 +12268,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 475,
 			coordinates: {
 				lat: 50.579235,
 				lon: 35.296797,
@@ -11819,6 +12294,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 476,
 			coordinates: {
 				lat: 50.593763,
 				lon: 35.32037,
@@ -11844,6 +12320,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 477,
 			coordinates: {
 				lat: 50.606124,
 				lon: 35.316188,
@@ -11869,6 +12346,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 478,
 			coordinates: {
 				lat: 50.593389,
 				lon: 35.311159,
@@ -11894,6 +12372,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 479,
 			coordinates: {
 				lat: 50.607846,
 				lon: 35.303998,
@@ -11919,6 +12398,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 480,
 			coordinates: {
 				lat: 50.5968,
 				lon: 35.306135,
@@ -11944,6 +12424,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 481,
 			coordinates: {
 				lat: 50.589847,
 				lon: 35.300366,
@@ -11969,6 +12450,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 482,
 			coordinates: {
 				lat: 50.592985,
 				lon: 35.307117,
@@ -11994,6 +12476,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 483,
 			coordinates: {
 				lat: 50.592175,
 				lon: 35.30654,
@@ -12019,6 +12502,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 484,
 			coordinates: {
 				lat: 50.592103,
 				lon: 35.300429,
@@ -12044,6 +12528,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 485,
 			coordinates: {
 				lat: 50.596016,
 				lon: 35.316699,
@@ -12069,6 +12554,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 486,
 			coordinates: {
 				lat: 50.594065,
 				lon: 35.293334,
@@ -12094,6 +12580,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 487,
 			coordinates: {
 				lat: 50.57678,
 				lon: 35.314349,
@@ -12119,6 +12606,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 488,
 			coordinates: {
 				lat: 50.594907,
 				lon: 35.297578,
@@ -12144,6 +12632,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 489,
 			coordinates: {
 				lat: 50.588722,
 				lon: 35.322247,
@@ -12169,6 +12658,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 490,
 			coordinates: {
 				lat: 50.585145,
 				lon: 35.292009,
@@ -12194,6 +12684,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 491,
 			coordinates: {
 				lat: 50.584407,
 				lon: 35.296592,
@@ -12219,6 +12710,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 492,
 			coordinates: {
 				lat: 50.581353,
 				lon: 35.306936,
@@ -12244,6 +12736,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 493,
 			coordinates: {
 				lat: 50.590555,
 				lon: 35.305911,
@@ -12269,6 +12762,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 494,
 			coordinates: {
 				lat: 50.594565,
 				lon: 35.298627,
@@ -12294,6 +12788,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 495,
 			coordinates: {
 				lat: 50.597106,
 				lon: 35.307523,
@@ -12319,6 +12814,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 496,
 			coordinates: {
 				lat: 50.58525,
 				lon: 35.316477,
@@ -12344,6 +12840,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 497,
 			coordinates: {
 				lat: 50.61072,
 				lon: 35.306662,
@@ -12369,6 +12866,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 498,
 			coordinates: {
 				lat: 50.597276,
 				lon: 35.302949,
@@ -12394,6 +12892,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 499,
 			coordinates: {
 				lat: 50.587897,
 				lon: 35.308975,
@@ -12419,6 +12918,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 500,
 			coordinates: {
 				lat: 50.605196,
 				lon: 35.30468,
@@ -12444,6 +12944,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 501,
 			coordinates: {
 				lat: 50.588138,
 				lon: 35.296628,
@@ -12469,6 +12970,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 502,
 			coordinates: {
 				lat: 50.607095,
 				lon: 35.31793,
@@ -12494,6 +12996,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 503,
 			coordinates: {
 				lat: 50.594178,
 				lon: 35.29848,
@@ -12519,6 +13022,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 504,
 			coordinates: {
 				lat: 50.609028,
 				lon: 35.302763,
@@ -12544,6 +13048,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 505,
 			coordinates: {
 				lat: 50.605084,
 				lon: 35.305449,
@@ -12569,6 +13074,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 506,
 			coordinates: {
 				lat: 50.59581,
 				lon: 35.312583,
@@ -12594,6 +13100,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 507,
 			coordinates: {
 				lat: 50.593011,
 				lon: 35.302622,
@@ -12619,6 +13126,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 508,
 			coordinates: {
 				lat: 50.590479,
 				lon: 35.303718,
@@ -12644,6 +13152,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 509,
 			coordinates: {
 				lat: 50.599697,
 				lon: 35.296779,
@@ -12669,6 +13178,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 510,
 			coordinates: {
 				lat: 50.602069,
 				lon: 35.30418,
@@ -12694,6 +13204,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 511,
 			coordinates: {
 				lat: 50.594386,
 				lon: 35.298113,
@@ -12719,6 +13230,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 512,
 			coordinates: {
 				lat: 50.599395,
 				lon: 35.29617,
@@ -12744,6 +13256,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 513,
 			coordinates: {
 				lat: 50.602241,
 				lon: 35.307302,
@@ -12769,6 +13282,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 514,
 			coordinates: {
 				lat: 50.5872,
 				lon: 35.291217,
@@ -12794,6 +13308,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 515,
 			coordinates: {
 				lat: 50.586326,
 				lon: 35.323897,
@@ -12819,6 +13334,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 516,
 			coordinates: {
 				lat: 50.593368,
 				lon: 35.313722,
@@ -12844,6 +13360,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 517,
 			coordinates: {
 				lat: 50.591314,
 				lon: 35.30821,
@@ -12869,6 +13386,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 518,
 			coordinates: {
 				lat: 50.583338,
 				lon: 35.30807,
@@ -12894,6 +13412,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 519,
 			coordinates: {
 				lat: 50.589084,
 				lon: 35.301648,
@@ -12919,6 +13438,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 520,
 			coordinates: {
 				lat: 50.591559,
 				lon: 35.319714,
@@ -12944,6 +13464,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 521,
 			coordinates: {
 				lat: 50.600397,
 				lon: 35.309906,
@@ -12969,6 +13490,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 522,
 			coordinates: {
 				lat: 50.593398,
 				lon: 35.32221,
@@ -12994,6 +13516,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 523,
 			coordinates: {
 				lat: 50.596826,
 				lon: 35.29063,
@@ -13019,6 +13542,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 524,
 			coordinates: {
 				lat: 50.601491,
 				lon: 35.322254,
@@ -13044,6 +13568,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 525,
 			coordinates: {
 				lat: 50.595695,
 				lon: 35.308516,
@@ -13069,6 +13594,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 526,
 			coordinates: {
 				lat: 50.595743,
 				lon: 35.317869,
@@ -13094,6 +13620,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 527,
 			coordinates: {
 				lat: 50.590746,
 				lon: 35.293999,
@@ -13119,6 +13646,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 528,
 			coordinates: {
 				lat: 50.588554,
 				lon: 35.304544,
@@ -13144,6 +13672,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 529,
 			coordinates: {
 				lat: 50.603465,
 				lon: 35.317713,
@@ -13169,6 +13698,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 530,
 			coordinates: {
 				lat: 50.593229,
 				lon: 35.311955,
@@ -13194,6 +13724,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 531,
 			coordinates: {
 				lat: 50.57817,
 				lon: 35.312685,
@@ -13219,6 +13750,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 532,
 			coordinates: {
 				lat: 50.592338,
 				lon: 35.313205,
@@ -13244,6 +13776,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 533,
 			coordinates: {
 				lat: 50.594633,
 				lon: 35.294089,
@@ -13269,6 +13802,7 @@ export const thermoData = {
 			tracking_info: {
 				frame_number: 0,
 			},
+			id: 534,
 			coordinates: {
 				lat: 50.593688,
 				lon: 35.294616,
@@ -13292,6 +13826,7 @@ export const thermoData = {
 				center_y: 232,
 			},
 			tracking_info: {},
+			id: 535,
 			coordinates: {
 				lat: 50.600248,
 				lon: 35.318315,
