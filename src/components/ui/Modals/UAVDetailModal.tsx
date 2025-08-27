@@ -38,23 +38,19 @@ export interface UAVDetailModalProps {
 	onClose: () => void;
 	data: UAVDetailData;
 	onMissionPathClick?: () => void;
+	onAnalysisClick?: () => void;
 }
 
 const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 	onClose,
 	data,
 	onMissionPathClick,
+	onAnalysisClick,
 }) => {
 	if (!data) return null;
 
 	const handleMinimize = () => {
 		onClose();
-	};
-
-	const handleMissionPathClick = () => {
-		if (onMissionPathClick) {
-			onMissionPathClick();
-		}
 	};
 
 	const getSignalIcon = () => {
@@ -99,6 +95,16 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 		return "#C10000";
 	};
 
+	const handleMissionPathClick = () => {
+		if (onMissionPathClick) {
+			onMissionPathClick();
+		}
+	};
+	const handleGenerateAnalysis = () => {
+		console.log("Generate analysis for:", data.id);
+		onAnalysisClick?.();
+	};
+
 	const handleFollow = () => {
 		console.log("Follow UAV", data.id);
 	};
@@ -107,15 +113,9 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 		console.log("View detections for:", data.id);
 	};
 
-	const handleGenerateAnalysis = () => {
-		console.log("Generate AI Analysis:", data.id);
-	};
-
 	const handleRequestControl = () => {
 		console.log("Request control:", data.id);
 	};
-
-	console.log("UAVDetailModal rendered for UAV:", data);
 
 	return (
 		<Modal

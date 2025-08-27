@@ -24,6 +24,7 @@ import { useMapControls } from "./MapContext";
 import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
+import AnalysisModal from "../ui/Modals/AnalysisModal";
 
 interface MapContainerProps {
 	showIndicators?: boolean;
@@ -40,7 +41,6 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	showIndicators = false,
 }) => {
 	const location = useLocation();
-
 	const isDetectionsPage = location.pathname === "/detections";
 	const { mapRef, showMissionPaths } = useMapControls();
 	const { filteredDetections, selectedDetection, selectDetection } =
@@ -52,7 +52,6 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	const [attribution, setAttribution] = useState(
 		"&copy; CartoDB, &copy; OpenStreetMap contributors"
 	);
-
 	const [selectedUAVs, setSelectedUAVs] = useState<(string | number)[]>([]);
 	const [clusteredUAVIds, setClusteredUAVIds] = useState<Set<string>>(
 		new Set()
@@ -60,6 +59,8 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	const [isMissionPathModalOpen, setIsMissionPathModalOpen] = useState(false);
 	const [selectedUAVForMissionPath, setSelectedUAVForMissionPath] =
 		useState<any>(null);
+
+	const [isAnalysisOpen, setIsAnalysisOpen] = useState<boolean>(false);
 
 	// Ukraine coordinates (center remains the same)
 	const mapCenter: [number, number] = [50.59277, 35.307222];
@@ -425,25 +426,29 @@ const MapContainer: React.FC<MapContainerProps> = ({
 
 	return (
 		<>
-			<div>
-				{/* UAV Detail Modal */}
-				{selectedUAVs.length > 0 &&
-					uavLocations.map((uav) =>
-						selectedUAVs.map((el) => {
-							if (uav.data.id === el) {
-								return (
-									<UAVDetailModal
-										key={`${uav.data.id}-modal`}
-										data={uav.data}
-										onClose={() => handleCloseUAVModal(uav.data.id as number)}
-										onMissionPathClick={() => handleMissionPathClick(uav)}
-									/>
-								);
-							}
-							return null;
-						})
-					)}
-			</div>
+			<AnalysisModal
+				isOpen={isAnalysisOpen}
+				onClose={() => setIsAnalysisOpen(false)}
+			/>
+			{/* UAV Detail Modal */}
+			{selectedUAVs.length > 0 &&
+				uavLocations.map((uav) =>
+					selectedUAVs.map((el) => {
+						if (uav.data.id === el) {
+							return (
+								<UAVDetailModal
+									key={`${uav.data.id}-modal`}
+									data={uav.data}
+									onClose={() => handleCloseUAVModal(uav.data.id as number)}
+									onMissionPathClick={() => handleMissionPathClick(uav)}
+									onAnalysisClick={() => setIsAnalysisOpen(true)}
+								/>
+							);
+						}
+						return null;
+					})
+				)}
+
 			<div className="fixed top-0 left-0 w-screen h-screen bg-[#222631] z-10">
 				<LeafletMap
 					center={mapCenter}
