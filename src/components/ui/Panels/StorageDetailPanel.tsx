@@ -88,10 +88,10 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 	const handleTabChange = (tabId: string) => {
 		setActiveTab(tabId);
 	};
-	const handleEdit = () => {
-		console.log("Edit record:", record.id);
-		// Implement edit functionality
-	};
+	// const handleEdit = () => {
+	// 	console.log("Edit record:", record.id);
+	// 	// Implement edit functionality
+	// };
 
 	const handleDelete = () => {
 		console.log("Delete record:", record.id);
@@ -229,9 +229,9 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 
 			{/* Fixed Action Buttons at bottom */}
 			<div className="flex-shrink-0 absolute left-8 bottom-[32px] flex items-center gap-3 ">
-				<Button variant="secondary" onClick={handleEdit}>
+				{/* <Button variant="secondary" onClick={handleEdit}>
 					Edit
-				</Button>
+				</Button> */}
 				<Button variant="danger" onClick={handleDelete}>
 					Delete
 				</Button>

@@ -109,12 +109,7 @@ const AnalysisModal: React.FC<AnalysisModalProps> = ({
 				}, 500);
 			}
 		}
-	}, [
-		isInitialLoading,
-		currentSection,
-		sections,
-		sections[currentSection]?.displayedText,
-	]);
+	}, [isInitialLoading, currentSection, sections]);
 
 	// Typing cursor component
 	const TypingCursor = () => (
