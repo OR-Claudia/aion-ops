@@ -62,12 +62,12 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 		{
 			id: "rgb",
 			label: "RGB",
-			value: "", // Will be updated when video links are provided
+			value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
 		},
 		{
 			id: "thermo",
 			label: "Thermo",
-			value: "", // Will be updated when video links are provided
+			value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
 		},
 	];
 

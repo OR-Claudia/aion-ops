@@ -46,7 +46,7 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 	const [detections, setDetections] = useState<Detection[]>([]);
 
 	const [detectionCount, setDetectionCount] = useState<number | undefined>(
-		detections ? detections?.length : 32
+		detections ? detections?.length : 0
 	);
 
 	const uniqueRgbDetections = rgbData.detections?.filter(
@@ -59,26 +59,28 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 	);
 
 	useEffect(() => {
-		setDetections(
-			activeTab === "rgb" ? uniqueRgbDetections : uniqueThermoDetections
-		);
-		setDetectionCount(detections.length);
+		const newDetections =
+			activeTab === "rgb" ? uniqueRgbDetections : uniqueThermoDetections;
+		if (JSON.stringify(detections) !== JSON.stringify(newDetections)) {
+			setDetections(newDetections);
+			setDetectionCount(newDetections.length);
+		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [activeTab, detectionCount]);
+	}, [activeTab, uniqueRgbDetections, uniqueThermoDetections]);
 
 	return (
 		<Modal
-			maxHeight={"740px"}
+			// maxHeight={"740px"}
 			title={`Detections`}
 			isOpen={isOpen}
 			onClose={onClose}
-			width={"540px"}
+			// width={"540px"}
 		>
 			<div className="flex items-center ">
 				<span className="mr-2 font-medium my-3">Active source:</span>
 				<Tag variant="primary" text={capitalize(activeTab)} />
 			</div>
-			<div className="max-h-[550px] overflow-y-auto pb-3 mb-2">
+			<div className="max-h-[550px] overflow-y-auto w-[470px] pb-3 mb-2 ">
 				{detections.map((d) => (
 					<DetectionListItem
 						detection={d}
@@ -88,9 +90,7 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 			</div>
 			<div className="flex place-content-between mt-3">
 				<span className="text-xl font-bold">{`Current detections:`}</span>
-				<span className="text-2xl font-normal">
-					{detectionCount === 0 ? 32 : detectionCount}
-				</span>
+				<span className="text-2xl font-normal">{detectionCount}</span>
 			</div>
 		</Modal>
 	);

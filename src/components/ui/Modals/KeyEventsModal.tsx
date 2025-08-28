@@ -120,14 +120,14 @@ const KeyEventsModal: React.FC<KeyEventsModalProps> = ({
 		<Modal isOpen={isOpen} onClose={onClose} title={title}>
 			<div className="space-y-2">
 				{/* Detection status indicator */}
-				{isDetecting && (
-					<div className="flex items-center gap-2 mb-4 p-2 bg-[#1a2f1a] rounded-lg border border-[#00C6B8]">
-						<div className="w-2 h-2 bg-[#00C6B8] rounded-full animate-pulse"></div>
-						<span className="text-[#00C6B8] text-sm font-medium">
-							Detection in progress...
-						</span>
-					</div>
-				)}
+				{/* {isDetecting && ( */}
+				<div className="flex items-center gap-2 mb-4 p-2 bg-[#1a2f1a] rounded-lg border border-[#00C6B8]">
+					<div className="w-2 h-2 bg-[#00C6B8] rounded-full animate-pulse"></div>
+					<span className="text-[#00C6B8] text-sm font-medium">
+						Detection in progress...
+					</span>
+				</div>
+				{/* )} */}
 
 				{/* Events list */}
 				{visibleEvents.map((event, index) => {
