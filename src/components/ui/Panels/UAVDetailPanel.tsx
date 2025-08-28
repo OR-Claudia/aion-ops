@@ -125,7 +125,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 			</div>
 
 			{/* Detail Information */}
-			<div className="absolute left-8 mt-4 top-[42%] w-fit flex flex-col gap-2">
+			<div className="absolute left-8 mt-9 top-[42%] w-fit flex flex-col gap-2">
 				<div className="text-[#E3F3F2] font-ubuntu text-md font-normal leading-normal w-[396px]">
 					<span className="font-bold">Description: </span> {uav?.description}
 				</div>

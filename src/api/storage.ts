@@ -11,7 +11,7 @@ const storageData: StorageData[] = [
 		uav: "KUNA",
 		missionType: "Reconnaissance",
 		flightDuration: "1h33m",
-		operator: "Charles Xavier",
+		operator: "Amanda Magiera",
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
@@ -72,7 +72,7 @@ const storageData: StorageData[] = [
 		uav: "Mavic air",
 		missionType: "Reconnaissance",
 		flightDuration: "1h33m",
-		operator: "Emma U. Brown",
+		operator: "Dagmara Popowska",
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
@@ -133,7 +133,7 @@ const storageData: StorageData[] = [
 		uav: "UkrJet Bobr UJ26",
 		missionType: "Reconnaissance",
 		flightDuration: "1h33m",
-		operator: "Luke P. Bailey",
+		operator: "Kamil Kisielewski",
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
@@ -194,7 +194,7 @@ const storageData: StorageData[] = [
 		uav: "KUNA",
 		missionType: "Reconnaissance",
 		flightDuration: "1h33m",
-		operator: "Jaxon Z. Fisher",
+		operator: "Maria Ivanova",
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
@@ -251,7 +251,7 @@ const storageData: StorageData[] = [
 		uav: "KUNA",
 		missionType: "Reconnaissance",
 		flightDuration: "1h33m",
-		operator: "William D. White",
+		operator: "Leopold Bartczak",
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
@@ -320,7 +320,7 @@ const storageData: StorageData[] = [
 		uav: "Mavic air",
 		missionType: "Reconnaissance",
 		flightDuration: "1h33m",
-		operator: "Henry L. Scott",
+		operator: "Izydor Gall",
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
@@ -369,7 +369,7 @@ const storageData: StorageData[] = [
 		uav: "Athlon Furia",
 		missionType: "Reconnaissance",
 		flightDuration: "1h33m",
-		operator: "Charles Xavier",
+		operator: "Amanda Magiera",
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
@@ -446,7 +446,7 @@ const storageData: StorageData[] = [
 		uav: "Mavic air",
 		missionType: "Reconnaissance",
 		flightDuration: "1h33m",
-		operator: "Charles Xavier",
+		operator: "Amanda Magiera",
 		status: "Success",
 		description:
 			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
