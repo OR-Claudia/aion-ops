@@ -46,6 +46,8 @@ export interface UAVDetailModalProps {
 	onDetectionsClick?: () => void;
 }
 
+const livestream = true;
+
 const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 	onClose,
 	data,
@@ -166,6 +168,16 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 			subtitle={`Live coordinates: ${data.coordinates}`}
 			minimizable={true}
 			onMinimize={handleMinimize}
+			minHeight="750px"
+			headerContent={
+				<div className="flex items-center gap-2">
+					<div
+						className="w-[11px] h-[11px] rounded-full"
+						style={{ backgroundColor: "#C10000" }}
+					/>
+					<span>Live</span>
+				</div>
+			}
 		>
 			{/* Tabs Section */}
 			<div className=" mb-[14px]">
@@ -181,88 +193,98 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 			<div className="mb-4">
 				<div className="w-full h-fit relative rounded-[0px_3px_3px_3px] overflow-hidden">
 					{/* Video Player */}
-					<div className="w-full">
+					<div className="w-full ">
 						<VideoPlayer
-							livestream={true}
+							livestream={livestream}
 							src={getCurrentVideoSource()}
-							height={activeTab === "rgb" ? "auto" : "300px"}
+							height={
+								livestream
+									? activeTab === "rgb"
+										? "300px"
+										: "300px"
+									: activeTab === "rgb"
+									? "auto"
+									: "300px"
+							}
 						/>
 					</div>
 				</div>
 			</div>
-			{/* Stats Section */}
-			<div className="px-[27px] mb-[20px]">
-				<div className="flex items-center justify-center gap-[12px] w-[207px] mx-auto">
-					{/* Signal Stats */}
-					<div className="flex flex-col items-center gap-3 w-[101px] min-h-[60px]">
-						<div className="flex items-center gap-[6px] mb-[6px] h-4">
-							<img
-								src={getSignalIcon()}
-								alt="signal"
-								className="w-[18px] h-[14px]"
-							/>
-							<span className="text-[#E3F3F2] font-ubuntu text-sm font-normal">
-								{data.signalPercentage}%
-							</span>
+			<div className="overflow-y-auto max-h-[200px] ">
+				{/* Stats Section */}
+				<div className="px-[27px] mb-[20px]">
+					<div className="flex items-center justify-center gap-[12px] w-[207px] mx-auto ">
+						{/* Signal Stats */}
+						<div className="flex flex-col items-center gap-3 w-[101px] min-h-[60px]">
+							<div className="flex items-center gap-[6px] mb-[6px] h-4">
+								<img
+									src={getSignalIcon()}
+									alt="signal"
+									className="w-[18px] h-[14px]"
+								/>
+								<span className="text-[#E3F3F2] font-ubuntu text-sm font-normal">
+									{data.signalPercentage}%
+								</span>
+							</div>
+							<div className="relative w-[97px] h-[18px]">
+								<div className="w-full h-full rounded-[22px] border border-[#E3F3F2] bg-transparent" />
+								<div
+									className="absolute top-[3px] left-[3px] h-[12px] rounded-[22px] bg-[#00C6B8]"
+									style={{ width: getSignalBarWidth() }}
+								/>
+							</div>
 						</div>
-						<div className="relative w-[97px] h-[18px]">
-							<div className="w-full h-full rounded-[22px] border border-[#E3F3F2] bg-transparent" />
-							<div
-								className="absolute top-[3px] left-[3px] h-[12px] rounded-[22px] bg-[#00C6B8]"
-								style={{ width: getSignalBarWidth() }}
-							/>
-						</div>
-					</div>
 
-					{/* Battery Stats */}
-					<div className="flex flex-col items-center min-h-[60px] gap-3 w-[101px]">
-						<div className="flex items-center gap-[6px] mb-[6px] h-[17px]">
-							<img src={getBatteryIcon()} alt="battery" className="w-5 h-4" />
-							<span className="text-[#E3F3F2] justify-center font-ubuntu text-sm font-normal">
-								{data.batteryPercentage}%
-							</span>
-						</div>
-						<div className="relative w-[97px] h-[18px]">
-							<div className="w-full h-full rounded-[22px] border border-[#E3F3F2] bg-transparent" />
-							<div
-								className="absolute top-[3px] left-[3px] h-[12px] rounded-[22px]"
-								style={{
-									width: getBatteryBarWidth(),
-									backgroundColor: getBatteryBarColor(),
-								}}
-							/>
+						{/* Battery Stats */}
+						<div className="flex flex-col items-center min-h-[60px] gap-3 w-[101px]">
+							<div className="flex items-center gap-[6px] mb-[6px] h-[17px]">
+								<img src={getBatteryIcon()} alt="battery" className="w-5 h-4" />
+								<span className="text-[#E3F3F2] justify-center font-ubuntu text-sm font-normal">
+									{data.batteryPercentage}%
+								</span>
+							</div>
+							<div className="relative w-[97px] h-[18px]">
+								<div className="w-full h-full rounded-[22px] border border-[#E3F3F2] bg-transparent" />
+								<div
+									className="absolute top-[3px] left-[3px] h-[12px] rounded-[22px]"
+									style={{
+										width: getBatteryBarWidth(),
+										backgroundColor: getBatteryBarColor(),
+									}}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			{/* Information Section */}
-			<div className="px-[12px] mb-[32px] flex flex-col gap-[11px]">
-				<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">Description: </span> {data.description}
-				</div>
+				{/* Information Section */}
+				<div className="px-[12px] mb-[32px] flex flex-col gap-[11px] ">
+					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
+						<span className="font-bold">Description: </span> {data.description}
+					</div>
 
-				<div className="text-[#E3F3F2] flex flex-row items-center  font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">Mission: </span>
-					{data.missionLink ? (
-						<Button
-							variant="underline"
-							onClick={() =>
-								console.log("Open mission details:", data.missionLink)
-							}
-						>
-							{data.mission}
+					<div className="text-[#E3F3F2] flex flex-row items-center  font-ubuntu text-sm font-normal leading-normal">
+						<span className="font-bold">Mission: </span>
+						{data.missionLink ? (
+							<Button
+								variant="underline"
+								onClick={() =>
+									console.log("Open mission details:", data.missionLink)
+								}
+							>
+								{data.mission}
+							</Button>
+						) : (
+							<span className="text-[#00C6B8] underline">{data.mission}</span>
+						)}
+					</div>
+
+					<div className="text-[#E3F3F2] flex flex-row items-center font-ubuntu text-sm font-normal leading-normal">
+						<span className="font-bold">Mission Path:</span>
+						<Button variant="underline" onClick={handleMissionPathClick}>
+							{data.MissionPath}
 						</Button>
-					) : (
-						<span className="text-[#00C6B8] underline">{data.mission}</span>
-					)}
-				</div>
-
-				<div className="text-[#E3F3F2] flex flex-row items-center font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-bold">Mission Path:</span>
-					<Button variant="underline" onClick={handleMissionPathClick}>
-						{data.MissionPath}
-					</Button>
+					</div>
 				</div>
 			</div>
 
