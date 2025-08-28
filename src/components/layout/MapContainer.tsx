@@ -47,7 +47,7 @@ interface MapContainerProps {
 }
 
 const systemStatusText =
-	"Battery at 35% with 0.7 hours remaining flight time. WiFi connectivity excellent at -42 dBm, maintaining secure data link with zero interruptions. All critical systems operating within normal parameters.";
+	"Battery at 35% with 0.7 hours remaining mission time. WiFi connectivity excellent at -42 dBm, maintaining secure data link with zero interruptions. All critical systems operating within normal parameters.";
 
 const missionProgressText =
 	"Currently 68% complete on designated 12km² patrol route covering agricultural and woodland terrain. Navigation waypoints hit on schedule at 150m altitude. Weather conditions optimal with clear visibility extending 8+ kilometers.";
@@ -516,7 +516,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 								)
 								.map((uav: any) => (
 									<MissionPath
-										key={`flight-path-${uav.data.id}`}
+										key={`mission-path-${uav.data.id}`}
 										coordinates={uav.MissionPath}
 										color={uav.MissionPathColor}
 										uavId={uav.data.id.toString()}

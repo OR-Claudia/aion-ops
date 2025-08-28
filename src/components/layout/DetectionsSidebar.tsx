@@ -40,7 +40,7 @@ const DetectionsSidebar: React.FC = () => {
 
 	return (
 		<>
-			<div className="absolute top-16 left-12 w-[350px] h-[72vh] z-10">
+			<div className="absolute top-16 left-12 w-[350px] h-[72vh] ">
 				{/* Header and Filter Row */}
 				<div className="mb-[16px]">
 					<div className="flex items-center gap-2">

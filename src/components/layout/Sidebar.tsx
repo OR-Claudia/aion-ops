@@ -104,7 +104,7 @@ const Sidebar: React.FC = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="absolute top-16 left-12 z-10">
+		<div className="absolute top-16 left-12">
 			<SectionHeader
 				title="Recent feeds"
 				showArrow={true}

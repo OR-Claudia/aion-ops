@@ -18,7 +18,7 @@ const MissionPath: React.FC<MissionPathProps> = ({
 
 	return (
 		<Polyline
-			key={`flight-path-${uavId}`}
+			key={`mission-path-${uavId}`}
 			positions={coordinates}
 			pathOptions={{
 				color: color,

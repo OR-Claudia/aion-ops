@@ -260,7 +260,7 @@ export const generateUAVDetailData = (basicData: {
 		mission: getMission(basicData.name),
 		missionLink: "/missions",
 		MissionPath: getMissionPath(basicData.name),
-		MissionPathLink: "/flight-paths",
+		MissionPathLink: "/mission-paths",
 		droneType: getDroneType(basicData.name),
 		detections: getDetections(basicData.name),
 	};
