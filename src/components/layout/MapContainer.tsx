@@ -37,6 +37,14 @@ interface MapContainerProps {
 	}) => void;
 }
 
+const systemStatusText =
+	"Battery at 73% with 1.8 hours remaining flight time. WiFi connectivity excellent at -42 dBm, maintaining secure data link with zero interruptions. All critical systems operating within normal parameters.";
+
+const missionProgressText =
+	"Currently 68% complete on designated 12km² patrol route covering agricultural and woodland terrain. Navigation waypoints hit on schedule at 150m altitude. Weather conditions optimal with clear visibility extending 8+ kilometers.";
+const operationalSummaryText =
+	"Area assessment proceeding as planned with no significant anomalies detected. Reconnaissance data collection on target, with 847 MB transmitted successfully. Rural activity patterns consistent with intelligence briefings. Mission continuing toward scheduled completion with all safety protocols active.";
+
 const MapContainer: React.FC<MapContainerProps> = ({
 	showIndicators = false,
 }) => {
@@ -429,6 +437,9 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			<AnalysisModal
 				isOpen={isAnalysisOpen}
 				onClose={() => setIsAnalysisOpen(false)}
+				systemStatus={systemStatusText}
+				missionProgress={missionProgressText}
+				operationalSummary={operationalSummaryText}
 			/>
 			{/* UAV Detail Modal */}
 			{selectedUAVs.length > 0 &&

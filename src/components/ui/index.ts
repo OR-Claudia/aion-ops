@@ -9,6 +9,7 @@ export { default as DetectionMarker } from "./DetectionMarker";
 export { default as ExpandableToolsPanel } from "./Panels/ExpandableToolsPanel";
 export { default as FeedItem } from "./FeedItem";
 export { default as FilterControls } from "./FilterControls";
+export { default as LoadingSpinner } from "./LoadingSpinner";
 export { default as MissionPath } from "./MissionPath";
 export { default as MapProviderSwitcher } from "./MapProviderSwitcher";
 export { default as MapStatusIndicator } from "./MapStatusIndicator";

@@ -142,6 +142,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 				style={{ width, height }}
 				preload="auto"
 				playsInline
+				disablePictureInPicture={true}
 			/>
 			<MediaControlBar
 				// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed

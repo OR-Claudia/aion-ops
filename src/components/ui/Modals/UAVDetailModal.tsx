@@ -109,13 +109,13 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 		console.log("Follow UAV", data.id);
 	};
 
-	const handleDetections = () => {
-		console.log("View detections for:", data.id);
-	};
+	// const handleDetections = () => {
+	// 	console.log("View detections for:", data.id);
+	// };
 
-	const handleRequestControl = () => {
-		console.log("Request control:", data.id);
-	};
+	// const handleRequestControl = () => {
+	// 	console.log("Request control:", data.id);
+	// };
 
 	return (
 		<Modal
@@ -225,15 +225,15 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 				<Button variant="secondary" onClick={handleFollow}>
 					Follow
 				</Button>
-				<Button variant="secondary" onClick={handleDetections}>
+				{/* <Button variant="secondary" onClick={handleDetections}>
 					Detections
-				</Button>
-				<Button variant="secondary" onClick={handleGenerateAnalysis}>
+				</Button> */}
+				<Button variant="primary" onClick={handleGenerateAnalysis}>
 					Generate analysis
 				</Button>
-				<Button variant="primary" onClick={handleRequestControl}>
+				{/* <Button variant="primary" onClick={handleRequestControl}>
 					Request control
-				</Button>
+				</Button> */}
 			</div>
 		</Modal>
 	);

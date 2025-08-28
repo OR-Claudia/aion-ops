@@ -64,7 +64,7 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 		);
 		setDetectionCount(detections.length);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [activeTab, detections]);
+	}, [activeTab, detectionCount]);
 
 	return (
 		<Modal
