@@ -72,7 +72,7 @@ const createUAVLocation = (
 				lon,
 			})),
 		},
-		MissionPath: missionPathCoordinates,
+		MissionPath: missionPathCoordinates.map(([lat, lon]) => ({ lat, lon })),
 		MissionPathColor: getMissionPathColor(type),
 	};
 };
@@ -353,9 +353,6 @@ const MapContainer: React.FC<MapContainerProps> = ({
 					return {
 						...uav,
 						position: [newLat, newLon] as [number, number],
-						MissionPath: generateMissionCoordinates([newLat, newLon]).map(
-							([lat, lon]: [number, number]) => ({ lat, lon })
-						),
 					};
 				})
 			);

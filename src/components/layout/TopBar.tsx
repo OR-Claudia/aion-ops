@@ -68,7 +68,7 @@ const TopBar: React.FC = () => {
 				<div className="flex items-center gap-[18px]">
 					<div className="text-right">
 						<div className="text-[#E3F3F2] font-ubuntu text-sm font-medium leading-normal mb-1">
-							Mark Schmidt
+							Eliza Molek
 						</div>
 						<div className="text-[#E3F3F2] font-ubuntu text-sm font-light leading-normal">
 							Level III Clearance

@@ -12,6 +12,7 @@ interface MapContextType {
 
 const MapContext = createContext<MapContextType | undefined>(undefined);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useMapControls = () => {
 	const context = useContext(MapContext);
 	if (!context) {
@@ -31,8 +32,8 @@ export const MapContextProvider: React.FC<MapContextProviderProps> = ({
 	const [showMissionPaths, setShowMissionPaths] = useState(false);
 
 	// Default map settings
-	const warsawCenter: [number, number] = [52.2297, 21.0122];
-	const defaultZoom = 12;
+	const mapCenter: [number, number] = [50.59277, 35.307222];
+	const defaultZoom = 10;
 
 	const zoomIn = () => {
 		if (mapRef.current) {
@@ -48,7 +49,7 @@ export const MapContextProvider: React.FC<MapContextProviderProps> = ({
 
 	const resetView = () => {
 		if (mapRef.current) {
-			mapRef.current.setView(warsawCenter, defaultZoom);
+			mapRef.current.setView(mapCenter, defaultZoom);
 		}
 	};
 
