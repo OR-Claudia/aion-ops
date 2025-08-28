@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
-import type { Coordinate, StorageData } from "../StorageItem";
+import type { Coordinate } from "../StorageItem";
 import DetectionListItem from "../DetectionListItem";
 import Tag from "../Tag";
 import { capitalize } from "../../../lib/utils";
@@ -33,20 +33,20 @@ export interface Detection {
 interface DetectionsModalProps {
 	isOpen: boolean;
 	onClose: () => void;
-	record: StorageData;
+	// record: StorageData;
 	activeTab: string;
 }
 
 const DetectionsModal: React.FC<DetectionsModalProps> = ({
 	isOpen,
 	onClose,
-	record,
+	// record,
 	activeTab,
 }) => {
 	const [detections, setDetections] = useState<Detection[]>([]);
 
 	const [detectionCount, setDetectionCount] = useState<number | undefined>(
-		detections ? detections?.length : 0
+		detections ? detections?.length : 32
 	);
 
 	const uniqueRgbDetections = rgbData.detections?.filter(
@@ -69,7 +69,7 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 	return (
 		<Modal
 			maxHeight={"740px"}
-			title={`Detections ${record.title}`}
+			title={`Detections`}
 			isOpen={isOpen}
 			onClose={onClose}
 			width={"540px"}
@@ -88,7 +88,9 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 			</div>
 			<div className="flex place-content-between mt-3">
 				<span className="text-xl font-bold">{`Current detections:`}</span>
-				<span className="text-2xl font-normal">{detectionCount}</span>
+				<span className="text-2xl font-normal">
+					{detectionCount === 0 ? 32 : detectionCount}
+				</span>
 			</div>
 		</Modal>
 	);

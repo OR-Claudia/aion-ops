@@ -11,6 +11,7 @@ import {
 	MissionPath,
 } from "../ui";
 import MissionPathModal from "../ui/Modals/MissionPathModal";
+import KeyEventsModal from "../ui/Modals/KeyEventsModal";
 
 import {
 	generateUAVDetailData,
@@ -25,6 +26,14 @@ import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import AnalysisModal from "../ui/Modals/AnalysisModal";
+import DetectionsModal from "../ui/Modals/DetectionsModal";
+
+interface SelectedUAV {
+	id: string | number;
+	activeTab: string;
+	showKeyEvents: boolean;
+	showDetections: boolean;
+}
 
 interface MapContainerProps {
 	showIndicators?: boolean;
@@ -38,7 +47,7 @@ interface MapContainerProps {
 }
 
 const systemStatusText =
-	"Battery at 73% with 1.8 hours remaining flight time. WiFi connectivity excellent at -42 dBm, maintaining secure data link with zero interruptions. All critical systems operating within normal parameters.";
+	"Battery at 35% with 0.7 hours remaining flight time. WiFi connectivity excellent at -42 dBm, maintaining secure data link with zero interruptions. All critical systems operating within normal parameters.";
 
 const missionProgressText =
 	"Currently 68% complete on designated 12km² patrol route covering agricultural and woodland terrain. Navigation waypoints hit on schedule at 150m altitude. Weather conditions optimal with clear visibility extending 8+ kilometers.";
@@ -60,7 +69,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	const [attribution, setAttribution] = useState(
 		"&copy; CartoDB, &copy; OpenStreetMap contributors"
 	);
-	const [selectedUAVs, setSelectedUAVs] = useState<(string | number)[]>([]);
+	const [selectedUAVs, setSelectedUAVs] = useState<SelectedUAV[]>([]);
 	const [clusteredUAVIds, setClusteredUAVIds] = useState<Set<string>>(
 		new Set()
 	);
@@ -69,6 +78,8 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		useState<any>(null);
 
 	const [isAnalysisOpen, setIsAnalysisOpen] = useState<boolean>(false);
+
+	// DetectionsModal
 
 	// Ukraine coordinates (center remains the same)
 	const mapCenter: [number, number] = [50.59277, 35.307222];
@@ -425,11 +436,57 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	// };
 
 	const handleUAVDetailClick = (id: string | number) => {
-		setSelectedUAVs((prev) => [...prev, id as string | number]);
+		setSelectedUAVs((prev) => [
+			...prev,
+			{
+				id: id as string | number,
+				activeTab: "rgb",
+				showKeyEvents: false,
+				showDetections: false,
+			},
+		]);
 	};
 
 	const handleCloseUAVModal = (id: number) => {
-		setSelectedUAVs((prev) => prev.filter((uav) => uav !== id));
+		setSelectedUAVs((prev) => prev.filter((uav) => uav.id !== id));
+	};
+
+	const handleTabChange = (uavId: string | number, tabId: string) => {
+		setSelectedUAVs((prev) =>
+			prev.map((uav) => (uav.id === uavId ? { ...uav, activeTab: tabId } : uav))
+		);
+	};
+
+	const handleOpenKeyEvents = (uavId: string | number) => {
+		setSelectedUAVs((prev) =>
+			prev.map((uav) =>
+				uav.id === uavId ? { ...uav, showKeyEvents: true } : uav
+			)
+		);
+	};
+
+	const handleCloseKeyEvents = (uavId: string | number) => {
+		setSelectedUAVs((prev) =>
+			prev.map((uav) =>
+				uav.id === uavId ? { ...uav, showKeyEvents: false } : uav
+			)
+		);
+	};
+
+	const handleOpenDetections = (uavId: string | number) => {
+		setSelectedUAVs((prev) =>
+			prev.map((uav) =>
+				uav.id === uavId ? { ...uav, showDetections: true } : uav
+			)
+		);
+	};
+
+	const handleCloseDetections = (uavId: string | number) => {
+		setSelectedUAVs((prev) =>
+			prev.map((uav) =>
+				uav.id === uavId ? { ...uav, showDetections: false } : uav
+			)
+		);
 	};
 
 	return (
@@ -441,18 +498,59 @@ const MapContainer: React.FC<MapContainerProps> = ({
 				missionProgress={missionProgressText}
 				operationalSummary={operationalSummaryText}
 			/>
+
 			{/* UAV Detail Modal */}
 			{selectedUAVs.length > 0 &&
 				uavLocations.map((uav) =>
-					selectedUAVs.map((el) => {
-						if (uav.data.id === el) {
+					selectedUAVs.map((selectedUAV) => {
+						if (uav.data.id === selectedUAV.id) {
 							return (
 								<UAVDetailModal
 									key={`${uav.data.id}-modal`}
 									data={uav.data}
+									activeTab={selectedUAV.activeTab}
+									onTabChange={(tabId) =>
+										handleTabChange(selectedUAV.id, tabId)
+									}
 									onClose={() => handleCloseUAVModal(uav.data.id as number)}
 									onMissionPathClick={() => handleMissionPathClick(uav)}
 									onAnalysisClick={() => setIsAnalysisOpen(true)}
+									onKeyEventsClick={() => handleOpenKeyEvents(selectedUAV.id)}
+									onDetectionsClick={() => handleOpenDetections(selectedUAV.id)}
+								/>
+							);
+						}
+						return null;
+					})
+				)}
+			{/* Detection Modals */}
+			{selectedUAVs.length > 0 &&
+				uavLocations.map((uav) =>
+					selectedUAVs.map((selectedUAV) => {
+						if (uav.data.id === selectedUAV.id && selectedUAV.showDetections) {
+							return (
+								<DetectionsModal
+									key={`${uav.data.id}-detections`}
+									isOpen={selectedUAV.showDetections}
+									onClose={() => handleCloseDetections(selectedUAV.id)}
+									activeTab={selectedUAV.activeTab}
+								/>
+							);
+						}
+						return null;
+					})
+				)}
+			{/* Key Events Modals */}
+			{selectedUAVs.length > 0 &&
+				uavLocations.map((uav) =>
+					selectedUAVs.map((selectedUAV) => {
+						if (uav.data.id === selectedUAV.id && selectedUAV.showKeyEvents) {
+							return (
+								<KeyEventsModal
+									key={`${uav.data.id}-keyevents`}
+									isOpen={selectedUAV.showKeyEvents}
+									onClose={() => handleCloseKeyEvents(selectedUAV.id)}
+									title={`Key Events - ${uav.data.name}`}
 								/>
 							);
 						}

@@ -176,7 +176,7 @@ const StoragePage: React.FC = () => {
 								isOpen={detectionsOpen}
 								onClose={() => setDetectionsOpen(false)}
 								activeTab={activeTab}
-								record={selectedRecord}
+								// record={selectedRecord}
 							/>
 						) : null}
 						{/* MissionPath Modal */}
