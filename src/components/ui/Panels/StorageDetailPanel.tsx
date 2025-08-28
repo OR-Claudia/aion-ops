@@ -181,7 +181,7 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 						<span className="font-bold">Description:</span> {record.description}
 					</div>
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
-						<span className="font-bold">UAV: </span>
+						<span className="font-bold">Drone: </span>
 						<span className="text-[#00C6B8] underline">{record.uav}</span>
 					</div>
 

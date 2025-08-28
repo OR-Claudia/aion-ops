@@ -463,7 +463,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			<div className="fixed top-0 left-0 w-screen h-screen bg-[#222631] z-10">
 				<LeafletMap
 					center={mapCenter}
-					zoom={11}
+					zoom={isDetectionsPage ? 12 : 11}
 					style={{ height: "100%", width: "100%" }}
 					zoomControl={false}
 					ref={mapRef}

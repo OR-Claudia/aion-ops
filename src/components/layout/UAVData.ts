@@ -171,7 +171,7 @@ export const generateUAVDetailData = (basicData: {
 
 	const getDescription = (name: string): string => {
 		if (name.includes("KUNA")) {
-			return "Kuna is a versatile, tracked terrain drone—a hybrid UGV featuring autonomous navigation, modular adaptability, robust mobility, optional armament, and aerial support via the Raven UAV—conceived to meet modern military needs.";
+			return "Deployed for stealth reconnaissance in forested terrain with confirmed hostile presence including regular forces and armed civilian militia. Primary objectives include covert surveillance, intelligence gathering, and threat assessment while maintaining low signature profile in wooded sectors with known conventional vehicle activity.";
 		}
 		if (name.includes("Kolibri")) {
 			return "Multi-purpose surveillance drone conducting routine patrol operations. Current mission involves area monitoring and threat assessment. All systems operational within normal parameters.";

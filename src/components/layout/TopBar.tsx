@@ -70,7 +70,7 @@ const TopBar: React.FC = () => {
 						<div className="text-[#E3F3F2] font-ubuntu text-sm font-medium leading-normal mb-1">
 							Mark Schmidt
 						</div>
-						<div className="text-[#E3F3F2] font-ubuntu text-[10px] font-light leading-normal">
+						<div className="text-[#E3F3F2] font-ubuntu text-sm font-light leading-normal">
 							Level III Clearance
 						</div>
 					</div>

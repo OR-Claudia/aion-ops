@@ -61,6 +61,7 @@ export const DetectionProvider: React.FC<DetectionProviderProps> = ({
 	);
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useDetectionContext = (): DetectionContextType => {
 	const context = useContext(DetectionContext);
 	if (context === undefined) {

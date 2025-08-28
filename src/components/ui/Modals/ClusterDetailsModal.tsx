@@ -104,11 +104,11 @@ const ClusterDetailsModal: React.FC<ClusterDetailsModalProps> = ({
 				</div>
 
 				<div className="text-[#E3F3F2] flex flex-row items-center font-ubuntu text-sm font-normal leading-normal">
-					<span className="font-[600]">UAV: </span>
+					<span className="font-[600]">Drone: </span>
 					<Button
 						variant="underline"
 						onClick={() =>
-							console.log("Open Responsible UAV:", cluster.responsibleUAV)
+							console.log("Open Responsible drone:", cluster.responsibleUAV)
 						}
 					>
 						{cluster.responsibleUAV}
