@@ -6,7 +6,7 @@ import Button from "../Button";
 import VideoPlayer from "../VideoPlayer.tsx";
 import Tabs, { type TabItem } from "../Tabs";
 import RgbVideo from "../../../assets/videos/rgb_kuna.mp4";
-// import ThermoVideo from "../../../assets/videos/;
+import ThermoVideo from "../../../assets/videos/thermo_kuna.mp4";
 
 const keyEventsDEMO = [
 	{
@@ -75,8 +75,8 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 		{
 			id: "thermo",
 			label: "Thermo",
-			value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
-			// value: ThermoVideo,
+			// value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
+			value: ThermoVideo,
 		},
 	];
 
