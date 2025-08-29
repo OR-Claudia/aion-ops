@@ -1,4 +1,4 @@
-export const some_aerial_data = {
+export const aerialData = {
 	video_info: {
 		filename: "video_soldier_1.mp4",
 		fps: 30,

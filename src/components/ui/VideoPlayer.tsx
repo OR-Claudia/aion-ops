@@ -114,8 +114,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 			></iframe>
 		);
 	}
-
-	if (!src) {
+	console.log("No video source provided", src === "", !src, src);
+	if (src === "" || !src) {
 		return (
 			<div
 				className={cn(

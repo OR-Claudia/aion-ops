@@ -4,13 +4,13 @@ import { cn } from "../../lib/utils";
 export interface TabItem {
 	id: string;
 	label: string;
-	value: string;
+	value?: string;
 }
 
 interface TabsProps {
 	tabs: TabItem[];
 	activeTab: string;
-	onTabChange: (tabId: string, value: string) => void;
+	onTabChange: (tabId: string, value?: string) => void;
 	className?: string;
 }
 

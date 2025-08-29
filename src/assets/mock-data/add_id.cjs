@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 // Read the existing data file - replace with your actual data file path
-const dataPath = "./src/assets/mock-data/data.ts";
+const dataPath = "./src/assets/mock-data/aerial-data.ts";
 let content = fs.readFileSync(dataPath, "utf8");
 
 // Function to generate a unique ID

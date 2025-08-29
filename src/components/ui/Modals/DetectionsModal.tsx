@@ -4,8 +4,9 @@ import type { Coordinate } from "../StorageItem";
 import DetectionListItem from "../DetectionListItem";
 import Tag from "../Tag";
 import { capitalize } from "../../../lib/utils";
-import { thermoData } from "../../../assets/mock-data/thermo_data";
-import { detections as rgbData } from "../../../assets/mock-data/data";
+// import { thermoData } from "../../../assets/mock-data/thermo_data";
+// import { detections as rgbData } from "../../../assets/mock-data/data";
+import { aerialData } from "../../../assets/mock-data/aerial-data";
 
 export interface Detection {
 	id: string | number;
@@ -43,24 +44,26 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 	// record,
 	activeTab,
 }) => {
-	const [detections, setDetections] = useState<Detection[]>([]);
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const [detections, setDetections] = useState<Detection[] | any[]>([]);
 
 	const [detectionCount, setDetectionCount] = useState<number | undefined>(
 		detections ? detections?.length : 0
 	);
 
-	const uniqueRgbDetections = rgbData.detections?.filter(
+	const uniqueRgbDetections = aerialData.detections?.filter(
 		(o, index, arr) =>
 			arr.findIndex(({ track_id }) => track_id === o.track_id) === index
 	);
-	const uniqueThermoDetections = thermoData.detections?.filter(
-		(o, index, arr) =>
-			arr.findIndex(({ track_id }) => track_id === o.track_id) === index
-	);
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const uniqueThermoDetections: any = [];
+
+	// 	(o, index, arr) =>
+	// 		arr.findIndex(({ track_id }) => track_id === o.track_id) === index
+	// );
 
 	useEffect(() => {
-		const newDetections =
-			activeTab === "rgb" ? uniqueRgbDetections : uniqueThermoDetections;
+		const newDetections = activeTab === "rgb" ? uniqueRgbDetections : [];
 		if (JSON.stringify(detections) !== JSON.stringify(newDetections)) {
 			setDetections(newDetections);
 			setDetectionCount(newDetections.length);

@@ -21,10 +21,10 @@ import AnalysisModal from "../components/ui/Modals/AnalysisModal";
 const systemStatusText =
 	"Battery concluded at 62% capacity with 1.9 hours reserve remaining. WiFi connectivity maintained stable performance at -41 dBm throughout operation, with encrypted data transmission experiencing zero packet loss. All critical systems operated within normal parameters for mission duration.";
 const missionProgressText =
-	"Successfully completed 81% of designated 18km² patrol grid covering mixed terrain including agricultural zones, woodland sectors, and rural settlements. Navigation maintained precise waypoint execution at 165m operational altitude. Weather conditions remained favorable with 7km visibility and moderate crosswinds from southwest.";
+	"Successfully completed 81% of designated 18km² patrol grid covering mixed terrain including agricultural zones, woodland sectors, and rural settlements. Navigation maintained precise waypoint execution at 150m altitude. Weather conditions remained favorable with 7km visibility and moderate crosswinds from southwest.";
 
 const operationalSummaryText =
-	"Standard reconnaissance proceeded with systematic grid coverage. Sensor array collected multi-spectrum imagery totaling 8.1 GB transmitted data. Area assessment revealed expected forest and mixed terrain infrastructure patterns. Mission timeline concluded as scheduled. All safety protocols observed with no anomalies.";
+	"Standard reconnaissance proceeded with systematic grid coverage. Sensor array collected multi-spectrum imagery totaling 3.1 GB transmitted data. Area assessment revealed expected forest and mixed terrain infrastructure patterns. Mission timeline concluded as scheduled. All safety protocols observed with no anomalies.";
 
 const StoragePage: React.FC = () => {
 	const [originalRecords, setOriginalRecords] = useState<StorageData[]>([]);

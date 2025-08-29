@@ -5,8 +5,9 @@ import externalLinkIcon from "../../../assets/external-link.svg";
 import Button from "../Button";
 import VideoPlayer from "../VideoPlayer.tsx";
 import Tabs, { type TabItem } from "../Tabs";
-import RgbVideo from "../../../assets/videos/rgb_kuna.mp4";
-import ThermoVideo from "../../../assets/videos/thermo_kuna.mp4";
+import AerialVideo from "../../../assets/videos/aerial_video.mp4";
+// import RgbVideo from "../../../assets/videos/rgb_kuna.mp4";
+// import ThermoVideo from "../../../assets/videos/thermo_kuna.mp4";
 
 const keyEventsDEMO = [
 	{
@@ -70,19 +71,21 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 			id: "rgb",
 			label: "RGB",
 			// value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
-			value: RgbVideo,
+			value: AerialVideo,
 		},
 		{
 			id: "thermo",
 			label: "Thermo",
 			// value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
-			value: ThermoVideo,
+			value: undefined,
 		},
 	];
 
 	const getCurrentVideoSource = () => {
 		const currentTab = tabs.find((tab) => tab.id === activeTab);
-		return currentTab?.value || tabs[0].value;
+
+		return currentTab?.value;
+		//  || tabs[0].value;
 	};
 
 	const handleTabChange = (tabId: string) => {
@@ -182,7 +185,10 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 					</div>
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
 						<span className="font-bold">Drone: </span>
-						<span className="text-[#00C6B8] underline">{record.uav}</span>
+						{/* <span className="text-[#00C6B8] underline">{record.uav}</span> */}
+						<span className="text-[#00C6B8] underline">
+							{"Mavic Air 3 - Raven"}
+						</span>
 					</div>
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">

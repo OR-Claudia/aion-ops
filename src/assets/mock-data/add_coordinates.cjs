@@ -22,7 +22,7 @@ function generateRandomCoordinatesInRadius(center, radiusKm = 2) {
 }
 
 // Read the existing data file - replace with your actual data file path
-const dataPath = "./src/assets/mock-data/thermo_data.js";
+const dataPath = "./src/assets/mock-data/aerial-data.ts";
 let content = fs.readFileSync(dataPath, "utf8");
 
 // Find and replace each detection object to add coordinates
@@ -45,7 +45,7 @@ content = content.replace(
 );
 
 // Write the modified content to a new file
-const outputPath = "src/assets/mock-data/output.js";
+const outputPath = "src/assets/mock-data/output.ts";
 fs.writeFileSync(outputPath, content);
 
 console.log(
