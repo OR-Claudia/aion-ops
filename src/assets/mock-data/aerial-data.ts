@@ -17,7 +17,7 @@ export const aerialData = {
 			timestamp: 1.0,
 			frame_time: 1.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8116316795349121,
 			track_id: 1,
 			bbox: {
@@ -43,7 +43,7 @@ export const aerialData = {
 			timestamp: 1.0,
 			frame_time: 1.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7729223966598511,
 			track_id: 2,
 			bbox: {
@@ -69,7 +69,7 @@ export const aerialData = {
 			timestamp: 2.0,
 			frame_time: 2.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9001384377479553,
 			track_id: 1,
 			bbox: {
@@ -95,7 +95,7 @@ export const aerialData = {
 			timestamp: 2.0,
 			frame_time: 2.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8741550445556641,
 			track_id: 2,
 			bbox: {
@@ -121,7 +121,7 @@ export const aerialData = {
 			timestamp: 2.0,
 			frame_time: 2.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7919331192970276,
 			track_id: 3,
 			bbox: {
@@ -147,7 +147,7 @@ export const aerialData = {
 			timestamp: 2.0,
 			frame_time: 2.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7638171315193176,
 			track_id: 4,
 			bbox: {
@@ -173,7 +173,7 @@ export const aerialData = {
 			timestamp: 3.0,
 			frame_time: 3.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9105473756790161,
 			track_id: 1,
 			bbox: {
@@ -199,7 +199,7 @@ export const aerialData = {
 			timestamp: 3.0,
 			frame_time: 3.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8935137391090393,
 			track_id: 2,
 			bbox: {
@@ -225,7 +225,7 @@ export const aerialData = {
 			timestamp: 3.0,
 			frame_time: 3.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6805005073547363,
 			track_id: 4,
 			bbox: {
@@ -251,7 +251,7 @@ export const aerialData = {
 			timestamp: 4.0,
 			frame_time: 4.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9077826738357544,
 			track_id: 1,
 			bbox: {
@@ -277,7 +277,7 @@ export const aerialData = {
 			timestamp: 4.0,
 			frame_time: 4.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8891050219535828,
 			track_id: 2,
 			bbox: {
@@ -303,7 +303,7 @@ export const aerialData = {
 			timestamp: 4.0,
 			frame_time: 4.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6792320609092712,
 			track_id: 3,
 			bbox: {
@@ -329,7 +329,7 @@ export const aerialData = {
 			timestamp: 5.0,
 			frame_time: 5.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9135164022445679,
 			track_id: 1,
 			bbox: {
@@ -355,7 +355,7 @@ export const aerialData = {
 			timestamp: 5.0,
 			frame_time: 5.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8980339765548706,
 			track_id: 2,
 			bbox: {
@@ -407,7 +407,7 @@ export const aerialData = {
 			timestamp: 6.0,
 			frame_time: 6.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9117152094841003,
 			track_id: 1,
 			bbox: {
@@ -433,7 +433,7 @@ export const aerialData = {
 			timestamp: 6.0,
 			frame_time: 6.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9065027832984924,
 			track_id: 2,
 			bbox: {
@@ -459,7 +459,7 @@ export const aerialData = {
 			timestamp: 6.0,
 			frame_time: 6.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6996856331825256,
 			track_id: 3,
 			bbox: {
@@ -485,7 +485,7 @@ export const aerialData = {
 			timestamp: 6.0,
 			frame_time: 6.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7610787153244019,
 			track_id: 5,
 			bbox: {
@@ -511,7 +511,7 @@ export const aerialData = {
 			timestamp: 7.0,
 			frame_time: 7.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9015795588493347,
 			track_id: 1,
 			bbox: {
@@ -537,7 +537,7 @@ export const aerialData = {
 			timestamp: 7.0,
 			frame_time: 7.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9161359667778015,
 			track_id: 2,
 			bbox: {
@@ -563,7 +563,7 @@ export const aerialData = {
 			timestamp: 7.0,
 			frame_time: 7.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.540095865726471,
 			track_id: 3,
 			bbox: {
@@ -589,7 +589,7 @@ export const aerialData = {
 			timestamp: 7.0,
 			frame_time: 7.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.712145984172821,
 			track_id: 5,
 			bbox: {
@@ -615,7 +615,7 @@ export const aerialData = {
 			timestamp: 8.0,
 			frame_time: 8.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9073290228843689,
 			track_id: 1,
 			bbox: {
@@ -641,7 +641,7 @@ export const aerialData = {
 			timestamp: 8.0,
 			frame_time: 8.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8966339826583862,
 			track_id: 2,
 			bbox: {
@@ -667,7 +667,7 @@ export const aerialData = {
 			timestamp: 8.0,
 			frame_time: 8.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6530121564865112,
 			track_id: 5,
 			bbox: {
@@ -693,7 +693,7 @@ export const aerialData = {
 			timestamp: 8.0,
 			frame_time: 8.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6776162981987,
 			track_id: 3,
 			bbox: {
@@ -719,7 +719,7 @@ export const aerialData = {
 			timestamp: 9.0,
 			frame_time: 9.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8974595069885254,
 			track_id: 1,
 			bbox: {
@@ -745,7 +745,7 @@ export const aerialData = {
 			timestamp: 9.0,
 			frame_time: 9.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9140622615814209,
 			track_id: 2,
 			bbox: {
@@ -771,7 +771,7 @@ export const aerialData = {
 			timestamp: 9.0,
 			frame_time: 9.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6960158348083496,
 			track_id: 5,
 			bbox: {
@@ -797,7 +797,7 @@ export const aerialData = {
 			timestamp: 9.0,
 			frame_time: 9.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6581072807312012,
 			track_id: 3,
 			bbox: {
@@ -823,7 +823,7 @@ export const aerialData = {
 			timestamp: 10.0,
 			frame_time: 10.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9198039174079895,
 			track_id: 1,
 			bbox: {
@@ -849,7 +849,7 @@ export const aerialData = {
 			timestamp: 10.0,
 			frame_time: 10.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.887883722782135,
 			track_id: 2,
 			bbox: {
@@ -927,7 +927,7 @@ export const aerialData = {
 			timestamp: 11.0,
 			frame_time: 11.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.914565920829773,
 			track_id: 1,
 			bbox: {
@@ -953,7 +953,7 @@ export const aerialData = {
 			timestamp: 11.0,
 			frame_time: 11.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8964086174964905,
 			track_id: 2,
 			bbox: {
@@ -1031,7 +1031,7 @@ export const aerialData = {
 			timestamp: 12.0,
 			frame_time: 12.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8992646932601929,
 			track_id: 1,
 			bbox: {
@@ -1057,7 +1057,7 @@ export const aerialData = {
 			timestamp: 12.0,
 			frame_time: 12.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9170371890068054,
 			track_id: 2,
 			bbox: {
@@ -1109,7 +1109,7 @@ export const aerialData = {
 			timestamp: 12.0,
 			frame_time: 12.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5577681660652161,
 			track_id: 3,
 			bbox: {
@@ -1135,7 +1135,7 @@ export const aerialData = {
 			timestamp: 12.0,
 			frame_time: 12.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.5189128518104553,
 			track_id: 7,
 			bbox: {
@@ -1161,7 +1161,7 @@ export const aerialData = {
 			timestamp: 13.0,
 			frame_time: 13.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8964394927024841,
 			track_id: 1,
 			bbox: {
@@ -1187,7 +1187,7 @@ export const aerialData = {
 			timestamp: 13.0,
 			frame_time: 13.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9214195013046265,
 			track_id: 2,
 			bbox: {
@@ -1239,7 +1239,7 @@ export const aerialData = {
 			timestamp: 13.0,
 			frame_time: 13.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5927373170852661,
 			track_id: 3,
 			bbox: {
@@ -1265,7 +1265,7 @@ export const aerialData = {
 			timestamp: 13.0,
 			frame_time: 13.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.5898710489273071,
 			track_id: 7,
 			bbox: {
@@ -1291,7 +1291,7 @@ export const aerialData = {
 			timestamp: 13.0,
 			frame_time: 13.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7374034523963928,
 			track_id: 8,
 			bbox: {
@@ -1317,7 +1317,7 @@ export const aerialData = {
 			timestamp: 13.0,
 			frame_time: 13.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6854862570762634,
 			track_id: 9,
 			bbox: {
@@ -1343,7 +1343,7 @@ export const aerialData = {
 			timestamp: 14.0,
 			frame_time: 14.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.917854905128479,
 			track_id: 1,
 			bbox: {
@@ -1369,7 +1369,7 @@ export const aerialData = {
 			timestamp: 14.0,
 			frame_time: 14.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9017643928527832,
 			track_id: 2,
 			bbox: {
@@ -1421,7 +1421,7 @@ export const aerialData = {
 			timestamp: 14.0,
 			frame_time: 14.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.691911518573761,
 			track_id: 8,
 			bbox: {
@@ -1447,7 +1447,7 @@ export const aerialData = {
 			timestamp: 14.0,
 			frame_time: 14.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7588594555854797,
 			track_id: 10,
 			bbox: {
@@ -1473,7 +1473,7 @@ export const aerialData = {
 			timestamp: 14.0,
 			frame_time: 14.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5684483647346497,
 			track_id: 3,
 			bbox: {
@@ -1499,7 +1499,7 @@ export const aerialData = {
 			timestamp: 15.0,
 			frame_time: 15.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9100932478904724,
 			track_id: 1,
 			bbox: {
@@ -1525,7 +1525,7 @@ export const aerialData = {
 			timestamp: 15.0,
 			frame_time: 15.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6683046221733093,
 			track_id: 2,
 			bbox: {
@@ -1577,7 +1577,7 @@ export const aerialData = {
 			timestamp: 15.0,
 			frame_time: 15.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8042784929275513,
 			track_id: 10,
 			bbox: {
@@ -1603,7 +1603,7 @@ export const aerialData = {
 			timestamp: 16.0,
 			frame_time: 16.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7646004557609558,
 			track_id: 1,
 			bbox: {
@@ -1629,7 +1629,7 @@ export const aerialData = {
 			timestamp: 16.0,
 			frame_time: 16.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8380904197692871,
 			track_id: 2,
 			bbox: {
@@ -1681,7 +1681,7 @@ export const aerialData = {
 			timestamp: 16.0,
 			frame_time: 16.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8204373717308044,
 			track_id: 10,
 			bbox: {
@@ -1707,7 +1707,7 @@ export const aerialData = {
 			timestamp: 17.0,
 			frame_time: 17.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8929062485694885,
 			track_id: 1,
 			bbox: {
@@ -1733,7 +1733,7 @@ export const aerialData = {
 			timestamp: 17.0,
 			frame_time: 17.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8442227244377136,
 			track_id: 2,
 			bbox: {
@@ -1785,7 +1785,7 @@ export const aerialData = {
 			timestamp: 17.0,
 			frame_time: 17.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7892689108848572,
 			track_id: 10,
 			bbox: {
@@ -1811,7 +1811,7 @@ export const aerialData = {
 			timestamp: 17.0,
 			frame_time: 17.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8083528280258179,
 			track_id: 12,
 			bbox: {
@@ -1837,7 +1837,7 @@ export const aerialData = {
 			timestamp: 17.0,
 			frame_time: 17.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.788544237613678,
 			track_id: 13,
 			bbox: {
@@ -1863,7 +1863,7 @@ export const aerialData = {
 			timestamp: 17.0,
 			frame_time: 17.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7938627600669861,
 			track_id: 14,
 			bbox: {
@@ -1889,7 +1889,7 @@ export const aerialData = {
 			timestamp: 18.0,
 			frame_time: 18.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8602951169013977,
 			track_id: 1,
 			bbox: {
@@ -1915,7 +1915,7 @@ export const aerialData = {
 			timestamp: 18.0,
 			frame_time: 18.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6627346873283386,
 			track_id: 2,
 			bbox: {
@@ -1941,7 +1941,7 @@ export const aerialData = {
 			timestamp: 18.0,
 			frame_time: 18.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7652469277381897,
 			track_id: 12,
 			bbox: {
@@ -2019,7 +2019,7 @@ export const aerialData = {
 			timestamp: 19.0,
 			frame_time: 19.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8881640434265137,
 			track_id: 1,
 			bbox: {
@@ -2045,7 +2045,7 @@ export const aerialData = {
 			timestamp: 19.0,
 			frame_time: 19.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8265746235847473,
 			track_id: 2,
 			bbox: {
@@ -2071,7 +2071,7 @@ export const aerialData = {
 			timestamp: 19.0,
 			frame_time: 19.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7931491732597351,
 			track_id: 12,
 			bbox: {
@@ -2097,7 +2097,7 @@ export const aerialData = {
 			timestamp: 19.0,
 			frame_time: 19.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8312650918960571,
 			track_id: 10,
 			bbox: {
@@ -2123,7 +2123,7 @@ export const aerialData = {
 			timestamp: 19.0,
 			frame_time: 19.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7069810032844543,
 			track_id: 13,
 			bbox: {
@@ -2149,7 +2149,7 @@ export const aerialData = {
 			timestamp: 20.0,
 			frame_time: 20.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8188918828964233,
 			track_id: 1,
 			bbox: {
@@ -2175,7 +2175,7 @@ export const aerialData = {
 			timestamp: 20.0,
 			frame_time: 20.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8679450154304504,
 			track_id: 2,
 			bbox: {
@@ -2201,7 +2201,7 @@ export const aerialData = {
 			timestamp: 20.0,
 			frame_time: 20.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7166311740875244,
 			track_id: 12,
 			bbox: {
@@ -2227,7 +2227,7 @@ export const aerialData = {
 			timestamp: 20.0,
 			frame_time: 20.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.795684814453125,
 			track_id: 10,
 			bbox: {
@@ -2253,7 +2253,7 @@ export const aerialData = {
 			timestamp: 20.0,
 			frame_time: 20.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.537410318851471,
 			track_id: 15,
 			bbox: {
@@ -2279,7 +2279,7 @@ export const aerialData = {
 			timestamp: 20.0,
 			frame_time: 20.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5073882937431335,
 			track_id: 5,
 			bbox: {
@@ -2305,7 +2305,7 @@ export const aerialData = {
 			timestamp: 21.0,
 			frame_time: 21.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.926825225353241,
 			track_id: 1,
 			bbox: {
@@ -2331,7 +2331,7 @@ export const aerialData = {
 			timestamp: 21.0,
 			frame_time: 21.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6859408617019653,
 			track_id: 2,
 			bbox: {
@@ -2357,7 +2357,7 @@ export const aerialData = {
 			timestamp: 21.0,
 			frame_time: 21.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6745807528495789,
 			track_id: 10,
 			bbox: {
@@ -2383,7 +2383,7 @@ export const aerialData = {
 			timestamp: 22.0,
 			frame_time: 22.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9359244108200073,
 			track_id: 1,
 			bbox: {
@@ -2409,7 +2409,7 @@ export const aerialData = {
 			timestamp: 22.0,
 			frame_time: 22.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6991904377937317,
 			track_id: 2,
 			bbox: {
@@ -2461,7 +2461,7 @@ export const aerialData = {
 			timestamp: 22.0,
 			frame_time: 22.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8407256007194519,
 			track_id: 18,
 			bbox: {
@@ -2513,7 +2513,7 @@ export const aerialData = {
 			timestamp: 23.0,
 			frame_time: 23.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9158158898353577,
 			track_id: 1,
 			bbox: {
@@ -2539,7 +2539,7 @@ export const aerialData = {
 			timestamp: 23.0,
 			frame_time: 23.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7867388725280762,
 			track_id: 2,
 			bbox: {
@@ -2565,7 +2565,7 @@ export const aerialData = {
 			timestamp: 23.0,
 			frame_time: 23.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.818046510219574,
 			track_id: 18,
 			bbox: {
@@ -2643,7 +2643,7 @@ export const aerialData = {
 			timestamp: 23.0,
 			frame_time: 23.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.5584409236907959,
 			track_id: 22,
 			bbox: {
@@ -2669,7 +2669,7 @@ export const aerialData = {
 			timestamp: 23.0,
 			frame_time: 23.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8279175758361816,
 			track_id: 24,
 			bbox: {
@@ -2695,7 +2695,7 @@ export const aerialData = {
 			timestamp: 24.0,
 			frame_time: 24.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8681864142417908,
 			track_id: 1,
 			bbox: {
@@ -2721,7 +2721,7 @@ export const aerialData = {
 			timestamp: 24.0,
 			frame_time: 24.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5372791886329651,
 			track_id: 2,
 			bbox: {
@@ -2747,7 +2747,7 @@ export const aerialData = {
 			timestamp: 24.0,
 			frame_time: 24.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8322732448577881,
 			track_id: 22,
 			bbox: {
@@ -2773,7 +2773,7 @@ export const aerialData = {
 			timestamp: 24.0,
 			frame_time: 24.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7597377300262451,
 			track_id: 26,
 			bbox: {
@@ -2799,7 +2799,7 @@ export const aerialData = {
 			timestamp: 24.0,
 			frame_time: 24.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6388577222824097,
 			track_id: 5,
 			bbox: {
@@ -2825,7 +2825,7 @@ export const aerialData = {
 			timestamp: 24.0,
 			frame_time: 24.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7902522087097168,
 			track_id: 27,
 			bbox: {
@@ -2851,7 +2851,7 @@ export const aerialData = {
 			timestamp: 24.0,
 			frame_time: 24.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.5943775773048401,
 			track_id: 18,
 			bbox: {
@@ -2877,7 +2877,7 @@ export const aerialData = {
 			timestamp: 25.0,
 			frame_time: 25.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.577214241027832,
 			track_id: 2,
 			bbox: {
@@ -2903,7 +2903,7 @@ export const aerialData = {
 			timestamp: 25.0,
 			frame_time: 25.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8266377449035645,
 			track_id: 22,
 			bbox: {
@@ -2929,7 +2929,7 @@ export const aerialData = {
 			timestamp: 25.0,
 			frame_time: 25.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7969661355018616,
 			track_id: 26,
 			bbox: {
@@ -2981,7 +2981,7 @@ export const aerialData = {
 			timestamp: 25.0,
 			frame_time: 25.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8105644583702087,
 			track_id: 1,
 			bbox: {
@@ -3007,7 +3007,7 @@ export const aerialData = {
 			timestamp: 25.0,
 			frame_time: 25.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8838608264923096,
 			track_id: 27,
 			bbox: {
@@ -3033,7 +3033,7 @@ export const aerialData = {
 			timestamp: 26.0,
 			frame_time: 26.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.4811193346977234,
 			track_id: 2,
 			bbox: {
@@ -3059,7 +3059,7 @@ export const aerialData = {
 			timestamp: 26.0,
 			frame_time: 26.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8616230487823486,
 			track_id: 22,
 			bbox: {
@@ -3085,7 +3085,7 @@ export const aerialData = {
 			timestamp: 26.0,
 			frame_time: 26.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8343542218208313,
 			track_id: 26,
 			bbox: {
@@ -3137,7 +3137,7 @@ export const aerialData = {
 			timestamp: 26.0,
 			frame_time: 26.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8312126398086548,
 			track_id: 1,
 			bbox: {
@@ -3163,7 +3163,7 @@ export const aerialData = {
 			timestamp: 26.0,
 			frame_time: 26.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7815210819244385,
 			track_id: 27,
 			bbox: {
@@ -3189,7 +3189,7 @@ export const aerialData = {
 			timestamp: 26.0,
 			frame_time: 26.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8395560383796692,
 			track_id: 28,
 			bbox: {
@@ -3215,7 +3215,7 @@ export const aerialData = {
 			timestamp: 27.0,
 			frame_time: 27.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8574302792549133,
 			track_id: 2,
 			bbox: {
@@ -3241,7 +3241,7 @@ export const aerialData = {
 			timestamp: 27.0,
 			frame_time: 27.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7251645922660828,
 			track_id: 22,
 			bbox: {
@@ -3267,7 +3267,7 @@ export const aerialData = {
 			timestamp: 27.0,
 			frame_time: 27.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6748971939086914,
 			track_id: 5,
 			bbox: {
@@ -3293,7 +3293,7 @@ export const aerialData = {
 			timestamp: 27.0,
 			frame_time: 27.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8322637677192688,
 			track_id: 1,
 			bbox: {
@@ -3319,7 +3319,7 @@ export const aerialData = {
 			timestamp: 27.0,
 			frame_time: 27.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6699506044387817,
 			track_id: 27,
 			bbox: {
@@ -3345,7 +3345,7 @@ export const aerialData = {
 			timestamp: 27.0,
 			frame_time: 27.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7555607557296753,
 			track_id: 28,
 			bbox: {
@@ -3371,7 +3371,7 @@ export const aerialData = {
 			timestamp: 27.0,
 			frame_time: 27.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6516246795654297,
 			track_id: 26,
 			bbox: {
@@ -3397,7 +3397,7 @@ export const aerialData = {
 			timestamp: 28.0,
 			frame_time: 28.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7528730630874634,
 			track_id: 2,
 			bbox: {
@@ -3449,7 +3449,7 @@ export const aerialData = {
 			timestamp: 28.0,
 			frame_time: 28.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8703172206878662,
 			track_id: 1,
 			bbox: {
@@ -3475,7 +3475,7 @@ export const aerialData = {
 			timestamp: 28.0,
 			frame_time: 28.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6429268717765808,
 			track_id: 27,
 			bbox: {
@@ -3501,7 +3501,7 @@ export const aerialData = {
 			timestamp: 28.0,
 			frame_time: 28.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.677005410194397,
 			track_id: 22,
 			bbox: {
@@ -3527,7 +3527,7 @@ export const aerialData = {
 			timestamp: 29.0,
 			frame_time: 29.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6123055815696716,
 			track_id: 2,
 			bbox: {
@@ -3579,7 +3579,7 @@ export const aerialData = {
 			timestamp: 29.0,
 			frame_time: 29.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8415747880935669,
 			track_id: 1,
 			bbox: {
@@ -3605,7 +3605,7 @@ export const aerialData = {
 			timestamp: 29.0,
 			frame_time: 29.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8145872950553894,
 			track_id: 27,
 			bbox: {
@@ -3631,7 +3631,7 @@ export const aerialData = {
 			timestamp: 29.0,
 			frame_time: 29.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8458541631698608,
 			track_id: 22,
 			bbox: {
@@ -3709,7 +3709,7 @@ export const aerialData = {
 			timestamp: 30.0,
 			frame_time: 30.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7191064953804016,
 			track_id: 1,
 			bbox: {
@@ -3735,7 +3735,7 @@ export const aerialData = {
 			timestamp: 30.0,
 			frame_time: 30.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.750080406665802,
 			track_id: 27,
 			bbox: {
@@ -3761,7 +3761,7 @@ export const aerialData = {
 			timestamp: 30.0,
 			frame_time: 30.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8127168416976929,
 			track_id: 22,
 			bbox: {
@@ -3787,7 +3787,7 @@ export const aerialData = {
 			timestamp: 30.0,
 			frame_time: 30.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8517884016036987,
 			track_id: 29,
 			bbox: {
@@ -3813,7 +3813,7 @@ export const aerialData = {
 			timestamp: 31.0,
 			frame_time: 31.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7509603500366211,
 			track_id: 2,
 			bbox: {
@@ -3865,7 +3865,7 @@ export const aerialData = {
 			timestamp: 31.0,
 			frame_time: 31.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.923809826374054,
 			track_id: 1,
 			bbox: {
@@ -3891,7 +3891,7 @@ export const aerialData = {
 			timestamp: 31.0,
 			frame_time: 31.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8563296794891357,
 			track_id: 29,
 			bbox: {
@@ -3917,7 +3917,7 @@ export const aerialData = {
 			timestamp: 31.0,
 			frame_time: 31.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7385350465774536,
 			track_id: 22,
 			bbox: {
@@ -3943,7 +3943,7 @@ export const aerialData = {
 			timestamp: 31.0,
 			frame_time: 31.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7404048442840576,
 			track_id: 27,
 			bbox: {
@@ -3969,7 +3969,7 @@ export const aerialData = {
 			timestamp: 32.0,
 			frame_time: 32.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8820412158966064,
 			track_id: 2,
 			bbox: {
@@ -4047,7 +4047,7 @@ export const aerialData = {
 			timestamp: 32.0,
 			frame_time: 32.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7964076399803162,
 			track_id: 29,
 			bbox: {
@@ -4073,7 +4073,7 @@ export const aerialData = {
 			timestamp: 32.0,
 			frame_time: 32.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7097197771072388,
 			track_id: 27,
 			bbox: {
@@ -4125,7 +4125,7 @@ export const aerialData = {
 			timestamp: 33.0,
 			frame_time: 33.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6222607493400574,
 			track_id: 2,
 			bbox: {
@@ -4151,7 +4151,7 @@ export const aerialData = {
 			timestamp: 33.0,
 			frame_time: 33.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8364132642745972,
 			track_id: 1,
 			bbox: {
@@ -4203,7 +4203,7 @@ export const aerialData = {
 			timestamp: 33.0,
 			frame_time: 33.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.5815780162811279,
 			track_id: 32,
 			bbox: {
@@ -4255,7 +4255,7 @@ export const aerialData = {
 			timestamp: 34.0,
 			frame_time: 34.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9059714674949646,
 			track_id: 1,
 			bbox: {
@@ -4307,7 +4307,7 @@ export const aerialData = {
 			timestamp: 34.0,
 			frame_time: 34.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8223140239715576,
 			track_id: 32,
 			bbox: {
@@ -4333,7 +4333,7 @@ export const aerialData = {
 			timestamp: 34.0,
 			frame_time: 34.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7881031036376953,
 			track_id: 33,
 			bbox: {
@@ -4359,7 +4359,7 @@ export const aerialData = {
 			timestamp: 35.0,
 			frame_time: 35.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7358889579772949,
 			track_id: 2,
 			bbox: {
@@ -4385,7 +4385,7 @@ export const aerialData = {
 			timestamp: 35.0,
 			frame_time: 35.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9113587737083435,
 			track_id: 1,
 			bbox: {
@@ -4437,7 +4437,7 @@ export const aerialData = {
 			timestamp: 35.0,
 			frame_time: 35.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7743628621101379,
 			track_id: 32,
 			bbox: {
@@ -4463,7 +4463,7 @@ export const aerialData = {
 			timestamp: 35.0,
 			frame_time: 35.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8276998996734619,
 			track_id: 33,
 			bbox: {
@@ -4489,7 +4489,7 @@ export const aerialData = {
 			timestamp: 35.0,
 			frame_time: 35.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7440496683120728,
 			track_id: 34,
 			bbox: {
@@ -4515,7 +4515,7 @@ export const aerialData = {
 			timestamp: 36.0,
 			frame_time: 36.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5407270193099976,
 			track_id: 2,
 			bbox: {
@@ -4541,7 +4541,7 @@ export const aerialData = {
 			timestamp: 36.0,
 			frame_time: 36.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8286077976226807,
 			track_id: 1,
 			bbox: {
@@ -4567,7 +4567,7 @@ export const aerialData = {
 			timestamp: 36.0,
 			frame_time: 36.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8179594874382019,
 			track_id: 33,
 			bbox: {
@@ -4619,7 +4619,7 @@ export const aerialData = {
 			timestamp: 36.0,
 			frame_time: 36.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7981187701225281,
 			track_id: 27,
 			bbox: {
@@ -4671,7 +4671,7 @@ export const aerialData = {
 			timestamp: 37.0,
 			frame_time: 37.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9097283482551575,
 			track_id: 1,
 			bbox: {
@@ -4697,7 +4697,7 @@ export const aerialData = {
 			timestamp: 37.0,
 			frame_time: 37.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8280498385429382,
 			track_id: 33,
 			bbox: {
@@ -4775,7 +4775,7 @@ export const aerialData = {
 			timestamp: 38.0,
 			frame_time: 38.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5688656568527222,
 			track_id: 2,
 			bbox: {
@@ -4801,7 +4801,7 @@ export const aerialData = {
 			timestamp: 38.0,
 			frame_time: 38.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.905671238899231,
 			track_id: 1,
 			bbox: {
@@ -4827,7 +4827,7 @@ export const aerialData = {
 			timestamp: 38.0,
 			frame_time: 38.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6916049718856812,
 			track_id: 33,
 			bbox: {
@@ -4879,7 +4879,7 @@ export const aerialData = {
 			timestamp: 38.0,
 			frame_time: 38.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6917956471443176,
 			track_id: 27,
 			bbox: {
@@ -4931,7 +4931,7 @@ export const aerialData = {
 			timestamp: 39.0,
 			frame_time: 39.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7907087206840515,
 			track_id: 1,
 			bbox: {
@@ -4957,7 +4957,7 @@ export const aerialData = {
 			timestamp: 39.0,
 			frame_time: 39.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8601225018501282,
 			track_id: 33,
 			bbox: {
@@ -5009,7 +5009,7 @@ export const aerialData = {
 			timestamp: 39.0,
 			frame_time: 39.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7443344593048096,
 			track_id: 27,
 			bbox: {
@@ -5035,7 +5035,7 @@ export const aerialData = {
 			timestamp: 39.0,
 			frame_time: 39.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8627619743347168,
 			track_id: 36,
 			bbox: {
@@ -5087,7 +5087,7 @@ export const aerialData = {
 			timestamp: 40.0,
 			frame_time: 40.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8509220480918884,
 			track_id: 33,
 			bbox: {
@@ -5139,7 +5139,7 @@ export const aerialData = {
 			timestamp: 40.0,
 			frame_time: 40.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8069877028465271,
 			track_id: 27,
 			bbox: {
@@ -5165,7 +5165,7 @@ export const aerialData = {
 			timestamp: 40.0,
 			frame_time: 40.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8709240555763245,
 			track_id: 36,
 			bbox: {
@@ -5191,7 +5191,7 @@ export const aerialData = {
 			timestamp: 40.0,
 			frame_time: 40.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7047487497329712,
 			track_id: 37,
 			bbox: {
@@ -5217,7 +5217,7 @@ export const aerialData = {
 			timestamp: 40.0,
 			frame_time: 40.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7850737571716309,
 			track_id: 38,
 			bbox: {
@@ -5243,7 +5243,7 @@ export const aerialData = {
 			timestamp: 41.0,
 			frame_time: 41.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8469250798225403,
 			track_id: 33,
 			bbox: {
@@ -5269,7 +5269,7 @@ export const aerialData = {
 			timestamp: 41.0,
 			frame_time: 41.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8362957239151001,
 			track_id: 27,
 			bbox: {
@@ -5295,7 +5295,7 @@ export const aerialData = {
 			timestamp: 41.0,
 			frame_time: 41.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8489579558372498,
 			track_id: 36,
 			bbox: {
@@ -5321,7 +5321,7 @@ export const aerialData = {
 			timestamp: 41.0,
 			frame_time: 41.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6859033107757568,
 			track_id: 37,
 			bbox: {
@@ -5347,7 +5347,7 @@ export const aerialData = {
 			timestamp: 41.0,
 			frame_time: 41.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8091357946395874,
 			track_id: 38,
 			bbox: {
@@ -5399,7 +5399,7 @@ export const aerialData = {
 			timestamp: 42.0,
 			frame_time: 42.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7646474838256836,
 			track_id: 33,
 			bbox: {
@@ -5425,7 +5425,7 @@ export const aerialData = {
 			timestamp: 42.0,
 			frame_time: 42.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8279039859771729,
 			track_id: 36,
 			bbox: {
@@ -5451,7 +5451,7 @@ export const aerialData = {
 			timestamp: 42.0,
 			frame_time: 42.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8394997715950012,
 			track_id: 38,
 			bbox: {
@@ -5477,7 +5477,7 @@ export const aerialData = {
 			timestamp: 42.0,
 			frame_time: 42.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.495215505361557,
 			track_id: 5,
 			bbox: {
@@ -5503,7 +5503,7 @@ export const aerialData = {
 			timestamp: 42.0,
 			frame_time: 42.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8027637004852295,
 			track_id: 43,
 			bbox: {
@@ -5529,7 +5529,7 @@ export const aerialData = {
 			timestamp: 42.0,
 			frame_time: 42.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6404256820678711,
 			track_id: 44,
 			bbox: {
@@ -5555,7 +5555,7 @@ export const aerialData = {
 			timestamp: 43.0,
 			frame_time: 43.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.746142566204071,
 			track_id: 33,
 			bbox: {
@@ -5581,7 +5581,7 @@ export const aerialData = {
 			timestamp: 43.0,
 			frame_time: 43.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8332518339157104,
 			track_id: 36,
 			bbox: {
@@ -5607,7 +5607,7 @@ export const aerialData = {
 			timestamp: 43.0,
 			frame_time: 43.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.796133279800415,
 			track_id: 38,
 			bbox: {
@@ -5659,7 +5659,7 @@ export const aerialData = {
 			timestamp: 43.0,
 			frame_time: 43.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8216954469680786,
 			track_id: 44,
 			bbox: {
@@ -5685,7 +5685,7 @@ export const aerialData = {
 			timestamp: 43.0,
 			frame_time: 43.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8523884415626526,
 			track_id: 46,
 			bbox: {
@@ -5737,7 +5737,7 @@ export const aerialData = {
 			timestamp: 43.0,
 			frame_time: 43.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8045527338981628,
 			track_id: 43,
 			bbox: {
@@ -5763,7 +5763,7 @@ export const aerialData = {
 			timestamp: 44.0,
 			frame_time: 44.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.792080819606781,
 			track_id: 33,
 			bbox: {
@@ -5789,7 +5789,7 @@ export const aerialData = {
 			timestamp: 44.0,
 			frame_time: 44.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8610828518867493,
 			track_id: 36,
 			bbox: {
@@ -5815,7 +5815,7 @@ export const aerialData = {
 			timestamp: 44.0,
 			frame_time: 44.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8198727965354919,
 			track_id: 38,
 			bbox: {
@@ -5867,7 +5867,7 @@ export const aerialData = {
 			timestamp: 44.0,
 			frame_time: 44.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8571398258209229,
 			track_id: 44,
 			bbox: {
@@ -5893,7 +5893,7 @@ export const aerialData = {
 			timestamp: 44.0,
 			frame_time: 44.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5371621251106262,
 			track_id: 45,
 			bbox: {
@@ -5919,7 +5919,7 @@ export const aerialData = {
 			timestamp: 44.0,
 			frame_time: 44.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8271009922027588,
 			track_id: 43,
 			bbox: {
@@ -5945,7 +5945,7 @@ export const aerialData = {
 			timestamp: 44.0,
 			frame_time: 44.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8284160494804382,
 			track_id: 46,
 			bbox: {
@@ -5971,7 +5971,7 @@ export const aerialData = {
 			timestamp: 45.0,
 			frame_time: 45.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7460702061653137,
 			track_id: 33,
 			bbox: {
@@ -5997,7 +5997,7 @@ export const aerialData = {
 			timestamp: 45.0,
 			frame_time: 45.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8619459271430969,
 			track_id: 36,
 			bbox: {
@@ -6023,7 +6023,7 @@ export const aerialData = {
 			timestamp: 45.0,
 			frame_time: 45.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8125180006027222,
 			track_id: 38,
 			bbox: {
@@ -6075,7 +6075,7 @@ export const aerialData = {
 			timestamp: 45.0,
 			frame_time: 45.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8411510586738586,
 			track_id: 44,
 			bbox: {
@@ -6101,7 +6101,7 @@ export const aerialData = {
 			timestamp: 45.0,
 			frame_time: 45.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7498330473899841,
 			track_id: 45,
 			bbox: {
@@ -6127,7 +6127,7 @@ export const aerialData = {
 			timestamp: 45.0,
 			frame_time: 45.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.49844440817832947,
 			track_id: 43,
 			bbox: {
@@ -6153,7 +6153,7 @@ export const aerialData = {
 			timestamp: 45.0,
 			frame_time: 45.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8565104007720947,
 			track_id: 46,
 			bbox: {
@@ -6179,7 +6179,7 @@ export const aerialData = {
 			timestamp: 46.0,
 			frame_time: 46.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8362298607826233,
 			track_id: 33,
 			bbox: {
@@ -6205,7 +6205,7 @@ export const aerialData = {
 			timestamp: 46.0,
 			frame_time: 46.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7678452730178833,
 			track_id: 36,
 			bbox: {
@@ -6231,7 +6231,7 @@ export const aerialData = {
 			timestamp: 46.0,
 			frame_time: 46.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.5516043901443481,
 			track_id: 38,
 			bbox: {
@@ -6283,7 +6283,7 @@ export const aerialData = {
 			timestamp: 46.0,
 			frame_time: 46.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8508745431900024,
 			track_id: 44,
 			bbox: {
@@ -6335,7 +6335,7 @@ export const aerialData = {
 			timestamp: 46.0,
 			frame_time: 46.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.766048789024353,
 			track_id: 43,
 			bbox: {
@@ -6361,7 +6361,7 @@ export const aerialData = {
 			timestamp: 46.0,
 			frame_time: 46.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8517284393310547,
 			track_id: 46,
 			bbox: {
@@ -6387,7 +6387,7 @@ export const aerialData = {
 			timestamp: 47.0,
 			frame_time: 47.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8343396782875061,
 			track_id: 33,
 			bbox: {
@@ -6413,7 +6413,7 @@ export const aerialData = {
 			timestamp: 47.0,
 			frame_time: 47.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7549668550491333,
 			track_id: 36,
 			bbox: {
@@ -6439,7 +6439,7 @@ export const aerialData = {
 			timestamp: 47.0,
 			frame_time: 47.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6232917904853821,
 			track_id: 5,
 			bbox: {
@@ -6465,7 +6465,7 @@ export const aerialData = {
 			timestamp: 47.0,
 			frame_time: 47.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.870841920375824,
 			track_id: 44,
 			bbox: {
@@ -6517,7 +6517,7 @@ export const aerialData = {
 			timestamp: 47.0,
 			frame_time: 47.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7995851039886475,
 			track_id: 43,
 			bbox: {
@@ -6543,7 +6543,7 @@ export const aerialData = {
 			timestamp: 47.0,
 			frame_time: 47.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8338397741317749,
 			track_id: 46,
 			bbox: {
@@ -6569,7 +6569,7 @@ export const aerialData = {
 			timestamp: 48.0,
 			frame_time: 48.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7861999273300171,
 			track_id: 33,
 			bbox: {
@@ -6621,7 +6621,7 @@ export const aerialData = {
 			timestamp: 48.0,
 			frame_time: 48.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8382983803749084,
 			track_id: 44,
 			bbox: {
@@ -6647,7 +6647,7 @@ export const aerialData = {
 			timestamp: 48.0,
 			frame_time: 48.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.714847981929779,
 			track_id: 45,
 			bbox: {
@@ -6673,7 +6673,7 @@ export const aerialData = {
 			timestamp: 48.0,
 			frame_time: 48.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.82719486951828,
 			track_id: 43,
 			bbox: {
@@ -6699,7 +6699,7 @@ export const aerialData = {
 			timestamp: 48.0,
 			frame_time: 48.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8676741123199463,
 			track_id: 46,
 			bbox: {
@@ -6725,7 +6725,7 @@ export const aerialData = {
 			timestamp: 48.0,
 			frame_time: 48.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8072391152381897,
 			track_id: 47,
 			bbox: {
@@ -6751,7 +6751,7 @@ export const aerialData = {
 			timestamp: 48.0,
 			frame_time: 48.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8879336714744568,
 			track_id: 48,
 			bbox: {
@@ -6777,7 +6777,7 @@ export const aerialData = {
 			timestamp: 49.0,
 			frame_time: 49.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7937709093093872,
 			track_id: 33,
 			bbox: {
@@ -6829,7 +6829,7 @@ export const aerialData = {
 			timestamp: 49.0,
 			frame_time: 49.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8567741513252258,
 			track_id: 44,
 			bbox: {
@@ -6855,7 +6855,7 @@ export const aerialData = {
 			timestamp: 49.0,
 			frame_time: 49.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6014801859855652,
 			track_id: 45,
 			bbox: {
@@ -6881,7 +6881,7 @@ export const aerialData = {
 			timestamp: 49.0,
 			frame_time: 49.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8564903736114502,
 			track_id: 43,
 			bbox: {
@@ -6907,7 +6907,7 @@ export const aerialData = {
 			timestamp: 49.0,
 			frame_time: 49.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8652033805847168,
 			track_id: 46,
 			bbox: {
@@ -6933,7 +6933,7 @@ export const aerialData = {
 			timestamp: 49.0,
 			frame_time: 49.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.860230565071106,
 			track_id: 47,
 			bbox: {
@@ -6959,7 +6959,7 @@ export const aerialData = {
 			timestamp: 49.0,
 			frame_time: 49.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7698630094528198,
 			track_id: 49,
 			bbox: {
@@ -6985,7 +6985,7 @@ export const aerialData = {
 			timestamp: 49.0,
 			frame_time: 49.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8196306824684143,
 			track_id: 48,
 			bbox: {
@@ -7011,7 +7011,7 @@ export const aerialData = {
 			timestamp: 50.0,
 			frame_time: 50.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7802560925483704,
 			track_id: 33,
 			bbox: {
@@ -7063,7 +7063,7 @@ export const aerialData = {
 			timestamp: 50.0,
 			frame_time: 50.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8555234670639038,
 			track_id: 44,
 			bbox: {
@@ -7089,7 +7089,7 @@ export const aerialData = {
 			timestamp: 50.0,
 			frame_time: 50.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5906659960746765,
 			track_id: 45,
 			bbox: {
@@ -7115,7 +7115,7 @@ export const aerialData = {
 			timestamp: 50.0,
 			frame_time: 50.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.83266282081604,
 			track_id: 43,
 			bbox: {
@@ -7141,7 +7141,7 @@ export const aerialData = {
 			timestamp: 50.0,
 			frame_time: 50.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8158685564994812,
 			track_id: 46,
 			bbox: {
@@ -7167,7 +7167,7 @@ export const aerialData = {
 			timestamp: 50.0,
 			frame_time: 50.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.820076048374176,
 			track_id: 47,
 			bbox: {
@@ -7193,7 +7193,7 @@ export const aerialData = {
 			timestamp: 51.0,
 			frame_time: 51.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7042531967163086,
 			track_id: 33,
 			bbox: {
@@ -7219,7 +7219,7 @@ export const aerialData = {
 			timestamp: 51.0,
 			frame_time: 51.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6378886103630066,
 			track_id: 5,
 			bbox: {
@@ -7245,7 +7245,7 @@ export const aerialData = {
 			timestamp: 51.0,
 			frame_time: 51.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8319514989852905,
 			track_id: 44,
 			bbox: {
@@ -7271,7 +7271,7 @@ export const aerialData = {
 			timestamp: 51.0,
 			frame_time: 51.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.58806973695755,
 			track_id: 45,
 			bbox: {
@@ -7297,7 +7297,7 @@ export const aerialData = {
 			timestamp: 51.0,
 			frame_time: 51.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8416187763214111,
 			track_id: 46,
 			bbox: {
@@ -7323,7 +7323,7 @@ export const aerialData = {
 			timestamp: 51.0,
 			frame_time: 51.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8363344669342041,
 			track_id: 47,
 			bbox: {
@@ -7349,7 +7349,7 @@ export const aerialData = {
 			timestamp: 51.0,
 			frame_time: 51.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6555150151252747,
 			track_id: 50,
 			bbox: {
@@ -7375,7 +7375,7 @@ export const aerialData = {
 			timestamp: 51.0,
 			frame_time: 51.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6850899457931519,
 			track_id: 43,
 			bbox: {
@@ -7427,7 +7427,7 @@ export const aerialData = {
 			timestamp: 52.0,
 			frame_time: 52.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8447411060333252,
 			track_id: 44,
 			bbox: {
@@ -7453,7 +7453,7 @@ export const aerialData = {
 			timestamp: 52.0,
 			frame_time: 52.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7310082912445068,
 			track_id: 45,
 			bbox: {
@@ -7479,7 +7479,7 @@ export const aerialData = {
 			timestamp: 52.0,
 			frame_time: 52.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7556275129318237,
 			track_id: 46,
 			bbox: {
@@ -7505,7 +7505,7 @@ export const aerialData = {
 			timestamp: 52.0,
 			frame_time: 52.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8667253255844116,
 			track_id: 47,
 			bbox: {
@@ -7531,7 +7531,7 @@ export const aerialData = {
 			timestamp: 52.0,
 			frame_time: 52.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.5101107954978943,
 			track_id: 50,
 			bbox: {
@@ -7557,7 +7557,7 @@ export const aerialData = {
 			timestamp: 52.0,
 			frame_time: 52.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9078958630561829,
 			track_id: 51,
 			bbox: {
@@ -7583,7 +7583,7 @@ export const aerialData = {
 			timestamp: 52.0,
 			frame_time: 52.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8624953031539917,
 			track_id: 33,
 			bbox: {
@@ -7609,7 +7609,7 @@ export const aerialData = {
 			timestamp: 53.0,
 			frame_time: 53.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5788695216178894,
 			track_id: 5,
 			bbox: {
@@ -7635,7 +7635,7 @@ export const aerialData = {
 			timestamp: 53.0,
 			frame_time: 53.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8413607478141785,
 			track_id: 44,
 			bbox: {
@@ -7687,7 +7687,7 @@ export const aerialData = {
 			timestamp: 53.0,
 			frame_time: 53.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8816542029380798,
 			track_id: 46,
 			bbox: {
@@ -7713,7 +7713,7 @@ export const aerialData = {
 			timestamp: 53.0,
 			frame_time: 53.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8404552340507507,
 			track_id: 47,
 			bbox: {
@@ -7739,7 +7739,7 @@ export const aerialData = {
 			timestamp: 53.0,
 			frame_time: 53.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7628560066223145,
 			track_id: 51,
 			bbox: {
@@ -7765,7 +7765,7 @@ export const aerialData = {
 			timestamp: 53.0,
 			frame_time: 53.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8320258855819702,
 			track_id: 33,
 			bbox: {
@@ -7791,7 +7791,7 @@ export const aerialData = {
 			timestamp: 53.0,
 			frame_time: 53.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8362008333206177,
 			track_id: 52,
 			bbox: {
@@ -7817,7 +7817,7 @@ export const aerialData = {
 			timestamp: 53.0,
 			frame_time: 53.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6392264366149902,
 			track_id: 50,
 			bbox: {
@@ -7869,7 +7869,7 @@ export const aerialData = {
 			timestamp: 54.0,
 			frame_time: 54.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8378910422325134,
 			track_id: 44,
 			bbox: {
@@ -7895,7 +7895,7 @@ export const aerialData = {
 			timestamp: 54.0,
 			frame_time: 54.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6494216322898865,
 			track_id: 45,
 			bbox: {
@@ -7921,7 +7921,7 @@ export const aerialData = {
 			timestamp: 54.0,
 			frame_time: 54.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7527069449424744,
 			track_id: 46,
 			bbox: {
@@ -7947,7 +7947,7 @@ export const aerialData = {
 			timestamp: 54.0,
 			frame_time: 54.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8723950386047363,
 			track_id: 33,
 			bbox: {
@@ -7973,7 +7973,7 @@ export const aerialData = {
 			timestamp: 54.0,
 			frame_time: 54.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8155583143234253,
 			track_id: 52,
 			bbox: {
@@ -7999,7 +7999,7 @@ export const aerialData = {
 			timestamp: 54.0,
 			frame_time: 54.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7812550663948059,
 			track_id: 50,
 			bbox: {
@@ -8051,7 +8051,7 @@ export const aerialData = {
 			timestamp: 55.0,
 			frame_time: 55.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8487474322319031,
 			track_id: 44,
 			bbox: {
@@ -8077,7 +8077,7 @@ export const aerialData = {
 			timestamp: 55.0,
 			frame_time: 55.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.743182361125946,
 			track_id: 45,
 			bbox: {
@@ -8103,7 +8103,7 @@ export const aerialData = {
 			timestamp: 55.0,
 			frame_time: 55.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8242025375366211,
 			track_id: 46,
 			bbox: {
@@ -8129,7 +8129,7 @@ export const aerialData = {
 			timestamp: 55.0,
 			frame_time: 55.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8394200205802917,
 			track_id: 33,
 			bbox: {
@@ -8155,7 +8155,7 @@ export const aerialData = {
 			timestamp: 55.0,
 			frame_time: 55.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8232364058494568,
 			track_id: 52,
 			bbox: {
@@ -8181,7 +8181,7 @@ export const aerialData = {
 			timestamp: 55.0,
 			frame_time: 55.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7417100071907043,
 			track_id: 50,
 			bbox: {
@@ -8233,7 +8233,7 @@ export const aerialData = {
 			timestamp: 56.0,
 			frame_time: 56.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7995564937591553,
 			track_id: 44,
 			bbox: {
@@ -8259,7 +8259,7 @@ export const aerialData = {
 			timestamp: 56.0,
 			frame_time: 56.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5613061189651489,
 			track_id: 45,
 			bbox: {
@@ -8285,7 +8285,7 @@ export const aerialData = {
 			timestamp: 56.0,
 			frame_time: 56.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8844320178031921,
 			track_id: 46,
 			bbox: {
@@ -8311,7 +8311,7 @@ export const aerialData = {
 			timestamp: 56.0,
 			frame_time: 56.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8109204769134521,
 			track_id: 33,
 			bbox: {
@@ -8337,7 +8337,7 @@ export const aerialData = {
 			timestamp: 56.0,
 			frame_time: 56.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7865836024284363,
 			track_id: 47,
 			bbox: {
@@ -8389,7 +8389,7 @@ export const aerialData = {
 			timestamp: 57.0,
 			frame_time: 57.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.849190890789032,
 			track_id: 44,
 			bbox: {
@@ -8415,7 +8415,7 @@ export const aerialData = {
 			timestamp: 57.0,
 			frame_time: 57.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7281891703605652,
 			track_id: 45,
 			bbox: {
@@ -8441,7 +8441,7 @@ export const aerialData = {
 			timestamp: 57.0,
 			frame_time: 57.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8611783385276794,
 			track_id: 46,
 			bbox: {
@@ -8467,7 +8467,7 @@ export const aerialData = {
 			timestamp: 57.0,
 			frame_time: 57.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7650303244590759,
 			track_id: 33,
 			bbox: {
@@ -8519,7 +8519,7 @@ export const aerialData = {
 			timestamp: 58.0,
 			frame_time: 58.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8461843729019165,
 			track_id: 44,
 			bbox: {
@@ -8545,7 +8545,7 @@ export const aerialData = {
 			timestamp: 58.0,
 			frame_time: 58.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7240602374076843,
 			track_id: 45,
 			bbox: {
@@ -8571,7 +8571,7 @@ export const aerialData = {
 			timestamp: 58.0,
 			frame_time: 58.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8857988119125366,
 			track_id: 46,
 			bbox: {
@@ -8597,7 +8597,7 @@ export const aerialData = {
 			timestamp: 58.0,
 			frame_time: 58.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8504562377929688,
 			track_id: 33,
 			bbox: {
@@ -8623,7 +8623,7 @@ export const aerialData = {
 			timestamp: 58.0,
 			frame_time: 58.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7281684279441833,
 			track_id: 54,
 			bbox: {
@@ -8649,7 +8649,7 @@ export const aerialData = {
 			timestamp: 58.0,
 			frame_time: 58.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7604462504386902,
 			track_id: 53,
 			bbox: {
@@ -8701,7 +8701,7 @@ export const aerialData = {
 			timestamp: 59.0,
 			frame_time: 59.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8007787466049194,
 			track_id: 44,
 			bbox: {
@@ -8727,7 +8727,7 @@ export const aerialData = {
 			timestamp: 59.0,
 			frame_time: 59.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7496326565742493,
 			track_id: 45,
 			bbox: {
@@ -8753,7 +8753,7 @@ export const aerialData = {
 			timestamp: 59.0,
 			frame_time: 59.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8307018280029297,
 			track_id: 46,
 			bbox: {
@@ -8779,7 +8779,7 @@ export const aerialData = {
 			timestamp: 59.0,
 			frame_time: 59.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8740116357803345,
 			track_id: 33,
 			bbox: {
@@ -8805,7 +8805,7 @@ export const aerialData = {
 			timestamp: 59.0,
 			frame_time: 59.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8998062014579773,
 			track_id: 55,
 			bbox: {
@@ -8831,7 +8831,7 @@ export const aerialData = {
 			timestamp: 59.0,
 			frame_time: 59.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7816569805145264,
 			track_id: 53,
 			bbox: {
@@ -8857,7 +8857,7 @@ export const aerialData = {
 			timestamp: 59.0,
 			frame_time: 59.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7262582182884216,
 			track_id: 54,
 			bbox: {
@@ -8909,7 +8909,7 @@ export const aerialData = {
 			timestamp: 60.0,
 			frame_time: 60.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8217282295227051,
 			track_id: 44,
 			bbox: {
@@ -8961,7 +8961,7 @@ export const aerialData = {
 			timestamp: 60.0,
 			frame_time: 60.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8273045420646667,
 			track_id: 46,
 			bbox: {
@@ -8987,7 +8987,7 @@ export const aerialData = {
 			timestamp: 60.0,
 			frame_time: 60.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8268913626670837,
 			track_id: 33,
 			bbox: {
@@ -9013,7 +9013,7 @@ export const aerialData = {
 			timestamp: 60.0,
 			frame_time: 60.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.74116450548172,
 			track_id: 55,
 			bbox: {
@@ -9039,7 +9039,7 @@ export const aerialData = {
 			timestamp: 61.0,
 			frame_time: 61.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6584863662719727,
 			track_id: 5,
 			bbox: {
@@ -9065,7 +9065,7 @@ export const aerialData = {
 			timestamp: 61.0,
 			frame_time: 61.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5419027805328369,
 			track_id: 45,
 			bbox: {
@@ -9091,7 +9091,7 @@ export const aerialData = {
 			timestamp: 61.0,
 			frame_time: 61.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8864209055900574,
 			track_id: 46,
 			bbox: {
@@ -9117,7 +9117,7 @@ export const aerialData = {
 			timestamp: 61.0,
 			frame_time: 61.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8730981349945068,
 			track_id: 33,
 			bbox: {
@@ -9143,7 +9143,7 @@ export const aerialData = {
 			timestamp: 61.0,
 			frame_time: 61.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.813205361366272,
 			track_id: 55,
 			bbox: {
@@ -9169,7 +9169,7 @@ export const aerialData = {
 			timestamp: 61.0,
 			frame_time: 61.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8018712997436523,
 			track_id: 57,
 			bbox: {
@@ -9221,7 +9221,7 @@ export const aerialData = {
 			timestamp: 62.0,
 			frame_time: 62.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7839800715446472,
 			track_id: 45,
 			bbox: {
@@ -9247,7 +9247,7 @@ export const aerialData = {
 			timestamp: 62.0,
 			frame_time: 62.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8398959636688232,
 			track_id: 46,
 			bbox: {
@@ -9273,7 +9273,7 @@ export const aerialData = {
 			timestamp: 62.0,
 			frame_time: 62.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.871870219707489,
 			track_id: 33,
 			bbox: {
@@ -9299,7 +9299,7 @@ export const aerialData = {
 			timestamp: 62.0,
 			frame_time: 62.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9107746481895447,
 			track_id: 55,
 			bbox: {
@@ -9325,7 +9325,7 @@ export const aerialData = {
 			timestamp: 62.0,
 			frame_time: 62.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8437423706054688,
 			track_id: 57,
 			bbox: {
@@ -9351,7 +9351,7 @@ export const aerialData = {
 			timestamp: 62.0,
 			frame_time: 62.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6617207527160645,
 			track_id: 58,
 			bbox: {
@@ -9403,7 +9403,7 @@ export const aerialData = {
 			timestamp: 63.0,
 			frame_time: 63.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6608564853668213,
 			track_id: 45,
 			bbox: {
@@ -9429,7 +9429,7 @@ export const aerialData = {
 			timestamp: 63.0,
 			frame_time: 63.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7980384826660156,
 			track_id: 46,
 			bbox: {
@@ -9455,7 +9455,7 @@ export const aerialData = {
 			timestamp: 63.0,
 			frame_time: 63.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8726398944854736,
 			track_id: 33,
 			bbox: {
@@ -9481,7 +9481,7 @@ export const aerialData = {
 			timestamp: 63.0,
 			frame_time: 63.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8536689877510071,
 			track_id: 57,
 			bbox: {
@@ -9507,7 +9507,7 @@ export const aerialData = {
 			timestamp: 63.0,
 			frame_time: 63.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.605710506439209,
 			track_id: 56,
 			bbox: {
@@ -9533,7 +9533,7 @@ export const aerialData = {
 			timestamp: 63.0,
 			frame_time: 63.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8033148646354675,
 			track_id: 58,
 			bbox: {
@@ -9611,7 +9611,7 @@ export const aerialData = {
 			timestamp: 64.0,
 			frame_time: 64.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.863050639629364,
 			track_id: 33,
 			bbox: {
@@ -9637,7 +9637,7 @@ export const aerialData = {
 			timestamp: 64.0,
 			frame_time: 64.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8407005667686462,
 			track_id: 57,
 			bbox: {
@@ -9663,7 +9663,7 @@ export const aerialData = {
 			timestamp: 64.0,
 			frame_time: 64.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8300860524177551,
 			track_id: 58,
 			bbox: {
@@ -9715,7 +9715,7 @@ export const aerialData = {
 			timestamp: 65.0,
 			frame_time: 65.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.49292513728141785,
 			track_id: 45,
 			bbox: {
@@ -9741,7 +9741,7 @@ export const aerialData = {
 			timestamp: 65.0,
 			frame_time: 65.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8121704459190369,
 			track_id: 58,
 			bbox: {
@@ -9767,7 +9767,7 @@ export const aerialData = {
 			timestamp: 65.0,
 			frame_time: 65.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7446501851081848,
 			track_id: 56,
 			bbox: {
@@ -9845,7 +9845,7 @@ export const aerialData = {
 			timestamp: 66.0,
 			frame_time: 66.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8027031421661377,
 			track_id: 58,
 			bbox: {
@@ -9871,7 +9871,7 @@ export const aerialData = {
 			timestamp: 66.0,
 			frame_time: 66.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8133827447891235,
 			track_id: 56,
 			bbox: {
@@ -9897,7 +9897,7 @@ export const aerialData = {
 			timestamp: 66.0,
 			frame_time: 66.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8326880931854248,
 			track_id: 59,
 			bbox: {
@@ -9923,7 +9923,7 @@ export const aerialData = {
 			timestamp: 66.0,
 			frame_time: 66.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8659594655036926,
 			track_id: 60,
 			bbox: {
@@ -9975,7 +9975,7 @@ export const aerialData = {
 			timestamp: 67.0,
 			frame_time: 67.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6334266066551208,
 			track_id: 45,
 			bbox: {
@@ -10001,7 +10001,7 @@ export const aerialData = {
 			timestamp: 67.0,
 			frame_time: 67.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8403031229972839,
 			track_id: 58,
 			bbox: {
@@ -10027,7 +10027,7 @@ export const aerialData = {
 			timestamp: 67.0,
 			frame_time: 67.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8573030233383179,
 			track_id: 60,
 			bbox: {
@@ -10053,7 +10053,7 @@ export const aerialData = {
 			timestamp: 67.0,
 			frame_time: 67.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.598225474357605,
 			track_id: 59,
 			bbox: {
@@ -10105,7 +10105,7 @@ export const aerialData = {
 			timestamp: 68.0,
 			frame_time: 68.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6549826860427856,
 			track_id: 45,
 			bbox: {
@@ -10131,7 +10131,7 @@ export const aerialData = {
 			timestamp: 68.0,
 			frame_time: 68.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8194770812988281,
 			track_id: 58,
 			bbox: {
@@ -10157,7 +10157,7 @@ export const aerialData = {
 			timestamp: 68.0,
 			frame_time: 68.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8577961325645447,
 			track_id: 60,
 			bbox: {
@@ -10183,7 +10183,7 @@ export const aerialData = {
 			timestamp: 68.0,
 			frame_time: 68.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8401282429695129,
 			track_id: 56,
 			bbox: {
@@ -10235,7 +10235,7 @@ export const aerialData = {
 			timestamp: 69.0,
 			frame_time: 69.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6570441126823425,
 			track_id: 45,
 			bbox: {
@@ -10261,7 +10261,7 @@ export const aerialData = {
 			timestamp: 69.0,
 			frame_time: 69.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7787436842918396,
 			track_id: 58,
 			bbox: {
@@ -10287,7 +10287,7 @@ export const aerialData = {
 			timestamp: 69.0,
 			frame_time: 69.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.86848384141922,
 			track_id: 60,
 			bbox: {
@@ -10339,7 +10339,7 @@ export const aerialData = {
 			timestamp: 70.0,
 			frame_time: 70.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.773796021938324,
 			track_id: 45,
 			bbox: {
@@ -10365,7 +10365,7 @@ export const aerialData = {
 			timestamp: 70.0,
 			frame_time: 70.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8877275586128235,
 			track_id: 60,
 			bbox: {
@@ -10391,7 +10391,7 @@ export const aerialData = {
 			timestamp: 70.0,
 			frame_time: 70.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.850930392742157,
 			track_id: 61,
 			bbox: {
@@ -10443,7 +10443,7 @@ export const aerialData = {
 			timestamp: 71.0,
 			frame_time: 71.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7581103444099426,
 			track_id: 61,
 			bbox: {
@@ -10469,7 +10469,7 @@ export const aerialData = {
 			timestamp: 71.0,
 			frame_time: 71.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7896990180015564,
 			track_id: 45,
 			bbox: {
@@ -10495,7 +10495,7 @@ export const aerialData = {
 			timestamp: 71.0,
 			frame_time: 71.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8813560009002686,
 			track_id: 62,
 			bbox: {
@@ -10521,7 +10521,7 @@ export const aerialData = {
 			timestamp: 72.0,
 			frame_time: 72.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8619335293769836,
 			track_id: 62,
 			bbox: {
@@ -10621,7 +10621,7 @@ export const aerialData = {
 			timestamp: 77.0,
 			frame_time: 77.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5810130834579468,
 			track_id: 63,
 			bbox: {
@@ -10647,7 +10647,7 @@ export const aerialData = {
 			timestamp: 77.0,
 			frame_time: 77.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8502859473228455,
 			track_id: 65,
 			bbox: {
@@ -10673,7 +10673,7 @@ export const aerialData = {
 			timestamp: 77.0,
 			frame_time: 77.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8573612570762634,
 			track_id: 66,
 			bbox: {
@@ -10725,7 +10725,7 @@ export const aerialData = {
 			timestamp: 78.0,
 			frame_time: 78.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8014776110649109,
 			track_id: 66,
 			bbox: {
@@ -10751,7 +10751,7 @@ export const aerialData = {
 			timestamp: 78.0,
 			frame_time: 78.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.811572790145874,
 			track_id: 65,
 			bbox: {
@@ -10803,7 +10803,7 @@ export const aerialData = {
 			timestamp: 79.0,
 			frame_time: 79.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.890643835067749,
 			track_id: 66,
 			bbox: {
@@ -10829,7 +10829,7 @@ export const aerialData = {
 			timestamp: 79.0,
 			frame_time: 79.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5357306003570557,
 			track_id: 65,
 			bbox: {
@@ -10855,7 +10855,7 @@ export const aerialData = {
 			timestamp: 79.0,
 			frame_time: 79.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8721596002578735,
 			track_id: 67,
 			bbox: {
@@ -10881,7 +10881,7 @@ export const aerialData = {
 			timestamp: 79.0,
 			frame_time: 79.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.853279173374176,
 			track_id: 68,
 			bbox: {
@@ -10933,7 +10933,7 @@ export const aerialData = {
 			timestamp: 80.0,
 			frame_time: 80.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8380880951881409,
 			track_id: 67,
 			bbox: {
@@ -10959,7 +10959,7 @@ export const aerialData = {
 			timestamp: 80.0,
 			frame_time: 80.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.93702232837677,
 			track_id: 68,
 			bbox: {
@@ -10985,7 +10985,7 @@ export const aerialData = {
 			timestamp: 80.0,
 			frame_time: 80.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8177990913391113,
 			track_id: 69,
 			bbox: {
@@ -11011,7 +11011,7 @@ export const aerialData = {
 			timestamp: 80.0,
 			frame_time: 80.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7683745622634888,
 			track_id: 70,
 			bbox: {
@@ -11063,7 +11063,7 @@ export const aerialData = {
 			timestamp: 81.0,
 			frame_time: 81.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.764843225479126,
 			track_id: 65,
 			bbox: {
@@ -11089,7 +11089,7 @@ export const aerialData = {
 			timestamp: 81.0,
 			frame_time: 81.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7455866932868958,
 			track_id: 67,
 			bbox: {
@@ -11115,7 +11115,7 @@ export const aerialData = {
 			timestamp: 81.0,
 			frame_time: 81.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9335989952087402,
 			track_id: 68,
 			bbox: {
@@ -11141,7 +11141,7 @@ export const aerialData = {
 			timestamp: 81.0,
 			frame_time: 81.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8086242079734802,
 			track_id: 69,
 			bbox: {
@@ -11167,7 +11167,7 @@ export const aerialData = {
 			timestamp: 81.0,
 			frame_time: 81.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7457437515258789,
 			track_id: 71,
 			bbox: {
@@ -11193,7 +11193,7 @@ export const aerialData = {
 			timestamp: 81.0,
 			frame_time: 81.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.789909303188324,
 			track_id: 72,
 			bbox: {
@@ -11219,7 +11219,7 @@ export const aerialData = {
 			timestamp: 81.0,
 			frame_time: 81.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8512129187583923,
 			track_id: 70,
 			bbox: {
@@ -11245,7 +11245,7 @@ export const aerialData = {
 			timestamp: 81.0,
 			frame_time: 81.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.3862679898738861,
 			track_id: 73,
 			bbox: {
@@ -11271,7 +11271,7 @@ export const aerialData = {
 			timestamp: 81.0,
 			frame_time: 81.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5260648131370544,
 			track_id: 63,
 			bbox: {
@@ -11297,7 +11297,7 @@ export const aerialData = {
 			timestamp: 82.0,
 			frame_time: 82.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8521456718444824,
 			track_id: 65,
 			bbox: {
@@ -11323,7 +11323,7 @@ export const aerialData = {
 			timestamp: 82.0,
 			frame_time: 82.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7843919992446899,
 			track_id: 67,
 			bbox: {
@@ -11349,7 +11349,7 @@ export const aerialData = {
 			timestamp: 82.0,
 			frame_time: 82.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9082308411598206,
 			track_id: 68,
 			bbox: {
@@ -11375,7 +11375,7 @@ export const aerialData = {
 			timestamp: 82.0,
 			frame_time: 82.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6335920691490173,
 			track_id: 69,
 			bbox: {
@@ -11401,7 +11401,7 @@ export const aerialData = {
 			timestamp: 82.0,
 			frame_time: 82.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8395532369613647,
 			track_id: 71,
 			bbox: {
@@ -11427,7 +11427,7 @@ export const aerialData = {
 			timestamp: 82.0,
 			frame_time: 82.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6598950028419495,
 			track_id: 70,
 			bbox: {
@@ -11453,7 +11453,7 @@ export const aerialData = {
 			timestamp: 82.0,
 			frame_time: 82.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6889544129371643,
 			track_id: 63,
 			bbox: {
@@ -11479,7 +11479,7 @@ export const aerialData = {
 			timestamp: 82.0,
 			frame_time: 82.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7828209400177002,
 			track_id: 72,
 			bbox: {
@@ -11505,7 +11505,7 @@ export const aerialData = {
 			timestamp: 83.0,
 			frame_time: 83.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.822593092918396,
 			track_id: 65,
 			bbox: {
@@ -11531,7 +11531,7 @@ export const aerialData = {
 			timestamp: 83.0,
 			frame_time: 83.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8634101152420044,
 			track_id: 68,
 			bbox: {
@@ -11557,7 +11557,7 @@ export const aerialData = {
 			timestamp: 83.0,
 			frame_time: 83.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8424099683761597,
 			track_id: 69,
 			bbox: {
@@ -11583,7 +11583,7 @@ export const aerialData = {
 			timestamp: 83.0,
 			frame_time: 83.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8401796221733093,
 			track_id: 71,
 			bbox: {
@@ -11609,7 +11609,7 @@ export const aerialData = {
 			timestamp: 83.0,
 			frame_time: 83.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.849565327167511,
 			track_id: 72,
 			bbox: {
@@ -11635,7 +11635,7 @@ export const aerialData = {
 			timestamp: 83.0,
 			frame_time: 83.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7610216736793518,
 			track_id: 74,
 			bbox: {
@@ -11661,7 +11661,7 @@ export const aerialData = {
 			timestamp: 84.0,
 			frame_time: 84.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6162254214286804,
 			track_id: 65,
 			bbox: {
@@ -11687,7 +11687,7 @@ export const aerialData = {
 			timestamp: 84.0,
 			frame_time: 84.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8762677907943726,
 			track_id: 68,
 			bbox: {
@@ -11713,7 +11713,7 @@ export const aerialData = {
 			timestamp: 84.0,
 			frame_time: 84.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7887393832206726,
 			track_id: 71,
 			bbox: {
@@ -11739,7 +11739,7 @@ export const aerialData = {
 			timestamp: 84.0,
 			frame_time: 84.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8452904224395752,
 			track_id: 72,
 			bbox: {
@@ -11765,7 +11765,7 @@ export const aerialData = {
 			timestamp: 84.0,
 			frame_time: 84.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8162163496017456,
 			track_id: 75,
 			bbox: {
@@ -11791,7 +11791,7 @@ export const aerialData = {
 			timestamp: 84.0,
 			frame_time: 84.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8324180245399475,
 			track_id: 76,
 			bbox: {
@@ -11843,7 +11843,7 @@ export const aerialData = {
 			timestamp: 85.0,
 			frame_time: 85.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7650802135467529,
 			track_id: 68,
 			bbox: {
@@ -11869,7 +11869,7 @@ export const aerialData = {
 			timestamp: 85.0,
 			frame_time: 85.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8398531675338745,
 			track_id: 72,
 			bbox: {
@@ -11895,7 +11895,7 @@ export const aerialData = {
 			timestamp: 85.0,
 			frame_time: 85.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7624679207801819,
 			track_id: 78,
 			bbox: {
@@ -11921,7 +11921,7 @@ export const aerialData = {
 			timestamp: 85.0,
 			frame_time: 85.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8641523718833923,
 			track_id: 76,
 			bbox: {
@@ -11947,7 +11947,7 @@ export const aerialData = {
 			timestamp: 86.0,
 			frame_time: 86.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7705511450767517,
 			track_id: 65,
 			bbox: {
@@ -11973,7 +11973,7 @@ export const aerialData = {
 			timestamp: 86.0,
 			frame_time: 86.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9294945001602173,
 			track_id: 68,
 			bbox: {
@@ -11999,7 +11999,7 @@ export const aerialData = {
 			timestamp: 86.0,
 			frame_time: 86.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7811660170555115,
 			track_id: 71,
 			bbox: {
@@ -12025,7 +12025,7 @@ export const aerialData = {
 			timestamp: 86.0,
 			frame_time: 86.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8612152934074402,
 			track_id: 79,
 			bbox: {
@@ -12051,7 +12051,7 @@ export const aerialData = {
 			timestamp: 86.0,
 			frame_time: 86.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7733426094055176,
 			track_id: 72,
 			bbox: {
@@ -12077,7 +12077,7 @@ export const aerialData = {
 			timestamp: 86.0,
 			frame_time: 86.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7552791833877563,
 			track_id: 81,
 			bbox: {
@@ -12129,7 +12129,7 @@ export const aerialData = {
 			timestamp: 86.0,
 			frame_time: 86.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7774693369865417,
 			track_id: 82,
 			bbox: {
@@ -12155,7 +12155,7 @@ export const aerialData = {
 			timestamp: 86.0,
 			frame_time: 86.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7257676124572754,
 			track_id: 76,
 			bbox: {
@@ -12181,7 +12181,7 @@ export const aerialData = {
 			timestamp: 87.0,
 			frame_time: 87.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7190818190574646,
 			track_id: 65,
 			bbox: {
@@ -12207,7 +12207,7 @@ export const aerialData = {
 			timestamp: 87.0,
 			frame_time: 87.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8727243542671204,
 			track_id: 68,
 			bbox: {
@@ -12233,7 +12233,7 @@ export const aerialData = {
 			timestamp: 87.0,
 			frame_time: 87.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8970292806625366,
 			track_id: 79,
 			bbox: {
@@ -12259,7 +12259,7 @@ export const aerialData = {
 			timestamp: 87.0,
 			frame_time: 87.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7037846446037292,
 			track_id: 82,
 			bbox: {
@@ -12285,7 +12285,7 @@ export const aerialData = {
 			timestamp: 87.0,
 			frame_time: 87.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.5247802734375,
 			track_id: 71,
 			bbox: {
@@ -12337,7 +12337,7 @@ export const aerialData = {
 			timestamp: 88.0,
 			frame_time: 88.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8892292380332947,
 			track_id: 65,
 			bbox: {
@@ -12363,7 +12363,7 @@ export const aerialData = {
 			timestamp: 88.0,
 			frame_time: 88.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.913999617099762,
 			track_id: 68,
 			bbox: {
@@ -12389,7 +12389,7 @@ export const aerialData = {
 			timestamp: 88.0,
 			frame_time: 88.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.87516850233078,
 			track_id: 79,
 			bbox: {
@@ -12415,7 +12415,7 @@ export const aerialData = {
 			timestamp: 88.0,
 			frame_time: 88.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8472793698310852,
 			track_id: 83,
 			bbox: {
@@ -12441,7 +12441,7 @@ export const aerialData = {
 			timestamp: 88.0,
 			frame_time: 88.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8300803899765015,
 			track_id: 71,
 			bbox: {
@@ -12519,7 +12519,7 @@ export const aerialData = {
 			timestamp: 89.0,
 			frame_time: 89.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9056735038757324,
 			track_id: 68,
 			bbox: {
@@ -12545,7 +12545,7 @@ export const aerialData = {
 			timestamp: 89.0,
 			frame_time: 89.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8690166473388672,
 			track_id: 79,
 			bbox: {
@@ -12571,7 +12571,7 @@ export const aerialData = {
 			timestamp: 89.0,
 			frame_time: 89.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8650281429290771,
 			track_id: 83,
 			bbox: {
@@ -12597,7 +12597,7 @@ export const aerialData = {
 			timestamp: 89.0,
 			frame_time: 89.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8266451358795166,
 			track_id: 71,
 			bbox: {
@@ -12675,7 +12675,7 @@ export const aerialData = {
 			timestamp: 90.0,
 			frame_time: 90.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8601258397102356,
 			track_id: 68,
 			bbox: {
@@ -12701,7 +12701,7 @@ export const aerialData = {
 			timestamp: 90.0,
 			frame_time: 90.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8454208374023438,
 			track_id: 79,
 			bbox: {
@@ -12727,7 +12727,7 @@ export const aerialData = {
 			timestamp: 90.0,
 			frame_time: 90.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8473479151725769,
 			track_id: 83,
 			bbox: {
@@ -12753,7 +12753,7 @@ export const aerialData = {
 			timestamp: 90.0,
 			frame_time: 90.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7913808822631836,
 			track_id: 71,
 			bbox: {
@@ -12805,7 +12805,7 @@ export const aerialData = {
 			timestamp: 90.0,
 			frame_time: 90.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7084535360336304,
 			track_id: 84,
 			bbox: {
@@ -12857,7 +12857,7 @@ export const aerialData = {
 			timestamp: 91.0,
 			frame_time: 91.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8527819514274597,
 			track_id: 65,
 			bbox: {
@@ -12883,7 +12883,7 @@ export const aerialData = {
 			timestamp: 91.0,
 			frame_time: 91.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7446913123130798,
 			track_id: 68,
 			bbox: {
@@ -12909,7 +12909,7 @@ export const aerialData = {
 			timestamp: 91.0,
 			frame_time: 91.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8702727556228638,
 			track_id: 83,
 			bbox: {
@@ -12935,7 +12935,7 @@ export const aerialData = {
 			timestamp: 91.0,
 			frame_time: 91.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.844012975692749,
 			track_id: 71,
 			bbox: {
@@ -13013,7 +13013,7 @@ export const aerialData = {
 			timestamp: 91.0,
 			frame_time: 91.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.5010699033737183,
 			track_id: 84,
 			bbox: {
@@ -13039,7 +13039,7 @@ export const aerialData = {
 			timestamp: 92.0,
 			frame_time: 92.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8521875739097595,
 			track_id: 65,
 			bbox: {
@@ -13065,7 +13065,7 @@ export const aerialData = {
 			timestamp: 92.0,
 			frame_time: 92.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8778170943260193,
 			track_id: 68,
 			bbox: {
@@ -13091,7 +13091,7 @@ export const aerialData = {
 			timestamp: 92.0,
 			frame_time: 92.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7647318840026855,
 			track_id: 71,
 			bbox: {
@@ -13169,7 +13169,7 @@ export const aerialData = {
 			timestamp: 92.0,
 			frame_time: 92.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8567124605178833,
 			track_id: 86,
 			bbox: {
@@ -13195,7 +13195,7 @@ export const aerialData = {
 			timestamp: 93.0,
 			frame_time: 93.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7950466275215149,
 			track_id: 65,
 			bbox: {
@@ -13221,7 +13221,7 @@ export const aerialData = {
 			timestamp: 93.0,
 			frame_time: 93.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7901768088340759,
 			track_id: 68,
 			bbox: {
@@ -13273,7 +13273,7 @@ export const aerialData = {
 			timestamp: 93.0,
 			frame_time: 93.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.532085120677948,
 			track_id: 80,
 			bbox: {
@@ -13299,7 +13299,7 @@ export const aerialData = {
 			timestamp: 93.0,
 			frame_time: 93.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8547772765159607,
 			track_id: 86,
 			bbox: {
@@ -13351,7 +13351,7 @@ export const aerialData = {
 			timestamp: 94.0,
 			frame_time: 94.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7014109492301941,
 			track_id: 65,
 			bbox: {
@@ -13377,7 +13377,7 @@ export const aerialData = {
 			timestamp: 94.0,
 			frame_time: 94.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8963454961776733,
 			track_id: 68,
 			bbox: {
@@ -13429,7 +13429,7 @@ export const aerialData = {
 			timestamp: 94.0,
 			frame_time: 94.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7211725115776062,
 			track_id: 71,
 			bbox: {
@@ -13455,7 +13455,7 @@ export const aerialData = {
 			timestamp: 94.0,
 			frame_time: 94.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8917538523674011,
 			track_id: 86,
 			bbox: {
@@ -13507,7 +13507,7 @@ export const aerialData = {
 			timestamp: 95.0,
 			frame_time: 95.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8683584332466125,
 			track_id: 68,
 			bbox: {
@@ -13559,7 +13559,7 @@ export const aerialData = {
 			timestamp: 95.0,
 			frame_time: 95.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8588494658470154,
 			track_id: 86,
 			bbox: {
@@ -13585,7 +13585,7 @@ export const aerialData = {
 			timestamp: 96.0,
 			frame_time: 96.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5963801145553589,
 			track_id: 65,
 			bbox: {
@@ -13611,7 +13611,7 @@ export const aerialData = {
 			timestamp: 96.0,
 			frame_time: 96.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8426872491836548,
 			track_id: 68,
 			bbox: {
@@ -13663,7 +13663,7 @@ export const aerialData = {
 			timestamp: 96.0,
 			frame_time: 96.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8476327061653137,
 			track_id: 86,
 			bbox: {
@@ -13689,7 +13689,7 @@ export const aerialData = {
 			timestamp: 96.0,
 			frame_time: 96.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6595610976219177,
 			track_id: 88,
 			bbox: {
@@ -13715,7 +13715,7 @@ export const aerialData = {
 			timestamp: 97.0,
 			frame_time: 97.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.669314980506897,
 			track_id: 65,
 			bbox: {
@@ -13741,7 +13741,7 @@ export const aerialData = {
 			timestamp: 97.0,
 			frame_time: 97.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8227929472923279,
 			track_id: 68,
 			bbox: {
@@ -13819,7 +13819,7 @@ export const aerialData = {
 			timestamp: 98.0,
 			frame_time: 98.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8821406364440918,
 			track_id: 68,
 			bbox: {
@@ -13871,7 +13871,7 @@ export const aerialData = {
 			timestamp: 98.0,
 			frame_time: 98.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8250546455383301,
 			track_id: 89,
 			bbox: {
@@ -13897,7 +13897,7 @@ export const aerialData = {
 			timestamp: 99.0,
 			frame_time: 99.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7243682146072388,
 			track_id: 65,
 			bbox: {
@@ -13949,7 +13949,7 @@ export const aerialData = {
 			timestamp: 99.0,
 			frame_time: 99.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8203468918800354,
 			track_id: 68,
 			bbox: {
@@ -13975,7 +13975,7 @@ export const aerialData = {
 			timestamp: 100.0,
 			frame_time: 100.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5447626113891602,
 			track_id: 65,
 			bbox: {
@@ -14027,7 +14027,7 @@ export const aerialData = {
 			timestamp: 100.0,
 			frame_time: 100.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8959070444107056,
 			track_id: 68,
 			bbox: {
@@ -14053,7 +14053,7 @@ export const aerialData = {
 			timestamp: 100.0,
 			frame_time: 100.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8280673027038574,
 			track_id: 91,
 			bbox: {
@@ -14079,7 +14079,7 @@ export const aerialData = {
 			timestamp: 101.0,
 			frame_time: 101.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6434059143066406,
 			track_id: 65,
 			bbox: {
@@ -14131,7 +14131,7 @@ export const aerialData = {
 			timestamp: 101.0,
 			frame_time: 101.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9017766714096069,
 			track_id: 68,
 			bbox: {
@@ -14157,7 +14157,7 @@ export const aerialData = {
 			timestamp: 101.0,
 			frame_time: 101.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7716324925422668,
 			track_id: 91,
 			bbox: {
@@ -14261,7 +14261,7 @@ export const aerialData = {
 			timestamp: 102.0,
 			frame_time: 102.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9125891327857971,
 			track_id: 68,
 			bbox: {
@@ -14287,7 +14287,7 @@ export const aerialData = {
 			timestamp: 102.0,
 			frame_time: 102.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7517199516296387,
 			track_id: 91,
 			bbox: {
@@ -14313,7 +14313,7 @@ export const aerialData = {
 			timestamp: 103.0,
 			frame_time: 103.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5990919470787048,
 			track_id: 65,
 			bbox: {
@@ -14365,7 +14365,7 @@ export const aerialData = {
 			timestamp: 103.0,
 			frame_time: 103.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8996909856796265,
 			track_id: 68,
 			bbox: {
@@ -14443,7 +14443,7 @@ export const aerialData = {
 			timestamp: 104.0,
 			frame_time: 104.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7662737965583801,
 			track_id: 68,
 			bbox: {
@@ -14469,7 +14469,7 @@ export const aerialData = {
 			timestamp: 104.0,
 			frame_time: 104.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6614735722541809,
 			track_id: 93,
 			bbox: {
@@ -14521,7 +14521,7 @@ export const aerialData = {
 			timestamp: 105.0,
 			frame_time: 105.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5661527514457703,
 			track_id: 65,
 			bbox: {
@@ -14573,7 +14573,7 @@ export const aerialData = {
 			timestamp: 105.0,
 			frame_time: 105.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8922784924507141,
 			track_id: 68,
 			bbox: {
@@ -14625,7 +14625,7 @@ export const aerialData = {
 			timestamp: 105.0,
 			frame_time: 105.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7066011428833008,
 			track_id: 93,
 			bbox: {
@@ -14651,7 +14651,7 @@ export const aerialData = {
 			timestamp: 106.0,
 			frame_time: 106.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5106003880500793,
 			track_id: 65,
 			bbox: {
@@ -14703,7 +14703,7 @@ export const aerialData = {
 			timestamp: 106.0,
 			frame_time: 106.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8750090599060059,
 			track_id: 68,
 			bbox: {
@@ -14781,7 +14781,7 @@ export const aerialData = {
 			timestamp: 108.0,
 			frame_time: 108.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.747923731803894,
 			track_id: 65,
 			bbox: {
@@ -14937,7 +14937,7 @@ export const aerialData = {
 			timestamp: 111.0,
 			frame_time: 111.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5743620991706848,
 			track_id: 65,
 			bbox: {
@@ -14989,7 +14989,7 @@ export const aerialData = {
 			timestamp: 111.0,
 			frame_time: 111.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6632071137428284,
 			track_id: 98,
 			bbox: {
@@ -15015,7 +15015,7 @@ export const aerialData = {
 			timestamp: 112.0,
 			frame_time: 112.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5256946086883545,
 			track_id: 65,
 			bbox: {
@@ -15067,7 +15067,7 @@ export const aerialData = {
 			timestamp: 112.0,
 			frame_time: 112.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8472974896430969,
 			track_id: 98,
 			bbox: {
@@ -15093,7 +15093,7 @@ export const aerialData = {
 			timestamp: 112.0,
 			frame_time: 112.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8121494650840759,
 			track_id: 99,
 			bbox: {
@@ -15119,7 +15119,7 @@ export const aerialData = {
 			timestamp: 113.0,
 			frame_time: 113.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7546601295471191,
 			track_id: 65,
 			bbox: {
@@ -15171,7 +15171,7 @@ export const aerialData = {
 			timestamp: 113.0,
 			frame_time: 113.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8980410695075989,
 			track_id: 98,
 			bbox: {
@@ -15197,7 +15197,7 @@ export const aerialData = {
 			timestamp: 113.0,
 			frame_time: 113.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7151538729667664,
 			track_id: 99,
 			bbox: {
@@ -15275,7 +15275,7 @@ export const aerialData = {
 			timestamp: 114.0,
 			frame_time: 114.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9316043257713318,
 			track_id: 98,
 			bbox: {
@@ -15301,7 +15301,7 @@ export const aerialData = {
 			timestamp: 115.0,
 			frame_time: 115.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6954867243766785,
 			track_id: 65,
 			bbox: {
@@ -15327,7 +15327,7 @@ export const aerialData = {
 			timestamp: 115.0,
 			frame_time: 115.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9189222455024719,
 			track_id: 98,
 			bbox: {
@@ -15379,7 +15379,7 @@ export const aerialData = {
 			timestamp: 116.0,
 			frame_time: 116.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6477677822113037,
 			track_id: 65,
 			bbox: {
@@ -15405,7 +15405,7 @@ export const aerialData = {
 			timestamp: 116.0,
 			frame_time: 116.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9290353059768677,
 			track_id: 98,
 			bbox: {
@@ -15483,7 +15483,7 @@ export const aerialData = {
 			timestamp: 116.0,
 			frame_time: 116.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6262863874435425,
 			track_id: 102,
 			bbox: {
@@ -15535,7 +15535,7 @@ export const aerialData = {
 			timestamp: 117.0,
 			frame_time: 117.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9082040190696716,
 			track_id: 98,
 			bbox: {
@@ -15587,7 +15587,7 @@ export const aerialData = {
 			timestamp: 117.0,
 			frame_time: 117.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.3263275921344757,
 			track_id: 80,
 			bbox: {
@@ -15613,7 +15613,7 @@ export const aerialData = {
 			timestamp: 117.0,
 			frame_time: 117.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.626270055770874,
 			track_id: 102,
 			bbox: {
@@ -15639,7 +15639,7 @@ export const aerialData = {
 			timestamp: 118.0,
 			frame_time: 118.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7844030857086182,
 			track_id: 65,
 			bbox: {
@@ -15665,7 +15665,7 @@ export const aerialData = {
 			timestamp: 118.0,
 			frame_time: 118.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9180534482002258,
 			track_id: 98,
 			bbox: {
@@ -15717,7 +15717,7 @@ export const aerialData = {
 			timestamp: 118.0,
 			frame_time: 118.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7400189638137817,
 			track_id: 102,
 			bbox: {
@@ -15743,7 +15743,7 @@ export const aerialData = {
 			timestamp: 119.0,
 			frame_time: 119.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6141269207000732,
 			track_id: 65,
 			bbox: {
@@ -15769,7 +15769,7 @@ export const aerialData = {
 			timestamp: 119.0,
 			frame_time: 119.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9379289746284485,
 			track_id: 98,
 			bbox: {
@@ -15821,7 +15821,7 @@ export const aerialData = {
 			timestamp: 119.0,
 			frame_time: 119.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.8054196238517761,
 			track_id: 102,
 			bbox: {
@@ -15899,7 +15899,7 @@ export const aerialData = {
 			timestamp: 120.0,
 			frame_time: 120.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9248909950256348,
 			track_id: 98,
 			bbox: {
@@ -15951,7 +15951,7 @@ export const aerialData = {
 			timestamp: 120.0,
 			frame_time: 120.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7209537625312805,
 			track_id: 102,
 			bbox: {
@@ -15977,7 +15977,7 @@ export const aerialData = {
 			timestamp: 121.0,
 			frame_time: 121.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8271597027778625,
 			track_id: 65,
 			bbox: {
@@ -16003,7 +16003,7 @@ export const aerialData = {
 			timestamp: 121.0,
 			frame_time: 121.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8864114284515381,
 			track_id: 98,
 			bbox: {
@@ -16055,7 +16055,7 @@ export const aerialData = {
 			timestamp: 122.0,
 			frame_time: 122.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7730198502540588,
 			track_id: 65,
 			bbox: {
@@ -16081,7 +16081,7 @@ export const aerialData = {
 			timestamp: 122.0,
 			frame_time: 122.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9104394316673279,
 			track_id: 98,
 			bbox: {
@@ -16133,7 +16133,7 @@ export const aerialData = {
 			timestamp: 122.0,
 			frame_time: 122.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.7409467101097107,
 			track_id: 102,
 			bbox: {
@@ -16159,7 +16159,7 @@ export const aerialData = {
 			timestamp: 123.0,
 			frame_time: 123.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6829187273979187,
 			track_id: 65,
 			bbox: {
@@ -16185,7 +16185,7 @@ export const aerialData = {
 			timestamp: 123.0,
 			frame_time: 123.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9163062572479248,
 			track_id: 98,
 			bbox: {
@@ -16237,7 +16237,7 @@ export const aerialData = {
 			timestamp: 123.0,
 			frame_time: 123.0,
 			class_id: 0,
-			class_name: "person",
+			class_name: "soldier",
 			confidence: 0.6459929943084717,
 			track_id: 102,
 			bbox: {
@@ -16289,7 +16289,7 @@ export const aerialData = {
 			timestamp: 124.0,
 			frame_time: 124.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8300354480743408,
 			track_id: 65,
 			bbox: {
@@ -16315,7 +16315,7 @@ export const aerialData = {
 			timestamp: 124.0,
 			frame_time: 124.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8982494473457336,
 			track_id: 98,
 			bbox: {
@@ -16419,7 +16419,7 @@ export const aerialData = {
 			timestamp: 125.0,
 			frame_time: 125.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7587252259254456,
 			track_id: 65,
 			bbox: {
@@ -16445,7 +16445,7 @@ export const aerialData = {
 			timestamp: 125.0,
 			frame_time: 125.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.9268574714660645,
 			track_id: 98,
 			bbox: {
@@ -16523,7 +16523,7 @@ export const aerialData = {
 			timestamp: 126.0,
 			frame_time: 126.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7655664682388306,
 			track_id: 65,
 			bbox: {
@@ -16549,7 +16549,7 @@ export const aerialData = {
 			timestamp: 126.0,
 			frame_time: 126.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8928546905517578,
 			track_id: 98,
 			bbox: {
@@ -16601,7 +16601,7 @@ export const aerialData = {
 			timestamp: 126.0,
 			frame_time: 126.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.5984320640563965,
 			track_id: 104,
 			bbox: {
@@ -16627,7 +16627,7 @@ export const aerialData = {
 			timestamp: 127.0,
 			frame_time: 127.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.8461630344390869,
 			track_id: 98,
 			bbox: {
@@ -16653,7 +16653,7 @@ export const aerialData = {
 			timestamp: 127.0,
 			frame_time: 127.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.6119061708450317,
 			track_id: 100,
 			bbox: {
@@ -16679,7 +16679,7 @@ export const aerialData = {
 			timestamp: 127.0,
 			frame_time: 127.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.4872537851333618,
 			track_id: 104,
 			bbox: {
@@ -16705,7 +16705,7 @@ export const aerialData = {
 			timestamp: 128.0,
 			frame_time: 128.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7536070942878723,
 			track_id: 98,
 			bbox: {
@@ -16731,7 +16731,7 @@ export const aerialData = {
 			timestamp: 128.0,
 			frame_time: 128.0,
 			class_id: 2,
-			class_name: "car",
+			class_name: "vehicle",
 			confidence: 0.7025597095489502,
 			track_id: 65,
 			bbox: {

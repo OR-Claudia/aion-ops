@@ -89,7 +89,7 @@ const AnalysisModal: React.FC<AnalysisModalProps> = ({
 								: s
 						)
 					);
-				}, 30 + Math.random() * 40); // 30-70ms per character for smooth streaming
+				}, 10); // 30-70ms per character for smooth streaming
 
 				return () => clearTimeout(streamTimer);
 			} else if (

@@ -114,6 +114,7 @@ const KeyEventsModal: React.FC<KeyEventsModalProps> = ({
 		return () => {
 			timeouts.forEach((timeout) => clearTimeout(timeout));
 		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isOpen]);
 
 	return (

@@ -10,6 +10,7 @@ function getDetectionImage(class_name: string) {
 	const imageMap: { [key: string]: string } = {
 		civilian: "civilians.svg",
 		vehicle: "civilian-vehicle.svg",
+		truck: "civilian-vehicle.svg",
 		tank: "military-vehicle.svg",
 		soldier: "military-personnel.svg",
 	};

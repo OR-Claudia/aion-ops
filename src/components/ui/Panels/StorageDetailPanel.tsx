@@ -5,45 +5,50 @@ import externalLinkIcon from "../../../assets/external-link.svg";
 import Button from "../Button";
 import VideoPlayer from "../VideoPlayer.tsx";
 import Tabs, { type TabItem } from "../Tabs";
-import AerialVideo from "../../../assets/videos/aerial_video.mp4";
+import aerialVideo from "../../../assets/videos/aerial_video.mp4";
 // import RgbVideo from "../../../assets/videos/rgb_kuna.mp4";
 // import ThermoVideo from "../../../assets/videos/thermo_kuna.mp4";
 
 const keyEventsDEMO = [
 	{
-		timestamp: "T+44-46s",
+		timestamp: "T+1s",
 		event:
-			"Initial vehicle contact established with high confidence tracking (81-90%), civilian presence detected in proximity to vehicle suggesting mixed-use area",
+			"Initial detection of two separate vehicles (track_id: 1 and 2) indicating multiple elements entering frame from different locations",
 	},
 	{
-		timestamp: "T+47-56s",
+		timestamp: "T+2s",
 		event:
-			"Sustained dual tracking of vehicle and civilian personnel, confidence levels maintaining 70-85% range indicating stable observation conditions",
+			"Emergence of additional vehicles (track_ids: 3 and 4) forming a dispersed group, suggesting a coordinated movement or convoy split",
 	},
 	{
-		timestamp: "T+57s",
+		timestamp: "T+5s",
 		event:
-			"Critical development - first soldier detection (Track ID-3) with 76% confidence, concurrent with multiple civilian contacts suggesting populated area with military presence",
+			"Vehicle with track_id: 3 reclassified from 'vehicle' to 'truck', indicating a possible logistics or heavy support role within group",
 	},
 	{
-		timestamp: "T+58-61s",
+		timestamp: "T+6s",
 		event:
-			"Soldier contact maintained with 70-84% confidence, civilian population continues in area with track reclassification occurring (Track ID-3 transitions between civilian/soldier classification)",
+			"New vehicle (track_id: 5) detected far from primary group, suggesting flanking maneuver or supporting element approaching separately",
 	},
 	{
-		timestamp: "T+64-66s",
+		timestamp: "T+7s",
 		event:
-			"Additional civilian contact (Track ID-5) appears, soldier presence confirmed with Track ID-3, indicating mixed civilian-military environment",
+			"Convergence of multiple vehicles (track_ids: 1, 2, and 5) in proximity, implying a potential rally or staging point",
 	},
 	{
-		timestamp: "T+76s",
+		timestamp: "T+9s",
 		event:
-			"Second soldier contact (Track ID-6) detected with 76% confidence, multiple civilian tracks active suggesting increased activity in sector",
+			"Vehicle with track_id: 1 moves significantly across multiple coordinates, indicating it is actively maneuvering or leading the group",
 	},
 	{
-		timestamp: "T+79-89s",
+		timestamp: "T+10s",
 		event:
-			"Third soldier contact (Track ID-7) identified with 79-85% confidence, sustained tracking of multiple personnel types indicating significant mixed population presence",
+			"Track_id: 3 (truck) reaches the front of the formation; its central positioning may suggest command or supply unit repositioning",
+	},
+	{
+		timestamp: "T+11s",
+		event:
+			"Formation shows clear structure with truck (track_id: 5) in rear, vehicle (track_id: 1) at front, and others in between — consistent with tactical convoy layout",
 	},
 ];
 
@@ -71,7 +76,7 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 			id: "rgb",
 			label: "RGB",
 			// value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
-			value: AerialVideo,
+			value: aerialVideo,
 		},
 		{
 			id: "thermo",
@@ -83,8 +88,7 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 
 	const getCurrentVideoSource = () => {
 		const currentTab = tabs.find((tab) => tab.id === activeTab);
-
-		return currentTab?.value;
+		return currentTab?.value || "";
 		//  || tabs[0].value;
 	};
 
@@ -114,6 +118,8 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 	const handleDetectionsDetailClick = () => {
 		setDetectionsOpen(true);
 	};
+
+	console.log("video source:", getCurrentVideoSource());
 
 	return (
 		<div className="w-[650px] h-[calc(100vh-320px)] relative rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[2px] flex flex-col transition-all duration-300">
