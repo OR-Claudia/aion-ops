@@ -122,7 +122,8 @@ const StorageItem: React.FC<StorageItemProps> = ({
 							{isDetailView ? "UAV" : "Responsible UAV"}
 						</span>
 						<span className="text-[#E3F3F2] font-ubuntu text-sm opacity-90 truncate w-full">
-							{record.uav}
+							{/* {record.uav} */}
+							{"Mavic Air 3"}
 						</span>
 					</div>
 
