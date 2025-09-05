@@ -11,6 +11,7 @@ const useDebouncedCallback = <T extends (...args: unknown[]) => void>(
 			if (handlerRef.current !== null) {
 				clearTimeout(handlerRef.current);
 			}
+			// @ts-expect-error - Timeout type mismatch between NodeJS and browser
 			handlerRef.current = setTimeout(() => {
 				callback(...args);
 			}, delay);
