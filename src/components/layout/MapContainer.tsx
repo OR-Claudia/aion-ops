@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect, useRef } from "react";
 import { MapContainer as LeafletMap, TileLayer } from "react-leaflet";
@@ -326,16 +325,14 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		useDetectionContext();
 	const clusterGroupRef = useRef<any>(null);
 
-	const [tileUrl, setTileUrl] = useState(
+	const [tileUrl] = useState(
 		"https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
 	);
-	const [attribution, setAttribution] = useState(
+	const [attribution] = useState(
 		"&copy; CartoDB, &copy; OpenStreetMap contributors"
 	);
 	const [selectedUAVs, setSelectedUAVs] = useState<SelectedUAV[]>([]);
-	const [clusteredUAVIds, setClusteredUAVIds] = useState<Set<string>>(
-		new Set()
-	);
+	const [clusteredUAVIds] = useState<Set<string>>(new Set());
 	const [isMissionPathModalOpen, setIsMissionPathModalOpen] = useState(false);
 	const [selectedUAVForMissionPath, setSelectedUAVForMissionPath] =
 		useState<any>(null);
@@ -359,6 +356,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		}, 2000);
 
 		return () => clearInterval(intervalId);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [uavLocations]);
 
 	// Ukraine coordinates (center remains the same)
