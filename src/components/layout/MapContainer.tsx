@@ -12,8 +12,6 @@ import {
 import MissionPathModal from "../ui/Modals/MissionPathModal";
 import KeyEventsModal from "../ui/Modals/KeyEventsModal";
 
-import MarkerClusterGroup from "react-leaflet-markercluster";
-import L from "leaflet";
 import { useDetectionContext } from "./DetectionContext";
 import { useMapControls } from "./MapContext";
 import "leaflet/dist/leaflet.css";
@@ -94,6 +92,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	};
 
 	const handleUAVDetailClick = useCallback((id: string | number) => {
+		console.log('cluster', clusterGroupRef.current);
 		setSelectedUAVs((prev) => [
 			...prev,
 			{
@@ -244,49 +243,13 @@ const MapContainer: React.FC<MapContainerProps> = ({
 						</>
 					)}
 
-					{/* UAV Status Indicators as location pins with clustering - only on homepage */}
-					{showIndicators && (
-						<MarkerClusterGroup
-							ref={clusterGroupRef}
-							chunkedLoading
-							iconCreateFunction={(cluster: any) => {
-								const childCount = cluster.getChildCount();
-
-								return L.divIcon({
-									html: `<div style='
-									background-color: #00C6B8;
-									border-radius: 50%;
-									width: 40px;
-									height: 40px;
-									display: flex;
-									align-items: center;
-									justify-content: center;
-									color: #1F2630;
-									font-family: Ubuntu, sans-serif;
-									font-weight: 500;
-									font-size: 14px;
-									border: 2px solid #00C6B8;
-									box-shadow: 0 2px 8px rgba(0, 198, 184, 0.3);
-								'>${childCount}</div>`,
-
-									className: "custom-cluster-icon",
-									iconSize: L.point(40, 40, true),
-								});
-							}}
-							spiderfyOnMaxZoom={true}
-							showCoverageOnHover={false}
-							zoomToBoundsOnClick={true}
-							maxClusterRadius={50}
-						>
-							{allUAVLocations.map((uav: any) => (
-								<ClusterableUAVMarker
-									key={`uav-marker-${uav.data.id}`}
-									id={uav.data.id}
-									onDetailClick={handleUAVDetailClick}
-								/>
-							))}
-						</MarkerClusterGroup>
-					)}
+					{showIndicators && allUAVLocations.map((uavLoc) => (
+						<ClusterableUAVMarker
+							key={`uav-marker-${uavLoc.data.id}`}
+							id={uavLoc.data.id}
+							onDetailClick={handleUAVDetailClick}
+						/>
+					))}
 
 					{/* Detection Markers - only on detections page */}
 					{isDetectionsPage && (

@@ -9,24 +9,21 @@ import wifi2Icon from "../../assets/wifi-2.svg";
 import wifi1Icon from "../../assets/wifi-1.svg";
 
 import externalLinkIcon from "../../assets/external-link.svg";
-import type { UAVDetailData } from "./Modals/UAVDetailModal";
+import { useUAVLocations } from "../layout/ctx/UAVLocations/useUAVLocations";
 
 interface ClusterableUAVMarkerProps {
-	position: [number, number];
-	type: "online" | "warning" | "danger";
-	data: UAVDetailData;
+	id: string | number;
 	onDetailClick: (id: string | number) => void;
 }
 
 const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
-	position,
-	type,
-	data,
+	id,
 	onDetailClick,
 }) => {
-	const [isExpanded, setIsExpanded] = useState(false);
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const markerRef = React.useRef<any>(null);
+
+	const { getUAVLocationById } = useUAVLocations();
+
+	const uavLocation = getUAVLocationById(id);
 
 	const handleClick = (e: L.LeafletMouseEvent) => {
 		e.originalEvent.stopPropagation();
@@ -34,9 +31,9 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 	};
 
 	const getBatteryIcon = () => {
-		if (!data.battery)
+		if (!uavLocation?.data.battery)
 			return `<img src="${batteryFullIcon}" alt="battery" style="width: 16px; height: 16px;" />`;
-		switch (data.battery.toLowerCase()) {
+		switch (uavLocation?.data.battery.toLowerCase()) {
 			case "full":
 				return `<img src="${batteryFullIcon}" alt="battery full" style="width: 16px; height: 16px;" />`;
 			case "good":
@@ -51,7 +48,7 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 	};
 
 	const getSignalIcon = () => {
-		switch (data.signal.toLowerCase()) {
+		switch (uavLocation?.data.signal.toLowerCase()) {
 			case "strong":
 				return `<img src="${wifiFullIcon}" alt="signal strong" style="width: 16px; height: 16px;" />`;
 			case "weak":
@@ -66,7 +63,7 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 	};
 
 	const getTypeClasses = () => {
-		switch (type) {
+		switch (uavLocation?.type) {
 			case "online":
 				return "border-2 border-[#71BC2C] bg-[#212832]";
 			case "warning":
@@ -78,7 +75,7 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 		}
 	};
 
-	const coordinates = `N:${position[0].toFixed(4)}, E:${position[1].toFixed(
+	const coordinates = `N:${uavLocation?.position[0].toFixed(4)}, E:${uavLocation?.position[1].toFixed(
 		4
 	)}`;
 
@@ -96,7 +93,7 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 				<div style="display: flex; align-items: center; pointer-events: none;">${getBatteryIcon()}</div>
 				<div class="flex flex-col justify-center items-start" style="min-width: 0; flex: 1; pointer-events: none;">
 				<div class="text-[#E3F3F2] font-ubuntu text-xs font-normal leading-normal" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100px;">${
-					data.name
+					uavLocation?.data.name
 				}</div>
 				<div class="text-[#E3F3F2] font-ubuntu text-[10px] font-normal leading-normal" style="white-space: nowrap;">${coordinates}</div>
 				</div>
@@ -125,10 +122,14 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 		});
 	};
 
+	const [isExpanded, setIsExpanded] = useState(false);
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const markerRef = React.useRef<any>(null);
+
 	const customIcon = React.useMemo(
 		() => createCustomIcon(),
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-		[isExpanded, data, type]
+		[isExpanded, uavLocation?.data, uavLocation?.type]
 	);
 
 	// // Attach DOM event for detail button inside custom icon
@@ -139,9 +140,13 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 		const detailBtn = markerEl.querySelector('[data-detail-btn="true"]');
 		if (detailBtn) {
 			const handler = (ev: Event) => {
-				ev.stopPropagation();
-				onDetailClick(data.id);
-				console.log("Detail button clicked, ID added to selected UAVs");
+				
+				if (uavLocation) {
+					ev.stopPropagation();
+					onDetailClick(uavLocation?.data.id);
+					console.log("Detail button clicked, ID added to selected UAVs");
+				}
+				
 			};
 
 			detailBtn.addEventListener("click", handler);
@@ -153,16 +158,17 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 	}, [customIcon]);
 
 	return (
+		uavLocation ?
 		<Marker
 			ref={markerRef}
-			position={position}
+			position={uavLocation.position}
 			icon={customIcon}
 			// @ts-expect-error - Add UAV ID to options for cluster tracking
-			uavId={data.id}
+			id={uavLocation.data.id}
 			eventHandlers={{
 				click: handleClick,
 			}}
-		/>
+		/> : null
 	);
 };
 

@@ -4,6 +4,7 @@ import TopBar from "./TopBar";
 import MapContainer from "./MapContainer";
 import { MessageBar, ExpandableToolsPanel } from "../ui";
 import { MapContextProvider } from "./MapContext";
+import { UAVLocationsCtxProvider } from "./ctx/UAVLocations/UAVLocationsCtx";
 
 interface LayoutProps {
 	children: React.ReactNode;
@@ -18,7 +19,9 @@ const Layout: React.FC<LayoutProps> = ({ children, showTools = false }) => {
 		<MapContextProvider>
 			<div className="w-screen h-screen bg-[#222631] relative overflow-hidden font-ubuntu">
 				{/* MapContainer - always present, but indicators only on homepage */}
-				<MapContainer showIndicators={isHomePage} />
+				<UAVLocationsCtxProvider>
+					<MapContainer showIndicators={isHomePage} />
+				</UAVLocationsCtxProvider>
 
 				{/* TopBar - always present */}
 				<TopBar />
