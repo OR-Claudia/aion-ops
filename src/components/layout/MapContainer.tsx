@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import { MapContainer as LeafletMap, TileLayer } from "react-leaflet";
 import { useLocation } from "react-router-dom";
 
@@ -12,11 +12,6 @@ import {
 import MissionPathModal from "../ui/Modals/MissionPathModal";
 import KeyEventsModal from "../ui/Modals/KeyEventsModal";
 
-import {
-	generateUAVDetailData,
-	generateMissionCoordinates,
-	getMissionPathColor,
-} from "./UAVData";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import L from "leaflet";
 import { useDetectionContext } from "./DetectionContext";
@@ -26,6 +21,8 @@ import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import AnalysisModal from "../ui/Modals/AnalysisModal";
 import DetectionsModal from "../ui/Modals/DetectionsModal";
+
+import { useUAVLocations } from "./ctx/UAVLocations/useUAVLocations";
 
 interface SelectedUAV {
 	id: string | number;
@@ -53,267 +50,7 @@ const missionProgressText =
 const operationalSummaryText =
 	"Area assessment proceeding as planned with no significant anomalies detected. Reconnaissance data collection on target, with 3.5 GB transmitted successfully. Rural activity patterns consistent with intelligence briefings. Mission continuing toward scheduled completion with all safety protocols active.";
 
-// Helper function to create UAV location with Mission Path
-const createUAVLocation = (
-	position: [number, number],
-	type: "online" | "warning" | "danger",
-	uavData: Parameters<typeof generateUAVDetailData>[0]
-) => {
-	const missionPathCoordinates = generateMissionCoordinates(position);
 
-	return {
-		position,
-		type,
-		data: {
-			...generateUAVDetailData(uavData),
-			missionPathCoordinates: missionPathCoordinates.map(([lat, lon]) => ({
-				lat,
-				lon,
-			})),
-		},
-		MissionPath: missionPathCoordinates.map(([lat, lon]) => ({ lat, lon })),
-		MissionPathColor: getMissionPathColor(type),
-	};
-};
-
-// Comprehensive UAV locations covering a wider area for better simulation
-const uavLocations = [
-	createUAVLocation([50.620145, 35.285671], "warning", {
-		id: "1",
-		name: "KUNA",
-		coordinates: "50.620145, 35.285671",
-		status: "low battery",
-		battery: "low",
-		batteryPercentage: 100,
-		signal: "strong",
-		signalPercentage: 100,
-		description: "Active UAV",
-		mission: "Mission 1",
-		MissionPath: "Path 1",
-	}),
-	// createUAVLocation([50.565492, 35.341889], "warning", {
-	// 	id: "2",
-	// 	name: "Hawk Delta",
-	// 	coordinates: "52.2360, 21.0140",
-	// 	status: "low battery",
-	// 	battery: "low",
-	// 	batteryPercentage: 20,
-	// 	signal: "strong",
-	// 	signalPercentage: 100,
-	// 	description: "Low Battery UAV",
-	// 	mission: "Mission 2",
-	// 	MissionPath: "Path 2",
-	// }),
-	// createUAVLocation([50.612347, 35.398445], "online", {
-	// 	id: "3",
-	// 	name: "Falcon Gamma",
-	// 	coordinates: "52.2370, 21.0160",
-	// 	status: "active",
-	// 	battery: "good",
-	// 	batteryPercentage: 80,
-	// 	signal: "strong",
-	// 	signalPercentage: 100,
-	// 	description: "Active UAV",
-	// 	mission: "Mission 3",
-	// 	MissionPath: "Path 3",
-	// }),
-	createUAVLocation([50.587456, 35.523167], "online", {
-		id: "5",
-		name: "Osprey Foxtrot",
-		coordinates: "52.2380, 21.0170",
-		status: "active",
-		battery: "full",
-		batteryPercentage: 100,
-		signal: "strong",
-		signalPercentage: 100,
-		description: "Active UAV",
-		mission: "Mission 5",
-		MissionPath: "Path 5",
-	}),
-
-	createUAVLocation([50.512456, 35.389123], "danger", {
-		id: "10",
-		name: "Shark",
-		coordinates: "52.2400, 21.0300",
-		status: "danger",
-		battery: "low",
-		batteryPercentage: 20,
-		signal: "weak",
-		signalPercentage: 20,
-		description: "danger UAV",
-		mission: "Mission 10",
-		MissionPath: "Path 10",
-	}),
-	// createUAVLocation([50.478923, 35.201456], "online", {
-	// 	id: "12",
-	// 	name: "Kestrel Kilo",
-	// 	coordinates: "52.2420, 21.0320",
-	// 	status: "active",
-	// 	battery: "full",
-	// 	batteryPercentage: 100,
-	// 	signal: "strong",
-	// 	signalPercentage: 100,
-	// 	description: "Active UAV",
-	// 	mission: "Mission 12",
-	// 	MissionPath: "Path 12",
-	// }),
-	createUAVLocation([50.734567, 35.312889], "online", {
-		id: "13",
-		name: "Eagle Prime",
-		coordinates: "52.2430, 21.0280",
-		status: "active",
-		battery: "good",
-		batteryPercentage: 80,
-		signal: "strong",
-		signalPercentage: 100,
-		description: "Active UAV",
-		mission: "Mission 13",
-		MissionPath: "Path 13",
-	}),
-	createUAVLocation([50.445612, 35.278934], "warning", {
-		id: "14",
-		name: "Bobr UJ26",
-		coordinates: "52.2100, 21.0200",
-		status: "fuel low",
-		battery: "critical",
-		batteryPercentage: 80,
-		signal: "strong",
-		signalPercentage: 100,
-		description: "Active UAV",
-		mission: "Mission 14",
-		MissionPath: "Path 14",
-	}),
-	createUAVLocation([50.821345, 35.456723], "danger", {
-		id: "15",
-		name: "Albatross Lima",
-		coordinates: "52.2110, 21.0210",
-		status: "fuel low",
-		battery: "critical",
-		batteryPercentage: 10,
-		signal: "intermittent",
-		signalPercentage: 50,
-		description: "Fuel Low UAV",
-		mission: "Mission 15",
-		MissionPath: "Path 15",
-	}),
-	createUAVLocation([50.356789, 35.189567], "online", {
-		id: "16",
-		name: "Pelican Mike",
-		coordinates: "52.2120, 21.0190",
-		status: "active",
-		battery: "good",
-		batteryPercentage: 80,
-		signal: "strong",
-		signalPercentage: 100,
-		description: "Active UAV",
-		mission: "Mission 16",
-		MissionPath: "Path 16",
-	}),
-	// createUAVLocation([50.612345, 35.589234], "online", {
-	// 	id: "19",
-	// 	name: "Phoenix Beta",
-	// 	coordinates: "52.2510, 21.0060",
-	// 	status: "active",
-	// 	battery: "full",
-	// 	batteryPercentage: 100,
-	// 	signal: "strong",
-	// 	signalPercentage: 100,
-	// 	description: "Active UAV",
-	// 	mission: "Mission 19",
-	// 	MissionPath: "Path 19",
-	// }),
-	createUAVLocation([50.634567, 35.734456], "warning", {
-		id: "20",
-		name: "Raven Omega",
-		coordinates: "52.2520, 21.0080",
-		status: "low battery",
-		battery: "low",
-		batteryPercentage: 20,
-		signal: "strong",
-		signalPercentage: 100,
-		description: "Low Battery UAV",
-		mission: "Mission 20",
-		MissionPath: "Path 20",
-	}),
-	createUAVLocation([50.601234, 35.812789], "online", {
-		id: "21",
-		name: "Northern Scout 1",
-		coordinates: "52.2700, 21.0100",
-		status: "active",
-		battery: "good",
-		batteryPercentage: 80,
-		signal: "strong",
-		signalPercentage: 100,
-		description: "Active UAV",
-		mission: "Mission 21",
-		MissionPath: "Path 21",
-	}),
-	createUAVLocation([50.623456, 35.967456], "warning", {
-		id: "22",
-		name: "Northern Scout 2",
-		coordinates: "52.2750, 21.0150",
-		status: "signal issues",
-		battery: "good",
-		batteryPercentage: 80,
-		signal: "intermittent",
-		signalPercentage: 50,
-		description: "Signal Issues",
-		mission: "Mission 22",
-		MissionPath: "Path 22",
-	}),
-	createUAVLocation([51.045623, 35.298567], "online", {
-		id: "24",
-		name: "Southern Guard 1",
-		coordinates: "52.1800, 21.0000",
-		status: "active",
-		battery: "full",
-		batteryPercentage: 100,
-		signal: "strong",
-		signalPercentage: 100,
-		description: "Active UAV",
-		mission: "Mission 24",
-		MissionPath: "Path 24",
-	}),
-	createUAVLocation([50.123456, 35.489234], "danger", {
-		id: "25",
-		name: "Southern Guard 2",
-		coordinates: "52.1750, 21.0050",
-		status: "low battery",
-		battery: "critical",
-		batteryPercentage: 10,
-		signal: "weak",
-		signalPercentage: 20,
-		description: "Low Battery UAV",
-		mission: "Mission 25",
-		MissionPath: "Path 25",
-	}),
-	createUAVLocation([51.234567, 35.678945], "online", {
-		id: "26",
-		name: "Southern Perimeter",
-		coordinates: "52.1700, 21.0100",
-		status: "active",
-		battery: "good",
-		batteryPercentage: 80,
-		signal: "strong",
-		signalPercentage: 100,
-		description: "Active UAV",
-		mission: "Mission 26",
-		MissionPath: "Path 26",
-	}),
-	createUAVLocation([49.876543, 34.912345], "warning", {
-		id: "27",
-		name: "Eastern Outpost 1",
-		coordinates: "52.2300, 21.0800",
-		status: "signal issues",
-		battery: "good",
-		batteryPercentage: 80,
-		signal: "weak",
-		signalPercentage: 20,
-		description: "Signal Issues UAV",
-		mission: "Mission 27",
-		MissionPath: "Path 27",
-	}),
-];
 
 const MapContainer: React.FC<MapContainerProps> = ({
 	showIndicators = false,
@@ -338,26 +75,10 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		useState<any>(null);
 
 	const [isAnalysisOpen, setIsAnalysisOpen] = useState<boolean>(false);
-	const [uavLocationsState, setUavLocationsState] = useState(uavLocations);
 
-	// DEMO MOVEMENT - move UAVs slightly every 2 seconds
-	useEffect(() => {
-		const intervalId = setInterval(() => {
-			setUavLocationsState((prevLocations: any[]) =>
-				prevLocations.map((uav: any) => {
-					const newLat = uav.position[0] + (Math.random() - 0.5) * 0.002;
-					const newLon = uav.position[1] + (Math.random() - 0.5) * 0.002;
-					return {
-						...uav,
-						position: [newLat, newLon] as [number, number],
-					};
-				})
-			);
-		}, 2000);
+	const { getAllUAVLocations } = useUAVLocations();
 
-		return () => clearInterval(intervalId);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [uavLocations]);
+	const allUAVLocations = getAllUAVLocations();
 
 	// Ukraine coordinates (center remains the same)
 	const mapCenter: [number, number] = [50.59277, 35.307222];
@@ -372,7 +93,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		setSelectedUAVForMissionPath(null);
 	};
 
-	const handleUAVDetailClick = (id: string | number) => {
+	const handleUAVDetailClick = useCallback((id: string | number) => {
 		setSelectedUAVs((prev) => [
 			...prev,
 			{
@@ -382,7 +103,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 				showDetections: false,
 			},
 		]);
-	};
+	}, []);
 
 	const handleCloseUAVModal = (id: number) => {
 		setSelectedUAVs((prev) => prev.filter((uav) => uav.id !== id));
@@ -438,7 +159,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 
 			{/* UAV Detail Modal */}
 			{selectedUAVs.length > 0 &&
-				uavLocationsState.map((uav: any) =>
+				allUAVLocations.map((uav: any) =>
 					selectedUAVs.map((selectedUAV: any) => {
 						if (uav.data.id === selectedUAV.id) {
 							return (
@@ -462,7 +183,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 				)}
 			{/* Detection Modals */}
 			{selectedUAVs.length > 0 &&
-				uavLocationsState.map((uav: any) =>
+				allUAVLocations.map((uav: any) =>
 					selectedUAVs.map((selectedUAV: any) => {
 						if (uav.data.id === selectedUAV.id && selectedUAV.showDetections) {
 							return (
@@ -479,7 +200,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 				)}
 			{/* Key Events Modals */}
 			{selectedUAVs.length > 0 &&
-				uavLocationsState.map((uav: any) =>
+				allUAVLocations.map((uav: any) =>
 					selectedUAVs.map((selectedUAV: any) => {
 						if (uav.data.id === selectedUAV.id && selectedUAV.showKeyEvents) {
 							return (
@@ -508,7 +229,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 					{/* Mission Paths - only on homepage when showMissionPaths is true, hide for clustered UAVs */}
 					{showIndicators && showMissionPaths && (
 						<>
-							{uavLocationsState
+							{allUAVLocations
 								.filter(
 									(uav: any) => !clusteredUAVIds.has(uav.data.id.toString())
 								)
@@ -557,15 +278,11 @@ const MapContainer: React.FC<MapContainerProps> = ({
 							zoomToBoundsOnClick={true}
 							maxClusterRadius={50}
 						>
-							{uavLocationsState.map((uav: any, index: number) => (
+							{allUAVLocations.map((uav: any) => (
 								<ClusterableUAVMarker
-									key={`uav-${index}`}
-									position={uav.position}
-									type={uav.type}
-									data={uav.data}
-									onDetailClick={() =>
-										handleUAVDetailClick(uav.data.id as string | number)
-									}
+									key={`uav-marker-${uav.data.id}`}
+									id={uav.data.id}
+									onDetailClick={handleUAVDetailClick}
 								/>
 							))}
 						</MarkerClusterGroup>
