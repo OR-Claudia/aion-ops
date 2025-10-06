@@ -1,6 +1,6 @@
-import { type FC, type ReactNode, type CSSProperties } from "react";
+import { type FC, type ReactNode, type CSSProperties, memo } from "react";
 import { cn } from "../../../lib/utils";
-import timesIcon from "../../../assets/times.svg";
+import TimesIcon from "../../../assets/times.svg?react";
 
 type Corner = "tl" | "tr" | "br" | "bl";
 
@@ -12,8 +12,8 @@ interface PointTagDetailsProps {
   children: ReactNode;
 }
 
-export const PointTagDetails: FC<PointTagDetailsProps> = (props) => {
-  const { angle, length, style, children } = props;
+export const PointTagDetails: FC<PointTagDetailsProps> = memo((props) => {
+  const { angle, length, style, close, children } = props;
 
   const DEFAULT_ANGLE = 45;
   const DEFAULT_LENGTH = 50;
@@ -56,17 +56,19 @@ export const PointTagDetails: FC<PointTagDetailsProps> = (props) => {
     smokePos.bottom = `${Math.abs(posY)}px`;
   }
 
+  const smokeStaticClasses = "absolute bg-[#00C6B8] text-[#222631] px-3 pt-2 pb-1";
+
   return (
-    <div className="absolute top-[50%] left-[50%]" style={style}>
+    <div className="absolute top-[50%] left-[50%] cursor-auto" style={style} onClick={ev => ev.stopPropagation()}>
       <svg className={`absolute z-10 overflow-visible`} style={{transformOrigin: `0 0`, rotate: `${_angle + 180}deg`}} width={STROKE_WIDTH} height={_length + 1}>
         <line x1={0} y1={0} x2={0} y2={_length + 1} stroke="#00C6B8" strokeWidth={STROKE_WIDTH} />
       </svg>
-      <div className={cn(cornerClass, `absolute bg-[#00C6B8] text-[#000]`)} style={smokePos}>
-        <button className="absolute right-1 top-1 w-[8px] h-[8px]" type="button" onClick={close}>
-          <img className="w-[5px] h-[5px]" src={timesIcon} color="#000" />
+      <div className={cn(cornerClass, smokeStaticClasses)} style={smokePos}>
+        <button className="absolute right-1 top-1 w-[8px] h-[8px] cursor-pointer" type="button" onClick={close}>
+          <TimesIcon className="w-[8px] h-[8px] fill-[#222631]" />
         </button>
         {children}
       </div>
     </div>
   );
-};
+});

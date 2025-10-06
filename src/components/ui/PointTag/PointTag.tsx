@@ -1,18 +1,26 @@
-import { useState, type FC, type ReactNode } from "react";
+import { useCallback, useState, type FC, type ReactNode, type CSSProperties, memo } from "react";
 import { PointTagDetails } from "./PointTagDetails";
+import { pointTagCtx } from './ctx';
+
+const PointTagCtxProvider = pointTagCtx.Provider;
 
 interface PointTagProps {
   children: ReactNode;
-  style?: object;
-  maxLen: number;
+  style?: CSSProperties;
+  angle?: number;
+  length?: number;
 }
 
-export const PointTag: FC<PointTagProps> = (props) => {
+export const PointTag: FC<PointTagProps> = memo((props) => {
   const {
+    angle,
+    length,
     style,
     children,
   } = props;
   const [open, setOpen] = useState<boolean>(false);
+  const close = useCallback(() => setOpen(false), []);
+
   return (
     <div
       style={style}
@@ -24,11 +32,13 @@ export const PointTag: FC<PointTagProps> = (props) => {
     >
       {open ? (
         <>
-          <PointTagDetails>
-            {children}
+          <PointTagDetails angle={angle} length={length} close={close}>
+            <PointTagCtxProvider value={{setOpen, close}}>
+              {children}
+            </PointTagCtxProvider>
           </PointTagDetails>
         </>
       ) : null}
     </div>
   );
-};
+});

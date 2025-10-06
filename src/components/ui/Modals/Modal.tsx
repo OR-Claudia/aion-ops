@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import type { ReactNode } from "react";
-import timesIcon from "../../../assets/times.svg";
+import TimesIcon from "../../../assets/times.svg?react";
 import windowMinimizeIcon from "../../../assets/window-minimize.svg";
 
 export interface ModalProps {
@@ -158,13 +158,9 @@ const Modal: React.FC<ModalProps> = ({
 						{showCloseButton && (
 							<button
 								onClick={onClose}
-								className="ml-4 w-[21px] h-[23px] text-[#E3F3F2] hover:text-white transition-colors flex items-center justify-center border-none bg-transparent cursor-pointer"
+								className="ml-4 w-[21px] h-[23px] text-[#E3F3F2] fill-[#E3F3F2] hover:text-white transition-colors flex items-center justify-center border-none bg-transparent cursor-pointer"
 							>
-								<img
-									src={timesIcon}
-									alt="close"
-									className="w-[14px] h-[14px]"
-								/>
+								<TimesIcon className="w-[14px] h-[14px] fill-[#E3F3F2]" />
 							</button>
 						)}
 					</div>

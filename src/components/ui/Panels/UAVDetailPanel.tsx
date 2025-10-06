@@ -3,7 +3,7 @@ import type { UAVData } from "../UAVCard";
 import StatusBar from "../StatusBar";
 import wifiIcon from "../../../assets/wifi.svg";
 import batteryFullIcon from "../../../assets/battery-full.svg";
-import timesIcon from "../../../assets/times.svg";
+import TimesIcon from "../../../assets/times.svg?react";
 import Button from "../Button";
 
 interface UAVDetailPanelProps {
@@ -58,7 +58,7 @@ const UAVDetailPanel: React.FC<UAVDetailPanelProps> = ({ uav, onClose }) => {
 				onClick={onClose}
 				className="absolute right-[21px] top-[16px] w-8 h-8 text-[#E3F3F2] hover:text-white transition-colors flex items-center justify-center border-none bg-transparent"
 			>
-				<img src={timesIcon} alt="close" className="w-[14px] h-[14px]" />
+				<TimesIcon className="w-[14px] h-[14px] fill-[#E3F3F2]" />
 			</button>
 			{/* UAV Name */}
 			<div className="absolute left-8 top-[20px] text-[#E3F3F2] font-ubuntu text-[20px] font-bold ">

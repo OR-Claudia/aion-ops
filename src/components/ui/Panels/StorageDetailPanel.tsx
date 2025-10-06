@@ -1,6 +1,6 @@
 import React from "react";
 import type { StorageData } from "../StorageItem";
-import timesIcon from "../../../assets/times.svg";
+import TimesIcon from "../../../assets/times.svg?react";
 import externalLinkIcon from "../../../assets/external-link.svg";
 import Button from "../Button";
 import VideoPlayer from "../VideoPlayer.tsx";
@@ -130,7 +130,7 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 					onClick={onClose}
 					className="absolute right-[21px] top-[16px] w-[21px] h-[23px] text-[#E3F3F2] hover:text-white transition-colors flex items-center justify-center border-none bg-transparent"
 				>
-					<img src={timesIcon} alt="close" className="w-[14px] h-[14px]" />
+					<TimesIcon className="w-[14px] h-[14px] fill-[#E3F3F2]" />
 				</button>
 
 				{/* Mission Title */}
