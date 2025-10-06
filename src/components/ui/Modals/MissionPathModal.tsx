@@ -11,7 +11,6 @@ import Modal from "./Modal";
 import type { StorageData } from "../StorageItem";
 import type { UAVDetailData } from "./UAVDetailModal";
 import { reverseGeocode } from "../../../lib/utils";
-import { PointTag } from "../PointTag/PointTag";
 
 interface MissionPathModalProps {
 	isOpen: boolean;
@@ -340,8 +339,6 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 			</div>
 			{/* Region Information */}
 			<div className="flex justify-between items-center">
-				Test:
-				<PointTag maxLen={50}>Test</PointTag>
 				<span className="text-[#E3F3F2] font-ubuntu text-lg font-medium">
 					Region
 				</span>
