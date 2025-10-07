@@ -10,8 +10,8 @@ export class BBoxUtil {
   private centerPoint: Size;
   constructor(origBbx: BBox, streamResolution: Size, videoElementSize: Size) {
     this.originalBBox = origBbx;
-    this.scaleRatioX = streamResolution[0] / videoElementSize[0];
-    this.scaleRatioY = streamResolution[1] / videoElementSize[1];
+    this.scaleRatioX = videoElementSize[0] / streamResolution[0];
+    this.scaleRatioY = videoElementSize[1] / streamResolution[1];
     this.rescaledBBox = [
       this.originalBBox[0] * this.scaleRatioX,
       this.originalBBox[1] * this.scaleRatioY,
