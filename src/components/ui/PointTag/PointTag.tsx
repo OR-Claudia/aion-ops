@@ -18,18 +18,25 @@ interface PointTagProps {
 	angle?: number;
 	length?: number;
 	className?: string;
+	position: [number, number];
 }
 
 export const PointTag: FC<PointTagProps> = memo((props) => {
-	const { angle, length, style, children, className } = props;
+	const { angle, length, style, children, className, position } = props;
 	const [open, setOpen] = useState<boolean>(false);
 	const close = useCallback(() => setOpen(false), []);
 
+	let topStyle: CSSProperties = {left: `${position[0]}px`, top: `${position[1]}px`, transform: 'translate(-50%, -50%)'};
+
+	if (style) {
+		topStyle = {...style, ...topStyle};
+	}
+
 	return (
 		<div
-			style={style}
+			style={topStyle}
 			className={cn(
-				"relative rounded-[4px] w-[8px] h-[8px] bg-[#00C6B8] cursor-pointer",
+				"absolute rounded-[4px] w-[16px] h-[16px] bg-[#00C6B8] cursor-pointer",
 				className
 			)}
 			onClick={() => {
