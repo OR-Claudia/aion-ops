@@ -1,6 +1,6 @@
 import { useRef, useEffect, type FC, type RefObject } from "react";
 
-import { cn, useMetadataSync } from "../../lib/utils";
+import { cn, useMetadataSync, type BBox } from "../../lib/utils";
 
 import Hls from "hls.js";
 
@@ -16,6 +16,8 @@ import {
 	MediaTimeRange,
 	MediaVolumeRange,
 } from "media-chrome/react";
+import { PointTag } from "./PointTag/PointTag";
+import { BBoxUtil } from "../../lib/bboxutils";
 
 interface VideoPlayerProps {
 	src?: string;
@@ -58,6 +60,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 		videoRef as RefObject<HTMLVideoElement>,
 		enableSync && !isGoogleEmbed
 	);
+
+	// console.log(detections);
 
 	useEffect(() => {
 		const videoElement = videoRef.current;
@@ -132,10 +136,12 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 				width={width}
 				height={height}
 				referrerPolicy={"origin"}
-			></iframe>
+			>
+				{/* <div className=""></div> */}
+			</iframe>
 		);
 	}
-	console.log("No video source provided", src === "", !src, src);
+	// console.log("No video source provided", src === "", !!src, src);
 	if (src === "" || !src) {
 		return (
 			<div
@@ -150,79 +156,124 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	}
 
 	const videoElement = (
-		<>
-			<MediaController
-				style={{
-					width: "100%",
-					aspectRatio: "auto",
-				}}
-			>
-				<video
-					ref={videoRef}
-					slot="media"
-					className={cn(className, "border-none w-full h-full")}
-					style={{ width, height }}
-					preload="auto"
-					playsInline
-					disablePictureInPicture={true}
-				/>
-				<MediaControlBar
-					// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
-					style={{ "--media-primary-color": "#D3FBD8" }}
-					className="w-full flex flex-col backdrop-blur-[5px] bg-black/50"
+		<div>
+			<div style={{ width, height }} className="relative overflow-visible">
+				<MediaController
+					style={{
+						width: "100%",
+						aspectRatio: "auto",
+					}}
 				>
-					<div className="flex w-full h-full items-center place-content-between px-3">
-						<MediaTimeRange
-							className={`${
-								livestream ? "w-full" : "w-10/12"
-							} bg-transparent overflow-hidden`}
-							// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
-							style={{ "--media-primary-color": "#FFF" }}
-						/>
-						{livestream ? null : (
-							<MediaTimeDisplay
-								showDuration
-								className="w-2/12 bg-transparent"
-							/>
-						)}
-					</div>
-
 					<div
-						className={cn(
-							"flex w-full h-full items-center place-content-between px-5 mb-2",
-							{ ["pr-[30%]"]: !allowfullscreen }
-						)}
+						style={{ zIndex: 90, width, height }}
+						className="absolute top-0 left-0"
 					>
-						<div
-							className={cn(" flex", {
-								["w-3/12"]: !allowfullscreen,
-								["w-2/12"]: allowfullscreen,
-							})}
-						>
-							<MediaMuteButton className="bg-transparent" />
-							<MediaVolumeRange className="bg-transparent" />
-						</div>
-						{!livestream ? (
-							<MediaSeekBackwardButton
-								seekOffset={5}
-								className="bg-transparent"
-							/>
-						) : null}
+						{detections && detections.length !== 0
+							? detections.map((d, i) => {
+									if (d.bbox === undefined) {
+										return null;
+									}
+									const _dbbox: number[] = Array.isArray(d.bbox)
+										? d.bbox
+										: Object.values(d.bbox);
 
-						<MediaPlayButton className="bg-transparent" />
-						{!livestream ? (
-							<MediaSeekForwardButton
-								seekOffset={5}
-								className="bg-transparent"
-							/>
-						) : null}
+									if (!_dbbox) {
+										console.warn(`Skipping detection ${i} — malformed bbox`, d);
+										return null;
+									}
 
-						{allowfullscreen && (
-							<MediaFullscreenButton className="bg-transparent w-2/12" />
-						)}
+									const dbbox: BBoxUtil = new BBoxUtil(
+										_dbbox as BBox,
+										[1920, 1080],
+										[
+											videoRef.current!.clientWidth,
+											videoRef.current!.clientHeight,
+										]
+									);
+
+									const dCenter = dbbox.getCenterPoint();
+
+									// don't display if bbox is undefined
+
+									return (
+										<PointTag
+											style={{ left: dCenter[0], bottom: dCenter[1] }}
+											className="absolute"
+										>
+											<p>{d.class_name}</p>
+										</PointTag>
+									);
+							  })
+							: null}
 					</div>
-				</MediaControlBar>
-			</MediaController>
+					<video
+						ref={videoRef}
+						slot="media"
+						className={cn(className, "border-none w-full h-full")}
+						style={{ width, height }}
+						preload="auto"
+						playsInline
+						disablePictureInPicture={true}
+					/>
+					<MediaControlBar
+						// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
+						style={{ "--media-primary-color": "#D3FBD8" }}
+						className="w-full flex flex-col backdrop-blur-[5px] bg-black/50"
+					>
+						<div className="flex w-full h-full items-center place-content-between px-3">
+							<MediaTimeRange
+								className={`${
+									livestream ? "w-full" : "w-10/12"
+								} bg-transparent overflow-hidden`}
+								// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
+								style={{ "--media-primary-color": "#FFF" }}
+							/>
+							{livestream ? null : (
+								<MediaTimeDisplay
+									showDuration
+									className="w-2/12 bg-transparent"
+								/>
+							)}
+						</div>
+
+						<div
+							className={cn(
+								"flex w-full h-full items-center place-content-between px-5 mb-2",
+								{ ["pr-[30%]"]: !allowfullscreen }
+							)}
+						>
+							<div
+								className={cn(" flex", {
+									["w-3/12"]: !allowfullscreen,
+									["w-2/12"]: allowfullscreen,
+								})}
+							>
+								<MediaMuteButton className="bg-transparent" />
+								<MediaVolumeRange className="bg-transparent" />
+							</div>
+							{!livestream ? (
+								<MediaSeekBackwardButton
+									seekOffset={5}
+									className="bg-transparent"
+								/>
+							) : null}
+
+							<MediaPlayButton className="bg-transparent" />
+							{!livestream ? (
+								<MediaSeekForwardButton
+									seekOffset={5}
+									className="bg-transparent"
+								/>
+							) : null}
+
+							{allowfullscreen && (
+								<MediaFullscreenButton className="bg-transparent w-2/12" />
+							)}
+						</div>
+					</MediaControlBar>
+				</MediaController>
+			</div>
+
 			{!isGoogleEmbed && enableSync && (
 				<div className="text-xs text-gray-400 mt-2 space-y-1 max-h-40 overflow-y-auto bg-black/20 p-2 rounded">
 					<div>
@@ -255,7 +306,6 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						</div>
 						{telemetry && (
 							<div className="grid grid-cols-2 gap-2">
-								<p className="text-orange-400 font-semibold">Telemetry:</p>
 								<p>
 									<span className="text-red-400 text-xs">Lat:</span>
 									{telemetry.latitude?.toFixed(6) || "-"}
@@ -324,7 +374,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 					)}
 				</div>
 			)}
-		</>
+		</div>
 	);
 
 	return isGoogleEmbed ? (

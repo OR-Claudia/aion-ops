@@ -64,7 +64,9 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 		{
 			id: "rgb",
 			label: "RGB",
-			value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
+			// value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
+
+			value: "http://193.123.68.104:8888/detected_stream/index.m3u8",
 		},
 		{
 			id: "thermo",
@@ -81,9 +83,10 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 	const shouldEnableSync = () => {
 		const currentSource = getCurrentVideoSource();
 		// Enable sync only for live HLS streams (.m3u8 URLs)
-		return livestream && (
-			currentSource.toLowerCase().includes(".m3u8") ||
-			currentSource.toLowerCase().includes("application/vnd.apple.mpegurl")
+		return (
+			livestream &&
+			(currentSource.toLowerCase().includes(".m3u8") ||
+				currentSource.toLowerCase().includes("application/vnd.apple.mpegurl"))
 		);
 	};
 
@@ -210,7 +213,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 							height={
 								livestream
 									? activeTab === "rgb"
-										? "300px"
+										? "auto"
 										: "300px"
 									: activeTab === "rgb"
 									? "auto"
