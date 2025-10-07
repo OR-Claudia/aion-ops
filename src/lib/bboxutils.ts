@@ -19,8 +19,8 @@ export class BBoxUtil {
       this.originalBBox[3] * this.scaleRatioY,
     ];
     this.centerPoint = [
-      (this.rescaledBBox[2] - this.rescaledBBox[0] / 2) + this.rescaledBBox[0],
-      (this.rescaledBBox[3] - this.rescaledBBox[1] / 2) + this.rescaledBBox[1],
+      ((this.rescaledBBox[2] - this.rescaledBBox[0]) / 2) + this.rescaledBBox[0],
+      ((this.rescaledBBox[3] - this.rescaledBBox[1]) / 2) + this.rescaledBBox[1],
     ];
   }
 
