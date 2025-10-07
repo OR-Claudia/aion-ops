@@ -155,57 +155,59 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 		);
 	}
 
+	console.log('detections: ', detections);
+
 	const videoElement = (
-		<div>
+		<div className="relative overflow-visible">
 			<div style={{ width, height }} className="relative overflow-visible">
+				<div
+					style={{ zIndex: 90, width: `${videoRef.current?.clientWidth ?? 0}px`, height: `${videoRef.current?.clientHeight ?? 0}px` }}
+					className="absolute top-0 left-0 overflow-visible"
+				>
+					{detections && detections.length !== 0
+						? detections.map((d, i) => {
+								if (d.bbox === undefined) {
+									return null;
+								}
+								const _dbbox: number[] = Array.isArray(d.bbox)
+									? d.bbox
+									: Object.values(d.bbox);
+
+								if (!_dbbox) {
+									console.warn(`Skipping detection ${i} — malformed bbox`, d);
+									return null;
+								}
+
+								const dbbox: BBoxUtil = new BBoxUtil(
+									_dbbox as BBox,
+									[1280, 720],
+									[
+										videoRef.current!.clientWidth,
+										videoRef.current!.clientHeight,
+									]
+								);
+
+								const dCenter = dbbox.getCenterPoint();
+
+								// don't display if bbox is undefined
+
+								return (
+									<PointTag
+										style={{ left: dCenter[0], top: dCenter[1] }}
+										className="absolute"
+									>
+										<p>{d.class_name}</p>
+									</PointTag>
+								);
+							})
+						: null}
+				</div>
 				<MediaController
 					style={{
 						width: "100%",
 						aspectRatio: "auto",
 					}}
 				>
-					<div
-						style={{ zIndex: 90, width, height }}
-						className="absolute top-0 left-0"
-					>
-						{detections && detections.length !== 0
-							? detections.map((d, i) => {
-									if (d.bbox === undefined) {
-										return null;
-									}
-									const _dbbox: number[] = Array.isArray(d.bbox)
-										? d.bbox
-										: Object.values(d.bbox);
-
-									if (!_dbbox) {
-										console.warn(`Skipping detection ${i} — malformed bbox`, d);
-										return null;
-									}
-
-									const dbbox: BBoxUtil = new BBoxUtil(
-										_dbbox as BBox,
-										[1920, 1080],
-										[
-											videoRef.current!.clientWidth,
-											videoRef.current!.clientHeight,
-										]
-									);
-
-									const dCenter = dbbox.getCenterPoint();
-
-									// don't display if bbox is undefined
-
-									return (
-										<PointTag
-											style={{ left: dCenter[0], bottom: dCenter[1] }}
-											className="absolute"
-										>
-											<p>{d.class_name}</p>
-										</PointTag>
-									);
-							  })
-							: null}
-					</div>
 					<video
 						ref={videoRef}
 						slot="media"
@@ -217,7 +219,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 					/>
 					<MediaControlBar
 						// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
-						style={{ "--media-primary-color": "#D3FBD8" }}
+						style={{ "--media-primary-color": "#D3FBD8", zIndex: 100 }}
 						className="w-full flex flex-col backdrop-blur-[5px] bg-black/50"
 					>
 						<div className="flex w-full h-full items-center place-content-between px-3">
