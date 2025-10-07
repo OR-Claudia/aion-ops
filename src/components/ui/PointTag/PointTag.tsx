@@ -18,10 +18,11 @@ interface PointTagProps {
 	angle?: number;
 	length?: number;
 	className?: string;
+	detailStyle?: CSSProperties;
 }
 
 export const PointTag: FC<PointTagProps> = memo((props) => {
-	const { angle, length, style, children, className } = props;
+	const { angle, length, style, children, className, detailStyle } = props;
 	const [open, setOpen] = useState<boolean>(false);
 	const close = useCallback(() => setOpen(false), []);
 
@@ -39,7 +40,12 @@ export const PointTag: FC<PointTagProps> = memo((props) => {
 		>
 			{open ? (
 				<>
-					<PointTagDetails angle={angle} length={length} close={close}>
+					<PointTagDetails
+						style={detailStyle}
+						angle={angle}
+						length={length}
+						close={close}
+					>
 						<PointTagCtxProvider value={{ setOpen, close }}>
 							{children}
 						</PointTagCtxProvider>

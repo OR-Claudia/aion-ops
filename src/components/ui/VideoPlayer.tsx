@@ -1,6 +1,6 @@
 import { useRef, useEffect, type FC, type RefObject } from "react";
 
-import { cn, useMetadataSync, type BBox } from "../../lib/utils";
+import { capitalize, cn, useMetadataSync, type BBox } from "../../lib/utils";
 
 import Hls from "hls.js";
 
@@ -199,7 +199,9 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 										<PointTag
 											style={{ left: dCenter[0], bottom: dCenter[1] }}
 											className="absolute"
+											key={`${d.class_id}-${i}`}
 										>
+											<p>{d.class_name}</p>
 											<p>{d.class_name}</p>
 										</PointTag>
 									);
@@ -215,6 +217,49 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						playsInline
 						disablePictureInPicture={true}
 					/>
+					{detections && detections.length !== 0
+						? detections.map((d, i) => {
+								if (d.bbox === undefined) {
+									return null;
+								}
+								const _dbbox: number[] = Array.isArray(d.bbox)
+									? d.bbox
+									: Object.values(d.bbox);
+
+								if (!_dbbox) {
+									console.warn(`Skipping detection ${i} — malformed bbox`, d);
+									return null;
+								}
+
+								const dbbox: BBoxUtil = new BBoxUtil(
+									_dbbox as BBox,
+									[1920, 1080],
+									[
+										videoRef.current!.clientWidth,
+										videoRef.current!.clientHeight,
+									]
+								);
+
+								const dCenter = dbbox.getCenterPoint();
+
+								// don't display if bbox is undefined
+
+								return (
+									<PointTag
+										style={{ left: dCenter[0], bottom: dCenter[1] }}
+										className="absolute"
+										key={`${d.class_id}-${i}`}
+									>
+										<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
+											<p>{`ID:${d.class_id}`}</p>
+											<p>{`${capitalize(d.class_name)}, ${d.confidence.toFixed(
+												2
+											)}`}</p>
+										</div>
+									</PointTag>
+								);
+						  })
+						: null}
 					<MediaControlBar
 						// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
 						style={{ "--media-primary-color": "#D3FBD8" }}
