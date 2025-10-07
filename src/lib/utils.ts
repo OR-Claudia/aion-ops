@@ -343,11 +343,11 @@ let updateInterval: number | null = null;
 const initSSE = (sync: MetadataSync) => {
 	// Auto-detect: use current hostname or fall back to localhost
 	// 193.123.68.104 -> Francesco host address
-	const hostname =
-		typeof window !== "undefined"
-			? window.location.hostname || "localhost"
-			: "localhost";
-	const sseUrl = `http://${hostname}:8081/events`;
+	// const hostname =
+	// 	typeof window !== "undefined"
+	// 		? window.location.hostname || "localhost"
+	// 		: "localhost";
+	const sseUrl = `http://193.123.68.104:8081/events`;
 
 	if (eventSource) {
 		eventSource.close();
