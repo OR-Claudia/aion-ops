@@ -56,12 +56,29 @@ interface TelemetryData {
 	heading?: number;
 	roll?: number;
 	pitch?: number;
+	sensor_width_mm?: number;
+	sensor_height_mm?: number;
+	focal_length_mm?: number;
 }
 
+interface GeoCoordinatesData {
+	latitude: number;
+	longitude: number;
+	estimated_ground_distance_m: number;
+	camera_azimuth_deg: number;
+	camera_elevation_deg: number;
+	calculation_method: string;
+	has_camera_specs: boolean;
+}
+
+export type BBox = [number, number, number, number];
+
 interface DetectionData {
+	class_id: number;
 	class_name: string;
 	confidence: number;
-	bbox: number[];
+	bbox: BBox;
+	geo_coordinates: GeoCoordinatesData;
 }
 
 interface MetadataItem {
