@@ -1,6 +1,6 @@
 import { useRef, useEffect, type FC, type RefObject } from "react";
 
-import { cn, useMetadataSync, type BBox } from "../../lib/utils";
+import { capitalize, cn, useMetadataSync, type BBox } from "../../lib/utils";
 
 import Hls from "hls.js";
 
@@ -155,13 +155,17 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 		);
 	}
 
-	console.log('detections: ', detections);
+	console.log("detections: ", detections);
 
 	const videoElement = (
 		<div className="relative overflow-visible">
 			<div style={{ width, height }} className="relative overflow-visible">
 				<div
-					style={{ zIndex: 90, width: `${videoRef.current?.clientWidth ?? 0}px`, height: `${videoRef.current?.clientHeight ?? 0}px` }}
+					style={{
+						zIndex: 90,
+						width: `${videoRef.current?.clientWidth ?? 0}px`,
+						height: `${videoRef.current?.clientHeight ?? 0}px`,
+					}}
 					className="absolute top-0 left-0 overflow-visible"
 				>
 					{detections && detections.length !== 0
@@ -195,19 +199,30 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 								return (
 									<PointTag
 										position={dCenter}
+										key={`${d.class_id}-${i}`}
 									>
-										<p>{d.class_name}</p>
+										<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
+											<p>{`ID:${d.class_id}`}</p>
+											<p>{`${capitalize(d.class_name)}, ${d.confidence.toFixed(
+												2
+											)}`}</p>
+										</div>
 									</PointTag>
 								);
-							})
+						  })
 						: null}
 				</div>
-				<MediaController
-					style={{
-						width: "100%",
-						aspectRatio: "auto",
-					}}
-				>
+				<MediaController>
+					<video
+						ref={videoRef}
+						slot="media"
+						className={cn(className, "border-none w-full h-full")}
+						style={{ width, height }}
+						preload="auto"
+						playsInline
+						disablePictureInPicture={true}
+					/>
+
 					<video
 						ref={videoRef}
 						slot="media"
