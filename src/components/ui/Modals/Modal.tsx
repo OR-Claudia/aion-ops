@@ -115,7 +115,7 @@ const Modal: React.FC<ModalProps> = ({
 			{/* Modal content */}
 			<div
 				ref={modalRef}
-				className={`absolute rounded-[0px_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/40 backdrop-blur-[8px] max-w-2xl ${className} z-50`}
+				className={`absolute rounded-[0px_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/40 backdrop-blur-[8px] max-w-2xl ${className} z-90`}
 				style={{
 					left: `${position.x}px`,
 					top: `${position.y}px`,

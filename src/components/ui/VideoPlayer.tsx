@@ -1,5 +1,7 @@
-import { useRef, useEffect, type FC } from "react";
-import { cn } from "../../lib/utils";
+import { useRef, useEffect, type FC, type RefObject } from "react";
+
+import { cn, useMetadataSync } from "../../lib/utils";
+
 import Hls from "hls.js";
 
 import {
@@ -23,6 +25,7 @@ interface VideoPlayerProps {
 	livestream?: boolean;
 	allowfullscreen?: boolean;
 	errorMessage?: string;
+	enableSync?: boolean;
 }
 
 const VideoPlayer: FC<VideoPlayerProps> = ({
@@ -33,10 +36,28 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	allowfullscreen = true,
 	className,
 	errorMessage = "No video source available",
+	enableSync = false,
 }) => {
 	const isGoogleEmbed = src.includes("google");
 	const videoRef = useRef<HTMLVideoElement | null>(null);
 	const hlsRef = useRef<Hls | null>(null);
+
+	// Fixing type mismatch by asserting non-null videoRef.current
+	const {
+		latency,
+		bufferSize,
+		syncStatus,
+		currentFrame,
+		metadataRate,
+		syncOffset,
+		telemetry,
+		detections,
+		detectionCount,
+		metadata,
+	} = useMetadataSync(
+		videoRef as RefObject<HTMLVideoElement>,
+		enableSync && !isGoogleEmbed
+	);
 
 	useEffect(() => {
 		const videoElement = videoRef.current;
@@ -128,73 +149,196 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 		);
 	}
 
-	return (
-		<MediaController
-			style={{
-				width: "100%",
-				aspectRatio: "auto",
-			}}
-		>
-			<video
-				ref={videoRef}
-				slot="media"
-				className={cn(className, "border-none w-full h-full")}
-				style={{ width, height }}
-				preload="auto"
-				playsInline
-				disablePictureInPicture={true}
-			/>
-			<MediaControlBar
-				// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
-				style={{ "--media-primary-color": "#D3FBD8" }}
-				className="w-full flex flex-col backdrop-blur-[5px] bg-black/50"
+	const videoElement = (
+		<>
+			<MediaController
+				style={{
+					width: "100%",
+					aspectRatio: "auto",
+				}}
 			>
-				<div className="flex w-full h-full items-center place-content-between px-3">
-					<MediaTimeRange
-						className={`${
-							livestream ? "w-full" : "w-10/12"
-						} bg-transparent overflow-hidden`}
-						// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
-						style={{ "--media-primary-color": "#FFF" }}
-					/>
-					{livestream ? null : (
-						<MediaTimeDisplay showDuration className="w-2/12 bg-transparent" />
-					)}
-				</div>
-
-				<div
-					className={cn(
-						"flex w-full h-full items-center place-content-between px-5 mb-2",
-						{ ["pr-[30%]"]: !allowfullscreen }
-					)}
+				<video
+					ref={videoRef}
+					slot="media"
+					className={cn(className, "border-none w-full h-full")}
+					style={{ width, height }}
+					preload="auto"
+					playsInline
+					disablePictureInPicture={true}
+				/>
+				<MediaControlBar
+					// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
+					style={{ "--media-primary-color": "#D3FBD8" }}
+					className="w-full flex flex-col backdrop-blur-[5px] bg-black/50"
 				>
-					<div
-						className={cn(" flex", {
-							["w-3/12"]: !allowfullscreen,
-							["w-2/12"]: allowfullscreen,
-						})}
-					>
-						<MediaMuteButton className="bg-transparent" />
-						<MediaVolumeRange className="bg-transparent" />
-					</div>
-					{!livestream ? (
-						<MediaSeekBackwardButton
-							seekOffset={5}
-							className="bg-transparent"
+					<div className="flex w-full h-full items-center place-content-between px-3">
+						<MediaTimeRange
+							className={`${
+								livestream ? "w-full" : "w-10/12"
+							} bg-transparent overflow-hidden`}
+							// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
+							style={{ "--media-primary-color": "#FFF" }}
 						/>
-					) : null}
+						{livestream ? null : (
+							<MediaTimeDisplay
+								showDuration
+								className="w-2/12 bg-transparent"
+							/>
+						)}
+					</div>
 
-					<MediaPlayButton className="bg-transparent" />
-					{!livestream ? (
-						<MediaSeekForwardButton seekOffset={5} className="bg-transparent" />
-					) : null}
+					<div
+						className={cn(
+							"flex w-full h-full items-center place-content-between px-5 mb-2",
+							{ ["pr-[30%]"]: !allowfullscreen }
+						)}
+					>
+						<div
+							className={cn(" flex", {
+								["w-3/12"]: !allowfullscreen,
+								["w-2/12"]: allowfullscreen,
+							})}
+						>
+							<MediaMuteButton className="bg-transparent" />
+							<MediaVolumeRange className="bg-transparent" />
+						</div>
+						{!livestream ? (
+							<MediaSeekBackwardButton
+								seekOffset={5}
+								className="bg-transparent"
+							/>
+						) : null}
 
-					{allowfullscreen && (
-						<MediaFullscreenButton className="bg-transparent w-2/12" />
+						<MediaPlayButton className="bg-transparent" />
+						{!livestream ? (
+							<MediaSeekForwardButton
+								seekOffset={5}
+								className="bg-transparent"
+							/>
+						) : null}
+
+						{allowfullscreen && (
+							<MediaFullscreenButton className="bg-transparent w-2/12" />
+						)}
+					</div>
+				</MediaControlBar>
+			</MediaController>
+			{!isGoogleEmbed && enableSync && (
+				<div className="text-xs text-gray-400 mt-2 space-y-1 max-h-40 overflow-y-auto bg-black/20 p-2 rounded">
+					<div>
+						<div className="grid grid-cols-2 gap-2">
+							<p>
+								<span className="text-green-400 text-xs">Sync Status:</span>
+								{syncStatus}
+							</p>
+							<p>
+								<span className="text-blue-400 text-xs">Current Frame:</span>
+								{currentFrame}
+							</p>
+							<p>
+								<span className="text-yellow-400 text-xs">Latency:</span>
+								{latency} ms
+							</p>
+							<p>
+								<span className="text-purple-400 text-xs">Buffer Size:</span>
+								{bufferSize} frames
+							</p>
+							<p>
+								<span className="text-pink-400 text-xs">Metadata Rate:</span>
+								{metadataRate.toFixed(1)} fps
+							</p>
+							<p>
+								<span className="text-cyan-400 text-xs">Sync Offset:</span>
+								{syncOffset}
+								ms
+							</p>
+						</div>
+						{telemetry && (
+							<div className="grid grid-cols-2 gap-2">
+								<p className="text-orange-400 font-semibold">Telemetry:</p>
+								<p>
+									<span className="text-red-400 text-xs">Lat:</span>
+									{telemetry.latitude?.toFixed(6) || "-"}
+								</p>
+								<p>
+									<span className="text-red-400 text-xs">Lng:</span>
+									{telemetry.longitude?.toFixed(6) || "-"}
+								</p>
+								<p>
+									<span className="text-red-400 text-xs">Alt:</span>
+									{telemetry.altitude?.toFixed(1) || "-"}m
+								</p>
+								<p>
+									<span className="text-red-400 text-xs">Heading:</span>
+									{telemetry.heading?.toFixed(1) || "-"}°
+								</p>
+								<p>
+									<span className="text-red-400 text-xs">Roll:</span>
+									{telemetry.roll?.toFixed(2) || "-"}°
+								</p>
+								<p>
+									<span className="text-red-400 text-xs">Pitch:</span>
+									{telemetry.pitch?.toFixed(2) || "-"}°
+								</p>
+							</div>
+						)}
+					</div>
+					{detections && detections.length > 0 && (
+						<div className="mt-2 border-t border-gray-600 pt-2">
+							<p className="text-orange-400 font-semibold">
+								Detections ({detectionCount}):
+							</p>
+							<div className="max-h-20 overflow-y-auto">
+								{detections.slice(0, 3).map((detection, index) => (
+									<p key={index} className="text-xs">
+										<span className="text-green-300">
+											{detection.class_name}
+										</span>
+										-
+										<span className="text-yellow-300">
+											{(detection.confidence * 100).toFixed(1)}%
+										</span>
+									</p>
+								))}
+								{detections.length > 3 && (
+									<p className="text-gray-500">
+										...and {detections.length - 3} more
+									</p>
+								)}
+							</div>
+						</div>
+					)}
+					{metadata && (
+						<div className="mt-2 border-t border-gray-600 pt-2">
+							<p className="text-xs">
+								<span className="text-gray-500">Processed:</span>
+								{new Date(metadata.timestamp).toLocaleTimeString()}
+							</p>
+							{metadata.sourceTimestamp && (
+								<p className="text-xs">
+									<span className="text-gray-500">Source:</span>
+									{new Date(metadata.sourceTimestamp).toLocaleTimeString()}
+								</p>
+							)}
+						</div>
 					)}
 				</div>
-			</MediaControlBar>
-		</MediaController>
+			)}
+		</>
+	);
+
+	return isGoogleEmbed ? (
+		<iframe
+			src={src}
+			allow="autoplay"
+			className={cn(className, "border-none mt-2")}
+			allowFullScreen={false}
+			width={width}
+			height={height}
+			referrerPolicy={"origin"}
+		></iframe>
+	) : (
+		videoElement
 	);
 };
 

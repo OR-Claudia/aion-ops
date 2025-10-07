@@ -78,6 +78,15 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 		return currentTab?.value || "";
 	};
 
+	const shouldEnableSync = () => {
+		const currentSource = getCurrentVideoSource();
+		// Enable sync only for live HLS streams (.m3u8 URLs)
+		return livestream && (
+			currentSource.toLowerCase().includes(".m3u8") ||
+			currentSource.toLowerCase().includes("application/vnd.apple.mpegurl")
+		);
+	};
+
 	const handleTabChange = (tabId: string) => {
 		onTabChange(tabId);
 	};
@@ -197,6 +206,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 						<VideoPlayer
 							livestream={livestream}
 							src={getCurrentVideoSource()}
+							enableSync={shouldEnableSync()}
 							height={
 								livestream
 									? activeTab === "rgb"
