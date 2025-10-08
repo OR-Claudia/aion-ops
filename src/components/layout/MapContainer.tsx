@@ -290,6 +290,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 				<FollowModal
 					isOpen={isFollowModalOpen}
 					onClose={() => setIsFollowModalOpen(false)}
+					detections={[]}
 				/>
 			)}
 		</>

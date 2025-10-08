@@ -40,8 +40,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	errorMessage = "No video source available",
 	enableSync = false,
 }) => {
-	const isGoogleEmbed = src.includes("google");
 	const videoRef = useRef<HTMLVideoElement | null>(null);
+	const isGoogleEmbed = src.includes("google");
 	const hlsRef = useRef<Hls | null>(null);
 
 	// Fixing type mismatch by asserting non-null videoRef.current
@@ -60,8 +60,6 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 		videoRef as RefObject<HTMLVideoElement>,
 		enableSync && !isGoogleEmbed
 	);
-
-	// console.log(detections);
 
 	useEffect(() => {
 		const videoElement = videoRef.current;
@@ -163,6 +161,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 				<div
 					style={{
 						zIndex: 90,
+						minWidth: "100%",
 						width: `${videoRef.current?.clientWidth ?? 0}px`,
 						height: `${videoRef.current?.clientHeight ?? 0}px`,
 					}}
@@ -217,7 +216,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						  })
 						: null}
 				</div>
-				<MediaController>
+				<MediaController style={{ minWidth: "100%" }}>
 					<video
 						ref={videoRef}
 						slot="media"
@@ -233,18 +232,20 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						className="w-full flex flex-col backdrop-blur-[5px] bg-black/50"
 					>
 						<div className="flex w-full h-full items-center place-content-between px-3">
-							<MediaTimeRange
-								className={`${
-									livestream ? "w-full" : "w-10/12"
-								} bg-transparent overflow-hidden`}
-								// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
-								style={{ "--media-primary-color": "#FFF" }}
-							/>
 							{livestream ? null : (
-								<MediaTimeDisplay
-									showDuration
-									className="w-2/12 bg-transparent"
-								/>
+								<>
+									<MediaTimeRange
+										className={`${
+											livestream ? "w-full" : "w-10/12"
+										} bg-transparent overflow-hidden`}
+										// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
+										style={{ "--media-primary-color": "#FFF" }}
+									/>
+									<MediaTimeDisplay
+										showDuration
+										className="w-2/12 bg-transparent"
+									/>
+								</>
 							)}
 						</div>
 
