@@ -8,6 +8,7 @@ export class BBoxUtil {
   private scaleRatioX: number;
   private scaleRatioY: number;
   private centerPoint: Size;
+  private rescaledSize: Size;
   constructor(origBbx: BBox, streamResolution: Size, videoElementSize: Size) {
     this.originalBBox = origBbx;
     this.scaleRatioX = videoElementSize[0] / streamResolution[0];
@@ -22,6 +23,7 @@ export class BBoxUtil {
       ((this.rescaledBBox[2] - this.rescaledBBox[0]) / 2) + this.rescaledBBox[0],
       ((this.rescaledBBox[3] - this.rescaledBBox[1]) / 2) + this.rescaledBBox[1],
     ];
+    this.rescaledSize = [this.rescaledBBox[2] - this.rescaledBBox[0], this.rescaledBBox[3] - this.rescaledBBox[1]];
   }
 
   public getOriginalBBox(): BBox {
@@ -34,5 +36,17 @@ export class BBoxUtil {
 
   public getCenterPoint(): Size {
     return this.centerPoint;
+  }
+
+  public getRescaledSize(): Size {
+    return this.rescaledSize;
+  }
+
+  public getShorterRescaledDim(): number {
+    if (this.rescaledSize[0] < this.rescaledSize[1]) {
+      return this.rescaledSize[0];
+    }
+
+    return this.rescaledSize[1];
   }
 }

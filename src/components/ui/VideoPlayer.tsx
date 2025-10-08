@@ -192,13 +192,18 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 								);
 
 								const dCenter = dbbox.getCenterPoint();
+								let pointSize = dbbox.getShorterRescaledDim() * 0.8;
+
+								if (pointSize < 10) {
+									pointSize = 10;
+								}
 
 								// don't display if bbox is undefined
-								// -4 pixels to compensate for the size of the dot
 
 								return (
 									<PointTag
 										position={dCenter}
+										pointSize={pointSize}
 										key={`${d.class_id}-${i}`}
 									>
 										<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
@@ -213,16 +218,6 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						: null}
 				</div>
 				<MediaController>
-					<video
-						ref={videoRef}
-						slot="media"
-						className={cn(className, "border-none w-full h-full")}
-						style={{ width, height }}
-						preload="auto"
-						playsInline
-						disablePictureInPicture={true}
-					/>
-
 					<video
 						ref={videoRef}
 						slot="media"

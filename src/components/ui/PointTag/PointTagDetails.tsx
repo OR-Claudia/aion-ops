@@ -10,10 +10,11 @@ interface PointTagDetailsProps {
 	close?: () => void;
 	style?: CSSProperties;
 	children: ReactNode;
+	pointSize: number;
 }
 
 export const PointTagDetails: FC<PointTagDetailsProps> = memo((props) => {
-	const { angle, length, style, close, children } = props;
+	const { angle, length, style, close, children, pointSize } = props;
 
 	const DEFAULT_ANGLE = 45;
 	const DEFAULT_LENGTH = 50;
@@ -24,8 +25,12 @@ export const PointTagDetails: FC<PointTagDetailsProps> = memo((props) => {
 	const angleInRads = (_angle * Math.PI) / 180;
 
 	let anchorCorner: Corner = "tl";
-	const posX: number = Math.sin(angleInRads) * _length;
-	const posY: number = Math.cos(angleInRads) * _length;
+	const sinAngle = Math.sin(angleInRads);
+	const cosAngle = Math.cos(angleInRads);
+	const posX: number = sinAngle * _length;
+	const posY: number = cosAngle * _length;
+
+	const lineTranslation: [number, number] = [sinAngle * pointSize / 2, cosAngle * pointSize / 2 * -1];
 
 	if (posX < 0 && posY > 0) {
 		anchorCorner = "br";
@@ -43,17 +48,22 @@ export const PointTagDetails: FC<PointTagDetailsProps> = memo((props) => {
 	};
 
 	const smokePos: CSSProperties = {};
+	const linePos: CSSProperties = {};
 
 	if (anchorCorner === "bl" || anchorCorner === "tl") {
 		smokePos.left = `${Math.abs(posX)}px`;
+		linePos.left = `${lineTranslation[0]}px`;
 	} else {
 		smokePos.right = `${Math.abs(posX)}px`;
+		linePos.left = `${lineTranslation[0]}px`;
 	}
 
 	if (anchorCorner === "tl" || anchorCorner === "tr") {
 		smokePos.top = `${Math.abs(posY)}px`;
+		linePos.top = `${lineTranslation[1]}px`;
 	} else {
 		smokePos.bottom = `${Math.abs(posY)}px`;
+		linePos.top = `${lineTranslation[1]}px`;
 	}
 
 	const smokeStaticClasses =
@@ -66,8 +76,8 @@ export const PointTagDetails: FC<PointTagDetailsProps> = memo((props) => {
 			onClick={(ev) => ev.stopPropagation()}
 		>
 			<svg
-				className={`absolute z-10 overflow-visible`}
-				style={{ transformOrigin: `0 0`, rotate: `${_angle + 180}deg` }}
+				className="absolute z-10 overflow-visible"
+				style={{ ...linePos, transformOrigin: `0 0`, rotate: `${_angle + 180}deg` }}
 				width={STROKE_WIDTH}
 				height={_length + 1}
 			>

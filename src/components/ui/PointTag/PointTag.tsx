@@ -20,14 +20,21 @@ interface PointTagProps {
 	className?: string;
 	detailStyle?: CSSProperties;
 	position: [number, number];
+	pointSize?: number;
 }
 
 export const PointTag: FC<PointTagProps> = memo((props) => {
-	const { angle, length, style, children, className, detailStyle, position } = props;
+	const { angle, length, style, children, className, detailStyle, position, pointSize = 10 } = props;
 	const [open, setOpen] = useState<boolean>(false);
 	const close = useCallback(() => setOpen(false), []);
 
-	let topStyle: CSSProperties = {left: `${position[0]}px`, top: `${position[1]}px`, transform: 'translate(-50%, -50%)'};
+	let topStyle: CSSProperties = {
+		left: position[0],
+		top: position[1],
+		transform: 'translate(-50%, -50%)',
+		width: pointSize,
+		height: pointSize,
+	};
 
 	if (style) {
 		topStyle = {...style, ...topStyle};
@@ -37,7 +44,7 @@ export const PointTag: FC<PointTagProps> = memo((props) => {
 		<div
 			style={topStyle}
 			className={cn(
-				"absolute rounded-[4px] w-[16px] h-[16px] bg-[#00C6B8] cursor-pointer",
+				"absolute rounded-[50%] bg-[rgba(0,198,185,0.30)] border-[#00C6B8] border-1 cursor-pointer",
 				className
 			)}
 			onClick={() => {
@@ -48,6 +55,7 @@ export const PointTag: FC<PointTagProps> = memo((props) => {
 			{open ? (
 				<>
 					<PointTagDetails
+						pointSize={pointSize}
 						style={detailStyle}
 						angle={angle}
 						length={length}
