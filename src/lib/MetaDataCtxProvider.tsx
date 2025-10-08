@@ -10,8 +10,15 @@ interface MetaDataReducerAct {
 
 const reducer = (prevState: MetaData, action: MetaDataReducerAct): MetaData => {
   switch(action.type) {
-    case 'update':
-      return {...action.payload as MetaData};
+    case 'update': {
+      const newState = {...action.payload as Partial<MetaData>};
+      if (typeof newState.selectedDetection !== 'undefined') {
+        if (prevState.selectedDetection === newState.selectedDetection) {
+          newState.selectedDetection = null;
+        }
+      }
+      return {...prevState, ...newState};
+    }
     default:
       return prevState;
   }
@@ -28,5 +35,5 @@ export const MetaDataCtxProvider: FC<{ children: ReactNode }> = ({ children }) =
     });
   };
 
-  return <MetaDataCtx.Provider value={{...state, updateMetaData}}>{children}</MetaDataCtx.Provider>;
+  return <MetaDataCtx.Provider value={[state, updateMetaData]}>{children}</MetaDataCtx.Provider>;
 };

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import type { DetectionData } from "../../../lib/utils";
+import { useContext, useEffect } from "react";
+import { MetaDataCtx, type DetectionData } from "../../../lib/utils";
 import DetectionListItem from "../DetectionListItem";
 import Modal from "./Modal";
 import { MapContainer, TileLayer } from "react-leaflet";
@@ -8,7 +8,6 @@ import { PointTag } from "../PointTag/PointTag";
 interface FollowModalProps {
 	isOpen: boolean;
 	onClose: () => void;
-	detections: DetectionData[];
 	// record: StorageData;
 	// activeTab: string;
 }
@@ -66,23 +65,23 @@ const tempDetections: DetectionData[] = [
 const FollowModal: React.FC<FollowModalProps> = ({
 	isOpen,
 	onClose,
-	detections = tempDetections,
 }) => {
-	const [selectedDetectionId, setSelectedDetectionId] = useState<number | null>(
-		null
-	);
+	const [{detections, selectedDetection}, updateMetaData] = useContext(MetaDataCtx);
+
+	useEffect(() => {
+		return () => {
+			updateMetaData({ selectedDetection: null });
+		};
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	const handleDetectionClick = (trackId: number) => {
-		if (trackId === selectedDetectionId) {
-			setSelectedDetectionId(null);
-		} else {
-			setSelectedDetectionId(trackId);
-		}
+		updateMetaData({ selectedDetection: trackId });
 	};
 
 	// console.log("FollowModal detections:", detections);
 
-	const uavData = detections.find((d) => d.class_name === "Parrot");
+	const uavData = detections?.find((d) => d.class_name === "Parrot");
 	const uavPosition: [number, number] = [
 		uavData ? uavData.latitude! : 36.716021,
 		uavData ? uavData.longitude! : -4.2879599,
@@ -121,7 +120,7 @@ const FollowModal: React.FC<FollowModalProps> = ({
 							<DetectionListItem
 								key={`${detection.class_name}-${index}`}
 								followDetection={detection}
-								isSelected={detection.track_id === selectedDetectionId}
+								isSelected={detection.track_id === selectedDetection}
 								selectDetection={() => handleDetectionClick(detection.track_id)}
 							/>
 						);

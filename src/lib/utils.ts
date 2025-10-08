@@ -490,23 +490,25 @@ const initVideoWithSync = (
 };
 
 export interface MetaData {
-	metadata?: MetadataItem | null;
+	metadata: MetadataItem | null;
 	latency: number;
 	bufferSize: number;
 	syncStatus: string;
-	currentFrame?: number;
-	metadataRate?: number;
+	currentFrame: number;
+	metadataRate: number;
 	syncOffset: number;
-	telemetry?: TelemetryData | null;
-	detections?: DetectionData[];
-	detectionCount?: number;
+	telemetry: TelemetryData | null;
+	detections: DetectionData[];
+	detectionCount: number;
+	selectedDetection: number | null;
 }
 
-interface MetaDataCtxType extends MetaData {
-	updateMetaData: (data: Partial<MetaData>) => void;
-}
+type MetaDataCtxType = [
+	MetaData,
+	(data: Partial<MetaData>) => void,
+]
 
-export const metaDataDefault: MetaDataCtxType = {
+export const metaDataDefault = {
 	metadata: null,
 	latency: 0,
 	bufferSize: 0,
@@ -517,17 +519,23 @@ export const metaDataDefault: MetaDataCtxType = {
 	telemetry: null,
 	detections: [],
 	detectionCount: 0,
-	updateMetaData: () => {},
+	selectedDetection: null,
 };
 
-export const MetaDataCtx = createContext<MetaDataCtxType>(metaDataDefault);
+export const metaDataCtxDefault: MetaDataCtxType = [
+	metaDataDefault,
+	() => {},
+];
+
+export const MetaDataCtx = createContext<MetaDataCtxType>(metaDataCtxDefault);
 
 // Enhanced hook for metadata synchronization with comprehensive data
 const useMetadataSync = (
 	videoRef: RefObject<HTMLVideoElement>,
 	enableSync = true
 ) => {
-	const {
+	const [
+		{
 		metadata,
 		latency,
 		bufferSize,
@@ -538,8 +546,9 @@ const useMetadataSync = (
 		telemetry,
 		detections,
 		detectionCount,
+		},
 		updateMetaData,
-	} = useContext(MetaDataCtx);
+	] = useContext(MetaDataCtx);
 
 	useEffect(() => {
 		if (!enableSync) {
@@ -563,7 +572,7 @@ const useMetadataSync = (
 				// Get current metadata synchronized to video time
 				const currentMetadata = sync.getMetadataForTime(videoElement);
 				// Update sync metrics
-				const newMetaDataForCtx: MetaData = {
+				const newMetaDataForCtx: Partial<MetaData> = {
 					latency: sync.getCurrentLatency(),
 					bufferSize: sync.getMetadataBufferSize(),
 					syncStatus: sync.getSyncStatusText(),
