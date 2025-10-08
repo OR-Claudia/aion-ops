@@ -1,20 +1,20 @@
-import { useRef, useEffect, type FC, type RefObject } from "react";
+import { useRef, useEffect, type FC, type RefObject, useState } from "react";
 
 import { capitalize, cn, useMetadataSync, type BBox } from "../../lib/utils";
 
 import Hls from "hls.js";
 
 import {
-	MediaControlBar,
+	// MediaControlBar,
 	MediaController,
-	MediaFullscreenButton,
-	MediaMuteButton,
-	MediaPlayButton,
-	MediaSeekBackwardButton,
-	MediaSeekForwardButton,
-	MediaTimeDisplay,
-	MediaTimeRange,
-	MediaVolumeRange,
+	// MediaFullscreenButton,
+	// MediaMuteButton,
+	// MediaPlayButton,
+	// MediaSeekBackwardButton,
+	// MediaSeekForwardButton,
+	// MediaTimeDisplay,
+	// MediaTimeRange,
+	// MediaVolumeRange,
 } from "media-chrome/react";
 import { PointTag } from "./PointTag/PointTag";
 import { BBoxUtil } from "../../lib/bboxutils";
@@ -34,8 +34,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	src = "",
 	width = "100%",
 	height = "60%",
-	livestream = false,
-	allowfullscreen = true,
+	// livestream = false,
+	// allowfullscreen = true,
 	className,
 	errorMessage = "No video source available",
 	enableSync = false,
@@ -43,6 +43,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	const videoRef = useRef<HTMLVideoElement | null>(null);
 	const isGoogleEmbed = src.includes("google");
 	const hlsRef = useRef<Hls | null>(null);
+	
+	const [isBuffering, setIsBuffering] = useState<boolean>(false);
 
 	// Fixing type mismatch by asserting non-null videoRef.current
 	const {
@@ -60,6 +62,16 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 		videoRef as RefObject<HTMLVideoElement>,
 		enableSync && !isGoogleEmbed
 	);
+
+	const isVideoPlaying: boolean = videoRef.current !== null && !videoRef.current.paused /*&& !videoRef.current.ended*/ && videoRef.current.currentTime > 0;
+
+	// useEffect(() => {
+	// 	if (videoRef.current && isVideoPlaying && syncOffset > 0) {
+	// 		console.log('syncoffset', syncOffset);
+	// 		videoRef.current.currentTime = videoRef.current.currentTime + syncOffset;
+	// 	}
+	// // eslint-disable-next-line react-hooks/exhaustive-deps
+	// }, [isVideoPlaying, syncOffset]);
 
 	useEffect(() => {
 		const videoElement = videoRef.current;
@@ -103,6 +115,9 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						}
 					}
 				});
+				hlsInstance.on(Hls.Events.FRAG_PARSING_METADATA, (_, data) => {
+					console.log('METADATA is: ', data);
+				});
 			} else if (videoElement.canPlayType("application/vnd.apple.mpegurl")) {
 				// Safari natively supports HLS
 				videoElement.src = src;
@@ -116,10 +131,22 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 			videoElement.src = src;
 		}
 
+		const timeout = setTimeout(() => {
+			videoElement.play();
+			setIsBuffering(false);
+		}, 5000);
+
 		return () => {
+			setIsBuffering(true);
 			if (hlsRef.current) {
 				hlsRef.current.destroy();
 				hlsRef.current = null;
+			}
+			if (videoElement) {
+				videoElement.pause();
+			}
+			if (timeout) {
+				clearTimeout(timeout);
 			}
 		};
 	}, [src, isGoogleEmbed]);
@@ -153,7 +180,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 		);
 	}
 
-	console.log("detections: ", detections);
+	//console.log("detections: ", detections);
 
 	const videoElement = (
 		<div className="relative overflow-visible">
@@ -167,7 +194,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 					}}
 					className="absolute top-0 left-0 overflow-visible"
 				>
-					{detections && detections.length !== 0
+					{isVideoPlaying && detections && detections.length !== 0
 						? detections.map((d, i) => {
 								if (d.bbox === undefined) {
 									return null;
@@ -226,65 +253,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						playsInline
 						disablePictureInPicture={true}
 					/>
-					<MediaControlBar
-						// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
-						style={{ "--media-primary-color": "#D3FBD8", zIndex: 100 }}
-						className="w-full flex flex-col backdrop-blur-[5px] bg-black/50"
-					>
-						<div className="flex w-full h-full items-center place-content-between px-3">
-							{livestream ? null : (
-								<>
-									<MediaTimeRange
-										className={`${
-											livestream ? "w-full" : "w-10/12"
-										} bg-transparent overflow-hidden`}
-										// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
-										style={{ "--media-primary-color": "#FFF" }}
-									/>
-									<MediaTimeDisplay
-										showDuration
-										className="w-2/12 bg-transparent"
-									/>
-								</>
-							)}
-						</div>
-
-						<div
-							className={cn(
-								"flex w-full h-full items-center place-content-between px-5 mb-2",
-								{ ["pr-[30%]"]: !allowfullscreen }
-							)}
-						>
-							<div
-								className={cn(" flex", {
-									["w-3/12"]: !allowfullscreen,
-									["w-2/12"]: allowfullscreen,
-								})}
-							>
-								<MediaMuteButton className="bg-transparent" />
-								<MediaVolumeRange className="bg-transparent" />
-							</div>
-							{!livestream ? (
-								<MediaSeekBackwardButton
-									seekOffset={5}
-									className="bg-transparent"
-								/>
-							) : null}
-
-							<MediaPlayButton className="bg-transparent" />
-							{!livestream ? (
-								<MediaSeekForwardButton
-									seekOffset={5}
-									className="bg-transparent"
-								/>
-							) : null}
-
-							{allowfullscreen && (
-								<MediaFullscreenButton className="bg-transparent w-2/12" />
-							)}
-						</div>
-					</MediaControlBar>
 				</MediaController>
+				{isBuffering ? <div className="absolute bottom-3 left-0 w-full flex flex-row justify-center">Buffering...</div> : null}
 			</div>
 
 			{!isGoogleEmbed && enableSync && (
