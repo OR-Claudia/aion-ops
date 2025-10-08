@@ -68,6 +68,7 @@ interface GeoCoordinatesData {
 	camera_azimuth_deg: number;
 	camera_elevation_deg: number;
 	calculation_method: string;
+	gimbal_method?: string;
 	has_camera_specs: boolean;
 }
 
@@ -80,6 +81,8 @@ interface DetectionData {
 	track_id: number;
 	bbox: BBox;
 	geo_coordinates: GeoCoordinatesData;
+	latitude?: number;
+	longitude?: number;
 }
 
 interface MetadataItem {

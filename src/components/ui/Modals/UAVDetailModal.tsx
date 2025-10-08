@@ -44,6 +44,7 @@ export interface UAVDetailModalProps {
 	onTabChange: (tabId: string) => void;
 	onKeyEventsClick?: () => void;
 	onDetectionsClick?: () => void;
+	onFollowClick?: () => void;
 }
 
 const livestream = true;
@@ -57,6 +58,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 	onTabChange,
 	onKeyEventsClick,
 	onDetectionsClick,
+	onFollowClick,
 }) => {
 	if (!data) return null;
 
@@ -65,7 +67,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 			id: "rgb",
 			label: "RGB",
 			// value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
-
+			// value: "",
 			value: "http://193.123.68.104:8888/detected_stream/index.m3u8",
 		},
 		{
@@ -151,6 +153,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 	};
 
 	const handleFollow = () => {
+		onFollowClick?.();
 		console.log("Follow UAV", data.id);
 	};
 

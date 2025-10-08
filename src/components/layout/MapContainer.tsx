@@ -21,6 +21,7 @@ import AnalysisModal from "../ui/Modals/AnalysisModal";
 import DetectionsModal from "../ui/Modals/DetectionsModal";
 
 import { useUAVLocations } from "./ctx/UAVLocations/useUAVLocations";
+import FollowModal from "../ui/Modals/FollowModal";
 
 interface SelectedUAV {
 	id: string | number;
@@ -48,8 +49,6 @@ const missionProgressText =
 const operationalSummaryText =
 	"Area assessment proceeding as planned with no significant anomalies detected. Reconnaissance data collection on target, with 3.5 GB transmitted successfully. Rural activity patterns consistent with intelligence briefings. Mission continuing toward scheduled completion with all safety protocols active.";
 
-
-
 const MapContainer: React.FC<MapContainerProps> = ({
 	showIndicators = false,
 }) => {
@@ -69,6 +68,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	const [selectedUAVs, setSelectedUAVs] = useState<SelectedUAV[]>([]);
 	const [clusteredUAVIds] = useState<Set<string>>(new Set());
 	const [isMissionPathModalOpen, setIsMissionPathModalOpen] = useState(false);
+	const [isFollowModalOpen, setIsFollowModalOpen] = useState(false);
 	const [selectedUAVForMissionPath, setSelectedUAVForMissionPath] =
 		useState<any>(null);
 
@@ -92,7 +92,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	};
 
 	const handleUAVDetailClick = useCallback((id: string | number) => {
-		console.log('cluster', clusterGroupRef.current);
+		console.log("cluster", clusterGroupRef.current);
 		setSelectedUAVs((prev) => [
 			...prev,
 			{
@@ -174,6 +174,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 									onAnalysisClick={() => setIsAnalysisOpen(true)}
 									onKeyEventsClick={() => handleOpenKeyEvents(selectedUAV.id)}
 									onDetectionsClick={() => handleOpenDetections(selectedUAV.id)}
+									onFollowClick={() => setIsFollowModalOpen(true)}
 								/>
 							);
 						}
@@ -243,13 +244,14 @@ const MapContainer: React.FC<MapContainerProps> = ({
 						</>
 					)}
 
-					{showIndicators && allUAVLocations.map((uavLoc) => (
-						<ClusterableUAVMarker
-							key={`uav-marker-${uavLoc.data.id}`}
-							id={uavLoc.data.id}
-							onDetailClick={handleUAVDetailClick}
-						/>
-					))}
+					{showIndicators &&
+						allUAVLocations.map((uavLoc) => (
+							<ClusterableUAVMarker
+								key={`uav-marker-${uavLoc.data.id}`}
+								id={uavLoc.data.id}
+								onDetailClick={handleUAVDetailClick}
+							/>
+						))}
 
 					{/* Detection Markers - only on detections page */}
 					{isDetectionsPage && (
@@ -274,13 +276,20 @@ const MapContainer: React.FC<MapContainerProps> = ({
 					<MapProviderSwitcher onProviderChange={handleProviderChange} />
 				)} */}
 			</div>
-
 			{/* Mission Path Modal - rendered at top level for full screen dragging */}
 			{isMissionPathModalOpen && selectedUAVForMissionPath && (
 				<MissionPathModal
 					isOpen={isMissionPathModalOpen}
 					onClose={handleCloseMissionPath}
 					uavData={selectedUAVForMissionPath.data}
+				/>
+			)}
+
+			{/* Follow Path Modal*/}
+			{isFollowModalOpen && (
+				<FollowModal
+					isOpen={isFollowModalOpen}
+					onClose={() => setIsFollowModalOpen(false)}
 				/>
 			)}
 		</>
