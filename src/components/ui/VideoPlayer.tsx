@@ -194,11 +194,11 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 								const dCenter = dbbox.getCenterPoint();
 
 								// don't display if bbox is undefined
+								// -4 pixels to compensate for the size of the dot
 
 								return (
 									<PointTag
-										style={{ left: dCenter[0], bottom: dCenter[1] }}
-										className="absolute"
+										position={dCenter}
 										key={`${d.class_id}-${i}`}
 									>
 										<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
