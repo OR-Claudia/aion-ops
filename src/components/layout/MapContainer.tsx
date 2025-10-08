@@ -28,6 +28,7 @@ interface SelectedUAV {
 	activeTab: string;
 	showKeyEvents: boolean;
 	showDetections: boolean;
+	showFollowModal: boolean;
 }
 
 interface MapContainerProps {
@@ -49,6 +50,13 @@ const missionProgressText =
 const operationalSummaryText =
 	"Area assessment proceeding as planned with no significant anomalies detected. Reconnaissance data collection on target, with 3.5 GB transmitted successfully. Rural activity patterns consistent with intelligence briefings. Mission continuing toward scheduled completion with all safety protocols active.";
 
+const emptyUav = {
+	id: 0,
+	activeTab: "rgb",
+	showKeyEvents: false,
+	showDetections: false,
+	showFollowModal: false,
+};
 const MapContainer: React.FC<MapContainerProps> = ({
 	showIndicators = false,
 }) => {
@@ -65,7 +73,8 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	const [attribution] = useState(
 		"&copy; CartoDB, &copy; OpenStreetMap contributors"
 	);
-	const [selectedUAVs, setSelectedUAVs] = useState<SelectedUAV[]>([]);
+	// const [selectedUAVs, setSelectedUAVs] = useState<SelectedUAV[]>([]);
+	const [selectedUAV, setSelectedUAV] = useState<SelectedUAV>(emptyUav);
 	const [clusteredUAVIds] = useState<Set<string>>(new Set());
 	const [isMissionPathModalOpen, setIsMissionPathModalOpen] = useState(false);
 	const [isFollowModalOpen, setIsFollowModalOpen] = useState(false);
@@ -93,57 +102,76 @@ const MapContainer: React.FC<MapContainerProps> = ({
 
 	const handleUAVDetailClick = useCallback((id: string | number) => {
 		console.log("cluster", clusterGroupRef.current);
-		setSelectedUAVs((prev) => [
-			...prev,
-			{
-				id: id as string | number,
-				activeTab: "rgb",
-				showKeyEvents: false,
-				showDetections: false,
-			},
-		]);
+		setSelectedUAV({
+			id: id as string | number,
+			activeTab: "rgb",
+			showKeyEvents: false,
+			showDetections: false,
+			showFollowModal: true,
+		});
+		// setSelectedUAVs((prev) => [
+		// 	...prev,
+		// 	{
+		// 		id: id as string | number,
+		// 		activeTab: "rgb",
+		// 		showKeyEvents: false,
+		// 		showDetections: false,
+		// 	},
+		// ]);
 	}, []);
 
-	const handleCloseUAVModal = (id: number) => {
-		setSelectedUAVs((prev) => prev.filter((uav) => uav.id !== id));
+	// const handleCloseUAVModal = (id: number) => {
+	const handleCloseUAVModal = () => {
+		// setSelectedUAVs((prev) => prev.filter((uav) => uav.id !== id));
+		setSelectedUAV(emptyUav);
 	};
 
-	const handleTabChange = (uavId: string | number, tabId: string) => {
-		setSelectedUAVs((prev) =>
-			prev.map((uav) => (uav.id === uavId ? { ...uav, activeTab: tabId } : uav))
-		);
+	// const handleTabChange = (uavId: string | number, tabId: string) => {
+	const handleTabChange = (tabId: string) => {
+		// setSelectedUAVs((prev) =>
+		// 	prev.map((uav) => (uav.id === uavId ? { ...uav, activeTab: tabId } : uav))
+		// );
+		setSelectedUAV((prev) => ({ ...prev, activeTab: tabId }));
 	};
 
-	const handleOpenKeyEvents = (uavId: string | number) => {
-		setSelectedUAVs((prev) =>
-			prev.map((uav) =>
-				uav.id === uavId ? { ...uav, showKeyEvents: true } : uav
-			)
-		);
+	// const handleOpenKeyEvents = (uavId: string | number) => {
+	const handleOpenKeyEvents = () => {
+		// setSelectedUAVs((prev) =>
+		// 	prev.map((uav) =>
+		// 		uav.id === uavId ? { ...uav, showKeyEvents: true } : uav
+		// 	)
+		// );
+		setSelectedUAV((prev) => ({ ...prev, showKeyEvents: true }));
 	};
 
-	const handleCloseKeyEvents = (uavId: string | number) => {
-		setSelectedUAVs((prev) =>
-			prev.map((uav) =>
-				uav.id === uavId ? { ...uav, showKeyEvents: false } : uav
-			)
-		);
+	// const handleCloseKeyEvents = (uavId: string | number) => {
+	const handleCloseKeyEvents = () => {
+		// setSelectedUAVs((prev) =>
+		// 	prev.map((uav) =>
+		// 		uav.id === uavId ? { ...uav, showKeyEvents: false } : uav
+		// 	)
+		// );
+		setSelectedUAV((prev) => ({ ...prev, showKeyEvents: false }));
 	};
 
-	const handleOpenDetections = (uavId: string | number) => {
-		setSelectedUAVs((prev) =>
-			prev.map((uav) =>
-				uav.id === uavId ? { ...uav, showDetections: true } : uav
-			)
-		);
+	// const handleOpenDetections = (uavId: string | number) => {
+	const handleOpenDetections = () => {
+		// setSelectedUAVs((prev) =>
+		// 	prev.map((uav) =>
+		// 		uav.id === uavId ? { ...uav, showDetections: true } : uav
+		// 	)
+		// );
+		setSelectedUAV((prev) => ({ ...prev, showDetections: true }));
 	};
 
-	const handleCloseDetections = (uavId: string | number) => {
-		setSelectedUAVs((prev) =>
-			prev.map((uav) =>
-				uav.id === uavId ? { ...uav, showDetections: false } : uav
-			)
-		);
+	// const handleCloseDetections = (uavId: string | number) => {
+	const handleCloseDetections = () => {
+		// setSelectedUAVs((prev) =>
+		// 	prev.map((uav) =>
+		// 		uav.id === uavId ? { ...uav, showDetections: false } : uav
+		// 	)
+		// );
+		setSelectedUAV((prev) => ({ ...prev, showDetections: false }));
 	};
 
 	return (
@@ -157,7 +185,27 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			/>
 
 			{/* UAV Detail Modal */}
-			{selectedUAVs.length > 0 &&
+			{selectedUAV !== emptyUav &&
+				allUAVLocations.map((uav: any) => {
+					if (uav.data.id === selectedUAV.id) {
+						return (
+							<UAVDetailModal
+								key={`${uav.data.id}-modal`}
+								data={uav.data}
+								activeTab={selectedUAV.activeTab}
+								onTabChange={(tabId: string) => handleTabChange(tabId)}
+								onClose={() => handleCloseUAVModal()}
+								onMissionPathClick={() => handleMissionPathClick(uav)}
+								onAnalysisClick={() => setIsAnalysisOpen(true)}
+								onKeyEventsClick={() => handleOpenKeyEvents()}
+								onDetectionsClick={() => handleOpenDetections()}
+								onFollowClick={() => setIsFollowModalOpen(true)}
+							/>
+						);
+					}
+					return null;
+				})}
+			{/* {selectedUAVs.length > 0 &&
 				allUAVLocations.map((uav: any) =>
 					selectedUAVs.map((selectedUAV: any) => {
 						if (uav.data.id === selectedUAV.id) {
@@ -180,9 +228,23 @@ const MapContainer: React.FC<MapContainerProps> = ({
 						}
 						return null;
 					})
-				)}
+				)} */}
 			{/* Detection Modals */}
-			{selectedUAVs.length > 0 &&
+			{selectedUAV.showDetections &&
+				allUAVLocations.map((uav: any) => {
+					if (uav.data.id === selectedUAV.id) {
+						return (
+							<DetectionsModal
+								key={`${uav.data.id}-detections`}
+								isOpen={selectedUAV.showDetections}
+								onClose={() => handleCloseDetections()}
+								activeTab={selectedUAV.activeTab}
+							/>
+						);
+					}
+					return null;
+				})}
+			{/* {selectedUAVs.length > 0 &&
 				allUAVLocations.map((uav: any) =>
 					selectedUAVs.map((selectedUAV: any) => {
 						if (uav.data.id === selectedUAV.id && selectedUAV.showDetections) {
@@ -197,9 +259,9 @@ const MapContainer: React.FC<MapContainerProps> = ({
 						}
 						return null;
 					})
-				)}
+				)} */}
 			{/* Key Events Modals */}
-			{selectedUAVs.length > 0 &&
+			{/* {selectedUAVs.length > 0 &&
 				allUAVLocations.map((uav: any) =>
 					selectedUAVs.map((selectedUAV: any) => {
 						if (uav.data.id === selectedUAV.id && selectedUAV.showKeyEvents) {
@@ -214,7 +276,21 @@ const MapContainer: React.FC<MapContainerProps> = ({
 						}
 						return null;
 					})
-				)}
+				)} */}
+			{selectedUAV.showKeyEvents &&
+				allUAVLocations.map((uav: any) => {
+					if (uav.data.id === selectedUAV.id) {
+						return (
+							<KeyEventsModal
+								key={`${uav.data.id}-keyevents`}
+								isOpen={selectedUAV.showKeyEvents}
+								onClose={() => handleCloseKeyEvents()}
+								title={`Key Events - ${uav.data.name}`}
+							/>
+						);
+					}
+					return null;
+				})}
 
 			<div className="fixed top-0 left-0 w-screen h-screen bg-[#222631] z-10">
 				<LeafletMap
