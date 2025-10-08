@@ -197,10 +197,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 								// -4 pixels to compensate for the size of the dot
 
 								return (
-									<PointTag
-										position={dCenter}
-										key={`${d.class_id}-${i}`}
-									>
+									<PointTag position={dCenter} key={`${d.class_id}-${i}`}>
 										<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
 											<p>{`ID:${d.track_id}`}</p>
 											<p>{`${capitalize(d.class_name)}, ${d.confidence.toFixed(
@@ -223,15 +220,6 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						disablePictureInPicture={true}
 					/>
 
-					<video
-						ref={videoRef}
-						slot="media"
-						className={cn(className, "border-none w-full h-full")}
-						style={{ width, height }}
-						preload="auto"
-						playsInline
-						disablePictureInPicture={true}
-					/>
 					<MediaControlBar
 						// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
 						style={{ "--media-primary-color": "#D3FBD8", zIndex: 100 }}
