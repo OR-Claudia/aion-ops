@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useRef, useEffect, type FC, type RefObject, useState } from "react";
 
 import { capitalize, cn, useMetadataSync, type BBox } from "../../lib/utils";
@@ -18,6 +19,9 @@ import {
 } from "media-chrome/react";
 import { PointTag } from "./PointTag/PointTag";
 import { BBoxUtil } from "../../lib/bboxutils";
+import { staticData } from "../../assets/mock-data/static_data";
+import type { Frame } from "../../lib/types";
+// import { staticData } from "../../assets/mock-data/static_data";
 
 interface VideoPlayerProps {
 	src?: string;
@@ -45,6 +49,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	const hlsRef = useRef<Hls | null>(null);
 	
 	const [isBuffering, setIsBuffering] = useState<boolean>(false);
+	const [currentTimeMs, setCurrentTimeMs] = useState<number>(0);
+	const [activeFrameData, setActiveFrameData] = useState<Frame | null>(null);
 
 	// Fixing type mismatch by asserting non-null videoRef.current
 	const {
@@ -72,6 +78,53 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	// 	}
 	// // eslint-disable-next-line react-hooks/exhaustive-deps
 	// }, [isVideoPlaying, syncOffset]);
+
+	useEffect(() => {
+		const videoElement = videoRef.current;
+		if (!videoElement) return;
+
+		const handleTimeUpdate = () => {
+			const currentTime = videoRef.current?.currentTime;
+			if (currentTime === undefined) return;
+			const timeMs = currentTime * 1000;
+			setCurrentTimeMs(timeMs);
+
+			if (staticData && staticData.frames.length > 0) {
+				let activeFrame: Frame | null = null;
+
+				for (let i = 0; i < staticData.frames.length; i++) {
+					const currentFrame = staticData.frames[i];
+					const nextFrame = staticData.frames[i + 1];
+
+					if (nextFrame) {
+						if (
+							timeMs >= currentFrame.timestamp_ms &&
+							timeMs < nextFrame.timestamp_ms
+						) {
+							activeFrame = currentFrame;
+							break;
+						}
+					} else {
+						// Last frame - active if time >= its timestamp
+						if (timeMs >= currentFrame.timestamp_ms) {
+							activeFrame = currentFrame;
+							break;
+						}
+					}
+				}
+
+				setActiveFrameData(activeFrame);
+			}
+		};
+
+		videoElement.addEventListener("timeupdate", handleTimeUpdate);
+
+		return () => {
+			videoElement.removeEventListener("timeupdate", handleTimeUpdate);
+		};
+	}, []);
+
+	console.log("Active frame data:", activeFrameData);
 
 	useEffect(() => {
 		const videoElement = videoRef.current;
@@ -166,7 +219,6 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 			</iframe>
 		);
 	}
-	// console.log("No video source provided", src === "", !!src, src);
 	if (src === "" || !src) {
 		return (
 			<div
@@ -194,8 +246,9 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 					}}
 					className="absolute top-0 left-0 overflow-visible"
 				>
-					{isVideoPlaying && detections && detections.length !== 0
-						? detections.map((d, i) => {
+					{isVideoPlaying && activeFrameData?.detections &&
+					activeFrameData?.detections.length !== 0
+						? activeFrameData?.detections.map((d, i) => {
 								if (d.bbox === undefined) {
 									return null;
 								}
@@ -212,8 +265,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 									_dbbox as BBox,
 									[1280, 720],
 									[
-										videoRef.current!.clientWidth,
-										videoRef.current!.clientHeight,
+										videoRef.current?.clientWidth ?? 0,
+										videoRef.current?.clientHeight ?? 0,
 									]
 								);
 
@@ -242,6 +295,54 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 								);
 						  })
 						: null}
+					{/* {detections && detections.length !== 0
+						? detections.map((d, i) => {
+								if (d.bbox === undefined) {
+									return null;
+								}
+								const _dbbox: number[] = Array.isArray(d.bbox)
+									? d.bbox
+									: Object.values(d.bbox);
+
+								if (!_dbbox) {
+									console.warn(`Skipping detection ${i} — malformed bbox`, d);
+									return null;
+								}
+
+								const dbbox: BBoxUtil = new BBoxUtil(
+									_dbbox as BBox,
+									[1280, 720],
+									[
+										videoRef.current?.clientWidth ?? 0,
+										videoRef.current?.clientHeight ?? 0,
+									]
+								);
+
+								const dCenter = dbbox.getCenterPoint();
+								let pointSize = dbbox.getShorterRescaledDim() * 0.8;
+
+								if (pointSize < 10) {
+									pointSize = 10;
+								}
+
+								// don't display if bbox is undefined
+
+								return (
+									<PointTag
+										position={dCenter}
+										pointSize={pointSize}
+										key={`${d.class_id}-${i}`}
+									>
+										<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
+											<p>{`ID:${d.track_id}`}</p>
+											<p>{`${capitalize(d.class_name)}, ${d.confidence.toFixed(
+												2
+											)}`}</p>
+										</div>
+									</PointTag>
+								);
+						  })
+						: null} */}
 				</div>
 				<MediaController style={{ minWidth: "100%" }}>
 					<video

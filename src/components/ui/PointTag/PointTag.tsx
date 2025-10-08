@@ -5,10 +5,11 @@ import {
 	type ReactNode,
 	type CSSProperties,
 	memo,
+	useContext,
 } from "react";
 import { PointTagDetails } from "./PointTagDetails";
 import { pointTagCtx } from "./ctx";
-import { cn } from "../../../lib/utils";
+import { cn, MetaDataCtx } from "../../../lib/utils";
 
 const PointTagCtxProvider = pointTagCtx.Provider;
 
@@ -21,23 +22,37 @@ interface PointTagProps {
 	detailStyle?: CSSProperties;
 	position: [number, number];
 	pointSize?: number;
+	trackId?: number;
 }
 
 export const PointTag: FC<PointTagProps> = memo((props) => {
-	const { angle, length, style, children, className, detailStyle, position, pointSize = 10 } = props;
-	const [open, setOpen] = useState<boolean>(false);
+	const {
+		angle,
+		length,
+		style,
+		children,
+		className,
+		detailStyle,
+		position,
+		pointSize = 10,
+		trackId,
+	} = props;
+
+	const [{ selectedDetection }] = useContext(MetaDataCtx);
+
+	const [open, setOpen] = useState<boolean>(selectedDetection === trackId);
 	const close = useCallback(() => setOpen(false), []);
 
 	let topStyle: CSSProperties = {
 		left: position[0],
 		top: position[1],
-		transform: 'translate(-50%, -50%)',
+		transform: "translate(-50%, -50%)",
 		width: pointSize,
 		height: pointSize,
 	};
 
 	if (style) {
-		topStyle = {...style, ...topStyle};
+		topStyle = { ...style, ...topStyle };
 	}
 
 	return (

@@ -19,6 +19,7 @@ function getDetectionImage(class_name: string) {
 		pedestrian: "civilians.svg",
 		people: "civilians.svg",
 		civilian: "civilians.svg",
+		car: "civilian-vehicle.svg",
 		vehicle: "civilian-vehicle.svg",
 		truck: "civilian-vehicle.svg",
 		tank: "military-vehicle.svg",

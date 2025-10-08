@@ -68,7 +68,8 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 			label: "RGB",
 			// value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
 			// value: "",
-			value: "http://193.123.68.104:8888/detected_stream/index.m3u8",
+			// value: "http://193.123.68.104:8888/detected_stream/index.m3u8",
+			value: "src/assets/videos/flight_0710_1700_h264.mp4",
 		},
 		{
 			id: "thermo",
