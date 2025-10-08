@@ -1,6 +1,6 @@
 // Existing content
-import { type RefObject } from "react";
-import { useState, useEffect } from "react";
+import { createContext, useContext, type RefObject } from "react";
+import { useEffect } from "react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -489,25 +489,61 @@ const initVideoWithSync = (
 	};
 };
 
+export interface MetaData {
+	metadata?: MetadataItem | null;
+	latency: number;
+	bufferSize: number;
+	syncStatus: string;
+	currentFrame?: number;
+	metadataRate?: number;
+	syncOffset: number;
+	telemetry?: TelemetryData | null;
+	detections?: DetectionData[];
+	detectionCount?: number;
+}
+
+interface MetaDataCtxType extends MetaData {
+	updateMetaData: (data: Partial<MetaData>) => void;
+}
+
+export const metaDataDefault: MetaDataCtxType = {
+	metadata: null,
+	latency: 0,
+	bufferSize: 0,
+	syncStatus: "Initializing...",
+	currentFrame: 0,
+	metadataRate: 0,
+	syncOffset: 0,
+	telemetry: null,
+	detections: [],
+	detectionCount: 0,
+	updateMetaData: () => {},
+};
+
+export const MetaDataCtx = createContext<MetaDataCtxType>(metaDataDefault);
+
 // Enhanced hook for metadata synchronization with comprehensive data
 const useMetadataSync = (
 	videoRef: RefObject<HTMLVideoElement>,
 	enableSync = true
 ) => {
-	const [metadata, setMetadata] = useState<MetadataItem | null>(null);
-	const [latency, setLatency] = useState(0);
-	const [bufferSize, setBufferSize] = useState(0);
-	const [syncStatus, setSyncStatus] = useState("Initializing...");
-	const [currentFrame, setCurrentFrame] = useState(0);
-	const [metadataRate, setMetadataRate] = useState(0);
-	const [syncOffset, setSyncOffset] = useState(0);
-	const [telemetry, setTelemetry] = useState<TelemetryData | null>(null);
-	const [detections, setDetections] = useState<DetectionData[]>([]);
-	const [detectionCount, setDetectionCount] = useState(0);
+	const {
+		metadata,
+		latency,
+		bufferSize,
+		syncStatus,
+		currentFrame,
+		metadataRate,
+		syncOffset,
+		telemetry,
+		detections,
+		detectionCount,
+		updateMetaData,
+	} = useContext(MetaDataCtx);
 
 	useEffect(() => {
 		if (!enableSync) {
-			setSyncStatus("Disabled");
+			updateMetaData({syncStatus: "Disabled"});
 			return;
 		}
 
@@ -526,19 +562,23 @@ const useMetadataSync = (
 
 				// Get current metadata synchronized to video time
 				const currentMetadata = sync.getMetadataForTime(videoElement);
-				if (currentMetadata) {
-					setMetadata(currentMetadata);
-					setCurrentFrame(currentMetadata.frame);
-					setTelemetry(currentMetadata.telemetry || null);
-					setDetections(currentMetadata.detections || []);
-					setDetectionCount(currentMetadata.detection_count || 0);
-				}
-
 				// Update sync metrics
-				setLatency(sync.getCurrentLatency());
-				setBufferSize(sync.getMetadataBufferSize());
-				setSyncStatus(sync.getSyncStatusText());
-				setSyncOffset(sync.getCurrentSyncOffset());
+				const newMetaDataForCtx: MetaData = {
+					latency: sync.getCurrentLatency(),
+					bufferSize: sync.getMetadataBufferSize(),
+					syncStatus: sync.getSyncStatusText(),
+					syncOffset: sync.getCurrentSyncOffset(),
+				};
+
+				if (currentMetadata) {
+					newMetaDataForCtx.metadata = currentMetadata;
+					newMetaDataForCtx.currentFrame = currentMetadata.frame;
+					newMetaDataForCtx.telemetry = currentMetadata.telemetry || null;
+					newMetaDataForCtx.detections = currentMetadata.detections || [];
+					newMetaDataForCtx.detectionCount = currentMetadata.detection_count || 0;
+				}
+				
+				updateMetaData(newMetaDataForCtx);
 			};
 
 			videoElement.addEventListener("timeupdate", timeUpdateHandler);
@@ -550,7 +590,7 @@ const useMetadataSync = (
 		statisticsInterval = setInterval(() => {
 			const rate = sync.getMetadataRate();
 			if (rate !== null) {
-				setMetadataRate(rate);
+				updateMetaData({metadataRate: rate});
 			}
 		}, 1000);
 

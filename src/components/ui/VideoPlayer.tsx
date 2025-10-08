@@ -308,7 +308,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 							</p>
 							<p>
 								<span className="text-pink-400 text-xs">Metadata Rate:</span>
-								{metadataRate.toFixed(1)} fps
+								{metadataRate?.toFixed(1)} fps
 							</p>
 							<p>
 								<span className="text-cyan-400 text-xs">Sync Offset:</span>
