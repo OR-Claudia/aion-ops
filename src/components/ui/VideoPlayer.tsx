@@ -202,7 +202,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 										key={`${d.class_id}-${i}`}
 									>
 										<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
-											<p>{`ID:${d.class_id}`}</p>
+											<p>{`ID:${d.track_id}`}</p>
 											<p>{`${capitalize(d.class_name)}, ${d.confidence.toFixed(
 												2
 											)}`}</p>

@@ -77,6 +77,7 @@ interface DetectionData {
 	class_id: number;
 	class_name: string;
 	confidence: number;
+	track_id: number;
 	bbox: BBox;
 	geo_coordinates: GeoCoordinatesData;
 }
