@@ -206,7 +206,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 
 			{/* Video Player Section - preserving exact wrapper structure */}
 			<div className="mb-4">
-				<div className="w-full h-fit relative rounded-[0px_3px_3px_3px] overflow-hidden">
+				<div className="w-full h-fit relative rounded-[0px_3px_3px_3px] overflow-visible">
 					{/* Video Player */}
 					<div className="w-full ">
 						<VideoPlayer
