@@ -2,11 +2,13 @@ import { useState } from "react";
 import type { DetectionData } from "../../../lib/utils";
 import DetectionListItem from "../DetectionListItem";
 import Modal from "./Modal";
+import { MapContainer, TileLayer } from "react-leaflet";
+import { PointTag } from "../PointTag/PointTag";
 
 interface FollowModalProps {
 	isOpen: boolean;
 	onClose: () => void;
-	detections?: DetectionData[];
+	detections: DetectionData[];
 	// record: StorageData;
 	// activeTab: string;
 }
@@ -50,7 +52,6 @@ const tempDetections: DetectionData[] = [
 			has_camera_specs: true,
 		},
 	},
-
 	{
 		class_id: -1,
 		class_name: "Parrot",
@@ -66,8 +67,6 @@ const FollowModal: React.FC<FollowModalProps> = ({
 	isOpen,
 	onClose,
 	detections = tempDetections,
-	// record,
-	// activeTab,
 }) => {
 	const [selectedDetectionId, setSelectedDetectionId] = useState<number | null>(
 		null
@@ -81,13 +80,42 @@ const FollowModal: React.FC<FollowModalProps> = ({
 		}
 	};
 
+	// console.log("FollowModal detections:", detections);
+
+	const uavData = detections.find((d) => d.class_name === "Parrot");
+	const uavPosition: [number, number] = [
+		uavData ? uavData.latitude! : 36.716021,
+		uavData ? uavData.longitude! : -4.2879599,
+	];
+
 	return (
 		<Modal title={`Follow Path`} isOpen={isOpen} onClose={onClose}>
-			{/* TODO: Map + points */}
-			{/* Detections content */}
+			{/* Map + points */}
+			<div className="h-[300px] min-w-[450px] border-b-[1.5px] border-[rgba(211,251,216,0.5)]">
+				<MapContainer
+					center={uavPosition}
+					zoom={18}
+					style={{
+						height: "100%",
+						width: "100%",
+						borderRadius: "3px",
+						// filter: "brightness(1.5) contrast(1) saturate(1.2)",
+					}}
+					className="rounded-[3px]"
+				>
+					<TileLayer
+						url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+						// attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>'
+					/>
+				</MapContainer>
+			</div>
 
+			{/* Detections content */}
 			<div className="max-h-[300px] p-3 overflow-y-auto">
-				{detections.map((detection, index) => {
+				<PointTag position={uavPosition}>
+					<div>Test</div>
+				</PointTag>
+				{tempDetections.map((detection, index) => {
 					if (detection.class_name !== "Parrot") {
 						return (
 							<DetectionListItem

@@ -183,7 +183,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 			subtitle={`Live coordinates: ${data.coordinates}`}
 			minimizable={true}
 			onMinimize={handleMinimize}
-			minHeight="750px"
+			minHeight="700px"
 			headerContent={
 				<div className="flex items-center gap-2">
 					<div

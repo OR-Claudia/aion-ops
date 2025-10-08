@@ -131,7 +131,7 @@ const DetectionListItem: React.FC<DetectionListItemProps> = ({
 					{isSelected && (
 						<div className="flex flex-col place-content-between mr-3 mt-2 bt-6">
 							<div className="text-sm whitespace-nowrap">
-								<span className="font-bold">
+								<span className="font-bold mr-1">
 									{"Estimated ground distance: "}
 								</span>
 								<span>{`${followDetection.geo_coordinates.estimated_ground_distance_m.toFixed(
@@ -140,22 +140,26 @@ const DetectionListItem: React.FC<DetectionListItemProps> = ({
 							</div>
 
 							<div className="text-sm whitespace-nowrap">
-								<span className="font-bold">{"Camera elevation degree: "}</span>
+								<span className="font-bold mr-1">
+									{"Camera elevation degree: "}
+								</span>
 								<span>{`${followDetection.geo_coordinates.camera_elevation_deg.toFixed(
 									4
 								)}°`}</span>
 							</div>
 							<div className="text-sm whitespace-nowrap">
-								<span className="font-bold">{"Camera azimuth degree: "}</span>
+								<span className="font-bold mr-1">
+									{"Camera azimuth degree: "}
+								</span>
 								<span>{`${followDetection.geo_coordinates.camera_azimuth_deg.toFixed(
 									4
 								)}°`}</span>
 							</div>
 							<div className="text-sm whitespace-nowrap">
-								<span className="font-bold">{"Calculation method: "}</span>
+								<span className="font-bold mr-1">{"Calculation method: "}</span>
 								<span>{`${capitalize(
 									followDetection.geo_coordinates.calculation_method
-								)}°`}</span>
+								)}`}</span>
 							</div>
 						</div>
 					)}
