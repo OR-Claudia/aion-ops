@@ -19,7 +19,7 @@ export const PointTagDetails: FC<PointTagDetailsProps> = memo((props) => {
 	const DEFAULT_ANGLE = 45;
 	const DEFAULT_LENGTH = 50;
 	const _angle = angle || DEFAULT_ANGLE;
-	const _length = length || DEFAULT_LENGTH;
+	const _length = typeof length !== 'undefined' ? length : DEFAULT_LENGTH;
 	const STROKE_WIDTH = 1;
 
 	const angleInRads = (_angle * Math.PI) / 180;
@@ -27,8 +27,9 @@ export const PointTagDetails: FC<PointTagDetailsProps> = memo((props) => {
 	let anchorCorner: Corner = "tl";
 	const sinAngle = Math.sin(angleInRads);
 	const cosAngle = Math.cos(angleInRads);
-	const posX: number = sinAngle * _length;
-	const posY: number = cosAngle * _length;
+	const posLength = _length + pointSize / 2;
+	const posX: number = sinAngle * posLength;
+	const posY: number = cosAngle * posLength;
 
 	const lineTranslation: [number, number] = [sinAngle * pointSize / 2, cosAngle * pointSize / 2 * -1];
 
