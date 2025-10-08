@@ -67,7 +67,7 @@ export const PointTagDetails: FC<PointTagDetailsProps> = memo((props) => {
 	}
 
 	const smokeStaticClasses =
-		"absolute bg-[#00C6B8] text-[#222631] px-3 pt-2 pb-1";
+		"absolute bg-[rgba(0,198,185,0.60)] border-[#00C6B8] border-1 text-[#222631] px-3 pt-2 pb-1";
 
 	return (
 		<div
