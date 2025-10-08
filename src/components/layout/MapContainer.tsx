@@ -77,7 +77,6 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	const [selectedUAV, setSelectedUAV] = useState<SelectedUAV>(emptyUav);
 	const [clusteredUAVIds] = useState<Set<string>>(new Set());
 	const [isMissionPathModalOpen, setIsMissionPathModalOpen] = useState(false);
-	const [isFollowModalOpen, setIsFollowModalOpen] = useState(false);
 	const [selectedUAVForMissionPath, setSelectedUAVForMissionPath] =
 		useState<any>(null);
 
@@ -107,7 +106,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			activeTab: "rgb",
 			showKeyEvents: false,
 			showDetections: false,
-			showFollowModal: true,
+			showFollowModal: false,
 		});
 		// setSelectedUAVs((prev) => [
 		// 	...prev,
@@ -174,6 +173,18 @@ const MapContainer: React.FC<MapContainerProps> = ({
 		setSelectedUAV((prev) => ({ ...prev, showDetections: false }));
 	};
 
+	const toggleFollowModal = () => {
+		// setSelectedUAVs((prev) =>
+		// 	prev.map((uav) =>
+		// 		uav.id === uavId ? { ...uav, showDetections: true } : uav
+		// 	)
+		// );
+		setSelectedUAV((prev) => ({
+			...prev,
+			showFollowModal: !prev.showFollowModal,
+		}));
+	};
+
 	return (
 		<>
 			<AnalysisModal
@@ -199,7 +210,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 								onAnalysisClick={() => setIsAnalysisOpen(true)}
 								onKeyEventsClick={() => handleOpenKeyEvents()}
 								onDetectionsClick={() => handleOpenDetections()}
-								onFollowClick={() => setIsFollowModalOpen(true)}
+								onFollowClick={() => toggleFollowModal()}
 							/>
 						);
 					}
@@ -362,10 +373,10 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			)}
 
 			{/* Follow Path Modal*/}
-			{isFollowModalOpen && (
+			{selectedUAV.showFollowModal && (
 				<FollowModal
-					isOpen={isFollowModalOpen}
-					onClose={() => setIsFollowModalOpen(false)}
+					isOpen={selectedUAV.showFollowModal}
+					onClose={() => toggleFollowModal()}
 				/>
 			)}
 		</>

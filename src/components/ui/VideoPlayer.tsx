@@ -185,8 +185,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 									_dbbox as BBox,
 									[1280, 720],
 									[
-										videoRef.current!.clientWidth,
-										videoRef.current!.clientHeight,
+										videoRef.current?.clientWidth ?? 0,
+										videoRef.current?.clientHeight ?? 0,
 									]
 								);
 

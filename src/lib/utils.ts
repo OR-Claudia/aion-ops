@@ -3,6 +3,7 @@ import { createContext, useContext, type RefObject } from "react";
 import { useEffect } from "react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { followDetections } from "../assets/mock-data/follow_detections";
 
 // Utility function for merging class names
 export function cn(...inputs: ClassValue[]) {
@@ -503,10 +504,7 @@ export interface MetaData {
 	selectedDetection: number | null;
 }
 
-type MetaDataCtxType = [
-	MetaData,
-	(data: Partial<MetaData>) => void,
-]
+type MetaDataCtxType = [MetaData, (data: Partial<MetaData>) => void];
 
 export const metaDataDefault = {
 	metadata: null,
@@ -522,10 +520,7 @@ export const metaDataDefault = {
 	selectedDetection: null,
 };
 
-export const metaDataCtxDefault: MetaDataCtxType = [
-	metaDataDefault,
-	() => {},
-];
+export const metaDataCtxDefault: MetaDataCtxType = [metaDataDefault, () => {}];
 
 export const MetaDataCtx = createContext<MetaDataCtxType>(metaDataCtxDefault);
 
@@ -536,23 +531,25 @@ const useMetadataSync = (
 ) => {
 	const [
 		{
-		metadata,
-		latency,
-		bufferSize,
-		syncStatus,
-		currentFrame,
-		metadataRate,
-		syncOffset,
-		telemetry,
-		detections,
-		detectionCount,
+			metadata,
+			latency,
+			bufferSize,
+			syncStatus,
+			currentFrame,
+			metadataRate,
+			syncOffset,
+			telemetry,
+			detections,
+			detectionCount,
 		},
 		updateMetaData,
 	] = useContext(MetaDataCtx);
 
 	useEffect(() => {
 		if (!enableSync) {
-			updateMetaData({syncStatus: "Disabled"});
+			updateMetaData({
+				syncStatus: "Disabled",
+			});
 			return;
 		}
 
@@ -584,9 +581,10 @@ const useMetadataSync = (
 					newMetaDataForCtx.currentFrame = currentMetadata.frame;
 					newMetaDataForCtx.telemetry = currentMetadata.telemetry || null;
 					newMetaDataForCtx.detections = currentMetadata.detections || [];
-					newMetaDataForCtx.detectionCount = currentMetadata.detection_count || 0;
+					newMetaDataForCtx.detectionCount =
+						currentMetadata.detection_count || 0;
 				}
-				
+
 				updateMetaData(newMetaDataForCtx);
 			};
 
@@ -598,8 +596,14 @@ const useMetadataSync = (
 		// Background update for statistics that don't need to be tied to video events
 		statisticsInterval = setInterval(() => {
 			const rate = sync.getMetadataRate();
-			if (rate !== null) {
-				updateMetaData({metadataRate: rate});
+
+			// if (rate !== null) {
+			if (rate !== null && detections !== followDetections) {
+				updateMetaData({
+					metadataRate: rate,
+					detections: followDetections as DetectionData[],
+					detectionCount: followDetections.length,
+				});
 			}
 		}, 1000);
 
