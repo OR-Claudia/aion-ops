@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Modal from "./Modal";
 import wifiIcon from "../../../assets/wifi.svg";
 import wifi1Icon from "../../../assets/wifi-1.svg";
@@ -9,6 +9,7 @@ import batteryEmptyIcon from "../../../assets/battery-empty.svg";
 import Button from "../Button";
 import VideoPlayer from "../VideoPlayer";
 import Tabs, { type TabItem } from "../Tabs";
+import { MetaDataCtx } from "../../../lib/utils";
 
 export interface UAVDetailData {
 	id: string | number;
@@ -60,6 +61,8 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 	onDetectionsClick,
 	onFollowClick,
 }) => {
+	const [{ activeFrame }] = useContext(MetaDataCtx);
+
 	if (!data) return null;
 
 	const tabs: TabItem[] = [
@@ -177,12 +180,18 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 	// 	console.log("Request control:", data.id);
 	// };
 
+	const parrot = activeFrame?.detections.find((e) => e.class_id === -1);
+
 	return (
 		<Modal
 			isOpen={true}
 			onClose={onClose}
 			title={data.name}
-			subtitle={`Live coordinates: ${data.coordinates}`}
+			subtitle={`Live coordinates: ${
+				activeFrame
+					? `${parrot?.latitude?.toFixed(6)}, ${parrot?.longitude?.toFixed(6)}`
+					: data.coordinates
+			}`}
 			minimizable={true}
 			onMinimize={handleMinimize}
 			minHeight="700px"

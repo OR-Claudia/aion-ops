@@ -22,8 +22,6 @@ const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
 	const [{ detections, selectedDetection, activeFrame }, updateMetaData] =
 		useContext(MetaDataCtx);
 
-	// console.log("FollowModal frame", activeFrame);
-
 	useEffect(() => {
 		return () => {
 			updateMetaData({ selectedDetection: null });

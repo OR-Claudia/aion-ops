@@ -87,7 +87,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	const allUAVLocations = getAllUAVLocations();
 
 	// Ukraine coordinates (center remains the same)
-	const mapCenter: [number, number] = [50.59277, 35.307222];
+	const mapCenter: [number, number] = [36.716021, -4.2879599];
 	// Mission path modal handlers
 	const handleMissionPathClick = (uavData: any) => {
 		setSelectedUAVForMissionPath(uavData);
@@ -306,7 +306,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 			<div className="fixed top-0 left-0 w-screen h-screen bg-[#222631] z-10">
 				<LeafletMap
 					center={mapCenter}
-					zoom={isDetectionsPage ? 12 : 11}
+					zoom={isDetectionsPage ? 12 : 9}
 					style={{ height: "100%", width: "100%" }}
 					zoomControl={false}
 					ref={mapRef}
