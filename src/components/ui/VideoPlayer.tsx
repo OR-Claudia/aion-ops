@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useRef, useEffect, type FC, type RefObject } from "react";
+import { useRef, useEffect, type FC, type RefObject, useState } from "react";
 
 import {
 	capitalize,
@@ -55,6 +55,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	const { activeFrameData, currentTimeMs } = useFollowDetections(
 		videoRef as RefObject<HTMLVideoElement>
 	);
+	const [isBuffering, setIsBuffering] = useState<boolean>(false);
 	// const [currentTimeMs, setCurrentTimeMs] = useState<number>(0);
 	// const [activeFrameData, setActiveFrameData] = useState<Frame | null>(null);
 
@@ -181,15 +182,22 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 			videoElement.src = src;
 		}
 
-		videoElement.play();
+		const timeout = setTimeout(() => {
+			videoElement.play();
+			setIsBuffering(false);
+		}, 3000);
 
 		return () => {
+			setIsBuffering(true);
 			if (hlsRef.current) {
 				hlsRef.current.destroy();
 				hlsRef.current = null;
 			}
 			if (videoElement) {
 				videoElement.pause();
+			}
+			if (timeout) {
+				clearTimeout(timeout);
 			}
 		};
 	}, [src, isGoogleEmbed]);
@@ -345,6 +353,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						disablePictureInPicture={true}
 					/>
 				</MediaController>
+				{isBuffering ? <div className="absolute bottom-3 left-0 w-full flex flex-row justify-center">Buffering...</div> : null}
 			</div>
 
 			{!isGoogleEmbed && enableSync && (
