@@ -56,7 +56,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 		videoRef as RefObject<HTMLVideoElement>
 	);
 	const [isBuffering, setIsBuffering] = useState<boolean>(false);
-	// const [hasStartedPlayback, setHasStartedPlayback] = useState<boolean>(false);
+	const [hasStartedPlayback, setHasStartedPlayback] = useState<boolean>(false);
+	const formRef = useRef<HTMLFormElement | null>(null);
 	// const [currentTimeMs, setCurrentTimeMs] = useState<number>(0);
 	// const [activeFrameData, setActiveFrameData] = useState<Frame | null>(null);
 
@@ -130,32 +131,32 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 
 	// Update activeFrame in context when activeFrameData changes
 
-	// useEffect(() => {
-	// 	const videoElement = videoRef.current;
-	// 	if (!videoElement) return;
+	useEffect(() => {
+		const videoElement = videoRef.current;
+		if (!videoElement) return;
 
-	// 	const handlePlay = async () => {
-	// 		if (!hasStartedPlayback) {
-	// 			setHasStartedPlayback(true);
-
-	// 			try {
-	// 				await fetch("http://193.123.68.104:8000/api/send-objects-to-tak", {
-	// 					method: "POST",
-	// 					headers: {
-	// 						"Content-Type": "application/json",
-	// 					},
-	// 				});
-	// 				console.log("TAK API called successfully");
-	// 			} catch (error) {
-	// 				console.error("Failed to call TAK API:", error);
-	// 			}
-	// 		}
-	// 	};
-	// 	videoElement.addEventListener("play", handlePlay);
-	// 	return () => {
-	// 		videoElement.removeEventListener("play", handlePlay);
-	// 	};
-	// }, [hasStartedPlayback]);
+		const handlePlay = async () => {
+			if (!hasStartedPlayback) {
+				setHasStartedPlayback(true);
+				// formRef.current?.submit();
+				try {
+					await fetch("http://193.123.68.104:8000/api/send-objects-to-tak", {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+						},
+					});
+					console.log("TAK API called successfully");
+				} catch (error) {
+					console.error("Failed to call TAK API:", error);
+				}
+			}
+		};
+		videoElement.addEventListener("play", handlePlay);
+		return () => {
+			videoElement.removeEventListener("play", handlePlay);
+		};
+	}, [hasStartedPlayback]);
 
 	useEffect(() => {
 		const videoElement = videoRef.current;
@@ -494,6 +495,10 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 					)}
 				</div>
 			)}
+			{/* <div style={{ display: 'none' }}>
+				<form ref={formRef} action="http://193.123.68.104:8000/api/send-objects-to-tak" method="POST" target="takSubmit"></form>
+				<iframe name="takSubmit"></iframe>
+			</div> */}
 		</div>
 	);
 
