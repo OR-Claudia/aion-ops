@@ -1,7 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useRef, useEffect, type FC, type RefObject, useState } from "react";
+import { useRef, useEffect, type FC, type RefObject } from "react";
 
-import { capitalize, cn, useMetadataSync, type BBox } from "../../lib/utils";
+import {
+	capitalize,
+	cn,
+	useFollowDetections,
+	useMetadataSync,
+	type BBox,
+} from "../../lib/utils";
 
 import Hls from "hls.js";
 
@@ -19,9 +25,8 @@ import {
 } from "media-chrome/react";
 import { PointTag } from "./PointTag/PointTag";
 import { BBoxUtil } from "../../lib/bboxutils";
-import { staticData } from "../../assets/mock-data/static_data";
-import type { Frame } from "../../lib/types";
 // import { staticData } from "../../assets/mock-data/static_data";
+// import type { Frame } from "../../lib/types";
 
 interface VideoPlayerProps {
 	src?: string;
@@ -47,10 +52,11 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	const videoRef = useRef<HTMLVideoElement | null>(null);
 	const isGoogleEmbed = src.includes("google");
 	const hlsRef = useRef<Hls | null>(null);
-	
-	const [isBuffering, setIsBuffering] = useState<boolean>(false);
-	const [currentTimeMs, setCurrentTimeMs] = useState<number>(0);
-	const [activeFrameData, setActiveFrameData] = useState<Frame | null>(null);
+	const { activeFrameData, currentTimeMs } = useFollowDetections(
+		videoRef as RefObject<HTMLVideoElement>
+	);
+	// const [currentTimeMs, setCurrentTimeMs] = useState<number>(0);
+	// const [activeFrameData, setActiveFrameData] = useState<Frame | null>(null);
 
 	// Fixing type mismatch by asserting non-null videoRef.current
 	const {
@@ -70,59 +76,50 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	);
 
 	const isVideoPlaying: boolean = videoRef.current !== null && !videoRef.current.paused /*&& !videoRef.current.ended*/ && videoRef.current.currentTime > 0;
-
 	// useEffect(() => {
-	// 	if (videoRef.current && isVideoPlaying && syncOffset > 0) {
-	// 		console.log('syncoffset', syncOffset);
-	// 		videoRef.current.currentTime = videoRef.current.currentTime + syncOffset;
-	// 	}
-	// // eslint-disable-next-line react-hooks/exhaustive-deps
-	// }, [isVideoPlaying, syncOffset]);
+	// 	const videoElement = videoRef.current;
+	// 	if (!videoElement) return;
 
-	useEffect(() => {
-		const videoElement = videoRef.current;
-		if (!videoElement) return;
+	// 	const handleTimeUpdate = () => {
+	// 		const currentTime = videoRef.current?.currentTime;
+	// 		if (currentTime === undefined) return;
+	// 		const timeMs = currentTime * 1000;
+	// 		setCurrentTimeMs(timeMs);
 
-		const handleTimeUpdate = () => {
-			const currentTime = videoRef.current?.currentTime;
-			if (currentTime === undefined) return;
-			const timeMs = currentTime * 1000;
-			setCurrentTimeMs(timeMs);
+	// 		if (staticData && staticData.frames.length > 0) {
+	// 			let activeFrame: Frame | null = null;
 
-			if (staticData && staticData.frames.length > 0) {
-				let activeFrame: Frame | null = null;
+	// 			for (let i = 0; i < staticData.frames.length; i++) {
+	// 				const currentFrame = staticData.frames[i];
+	// 				const nextFrame = staticData.frames[i + 1];
 
-				for (let i = 0; i < staticData.frames.length; i++) {
-					const currentFrame = staticData.frames[i];
-					const nextFrame = staticData.frames[i + 1];
+	// 				if (nextFrame) {
+	// 					if (
+	// 						timeMs >= currentFrame.timestamp_ms &&
+	// 						timeMs < nextFrame.timestamp_ms
+	// 					) {
+	// 						activeFrame = currentFrame;
+	// 						break;
+	// 					}
+	// 				} else {
+	// 					// Last frame - active if time >= its timestamp
+	// 					if (timeMs >= currentFrame.timestamp_ms) {
+	// 						activeFrame = currentFrame;
+	// 						break;
+	// 					}
+	// 				}
+	// 			}
 
-					if (nextFrame) {
-						if (
-							timeMs >= currentFrame.timestamp_ms &&
-							timeMs < nextFrame.timestamp_ms
-						) {
-							activeFrame = currentFrame;
-							break;
-						}
-					} else {
-						// Last frame - active if time >= its timestamp
-						if (timeMs >= currentFrame.timestamp_ms) {
-							activeFrame = currentFrame;
-							break;
-						}
-					}
-				}
+	// 			setActiveFrameData(activeFrame);
+	// 		}
+	// 	};
 
-				setActiveFrameData(activeFrame);
-			}
-		};
+	// 	videoElement.addEventListener("timeupdate", handleTimeUpdate);
 
-		videoElement.addEventListener("timeupdate", handleTimeUpdate);
-
-		return () => {
-			videoElement.removeEventListener("timeupdate", handleTimeUpdate);
-		};
-	}, []);
+	// 	return () => {
+	// 		videoElement.removeEventListener("timeupdate", handleTimeUpdate);
+	// 	};
+	// }, []);
 
 	console.log("Active frame data:", activeFrameData);
 
@@ -184,22 +181,15 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 			videoElement.src = src;
 		}
 
-		const timeout = setTimeout(() => {
-			videoElement.play();
-			setIsBuffering(false);
-		}, 5000);
+		videoElement.play();
 
 		return () => {
-			setIsBuffering(true);
 			if (hlsRef.current) {
 				hlsRef.current.destroy();
 				hlsRef.current = null;
 			}
 			if (videoElement) {
 				videoElement.pause();
-			}
-			if (timeout) {
-				clearTimeout(timeout);
 			}
 		};
 	}, [src, isGoogleEmbed]);
@@ -355,7 +345,6 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						disablePictureInPicture={true}
 					/>
 				</MediaController>
-				{isBuffering ? <div className="absolute bottom-3 left-0 w-full flex flex-row justify-center">Buffering...</div> : null}
 			</div>
 
 			{!isGoogleEmbed && enableSync && (
