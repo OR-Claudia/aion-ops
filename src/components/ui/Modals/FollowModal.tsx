@@ -22,7 +22,7 @@ const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
 	const [{ detections, selectedDetection, activeFrame }, updateMetaData] =
 		useContext(MetaDataCtx);
 
-	console.log("FollowModal frame", activeFrame);
+	// console.log("FollowModal frame", activeFrame);
 
 	useEffect(() => {
 		return () => {
@@ -35,11 +35,27 @@ const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
 		updateMetaData({ selectedDetection: trackId });
 	};
 
-	const uavData = detections?.find((d) => d.class_id === -1);
-	const uavPosition: [number, number] = [
-		uavData ? uavData.latitude! : 36.716021,
-		uavData ? uavData.longitude! : -4.2879599,
-	];
+	const uavData = activeFrame?.detections[0]
+		? activeFrame?.detections[0]
+		: detections?.find((d) => d.class_id === -1);
+	const uavPosition: [number, number] = activeFrame?.detections[0]
+		? [
+				activeFrame?.detections[0].latitude
+					? activeFrame?.detections[0].latitude
+					: 36.716021,
+				activeFrame?.detections[0].longitude
+					? activeFrame?.detections[0].longitude
+					: -4.2879599,
+		  ]
+		: [
+				uavData ? uavData.latitude! : 36.716021,
+				uavData ? uavData.longitude! : -4.2879599,
+		  ];
+
+	// console.log(
+	// 	"detections in frame",
+	// 	activeFrame?.detections.map((d) => d.class_id)
+	// );
 
 	return (
 		<Modal title={`Follow Path`} isOpen={isOpen} onClose={onClose}>
@@ -109,24 +125,44 @@ const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
 
 			{/* Detections content */}
 			<div className="max-h-[300px] p-3 overflow-y-auto">
-				{detections.map((detection, index) => {
-					if (detection.class_id !== -1) {
-						return (
-							<DetectionListItem
-								key={`${detection.class_name}-${index}`}
-								followDetection={detection}
-								isSelected={detection.track_id === selectedDetection}
-								selectDetection={() => handleDetectionClick(detection.track_id)}
-							/>
-						);
-					}
-				})}
+				{detections.length > 0 &&
+					detections.map((detection, index) => {
+						if (detection.class_id !== -1) {
+							return (
+								<DetectionListItem
+									key={`${detection.class_name}-${index}`}
+									followDetection={detection}
+									isSelected={detection.track_id === selectedDetection}
+									selectDetection={() =>
+										handleDetectionClick(detection.track_id)
+									}
+								/>
+							);
+						}
+					})}
+				{activeFrame?.detections &&
+					activeFrame?.detections.map((detection, index) => {
+						if (detection.class_id !== -1) {
+							return (
+								<DetectionListItem
+									key={`${detection.class_name}-${index}`}
+									frameDetection={detection}
+									isSelected={detection.track_id === selectedDetection}
+									selectDetection={() =>
+										handleDetectionClick(detection.track_id)
+									}
+								/>
+							);
+						}
+					})}
 			</div>
 			<div className="flex place-content-between mt-3">
 				<span className="text-xl font-bold">{`Current detections:`}</span>
 
 				<span className="text-2xl font-normal">
-					{detections.filter((e) => e.class_id !== -1).length}
+					{activeFrame
+						? activeFrame.detections.filter((e) => e.class_id !== -1).length
+						: detections.filter((e) => e.class_id !== -1).length}
 				</span>
 			</div>
 		</Modal>

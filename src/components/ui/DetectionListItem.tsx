@@ -6,11 +6,12 @@ import {
 	formatDetectionTimestamp,
 	type DetectionData,
 } from "../../lib/utils";
+import type { DetectedInFrame } from "../../lib/types";
 
 interface DetectionListItemProps {
 	detection?: Detection;
 	followDetection?: DetectionData;
-	// frameDetection?: DetectionData;
+	frameDetection?: DetectedInFrame;
 	isSelected?: boolean;
 	selectDetection?: () => void;
 }
@@ -32,14 +33,13 @@ function getDetectionImage(class_name: string) {
 const DetectionListItem: React.FC<DetectionListItemProps> = ({
 	detection,
 	followDetection,
+	frameDetection,
 	isSelected = true,
 	selectDetection,
 }) => {
-	const image = getDetectionImage(
-		detection?.class_name ? detection!.class_name : followDetection!.class_name
-	);
-
 	if (detection) {
+		const image = getDetectionImage(detection?.class_name);
+
 		const detectionData = detection as Detection;
 		return (
 			<div className="bg-[#242B2C] w-[450px] rounded-[0px_10px_10px_10px] my-1 flex items-center ">
@@ -79,6 +79,7 @@ const DetectionListItem: React.FC<DetectionListItemProps> = ({
 			</div>
 		);
 	} else if (followDetection) {
+		const image = getDetectionImage(followDetection?.class_name);
 		return (
 			<div
 				className={cn(
@@ -162,6 +163,74 @@ const DetectionListItem: React.FC<DetectionListItemProps> = ({
 								<span>{`${capitalize(
 									followDetection.geo_coordinates.calculation_method
 								)}`}</span>
+							</div>
+						</div>
+					)}
+				</div>
+			</div>
+		);
+	} else if (frameDetection) {
+		const image = getDetectionImage(frameDetection?.class_name);
+		return (
+			<div
+				className={cn(
+					"w-[450px] rounded-[0px_10px_10px_10px] my-1 flex transition-all",
+					isSelected
+						? "bg-[#3A4441] h-fit pb-3 items-start"
+						: "bg-[#242B2C] items-center "
+				)}
+				onClick={() => {
+					selectDetection?.();
+				}}
+			>
+				<img
+					src={`src/assets/${image}`}
+					alt={frameDetection!.class_name}
+					className="w-16 h-16 mr-2 p-2 "
+				/>
+				<div
+					className={cn(
+						"flex flex-col w-full content-center",
+						isSelected ? "pt-2.5" : ""
+					)}
+				>
+					{/* Header */}
+					<div className="flex w-full justify-between">
+						<div className="text-md">
+							<span className="font-medium">
+								{capitalize(frameDetection!.class_name)}
+							</span>
+							<span>{" (Object class)"}</span>
+						</div>
+					</div>
+					{/* Details */}
+					<div className="flex place-content-between mr-3">
+						<div className="text-sm">
+							<span>{"ID: "}</span>
+							<span>{frameDetection!.track_id}</span>
+						</div>
+						<div className="text-sm">
+							<span>{`Lat: ${frameDetection.geo_coordinates?.latitude?.toFixed(
+								4
+							)} Lon: ${frameDetection.geo_coordinates?.longitude?.toFixed(
+								4
+							)}`}</span>
+						</div>
+						<div className="text-sm">
+							<span>{"Confidence: "}</span>
+							<span>{frameDetection.confidence.toFixed(2)}</span>
+						</div>
+					</div>
+					{/* Expanded details */}
+					{isSelected && (
+						<div className="flex flex-col place-content-between mr-3 mt-2 bt-6">
+							<div className="text-sm whitespace-nowrap">
+								<span className="font-bold mr-1">
+									{"Estimated ground distance: "}
+								</span>
+								<span>{`${
+									frameDetection.altitude ? frameDetection.altitude : 56
+								}m`}</span>
 							</div>
 						</div>
 					)}
