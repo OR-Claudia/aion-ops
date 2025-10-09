@@ -74,7 +74,8 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 		{
 			id: "thermo",
 			label: "Thermo",
-			value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
+			// value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
+			value: "",
 		},
 	];
 

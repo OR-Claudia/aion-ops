@@ -14,7 +14,7 @@ export interface DetectedInFrame {
 	latitude?: number;
 	longitude?: number;
 	altitude: number;
-	track_id?: number;
+	track_id: number;
 	bbox?: [number, number, number, number];
 	geo_coordinates?: {
 		latitude?: number;

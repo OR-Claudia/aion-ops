@@ -1,4 +1,3 @@
-// Existing content
 import { createContext, useContext, useState, type RefObject } from "react";
 import { useEffect } from "react";
 import { clsx, type ClassValue } from "clsx";
@@ -504,9 +503,14 @@ export interface MetaData {
 	detections: DetectionData[];
 	detectionCount: number;
 	selectedDetection: number | null;
+	activeFrame?: Frame | null;
 }
 
-type MetaDataCtxType = [MetaData, (data: Partial<MetaData>) => void];
+type MetaDataCtxType = [
+	MetaData,
+	(data: Partial<MetaData>) => void,
+	(activeFrame: MetaData["activeFrame"]) => void
+];
 
 export const metaDataDefault = {
 	metadata: null,
@@ -520,9 +524,14 @@ export const metaDataDefault = {
 	detections: [],
 	detectionCount: 0,
 	selectedDetection: null,
+	activeFrame: null,
 };
 
-export const metaDataCtxDefault: MetaDataCtxType = [metaDataDefault, () => {}];
+export const metaDataCtxDefault: MetaDataCtxType = [
+	metaDataDefault,
+	() => {},
+	() => {},
+];
 
 export const MetaDataCtx = createContext<MetaDataCtxType>(metaDataCtxDefault);
 
@@ -543,6 +552,7 @@ const useMetadataSync = (
 			telemetry,
 			detections,
 			detectionCount,
+			activeFrame,
 		},
 		updateMetaData,
 	] = useContext(MetaDataCtx);
@@ -641,12 +651,14 @@ const useMetadataSync = (
 		telemetry,
 		detections,
 		detectionCount,
+		activeFrame,
 	};
 };
 
 const useFollowDetections = (videoRef: RefObject<HTMLVideoElement>) => {
 	const [currentTimeMs, setCurrentTimeMs] = useState<number>(0);
 	const [activeFrameData, setActiveFrameData] = useState<Frame | null>(null);
+	const [, updateActiveFrame] = useContext(MetaDataCtx);
 
 	useEffect(() => {
 		const videoElement = videoRef.current;
@@ -681,6 +693,7 @@ const useFollowDetections = (videoRef: RefObject<HTMLVideoElement>) => {
 						}
 					}
 				}
+
 				setActiveFrameData(activeFrame);
 			}
 		};
@@ -691,6 +704,10 @@ const useFollowDetections = (videoRef: RefObject<HTMLVideoElement>) => {
 			videoElement.removeEventListener("timeupdate", handleTimeUpdate);
 		};
 	}, []);
+
+	useEffect(() => {
+		updateActiveFrame({ activeFrame: activeFrameData });
+	}, [activeFrameData]);
 
 	return { currentTimeMs, activeFrameData };
 };

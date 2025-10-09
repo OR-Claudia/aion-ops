@@ -10,6 +10,7 @@ import {
 interface DetectionListItemProps {
 	detection?: Detection;
 	followDetection?: DetectionData;
+	// frameDetection?: DetectionData;
 	isSelected?: boolean;
 	selectDetection?: () => void;
 }

@@ -10,6 +10,7 @@ import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import L from "leaflet";
 import { createRoot, type Root } from "react-dom/client";
 import { PointTag } from "../PointTag/PointTag";
+import type { DetectedInFrame } from "../../../lib/types";
 // import { PointTag } from "../PointTag/PointTag";
 
 interface FollowModalProps {
@@ -18,8 +19,10 @@ interface FollowModalProps {
 }
 
 const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
-	const [{ detections, selectedDetection }, updateMetaData] =
+	const [{ detections, selectedDetection, activeFrame }, updateMetaData] =
 		useContext(MetaDataCtx);
+
+	console.log("FollowModal frame", activeFrame);
 
 	useEffect(() => {
 		return () => {
@@ -54,6 +57,30 @@ const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
 					className="rounded-[3px]"
 				>
 					<TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png" />
+					{activeFrame &&
+						activeFrame.detections &&
+						activeFrame.detections.map((detection, i) => {
+							if (detection.class_id !== -1) {
+								if (
+									detection.geo_coordinates?.latitude &&
+									detection.geo_coordinates?.longitude
+								) {
+									const position: [number, number] = [
+										detection.geo_coordinates.latitude || 0,
+										detection.geo_coordinates.longitude || 0,
+									];
+									return (
+										<SimpleMarker
+											key={`${detection.class_id}-${i}`}
+											position={position}
+											frameDetection={detection}
+										/>
+									);
+								}
+								return null;
+							}
+							return null;
+						})}
 					{detections &&
 						detections.map((detection, i) => {
 							if (detection.class_id !== -1) {
@@ -110,75 +137,115 @@ export default FollowModal;
 
 interface SimpleMarkerProps {
 	position: [number, number];
-	detection: DetectionData;
+	detection?: DetectionData;
+	frameDetection?: DetectedInFrame;
 }
 
-const SimpleMarker = memo(({ position, detection }: SimpleMarkerProps) => {
-	const map = useMap();
-	const d = detection;
-	const markerRef = useRef<L.Marker | null>(null);
-	const rootRef = useRef<Root | null>(null);
-	const containerRef = useRef<HTMLDivElement | null>(null);
+const SimpleMarker = memo(
+	({ position, detection, frameDetection }: SimpleMarkerProps) => {
+		const map = useMap();
+		const markerRef = useRef<L.Marker | null>(null);
+		const rootRef = useRef<Root | null>(null);
+		const containerRef = useRef<HTMLDivElement | null>(null);
 
-	useEffect(() => {
-		if (!map) return;
+		useEffect(() => {
+			if (!map) return;
 
-		const container = document.createElement("div");
-		container.className = "custom-leafleft-marker";
-		containerRef.current = container;
+			const container = document.createElement("div");
+			container.className = "custom-leafleft-marker";
+			containerRef.current = container;
 
-		const icon = L.divIcon({
-			className: "custom-marker-icon",
-			html: container,
-			iconSize: [40, 40],
-			iconAnchor: [20, 40],
-		});
+			const icon = L.divIcon({
+				className: "custom-marker-icon",
+				html: container,
+				iconSize: [40, 40],
+				iconAnchor: [20, 40],
+			});
 
-		const marker = L.marker(position, { icon });
-		marker.addTo(map);
-		markerRef.current = marker;
+			const marker = L.marker(position, { icon });
+			marker.addTo(map);
+			markerRef.current = marker;
 
-		rootRef.current = createRoot(container);
-		rootRef.current.render(
-			<PointTag length={0} position={position} trackId={d.track_id}>
-				<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
-					<p>{`ID:${d.track_id}`}</p>
-					<p>{`${capitalize(d.class_name)}, ${d.confidence.toFixed(2)}`}</p>
-				</div>
-			</PointTag>
-		);
-
-		return () => {
-			if (rootRef.current) {
-				rootRef.current.unmount();
-				rootRef.current = null;
+			if (detection) {
+				rootRef.current = createRoot(container);
+				rootRef.current.render(
+					<PointTag length={0} position={position} trackId={detection.track_id}>
+						<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
+							<p>{`ID:${detection.track_id}`}</p>
+							<p>{`${capitalize(
+								detection.class_name
+							)}, ${detection.confidence.toFixed(2)}`}</p>
+						</div>
+					</PointTag>
+				);
 			}
+
+			if (frameDetection) {
+				rootRef.current = createRoot(container);
+				rootRef.current.render(
+					<PointTag
+						length={0}
+						position={position}
+						trackId={frameDetection.track_id}
+					>
+						<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
+							<p>{`ID:${frameDetection.track_id}`}</p>
+							<p>{`${capitalize(
+								frameDetection.class_name
+							)}, ${frameDetection.confidence.toFixed(2)}`}</p>
+						</div>
+					</PointTag>
+				);
+			}
+
+			return () => {
+				if (rootRef.current) {
+					rootRef.current.unmount();
+					rootRef.current = null;
+				}
+				if (markerRef.current) {
+					map.removeLayer(markerRef.current);
+					markerRef.current = null;
+				}
+			};
+		}, [map, position, detection, frameDetection]);
+
+		useEffect(() => {
+			if (rootRef.current && containerRef.current) {
+				if (detection) {
+					rootRef.current.render(
+						<PointTag length={0} position={position}>
+							<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
+								<p>{`ID:${detection.track_id}`}</p>
+								<p>{`${capitalize(
+									detection.class_name
+								)}, ${detection.confidence.toFixed(2)}`}</p>
+							</div>
+						</PointTag>
+					);
+				}
+				if (frameDetection) {
+					rootRef.current.render(
+						<PointTag length={0} position={position}>
+							<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
+								<p>{`ID:${frameDetection.track_id}`}</p>
+								<p>{`${capitalize(
+									frameDetection.class_name
+								)}, ${frameDetection.confidence.toFixed(2)}`}</p>
+							</div>
+						</PointTag>
+					);
+				}
+			}
+		}, [position, detection, frameDetection]);
+
+		// Update position when it changes
+		useEffect(() => {
 			if (markerRef.current) {
-				map.removeLayer(markerRef.current);
-				markerRef.current = null;
+				markerRef.current.setLatLng(position);
 			}
-		};
-	}, [map, position, d]);
+		}, [position]);
 
-	useEffect(() => {
-		if (rootRef.current && containerRef.current) {
-			rootRef.current.render(
-				<PointTag length={0} position={position}>
-					<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
-						<p>{`ID:${d.track_id}`}</p>
-						<p>{`${capitalize(d.class_name)}, ${d.confidence.toFixed(2)}`}</p>
-					</div>
-				</PointTag>
-			);
-		}
-	}, [position, d]);
-
-	// Update position when it changes
-	useEffect(() => {
-		if (markerRef.current) {
-			markerRef.current.setLatLng(position);
-		}
-	}, [position]);
-
-	return null;
-});
+		return null;
+	}
+);
