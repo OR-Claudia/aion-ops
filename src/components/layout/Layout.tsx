@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import TopBar from "./TopBar";
 import MapContainer from "./MapContainer";
-import { MessageBar, ExpandableToolsPanel } from "../ui";
+import { ExpandableToolsPanel } from "../ui";
 import { MapContextProvider } from "./MapContext";
 import { UAVLocationsCtxProvider } from "./ctx/UAVLocations/UAVLocationsCtx";
 import { MetaDataCtxProvider } from "../../lib/MetaDataCtxProvider";
@@ -31,9 +31,9 @@ const Layout: React.FC<LayoutProps> = ({ children, showTools = false }) => {
 
 				{/* MessageBar - always present at bottom */}
 
-				<div className="fixed bottom-[32px] w-[80%] z-20 left-1/2 transform -translate-x-1/2 ">
+				{/* <div className="fixed bottom-[32px] w-[80%] z-20 left-1/2 transform -translate-x-1/2 ">
 					<MessageBar />
-				</div>
+				</div> */}
 
 				{/* ExpandableToolsPanel - only on pages that request it */}
 				{showTools && (
