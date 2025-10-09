@@ -1,9 +1,11 @@
 // Existing content
-import { createContext, useContext, type RefObject } from "react";
+import { createContext, useContext, useState, type RefObject } from "react";
 import { useEffect } from "react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { followDetections } from "../assets/mock-data/follow_detections";
+import type { Frame } from "./types";
+import { staticData } from "../assets/mock-data/static_data";
 
 // Utility function for merging class names
 export function cn(...inputs: ClassValue[]) {
@@ -642,7 +644,59 @@ const useMetadataSync = (
 	};
 };
 
+const useFollowDetections = (videoRef: RefObject<HTMLVideoElement>) => {
+	const [currentTimeMs, setCurrentTimeMs] = useState<number>(0);
+	const [activeFrameData, setActiveFrameData] = useState<Frame | null>(null);
+
+	useEffect(() => {
+		const videoElement = videoRef.current;
+		if (!videoElement) return;
+
+		const handleTimeUpdate = () => {
+			const currentTime = videoRef.current?.currentTime;
+			if (currentTime === undefined) return;
+			const timeMs = currentTime * 1000;
+			setCurrentTimeMs(timeMs);
+
+			if (staticData && staticData.frames.length > 0) {
+				let activeFrame: Frame | null = null;
+
+				for (let i = 0; i < staticData.frames.length; i++) {
+					const currentFrame = staticData.frames[i];
+					const nextFrame = staticData.frames[i + 1];
+
+					if (nextFrame) {
+						if (
+							timeMs >= currentFrame.timestamp_ms &&
+							timeMs < nextFrame.timestamp_ms
+						) {
+							activeFrame = currentFrame;
+							break;
+						}
+					} else {
+						// Last frame - active if time >= its timestamp
+						if (timeMs >= currentFrame.timestamp_ms) {
+							activeFrame = currentFrame;
+							break;
+						}
+					}
+				}
+				setActiveFrameData(activeFrame);
+			}
+		};
+
+		videoElement.addEventListener("timeupdate", handleTimeUpdate);
+
+		return () => {
+			videoElement.removeEventListener("timeupdate", handleTimeUpdate);
+		};
+	}, []);
+
+	return { currentTimeMs, activeFrameData };
+};
+
 export {
+	useFollowDetections,
 	useMetadataSync,
 	MetadataSync,
 	initSSE,
