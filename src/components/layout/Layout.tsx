@@ -2,9 +2,10 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import TopBar from "./TopBar";
 import MapContainer from "./MapContainer";
-import { MessageBar, ExpandableToolsPanel } from "../ui";
+import { ExpandableToolsPanel } from "../ui";
 import { MapContextProvider } from "./MapContext";
 import { UAVLocationsCtxProvider } from "./ctx/UAVLocations/UAVLocationsCtx";
+import { MetaDataCtxProvider } from "../../lib/MetaDataCtxProvider";
 
 interface LayoutProps {
 	children: React.ReactNode;
@@ -19,18 +20,20 @@ const Layout: React.FC<LayoutProps> = ({ children, showTools = false }) => {
 		<MapContextProvider>
 			<div className="w-screen h-screen bg-[#222631] relative overflow-hidden font-ubuntu">
 				{/* MapContainer - always present, but indicators only on homepage */}
-				<UAVLocationsCtxProvider>
-					<MapContainer showIndicators={isHomePage} />
-				</UAVLocationsCtxProvider>
+				<MetaDataCtxProvider>
+					<UAVLocationsCtxProvider>
+						<MapContainer showIndicators={isHomePage} />
+					</UAVLocationsCtxProvider>
+				</MetaDataCtxProvider>
 
 				{/* TopBar - always present */}
 				<TopBar />
 
 				{/* MessageBar - always present at bottom */}
 
-				<div className="fixed bottom-[32px] w-[80%] z-20 left-1/2 transform -translate-x-1/2 ">
+				{/* <div className="fixed bottom-[32px] w-[80%] z-20 left-1/2 transform -translate-x-1/2 ">
 					<MessageBar />
-				</div>
+				</div> */}
 
 				{/* ExpandableToolsPanel - only on pages that request it */}
 				{showTools && (

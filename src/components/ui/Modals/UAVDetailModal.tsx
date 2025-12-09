@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Modal from "./Modal";
 import wifiIcon from "../../../assets/wifi.svg";
 import wifi1Icon from "../../../assets/wifi-1.svg";
@@ -9,6 +9,7 @@ import batteryEmptyIcon from "../../../assets/battery-empty.svg";
 import Button from "../Button";
 import VideoPlayer from "../VideoPlayer";
 import Tabs, { type TabItem } from "../Tabs";
+import { MetaDataCtx } from "../../../lib/utils";
 
 export interface UAVDetailData {
 	id: string | number;
@@ -44,6 +45,7 @@ export interface UAVDetailModalProps {
 	onTabChange: (tabId: string) => void;
 	onKeyEventsClick?: () => void;
 	onDetectionsClick?: () => void;
+	onFollowClick?: () => void;
 }
 
 const livestream = true;
@@ -57,25 +59,42 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 	onTabChange,
 	onKeyEventsClick,
 	onDetectionsClick,
+	onFollowClick,
 }) => {
+	const [{ activeFrame }] = useContext(MetaDataCtx);
+
 	if (!data) return null;
 
 	const tabs: TabItem[] = [
 		{
 			id: "rgb",
 			label: "RGB",
-			value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
+			// value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
+			// value: "",
+			// value: "http://193.123.68.104:8888/detected_stream/index.m3u8",
+			value: "src/assets/videos/rincon.mp4",
 		},
 		{
 			id: "thermo",
 			label: "Thermo",
-			value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
+			// value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
+			value: "",
 		},
 	];
 
 	const getCurrentVideoSource = () => {
 		const currentTab = tabs.find((tab) => tab.id === activeTab);
 		return currentTab?.value || "";
+	};
+
+	const shouldEnableSync = () => {
+		const currentSource = getCurrentVideoSource();
+		// Enable sync only for live HLS streams (.m3u8 URLs)
+		return (
+			livestream &&
+			(currentSource.toLowerCase().includes(".m3u8") ||
+				currentSource.toLowerCase().includes("application/vnd.apple.mpegurl"))
+		);
 	};
 
 	const handleTabChange = (tabId: string) => {
@@ -139,6 +158,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 	};
 
 	const handleFollow = () => {
+		onFollowClick?.();
 		console.log("Follow UAV", data.id);
 	};
 
@@ -160,15 +180,21 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 	// 	console.log("Request control:", data.id);
 	// };
 
+	const parrot = activeFrame?.detections.find((e) => e.class_id === -1);
+
 	return (
 		<Modal
 			isOpen={true}
 			onClose={onClose}
 			title={data.name}
-			subtitle={`Live coordinates: ${data.coordinates}`}
+			subtitle={`Live coordinates: ${
+				activeFrame
+					? `${parrot?.latitude?.toFixed(6)}, ${parrot?.longitude?.toFixed(6)}`
+					: data.coordinates
+			}`}
 			minimizable={true}
 			onMinimize={handleMinimize}
-			minHeight="750px"
+			minHeight="700px"
 			headerContent={
 				<div className="flex items-center gap-2">
 					<div
@@ -191,16 +217,17 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 
 			{/* Video Player Section - preserving exact wrapper structure */}
 			<div className="mb-4">
-				<div className="w-full h-fit relative rounded-[0px_3px_3px_3px] overflow-hidden">
+				<div className="w-full h-fit relative rounded-[0px_3px_3px_3px] overflow-visible">
 					{/* Video Player */}
 					<div className="w-full ">
 						<VideoPlayer
 							livestream={livestream}
 							src={getCurrentVideoSource()}
+							enableSync={shouldEnableSync()}
 							height={
 								livestream
 									? activeTab === "rgb"
-										? "300px"
+										? "auto"
 										: "300px"
 									: activeTab === "rgb"
 									? "auto"
