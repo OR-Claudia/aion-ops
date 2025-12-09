@@ -11,11 +11,6 @@ const reducer = (prevState: MetaData, action: MetaDataReducerAct): MetaData => {
 	switch (action.type) {
 		case "update": {
 			const newState = { ...(action.payload as Partial<MetaData>) };
-			if (typeof newState.selectedDetection !== "undefined") {
-				if (prevState.selectedDetection === newState.selectedDetection) {
-					newState.selectedDetection = null;
-				}
-			}
 			return { ...prevState, ...newState };
 		}
 		case "updateActiveFrame": {

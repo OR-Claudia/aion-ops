@@ -20,11 +20,11 @@ const Layout: React.FC<LayoutProps> = ({ children, showTools = false }) => {
 		<MapContextProvider>
 			<div className="w-screen h-screen bg-[#222631] relative overflow-hidden font-ubuntu">
 				{/* MapContainer - always present, but indicators only on homepage */}
-				<UAVLocationsCtxProvider>
-					<MetaDataCtxProvider>
+				<MetaDataCtxProvider>
+					<UAVLocationsCtxProvider>
 						<MapContainer showIndicators={isHomePage} />
-					</MetaDataCtxProvider>
-				</UAVLocationsCtxProvider>
+					</UAVLocationsCtxProvider>
+				</MetaDataCtxProvider>
 
 				{/* TopBar - always present */}
 				<TopBar />

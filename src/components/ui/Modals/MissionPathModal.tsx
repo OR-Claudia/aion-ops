@@ -11,6 +11,8 @@ import Modal from "./Modal";
 import type { StorageData } from "../StorageItem";
 import type { UAVDetailData } from "./UAVDetailModal";
 import { reverseGeocode } from "../../../lib/utils";
+import DroneMarker from "../DroneMarker";
+import { useUAVLocations } from "../../layout/ctx/UAVLocations/useUAVLocations";
 
 interface MissionPathModalProps {
 	isOpen: boolean;
@@ -36,9 +38,18 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 
 	// Determine which data source to use
 	const isUAVData = !!uavData;
+	const isLiveUav2 = isUAVData && String(uavData?.id) === "2";
+	const uavLocations = useUAVLocations();
+
+	// Geo helpers: convert meters to degrees at given latitude
+	const metersToLat = (meters: number) => meters / 111320;
+	const metersToLon = (meters: number, atLat: number) =>
+		meters / (111320 * Math.cos((atLat * Math.PI) / 180));
 
 	// Get mission path coordinates and detections based on data type
-	const missionPathCoordinates = isUAVData
+	const missionPathCoordinates = isLiveUav2
+		? uavLocations.getPathById(2)
+		: isUAVData
 		? uavData?.missionPathCoordinates || []
 		: record?.MissionPath || [];
 
@@ -98,9 +109,27 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 	// Calculate map bounds to fit all points
 	const calculateMapBounds = () => {
 		if (!missionPathCoordinates || missionPathCoordinates.length === 0) {
-			return new LatLngBounds([50.0, 19.0], [50.1, 19.1]);
+			// Default to a small ~60m box
+			const latPad = metersToLat(60);
+			const lonPad = metersToLon(60, 50.0);
+			return new LatLngBounds(
+				[50.0 - latPad, 19.0 - lonPad],
+				[50.0 + latPad, 19.0 + lonPad]
+			);
 		}
 
+		// For live UAV id 2, focus tightly around the latest position (~60m box)
+		if (isLiveUav2) {
+			const last = missionPathCoordinates[missionPathCoordinates.length - 1];
+			const latPad = metersToLat(60);
+			const lonPad = metersToLon(60, last.lat);
+			return new LatLngBounds(
+				[last.lat - latPad, last.lon - lonPad],
+				[last.lat + latPad, last.lon + lonPad]
+			);
+		}
+
+		// For stored paths, fit bounds but cap padding to <= 60m
 		const lats = missionPathCoordinates.map((p) => p.lat);
 		const lons = missionPathCoordinates.map((p) => p.lon);
 
@@ -109,17 +138,30 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 		const minLon = Math.min(...lons);
 		const maxLon = Math.max(...lons);
 
-		// Add padding to bounds
-		const latPadding = (maxLat - minLat) * 0.1 || 0.01;
-		const lonPadding = (maxLon - minLon) * 0.1 || 0.01;
+		const meanLat = (minLat + maxLat) / 2;
+
+		const latPadPct = (maxLat - minLat) * 0.1;
+		const lonPadPct = (maxLon - minLon) * 0.1;
+
+		const latPad = Math.max(
+			metersToLat(20),
+			Math.min(metersToLat(60), latPadPct || metersToLat(30))
+		);
+		const lonPad = Math.max(
+			metersToLon(20, meanLat),
+			Math.min(metersToLon(60, meanLat), lonPadPct || metersToLon(30, meanLat))
+		);
 
 		return new LatLngBounds(
-			[minLat - latPadding, minLon - lonPadding],
-			[maxLat + latPadding, maxLon + lonPadding]
+			[minLat - latPad, minLon - lonPad],
+			[maxLat + latPad, maxLon + lonPad]
 		);
 	};
 
 	const mapBounds = calculateMapBounds();
+	const currentPosition = isLiveUav2
+		? uavLocations.getCurrentPositionById(2)
+		: null;
 
 	// Reverse geocode the first point in the Mission Path
 	useEffect(() => {
@@ -133,30 +175,39 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 		}
 	}, [missionPathCoordinates]);
 
-	// Generate covered area polygon points (simplified convex hull approximation)
+	// Generate covered area polygon points (~50m radius around current or path center)
 	const generateCoveredArea = () => {
-		if (!missionPathCoordinates || missionPathCoordinates.length < 3) return [];
+		if (!missionPathCoordinates || missionPathCoordinates.length === 0)
+			return [];
 
-		const centerLat =
-			missionPathCoordinates.reduce((sum, p) => sum + p.lat, 0) /
-			missionPathCoordinates.length;
-		const centerLon =
-			missionPathCoordinates.reduce((sum, p) => sum + p.lon, 0) /
-			missionPathCoordinates.length;
+		// Prefer current live position for UAV 2 if available
+		let centerLat: number;
+		let centerLon: number;
+		if (isLiveUav2 && currentPosition) {
+			centerLat = currentPosition[0];
+			centerLon = currentPosition[1];
+		} else {
+			centerLat =
+				missionPathCoordinates.reduce((sum, p) => sum + p.lat, 0) /
+				missionPathCoordinates.length;
+			centerLon =
+				missionPathCoordinates.reduce((sum, p) => sum + p.lon, 0) /
+				missionPathCoordinates.length;
+		}
 
-		// Generate an elliptical area around the center
-		const radiusLat = 0.02; // ~2km
-		const radiusLon = 0.02;
-		const points = [];
+		const radiusMeters = 50; // max coverage radius
+		const radiusLat = metersToLat(radiusMeters);
+		const radiusLon = metersToLon(radiusMeters, centerLat);
 
-		for (let i = 0; i <= 16; i++) {
-			const angle = (i / 16) * 2 * Math.PI;
+		const points: [number, number][] = [];
+		const segments = 24;
+		for (let i = 0; i <= segments; i++) {
+			const angle = (i / segments) * 2 * Math.PI;
 			points.push([
 				centerLat + radiusLat * Math.cos(angle),
 				centerLon + radiusLon * Math.sin(angle),
 			]);
 		}
-
 		return points;
 	};
 
@@ -221,6 +272,7 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 									borderRadius: "3px",
 									filter: "brightness(1.5) contrast(1) saturate(1.2)",
 								}}
+								zoom={17}
 								zoomControl={false}
 								dragging={false}
 								touchZoom={false}
@@ -262,6 +314,10 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 										dashArray: "15, 8",
 									}}
 								/>
+								{/* Live Drone Position (UAV id: 2) */}
+								{isLiveUav2 && currentPosition ? (
+									<DroneMarker position={currentPosition} zIndexOffset={1200} />
+								) : null}
 
 								{/* Detection Clusters */}
 								{detectionClusters.map((cluster, index) => (
@@ -328,12 +384,12 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 						</div>
 
 						{/* Detection hotspots */}
-						<div className="flex justify-between items-center">
+						{/* <div className="flex justify-between items-center">
 							<span className="text-[#E3F3F2] font-ubuntu text-sm font-light">
 								Detection hotspots
 							</span>
 							<div className="w-[28px] h-[27px] rounded-full bg-[#00C6B8]"></div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
@@ -347,14 +403,14 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 				</span>
 			</div>
 			{/* Current detections footer */}
-			<div className="flex justify-between mt-5">
+			{/* <div className="flex justify-between mt-5">
 				<span className="text-xl font-bold text-[#E3F3F2]">
 					Current detections
 				</span>
 				<span className="text-2xl font-normal text-[#E3F3F2]">
 					{numberOfDetections}
 				</span>
-			</div>
+			</div> */}
 		</Modal>
 	);
 };

@@ -1,5 +1,6 @@
 import {
 	useCallback,
+	useEffect,
 	useState,
 	type FC,
 	type ReactNode,
@@ -38,10 +39,19 @@ export const PointTag: FC<PointTagProps> = memo((props) => {
 		trackId,
 	} = props;
 
-	const [{ selectedDetection }] = useContext(MetaDataCtx);
+	const [{ selectedDetection }, updateMetaData] = useContext(MetaDataCtx);
 
 	const [open, setOpen] = useState<boolean>(selectedDetection === trackId);
-	const close = useCallback(() => setOpen(false), []);
+	useEffect(() => {
+		setOpen(selectedDetection === trackId);
+	}, [selectedDetection, trackId]);
+
+	const close = useCallback(() => {
+		setOpen(false);
+		updateMetaData({ selectedDetection: null });
+	}, [updateMetaData]);
+
+	// console.log(trackId);
 
 	let topStyle: CSSProperties = {
 		left: position[0],
@@ -52,7 +62,7 @@ export const PointTag: FC<PointTagProps> = memo((props) => {
 	};
 
 	if (style) {
-		topStyle = { ...style, ...topStyle };
+		topStyle = { ...topStyle, ...style };
 	}
 
 	return (
@@ -62,9 +72,17 @@ export const PointTag: FC<PointTagProps> = memo((props) => {
 				"absolute rounded-[50%] bg-[rgba(0,198,185,0.30)] border-[#00C6B8] border-1 cursor-pointer",
 				className
 			)}
-			onClick={() => {
-				// open/close
-				setOpen((prev) => !prev);
+			onClick={(ev) => {
+				// sync global selection to avoid ID jumping across map/video/list
+				ev.stopPropagation?.();
+				if (typeof trackId !== "undefined") {
+					const willSelect = selectedDetection !== trackId;
+					// Immediate local UI feedback, independent of async ctx propagation
+					setOpen(willSelect);
+					updateMetaData({
+						selectedDetection: willSelect ? trackId : null,
+					});
+				}
 			}}
 		>
 			{open ? (

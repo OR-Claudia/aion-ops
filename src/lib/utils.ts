@@ -104,7 +104,7 @@ class MetadataSync {
 	private metadataBySourceTime: MetadataItem[] = []; // sorted by telemetry.timestamp_us
 	private metadataByProcessTime: MetadataItem[] = []; // sorted by processing timestamp
 	private lastFrameNumber = 0;
-	private startTime = Date.now();
+	// private startTime = Date.now();
 	private frameCount = 0;
 	private lastRateUpdate = Date.now();
 

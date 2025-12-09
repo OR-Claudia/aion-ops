@@ -57,7 +57,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	);
 	const [isBuffering, setIsBuffering] = useState<boolean>(false);
 	const [hasStartedPlayback, setHasStartedPlayback] = useState<boolean>(false);
-	const formRef = useRef<HTMLFormElement | null>(null);
+	const [isPlaying, setIsPlaying] = useState<boolean>(false);
+	// const formRef = useRef<HTMLFormElement | null>(null);
 	// const [currentTimeMs, setCurrentTimeMs] = useState<number>(0);
 	// const [activeFrameData, setActiveFrameData] = useState<Frame | null>(null);
 
@@ -136,6 +137,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 		if (!videoElement) return;
 
 		const handlePlay = async () => {
+			setIsPlaying(true);
 			if (!hasStartedPlayback) {
 				setHasStartedPlayback(true);
 				// formRef.current?.submit();
@@ -153,8 +155,11 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 			}
 		};
 		videoElement.addEventListener("play", handlePlay);
+		const handlePause = () => setIsPlaying(false);
+		videoElement.addEventListener("pause", handlePause);
 		return () => {
 			videoElement.removeEventListener("play", handlePlay);
+			videoElement.removeEventListener("pause", handlePause);
 		};
 	}, [hasStartedPlayback]);
 
@@ -266,6 +271,16 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 
 	//console.log("detections: ", detections);
 
+	const togglePlayPause = () => {
+		const v = videoRef.current;
+		if (!v) return;
+		if (v.paused) {
+			v.play();
+		} else {
+			v.pause();
+		}
+	};
+
 	const videoElement = (
 		<div className="relative overflow-visible">
 			<div style={{ width, height }} className="relative overflow-visible">
@@ -316,7 +331,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 									<PointTag
 										position={dCenter}
 										pointSize={pointSize}
-										key={`${d.class_id}-${i}`}
+										trackId={d.track_id}
+										key={`vid-${d.track_id}-${i}`}
 									>
 										<div style={{ width: "fit-content", whiteSpace: "nowrap" }}>
 											<p>{`ID:${d.track_id}`}</p>
@@ -377,6 +393,13 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						  })
 						: null} */}
 				</div>
+				<button
+					type="button"
+					onClick={togglePlayPause}
+					className="absolute top-2 left-2 z-[200] px-2 py-1 text-xs rounded bg-black/60 text-white hover:bg-black/80"
+				>
+					{isPlaying ? "Pause" : "Play"}
+				</button>
 				<MediaController style={{ minWidth: "100%" }}>
 					<video
 						ref={videoRef}

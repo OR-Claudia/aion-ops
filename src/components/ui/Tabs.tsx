@@ -5,6 +5,7 @@ export interface TabItem {
 	id: string;
 	label: string;
 	value?: string;
+	disabled?: boolean;
 }
 
 interface TabsProps {
@@ -27,17 +28,21 @@ const Tabs: React.FC<TabsProps> = ({
 				{tabs.map((tab, index) => {
 					const isActive = tab.id === activeTab;
 					const isLastActive = index === tabs.length - 1 && isActive;
+					const isDisabled =
+						tab.disabled ?? (tab.value == null || tab.value === "");
 
 					return (
 						<button
 							key={tab.id}
-							onClick={() => onTabChange(tab.id, tab.value)}
+							onClick={() => !isDisabled && onTabChange(tab.id, tab.value)}
+							disabled={isDisabled}
 							className={cn(
 								"h-[33px] w-26 px-4 font-ubuntu text-[14px] font-normal leading-normal transition-colors relative",
 								{
 									"bg-[#00C6B8] text-black rounded-t-[8px]": isActive,
 									"bg-transparent text-white/60 hover:text-white/80": !isActive,
 									"rounded-tr-[8px]": isLastActive,
+									"opacity-40 cursor-not-allowed": isDisabled,
 								}
 							)}
 							style={

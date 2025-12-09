@@ -86,7 +86,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 
 	const allUAVLocations = getAllUAVLocations();
 
-	// Ukraine coordinates (center remains the same)
+	// Malaga coordinates (center remains the same)
 	const mapCenter: [number, number] = [36.716021, -4.2879599];
 	// Mission path modal handlers
 	const handleMissionPathClick = (uavData: any) => {
