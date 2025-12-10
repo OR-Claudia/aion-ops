@@ -40,6 +40,7 @@ interface MapContainerProps {
 		battery?: string;
 		signal: string;
 	}) => void;
+	center?: [number, number];
 }
 
 const systemStatusText =
@@ -59,6 +60,7 @@ const emptyUav = {
 };
 const MapContainer: React.FC<MapContainerProps> = ({
 	showIndicators = false,
+	center,
 }) => {
 	const location = useLocation();
 	const isDetectionsPage = location.pathname === "/detections";
@@ -86,8 +88,9 @@ const MapContainer: React.FC<MapContainerProps> = ({
 
 	const allUAVLocations = getAllUAVLocations();
 
-	// Malaga coordinates (center remains the same)
-	const mapCenter: [number, number] = [36.716021, -4.2879599];
+	// Malaga coordinates (default center unless overridden)
+	const defaultCenter: [number, number] = [36.716021, -4.2879599];
+	const mapCenter: [number, number] = center ?? defaultCenter;
 	// Mission path modal handlers
 	const handleMissionPathClick = (uavData: any) => {
 		setSelectedUAVForMissionPath(uavData);

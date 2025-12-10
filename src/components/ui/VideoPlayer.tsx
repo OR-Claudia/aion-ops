@@ -11,16 +11,16 @@ import {
 import Hls from "hls.js";
 
 import {
-	// MediaControlBar,
+	MediaControlBar,
 	MediaController,
-	// MediaFullscreenButton,
-	// MediaMuteButton,
-	// MediaPlayButton,
-	// MediaSeekBackwardButton,
-	// MediaSeekForwardButton,
-	// MediaTimeDisplay,
-	// MediaTimeRange,
-	// MediaVolumeRange,
+	MediaFullscreenButton,
+	MediaMuteButton,
+	MediaPlayButton,
+	MediaSeekBackwardButton,
+	MediaSeekForwardButton,
+	MediaTimeDisplay,
+	MediaTimeRange,
+	MediaVolumeRange,
 } from "media-chrome/react";
 import { PointTag } from "./PointTag/PointTag";
 import { BBoxUtil } from "../../lib/bboxutils";
@@ -36,17 +36,19 @@ interface VideoPlayerProps {
 	allowfullscreen?: boolean;
 	errorMessage?: string;
 	enableSync?: boolean;
+	showControls?: boolean;
 }
 
 const VideoPlayer: FC<VideoPlayerProps> = ({
 	src = "",
 	width = "100%",
 	height = "60%",
-	// livestream = false,
-	// allowfullscreen = true,
+	livestream = false,
+	allowfullscreen = true,
 	className,
 	errorMessage = "No video source available",
 	enableSync = false,
+	showControls = false,
 }) => {
 	const videoRef = useRef<HTMLVideoElement | null>(null);
 	const isGoogleEmbed = src.includes("google");
@@ -409,6 +411,66 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						playsInline
 						disablePictureInPicture={true}
 					/>
+					{showControls && (
+						<MediaControlBar
+							// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
+							style={{ "--media-primary-color": "#D3FBD8", zIndex: 100 }}
+							className="w-full flex flex-col backdrop-blur-[5px] bg-black/50"
+						>
+							<div className="flex w-full h-full items-center place-content-between px-3">
+								{livestream ? null : (
+									<>
+										<MediaTimeRange
+											className={`${
+												livestream ? "w-full" : "w-10/12"
+											} bg-transparent overflow-hidden`}
+											// @ts-expect-error --media-primary-color class works to target media buttons' color, not to be changed
+											style={{ "--media-primary-color": "#FFF" }}
+										/>
+										<MediaTimeDisplay
+											showDuration
+											className="w-2/12 bg-transparent"
+										/>
+									</>
+								)}
+							</div>
+
+							<div
+								className={cn(
+									"flex w-full h-full items-center place-content-between px-5 mb-2",
+									{ ["pr-[30%]"]: !allowfullscreen }
+								)}
+							>
+								<div
+									className={cn(" flex", {
+										["w-3/12"]: !allowfullscreen,
+										["w-2/12"]: allowfullscreen,
+									})}
+								>
+									<MediaMuteButton className="bg-transparent" />
+									<MediaVolumeRange className="bg-transparent" />
+								</div>
+								{!livestream ? (
+									<MediaSeekBackwardButton
+										seekOffset={5}
+										className="bg-transparent"
+									/>
+								) : null}
+
+								<MediaPlayButton className="bg-transparent" />
+								{!livestream ? (
+									<MediaSeekForwardButton
+										seekOffset={5}
+										className="bg-transparent"
+									/>
+								) : null}
+
+								{allowfullscreen && (
+									<MediaFullscreenButton className="bg-transparent w-2/12" />
+								)}
+							</div>
+						</MediaControlBar>
+					)}
 				</MediaController>
 				{isBuffering ? (
 					<div className="absolute bottom-3 left-0 w-full flex flex-row justify-center">

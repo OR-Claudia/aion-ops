@@ -11,7 +11,7 @@ const DetectionsPage: React.FC = () => {
 	};
 
 	return (
-		<Layout showTools={true}>
+		<Layout showTools={true} mapCenter={[50.598, 35.318]}>
 			{/* Detections sidebar */}
 			<DetectionsSidebar />
 			{/* Cluster Details Modal */}

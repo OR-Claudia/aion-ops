@@ -10,9 +10,14 @@ import { MetaDataCtxProvider } from "../../lib/MetaDataCtxProvider";
 interface LayoutProps {
 	children: React.ReactNode;
 	showTools?: boolean;
+	mapCenter?: [number, number];
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, showTools = false }) => {
+const Layout: React.FC<LayoutProps> = ({
+	children,
+	showTools = false,
+	mapCenter,
+}) => {
 	const location = useLocation();
 	const isHomePage = location.pathname === "/";
 
@@ -22,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children, showTools = false }) => {
 				{/* MapContainer - always present, but indicators only on homepage */}
 				<MetaDataCtxProvider>
 					<UAVLocationsCtxProvider>
-						<MapContainer showIndicators={isHomePage} />
+						<MapContainer showIndicators={isHomePage} center={mapCenter} />
 					</UAVLocationsCtxProvider>
 				</MetaDataCtxProvider>
 

@@ -46,7 +46,8 @@ const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
 	}, []);
 
 	const handleDetectionClick = (trackId: number) => {
-		updateMetaData({ selectedDetection: trackId });
+		const willSelect = selectedDetection !== trackId;
+		updateMetaData({ selectedDetection: willSelect ? trackId : null });
 	};
 
 	const uavFrameDetection = activeFrame?.detections?.find(
