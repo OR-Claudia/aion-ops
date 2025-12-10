@@ -348,6 +348,7 @@ const MiniMapMarker = memo(
 					);
 				}
 			}
+			// eslint-disable-next-line react-hooks/exhaustive-deps
 		}, [position, detection, frameDetection, selectedDetection]);
 
 		// Update position when it changes
