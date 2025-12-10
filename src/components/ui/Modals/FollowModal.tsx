@@ -93,7 +93,10 @@ const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
 					}}
 					className="rounded-[3px]"
 				>
-					<TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png" />
+					<TileLayer
+						url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+						// url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+					/>
 					<DroneMarker position={uavPosition} />
 					{afUnique.map((detection, i) => {
 						if (detection.class_id !== -1) {

@@ -47,6 +47,7 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 		meters / (111320 * Math.cos((atLat * Math.PI) / 180));
 
 	// Get mission path coordinates and detections based on data type
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const missionPathCoordinates = isLiveUav2
 		? uavLocations.getPathById(2)
 		: isUAVData

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useRef, useEffect, type FC, type RefObject, useState } from "react";
 
 import {

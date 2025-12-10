@@ -638,6 +638,7 @@ const useMetadataSync = (
 				videoElement.removeEventListener("seeked", timeUpdateHandler);
 			}
 		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [enableSync, videoRef]);
 
 	return {
@@ -703,10 +704,12 @@ const useFollowDetections = (videoRef: RefObject<HTMLVideoElement>) => {
 		return () => {
 			videoElement.removeEventListener("timeupdate", handleTimeUpdate);
 		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	useEffect(() => {
 		updateActiveFrame({ activeFrame: activeFrameData });
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [activeFrameData]);
 
 	return { currentTimeMs, activeFrameData };
