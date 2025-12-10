@@ -156,10 +156,10 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 		videoElement.addEventListener("play", handlePlay);
 		// const handlePause = () => setIsPlaying(false);
 		// videoElement.addEventListener("pause", handlePause);
-		// return () => {
-		// 	videoElement.removeEventListener("play", handlePlay);
-		// 	videoElement.removeEventListener("pause", handlePause);
-		// };
+		return () => {
+			videoElement.removeEventListener("play", handlePlay);
+			// videoElement.removeEventListener("pause", handlePause);
+		};
 	}, [hasStartedPlayback]);
 
 	useEffect(() => {
@@ -270,15 +270,15 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 
 	//console.log("detections: ", detections);
 
-	const togglePlayPause = () => {
-		const v = videoRef.current;
-		if (!v) return;
-		if (v.paused) {
-			v.play();
-		} else {
-			v.pause();
-		}
-	};
+	// const togglePlayPause = () => {
+	// 	const v = videoRef.current;
+	// 	if (!v) return;
+	// 	if (v.paused) {
+	// 		v.play();
+	// 	} else {
+	// 		v.pause();
+	// 	}
+	// };
 
 	const videoElement = (
 		<div className="relative overflow-visible">
@@ -392,13 +392,13 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 						  })
 						: null} */}
 				</div>
-				<button
+				{/* <button
 					type="button"
 					onClick={togglePlayPause}
 					className="absolute top-2 left-2 z-[200] px-2 py-1 text-xs rounded bg-black/60 text-white hover:bg-black/80"
 				>
-					{/* {isPlaying ? "Pause" : "Play"} */}
-				</button>
+					{isPlaying ? "Pause" : "Play"}
+				</button> */}
 				<MediaController style={{ minWidth: "100%" }}>
 					<video
 						ref={videoRef}
