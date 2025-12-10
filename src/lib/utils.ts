@@ -103,7 +103,7 @@ class MetadataSync {
 	private metadataBuffer = new Map<number, MetadataItem>(); // frame -> metadata
 	private metadataBySourceTime: MetadataItem[] = []; // sorted by telemetry.timestamp_us
 	private metadataByProcessTime: MetadataItem[] = []; // sorted by processing timestamp
-	private lastFrameNumber = 0;
+	// private lastFrameNumber = 0;
 	// private startTime = Date.now();
 	private frameCount = 0;
 	private lastRateUpdate = Date.now();
@@ -301,7 +301,7 @@ class MetadataSync {
 		this.metadataBySourceTime = [];
 		this.metadataByProcessTime = [];
 		this.frameCount = 0;
-		this.lastFrameNumber = 0;
+		// this.lastFrameNumber = 0;
 	}
 
 	setManualLatency(latencyMs: number): void {

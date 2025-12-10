@@ -52,7 +52,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	const videoRef = useRef<HTMLVideoElement | null>(null);
 	const isGoogleEmbed = src.includes("google");
 	const hlsRef = useRef<Hls | null>(null);
-	const { activeFrameData, currentTimeMs } = useFollowDetections(
+	const { activeFrameData } = useFollowDetections(
 		videoRef as RefObject<HTMLVideoElement>
 	);
 	const [isBuffering, setIsBuffering] = useState<boolean>(false);
@@ -74,7 +74,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 		detections,
 		detectionCount,
 		metadata,
-		activeFrame,
+		// activeFrame,
 	} = useMetadataSync(
 		videoRef as RefObject<HTMLVideoElement>,
 		enableSync && !isGoogleEmbed
