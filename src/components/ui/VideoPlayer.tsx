@@ -56,7 +56,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 	);
 	const [isBuffering, setIsBuffering] = useState<boolean>(false);
 	const [hasStartedPlayback, setHasStartedPlayback] = useState<boolean>(false);
-	const [isPlaying, setIsPlaying] = useState<boolean>(false);
+	// const [isPlaying, setIsPlaying] = useState<boolean>(false);
 	// const formRef = useRef<HTMLFormElement | null>(null);
 	// const [currentTimeMs, setCurrentTimeMs] = useState<number>(0);
 	// const [activeFrameData, setActiveFrameData] = useState<Frame | null>(null);
@@ -136,7 +136,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 		if (!videoElement) return;
 
 		const handlePlay = async () => {
-			setIsPlaying(true);
+			// setIsPlaying(true);
 			if (!hasStartedPlayback) {
 				setHasStartedPlayback(true);
 				// formRef.current?.submit();
@@ -154,12 +154,12 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 			}
 		};
 		videoElement.addEventListener("play", handlePlay);
-		const handlePause = () => setIsPlaying(false);
-		videoElement.addEventListener("pause", handlePause);
-		return () => {
-			videoElement.removeEventListener("play", handlePlay);
-			videoElement.removeEventListener("pause", handlePause);
-		};
+		// const handlePause = () => setIsPlaying(false);
+		// videoElement.addEventListener("pause", handlePause);
+		// return () => {
+		// 	videoElement.removeEventListener("play", handlePlay);
+		// 	videoElement.removeEventListener("pause", handlePause);
+		// };
 	}, [hasStartedPlayback]);
 
 	useEffect(() => {
@@ -397,7 +397,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 					onClick={togglePlayPause}
 					className="absolute top-2 left-2 z-[200] px-2 py-1 text-xs rounded bg-black/60 text-white hover:bg-black/80"
 				>
-					{isPlaying ? "Pause" : "Play"}
+					{/* {isPlaying ? "Pause" : "Play"} */}
 				</button>
 				<MediaController style={{ minWidth: "100%" }}>
 					<video
