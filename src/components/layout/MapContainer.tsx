@@ -84,7 +84,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 
 	const [isAnalysisOpen, setIsAnalysisOpen] = useState<boolean>(false);
 
-	const { getAllUAVLocations } = useUAVLocations();
+	const { getAllUAVLocations, getPathById } = useUAVLocations();
 
 	const allUAVLocations = getAllUAVLocations();
 
@@ -323,14 +323,31 @@ const MapContainer: React.FC<MapContainerProps> = ({
 								.filter(
 									(uav: any) => !clusteredUAVIds.has(uav.data.id.toString())
 								)
-								.map((uav: any) => (
-									<MissionPath
-										key={`mission-path-${uav.data.id}`}
-										coordinates={uav.MissionPath}
-										color={uav.MissionPathColor}
-										uavId={uav.data.id.toString()}
-									/>
-								))}
+								.map((uav: any) => {
+									const idStr = uav.data.id.toString();
+									// Default to static mission path converted to LatLng tuples
+									let coordinates: [number, number][] = (
+										uav.MissionPath || []
+									).map((p: any) => [p.lat, p.lon]);
+									// For UAV ID 2, prefer live path from UAVLocationsCtx
+									if (idStr === "2") {
+										const livePath = getPathById(2);
+										if (livePath && livePath.length >= 2) {
+											coordinates = livePath.map(
+												(p: { lat: number; lon: number }) =>
+													[p.lat, p.lon] as [number, number]
+											);
+										}
+									}
+									return (
+										<MissionPath
+											key={`mission-path-${uav.data.id}`}
+											coordinates={coordinates}
+											color={uav.MissionPathColor}
+											uavId={idStr}
+										/>
+									);
+								})}
 						</>
 					)}
 

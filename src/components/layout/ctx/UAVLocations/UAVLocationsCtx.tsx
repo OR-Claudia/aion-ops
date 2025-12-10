@@ -36,6 +36,36 @@ export const UAVLocationsCtxProvider: FC<{ children: ReactNode }> = ({
 		  ]
 		| null;
 
+	// Seed initial shortened path for UAV id 2 from static mission path
+	useEffect(() => {
+		const idKey = "2";
+		const uav2 = initUAVLocations.find((u) => String(u.data.id) === idKey);
+		if (uav2 && Array.isArray(uav2.MissionPath) && uav2.MissionPath.length) {
+			const initial = uav2.MissionPath.slice(
+				0,
+				Math.min(3, uav2.MissionPath.length)
+			);
+			const fixed = { lat: 36.716249, lon: -4.28782 };
+			const seeded = [...initial, fixed];
+			setPathsById((prev) => ({ ...prev, [idKey]: seeded }));
+			setCurrentById((prev) => ({
+				...prev,
+				[idKey]: [fixed.lat, fixed.lon],
+			}));
+			setUAVLocations((prevLocations: UAVLocation[]) =>
+				prevLocations.map((uav: UAVLocation) => {
+					if (String(uav.data.id) === idKey) {
+						return {
+							...uav,
+							position: [fixed.lat, fixed.lon] as [number, number],
+						};
+					}
+					return uav;
+				})
+			);
+		}
+	}, []);
+
 	// LIVE PATH FEED: append UAV id 2 positions from MetaDataCtx.activeFrame
 	useEffect(() => {
 		if (!meta) return;
@@ -56,26 +86,37 @@ export const UAVLocationsCtxProvider: FC<{ children: ReactNode }> = ({
 
 		if (typeof lat === "number" && typeof lon === "number") {
 			const idKey = String(2);
-			// update current position (used by DroneMarker)
-			setCurrentById((prev) => ({ ...prev, [idKey]: [lat, lon] }));
-			// append to path if changed
+			const FIX_LAT = 36.716249;
+			const FIX_LON = -4.28782;
+			// append to path while ensuring last coordinate is fixed live coord
 			setPathsById((prev) => {
 				const prevArr = prev[idKey] || [];
-				const last = prevArr[prevArr.length - 1];
+				const lastPrev = prevArr[prevArr.length - 1];
+				let work = prevArr;
+				if (
+					lastPrev &&
+					Math.abs(lastPrev.lat - FIX_LAT) < 1e-6 &&
+					Math.abs(lastPrev.lon - FIX_LON) < 1e-6
+				) {
+					work = prevArr.slice(0, -1);
+				}
+				const last = work[work.length - 1];
 				if (
 					!last ||
 					Math.abs(last.lat - lat) > 1e-6 ||
 					Math.abs(last.lon - lon) > 1e-6
 				) {
-					return { ...prev, [idKey]: [...prevArr, { lat, lon }] };
+					work = [...work, { lat, lon }];
 				}
-				return prev;
+				return { ...prev, [idKey]: [...work, { lat: FIX_LAT, lon: FIX_LON }] };
 			});
+			// update current position to fixed live coord (used by DroneMarker)
+			setCurrentById((prev) => ({ ...prev, [idKey]: [FIX_LAT, FIX_LON] }));
 			// also keep uavLocations in sync for id 2 if present
 			setUAVLocations((prevLocations: UAVLocation[]) =>
 				prevLocations.map((uav: UAVLocation) => {
 					if (String(uav.data.id) === "2") {
-						return { ...uav, position: [lat, lon] as [number, number] };
+						return { ...uav, position: [FIX_LAT, FIX_LON] as [number, number] };
 					}
 					return uav;
 				})
