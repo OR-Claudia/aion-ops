@@ -1,16 +1,22 @@
 import type { StorageData } from "../components/ui/StorageItem";
+import rgbKuna from "../assets/videos/kuna_rgb.mp4";
+import thermoKuna from "../assets/videos/thermo_kuna.mp4";
+import aerialVideo from "../assets/videos/aerial.mp4";
+import mavicThumbnail from "../assets/thumbnails/aerial.png";
+import kunaThumbnail from "../assets/thumbnails/kuna.png";
 
 // Mocked storage data
 const storageData: StorageData[] = [
 	{
 		id: "1",
-		title: "Reconnaissance Patrol - 02/14/2025",
-		date: "13.02.2025 06:39AM",
-		image:
-			"https://api.builder.io/api/v1/image/assets/TEMP/8c45012e7e0d9fc53fa827e203dab5c8f541002a?width=288",
+		title: "Ground Patrol - 02/14/2025",
+		date: "14.02.2025 08:12AM",
+		image: kunaThumbnail,
+		// image:
+		// 	"https://api.builder.io/api/v1/image/assets/TEMP/8c45012e7e0d9fc53fa827e203dab5c8f541002a?width=288",
 		uav: "KUNA",
-		missionType: "Reconnaissance",
-		flightDuration: "1h33m",
+		missionType: "Tactical",
+		flightDuration: "0h24m",
 		operator: "Amanda Magiera",
 		status: "Success",
 		description:
@@ -18,8 +24,20 @@ const storageData: StorageData[] = [
 		coordinates: "50.59227, 35.307322",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
-		mission: "Reconnaissance",
-		flightDatetime: "25/03/2025 13:33",
+		mission: "Tactical",
+		flightDatetime: "02/14/2025 13:33",
+		tabs: [
+			{
+				id: "rgb",
+				label: "RGB",
+				value: rgbKuna,
+			},
+			{
+				id: "thermo",
+				label: "Thermo",
+				value: thermoKuna,
+			},
+		],
 		operatorId: "EMP101",
 		keyEvents: "N/A",
 		missionDescription:
@@ -65,11 +83,11 @@ const storageData: StorageData[] = [
 	},
 	{
 		id: "2",
-		title: "Reconnaissance Patrol - 05/05/2024",
-		date: "13.02.2025 06:39AM",
-		image:
-			"https://api.builder.io/api/v1/image/assets/TEMP/1e9ff41e8c0533a88b02f5714433fb8c2b0a8cf4?width=288",
-		uav: "Mavic air",
+		title: "Air Patrol - 02/14/2025",
+		date: "14.02.2025 02:36PM",
+		image: mavicThumbnail,
+		// image: "https://api.builder.io/api/v1/image/assets/TEMP/1e9ff41e8c0533a88b02f5714433fb8c2b0a8cf4?width=288",
+		uav: "Mavic air 2",
 		missionType: "Reconnaissance",
 		flightDuration: "1h33m",
 		operator: "Dagmara Popowska",
@@ -80,10 +98,21 @@ const storageData: StorageData[] = [
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
 		mission: "Reconnaissance",
-		flightDatetime: "05/05/2024 13:33",
+		flightDatetime: "02/14/2025 13:33",
+		tabs: [
+			{
+				id: "rgb",
+				label: "RGB",
+				value: aerialVideo,
+			},
+			{
+				id: "thermo",
+				label: "Thermo",
+				value: "",
+			},
+		],
 		operatorId: "EMP102",
 		keyEvents: "N/A",
-
 		missionDescription:
 			"Silent running protocols active with noise signature minimized for covert movement. Raven UAV maintaining overwatch while UGV conducts close-proximity intelligence collection on vehicle movements and personnel activity. Multi-spectrum passive detection systems monitoring both uniformed military personnel and irregular civilian combatants without active emission signatures.Mission proceeding under strict stealth parameters with zero detection incidents recorded. Intelligence collection ongoing while maintaining tactical advantage through concealment.",
 		MissionPath: [
@@ -127,13 +156,13 @@ const storageData: StorageData[] = [
 	},
 	{
 		id: "3",
-		title: "Reconnaissance Patrol - 12/22/2024",
-		date: "13.02.2025 06:39AM",
+		title: "Border Patrol - 12/22/2024",
+		date: "13.02.2025 01:22PM",
 		image:
 			"https://api.builder.io/api/v1/image/assets/TEMP/eb10590cd8cf7c4a72ce0f0c52e5e1a3e96b8308?width=288",
 		uav: "UkrJet Bobr UJ26",
 		missionType: "Reconnaissance",
-		flightDuration: "1h33m",
+		flightDuration: "1h12m",
 		operator: "Kamil Kisielewski",
 		status: "Success",
 		description:
@@ -189,12 +218,12 @@ const storageData: StorageData[] = [
 	{
 		id: "4",
 		title: "Reconnaissance Patrol - 12/18/2024",
-		date: "13.02.2025 06:39AM",
+		date: "13.02.2025 08:48AM",
 		image:
 			"https://api.builder.io/api/v1/image/assets/TEMP/e7e3ad66214149785e55acfa7a8aecd4c0f82268?width=288",
 		uav: "KUNA",
-		missionType: "Reconnaissance",
-		flightDuration: "1h33m",
+		missionType: "Tactical",
+		flightDuration: "0h46m",
 		operator: "Maria Ivanova",
 		status: "Success",
 		description:
@@ -202,7 +231,7 @@ const storageData: StorageData[] = [
 		coordinates: "50.639567, 35.407889",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
-		mission: "Reconnaissance",
+		mission: "Tactical",
 		flightDatetime: "12/18/2024 13:33",
 		operatorId: "EMP104",
 		keyEvents: "N/A",
@@ -245,13 +274,13 @@ const storageData: StorageData[] = [
 	},
 	{
 		id: "5",
-		title: "Reconnaissance Patrol - 01/18/2025",
+		title: "Intel gathering - 01/18/2025",
 		date: "13.02.2025 06:39AM",
 		image:
 			"https://api.builder.io/api/v1/image/assets/TEMP/e1433ad1a1b2b1e4d7cc343c61d9b6d847aa2a77?width=288",
 		uav: "KUNA",
 		missionType: "Reconnaissance",
-		flightDuration: "1h33m",
+		flightDuration: "3h09m",
 		operator: "Leopold Bartczak",
 		status: "Success",
 		description:
@@ -314,13 +343,13 @@ const storageData: StorageData[] = [
 	},
 	{
 		id: "6",
-		title: "Reconnaissance Patrol - 02/16/2025",
-		date: "13.02.2025 06:39AM",
+		title: "Active Conflict Patrol - 02/16/2025",
+		date: "13.02.2025 08:12AM",
 		image:
 			"https://api.builder.io/api/v1/image/assets/TEMP/eb10590cd8cf7c4a72ce0f0c52e5e1a3e96b8308?width=288",
 		uav: "Mavic air",
-		missionType: "Reconnaissance",
-		flightDuration: "1h33m",
+		missionType: "Combat",
+		flightDuration: "0h56m",
 		operator: "Izydor Gall",
 		status: "Success",
 		description:
@@ -328,7 +357,7 @@ const storageData: StorageData[] = [
 		coordinates: "50.703456, 35.256789",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
-		mission: "Reconnaissance",
+		mission: "Combat",
 		flightDatetime: "02/16/2025 13:33",
 		operatorId: "EMP106",
 		keyEvents: "N/A",
@@ -364,7 +393,7 @@ const storageData: StorageData[] = [
 	{
 		id: "7",
 		title: "Reconnaissance Patrol - 02/18/2025",
-		date: "13.02.2025 06:39AM",
+		date: "13.02.2025 05:19AM",
 		image:
 			"https://api.builder.io/api/v1/image/assets/TEMP/5a8295c6f9a5352be5b2c5500f3fe7548476c906?width=288",
 		uav: "Athlon Furia",
@@ -441,7 +470,7 @@ const storageData: StorageData[] = [
 	{
 		id: "8",
 		title: "Reconnaissance Patrol - 02/16/2025",
-		date: "13.02.2025 06:39AM",
+		date: "13.02.2025 08:29PM",
 		image:
 			"https://api.builder.io/api/v1/image/assets/TEMP/eb10590cd8cf7c4a72ce0f0c52e5e1a3e96b8308?width=288",
 		uav: "Mavic air",

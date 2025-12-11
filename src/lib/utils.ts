@@ -1,9 +1,15 @@
-import { createContext, useContext, useState, type RefObject } from "react";
+import {
+	createContext,
+	useContext,
+	// useMemo,
+	useState,
+	type RefObject,
+} from "react";
 import { useEffect } from "react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { followDetections } from "../assets/mock-data/follow_detections";
-import type { Frame } from "./types";
+import type { DetectedInFrame, Frame } from "./types";
 import { staticData } from "../assets/mock-data/static_data";
 
 // Utility function for merging class names
@@ -656,6 +662,29 @@ const useMetadataSync = (
 	};
 };
 
+const useDistinctFrameDetections = () => {
+	const [distinctDetections, setDistinctDetections] = useState<
+		DetectedInFrame[]
+	>([]);
+
+	useEffect(() => {
+		const trackIdSet = new Set<number>();
+		const distinct: DetectedInFrame[] = [];
+
+		const detections = staticData.frames.flatMap((f) => f.detections || []);
+		for (const item of detections) {
+			const id = item.track_id;
+			if (!trackIdSet.has(id) && item.class_id !== -1) {
+				trackIdSet.add(id);
+				distinct.push(item);
+			}
+		}
+		setDistinctDetections(distinct);
+	}, []);
+
+	return distinctDetections;
+};
+
 const useFollowDetections = (videoRef: RefObject<HTMLVideoElement>) => {
 	const [currentTimeMs, setCurrentTimeMs] = useState<number>(0);
 	const [activeFrameData, setActiveFrameData] = useState<Frame | null>(null);
@@ -725,6 +754,7 @@ export {
 	updateLatency,
 	autoDetectLatency,
 	reconnect,
+	useDistinctFrameDetections,
 	initVideoWithSync,
 };
 

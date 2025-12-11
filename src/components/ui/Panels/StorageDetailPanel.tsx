@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import type { StorageData } from "../StorageItem";
 import TimesIcon from "../../../assets/times.svg?react";
 import externalLinkIcon from "../../../assets/external-link.svg";
@@ -71,20 +71,24 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 	activeTab,
 	setActiveTab,
 }) => {
-	const tabs: TabItem[] = [
-		{
-			id: "rgb",
-			label: "RGB",
-			// value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
-			value: aerialVideo,
-		},
-		{
-			id: "thermo",
-			label: "Thermo",
-			// value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
-			value: undefined,
-		},
-	];
+	const tabs: TabItem[] = React.useMemo(
+		() =>
+			record.tabs ?? [
+				{
+					id: "rgb",
+					label: "RGB",
+					// value: "http://193.123.68.104:8888/rgb_hls_stream_1/index.m3u8",
+					value: aerialVideo,
+				},
+				{
+					id: "thermo",
+					label: "Thermo",
+					// value: "http://193.123.68.104:8888/thermal_hls_stream_1/index.m3u8",
+					value: undefined,
+				},
+			],
+		[record.tabs]
+	);
 
 	const getCurrentVideoSource = () => {
 		const currentTab = tabs.find((tab) => tab.id === activeTab);
@@ -119,7 +123,12 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 		setDetectionsOpen(true);
 	};
 
-	console.log("video source:", getCurrentVideoSource());
+	useEffect(() => {
+		if (tabs.find((tab) => !tab.value)) {
+			const hasVideoSource = tabs.find((tab) => tab.value);
+			setActiveTab(hasVideoSource?.id ?? "rgb");
+		}
+	}, [activeTab, tabs, setActiveTab]);
 
 	return (
 		<div className="w-[650px] h-[calc(100vh-320px)] relative rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[2px] flex flex-col transition-all duration-300">

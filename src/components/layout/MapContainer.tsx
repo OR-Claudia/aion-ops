@@ -18,10 +18,11 @@ import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import AnalysisModal from "../ui/Modals/AnalysisModal";
-import DetectionsModal from "../ui/Modals/DetectionsModal";
+// import DetectionsModal from "../ui/Modals/DetectionsModal";
 
 import { useUAVLocations } from "./ctx/UAVLocations/useUAVLocations";
 import FollowModal from "../ui/Modals/FollowModal";
+import TempDetectionsModal from "../ui/Modals/TempDetectionsModal";
 
 interface SelectedUAV {
 	id: string | number;
@@ -248,11 +249,10 @@ const MapContainer: React.FC<MapContainerProps> = ({
 				allUAVLocations.map((uav: any) => {
 					if (uav.data.id === selectedUAV.id) {
 						return (
-							<DetectionsModal
+							<TempDetectionsModal
 								key={`${uav.data.id}-detections`}
 								isOpen={selectedUAV.showDetections}
 								onClose={() => handleCloseDetections()}
-								activeTab={selectedUAV.activeTab}
 							/>
 						);
 					}

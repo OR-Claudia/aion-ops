@@ -13243,32 +13243,7 @@ export const some_aerial_data = {
 			},
 			id: 509,
 		},
-		{
-			timestamp: 93.0,
-			frame_time: 93.0,
-			class_id: 10,
-			class_name: "fire hydrant",
-			confidence: 0.6855481266975403,
-			track_id: 71,
-			bbox: {
-				x1: 1340,
-				y1: 294,
-				x2: 1397,
-				y2: 421,
-				width: 57,
-				height: 127,
-				center_x: 1368,
-				center_y: 357,
-			},
-			tracking_info: {
-				frame_number: 0,
-			},
-			coordinates: {
-				lat: 50.589851,
-				lon: 35.304599,
-			},
-			id: 510,
-		},
+
 		{
 			timestamp: 93.0,
 			frame_time: 93.0,
@@ -16388,32 +16363,6 @@ export const some_aerial_data = {
 				lon: 35.317301,
 			},
 			id: 630,
-		},
-		{
-			timestamp: 124.0,
-			frame_time: 124.0,
-			class_id: 10,
-			class_name: "fire hydrant",
-			confidence: 0.8771578669548035,
-			track_id: 105,
-			bbox: {
-				x1: 1190,
-				y1: 398,
-				x2: 1242,
-				y2: 490,
-				width: 51,
-				height: 91,
-				center_x: 1216,
-				center_y: 444,
-			},
-			tracking_info: {
-				frame_number: 0,
-			},
-			coordinates: {
-				lat: 50.60076,
-				lon: 35.302463,
-			},
-			id: 631,
 		},
 		{
 			timestamp: 125.0,

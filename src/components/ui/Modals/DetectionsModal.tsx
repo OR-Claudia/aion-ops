@@ -6,7 +6,7 @@ import Tag from "../Tag";
 import { capitalize } from "../../../lib/utils";
 // import { thermoData } from "../../../assets/mock-data/thermo_data";
 // import { detections as rgbData } from "../../../assets/mock-data/data";
-import { aerialData } from "../../../assets/mock-data/aerial-data";
+import { aerialData } from "../../../assets/mock-data/aerial_data";
 
 export interface Detection {
 	id: string | number;

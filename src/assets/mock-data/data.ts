@@ -1,6 +1,6 @@
 export const detections = {
 	video_info: {
-		filename: "GX010918.MP4",
+		filename: "kuna_rgb.MP4",
 		fps: 29,
 		width: 3840,
 		height: 2160,
@@ -14,6 +14,7 @@ export const detections = {
 	},
 	detections: [
 		{
+			// 34.11s
 			timestamp: 43.0,
 			frame_time: 43.0,
 			class_id: 1,

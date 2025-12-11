@@ -17,14 +17,7 @@ import DetectionsModal from "../components/ui/Modals/DetectionsModal";
 import MissionPathModal from "../components/ui/Modals/MissionPathModal";
 import { getStorageList } from "../api/storage";
 import AnalysisModal from "../components/ui/Modals/AnalysisModal";
-
-const systemStatusText =
-	"Battery concluded at 62% capacity with 1.9 hours reserve remaining. WiFi connectivity maintained stable performance at -41 dBm throughout operation, with encrypted data transmission experiencing zero packet loss. All critical systems operated within normal parameters for mission duration.";
-const missionProgressText =
-	"Successfully completed 81% of designated 18km² patrol grid covering mixed terrain including agricultural zones, woodland sectors, and rural settlements. Navigation maintained precise waypoint execution at 150m altitude. Weather conditions remained favorable with 7km visibility and moderate crosswinds from southwest.";
-
-const operationalSummaryText =
-	"Standard reconnaissance proceeded with systematic grid coverage. Sensor array collected multi-spectrum imagery totaling 3.1 GB transmitted data. Area assessment revealed expected forest and mixed terrain infrastructure patterns. Mission timeline concluded as scheduled. All safety protocols observed with no anomalies.";
+import { generateAnalysisReport } from "./demo_utils";
 
 const StoragePage: React.FC = () => {
 	const [originalRecords, setOriginalRecords] = useState<StorageData[]>([]);
@@ -35,6 +28,11 @@ const StoragePage: React.FC = () => {
 	const [detectionsOpen, setDetectionsOpen] = useState<boolean>(false);
 	const [MissionPathOpen, setMissionPathOpen] = useState<boolean>(false);
 	const [activeTab, setActiveTab] = useState("rgb");
+	const [analysisResults, setAnalysisResults] = useState<{
+		systemStatusText: string;
+		missionProgressText: string;
+		operationalSummaryText: string;
+	}>();
 	const [isAnalysisOpen, setIsAnalysisOpen] = useState<boolean>(false);
 
 	useEffect(() => {
@@ -43,6 +41,10 @@ const StoragePage: React.FC = () => {
 			setOriginalRecords(data);
 		};
 		fetchStorageData();
+	}, [activeTab]);
+
+	useEffect(() => {
+		setFiltered([]);
 	}, [activeTab]);
 
 	useEffect(() => {
@@ -55,8 +57,6 @@ const StoragePage: React.FC = () => {
 			}
 		}
 	}, [originalRecords, activeTab]);
-
-	// Filter configurations for the storage list
 
 	const filterConfigs: FilterConfig[] = [
 		{
@@ -105,6 +105,13 @@ const StoragePage: React.FC = () => {
 		setSelectedRecord(null);
 	};
 
+	useEffect(() => {
+		const id = selectedRecord?.id as unknown;
+		if (id == null) return;
+		const result = generateAnalysisReport(String(id));
+		setAnalysisResults(result);
+	}, [selectedRecord]);
+
 	return (
 		<Layout>
 			<div className="w-full flex justify-center pt-15">
@@ -127,13 +134,16 @@ const StoragePage: React.FC = () => {
 					</div>
 
 					{/* Main Content Area */}
-					<AnalysisModal
-						isOpen={isAnalysisOpen}
-						onClose={() => setIsAnalysisOpen(false)}
-						systemStatus={systemStatusText}
-						missionProgress={missionProgressText}
-						operationalSummary={operationalSummaryText}
-					/>
+					{analysisResults && (
+						<AnalysisModal
+							isOpen={isAnalysisOpen}
+							onClose={() => setIsAnalysisOpen(false)}
+							systemStatus={analysisResults?.systemStatusText}
+							missionProgress={analysisResults?.missionProgressText}
+							operationalSummary={analysisResults?.operationalSummaryText}
+						/>
+					)}
+
 					<div className="flex items-start gap-2 px-6 pb-6">
 						{/* Storage List Container */}
 						<div

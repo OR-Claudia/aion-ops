@@ -1,6 +1,7 @@
 import React from "react";
 import { cn } from "../../lib/utils";
 import type { Detection } from "./Modals/DetectionsModal";
+import type { TabItem } from "./Tabs";
 // import ChevronRightIcon from "../../assets/chevron-right-icon.svg";
 
 export interface Detected {
@@ -50,6 +51,7 @@ export interface StorageData {
 	keyEvents: string;
 	missionDescription: string;
 	MissionPath: Coordinate[];
+	tabs?: TabItem[];
 	detected?: Detected;
 }
 
@@ -119,11 +121,10 @@ const StorageItem: React.FC<StorageItemProps> = ({
 					{/* UAV */}
 					<div className="flex flex-col items-start gap-[6px] min-w-0 flex-1">
 						<span className="text-[#E3F3F2] font-ubuntu text-xs font-light whitespace-nowrap">
-							{isDetailView ? "UAV" : "Responsible UAV"}
+							{isDetailView ? "UV" : "Responsible UV"}
 						</span>
 						<span className="text-[#E3F3F2] font-ubuntu text-sm opacity-90 truncate w-full">
-							{/* {record.uav} */}
-							{"Mavic Air 3"}
+							{record.uav}
 						</span>
 					</div>
 

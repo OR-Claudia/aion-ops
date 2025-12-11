@@ -122,7 +122,7 @@ const AnalysisModal: React.FC<AnalysisModalProps> = ({
 			title={`AI Analysis Result`}
 			isOpen={isOpen}
 			onClose={onClose}
-			width={"540px"}
+			width={"630px"}
 			className="!z-60"
 		>
 			{isInitialLoading ? (
