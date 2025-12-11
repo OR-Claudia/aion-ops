@@ -76,11 +76,6 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 	const uniqueThermoDetections = filterUniqueDetections(thermoData.detections);
 	const uniqueAerialDetections = filterUniqueDetections(aerialData.detections);
 
-	console.log(
-		"filtered soldiers?",
-		uniqueThermoDetections.filter((d) => d.class_name === "soldier")
-	);
-
 	// temporary implementation for demo purposes
 	useEffect(() => {
 		if (record.id === "1") {
