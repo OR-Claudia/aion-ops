@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
-import type { Coordinate } from "../StorageItem";
+import type { Coordinate, StorageData } from "../StorageItem";
 import DetectionListItem from "../DetectionListItem";
 import Tag from "../Tag";
 import { capitalize } from "../../../lib/utils";
-// import { thermoData } from "../../../assets/mock-data/thermo_data";
-// import { detections as rgbData } from "../../../assets/mock-data/data";
+import { thermoData } from "../../../assets/mock-data/thermo_data";
+import { detections as rgbData } from "../../../assets/mock-data/rgb_data";
 import { aerialData } from "../../../assets/mock-data/aerial_data";
 
 export interface Detection {
@@ -34,14 +34,35 @@ export interface Detection {
 interface DetectionsModalProps {
 	isOpen: boolean;
 	onClose: () => void;
-	// record: StorageData;
+	record: StorageData;
 	activeTab: string;
 }
+
+const filterUniqueDetections = (detections: Detection[]) => {
+	const uniqueDetections = detections.filter(
+		(obj, index, arr) =>
+			arr.findIndex(({ track_id }) => track_id === obj.track_id) === index
+	);
+	return uniqueDetections;
+};
+
+// Small helper to extract unique class names from detections
+const extractUniqueClassNames = (
+	items: Array<Pick<Detection, "class_name">>
+) => {
+	const set = new Set<string>();
+	for (const d of items) {
+		if (d && typeof d.class_name === "string") {
+			set.add(d.class_name);
+		}
+	}
+	return Array.from(set).sort();
+};
 
 const DetectionsModal: React.FC<DetectionsModalProps> = ({
 	isOpen,
 	onClose,
-	// record,
+	record,
 	activeTab,
 }) => {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -51,25 +72,50 @@ const DetectionsModal: React.FC<DetectionsModalProps> = ({
 		detections ? detections?.length : 0
 	);
 
-	const uniqueRgbDetections = aerialData.detections?.filter(
-		(o, index, arr) =>
-			arr.findIndex(({ track_id }) => track_id === o.track_id) === index
+	const uniqueRgbDetections = filterUniqueDetections(rgbData.detections);
+	const uniqueThermoDetections = filterUniqueDetections(thermoData.detections);
+	const uniqueAerialDetections = filterUniqueDetections(aerialData.detections);
+
+	console.log(
+		"filtered soldiers?",
+		uniqueThermoDetections.filter((d) => d.class_name === "soldier")
 	);
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const uniqueThermoDetections: any = [];
 
-	// 	(o, index, arr) =>
-	// 		arr.findIndex(({ track_id }) => track_id === o.track_id) === index
-	// );
-
+	// temporary implementation for demo purposes
 	useEffect(() => {
-		const newDetections = activeTab === "rgb" ? uniqueRgbDetections : [];
-		if (JSON.stringify(detections) !== JSON.stringify(newDetections)) {
-			setDetections(newDetections);
-			setDetectionCount(newDetections.length);
+		if (record.id === "1") {
+			const newDetections =
+				activeTab === "rgb" ? uniqueRgbDetections : uniqueThermoDetections;
+
+			if (JSON.stringify(detections) !== JSON.stringify(newDetections)) {
+				setDetections(newDetections);
+				setDetectionCount(newDetections.length);
+			}
+		} else {
+			const newDetections = uniqueAerialDetections;
+			if (JSON.stringify(detections) !== JSON.stringify(newDetections)) {
+				setDetections(newDetections);
+				setDetectionCount(newDetections.length);
+			}
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [activeTab, uniqueRgbDetections, uniqueThermoDetections]);
+	}, [
+		activeTab,
+		detections,
+		record.id,
+		uniqueAerialDetections,
+		uniqueRgbDetections,
+		uniqueThermoDetections,
+	]);
+
+	// Log unique class names whenever detections change
+	useEffect(() => {
+		if (!detections || detections.length === 0) return;
+		const unique = extractUniqueClassNames(detections as Detection[]);
+		console.log(
+			`[DetectionsModal] unique class names (${unique.length}):`,
+			unique
+		);
+	}, [detections, activeTab]);
 
 	return (
 		<Modal

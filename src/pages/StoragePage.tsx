@@ -183,6 +183,7 @@ const StoragePage: React.FC = () => {
 						{/* Detections Modal */}
 						{detectionsOpen && selectedRecord ? (
 							<DetectionsModal
+								record={selectedRecord}
 								isOpen={detectionsOpen}
 								onClose={() => setDetectionsOpen(false)}
 								activeTab={activeTab}

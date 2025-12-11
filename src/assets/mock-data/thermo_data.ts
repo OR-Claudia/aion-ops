@@ -41,8 +41,8 @@ export const thermoData = {
 		{
 			timestamp: 46.0,
 			frame_time: 46.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 2,
+			class_name: "civilian",
 			confidence: 0.831051230430603,
 			track_id: 1,
 			bbox: {
@@ -145,8 +145,8 @@ export const thermoData = {
 		{
 			timestamp: 50.0,
 			frame_time: 50.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 2,
+			class_name: "civilian",
 			confidence: 0.8559508919715881,
 			track_id: 1,
 			bbox: {
@@ -249,8 +249,8 @@ export const thermoData = {
 		{
 			timestamp: 54.0,
 			frame_time: 54.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 2,
+			class_name: "civilian",
 			confidence: 0.8255556225776672,
 			track_id: 1,
 			bbox: {
@@ -275,8 +275,8 @@ export const thermoData = {
 		{
 			timestamp: 55.0,
 			frame_time: 55.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 2,
+			class_name: "civilian",
 			confidence: 0.8501979112625122,
 			track_id: 1,
 			bbox: {
@@ -301,8 +301,8 @@ export const thermoData = {
 		{
 			timestamp: 56.0,
 			frame_time: 56.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 2,
+			class_name: "civilian",
 			confidence: 0.8373774886131287,
 			track_id: 1,
 			bbox: {
@@ -601,8 +601,8 @@ export const thermoData = {
 		{
 			timestamp: 63.0,
 			frame_time: 63.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 4,
+			class_name: "soldier",
 			confidence: 0.5650128126144409,
 			track_id: 2,
 			bbox: {
@@ -627,8 +627,8 @@ export const thermoData = {
 		{
 			timestamp: 64.0,
 			frame_time: 64.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 4,
+			class_name: "soldier",
 			confidence: 0.8246200084686279,
 			track_id: 2,
 			bbox: {
@@ -653,8 +653,8 @@ export const thermoData = {
 		{
 			timestamp: 65.0,
 			frame_time: 65.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 4,
+			class_name: "soldier",
 			confidence: 0.8427655100822449,
 			track_id: 2,
 			bbox: {
@@ -705,8 +705,8 @@ export const thermoData = {
 		{
 			timestamp: 67.0,
 			frame_time: 67.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 2,
+			class_name: "civilian",
 			confidence: 0.8827502727508545,
 			track_id: 2,
 			bbox: {
@@ -731,8 +731,8 @@ export const thermoData = {
 		{
 			timestamp: 68.0,
 			frame_time: 68.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 2,
+			class_name: "civilian",
 			confidence: 0.8844076991081238,
 			track_id: 2,
 			bbox: {
@@ -991,8 +991,8 @@ export const thermoData = {
 		{
 			timestamp: 75.0,
 			frame_time: 75.0,
-			class_id: 0,
-			class_name: "tank",
+			class_id: 4,
+			class_name: "soldier",
 			confidence: 0.7547780871391296,
 			track_id: 4,
 			bbox: {
@@ -1121,8 +1121,8 @@ export const thermoData = {
 		{
 			timestamp: 77.0,
 			frame_time: 77.0,
-			class_id: 0,
-			class_name: "tank",
+			class_id: 4,
+			class_name: "soldier",
 			confidence: 0.7667101621627808,
 			track_id: 4,
 			bbox: {
@@ -1589,8 +1589,8 @@ export const thermoData = {
 		{
 			timestamp: 83.0,
 			frame_time: 83.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 4,
+			class_name: "soldier",
 			confidence: 0.8627026081085205,
 			track_id: 2,
 			bbox: {
@@ -1667,8 +1667,8 @@ export const thermoData = {
 		{
 			timestamp: 84.0,
 			frame_time: 84.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 4,
+			class_name: "soldier",
 			confidence: 0.816270649433136,
 			track_id: 2,
 			bbox: {
@@ -1693,8 +1693,8 @@ export const thermoData = {
 		{
 			timestamp: 85.0,
 			frame_time: 85.0,
-			class_id: 0,
-			class_name: "tank",
+			class_id: 4,
+			class_name: "soldier",
 			confidence: 0.788280189037323,
 			track_id: 4,
 			bbox: {
@@ -1719,8 +1719,8 @@ export const thermoData = {
 		{
 			timestamp: 85.0,
 			frame_time: 85.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 4,
+			class_name: "soldier",
 			confidence: 0.7804014086723328,
 			track_id: 2,
 			bbox: {
@@ -1745,8 +1745,8 @@ export const thermoData = {
 		{
 			timestamp: 86.0,
 			frame_time: 86.0,
-			class_id: 0,
-			class_name: "tank",
+			class_id: 4,
+			class_name: "soldier",
 			confidence: 0.695033609867096,
 			track_id: 4,
 			bbox: {
@@ -1771,8 +1771,8 @@ export const thermoData = {
 		{
 			timestamp: 86.0,
 			frame_time: 86.0,
-			class_id: 1,
-			class_name: "vehicle",
+			class_id: 4,
+			class_name: "soldier",
 			confidence: 0.7972919940948486,
 			track_id: 2,
 			bbox: {
@@ -1797,8 +1797,8 @@ export const thermoData = {
 		{
 			timestamp: 87.0,
 			frame_time: 87.0,
-			class_id: 0,
-			class_name: "tank",
+			class_id: 4,
+			class_name: "soldier",
 			confidence: 0.7781391739845276,
 			track_id: 4,
 			bbox: {

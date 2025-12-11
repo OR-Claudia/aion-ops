@@ -20,7 +20,7 @@ const storageData: StorageData[] = [
 		operator: "Amanda Magiera",
 		status: "Success",
 		description:
-			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
+			"Aerial capture revealed increased activity along the gravel road running parallel to the forest edge. Automated classifiers identified four vehicles—two stationary near the treeline and two moving eastbound at moderate speed. Elevated presence of armed personnel detected: approximately seven individuals exhibiting soldier-class characteristics distributed along both road edges and partial canopy cover. Civilians observed in smaller numbers with non-coordinated movement patterns. Thermal signatures and movement indicators suggest heightened activity relative to prior pass. Recorded dataset reached 3.6 GB, including wide-area scans and multi-spectrum surveillance. All systems performing within mission parameters.",
 		coordinates: "50.59227, 35.307322",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
@@ -41,7 +41,7 @@ const storageData: StorageData[] = [
 		operatorId: "EMP101",
 		keyEvents: "N/A",
 		missionDescription:
-			"Silent running protocols active with noise signature minimized for covert movement. Raven UAV maintaining overwatch while UGV conducts close-proximity intelligence collection on vehicle movements and personnel activity. Multi-spectrum passive detection systems monitoring both uniformed military personnel and irregular civilian combatants without active emission signatures. Mission proceeding under strict stealth parameters with zero detection incidents recorded. Intelligence collection ongoing while maintaining tactical advantage through concealment.",
+			"Live feed captured activity along a gravel service path. Autonomous tagging identified two moving vehicles traveling northeast at approx. 38–42 km/h. Additional detections included six civilians dispersed along the pathway and three armed individuals categorized as soldier-class entities based on equipment signatures. Movement patterns indicate no immediate hostile interaction. Multi-spectral capture logged 2.4 GB of environmental and activity-focused data. System maintaining continuous observation without anomalies.",
 		MissionPath: [
 			{
 				lat: 50.59277,
@@ -93,7 +93,7 @@ const storageData: StorageData[] = [
 		operator: "Dagmara Popowska",
 		status: "Success",
 		description:
-			"The footage documents a reconnaissance operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
+			"The footage documents an air tactical operation, observing interactions between civilians and armored vehicles. No immediate hostile actions or engagements are noted. The recording focuses on movements, positioning, and general activity in the area, providing valuable situational awareness. Environmental conditions, audio clarity, and key points of interest are noted for further review.",
 		coordinates: "50.59277, 35.307322",
 		videoUrl:
 			"https://api.builder.io/api/v1/image/assets/TEMP/44b9c8122a7a47d70f1b920b0520db9e595ee19a?width=827",
@@ -117,7 +117,7 @@ const storageData: StorageData[] = [
 			"Silent running protocols active with noise signature minimized for covert movement. Raven UAV maintaining overwatch while UGV conducts close-proximity intelligence collection on vehicle movements and personnel activity. Multi-spectrum passive detection systems monitoring both uniformed military personnel and irregular civilian combatants without active emission signatures.Mission proceeding under strict stealth parameters with zero detection incidents recorded. Intelligence collection ongoing while maintaining tactical advantage through concealment.",
 		MissionPath: [
 			{
-				lat: 50.59277,
+				lat: 50.59457,
 				lon: 35.307222,
 			},
 			{

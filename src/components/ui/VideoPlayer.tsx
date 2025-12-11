@@ -294,7 +294,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 					}}
 					className="absolute top-0 left-0 overflow-visible"
 				>
-					{isVideoPlaying &&
+					{livestream &&
+					isVideoPlaying &&
 					activeFrameData?.detections &&
 					activeFrameData?.detections.length !== 0
 						? activeFrameData?.detections.map((d, i) => {

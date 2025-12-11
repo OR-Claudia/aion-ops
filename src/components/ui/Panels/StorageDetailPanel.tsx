@@ -9,7 +9,7 @@ import aerialVideo from "../../../assets/videos/aerial.mp4";
 // import RgbVideo from "../../../assets/videos/rgb_kuna.mp4";
 // import ThermoVideo from "../../../assets/videos/thermo_kuna.mp4";
 
-const keyEventsDEMO = [
+const keyEvents_1 = [
 	{
 		timestamp: "T+1s",
 		event:
@@ -49,6 +49,49 @@ const keyEventsDEMO = [
 		timestamp: "T+11s",
 		event:
 			"Formation shows clear structure with truck (track_id: 5) in rear, vehicle (track_id: 1) at front, and others in between — consistent with tactical convoy layout",
+	},
+];
+
+const keyEvents_2 = [
+	{
+		timestamp: "T+1s",
+		event:
+			"Initial detection of multiple vehicles (track_ids: 1, 2, 3 & 4) which are static as transmission begins.",
+	},
+	{
+		timestamp: "T+11s",
+		event:
+			"Upon closer observation, multiple individuals are observed near vehicles, some exhibiting soldier-class characteristics based on gear and posture.",
+	},
+	{
+		timestamp: "T+30s",
+		event:
+			"A group of armed individuals (track_ids: 22, 27 & 29) are detected moving idly around one of the trucks (track_id 5), suggesting possible preparation or loading activity.",
+	},
+	{
+		timestamp: "T+54s",
+		event:
+			"Two of the armed individuals (track_ids: 27 & 29) depart from the truck area and head towards a nearby tree line, possibly for reconnaissance or security.",
+	},
+	{
+		timestamp: "T+67s",
+		event:
+			"The remaining armed individuals follow suit, following the graveled path towards the tree line, indicating a coordinated movement away from the vehicles.",
+	},
+	{
+		timestamp: "T+93s",
+		event:
+			"One of the armed individuals (track_id: 86) is seen returning alone towards the vehicles, possibly to relay information or retrieve equipment.",
+	},
+	{
+		timestamp: "T+119s",
+		event:
+			"Track_id: 102 (armed individual) is observed patrolling near the vehicles, suggesting a security detail has been established around the convoy.",
+	},
+	{
+		timestamp: "T+127s",
+		event:
+			"Before transmission ends, all armed individuals regroup near the vehicles, indicating the conclusion of their activity in the area.",
 	},
 ];
 
@@ -96,6 +139,10 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 		//  || tabs[0].value;
 	};
 
+	const getCurrentKeyEvents = () => {
+		return record.id === "1" ? keyEvents_1 : keyEvents_2;
+	};
+
 	const handleTabChange = (tabId: string) => {
 		setActiveTab(tabId);
 	};
@@ -129,6 +176,8 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 			setActiveTab(hasVideoSource?.id ?? "rgb");
 		}
 	}, [activeTab, tabs, setActiveTab]);
+
+	const keyEvents = getCurrentKeyEvents();
 
 	return (
 		<div className="w-[650px] h-[calc(100vh-320px)] relative rounded-[0_10px_10px_10px] border-[1.5px] border-[rgba(211,251,216,0.5)] bg-black/50 backdrop-blur-[2px] flex flex-col transition-all duration-300">
@@ -170,6 +219,7 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 					<VideoPlayer
 						src={getCurrentVideoSource()}
 						height={activeTab === "rgb" ? "auto" : "300px"}
+						livestream={false}
 						showControls
 					/>
 				</div>
@@ -228,7 +278,7 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
 						<span className="font-bold">Key events: </span>
 						<div>
-							{keyEventsDEMO.map((i) => (
+							{keyEvents.map((i) => (
 								<div
 									key={`event-key-${i.timestamp}`}
 									className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal"
@@ -241,10 +291,7 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 
 					<div className="text-[#E3F3F2] font-ubuntu text-[14px] font-normal leading-normal">
 						<span className="font-bold">Mission description: </span>
-						{/* {record.missionDescription} */}
-						{
-							"Successfully completed 74% of designated 15km² sweep pattern covering mixed agricultural and forested sectors. Navigation executed precise waypoint timing at 180m operational ceiling. Weather conditions held favorable with 6km visibility and light crosswinds from northeast."
-						}
+						{record.missionDescription}
 					</div>
 				</div>
 			</div>
