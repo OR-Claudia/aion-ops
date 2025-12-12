@@ -35,8 +35,10 @@ interface FollowModalProps {
 }
 
 const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
-	const [{ detections, selectedDetection, activeFrame }, updateMetaData] =
-		useContext(MetaDataCtx);
+	const [
+		{ detections, selectedDetection, activeFrame, telemetry },
+		updateMetaData,
+	] = useContext(MetaDataCtx);
 
 	useEffect(() => {
 		return () => {
@@ -99,7 +101,12 @@ const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
 						attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>'
 						// url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
 					/>
-					<DroneMarker position={uavPosition} />
+					<DroneMarker
+						position={uavPosition}
+						heading={telemetry?.heading}
+						roll={telemetry?.roll}
+						pitch={telemetry?.pitch}
+					/>
 					{afUnique.map((detection, i) => {
 						if (detection.class_id !== -1) {
 							/* deduped by highest confidence; no per-render set needed */

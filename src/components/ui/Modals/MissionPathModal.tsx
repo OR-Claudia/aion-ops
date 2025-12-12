@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import {
 	MapContainer,
 	TileLayer,
@@ -10,7 +10,7 @@ import { LatLngBounds } from "leaflet";
 import Modal from "./Modal";
 import type { StorageData } from "../StorageItem";
 import type { UAVDetailData } from "./UAVDetailModal";
-import { reverseGeocode } from "../../../lib/utils";
+import { reverseGeocode, MetaDataCtx } from "../../../lib/utils";
 import DroneMarker from "../DroneMarker";
 import { useUAVLocations } from "../../layout/ctx/UAVLocations/useUAVLocations";
 
@@ -40,6 +40,7 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 	const isUAVData = !!uavData;
 	const isLiveUav2 = isUAVData && String(uavData?.id) === "2";
 	const uavLocations = useUAVLocations();
+	const [{ telemetry }] = useContext(MetaDataCtx);
 
 	// Geo helpers: convert meters to degrees at given latitude
 	const metersToLat = (meters: number) => meters / 111320;
@@ -317,7 +318,13 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 								/>
 								{/* Live Drone Position (UAV id: 2) */}
 								{isLiveUav2 && currentPosition ? (
-									<DroneMarker position={currentPosition} zIndexOffset={1200} />
+									<DroneMarker
+										position={currentPosition}
+										zIndexOffset={1200}
+										heading={telemetry?.heading}
+										roll={telemetry?.roll}
+										pitch={telemetry?.pitch}
+									/>
 								) : null}
 
 								{/* Detection Clusters */}
