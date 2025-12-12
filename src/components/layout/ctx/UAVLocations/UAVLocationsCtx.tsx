@@ -36,31 +36,7 @@ export const UAVLocationsCtxProvider: FC<{ children: ReactNode }> = ({
 		  ]
 		| null;
 
-	useEffect(() => {
-		const idKey = "2";
-		const seed1 = { lat: 36.713198, lon: -4.296397 };
-		const seed2 = { lat: 36.71288, lon: -4.295999 };
-		const seeded = [seed1, seed2];
-
-		setPathsById((prev) => ({ ...prev, [idKey]: seeded }));
-		setCurrentById((prev) => ({
-			...prev,
-			[idKey]: [seed2.lat, seed2.lon],
-		}));
-		setUAVLocations((prevLocations: UAVLocation[]) =>
-			prevLocations.map((uav: UAVLocation) => {
-				if (String(uav.data.id) === idKey) {
-					return {
-						...uav,
-						position: [seed2.lat, seed2.lon] as [number, number],
-					};
-				}
-				return uav;
-			})
-		);
-	}, []);
-
-	// LIVE PATH FEED: for UAV id 2, append positions from MetaDataCtx.activeFrame after the two static seeds
+	// LIVE PATH FEED: for UAV id 2, append positions from MetaDataCtx.activeFrame (starts empty until live data arrives)
 	useEffect(() => {
 		if (!meta) return;
 		const [state] = meta;

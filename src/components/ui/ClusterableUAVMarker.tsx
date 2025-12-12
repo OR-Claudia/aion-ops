@@ -20,7 +20,6 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 	id,
 	onDetailClick,
 }) => {
-
 	const { getUAVLocationById } = useUAVLocations();
 
 	const uavLocation = getUAVLocationById(id);
@@ -75,9 +74,11 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 		}
 	};
 
-	const coordinates = `N:${uavLocation?.position[0].toFixed(4)}, E:${uavLocation?.position[1].toFixed(
-		4
-	)}`;
+	const coordinates = uavLocation?.position
+		? `${uavLocation.position[0].toFixed(6)}, ${uavLocation.position[1].toFixed(
+				6
+		  )}`
+		: "";
 
 	// Create custom icon for the marker
 	const createCustomIcon = () => {
@@ -129,7 +130,7 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 	const customIcon = React.useMemo(
 		() => createCustomIcon(),
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-		[isExpanded, uavLocation?.data, uavLocation?.type]
+		[isExpanded, uavLocation?.data, uavLocation?.type, uavLocation?.position]
 	);
 
 	// // Attach DOM event for detail button inside custom icon
@@ -140,13 +141,11 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 		const detailBtn = markerEl.querySelector('[data-detail-btn="true"]');
 		if (detailBtn) {
 			const handler = (ev: Event) => {
-				
 				if (uavLocation) {
 					ev.stopPropagation();
 					onDetailClick(uavLocation?.data.id);
 					console.log("Detail button clicked, ID added to selected UAVs");
 				}
-				
 			};
 
 			detailBtn.addEventListener("click", handler);
@@ -157,8 +156,7 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [customIcon]);
 
-	return (
-		uavLocation ?
+	return uavLocation ? (
 		<Marker
 			ref={markerRef}
 			position={uavLocation.position}
@@ -168,8 +166,8 @@ const ClusterableUAVMarker: React.FC<ClusterableUAVMarkerProps> = ({
 			eventHandlers={{
 				click: handleClick,
 			}}
-		/> : null
-	);
+		/>
+	) : null;
 };
 
 export default ClusterableUAVMarker;

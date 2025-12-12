@@ -33,8 +33,6 @@ export const DroneMarker = memo((props: DroneMarkerProps) => {
 	const map = useMap();
 	const markerRef = useRef<L.Marker | null>(null);
 
-	console.log("Rendering DroneMarker heading", heading);
-
 	useEffect(() => {
 		if (!map) return;
 
@@ -74,6 +72,7 @@ export const DroneMarker = memo((props: DroneMarkerProps) => {
 				markerRef.current = null;
 			}
 		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [
 		map,
 		size,

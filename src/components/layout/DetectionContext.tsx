@@ -33,7 +33,7 @@ export const DetectionProvider: React.FC<DetectionProviderProps> = ({
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const selectDetection = (detection: DetectionData) => {
-		console.log("selecting detection", detection);
+		// console.log("selecting detection", detection);
 		setSelectedDetection(detection);
 		setIsModalOpen(true);
 	};
