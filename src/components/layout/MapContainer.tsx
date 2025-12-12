@@ -22,7 +22,6 @@ import AnalysisModal from "../ui/Modals/AnalysisModal";
 
 import { useUAVLocations } from "./ctx/UAVLocations/useUAVLocations";
 import FollowModal from "../ui/Modals/FollowModal";
-import TempDetectionsModal from "../ui/Modals/TempDetectionsModal";
 
 interface SelectedUAV {
 	id: string | number;
@@ -45,12 +44,13 @@ interface MapContainerProps {
 }
 
 const systemStatusText =
-	"Battery at 35% with 0.7 hours remaining mission time. WiFi connectivity excellent at -42 dBm, maintaining secure data link with zero interruptions. All critical systems operating within normal parameters.";
+	"Battery at 96% with 2.7 hours of operational time remaining. WiFi connectivity stable at -42 dBm with uninterrupted data link to command. All onboard sensors and imaging systems functioning within normal parameters.";
 
 const missionProgressText =
-	"Currently 68% complete on designated 12km² patrol route covering agricultural and woodland terrain. Navigation waypoints hit on schedule at 150m altitude. Weather conditions optimal with clear visibility extending 8+ kilometers.";
+	"Footage capture along the Málaga coastline is 68% complete, maintaining a steady 150m altitude over coastal roads and pedestrian zones. Conditions remain optimal with clear visibility over the shoreline and urban edges.";
+
 const operationalSummaryText =
-	"Area assessment proceeding as planned with no significant anomalies detected. Reconnaissance data collection on target, with 3.5 GB transmitted successfully. Rural activity patterns consistent with intelligence briefings. Mission continuing toward scheduled completion with all safety protocols active.";
+	"Visual analysis of the coastal area confirms routine civilian activity. Detected objects include 3 bicycles, approximately 5–7 people in various locations, and multiple vehicles, both stationary and in motion. No anomalies identified; data collection and transmission remain on target.";
 
 const emptyUav = {
 	id: 0,
@@ -158,24 +158,14 @@ const MapContainer: React.FC<MapContainerProps> = ({
 	};
 
 	// const handleOpenDetections = (uavId: string | number) => {
-	const handleOpenDetections = () => {
-		// setSelectedUAVs((prev) =>
-		// 	prev.map((uav) =>
-		// 		uav.id === uavId ? { ...uav, showDetections: true } : uav
-		// 	)
-		// );
-		setSelectedUAV((prev) => ({ ...prev, showDetections: true }));
-	};
-
-	// const handleCloseDetections = (uavId: string | number) => {
-	const handleCloseDetections = () => {
-		// setSelectedUAVs((prev) =>
-		// 	prev.map((uav) =>
-		// 		uav.id === uavId ? { ...uav, showDetections: false } : uav
-		// 	)
-		// );
-		setSelectedUAV((prev) => ({ ...prev, showDetections: false }));
-	};
+	// const handleOpenDetections = () => {
+	// 	// setSelectedUAVs((prev) =>
+	// 	// 	prev.map((uav) =>
+	// 	// 		uav.id === uavId ? { ...uav, showDetections: true } : uav
+	// 	// 	)
+	// 	// );
+	// 	setSelectedUAV((prev) => ({ ...prev, showDetections: true }));
+	// };
 
 	const toggleFollowModal = () => {
 		// setSelectedUAVs((prev) =>
@@ -213,7 +203,7 @@ const MapContainer: React.FC<MapContainerProps> = ({
 								onMissionPathClick={() => handleMissionPathClick(uav)}
 								onAnalysisClick={() => setIsAnalysisOpen(true)}
 								onKeyEventsClick={() => handleOpenKeyEvents()}
-								onDetectionsClick={() => handleOpenDetections()}
+								// onDetectionsClick={() => handleOpenDetections()}
 								onFollowClick={() => toggleFollowModal()}
 							/>
 						);
@@ -244,20 +234,6 @@ const MapContainer: React.FC<MapContainerProps> = ({
 						return null;
 					})
 				)} */}
-			{/* Detection Modals */}
-			{selectedUAV.showDetections &&
-				allUAVLocations.map((uav: any) => {
-					if (uav.data.id === selectedUAV.id) {
-						return (
-							<TempDetectionsModal
-								key={`${uav.data.id}-detections`}
-								isOpen={selectedUAV.showDetections}
-								onClose={() => handleCloseDetections()}
-							/>
-						);
-					}
-					return null;
-				})}
 			{/* {selectedUAVs.length > 0 &&
 				allUAVLocations.map((uav: any) =>
 					selectedUAVs.map((selectedUAV: any) => {

@@ -53,6 +53,11 @@ export interface StorageData {
 	MissionPath: Coordinate[];
 	tabs?: TabItem[];
 	detected?: Detected;
+	analysisResult?: {
+		systemStatusText: string;
+		missionProgressText: string;
+		operationalSummaryText: string;
+	};
 }
 
 interface StorageItemProps {

@@ -157,9 +157,7 @@ const StorageDetailPanel: React.FC<StorageDetailPanelProps> = ({
 	};
 
 	const handleGenerateAnalysis = () => {
-		console.log("Generate analysis for record:", record.id);
 		setAnalysisOpen(true);
-		// Implement analysis generation
 	};
 
 	const handleMissionPathClick = () => {

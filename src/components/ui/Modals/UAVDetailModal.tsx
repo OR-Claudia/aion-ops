@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Modal from "./Modal";
 import wifiIcon from "../../../assets/wifi.svg";
 import wifi1Icon from "../../../assets/wifi-1.svg";
@@ -10,6 +10,8 @@ import Button from "../Button";
 import VideoPlayer from "../VideoPlayer";
 import Tabs, { type TabItem } from "../Tabs";
 import { MetaDataCtx } from "../../../lib/utils";
+import type { DetectedInFrame } from "../../../lib/types";
+import TempDetectionsModal from "./TempDetectionsModal";
 
 export interface UAVDetailData {
 	id: string | number;
@@ -44,7 +46,7 @@ export interface UAVDetailModalProps {
 	activeTab: string;
 	onTabChange: (tabId: string) => void;
 	onKeyEventsClick?: () => void;
-	onDetectionsClick?: () => void;
+	// onDetectionsClick?: () => void;
 	onFollowClick?: () => void;
 }
 
@@ -58,10 +60,37 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 	activeTab,
 	onTabChange,
 	onKeyEventsClick,
-	onDetectionsClick,
+	// onDetectionsClick,
 	onFollowClick,
 }) => {
 	const [{ activeFrame }] = useContext(MetaDataCtx);
+
+	const [uniqueDetections, setUniqueDetections] = useState<DetectedInFrame[]>(
+		[]
+	);
+	const [isDetectionsOpen, setDetectionsOpen] = useState(false);
+
+	/** Unique detections array collection */
+	useEffect(() => {
+		const source = activeFrame?.detections || [];
+		if (source.length === 0) return;
+
+		setUniqueDetections((prev) => {
+			let next: DetectedInFrame[] | null = null;
+			const seen = new Set(prev.map((d) => d.track_id));
+			for (const d of source) {
+				if (d.class_id !== -1 && !!d.geo_coordinates && !seen.has(d.track_id)) {
+					if (!next) next = [...prev];
+					next.push(d);
+					seen.add(d.track_id);
+				}
+			}
+			if (next) {
+				return next;
+			}
+			return prev;
+		});
+	}, [activeFrame]);
 
 	if (!data) return null;
 
@@ -153,7 +182,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 		}
 	};
 	const handleGenerateAnalysis = () => {
-		console.log("Generate analysis for:", data.id);
+		// console.log("Generate analysis for:", data.id);
 		onAnalysisClick?.();
 	};
 
@@ -164,9 +193,7 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 
 	const handleDetections = () => {
 		console.log("View detections for:", data.id);
-		if (onDetectionsClick) {
-			onDetectionsClick();
-		}
+		setDetectionsOpen(true);
 	};
 
 	const handleKeyEvents = () => {
@@ -183,157 +210,171 @@ const UAVDetailModal: React.FC<UAVDetailModalProps> = ({
 	const parrot = activeFrame?.detections.find((e) => e.class_id === -1);
 
 	return (
-		<Modal
-			isOpen={true}
-			onClose={onClose}
-			title={data.name}
-			subtitle={`Live coordinates: ${
-				activeFrame
-					? `${parrot?.latitude?.toFixed(6)}, ${parrot?.longitude?.toFixed(6)}`
-					: data.coordinates
-			}`}
-			minimizable={true}
-			onMinimize={handleMinimize}
-			minHeight="700px"
-			headerContent={
-				<div className="flex items-center gap-2">
-					<div
-						className="w-[11px] h-[11px] rounded-full"
-						style={{ backgroundColor: "#C10000" }}
+		<>
+			<Modal
+				isOpen={true}
+				onClose={onClose}
+				title={data.name}
+				subtitle={`Live coordinates: ${
+					activeFrame
+						? `${parrot?.latitude?.toFixed(6)}, ${parrot?.longitude?.toFixed(
+								6
+						  )}`
+						: data.coordinates
+				}`}
+				minimizable={true}
+				onMinimize={handleMinimize}
+				minHeight="700px"
+				headerContent={
+					<div className="flex items-center gap-2">
+						<div
+							className="w-[11px] h-[11px] rounded-full"
+							style={{ backgroundColor: "#C10000" }}
+						/>
+						<span>Live</span>
+					</div>
+				}
+			>
+				{/* Tabs Section */}
+				<div className=" mb-[14px]">
+					<Tabs
+						tabs={tabs}
+						activeTab={activeTab}
+						onTabChange={handleTabChange}
+						className="w-[205px]"
 					/>
-					<span>Live</span>
 				</div>
-			}
-		>
-			{/* Tabs Section */}
-			<div className=" mb-[14px]">
-				<Tabs
-					tabs={tabs}
-					activeTab={activeTab}
-					onTabChange={handleTabChange}
-					className="w-[205px]"
-				/>
-			</div>
 
-			{/* Video Player Section - preserving exact wrapper structure */}
-			<div className="mb-4">
-				<div className="w-full h-fit relative rounded-[0px_3px_3px_3px] overflow-visible">
-					{/* Video Player */}
-					<div className="w-full ">
-						<VideoPlayer
-							livestream={livestream}
-							src={getCurrentVideoSource()}
-							enableSync={shouldEnableSync()}
-							height={
-								livestream
-									? activeTab === "rgb"
+				{/* Video Player Section - preserving exact wrapper structure */}
+				<div className="mb-4">
+					<div className="w-full h-fit relative rounded-[0px_3px_3px_3px] overflow-visible">
+						{/* Video Player */}
+						<div className="w-full ">
+							<VideoPlayer
+								livestream={livestream}
+								src={getCurrentVideoSource()}
+								enableSync={shouldEnableSync()}
+								height={
+									livestream
+										? activeTab === "rgb"
+											? "auto"
+											: "300px"
+										: activeTab === "rgb"
 										? "auto"
 										: "300px"
-									: activeTab === "rgb"
-									? "auto"
-									: "300px"
-							}
-						/>
-					</div>
-				</div>
-			</div>
-			<div className="overflow-y-auto max-h-[200px] ">
-				{/* Stats Section */}
-				<div className="px-[27px] mb-[20px]">
-					<div className="flex items-center justify-center gap-[12px] w-[207px] mx-auto ">
-						{/* Signal Stats */}
-						<div className="flex flex-col items-center gap-3 w-[101px] min-h-[60px]">
-							<div className="flex items-center gap-[6px] mb-[6px] h-4">
-								<img
-									src={getSignalIcon()}
-									alt="signal"
-									className="w-[18px] h-[14px]"
-								/>
-								<span className="text-[#E3F3F2] font-ubuntu text-sm font-normal">
-									{data.signalPercentage}%
-								</span>
-							</div>
-							<div className="relative w-[97px] h-[18px]">
-								<div className="w-full h-full rounded-[22px] border border-[#E3F3F2] bg-transparent" />
-								<div
-									className="absolute top-[3px] left-[3px] h-[12px] rounded-[22px] bg-[#00C6B8]"
-									style={{ width: getSignalBarWidth() }}
-								/>
-							</div>
-						</div>
-
-						{/* Battery Stats */}
-						<div className="flex flex-col items-center min-h-[60px] gap-3 w-[101px]">
-							<div className="flex items-center gap-[6px] mb-[6px] h-[17px]">
-								<img src={getBatteryIcon()} alt="battery" className="w-5 h-4" />
-								<span className="text-[#E3F3F2] justify-center font-ubuntu text-sm font-normal">
-									{data.batteryPercentage}%
-								</span>
-							</div>
-							<div className="relative w-[97px] h-[18px]">
-								<div className="w-full h-full rounded-[22px] border border-[#E3F3F2] bg-transparent" />
-								<div
-									className="absolute top-[3px] left-[3px] h-[12px] rounded-[22px]"
-									style={{
-										width: getBatteryBarWidth(),
-										backgroundColor: getBatteryBarColor(),
-									}}
-								/>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				{/* Information Section */}
-				<div className="px-[12px] mb-[32px] flex flex-col gap-[11px] ">
-					<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Description: </span> {data.description}
-					</div>
-
-					<div className="text-[#E3F3F2] flex flex-row items-center  font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Mission: </span>
-						{data.missionLink ? (
-							<Button
-								variant="underline"
-								onClick={() =>
-									console.log("Open mission details:", data.missionLink)
 								}
-							>
-								{data.mission}
-							</Button>
-						) : (
-							<span className="text-[#00C6B8] underline">{data.mission}</span>
-						)}
-					</div>
-
-					<div className="text-[#E3F3F2] flex flex-row items-center font-ubuntu text-sm font-normal leading-normal">
-						<span className="font-bold">Mission Path:</span>
-						<Button variant="underline" onClick={handleMissionPathClick}>
-							{data.MissionPath}
-						</Button>
+							/>
+						</div>
 					</div>
 				</div>
-			</div>
+				<div className="overflow-y-auto max-h-[200px] ">
+					{/* Stats Section */}
+					<div className="px-[27px] mb-[20px]">
+						<div className="flex items-center justify-center gap-[12px] w-[207px] mx-auto ">
+							{/* Signal Stats */}
+							<div className="flex flex-col items-center gap-3 w-[101px] min-h-[60px]">
+								<div className="flex items-center gap-[6px] mb-[6px] h-4">
+									<img
+										src={getSignalIcon()}
+										alt="signal"
+										className="w-[18px] h-[14px]"
+									/>
+									<span className="text-[#E3F3F2] font-ubuntu text-sm font-normal">
+										{data.signalPercentage}%
+									</span>
+								</div>
+								<div className="relative w-[97px] h-[18px]">
+									<div className="w-full h-full rounded-[22px] border border-[#E3F3F2] bg-transparent" />
+									<div
+										className="absolute top-[3px] left-[3px] h-[12px] rounded-[22px] bg-[#00C6B8]"
+										style={{ width: getSignalBarWidth() }}
+									/>
+								</div>
+							</div>
 
-			{/* Action buttons */}
-			<div className="px-3 flex items-center gap-2 w-[596px]">
-				<Button variant="secondary" onClick={handleFollow}>
-					Follow
-				</Button>
-				<Button variant="secondary" onClick={handleDetections}>
-					Detections
-				</Button>
-				<Button variant="secondary" onClick={handleKeyEvents}>
-					Key Events
-				</Button>
-				<Button variant="primary" onClick={handleGenerateAnalysis}>
-					Generate analysis
-				</Button>
-				{/* <Button variant="primary" onClick={handleRequestControl}>
+							{/* Battery Stats */}
+							<div className="flex flex-col items-center min-h-[60px] gap-3 w-[101px]">
+								<div className="flex items-center gap-[6px] mb-[6px] h-[17px]">
+									<img
+										src={getBatteryIcon()}
+										alt="battery"
+										className="w-5 h-4"
+									/>
+									<span className="text-[#E3F3F2] justify-center font-ubuntu text-sm font-normal">
+										{data.batteryPercentage}%
+									</span>
+								</div>
+								<div className="relative w-[97px] h-[18px]">
+									<div className="w-full h-full rounded-[22px] border border-[#E3F3F2] bg-transparent" />
+									<div
+										className="absolute top-[3px] left-[3px] h-[12px] rounded-[22px]"
+										style={{
+											width: getBatteryBarWidth(),
+											backgroundColor: getBatteryBarColor(),
+										}}
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{/* Information Section */}
+					<div className="px-[12px] mb-[32px] flex flex-col gap-[11px] ">
+						<div className="text-[#E3F3F2] font-ubuntu text-sm font-normal leading-normal">
+							<span className="font-bold">Description: </span>{" "}
+							{data.description}
+						</div>
+
+						<div className="text-[#E3F3F2] flex flex-row items-center  font-ubuntu text-sm font-normal leading-normal">
+							<span className="font-bold">Mission: </span>
+							{data.missionLink ? (
+								<Button
+									variant="underline"
+									onClick={() =>
+										console.log("Open mission details:", data.missionLink)
+									}
+								>
+									{data.mission}
+								</Button>
+							) : (
+								<span className="text-[#00C6B8] underline">{data.mission}</span>
+							)}
+						</div>
+
+						<div className="text-[#E3F3F2] flex flex-row items-center font-ubuntu text-sm font-normal leading-normal">
+							<span className="font-bold">Mission Path:</span>
+							<Button variant="underline" onClick={handleMissionPathClick}>
+								{data.MissionPath}
+							</Button>
+						</div>
+					</div>
+				</div>
+
+				{/* Action buttons */}
+				<div className="px-3 flex items-center gap-2 w-[596px]">
+					<Button variant="secondary" onClick={handleFollow}>
+						Follow
+					</Button>
+					<Button variant="secondary" onClick={handleDetections}>
+						Detections
+					</Button>
+					<Button variant="secondary" onClick={handleKeyEvents}>
+						Key Events
+					</Button>
+					<Button variant="primary" onClick={handleGenerateAnalysis}>
+						Generate analysis
+					</Button>
+					{/* <Button variant="primary" onClick={handleRequestControl}>
 					Request control
 				</Button> */}
-			</div>
-		</Modal>
+				</div>
+			</Modal>
+			<TempDetectionsModal
+				isOpen={isDetectionsOpen}
+				onClose={() => setDetectionsOpen(false)}
+				detections={uniqueDetections}
+			/>
+		</>
 	);
 };
 

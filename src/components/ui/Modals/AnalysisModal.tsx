@@ -29,36 +29,49 @@ const AnalysisModal: React.FC<AnalysisModalProps> = ({
 	const [sections, setSections] = useState<StreamingText[]>([
 		{
 			title: "System Status:",
-			fullText: systemStatus,
+			fullText: systemStatus ?? "",
 			displayedText: "",
 			isComplete: false,
 		},
 		{
 			title: "Mission Progress:",
-			fullText: missionProgress,
+			fullText: missionProgress ?? "",
 			displayedText: "",
 			isComplete: false,
 		},
 		{
 			title: "Operational Summary:",
-			fullText: operationalSummary,
+			fullText: operationalSummary ?? "",
 			displayedText: "",
 			isComplete: false,
 		},
 	]);
 
-	// Reset state when modal opens
+	// Reset state when modal opens or when incoming texts change
 	useEffect(() => {
 		if (isOpen) {
 			setIsInitialLoading(true);
 			setCurrentSection(0);
-			setSections((prev) =>
-				prev.map((section) => ({
-					...section,
+			setSections([
+				{
+					title: "System Status:",
+					fullText: systemStatus ?? "",
 					displayedText: "",
 					isComplete: false,
-				}))
-			);
+				},
+				{
+					title: "Mission Progress:",
+					fullText: missionProgress ?? "",
+					displayedText: "",
+					isComplete: false,
+				},
+				{
+					title: "Operational Summary:",
+					fullText: operationalSummary ?? "",
+					displayedText: "",
+					isComplete: false,
+				},
+			]);
 
 			// Initial loading delay (AI processing simulation)
 			const initialTimer = setTimeout(() => {
@@ -67,7 +80,7 @@ const AnalysisModal: React.FC<AnalysisModalProps> = ({
 
 			return () => clearTimeout(initialTimer);
 		}
-	}, [isOpen]);
+	}, [isOpen, systemStatus, missionProgress, operationalSummary]);
 
 	// Streaming text effect
 	useEffect(() => {
@@ -118,7 +131,7 @@ const AnalysisModal: React.FC<AnalysisModalProps> = ({
 
 	return (
 		<Modal
-			maxHeight={"740px"}
+			maxHeight={"850px"}
 			title={`AI Analysis Result`}
 			isOpen={isOpen}
 			onClose={onClose}

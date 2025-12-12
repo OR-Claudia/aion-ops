@@ -36,11 +36,9 @@ export const UAVLocationsCtxProvider: FC<{ children: ReactNode }> = ({
 		  ]
 		| null;
 
-	// Seed initial path for UAV id 2 with two static points near South Spain (Malaga area)
 	useEffect(() => {
 		const idKey = "2";
-
-		const seed1 = { lat: 36.7135, lon: -4.3 };
+		const seed1 = { lat: 36.713198, lon: -4.296397 };
 		const seed2 = { lat: 36.71288, lon: -4.295999 };
 		const seeded = [seed1, seed2];
 

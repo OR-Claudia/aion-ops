@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { followDetections } from "../assets/mock-data/follow_detections";
-import type { DetectedInFrame, Frame } from "./types";
+import type { Frame } from "./types";
 // import { staticData } from "../assets/mock-data/static_data";
 import { winterFlightData } from "../assets/mock-data/winter_flight";
 
@@ -663,35 +663,10 @@ const useMetadataSync = (
 	};
 };
 
-const useDistinctFrameDetections = () => {
-	const [distinctDetections, setDistinctDetections] = useState<
-		DetectedInFrame[]
-	>([]);
-
-	useEffect(() => {
-		const trackIdSet = new Set<number>();
-		const distinct: DetectedInFrame[] = [];
-
-		const detections = winterFlightData.frames.flatMap(
-			(f) => f.detections || []
-		);
-		for (const item of detections) {
-			const id = item.track_id;
-			if (!trackIdSet.has(id) && item.class_id !== -1) {
-				trackIdSet.add(id);
-				distinct.push(item);
-			}
-		}
-		setDistinctDetections(distinct);
-	}, []);
-
-	return distinctDetections;
-};
-
 const useFollowDetections = (videoRef: RefObject<HTMLVideoElement>) => {
 	const [currentTimeMs, setCurrentTimeMs] = useState<number>(0);
 	const [activeFrameData, setActiveFrameData] = useState<Frame | null>(null);
-	const [, updateActiveFrame] = useContext(MetaDataCtx);
+	const [, , updateActiveFrame] = useContext(MetaDataCtx);
 
 	useEffect(() => {
 		const videoElement = videoRef.current;
@@ -740,7 +715,7 @@ const useFollowDetections = (videoRef: RefObject<HTMLVideoElement>) => {
 	}, []);
 
 	useEffect(() => {
-		updateActiveFrame({ activeFrame: activeFrameData });
+		updateActiveFrame(activeFrameData);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [activeFrameData]);
 
@@ -757,7 +732,6 @@ export {
 	updateLatency,
 	autoDetectLatency,
 	reconnect,
-	useDistinctFrameDetections,
 	initVideoWithSync,
 };
 

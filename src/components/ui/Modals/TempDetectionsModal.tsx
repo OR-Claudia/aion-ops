@@ -5,19 +5,19 @@ import DetectionListItem from "../DetectionListItem";
 import Tag from "../Tag";
 
 import type { DetectedInFrame } from "../../../lib/types";
-import { useDistinctFrameDetections } from "../../../lib/utils";
 
 interface TempDetectionsModalProps {
 	isOpen: boolean;
 	onClose: () => void;
+	detections: DetectedInFrame[];
 }
 
 const TempDetectionsModal: React.FC<TempDetectionsModalProps> = ({
 	isOpen,
 	onClose,
+	detections,
 }) => {
-	const detections: DetectedInFrame[] = useDistinctFrameDetections();
-	const detectionCount = detections ? detections.length : 0;
+	const detectionCount = detections.length;
 
 	return (
 		<Modal

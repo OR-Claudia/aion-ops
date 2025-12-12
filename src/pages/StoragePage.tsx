@@ -17,7 +17,6 @@ import DetectionsModal from "../components/ui/Modals/DetectionsModal";
 import MissionPathModal from "../components/ui/Modals/MissionPathModal";
 import { getStorageList } from "../api/storage";
 import AnalysisModal from "../components/ui/Modals/AnalysisModal";
-import { generateAnalysisReport } from "./demo_utils";
 
 const StoragePage: React.FC = () => {
 	const [originalRecords, setOriginalRecords] = useState<StorageData[]>([]);
@@ -28,11 +27,7 @@ const StoragePage: React.FC = () => {
 	const [detectionsOpen, setDetectionsOpen] = useState<boolean>(false);
 	const [MissionPathOpen, setMissionPathOpen] = useState<boolean>(false);
 	const [activeTab, setActiveTab] = useState("rgb");
-	const [analysisResults, setAnalysisResults] = useState<{
-		systemStatusText: string;
-		missionProgressText: string;
-		operationalSummaryText: string;
-	}>();
+
 	const [isAnalysisOpen, setIsAnalysisOpen] = useState<boolean>(false);
 
 	useEffect(() => {
@@ -105,13 +100,6 @@ const StoragePage: React.FC = () => {
 		setSelectedRecord(null);
 	};
 
-	useEffect(() => {
-		const id = selectedRecord?.id as unknown;
-		if (id == null) return;
-		const result = generateAnalysisReport(String(id));
-		setAnalysisResults(result);
-	}, [selectedRecord]);
-
 	return (
 		<Layout>
 			<div className="w-full flex justify-center pt-15">
@@ -134,13 +122,20 @@ const StoragePage: React.FC = () => {
 					</div>
 
 					{/* Main Content Area */}
-					{analysisResults && (
+					{selectedRecord && (
 						<AnalysisModal
+							key={`analysis-${selectedRecord.id}`}
 							isOpen={isAnalysisOpen}
 							onClose={() => setIsAnalysisOpen(false)}
-							systemStatus={analysisResults?.systemStatusText}
-							missionProgress={analysisResults?.missionProgressText}
-							operationalSummary={analysisResults?.operationalSummaryText}
+							systemStatus={
+								selectedRecord.analysisResult?.systemStatusText ?? ""
+							}
+							missionProgress={
+								selectedRecord.analysisResult?.missionProgressText ?? ""
+							}
+							operationalSummary={
+								selectedRecord.analysisResult?.operationalSummaryText ?? ""
+							}
 						/>
 					)}
 

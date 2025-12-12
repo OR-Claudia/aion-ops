@@ -47,9 +47,7 @@ export const DroneMarker = memo((props: DroneMarkerProps) => {
 		const dotSize = Math.max(6, Math.round(size * 0.25));
 		const edgeOffset = size / 2 + 2;
 		const wedgeHTML = showDirection
-			? `<div style="position:absolute; left:50%; top:50%; transform-origin:50% 55%; transform: translate(-50%, -50%) rotate(${
-					heading + 180
-			  }deg) translate(0, -${edgeOffset}px) skewX(${skewX}deg); width:${dynamicWidth}px; height:${Math.round(
+			? `<div style="position:absolute; left:50%; top:50%; transform-origin:50% 55%; transform: translate(-50%, -50%) rotate(${heading}deg) translate(0, -${edgeOffset}px) skewX(${skewX}deg); width:${dynamicWidth}px; height:${Math.round(
 					size * 1.5
 			  )}px; clip-path: polygon(45% 100%, 55% 100%, 85% 0%, 15% 0%); background: linear-gradient(180deg, transparent 0%, ${centerColor}22 25%, ${centerColor}55 50%, ${centerColor}AA 75%, ${centerColor} 100%); opacity:0.9; filter:blur(0.2px); z-index:0; pointer-events:none;"></div>`
 			: "";
