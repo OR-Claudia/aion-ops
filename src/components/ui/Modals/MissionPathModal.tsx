@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext, useRef } from "react";
 import {
 	MapContainer,
 	TileLayer,
@@ -35,6 +35,8 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 	uavData,
 }) => {
 	const [region, setRegion] = useState<string>("Loading...");
+	const hasIdentifiedRef = useRef(false);
+	const lastGeocodeAtRef = useRef(0);
 
 	// Determine which data source to use
 	const isUAVData = !!uavData;
@@ -48,7 +50,6 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 		meters / (111320 * Math.cos((atLat * Math.PI) / 180));
 
 	// Get mission path coordinates and detections based on data type
-	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const missionPathCoordinates = isLiveUav2
 		? uavLocations.getPathById(2)
 		: isUAVData
@@ -165,17 +166,67 @@ const MissionPathModal: React.FC<MissionPathModalProps> = ({
 		? uavLocations.getCurrentPositionById(2)
 		: null;
 
-	// Reverse geocode the first point in the Mission Path
+	// Reverse geocode only when modal is open and path becomes available;
+	// throttle to once per minute after first successful identification
 	useEffect(() => {
-		if (missionPathCoordinates && missionPathCoordinates.length > 0) {
-			const firstPoint = missionPathCoordinates[0];
-			reverseGeocode(firstPoint.lat, firstPoint.lon)
-				.then(setRegion)
-				.catch(() => setRegion("Unknown Location"));
-		} else {
-			setRegion("No flight data");
+		let cancelled = false;
+		let intervalId: ReturnType<typeof setInterval> | null = null;
+
+		const run = async () => {
+			if (!isOpen) {
+				setRegion("Loading...");
+				return;
+			}
+
+			if (!missionPathCoordinates || missionPathCoordinates.length === 0) {
+				setRegion("No flight data");
+				return;
+			}
+
+			const first = missionPathCoordinates[0];
+
+			// while not identified yet, show fallback immediately
+			if (!hasIdentifiedRef.current) {
+				const fallback = `${first.lat.toFixed(5)}, ${first.lon.toFixed(5)}`;
+				setRegion(fallback);
+			}
+
+			const now = Date.now();
+			const shouldGeocode =
+				!hasIdentifiedRef.current || now - lastGeocodeAtRef.current >= 60_000;
+
+			if (!shouldGeocode) {
+				return;
+			}
+
+			try {
+				const name = await reverseGeocode(first.lat, first.lon);
+				if (!cancelled && name) {
+					setRegion(name);
+					hasIdentifiedRef.current = true;
+					lastGeocodeAtRef.current = Date.now();
+				}
+			} catch {
+				// keep previous/fallback region on error
+			}
+		};
+
+		// initial run
+		void run();
+
+		// re-check every minute when open and data available
+		if (isOpen && missionPathCoordinates && missionPathCoordinates.length > 0) {
+			intervalId = setInterval(() => {
+				void run();
+			}, 60_000);
 		}
-	}, [missionPathCoordinates]);
+
+		return () => {
+			cancelled = true;
+			if (intervalId) clearInterval(intervalId);
+		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [isOpen, missionPathCoordinates?.length]);
 
 	// Generate covered area polygon points (~50m radius around current or path center)
 	const generateCoveredArea = () => {

@@ -36,37 +36,33 @@ export const UAVLocationsCtxProvider: FC<{ children: ReactNode }> = ({
 		  ]
 		| null;
 
-	// Seed initial shortened path for UAV id 2 from static mission path
+	// Seed initial path for UAV id 2 with two static points near South Spain (Malaga area)
 	useEffect(() => {
 		const idKey = "2";
-		const uav2 = initUAVLocations.find((u) => String(u.data.id) === idKey);
-		if (uav2 && Array.isArray(uav2.MissionPath) && uav2.MissionPath.length) {
-			const initial = uav2.MissionPath.slice(
-				0,
-				Math.min(3, uav2.MissionPath.length)
-			);
-			const fixed = { lat: 36.716249, lon: -4.28782 };
-			const seeded = [...initial, fixed];
-			setPathsById((prev) => ({ ...prev, [idKey]: seeded }));
-			setCurrentById((prev) => ({
-				...prev,
-				[idKey]: [fixed.lat, fixed.lon],
-			}));
-			setUAVLocations((prevLocations: UAVLocation[]) =>
-				prevLocations.map((uav: UAVLocation) => {
-					if (String(uav.data.id) === idKey) {
-						return {
-							...uav,
-							position: [fixed.lat, fixed.lon] as [number, number],
-						};
-					}
-					return uav;
-				})
-			);
-		}
+
+		const seed1 = { lat: 36.7135, lon: -4.3 };
+		const seed2 = { lat: 36.71288, lon: -4.295999 };
+		const seeded = [seed1, seed2];
+
+		setPathsById((prev) => ({ ...prev, [idKey]: seeded }));
+		setCurrentById((prev) => ({
+			...prev,
+			[idKey]: [seed2.lat, seed2.lon],
+		}));
+		setUAVLocations((prevLocations: UAVLocation[]) =>
+			prevLocations.map((uav: UAVLocation) => {
+				if (String(uav.data.id) === idKey) {
+					return {
+						...uav,
+						position: [seed2.lat, seed2.lon] as [number, number],
+					};
+				}
+				return uav;
+			})
+		);
 	}, []);
 
-	// LIVE PATH FEED: append UAV id 2 positions from MetaDataCtx.activeFrame
+	// LIVE PATH FEED: for UAV id 2, append positions from MetaDataCtx.activeFrame after the two static seeds
 	useEffect(() => {
 		if (!meta) return;
 		const [state] = meta;
@@ -85,38 +81,30 @@ export const UAVLocationsCtxProvider: FC<{ children: ReactNode }> = ({
 			frame.telemetry?.longitude) as number | undefined;
 
 		if (typeof lat === "number" && typeof lon === "number") {
-			const idKey = String(2);
-			const FIX_LAT = 36.716249;
-			const FIX_LON = -4.28782;
-			// append to path while ensuring last coordinate is fixed live coord
+			const idKey = "2";
+
+			// Append new live coordinate if it differs from the last one
 			setPathsById((prev) => {
 				const prevArr = prev[idKey] || [];
-				const lastPrev = prevArr[prevArr.length - 1];
-				let work = prevArr;
+				const last = prevArr[prevArr.length - 1];
 				if (
-					lastPrev &&
-					Math.abs(lastPrev.lat - FIX_LAT) < 1e-6 &&
-					Math.abs(lastPrev.lon - FIX_LON) < 1e-6
+					last &&
+					Math.abs(last.lat - lat) < 1e-6 &&
+					Math.abs(last.lon - lon) < 1e-6
 				) {
-					work = prevArr.slice(0, -1);
+					return prev; // no change
 				}
-				const last = work[work.length - 1];
-				if (
-					!last ||
-					Math.abs(last.lat - lat) > 1e-6 ||
-					Math.abs(last.lon - lon) > 1e-6
-				) {
-					work = [...work, { lat, lon }];
-				}
-				return { ...prev, [idKey]: [...work, { lat: FIX_LAT, lon: FIX_LON }] };
+				return { ...prev, [idKey]: [...prevArr, { lat, lon }] };
 			});
-			// update current position to fixed live coord (used by DroneMarker)
-			setCurrentById((prev) => ({ ...prev, [idKey]: [FIX_LAT, FIX_LON] }));
-			// also keep uavLocations in sync for id 2 if present
+
+			// Update current position to the latest live coordinate
+			setCurrentById((prev) => ({ ...prev, [idKey]: [lat, lon] }));
+
+			// Keep uavLocations in sync for id 2
 			setUAVLocations((prevLocations: UAVLocation[]) =>
 				prevLocations.map((uav: UAVLocation) => {
 					if (String(uav.data.id) === "2") {
-						return { ...uav, position: [FIX_LAT, FIX_LON] as [number, number] };
+						return { ...uav, position: [lat, lon] as [number, number] };
 					}
 					return uav;
 				})

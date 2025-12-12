@@ -10,7 +10,8 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { followDetections } from "../assets/mock-data/follow_detections";
 import type { DetectedInFrame, Frame } from "./types";
-import { staticData } from "../assets/mock-data/static_data";
+// import { staticData } from "../assets/mock-data/static_data";
+import { winterFlightData } from "../assets/mock-data/winter_flight";
 
 // Utility function for merging class names
 export function cn(...inputs: ClassValue[]) {
@@ -46,12 +47,12 @@ export const reverseGeocode = async (
 			const country = data.address.country || "";
 			return city && country
 				? `${city}, ${country}`
-				: country || "Unknown Location";
+				: country || "Malaga, Spain";
 		}
-		return "Unknown Location";
+		return "Malaga, Spain";
 	} catch (error) {
 		console.error("Reverse geocoding failed:", error);
-		return "Unknown Location";
+		return "Malaga, Spain";
 	}
 };
 
@@ -671,7 +672,9 @@ const useDistinctFrameDetections = () => {
 		const trackIdSet = new Set<number>();
 		const distinct: DetectedInFrame[] = [];
 
-		const detections = staticData.frames.flatMap((f) => f.detections || []);
+		const detections = winterFlightData.frames.flatMap(
+			(f) => f.detections || []
+		);
 		for (const item of detections) {
 			const id = item.track_id;
 			if (!trackIdSet.has(id) && item.class_id !== -1) {
@@ -700,12 +703,12 @@ const useFollowDetections = (videoRef: RefObject<HTMLVideoElement>) => {
 			const timeMs = currentTime * 1000;
 			setCurrentTimeMs(timeMs);
 
-			if (staticData && staticData.frames.length > 0) {
+			if (winterFlightData && winterFlightData.frames.length > 0) {
 				let activeFrame: Frame | null = null;
 
-				for (let i = 0; i < staticData.frames.length; i++) {
-					const currentFrame = staticData.frames[i];
-					const nextFrame = staticData.frames[i + 1];
+				for (let i = 0; i < winterFlightData.frames.length; i++) {
+					const currentFrame = winterFlightData.frames[i];
+					const nextFrame = winterFlightData.frames[i + 1];
 
 					if (nextFrame) {
 						if (

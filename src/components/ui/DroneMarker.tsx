@@ -10,6 +10,7 @@ export interface DroneMarkerProps {
 	centerColor?: string;
 	zIndexOffset?: number;
 	heading?: number;
+	showDirection?: boolean;
 
 	roll?: number;
 	pitch?: number;
@@ -24,6 +25,7 @@ export const DroneMarker = memo((props: DroneMarkerProps) => {
 		centerColor = "#00C6B8",
 		zIndexOffset = 0,
 		heading = 0,
+		showDirection = false,
 		roll = 0,
 		pitch = 0,
 	} = props;
@@ -44,14 +46,17 @@ export const DroneMarker = memo((props: DroneMarkerProps) => {
 		const skewX = (rollClamped / 60) * 6;
 		const dotSize = Math.max(6, Math.round(size * 0.25));
 		const edgeOffset = size / 2 + 2;
+		const wedgeHTML = showDirection
+			? `<div style="position:absolute; left:50%; top:50%; transform-origin:50% 55%; transform: translate(-50%, -50%) rotate(${
+					heading + 180
+			  }deg) translate(0, -${edgeOffset}px) skewX(${skewX}deg); width:${dynamicWidth}px; height:${Math.round(
+					size * 1.5
+			  )}px; clip-path: polygon(45% 100%, 55% 100%, 85% 0%, 15% 0%); background: linear-gradient(180deg, transparent 0%, ${centerColor}22 25%, ${centerColor}55 50%, ${centerColor}AA 75%, ${centerColor} 100%); opacity:0.9; filter:blur(0.2px); z-index:0; pointer-events:none;"></div>`
+			: "";
 		const containerHTML = `<div style="width:${size}px; height:${size}px; border-radius:50%; border:2px solid ${ringColor}; background:${fillColor}; box-sizing:border-box; position:relative; pointer-events:none; isolation:isolate; overflow:visible;">
-			<div style="position:absolute; left:50%; top:50%; transform-origin:50% 55%; transform: translate(-50%, -50%) rotate(${
-				heading + 180
-			}deg) translate(0, -${edgeOffset}px) skewX(${skewX}deg); width:${dynamicWidth}px; height:${Math.round(
-			size * 1.5
-		)}px; clip-path: polygon(45% 100%, 55% 100%, 85% 0%, 15% 0%); background: linear-gradient(180deg, transparent 0%, ${centerColor}22 25%, ${centerColor}55 50%, ${centerColor}AA 75%, ${centerColor} 100%); opacity:0.9; filter:blur(0.2px); z-index:0; pointer-events:none;"></div>
-			<div style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%); width:${dotSize}px; height:${dotSize}px; border-radius:50%; background:${centerColor}; pointer-events:none; z-index:1;"></div>
-			</div>`;
+  ${wedgeHTML}
+  <div style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%); width:${dotSize}px; height:${dotSize}px; border-radius:50%; background:${centerColor}; pointer-events:none; z-index:1;"></div>
+</div>`;
 
 		const icon = L.divIcon({
 			className: "drone-marker-icon",
@@ -81,6 +86,7 @@ export const DroneMarker = memo((props: DroneMarkerProps) => {
 		heading,
 		roll,
 		pitch,
+		showDirection,
 	]);
 
 	useEffect(() => {

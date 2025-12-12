@@ -143,7 +143,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({
 				setHasStartedPlayback(true);
 				// formRef.current?.submit();
 				try {
-					await fetch("http://193.123.68.104:8000/api/send-objects-to-tak", {
+					// await fetch("http://193.123.68.104:8000/api/send-objects-to-tak", {
+					await fetch("http://193.123.68.104:8001/api/send-objects-to-tak", {
 						method: "POST",
 						headers: {
 							"Content-Type": "application/json",

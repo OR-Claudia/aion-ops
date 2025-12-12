@@ -106,6 +106,7 @@ const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
 						heading={telemetry?.heading}
 						roll={telemetry?.roll}
 						pitch={telemetry?.pitch}
+						showDirection={true}
 					/>
 					{afUnique.map((detection, i) => {
 						if (detection.class_id !== -1) {
