@@ -103,7 +103,7 @@ const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
 					/>
 					<DroneMarker
 						position={uavPosition}
-						heading={telemetry?.heading}
+						heading={activeFrame?.telemetry.heading}
 						roll={telemetry?.roll}
 						pitch={telemetry?.pitch}
 						showDirection={true}
@@ -182,7 +182,7 @@ const FollowModal: React.FC<FollowModalProps> = ({ isOpen, onClose }) => {
 						}
 					})}
 				{afUnique.map((detection, i) => {
-					if (detection.class_id !== -1) {
+					if (detection.class_id !== -1 && !!detection.geo_coordinates) {
 						/* deduped by highest confidence; duplicates filtered above */
 						return (
 							<DetectionListItem
